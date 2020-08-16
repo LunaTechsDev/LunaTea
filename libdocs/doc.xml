@@ -49663,17 +49663,6 @@
 		<impl><class path="mz.abstracts.managers._BattleMgr.BattleMgr_Impl_" params="" file="src/mz/abstracts/managers/BattleMgr.hx" private="1" module="mz.abstracts.managers.BattleMgr" extern="1" final="1"/></impl>
 	</abstract>
 	<class path="mz.abstracts.managers._BattleMgr.BattleMgr_Impl_" params="" file="src/mz/abstracts/managers/BattleMgr.hx" private="1" module="mz.abstracts.managers.BattleMgr" extern="1" final="1"/>
-	<abstract path="mz.abstracts.managers.ColorMgr" params="" file="src/mz/abstracts/managers/ColorMgr.hx">
-		<from><icast><c path="mz.managers.ColorManager"/></icast></from>
-		<this><c path="mz.managers.ColorManager"/></this>
-		<to><icast><c path="mz.managers.ColorManager"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.managers._ColorMgr.ColorMgr_Impl_" params="" file="src/mz/abstracts/managers/ColorMgr.hx" private="1" module="mz.abstracts.managers.ColorMgr" extern="1" final="1"/></impl>
-	</abstract>
-	<class path="mz.abstracts.managers._ColorMgr.ColorMgr_Impl_" params="" file="src/mz/abstracts/managers/ColorMgr.hx" private="1" module="mz.abstracts.managers.ColorMgr" extern="1" final="1"/>
 	<abstract path="mz.abstracts.managers.ConfigMgr" params="" file="src/mz/abstracts/managers/ConfigMgr.hx">
 		<from><icast><c path="mz.managers.ConfigManager"/></icast></from>
 		<this><c path="mz.managers.ConfigManager"/></this>
@@ -49696,17 +49685,6 @@
 		<impl><class path="mz.abstracts.managers._DataMgr.DataMgr_Impl_" params="" file="src/mz/abstracts/managers/DataMgr.hx" private="1" module="mz.abstracts.managers.DataMgr" extern="1" final="1"/></impl>
 	</abstract>
 	<class path="mz.abstracts.managers._DataMgr.DataMgr_Impl_" params="" file="src/mz/abstracts/managers/DataMgr.hx" private="1" module="mz.abstracts.managers.DataMgr" extern="1" final="1"/>
-	<abstract path="mz.abstracts.managers.EffectMgr" params="" file="src/mz/abstracts/managers/EffectMgr.hx">
-		<from><icast><c path="mz.managers.EffectManager"/></icast></from>
-		<this><c path="mz.managers.EffectManager"/></this>
-		<to><icast><c path="mz.managers.EffectManager"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.managers._EffectMgr.EffectMgr_Impl_" params="" file="src/mz/abstracts/managers/EffectMgr.hx" private="1" module="mz.abstracts.managers.EffectMgr" extern="1" final="1"/></impl>
-	</abstract>
-	<class path="mz.abstracts.managers._EffectMgr.EffectMgr_Impl_" params="" file="src/mz/abstracts/managers/EffectMgr.hx" private="1" module="mz.abstracts.managers.EffectMgr" extern="1" final="1"/>
 	<abstract path="mz.abstracts.managers.ImageMgr" params="" file="src/mz/abstracts/managers/ImageMgr.hx">
 		<from><icast><c path="mz.managers.ImageManager"/></icast></from>
 		<this><c path="mz.managers.ImageManager"/></this>
@@ -50631,40 +50609,20 @@
 	<meta><m n=":noCompletion"/></meta>
 </_new></class>
 	<abstract path="mz.abstracts.sprites.SpriteActor" params="" file="src/mz/abstracts/sprites/SpriteActor.hx">
-		<from><icast><c path="mz.sprites.Sprite_Actor"/></icast></from>
 		<this><c path="mz.sprites.Sprite_Actor"/></this>
-		<to><icast><c path="mz.sprites.Sprite_Actor"/></icast></to>
 		<meta>
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="mz.abstracts.sprites._SpriteActor.SpriteActor_Impl_" params="" file="src/mz/abstracts/sprites/SpriteActor.hx" private="1" module="mz.abstracts.sprites.SpriteActor" final="1">
-	<_new public="1" get="inline" set="null" line="9" static="1">
-		<f a="?battler">
-			<c path="mz.objects.Game_Actor"/>
-			<x path="mz.abstracts.sprites.SpriteActor"/>
-		</f>
-		<meta><m n=":noCompletion"/></meta>
-	</_new>
-	<raw public="1" get="inline" set="null" line="13" static="1"><f a="this">
+		<impl><class path="mz.abstracts.sprites._SpriteActor.SpriteActor_Impl_" params="" file="src/mz/abstracts/sprites/SpriteActor.hx" private="1" module="mz.abstracts.sprites.SpriteActor" final="1"><raw public="1" get="inline" set="null" line="8" static="1"><f a="this">
 	<c path="mz.sprites.Sprite_Actor"/>
 	<c path="mz.sprites.Sprite_Actor"/>
-</f></raw>
-</class></impl>
+</f></raw></class></impl>
 	</abstract>
-	<class path="mz.abstracts.sprites._SpriteActor.SpriteActor_Impl_" params="" file="src/mz/abstracts/sprites/SpriteActor.hx" private="1" module="mz.abstracts.sprites.SpriteActor" final="1">
-		<_new public="1" get="inline" set="null" line="9" static="1">
-			<f a="?battler">
-				<c path="mz.objects.Game_Actor"/>
-				<x path="mz.abstracts.sprites.SpriteActor"/>
-			</f>
-			<meta><m n=":noCompletion"/></meta>
-		</_new>
-		<raw public="1" get="inline" set="null" line="13" static="1"><f a="this">
+	<class path="mz.abstracts.sprites._SpriteActor.SpriteActor_Impl_" params="" file="src/mz/abstracts/sprites/SpriteActor.hx" private="1" module="mz.abstracts.sprites.SpriteActor" final="1"><raw public="1" get="inline" set="null" line="8" static="1"><f a="this">
 	<c path="mz.sprites.Sprite_Actor"/>
 	<c path="mz.sprites.Sprite_Actor"/>
-</f></raw>
-	</class>
+</f></raw></class>
 	<abstract path="mz.abstracts.sprites.SpriteAnimation" params="" file="src/mz/abstracts/sprites/SpriteAnimation.hx">
 		<from><icast><c path="mz.sprites.Sprite_Animation"/></icast></from>
 		<this><c path="mz.sprites.Sprite_Animation"/></this>
@@ -50700,98 +50658,50 @@
 	<meta><m n=":noCompletion"/></meta>
 </_new></class>
 	<abstract path="mz.abstracts.sprites.SpriteBase" params="" file="src/mz/abstracts/sprites/SpriteBase.hx">
-		<from><icast><c path="mz.sprites.Sprite_Base"/></icast></from>
 		<this><c path="mz.sprites.Sprite_Base"/></this>
-		<to><icast><c path="mz.sprites.Sprite_Base"/></icast></to>
 		<meta>
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="mz.abstracts.sprites._SpriteBase.SpriteBase_Impl_" params="" file="src/mz/abstracts/sprites/SpriteBase.hx" private="1" module="mz.abstracts.sprites.SpriteBase" final="1">
-	<_new public="1" get="inline" set="null" line="8" static="1">
-		<f a=""><x path="mz.abstracts.sprites.SpriteBase"/></f>
-		<meta><m n=":noCompletion"/></meta>
-	</_new>
-	<raw public="1" get="inline" set="null" line="12" static="1"><f a="this">
+		<impl><class path="mz.abstracts.sprites._SpriteBase.SpriteBase_Impl_" params="" file="src/mz/abstracts/sprites/SpriteBase.hx" private="1" module="mz.abstracts.sprites.SpriteBase" final="1"><raw public="1" get="inline" set="null" line="8" static="1"><f a="this">
 	<c path="mz.sprites.Sprite_Base"/>
 	<c path="mz.sprites.Sprite_Base"/>
-</f></raw>
-</class></impl>
+</f></raw></class></impl>
 	</abstract>
-	<class path="mz.abstracts.sprites._SpriteBase.SpriteBase_Impl_" params="" file="src/mz/abstracts/sprites/SpriteBase.hx" private="1" module="mz.abstracts.sprites.SpriteBase" final="1">
-		<_new public="1" get="inline" set="null" line="8" static="1">
-			<f a=""><x path="mz.abstracts.sprites.SpriteBase"/></f>
-			<meta><m n=":noCompletion"/></meta>
-		</_new>
-		<raw public="1" get="inline" set="null" line="12" static="1"><f a="this">
+	<class path="mz.abstracts.sprites._SpriteBase.SpriteBase_Impl_" params="" file="src/mz/abstracts/sprites/SpriteBase.hx" private="1" module="mz.abstracts.sprites.SpriteBase" final="1"><raw public="1" get="inline" set="null" line="8" static="1"><f a="this">
 	<c path="mz.sprites.Sprite_Base"/>
 	<c path="mz.sprites.Sprite_Base"/>
-</f></raw>
-	</class>
+</f></raw></class>
 	<abstract path="mz.abstracts.sprites.SpriteBattler" params="" file="src/mz/abstracts/sprites/SpriteBattler.hx">
-		<from><icast><c path="mz.sprites.Sprite_Battler"/></icast></from>
 		<this><c path="mz.sprites.Sprite_Battler"/></this>
-		<to><icast><c path="mz.sprites.Sprite_Battler"/></icast></to>
 		<meta>
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="mz.abstracts.sprites._SpriteBattler.SpriteBattler_Impl_" params="" file="src/mz/abstracts/sprites/SpriteBattler.hx" private="1" module="mz.abstracts.sprites.SpriteBattler" final="1">
-	<_new public="1" get="inline" set="null" line="8" static="1">
-		<f a=""><x path="mz.abstracts.sprites.SpriteBattler"/></f>
-		<meta><m n=":noCompletion"/></meta>
-	</_new>
-	<raw public="1" get="inline" set="null" line="12" static="1"><f a="this">
+		<impl><class path="mz.abstracts.sprites._SpriteBattler.SpriteBattler_Impl_" params="" file="src/mz/abstracts/sprites/SpriteBattler.hx" private="1" module="mz.abstracts.sprites.SpriteBattler" final="1"><raw public="1" get="inline" set="null" line="8" static="1"><f a="this">
 	<c path="mz.sprites.Sprite_Battler"/>
 	<c path="mz.sprites.Sprite_Battler"/>
-</f></raw>
-</class></impl>
+</f></raw></class></impl>
 	</abstract>
-	<class path="mz.abstracts.sprites._SpriteBattler.SpriteBattler_Impl_" params="" file="src/mz/abstracts/sprites/SpriteBattler.hx" private="1" module="mz.abstracts.sprites.SpriteBattler" final="1">
-		<_new public="1" get="inline" set="null" line="8" static="1">
-			<f a=""><x path="mz.abstracts.sprites.SpriteBattler"/></f>
-			<meta><m n=":noCompletion"/></meta>
-		</_new>
-		<raw public="1" get="inline" set="null" line="12" static="1"><f a="this">
+	<class path="mz.abstracts.sprites._SpriteBattler.SpriteBattler_Impl_" params="" file="src/mz/abstracts/sprites/SpriteBattler.hx" private="1" module="mz.abstracts.sprites.SpriteBattler" final="1"><raw public="1" get="inline" set="null" line="8" static="1"><f a="this">
 	<c path="mz.sprites.Sprite_Battler"/>
 	<c path="mz.sprites.Sprite_Battler"/>
-</f></raw>
-	</class>
+</f></raw></class>
 	<abstract path="mz.abstracts.sprites.SpriteButton" params="" file="src/mz/abstracts/sprites/SpriteButton.hx">
-		<from><icast><c path="mz.sprites.Sprite_Button"/></icast></from>
 		<this><c path="mz.sprites.Sprite_Button"/></this>
-		<to><icast><c path="mz.sprites.Sprite_Button"/></icast></to>
 		<meta>
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="mz.abstracts.sprites._SpriteButton.SpriteButton_Impl_" params="" file="src/mz/abstracts/sprites/SpriteButton.hx" private="1" module="mz.abstracts.sprites.SpriteButton" final="1">
-	<_new public="1" get="inline" set="null" line="9" static="1">
-		<f a="?bitmap">
-			<c path="mz.core.Bitmap"/>
-			<x path="mz.abstracts.sprites.SpriteButton"/>
-		</f>
-		<meta><m n=":noCompletion"/></meta>
-	</_new>
-	<raw public="1" get="inline" set="null" line="13" static="1"><f a="this">
+		<impl><class path="mz.abstracts.sprites._SpriteButton.SpriteButton_Impl_" params="" file="src/mz/abstracts/sprites/SpriteButton.hx" private="1" module="mz.abstracts.sprites.SpriteButton" final="1"><raw public="1" get="inline" set="null" line="8" static="1"><f a="this">
 	<c path="mz.sprites.Sprite_Button"/>
 	<c path="mz.sprites.Sprite_Button"/>
-</f></raw>
-</class></impl>
+</f></raw></class></impl>
 	</abstract>
-	<class path="mz.abstracts.sprites._SpriteButton.SpriteButton_Impl_" params="" file="src/mz/abstracts/sprites/SpriteButton.hx" private="1" module="mz.abstracts.sprites.SpriteButton" final="1">
-		<_new public="1" get="inline" set="null" line="9" static="1">
-			<f a="?bitmap">
-				<c path="mz.core.Bitmap"/>
-				<x path="mz.abstracts.sprites.SpriteButton"/>
-			</f>
-			<meta><m n=":noCompletion"/></meta>
-		</_new>
-		<raw public="1" get="inline" set="null" line="13" static="1"><f a="this">
+	<class path="mz.abstracts.sprites._SpriteButton.SpriteButton_Impl_" params="" file="src/mz/abstracts/sprites/SpriteButton.hx" private="1" module="mz.abstracts.sprites.SpriteButton" final="1"><raw public="1" get="inline" set="null" line="8" static="1"><f a="this">
 	<c path="mz.sprites.Sprite_Button"/>
 	<c path="mz.sprites.Sprite_Button"/>
-</f></raw>
-	</class>
+</f></raw></class>
 	<abstract path="mz.abstracts.sprites.SpriteCharacter" params="" file="src/mz/abstracts/sprites/SpriteCharacter.hx">
 		<from><icast><c path="mz.sprites.Sprite_Character"/></icast></from>
 		<this><c path="mz.sprites.Sprite_Character"/></this>
@@ -50868,40 +50778,16 @@
 	<meta><m n=":noCompletion"/></meta>
 </_new></class>
 	<abstract path="mz.abstracts.sprites.SpriteEnemy" params="" file="src/mz/abstracts/sprites/SpriteEnemy.hx">
-		<from><icast><c path="mz.sprites.Sprite_Enemy"/></icast></from>
 		<this><c path="mz.sprites.Sprite_Enemy"/></this>
-		<to><icast><c path="mz.sprites.Sprite_Enemy"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.sprites._SpriteEnemy.SpriteEnemy_Impl_" params="" file="src/mz/abstracts/sprites/SpriteEnemy.hx" private="1" module="mz.abstracts.sprites.SpriteEnemy" final="1">
-	<_new public="1" get="inline" set="null" line="9" static="1">
-		<f a="battler">
-			<c path="mz.objects.Game_Enemy"/>
-			<x path="mz.abstracts.sprites.SpriteEnemy"/>
-		</f>
-		<meta><m n=":noCompletion"/></meta>
-	</_new>
-	<raw public="1" get="inline" set="null" line="13" static="1"><f a="this">
+		<impl><class path="mz.abstracts.sprites._SpriteEnemy.SpriteEnemy_Impl_" params="" file="src/mz/abstracts/sprites/SpriteEnemy.hx" private="1" module="mz.abstracts.sprites.SpriteEnemy" final="1"><raw public="1" get="inline" set="null" line="6" static="1"><f a="this">
 	<c path="mz.sprites.Sprite_Enemy"/>
 	<c path="mz.sprites.Sprite_Enemy"/>
-</f></raw>
-</class></impl>
+</f></raw></class></impl>
 	</abstract>
-	<class path="mz.abstracts.sprites._SpriteEnemy.SpriteEnemy_Impl_" params="" file="src/mz/abstracts/sprites/SpriteEnemy.hx" private="1" module="mz.abstracts.sprites.SpriteEnemy" final="1">
-		<_new public="1" get="inline" set="null" line="9" static="1">
-			<f a="battler">
-				<c path="mz.objects.Game_Enemy"/>
-				<x path="mz.abstracts.sprites.SpriteEnemy"/>
-			</f>
-			<meta><m n=":noCompletion"/></meta>
-		</_new>
-		<raw public="1" get="inline" set="null" line="13" static="1"><f a="this">
+	<class path="mz.abstracts.sprites._SpriteEnemy.SpriteEnemy_Impl_" params="" file="src/mz/abstracts/sprites/SpriteEnemy.hx" private="1" module="mz.abstracts.sprites.SpriteEnemy" final="1"><raw public="1" get="inline" set="null" line="6" static="1"><f a="this">
 	<c path="mz.sprites.Sprite_Enemy"/>
 	<c path="mz.sprites.Sprite_Enemy"/>
-</f></raw>
-	</class>
+</f></raw></class>
 	<abstract path="mz.abstracts.sprites.SpritePicture" params="" file="src/mz/abstracts/sprites/SpritePicture.hx">
 		<from><icast><c path="mz.sprites.Sprite_Picture"/></icast></from>
 		<this><c path="mz.sprites.Sprite_Picture"/></this>
@@ -50911,18 +50797,12 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="mz.abstracts.sprites._SpritePicture.SpritePicture_Impl_" params="" file="src/mz/abstracts/sprites/SpritePicture.hx" private="1" module="mz.abstracts.sprites.SpritePicture" final="1"><_new public="1" get="inline" set="null" line="8" static="1">
-	<f a="pictureId">
-		<x path="Int"/>
-		<x path="mz.abstracts.sprites.SpritePicture"/>
-	</f>
+	<f a=""><x path="mz.abstracts.sprites.SpritePicture"/></f>
 	<meta><m n=":noCompletion"/></meta>
 </_new></class></impl>
 	</abstract>
 	<class path="mz.abstracts.sprites._SpritePicture.SpritePicture_Impl_" params="" file="src/mz/abstracts/sprites/SpritePicture.hx" private="1" module="mz.abstracts.sprites.SpritePicture" final="1"><_new public="1" get="inline" set="null" line="8" static="1">
-	<f a="pictureId">
-		<x path="Int"/>
-		<x path="mz.abstracts.sprites.SpritePicture"/>
-	</f>
+	<f a=""><x path="mz.abstracts.sprites.SpritePicture"/></f>
 	<meta><m n=":noCompletion"/></meta>
 </_new></class>
 	<abstract path="mz.abstracts.sprites.SpriteStateIcon" params="" file="src/mz/abstracts/sprites/SpriteStateIcon.hx">
@@ -51062,23 +50942,6 @@
 	</f>
 	<meta><m n=":noCompletion"/></meta>
 </_new></class>
-	<abstract path="mz.abstracts.windows.WindowActorCommand" params="" file="src/mz/abstracts/windows/WindowActorCommand.hx">
-		<from><icast><c path="mz.windows.Window_ActorCommand"/></icast></from>
-		<this><c path="mz.windows.Window_ActorCommand"/></this>
-		<to><icast><c path="mz.windows.Window_ActorCommand"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowActorCommand.WindowActorCommand_Impl_" params="" file="src/mz/abstracts/windows/WindowActorCommand.hx" private="1" module="mz.abstracts.windows.WindowActorCommand" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a=""><x path="mz.abstracts.windows.WindowActorCommand"/></f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowActorCommand.WindowActorCommand_Impl_" params="" file="src/mz/abstracts/windows/WindowActorCommand.hx" private="1" module="mz.abstracts.windows.WindowActorCommand" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a=""><x path="mz.abstracts.windows.WindowActorCommand"/></f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
 	<abstract path="mz.abstracts.windows.WindowBase" params="" file="src/mz/abstracts/windows/WindowBase.hx">
 		<from><icast><c path="mz.windows.Window_Base"/></icast></from>
 		<this><c path="mz.windows.Window_Base"/></this>
@@ -51128,148 +50991,6 @@
 	<x path="Void"/>
 </f></destroyContents>
 	</class>
-	<abstract path="mz.abstracts.windows.WindowBattleActor" params="" file="src/mz/abstracts/windows/WindowBattleActor.hx">
-		<from><icast><c path="mz.windows.Window_BattleActor"/></icast></from>
-		<this><c path="mz.windows.Window_BattleActor"/></this>
-		<to><icast><c path="mz.windows.Window_BattleActor"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowBattleActor.WindowBattleActor_Impl_" params="" file="src/mz/abstracts/windows/WindowBattleActor.hx" private="1" module="mz.abstracts.windows.WindowBattleActor" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowBattleActor"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowBattleActor.WindowBattleActor_Impl_" params="" file="src/mz/abstracts/windows/WindowBattleActor.hx" private="1" module="mz.abstracts.windows.WindowBattleActor" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowBattleActor"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowBattleEnemy" params="" file="src/mz/abstracts/windows/WindowBattleEnemy.hx">
-		<from><icast><c path="mz.windows.Window_BattleEnemy"/></icast></from>
-		<this><c path="mz.windows.Window_BattleEnemy"/></this>
-		<to><icast><c path="mz.windows.Window_BattleEnemy"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowBattleEnemy.WindowBattleEnemy_Impl_" params="" file="src/mz/abstracts/windows/WindowBattleEnemy.hx" private="1" module="mz.abstracts.windows.WindowBattleEnemy" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowBattleEnemy"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowBattleEnemy.WindowBattleEnemy_Impl_" params="" file="src/mz/abstracts/windows/WindowBattleEnemy.hx" private="1" module="mz.abstracts.windows.WindowBattleEnemy" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowBattleEnemy"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowBattleItem" params="" file="src/mz/abstracts/windows/WindowBattleItem.hx">
-		<from><icast><c path="mz.windows.Window_BattleItem"/></icast></from>
-		<this><c path="mz.windows.Window_BattleItem"/></this>
-		<to><icast><c path="mz.windows.Window_BattleItem"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowBattleItem.WindowBattleItem_Impl_" params="" file="src/mz/abstracts/windows/WindowBattleItem.hx" private="1" module="mz.abstracts.windows.WindowBattleItem" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowBattleItem"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowBattleItem.WindowBattleItem_Impl_" params="" file="src/mz/abstracts/windows/WindowBattleItem.hx" private="1" module="mz.abstracts.windows.WindowBattleItem" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowBattleItem"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowBattleLog" params="" file="src/mz/abstracts/windows/WindowBattleLog.hx">
-		<from><icast><c path="mz.windows.Window_BattleLog"/></icast></from>
-		<this><c path="mz.windows.Window_BattleLog"/></this>
-		<to><icast><c path="mz.windows.Window_BattleLog"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowBattleLog.WindowBattleLog_Impl_" params="" file="src/mz/abstracts/windows/WindowBattleLog.hx" private="1" module="mz.abstracts.windows.WindowBattleLog" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a=""><x path="mz.abstracts.windows.WindowBattleLog"/></f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowBattleLog.WindowBattleLog_Impl_" params="" file="src/mz/abstracts/windows/WindowBattleLog.hx" private="1" module="mz.abstracts.windows.WindowBattleLog" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a=""><x path="mz.abstracts.windows.WindowBattleLog"/></f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowBattleSkill" params="" file="src/mz/abstracts/windows/WindowBattleSkill.hx">
-		<from><icast><c path="mz.windows.Window_BattleSkill"/></icast></from>
-		<this><c path="mz.windows.Window_BattleSkill"/></this>
-		<to><icast><c path="mz.windows.Window_BattleSkill"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowBattleSkill.WindowBattleSkill_Impl_" params="" file="src/mz/abstracts/windows/WindowBattleSkill.hx" private="1" module="mz.abstracts.windows.WindowBattleSkill" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowBattleSkill"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowBattleSkill.WindowBattleSkill_Impl_" params="" file="src/mz/abstracts/windows/WindowBattleSkill.hx" private="1" module="mz.abstracts.windows.WindowBattleSkill" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowBattleSkill"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowBattleStatus" params="" file="src/mz/abstracts/windows/WindowBattleStatus.hx">
-		<from><icast><c path="mz.windows.Window_BattleStatus"/></icast></from>
-		<this><c path="mz.windows.Window_BattleStatus"/></this>
-		<to><icast><c path="mz.windows.Window_BattleStatus"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowBattleStatus.WindowBattleStatus_Impl_" params="" file="src/mz/abstracts/windows/WindowBattleStatus.hx" private="1" module="mz.abstracts.windows.WindowBattleStatus" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a=""><x path="mz.abstracts.windows.WindowBattleStatus"/></f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowBattleStatus.WindowBattleStatus_Impl_" params="" file="src/mz/abstracts/windows/WindowBattleStatus.hx" private="1" module="mz.abstracts.windows.WindowBattleStatus" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a=""><x path="mz.abstracts.windows.WindowBattleStatus"/></f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
 	<abstract path="mz.abstracts.windows.WindowChoiceList" params="" file="src/mz/abstracts/windows/WindowChoiceList.hx">
 		<from><icast><c path="mz.windows.Window_ChoiceList"/></icast></from>
 		<this><c path="mz.windows.Window_ChoiceList"/></this>
@@ -51342,58 +51063,6 @@
 	<c path="mz.windows.Window_Command"/>
 </f></raw>
 	</class>
-	<abstract path="mz.abstracts.windows.WindowDebugEdit" params="" file="src/mz/abstracts/windows/WindowDebugEdit.hx">
-		<from><icast><c path="mz.windows.Window_DebugEdit"/></icast></from>
-		<this><c path="mz.windows.Window_DebugEdit"/></this>
-		<to><icast><c path="mz.windows.Window_DebugEdit"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowDebugEdit.WindowDebugEdit_Impl_" params="" file="src/mz/abstracts/windows/WindowDebugEdit.hx" private="1" module="mz.abstracts.windows.WindowDebugEdit" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowDebugEdit"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowDebugEdit.WindowDebugEdit_Impl_" params="" file="src/mz/abstracts/windows/WindowDebugEdit.hx" private="1" module="mz.abstracts.windows.WindowDebugEdit" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowDebugEdit"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowDebugRange" params="" file="src/mz/abstracts/windows/WindowDebugRange.hx">
-		<from><icast><c path="mz.windows.Window_DebugRange"/></icast></from>
-		<this><c path="mz.windows.Window_DebugRange"/></this>
-		<to><icast><c path="mz.windows.Window_DebugRange"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowDebugRange.WindowDebugRange_Impl_" params="" file="src/mz/abstracts/windows/WindowDebugRange.hx" private="1" module="mz.abstracts.windows.WindowDebugRange" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowDebugRange"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowDebugRange.WindowDebugRange_Impl_" params="" file="src/mz/abstracts/windows/WindowDebugRange.hx" private="1" module="mz.abstracts.windows.WindowDebugRange" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowDebugRange"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
 	<abstract path="mz.abstracts.windows.WindowEquipItem" params="" file="src/mz/abstracts/windows/WindowEquipItem.hx">
 		<from><icast><c path="mz.windows.Window_EquipItem"/></icast></from>
 		<this><c path="mz.windows.Window_EquipItem"/></this>
@@ -51435,35 +51104,6 @@
 	<c path="mz.windows.Window_EquipItem"/>
 </f></raw>
 	</class>
-	<abstract path="mz.abstracts.windows.WindowEquipSlot" params="" file="src/mz/abstracts/windows/WindowEquipSlot.hx">
-		<from><icast><c path="mz.windows.Window_EquipSlot"/></icast></from>
-		<this><c path="mz.windows.Window_EquipSlot"/></this>
-		<to><icast><c path="mz.windows.Window_EquipSlot"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowEquipSlot.WindowEquipSlot_Impl_" params="" file="src/mz/abstracts/windows/WindowEquipSlot.hx" private="1" module="mz.abstracts.windows.WindowEquipSlot" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowEquipSlot"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowEquipSlot.WindowEquipSlot_Impl_" params="" file="src/mz/abstracts/windows/WindowEquipSlot.hx" private="1" module="mz.abstracts.windows.WindowEquipSlot" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowEquipSlot"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
 	<abstract path="mz.abstracts.windows.WindowGameEnd" params="" file="src/mz/abstracts/windows/WindowGameEnd.hx">
 		<from><icast><c path="mz.windows.Window_GameEnd"/></icast></from>
 		<this><c path="mz.windows.Window_GameEnd"/></this>
@@ -51578,31 +51218,6 @@
 	<c path="mz.windows.Window_HorzCommand"/>
 </f></raw>
 	</class>
-	<abstract path="mz.abstracts.windows.WindowItemCategory" params="" file="src/mz/abstracts/windows/WindowItemCategory.hx">
-		<from><icast><c path="mz.windows.Window_ItemCategory"/></icast></from>
-		<this><c path="mz.windows.Window_ItemCategory"/></this>
-		<to><icast><c path="mz.windows.Window_ItemCategory"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowItemCategory.WindowItemCategory_Impl_" params="" file="src/mz/abstracts/windows/WindowItemCategory.hx" private="1" module="mz.abstracts.windows.WindowItemCategory" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowItemCategory"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowItemCategory.WindowItemCategory_Impl_" params="" file="src/mz/abstracts/windows/WindowItemCategory.hx" private="1" module="mz.abstracts.windows.WindowItemCategory" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowItemCategory"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
 	<abstract path="mz.abstracts.windows.WindowMapName" params="" file="src/mz/abstracts/windows/WindowMapName.hx">
 		<from><icast><c path="mz.windows.Window_MapName"/></icast></from>
 		<this><c path="mz.windows.Window_MapName"/></this>
@@ -51659,7 +51274,9 @@
 		</meta>
 		<impl><class path="mz.abstracts.windows._WindowMenuStatus.WindowMenuStatus_Impl_" params="" file="src/mz/abstracts/windows/WindowMenuStatus.hx" private="1" module="mz.abstracts.windows.WindowMenuStatus" final="1">
 	<_new public="1" get="inline" set="null" line="9" static="1">
-		<f a="x:y">
+		<f a="x:y:width:height">
+			<x path="Int"/>
+			<x path="Int"/>
 			<x path="Int"/>
 			<x path="Int"/>
 			<x path="mz.abstracts.windows.WindowMenuStatus"/>
@@ -51674,7 +51291,9 @@
 	</abstract>
 	<class path="mz.abstracts.windows._WindowMenuStatus.WindowMenuStatus_Impl_" params="" file="src/mz/abstracts/windows/WindowMenuStatus.hx" private="1" module="mz.abstracts.windows.WindowMenuStatus" final="1">
 		<_new public="1" get="inline" set="null" line="9" static="1">
-			<f a="x:y">
+			<f a="x:y:width:height">
+				<x path="Int"/>
+				<x path="Int"/>
 				<x path="Int"/>
 				<x path="Int"/>
 				<x path="mz.abstracts.windows.WindowMenuStatus"/>
@@ -51727,54 +51346,6 @@
 	<c path="mz.windows.Window_Message"/>
 </f></raw>
 	</class>
-	<abstract path="mz.abstracts.windows.WindowNameEdit" params="" file="src/mz/abstracts/windows/WindowNameEdit.hx">
-		<from><icast><c path="mz.windows.Window_NameEdit"/></icast></from>
-		<this><c path="mz.windows.Window_NameEdit"/></this>
-		<to><icast><c path="mz.windows.Window_NameEdit"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowNameEdit.WindowNameEdit_Impl_" params="" file="src/mz/abstracts/windows/WindowNameEdit.hx" private="1" module="mz.abstracts.windows.WindowNameEdit" final="1"><_new public="1" get="inline" set="null" line="10" static="1">
-	<f a="actor:maxLength">
-		<c path="mz.objects.Game_Actor"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowNameEdit"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowNameEdit.WindowNameEdit_Impl_" params="" file="src/mz/abstracts/windows/WindowNameEdit.hx" private="1" module="mz.abstracts.windows.WindowNameEdit" final="1"><_new public="1" get="inline" set="null" line="10" static="1">
-	<f a="actor:maxLength">
-		<c path="mz.objects.Game_Actor"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowNameEdit"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowNameInput" params="" file="src/mz/abstracts/windows/WindowNameInput.hx">
-		<from><icast><c path="mz.windows.Window_NameInput"/></icast></from>
-		<this><c path="mz.windows.Window_NameInput"/></this>
-		<to><icast><c path="mz.windows.Window_NameInput"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStactics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowNameInput.WindowNameInput_Impl_" params="" file="src/mz/abstracts/windows/WindowNameInput.hx" private="1" module="mz.abstracts.windows.WindowNameInput" final="1"><_new public="1" get="inline" set="null" line="10" static="1">
-	<f a="windowNameEdit">
-		<c path="mz.windows.Window_NameEdit"/>
-		<x path="mz.abstracts.windows.WindowNameInput"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowNameInput.WindowNameInput_Impl_" params="" file="src/mz/abstracts/windows/WindowNameInput.hx" private="1" module="mz.abstracts.windows.WindowNameInput" final="1"><_new public="1" get="inline" set="null" line="10" static="1">
-	<f a="windowNameEdit">
-		<c path="mz.windows.Window_NameEdit"/>
-		<x path="mz.abstracts.windows.WindowNameInput"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
 	<abstract path="mz.abstracts.windows.WindowNumberInput" params="" file="src/mz/abstracts/windows/WindowNumberInput.hx">
 		<from><icast><c path="mz.windows.Window_NumberInput"/></icast></from>
 		<this><c path="mz.windows.Window_NumberInput"/></this>
@@ -51827,69 +51398,6 @@
 	<c path="mz.windows.Window_Options"/>
 </f></raw>
 	</class>
-	<abstract path="mz.abstracts.windows.WindowPartyCommand" params="" file="src/mz/abstracts/windows/WindowPartyCommand.hx">
-		<from><icast><c path="mz.windows.Window_PartyCommand"/></icast></from>
-		<this><c path="mz.windows.Window_PartyCommand"/></this>
-		<to><icast><c path="mz.windows.Window_PartyCommand"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowPartyCommand.WindowPartyCommand_Impl_" params="" file="src/mz/abstracts/windows/WindowPartyCommand.hx" private="1" module="mz.abstracts.windows.WindowPartyCommand" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a=""><x path="mz.abstracts.windows.WindowPartyCommand"/></f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowPartyCommand.WindowPartyCommand_Impl_" params="" file="src/mz/abstracts/windows/WindowPartyCommand.hx" private="1" module="mz.abstracts.windows.WindowPartyCommand" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a=""><x path="mz.abstracts.windows.WindowPartyCommand"/></f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowSavefileList" params="" file="src/mz/abstracts/windows/WindowSavefileList.hx">
-		<from><icast><c path="mz.windows.Window_SavefileList"/></icast></from>
-		<this><c path="mz.windows.Window_SavefileList"/></this>
-		<to><icast><c path="mz.windows.Window_SavefileList"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowSavefileList.WindowSavefileList_Impl_" params="" file="src/mz/abstracts/windows/WindowSavefileList.hx" private="1" module="mz.abstracts.windows.WindowSavefileList" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowSavefileList"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowSavefileList.WindowSavefileList_Impl_" params="" file="src/mz/abstracts/windows/WindowSavefileList.hx" private="1" module="mz.abstracts.windows.WindowSavefileList" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowSavefileList"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowScrollText" params="" file="src/mz/abstracts/windows/WindowScrollText.hx">
-		<from><icast><c path="mz.windows.Window_ScrollText"/></icast></from>
-		<this><c path="mz.windows.Window_ScrollText"/></this>
-		<to><icast><c path="mz.windows.Window_ScrollText"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowScrollText.WindowScrollText_Impl_" params="" file="src/mz/abstracts/windows/WindowScrollText.hx" private="1" module="mz.abstracts.windows.WindowScrollText" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a=""><x path="mz.abstracts.windows.WindowScrollText"/></f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowScrollText.WindowScrollText_Impl_" params="" file="src/mz/abstracts/windows/WindowScrollText.hx" private="1" module="mz.abstracts.windows.WindowScrollText" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a=""><x path="mz.abstracts.windows.WindowScrollText"/></f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
 	<abstract path="mz.abstracts.windows.WindowSelectable" params="" file="src/mz/abstracts/windows/WindowSelectable.hx">
 		<from><icast><c path="mz.windows.Window_Selectable"/></icast></from>
 		<this><c path="mz.windows.Window_Selectable"/></this>
@@ -51931,178 +51439,6 @@
 	<c path="mz.windows.Window_Selectable"/>
 </f></raw>
 	</class>
-	<abstract path="mz.abstracts.windows.WindowShopBuy" params="" file="src/mz/abstracts/windows/WindowShopBuy.hx">
-		<from><icast><c path="mz.windows.Window_ShopBuy"/></icast></from>
-		<this><c path="mz.windows.Window_ShopBuy"/></this>
-		<to><icast><c path="mz.windows.Window_ShopBuy"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowShopBuy.WindowShopBuy_Impl_" params="" file="src/mz/abstracts/windows/WindowShopBuy.hx" private="1" module="mz.abstracts.windows.WindowShopBuy" final="1"><_new public="1" get="inline" set="null" line="8" static="1">
-	<f a="x:y:height:shopGoods">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<c path="Array"><c path="Array"><x path="Any"/></c></c>
-		<x path="mz.abstracts.windows.WindowShopBuy"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowShopBuy.WindowShopBuy_Impl_" params="" file="src/mz/abstracts/windows/WindowShopBuy.hx" private="1" module="mz.abstracts.windows.WindowShopBuy" final="1"><_new public="1" get="inline" set="null" line="8" static="1">
-	<f a="x:y:height:shopGoods">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<c path="Array"><c path="Array"><x path="Any"/></c></c>
-		<x path="mz.abstracts.windows.WindowShopBuy"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowShopNumber" params="" file="src/mz/abstracts/windows/WindowShopNumber.hx">
-		<from><icast><c path="mz.windows.Window_ShopNumber"/></icast></from>
-		<this><c path="mz.windows.Window_ShopNumber"/></this>
-		<to><icast><c path="mz.windows.Window_ShopNumber"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowShopNumber.WindowShopNumber_Impl_" params="" file="src/mz/abstracts/windows/WindowShopNumber.hx" private="1" module="mz.abstracts.windows.WindowShopNumber" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowShopNumber"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowShopNumber.WindowShopNumber_Impl_" params="" file="src/mz/abstracts/windows/WindowShopNumber.hx" private="1" module="mz.abstracts.windows.WindowShopNumber" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowShopNumber"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowShopSell" params="" file="src/mz/abstracts/windows/WindowShopSell.hx">
-		<from><icast><c path="mz.windows.Window_ShopSell"/></icast></from>
-		<this><c path="mz.windows.Window_ShopSell"/></this>
-		<to><icast><c path="mz.windows.Window_ShopSell"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowShopSell.WindowShopSell_Impl_" params="" file="src/mz/abstracts/windows/WindowShopSell.hx" private="1" module="mz.abstracts.windows.WindowShopSell" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowShopSell"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowShopSell.WindowShopSell_Impl_" params="" file="src/mz/abstracts/windows/WindowShopSell.hx" private="1" module="mz.abstracts.windows.WindowShopSell" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowShopSell"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowShopStatus" params="" file="src/mz/abstracts/windows/WindowShopStatus.hx">
-		<from><icast><c path="mz.windows.Window_ShopStatus"/></icast></from>
-		<this><c path="mz.windows.Window_ShopStatus"/></this>
-		<to><icast><c path="mz.windows.Window_ShopStatus"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowShopStatus.WindowShopStatus_Impl_" params="" file="src/mz/abstracts/windows/WindowShopStatus.hx" private="1" module="mz.abstracts.windows.WindowShopStatus" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowShopStatus"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowShopStatus.WindowShopStatus_Impl_" params="" file="src/mz/abstracts/windows/WindowShopStatus.hx" private="1" module="mz.abstracts.windows.WindowShopStatus" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowShopStatus"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowSkillList" params="" file="src/mz/abstracts/windows/WindowSkillList.hx">
-		<from><icast><c path="mz.windows.Window_SkillList"/></icast></from>
-		<this><c path="mz.windows.Window_SkillList"/></this>
-		<to><icast><c path="mz.windows.Window_SkillList"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowSkillList.WindowSkillList_Impl_" params="" file="src/mz/abstracts/windows/WindowSkillList.hx" private="1" module="mz.abstracts.windows.WindowSkillList" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowSkillList"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowSkillList.WindowSkillList_Impl_" params="" file="src/mz/abstracts/windows/WindowSkillList.hx" private="1" module="mz.abstracts.windows.WindowSkillList" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowSkillList"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
-	<abstract path="mz.abstracts.windows.WindowSkillStatus" params="" file="src/mz/abstracts/windows/WindowSkillStatus.hx">
-		<from><icast><c path="mz.windows.Window_SkillStatus"/></icast></from>
-		<this><c path="mz.windows.Window_SkillStatus"/></this>
-		<to><icast><c path="mz.windows.Window_SkillStatus"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.abstracts.windows._WindowSkillStatus.WindowSkillStatus_Impl_" params="" file="src/mz/abstracts/windows/WindowSkillStatus.hx" private="1" module="mz.abstracts.windows.WindowSkillStatus" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowSkillStatus"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class></impl>
-	</abstract>
-	<class path="mz.abstracts.windows._WindowSkillStatus.WindowSkillStatus_Impl_" params="" file="src/mz/abstracts/windows/WindowSkillStatus.hx" private="1" module="mz.abstracts.windows.WindowSkillStatus" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
-	<f a="x:y:width:height">
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="Int"/>
-		<x path="mz.abstracts.windows.WindowSkillStatus"/>
-	</f>
-	<meta><m n=":noCompletion"/></meta>
-</_new></class>
 	<abstract path="mz.abstracts.windows.WindowSkillType" params="" file="src/mz/abstracts/windows/WindowSkillType.hx">
 		<from><icast><c path="mz.windows.Window_SkillType"/></icast></from>
 		<this><c path="mz.windows.Window_SkillType"/></this>
@@ -53995,10 +53331,7 @@
 		<haxe_doc>* The static class that handles JSON with object information.
  *
  * @class JsonEx</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"JsonEx"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"JsonEx"</e></m></meta>
 	</class>
 	<class path="pixi.core.math.Point" params="" file="/Users/kinor/haxe/haxe_libraries/pixijs/5.1.2/haxelib/src/pixi/core/math/Point.hx" extern="1">
 		<copyFrom public="1" set="method">
@@ -56978,187 +56311,6 @@
  * events that happen within.</haxe_doc>
 		<meta><m n=":native"><e>"BattleManager"</e></m></meta>
 	</class>
-	<class path="mz.managers.ColorManager" params="" file="src/mz/managers/ColorManager.hx" extern="1">
-		<loadWindowSkin public="1" set="method" static="1">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Loads the window skin into ColorManager.</haxe_doc>
-		</loadWindowSkin>
-		<textColor public="1" set="method" static="1">
-			<f a="windowSkinColorIndex">
-				<x path="Int"/>
-				<x path="mz.types.Color"/>
-			</f>
-			<haxe_doc>* Loads the text color using the window skin color Index.
-  * @param windowSkinColorIndex
-  * @returns Color</haxe_doc>
-		</textColor>
-		<normalColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the normal color, index 0
-  * of the window skin.</haxe_doc>
-		</normalColor>
-		<systemColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the system color; index 16 on the window skin.
-  * @return Color</haxe_doc>
-		</systemColor>
-		<crisisColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the crisis color; index 17 on the window skin.
-  * @return Color</haxe_doc>
-		</crisisColor>
-		<deathColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the death color; index 18 on the window skin.
-  * @return Color</haxe_doc>
-		</deathColor>
-		<gaugeBackColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the  gauge back color; index 19 on the window skin.
-  * @return Color</haxe_doc>
-		</gaugeBackColor>
-		<hpGaugeColor1 public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the hp gauge color 1. Index 20 on the window skin.
-  * @return Color</haxe_doc>
-		</hpGaugeColor1>
-		<hpGaugeColor2 public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the hp guage color 2. Index 21 on the window skin.
-  * @return Color</haxe_doc>
-		</hpGaugeColor2>
-		<mpGaugeColor1 public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the mp gauge color 1. Index 22 on the window skin.
-  * @return Color</haxe_doc>
-		</mpGaugeColor1>
-		<mpGaugeColor2 public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the mp gauge color 2. Index 23 on the window skin.
-  * @return Color</haxe_doc>
-		</mpGaugeColor2>
-		<mpCostColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the mp cost color. Index 23 on the window skin.
-  * @return Color</haxe_doc>
-		</mpCostColor>
-		<powerUpColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the power up color. Index 24 on the window skin.
-  * @return Color</haxe_doc>
-		</powerUpColor>
-		<powerDownColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the power down color. Index 25 on the window skin.
-  * @return Color</haxe_doc>
-		</powerDownColor>
-		<ctGaugeColor1 public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the ct gauge color 1. Index 26 on the window skin.
-  * @return Color</haxe_doc>
-		</ctGaugeColor1>
-		<ctGaugeColor2 public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the ct gauge color 2. Index 27 on the window skin.
-  * @return Color</haxe_doc>
-		</ctGaugeColor2>
-		<tpGaugeColor1 public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the tp gauge color 1. Index 28 on the window skin.
-  * @return Color</haxe_doc>
-		</tpGaugeColor1>
-		<tpGaugeColor2 public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the tp gauge color 2. Index 29 on the window skin.
-  * @return Color</haxe_doc>
-		</tpGaugeColor2>
-		<tpCostColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the tp cost color. Index 29 on the window skin.
-  * @return Color</haxe_doc>
-		</tpCostColor>
-		<pendingColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Uses the pending color.
-  * @return Color</haxe_doc>
-		</pendingColor>
-		<hpColor public="1" set="method" static="1">
-			<f a="actor">
-				<c path="mz.objects.Game_Actor"/>
-				<x path="mz.types.Color"/>
-			</f>
-			<haxe_doc><![CDATA[* Given the actor status the color is different.
-  * Alive -> Normal Color
-  * Dying -> Crisis Color
-  * Dead -> Death Color
-  * If it's not an actor, it returns the normal color.
-  * @param actor
-  * @return Color]]></haxe_doc>
-		</hpColor>
-		<mpColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Based on actor; currently returns normal color.
-  * @return Color</haxe_doc>
-		</mpColor>
-		<tpColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Based on actor; currently returns normal color.
-  * @return Color</haxe_doc>
-		</tpColor>
-		<paramChangeTextColor public="1" set="method" static="1">
-			<f a="change">
-				<x path="Int"/>
-				<x path="mz.types.Color"/>
-			</f>
-			<haxe_doc><![CDATA[* This returns the text color based on change.
-  * change > 0 -> Power Up Color
-  * change < 0 -> Power Down Color
-  * else -> Normal color.
-  * @param change
-  * @return Color]]></haxe_doc>
-		</paramChangeTextColor>
-		<damageColor public="1" set="method" static="1">
-			<f a="colorType">
-				<x path="mz.types.DamageColorType"/>
-				<x path="mz.types.Color"/>
-			</f>
-			<haxe_doc><![CDATA[* Returns the color based on Color Type.
-  * 0 -> HP Damage Color
-  * 1 -> HP Recover Color
-  * 2 -> MP Damage Color
-  * 3 -> MP Recover Color
-  * Number -> Default Color
-  * @param colorType
-  * @return Color]]></haxe_doc>
-		</damageColor>
-		<outlineColor public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Returns the color "rgba(0, 0, 0, 0.6)"
-  * @return Color</haxe_doc>
-		</outlineColor>
-		<dimColor1 public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Returns the color "rgba(0, 0, 0, 0.6)"
-  * @return Color</haxe_doc>
-		</dimColor1>
-		<dimColor2 public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Returns the color "rgba(0, 0, 0, 0)"
-  * @return Color</haxe_doc>
-		</dimColor2>
-		<itemBackColor1 public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Returns the color "rgba(32, 32, 32, 0.5)"
-  * @return Color</haxe_doc>
-		</itemBackColor1>
-		<itemBackColor2 public="1" set="method" static="1">
-			<f a=""><x path="mz.types.Color"/></f>
-			<haxe_doc>* Returns the color "rgba(0, 0, 0, 0.5)"
-  * @return Color</haxe_doc>
-		</itemBackColor2>
-		<_windowSkin><c path="mz.core.Bitmap"/></_windowSkin>
-		<meta><m n=":native"><e>"ColorManager"</e></m></meta>
-	</class>
 	<class path="mz.managers.ConfigManager" params="" file="src/mz/managers/ConfigManager.hx" extern="1">
 		<load public="1" set="method" static="1"><f a=""><x path="Void"/></f></load>
 		<save public="1" set="method" static="1"><f a=""><x path="Void"/></f></save>
@@ -57373,114 +56525,8 @@
  * and map information.</haxe_doc>
 		<meta><m n=":native"><e>"DataManager"</e></m></meta>
 	</class>
-	<typedef path="mz.managers.Effect" params="" file="src/mz/managers/EffectManager.hx" module="mz.managers.EffectManager"><x path="Any"/></typedef>
-	<class path="mz.managers.EffectManager" params="" file="src/mz/managers/EffectManager.hx" extern="1">
-		<_cache static="1"><x path="haxe.DynamicAccess"><d/></x></_cache>
-		<_errorUrls static="1"><c path="Array"><d/></c></_errorUrls>
-		<load public="1" set="method" static="1">
-			<f a="fileName">
-				<c path="String"/>
-				<t path="mz.managers.Effect"/>
-			</f>
-			<haxe_doc>* Load the Effect from a file.
-  * @param fileName
-  * @return Effect</haxe_doc>
-		</load>
-		<startLoading public="1" set="method" static="1">
-			<f a="url">
-				<c path="String"/>
-				<t path="mz.managers.Effect"/>
-			</f>
-			<haxe_doc>* Starts loading  the Effect from URL
-  * @param url
-  * @return Effect</haxe_doc>
-		</startLoading>
-		<clear public="1" set="method" static="1">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Clears the cache and releases the Effect from
-  * Graphics.</haxe_doc>
-		</clear>
-		<onLoad public="1" set="method" static="1">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Not Implemented</haxe_doc>
-		</onLoad>
-		<makeUrl public="1" set="method" static="1">
-			<f a="fileName">
-				<c path="String"/>
-				<c path="String"/>
-			</f>
-			<haxe_doc>* Makes a url to an Effekseer file.
-  * @param fileName
-  * @return String</haxe_doc>
-		</makeUrl>
-		<checkErrors public="1" set="method" static="1">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Checks the error in the errorUrls.</haxe_doc>
-		</checkErrors>
-		<throwLoadError public="1" set="method" static="1">
-			<f a="url">
-				<c path="String"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Throws the loading error.
-  * @param url</haxe_doc>
-		</throwLoadError>
-		<isReady public="1" set="method" static="1">
-			<f a=""><x path="Bool"/></f>
-			<haxe_doc>* Returns true if the EffectManager is ready.
-  * @return Bool</haxe_doc>
-		</isReady>
-		<meta><m n=":native"><e>"EffectManager"</e></m></meta>
-	</class>
 	<class path="mz.managers.ImageManager" params="" file="src/mz/managers/ImageManager.hx" extern="1">
-		<iconWidth public="1" static="1">
-			<x path="Int"/>
-			<haxe_doc>*  returns 32</haxe_doc>
-		</iconWidth>
-		<iconHeight public="1" static="1">
-			<x path="Int"/>
-			<haxe_doc>* returns 32</haxe_doc>
-		</iconHeight>
-		<faceWidth public="1" static="1">
-			<x path="Int"/>
-			<haxe_doc>* 144</haxe_doc>
-		</faceWidth>
-		<faceHeight public="1" static="1">
-			<x path="Int"/>
-			<haxe_doc>* returns 144</haxe_doc>
-		</faceHeight>
-		<_cache static="1"><x path="haxe.DynamicAccess"><d/></x></_cache>
-		<_system static="1"><x path="haxe.DynamicAccess"><d/></x></_system>
-		<_emptyBitmap static="1"><c path="mz.core.Bitmap"/></_emptyBitmap>
-		<cache public="1" static="1">
-			<x path="haxe.DynamicAccess"><d/></x>
-			<meta><m n=":native"><e>"_cache"</e></m></meta>
-		</cache>
-		<system public="1" static="1">
-			<x path="haxe.DynamicAccess"><d/></x>
-			<meta><m n=":native"><e>"_system"</e></m></meta>
-		</system>
-		<emptyBitmap public="1" static="1">
-			<c path="mz.core.Bitmap"/>
-			<meta><m n=":native"><e>"_emptyBitmap"</e></m></meta>
-		</emptyBitmap>
-		<loadBitmapFromUrl public="1" set="method" static="1">
-			<f a="url">
-				<c path="String"/>
-				<c path="mz.core.Bitmap"/>
-			</f>
-			<haxe_doc>* Loads the bitmap from url and returns it.
-  * @param url
-  * @return Bitmap</haxe_doc>
-		</loadBitmapFromUrl>
-		<throwLoadError public="1" set="method" static="1">
-			<f a="bitmap">
-				<c path="mz.core.Bitmap"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Throws a load error and retries loading the bitmap.
-  * @param bitmap</haxe_doc>
-		</throwLoadError>
+		<cache public="1" static="1"><c path="mz.core.CacheMap"/></cache>
 		<loadFace public="1" set="method" static="1"><f a="filename:?hue">
 	<c path="String"/>
 	<x path="Int"/>
@@ -57493,11 +56539,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from the 'img/parallaxes/' folder
-  * and returns it.
-  * @param {string} filename
-  * @param {number} [hue]
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+   * and returns it.
+   * @param {string} filename 
+   * @param {number} [hue] 
+   * @returns {Bitmap} 
+   * @memberof ImageManagerStatic</haxe_doc>
 		</loadParallax>
 		<loadPicture public="1" set="method" static="1">
 			<f a="filename:?hue">
@@ -57506,11 +56552,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from the 'img/pictures/' folder
-  * and returns it.
-  * @param {string} filename
-  * @param {number} [hue]
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * and returns it.
+     * @param {string} filename 
+     * @param {number} [hue] 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadPicture>
 		<loadAnimation public="1" set="method" static="1">
 			<f a="filename:?hue">
@@ -57519,11 +56565,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from the 'img/animations/' folder
-  * and returns it.
-  * @param {string} filename
-  * @param {number} [hue]
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * and returns it.
+     * @param {string} filename 
+     * @param {number} [hue] 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadAnimation>
 		<loadBattleback1 public="1" set="method" static="1">
 			<f a="filename:?hue">
@@ -57532,11 +56578,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from the 'img/battlebacks1/' folder
-  *  and returns it.
-  * @param {string} filename
-  * @param {number} [hue]
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     *  and returns it.
+     * @param {string} filename 
+     * @param {number} [hue] 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadBattleback1>
 		<loadBattleback2 public="1" set="method" static="1">
 			<f a="filename:?hue">
@@ -57545,11 +56591,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from the 'img/battlebacks2/' folder
-  * and returns it.
-  * @param {string} filename
-  * @param {number} [hue]
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * and returns it.
+     * @param {string} filename 
+     * @param {number} [hue] 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadBattleback2>
 		<loadEnemy public="1" set="method" static="1">
 			<f a="filename:?hue">
@@ -57558,11 +56604,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from the 'img/enemies/' folder
-  * and returns it.
-  * @param {string} filename
-  * @param {number} [hue]
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * and returns it.
+     * @param {string} filename 
+     * @param {number} [hue] 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadEnemy>
 		<loadCharacter public="1" set="method" static="1">
 			<f a="filename:?hue">
@@ -57571,11 +56617,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from the 'img/characters/' folder
-  * and returns it.
-  * @param {string} filename
-  * @param {number} [hue]
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * and returns it.
+     * @param {string} filename 
+     * @param {number} [hue] 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadCharacter>
 		<loadSvActor public="1" set="method" static="1"><f a="filename:?hue">
 	<c path="String"/>
@@ -57589,11 +56635,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from the 'img/sv_enemies/' folder
-  * and returns it.
-  * @param {string} filename
-  * @param {number} [hue]
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * and returns it.
+     * @param {string} filename 
+     * @param {number} [hue] 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadSvEnemy>
 		<loadSystem public="1" set="method" static="1">
 			<f a="filename:?hue">
@@ -57602,11 +56648,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from 'img/system/' folder
-  * and returns it.
-  * @param {string} filename
-  * @param {number} [hue]
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * and returns it.
+     * @param {string} filename 
+     * @param {number} [hue] 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadSystem>
 		<loadTileset public="1" set="method" static="1">
 			<f a="filename:?hue">
@@ -57615,11 +56661,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from the 'img/tilesets/' folder
-  * and returns it.
-  * @param {string} filename
-  * @param {number} [hue]
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * and returns it.
+     * @param {string} filename 
+     * @param {number} [hue] 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadTileset>
 		<loadTitle1 public="1" set="method" static="1">
 			<f a="filename:?hue">
@@ -57628,11 +56674,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from the 'img/titles1/' folder
-  * and returns it.
-  * @param {string} filename
-  * @param {number} [hue]
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * and returns it.
+     * @param {string} filename 
+     * @param {number} [hue] 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadTitle1>
 		<loadTitle2 public="1" set="method" static="1">
 			<f a="filename:?hue">
@@ -57641,11 +56687,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from the 'img/titles2/' folder
-  * and returns it.
-  * @param {string} filename
-  * @param {number} [hue]
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * and returns it.
+     * @param {string} filename 
+     * @param {number} [hue] 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadTitle2>
 		<loadBitmap public="1" set="method" static="1">
 			<f a="folder:filename:hue:smooth">
@@ -57656,13 +56702,13 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object from any folder and returns it.
-  *
-  * @param {string} folder
-  * @param {string} filename
-  * @param {number} hue
-  * @param {boolean} smooth
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * 
+     * @param {string} folder 
+     * @param {string} filename 
+     * @param {number} hue 
+     * @param {boolean} smooth 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadBitmap>
 		<loadEmptyBitmap public="1" set="method" static="1">
 			<f a="path:hue">
@@ -57671,11 +56717,11 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads an empty Bitmap object and returns it.
-  *
-  * @param {string} path
-  * @param {number} hue
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * 
+     * @param {string} path 
+     * @param {number} hue 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadEmptyBitmap>
 		<loadNormalBitmap public="1" set="method" static="1">
 			<f a="path:hue">
@@ -57684,24 +56730,24 @@
 				<c path="mz.core.Bitmap"/>
 			</f>
 			<haxe_doc>* Loads a Bitmap object given a path
-  * and returns it.
-  * @param {string} path
-  * @param {number} hue
-  * @returns {Bitmap}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * and returns it.
+     * @param {string} path 
+     * @param {number} hue 
+     * @returns {Bitmap} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</loadNormalBitmap>
 		<clear public="1" set="method" static="1">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Clears the image cache in RPGMakerMV.
-  *
-  * @memberof ImageManagerStatic</haxe_doc>
+     * 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</clear>
 		<isReady public="1" set="method" static="1">
 			<f a=""><x path="Bool"/></f>
 			<haxe_doc>* Returns true if the image cache
-  * is ready.
-  * @returns {boolean}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * is ready.
+     * @returns {boolean} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</isReady>
 		<isObjectCharacter public="1" set="method" static="1">
 			<f a="filename">
@@ -57709,12 +56755,12 @@
 				<x path="Bool"/>
 			</f>
 			<haxe_doc>* Returns true if the given filename
-  * is an object character. Must contain
-  * a  '!' in the file name to be an
-  * object character.
-  * @param {string} filename
-  * @returns {boolean}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * is an object character. Must contain
+     * a  '!' in the file name to be an
+     * object character.
+     * @param {string} filename 
+     * @returns {boolean} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</isObjectCharacter>
 		<isBigCharacter public="1" set="method" static="1">
 			<f a="filename">
@@ -57722,11 +56768,11 @@
 				<x path="Bool"/>
 			</f>
 			<haxe_doc>* Returns true if the given filename is
-  * a large character. Must contain a '$'
-  * in the file name to be a large character.
-  * @param {string} filename
-  * @returns {boolean}
-  * @memberof ImageManagerStatic</haxe_doc>
+     * a large character. Must contain a '$'
+     * in the file name to be a large character.
+     * @param {string} filename 
+     * @returns {boolean} 
+     * @memberof ImageManagerStatic</haxe_doc>
 		</isBigCharacter>
 		<isZeroParallax public="1" set="method" static="1"><f a="filename">
 	<c path="String"/>
@@ -65314,184 +64360,11 @@
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Updates the sprite battler animation.</haxe_doc>
 		</updateAnimation>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Sprite_Battler"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"Sprite_Battler"</e></m></meta>
 	</class>
 	<class path="mz.sprites.Sprite_Actor" params="" file="src/mz/sprites/Sprite_Actor.hx" extern="1">
 		<extends path="mz.sprites.Sprite_Battler"/>
-		<MOTIONS public="1" static="1"><a>
-	<walk><t path="mz.types.Motion"/></walk>
-	<wait><t path="mz.types.Motion"/></wait>
-	<victory><t path="mz.types.Motion"/></victory>
-	<thrust><t path="mz.types.Motion"/></thrust>
-	<swing><t path="mz.types.Motion"/></swing>
-	<spell><t path="mz.types.Motion"/></spell>
-	<sleep><t path="mz.types.Motion"/></sleep>
-	<skill><t path="mz.types.Motion"/></skill>
-	<missile><t path="mz.types.Motion"/></missile>
-	<item><t path="mz.types.Motion"/></item>
-	<guard><t path="mz.types.Motion"/></guard>
-	<evade><t path="mz.types.Motion"/></evade>
-	<escape><t path="mz.types.Motion"/></escape>
-	<dying><t path="mz.types.Motion"/></dying>
-	<dead><t path="mz.types.Motion"/></dead>
-	<damage><t path="mz.types.Motion"/></damage>
-	<chant><t path="mz.types.Motion"/></chant>
-	<abnormal><t path="mz.types.Motion"/></abnormal>
-</a></MOTIONS>
-		<_battlerName><c path="String"/></_battlerName>
-		<_motion><t path="mz.types.Motion"/></_motion>
-		<_motionCount><x path="Int"/></_motionCount>
-		<_pattern><x path="mz.types.CharacterPattern"/></_pattern>
-		<_mainSprite><c path="mz.sprites.Sprite_Base"/></_mainSprite>
-		<_shadowSprite><c path="mz.core.Sprite"/></_shadowSprite>
-		<_weaponSprite><c path="mz.sprites.Sprite_Weapon"/></_weaponSprite>
-		<_stateSprite><c path="mz.sprites.Sprite_StateOverlay"/></_stateSprite>
-		<_actor><c path="mz.objects.Game_Actor"/></_actor>
-		<initialize public="1" set="method" override="1"><f a="?battler">
-	<c path="mz.objects.Game_Actor"/>
-	<x path="Void"/>
-</f></initialize>
-		<createMainSprite public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Creates the main sprite of the sprite actor.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</createMainSprite>
-		<createShadowSprite public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Creates the shadow sprite of the sprite actor.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</createShadowSprite>
-		<createWeaponSprite public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Sets the weapon sprite of the sprite actor.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</createWeaponSprite>
-		<createStateSprite public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Creates the state sprite of the sprite actor.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</createStateSprite>
-		<setBattler public="1" set="method">
-			<f a="battler">
-				<c path="mz.objects.Game_Actor"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Sets the battler of the sprite actor.
-  *
-  * @param {Game_Actor} battler
-  * @memberof Sprite_Actor</haxe_doc>
-		</setBattler>
-		<moveToStartPosition public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Moves the sprite actor to the start position.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</moveToStartPosition>
-		<setActorHome public="1" set="method"><f a="index">
-	<x path="Int"/>
-	<x path="Void"/>
-</f></setActorHome>
-		<updateShadow public="1" set="method"><f a=""><x path="Void"/></f></updateShadow>
-		<setupMotion public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Sets up motion on the sprite actor.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</setupMotion>
-		<setupWeaponAnimation public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Sets up weapon animation on the sprite actor.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</setupWeaponAnimation>
-		<startMotion public="1" set="method">
-			<f a="motionType">
-				<c path="String"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Starts the motion given the specified motion
-  * type.
-  * @param {string} motionType
-  * @memberof Sprite_Actor</haxe_doc>
-		</startMotion>
-		<updateTargetPosition public="1" set="method"><f a=""><x path="Void"/></f></updateTargetPosition>
-		<updateMove public="1" set="method" override="1">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Updates the sprite actor's movement.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</updateMove>
-		<updateMotion public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Updates the sprite actor's motion.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</updateMotion>
-		<updateMotionCount public="1" set="method"><f a=""><x path="Void"/></f></updateMotionCount>
-		<motionSpeed public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the speed of the motion for the sprite actor.
-  *
-  * @returns {Int}
-  * @memberof Sprite_Actor</haxe_doc>
-		</motionSpeed>
-		<refreshMotion public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Refreshes the motion of the sprite actor.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</refreshMotion>
-		<startEntryMotion public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Starts the entry motion of the sprite actor.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</startEntryMotion>
-		<stepForward public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Has the sprite actor step forward.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</stepForward>
-		<stepBack public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Has the sprite actor step back.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</stepBack>
-		<retreat public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Has the sprite actor retreat.
-  *
-  * @memberof Sprite_Actor</haxe_doc>
-		</retreat>
-		<damageOffsetX public="1" set="method"><f a=""><x path="Int"/></f></damageOffsetX>
-		<damageOffsetY public="1" set="method"><f a=""><x path="Int"/></f></damageOffsetY>
-		<new public="1" set="method">
-			<f a="?battler">
-				<c path="mz.objects.Game_Actor"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Creates an instance of Sprite_Actor; can be passed
-  * a battler on creation.
-  * @param {Game_Actor} [battler]
-  * @memberof Sprite_Actor</haxe_doc>
-		</new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Sprite_Actor
- *
- * The sprite for displaying an actor.</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Sprite_Actor"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"Sprite_Actor"</e></m></meta>
 	</class>
 	<class path="mz.sprites.Sprite_Animation" params="" file="src/mz/sprites/Sprite_Animation.hx" extern="1">
 		<extends path="mz.core.Sprite"/>
@@ -65723,116 +64596,29 @@
 	<class path="mz.sprites.Sprite_Button" params="" file="src/mz/sprites/Sprite_Button.hx" extern="1">
 		<extends path="mz.core.Sprite"/>
 		<_touching><x path="Bool"/></_touching>
-		<_coldFrame><c path="mz.core.Rectangle"/></_coldFrame>
-		<_hotFrame><c path="mz.core.Rectangle"/></_hotFrame>
 		<_clickHandler><f a=""><x path="Void"/></f></_clickHandler>
-		<updateFrame public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Update method, which checks if the sprite is being touched and updates
-  * the current frame.
-  *
-  * @memberof Sprite_Button</haxe_doc>
-		</updateFrame>
-		<setColdFrame public="1" set="method">
-			<f a="x:y:width:height">
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Set the button sprites cold frame.
-  *
-  * @param {Int} x
-  * @param {Int} y
-  * @param {Int} width
-  * @param {Int} height
-  *
-  * @memberof Sprite_Button
-  *</haxe_doc>
-		</setColdFrame>
-		<setHotFrame public="1" set="method">
-			<f a="x:y:width:height">
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Set the button sprites hot frame
-  *
-  * @param {Int} x
-  * @param {Int} y
-  * @param {Int} width
-  * @param {Int} height
-  *
-  * @memberof Sprite_Button
-  *</haxe_doc>
-		</setHotFrame>
-		<setClickHandler public="1" set="method">
-			<f a="method">
-				<f a=""><x path="Void"/></f>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Creates a new handler and binds it to the button.
-  *
-  * @param {function} height
-  * @memberof Sprite_Button</haxe_doc>
-		</setClickHandler>
-		<callClickHandler public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Calls the handler method bound to the button.
-  *
-  * @param {function} height
-  * @memberof Sprite_Button</haxe_doc>
-		</callClickHandler>
-		<processTouch public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Processes weather or not the button is being touched and calls the handler
-  * bound to the button.
-  * @memberof Sprite_Button</haxe_doc>
-		</processTouch>
-		<isActive public="1" set="method">
-			<f a=""><x path="Bool"/></f>
-			<haxe_doc>* Returns true if the sprite button is currently active.
-  * @returns {Bool}
-  * @memberof Sprite_Button</haxe_doc>
-		</isActive>
-		<isButtonTouched public="1" set="method">
-			<f a=""><x path="Bool"/></f>
-			<haxe_doc>* Returns true is the button is presently being touched.
-  * @returns {Bool}
-  * @memberof Sprite_Button</haxe_doc>
-		</isButtonTouched>
-		<canvasToLocalX public="1" set="method">
-			<f a="x">
-				<x path="Int"/>
-				<x path="Int"/>
-			</f>
-			<haxe_doc>* Changes the x coordinate of the screen to local sprite x coordinate.
-  * @param {Int} x
-  * @returns {Int}
-  * @memberof Sprite_Button</haxe_doc>
-		</canvasToLocalX>
-		<canvasToLocalY public="1" set="method">
-			<f a="y">
-				<x path="Int"/>
-				<x path="Int"/>
-			</f>
-			<haxe_doc>* Changes the y coordinate of the screen
-  * to local sprite y coordinate.
-  * @param {Int} y
-  * @returns {Int}
-  * @memberof Sprite_Button</haxe_doc>
-		</canvasToLocalY>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Sprite_Button
- *
- * The sprite for displaying a button.</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Sprite_Button"</e></m>
-		</meta>
+		<updateFrame public="1" set="method"><f a=""><x path="Void"/></f></updateFrame>
+		<setColdFrame public="1" set="method"><f a="x:y:width:height">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></setColdFrame>
+		<setHotFrame public="1" set="method"><f a="x:y:width:height">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></setHotFrame>
+		<setClickHandler public="1" set="method"><f a="method">
+	<f a=""><x path="Void"/></f>
+	<x path="Void"/>
+</f></setClickHandler>
+		<callClickHandler public="1" set="method"><f a=""><x path="Void"/></f></callClickHandler>
+		<processTouch public="1" set="method"><f a=""><x path="Void"/></f></processTouch>
+		<meta><m n=":native"><e>"Sprite_Button"</e></m></meta>
 	</class>
 	<class path="mz.sprites.Sprite_Character" params="" file="src/mz/sprites/Sprite_Character.hx" extern="1">
 		<extends path="mz.sprites.Sprite_Base"/>
@@ -66118,174 +64904,10 @@
 	</class>
 	<class path="mz.sprites.Sprite_Enemy" params="" file="src/mz/sprites/Sprite_Enemy.hx" extern="1">
 		<extends path="mz.sprites.Sprite_Battler"/>
-		<_enemy><c path="mz.objects.Game_Enemy"/></_enemy>
-		<_appeared><x path="Bool"/></_appeared>
-		<_battlerName><c path="String"/></_battlerName>
-		<_battlerHue><x path="Int"/></_battlerHue>
-		<_effectType><c path="String"/></_effectType>
-		<_effectDuration><x path="Int"/></_effectDuration>
-		<_shake><x path="Int"/></_shake>
-		<_stateIconSprite><c path="mz.sprites.Sprite_StateIcon"/></_stateIconSprite>
-		<initialize public="1" set="method" override="1"><f a="battler">
-	<c path="mz.objects.Game_Enemy"/>
-	<x path="Void"/>
-</f></initialize>
-		<createStateIconSprite public="1" set="method"><f a=""><x path="Void"/></f></createStateIconSprite>
-		<setBattler public="1" set="method">
-			<f a="battler">
-				<c path="mz.objects.Game_Enemy"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Sets the battler to an instance of game enemy.
-  *
-  * @param {Game_Enemy} battler Instance of game enemy.
-  * @memberof Sprite_Enemy</haxe_doc>
-		</setBattler>
-		<loadBitmap public="1" set="method"><f a="name:hue">
-	<c path="String"/>
-	<x path="Int"/>
-	<x path="Void"/>
-</f></loadBitmap>
-		<updateStateSprite public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Updates the state sprite on the sprite enemy.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</updateStateSprite>
-		<initVisibility public="1" set="method"><f a=""><x path="Void"/></f></initVisibility>
-		<setupEffect public="1" set="method"><f a=""><x path="Void"/></f></setupEffect>
-		<startEffect public="1" set="method"><f a="effectType">
-	<c path="String"/>
-	<x path="Void"/>
-</f></startEffect>
-		<startAppear public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Starts the appearinig effect on the sprite enemy.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</startAppear>
-		<startDisappear public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Starts the disappearing effect on the sprite enemy.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</startDisappear>
-		<startWhiten public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Starts the whiten effect on the sprite enemy.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</startWhiten>
-		<startBlink public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Starts the blink effect on the sprite enemy.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</startBlink>
-		<startCollapse public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Starts the collapse effect of the sprite
-  * enemy.
-  * @memberof Sprite_Enemy</haxe_doc>
-		</startCollapse>
-		<startBossCollapse public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Starts the boss collapse effect of the sprite
-  * enemy.
-  * @memberof Sprite_Enemy</haxe_doc>
-		</startBossCollapse>
-		<startInstantCollapse public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Starts the instant collapse effect of the sprite enemy.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</startInstantCollapse>
-		<updateEffect public="1" set="method"><f a=""><x path="Void"/></f></updateEffect>
-		<isEffecting public="1" set="method">
-			<f a=""><x path="Bool"/></f>
-			<haxe_doc>* Returns true if the effect type on the sprite enemy
-  * is not null.
-  * @returns {Bool}
-  * @memberof Sprite_Enemy</haxe_doc>
-		</isEffecting>
-		<revertToNormal public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Revers the sprite enemy to a normal state.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</revertToNormal>
-		<updateWhiten public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Updates the whiten effect on the sprite enemy.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</updateWhiten>
-		<updateBlink public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Updates the blink effect on the sprite enemy.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</updateBlink>
-		<updateAppear public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Updates the appear effect on the sprite enemy.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</updateAppear>
-		<updateDisappear public="1" set="method"><f a=""><x path="Void"/></f></updateDisappear>
-		<updateCollapse public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Updates the collapse effect.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</updateCollapse>
-		<updateBossCollapse public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Updates the boss collapse effect.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</updateBossCollapse>
-		<updateInstantCollapse public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Updates the instant collapse effect.
-  *
-  * @memberof Sprite_Enemy</haxe_doc>
-		</updateInstantCollapse>
-		<damageOffsetX public="1" set="method"><f a=""><x path="Int"/></f></damageOffsetX>
-		<damageOffsetY public="1" set="method"><f a=""><x path="Int"/></f></damageOffsetY>
-		<new public="1" set="method"><f a="battler">
-	<c path="mz.objects.Game_Enemy"/>
-	<x path="Void"/>
-</f></new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Sprite_Enemy
- *
- * The sprite for displaying an enemy.</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Sprite_Enemy"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"Sprite_Enemy"</e></m></meta>
 	</class>
 	<class path="mz.sprites.Sprite_Picture" params="" file="src/mz/sprites/Sprite_Picture.hx" extern="1">
-		<_pictureId><x path="Int"/></_pictureId>
-		<_pictureName><c path="String"/></_pictureName>
-		<_isPicture><x path="Bool"/></_isPicture>
-		<picture public="1" set="method"><f a=""><c path="mz.objects.Game_Picture"/></f></picture>
-		<updateBitmap public="1" set="method"><f a=""><x path="Void"/></f></updateBitmap>
-		<updateOrigin public="1" set="method"><f a=""><x path="Void"/></f></updateOrigin>
-		<updatePosition public="1" set="method"><f a=""><x path="Void"/></f></updatePosition>
-		<updateScale public="1" set="method"><f a=""><x path="Void"/></f></updateScale>
-		<updateTone public="1" set="method"><f a=""><x path="Void"/></f></updateTone>
-		<updateOther public="1" set="method"><f a=""><x path="Void"/></f></updateOther>
-		<loadBitmap public="1" set="method"><f a=""><x path="Void"/></f></loadBitmap>
-		<new public="1" set="method"><f a="pictureId">
-	<x path="Int"/>
-	<x path="Void"/>
-</f></new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Sprite_Picture
- *
- * The sprite for displaying a picture.</haxe_doc>
+		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":native"><e>"Sprite_Picture"</e></m>
@@ -66908,30 +65530,6 @@
 		<impl><class path="mz.types._LunaTea.BuffId_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
 	</abstract>
 	<class path="mz.types._LunaTea.BuffId_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
-	<abstract path="mz.types.ParameterId" params="" file="src/mz/types/LunaTea.hx" module="mz.types.LunaTea">
-		<from><icast><x path="Int"/></icast></from>
-		<this><x path="Int"/></this>
-		<to><icast><x path="Int"/></icast></to>
-		<meta>
-			<m n=":enum"/>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.types._LunaTea.ParameterId_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
-	</abstract>
-	<class path="mz.types._LunaTea.ParameterId_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
-	<abstract path="mz.types.EquipTypeId" params="" file="src/mz/types/LunaTea.hx" module="mz.types.LunaTea">
-		<from><icast><x path="Int"/></icast></from>
-		<this><x path="Int"/></this>
-		<to><icast><x path="Int"/></icast></to>
-		<meta>
-			<m n=":enum"/>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.types._LunaTea.EquipTypeId_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
-	</abstract>
-	<class path="mz.types._LunaTea.EquipTypeId_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
 	<abstract path="mz.types.BalloonId" params="" file="src/mz/types/LunaTea.hx" module="mz.types.LunaTea">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
@@ -66942,7 +65540,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="mz.types._LunaTea.BalloonId_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-	<EXCLAMATION public="1" get="inline" set="null" expr="cast 0" line="26" static="1">
+	<EXCLAMATION public="1" get="inline" set="null" expr="cast 0" line="16" static="1">
 		<x path="mz.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -66950,7 +65548,7 @@
 			<m n=":enum"/>
 		</meta>
 	</EXCLAMATION>
-	<QUESTION public="1" get="inline" set="null" expr="cast 1" line="27" static="1">
+	<QUESTION public="1" get="inline" set="null" expr="cast 1" line="17" static="1">
 		<x path="mz.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -66958,7 +65556,7 @@
 			<m n=":enum"/>
 		</meta>
 	</QUESTION>
-	<MUSIC_NOTE public="1" get="inline" set="null" expr="cast 2" line="28" static="1">
+	<MUSIC_NOTE public="1" get="inline" set="null" expr="cast 2" line="18" static="1">
 		<x path="mz.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -66966,7 +65564,7 @@
 			<m n=":enum"/>
 		</meta>
 	</MUSIC_NOTE>
-	<HEART public="1" get="inline" set="null" expr="cast 3" line="29" static="1">
+	<HEART public="1" get="inline" set="null" expr="cast 3" line="19" static="1">
 		<x path="mz.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -66974,7 +65572,7 @@
 			<m n=":enum"/>
 		</meta>
 	</HEART>
-	<ANGER public="1" get="inline" set="null" expr="cast 4" line="30" static="1">
+	<ANGER public="1" get="inline" set="null" expr="cast 4" line="20" static="1">
 		<x path="mz.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -66982,7 +65580,7 @@
 			<m n=":enum"/>
 		</meta>
 	</ANGER>
-	<SWEAT public="1" get="inline" set="null" expr="cast 5" line="31" static="1">
+	<SWEAT public="1" get="inline" set="null" expr="cast 5" line="21" static="1">
 		<x path="mz.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 5</e></m>
@@ -66990,7 +65588,7 @@
 			<m n=":enum"/>
 		</meta>
 	</SWEAT>
-	<COBWEB public="1" get="inline" set="null" expr="cast 6" line="32" static="1">
+	<COBWEB public="1" get="inline" set="null" expr="cast 6" line="22" static="1">
 		<x path="mz.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 6</e></m>
@@ -66998,7 +65596,7 @@
 			<m n=":enum"/>
 		</meta>
 	</COBWEB>
-	<SILENCE public="1" get="inline" set="null" expr="cast 7" line="33" static="1">
+	<SILENCE public="1" get="inline" set="null" expr="cast 7" line="23" static="1">
 		<x path="mz.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 7</e></m>
@@ -67006,18 +65604,10 @@
 			<m n=":enum"/>
 		</meta>
 	</SILENCE>
-	<LIGHT_BULB public="1" get="inline" set="null" expr="cast 8" line="34" static="1">
+	<ZZZ public="1" get="inline" set="null" expr="cast 8" line="24" static="1">
 		<x path="mz.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 8</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</LIGHT_BULB>
-	<ZZZ public="1" get="inline" set="null" expr="cast 9" line="35" static="1">
-		<x path="mz.types.BalloonId"/>
-		<meta>
-			<m n=":value"><e>cast 9</e></m>
 			<m n=":impl"/>
 			<m n=":enum"/>
 		</meta>
@@ -67026,7 +65616,7 @@
 </class></impl>
 	</abstract>
 	<class path="mz.types._LunaTea.BalloonId_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-		<EXCLAMATION public="1" get="inline" set="null" expr="cast 0" line="26" static="1">
+		<EXCLAMATION public="1" get="inline" set="null" expr="cast 0" line="16" static="1">
 			<x path="mz.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -67034,7 +65624,7 @@
 				<m n=":enum"/>
 			</meta>
 		</EXCLAMATION>
-		<QUESTION public="1" get="inline" set="null" expr="cast 1" line="27" static="1">
+		<QUESTION public="1" get="inline" set="null" expr="cast 1" line="17" static="1">
 			<x path="mz.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -67042,7 +65632,7 @@
 				<m n=":enum"/>
 			</meta>
 		</QUESTION>
-		<MUSIC_NOTE public="1" get="inline" set="null" expr="cast 2" line="28" static="1">
+		<MUSIC_NOTE public="1" get="inline" set="null" expr="cast 2" line="18" static="1">
 			<x path="mz.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -67050,7 +65640,7 @@
 				<m n=":enum"/>
 			</meta>
 		</MUSIC_NOTE>
-		<HEART public="1" get="inline" set="null" expr="cast 3" line="29" static="1">
+		<HEART public="1" get="inline" set="null" expr="cast 3" line="19" static="1">
 			<x path="mz.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -67058,7 +65648,7 @@
 				<m n=":enum"/>
 			</meta>
 		</HEART>
-		<ANGER public="1" get="inline" set="null" expr="cast 4" line="30" static="1">
+		<ANGER public="1" get="inline" set="null" expr="cast 4" line="20" static="1">
 			<x path="mz.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -67066,7 +65656,7 @@
 				<m n=":enum"/>
 			</meta>
 		</ANGER>
-		<SWEAT public="1" get="inline" set="null" expr="cast 5" line="31" static="1">
+		<SWEAT public="1" get="inline" set="null" expr="cast 5" line="21" static="1">
 			<x path="mz.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 5</e></m>
@@ -67074,7 +65664,7 @@
 				<m n=":enum"/>
 			</meta>
 		</SWEAT>
-		<COBWEB public="1" get="inline" set="null" expr="cast 6" line="32" static="1">
+		<COBWEB public="1" get="inline" set="null" expr="cast 6" line="22" static="1">
 			<x path="mz.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 6</e></m>
@@ -67082,7 +65672,7 @@
 				<m n=":enum"/>
 			</meta>
 		</COBWEB>
-		<SILENCE public="1" get="inline" set="null" expr="cast 7" line="33" static="1">
+		<SILENCE public="1" get="inline" set="null" expr="cast 7" line="23" static="1">
 			<x path="mz.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 7</e></m>
@@ -67090,18 +65680,10 @@
 				<m n=":enum"/>
 			</meta>
 		</SILENCE>
-		<LIGHT_BULB public="1" get="inline" set="null" expr="cast 8" line="34" static="1">
+		<ZZZ public="1" get="inline" set="null" expr="cast 8" line="24" static="1">
 			<x path="mz.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 8</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</LIGHT_BULB>
-		<ZZZ public="1" get="inline" set="null" expr="cast 9" line="35" static="1">
-			<x path="mz.types.BalloonId"/>
-			<meta>
-				<m n=":value"><e>cast 9</e></m>
 				<m n=":impl"/>
 				<m n=":enum"/>
 			</meta>
@@ -67146,292 +65728,6 @@
 		<impl><class path="mz.types._LunaTea.CharacterPattern_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
 	</abstract>
 	<class path="mz.types._LunaTea.CharacterPattern_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
-	<abstract path="mz.types.MotionType" params="" file="src/mz/types/LunaTea.hx" module="mz.types.LunaTea">
-		<from><icast><c path="String"/></icast></from>
-		<this><c path="String"/></this>
-		<to><icast><c path="String"/></icast></to>
-		<haxe_doc>* Motion Type used for Sprite Actors
- * on different scenes in MV/MZ.</haxe_doc>
-		<meta><m n=":enum"/></meta>
-		<impl><class path="mz.types._LunaTea.MotionType_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-	<WALK public="1" get="inline" set="null" expr="cast &quot;walk&quot;" line="63" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "walk"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</WALK>
-	<WAIT public="1" get="inline" set="null" expr="cast &quot;wait&quot;" line="64" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "wait"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</WAIT>
-	<CHANT public="1" get="inline" set="null" expr="cast &quot;chant&quot;" line="65" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "chant"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</CHANT>
-	<GUARD public="1" get="inline" set="null" expr="cast &quot;guard&quot;" line="66" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "guard"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</GUARD>
-	<DAMAGE public="1" get="inline" set="null" expr="cast &quot;damage&quot;" line="67" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "damage"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</DAMAGE>
-	<EVADE public="1" get="inline" set="null" expr="cast &quot;evade&quot;" line="68" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "evade"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</EVADE>
-	<THRUST public="1" get="inline" set="null" expr="cast &quot;thrust&quot;" line="69" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "thrust"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</THRUST>
-	<MISSLE public="1" get="inline" set="null" expr="cast &quot;missle&quot;" line="70" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "missle"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</MISSLE>
-	<SKILL public="1" get="inline" set="null" expr="cast &quot;SKILL&quot;" line="71" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "SKILL"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</SKILL>
-	<SPELL public="1" get="inline" set="null" expr="cast &quot;spell&quot;" line="72" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "spell"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</SPELL>
-	<ITEM public="1" get="inline" set="null" expr="cast &quot;item&quot;" line="73" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "item"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</ITEM>
-	<ESCAPE public="1" get="inline" set="null" expr="cast &quot;escape&quot;" line="74" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "escape"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</ESCAPE>
-	<VICTORY public="1" get="inline" set="null" expr="cast &quot;victory&quot;" line="75" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "victory"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</VICTORY>
-	<DYING public="1" get="inline" set="null" expr="cast &quot;dying&quot;" line="76" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "dying"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</DYING>
-	<ABNORMAL public="1" get="inline" set="null" expr="cast &quot;abnormal&quot;" line="77" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "abnormal"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</ABNORMAL>
-	<SLEEP public="1" get="inline" set="null" expr="cast &quot;sleep&quot;" line="78" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "sleep"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</SLEEP>
-	<DEAD public="1" get="inline" set="null" expr="cast &quot;dead&quot;" line="79" static="1">
-		<x path="mz.types.MotionType"/>
-		<meta>
-			<m n=":value"><e>cast "dead"</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</DEAD>
-	<meta><m n=":enum"/></meta>
-</class></impl>
-	</abstract>
-	<class path="mz.types._LunaTea.MotionType_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-		<WALK public="1" get="inline" set="null" expr="cast &quot;walk&quot;" line="63" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "walk"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</WALK>
-		<WAIT public="1" get="inline" set="null" expr="cast &quot;wait&quot;" line="64" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "wait"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</WAIT>
-		<CHANT public="1" get="inline" set="null" expr="cast &quot;chant&quot;" line="65" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "chant"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</CHANT>
-		<GUARD public="1" get="inline" set="null" expr="cast &quot;guard&quot;" line="66" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "guard"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</GUARD>
-		<DAMAGE public="1" get="inline" set="null" expr="cast &quot;damage&quot;" line="67" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "damage"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</DAMAGE>
-		<EVADE public="1" get="inline" set="null" expr="cast &quot;evade&quot;" line="68" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "evade"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</EVADE>
-		<THRUST public="1" get="inline" set="null" expr="cast &quot;thrust&quot;" line="69" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "thrust"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</THRUST>
-		<MISSLE public="1" get="inline" set="null" expr="cast &quot;missle&quot;" line="70" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "missle"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</MISSLE>
-		<SKILL public="1" get="inline" set="null" expr="cast &quot;SKILL&quot;" line="71" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "SKILL"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</SKILL>
-		<SPELL public="1" get="inline" set="null" expr="cast &quot;spell&quot;" line="72" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "spell"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</SPELL>
-		<ITEM public="1" get="inline" set="null" expr="cast &quot;item&quot;" line="73" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "item"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</ITEM>
-		<ESCAPE public="1" get="inline" set="null" expr="cast &quot;escape&quot;" line="74" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "escape"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</ESCAPE>
-		<VICTORY public="1" get="inline" set="null" expr="cast &quot;victory&quot;" line="75" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "victory"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</VICTORY>
-		<DYING public="1" get="inline" set="null" expr="cast &quot;dying&quot;" line="76" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "dying"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</DYING>
-		<ABNORMAL public="1" get="inline" set="null" expr="cast &quot;abnormal&quot;" line="77" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "abnormal"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</ABNORMAL>
-		<SLEEP public="1" get="inline" set="null" expr="cast &quot;sleep&quot;" line="78" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "sleep"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</SLEEP>
-		<DEAD public="1" get="inline" set="null" expr="cast &quot;dead&quot;" line="79" static="1">
-			<x path="mz.types.MotionType"/>
-			<meta>
-				<m n=":value"><e>cast "dead"</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</DEAD>
-		<meta><m n=":enum"/></meta>
-	</class>
 	<abstract path="mz.types.MoveType" params="" file="src/mz/types/LunaTea.hx" module="mz.types.LunaTea">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
@@ -67443,7 +65739,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="mz.types._LunaTea.MoveType_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-	<FIXED public="1" get="inline" set="null" expr="cast 0" line="88" static="1">
+	<FIXED public="1" get="inline" set="null" expr="cast 0" line="53" static="1">
 		<x path="mz.types.MoveType"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -67451,7 +65747,7 @@
 			<m n=":enum"/>
 		</meta>
 	</FIXED>
-	<RANDOM public="1" get="inline" set="null" expr="cast 1" line="89" static="1">
+	<RANDOM public="1" get="inline" set="null" expr="cast 1" line="54" static="1">
 		<x path="mz.types.MoveType"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -67459,7 +65755,7 @@
 			<m n=":enum"/>
 		</meta>
 	</RANDOM>
-	<APPROACH public="1" get="inline" set="null" expr="cast 2" line="90" static="1">
+	<APPROACH public="1" get="inline" set="null" expr="cast 2" line="55" static="1">
 		<x path="mz.types.MoveType"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -67467,7 +65763,7 @@
 			<m n=":enum"/>
 		</meta>
 	</APPROACH>
-	<CUSTOM public="1" get="inline" set="null" expr="cast 3" line="91" static="1">
+	<CUSTOM public="1" get="inline" set="null" expr="cast 3" line="56" static="1">
 		<x path="mz.types.MoveType"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -67479,7 +65775,7 @@
 </class></impl>
 	</abstract>
 	<class path="mz.types._LunaTea.MoveType_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-		<FIXED public="1" get="inline" set="null" expr="cast 0" line="88" static="1">
+		<FIXED public="1" get="inline" set="null" expr="cast 0" line="53" static="1">
 			<x path="mz.types.MoveType"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -67487,7 +65783,7 @@
 				<m n=":enum"/>
 			</meta>
 		</FIXED>
-		<RANDOM public="1" get="inline" set="null" expr="cast 1" line="89" static="1">
+		<RANDOM public="1" get="inline" set="null" expr="cast 1" line="54" static="1">
 			<x path="mz.types.MoveType"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -67495,7 +65791,7 @@
 				<m n=":enum"/>
 			</meta>
 		</RANDOM>
-		<APPROACH public="1" get="inline" set="null" expr="cast 2" line="90" static="1">
+		<APPROACH public="1" get="inline" set="null" expr="cast 2" line="55" static="1">
 			<x path="mz.types.MoveType"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -67503,7 +65799,7 @@
 				<m n=":enum"/>
 			</meta>
 		</APPROACH>
-		<CUSTOM public="1" get="inline" set="null" expr="cast 3" line="91" static="1">
+		<CUSTOM public="1" get="inline" set="null" expr="cast 3" line="56" static="1">
 			<x path="mz.types.MoveType"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -67524,7 +65820,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="mz.types._LunaTea.MoveSpeed_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-	<X8SLOWER public="1" get="inline" set="null" expr="cast 1" line="100" static="1">
+	<X8SLOWER public="1" get="inline" set="null" expr="cast 1" line="65" static="1">
 		<x path="mz.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -67532,7 +65828,7 @@
 			<m n=":enum"/>
 		</meta>
 	</X8SLOWER>
-	<X4SLOWER public="1" get="inline" set="null" expr="cast 2" line="101" static="1">
+	<X4SLOWER public="1" get="inline" set="null" expr="cast 2" line="66" static="1">
 		<x path="mz.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -67540,7 +65836,7 @@
 			<m n=":enum"/>
 		</meta>
 	</X4SLOWER>
-	<X2SLOWER public="1" get="inline" set="null" expr="cast 3" line="102" static="1">
+	<X2SLOWER public="1" get="inline" set="null" expr="cast 3" line="67" static="1">
 		<x path="mz.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -67548,7 +65844,7 @@
 			<m n=":enum"/>
 		</meta>
 	</X2SLOWER>
-	<NORMAL public="1" get="inline" set="null" expr="cast 4" line="103" static="1">
+	<NORMAL public="1" get="inline" set="null" expr="cast 4" line="68" static="1">
 		<x path="mz.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -67556,7 +65852,7 @@
 			<m n=":enum"/>
 		</meta>
 	</NORMAL>
-	<X2FASTER public="1" get="inline" set="null" expr="cast 5" line="104" static="1">
+	<X2FASTER public="1" get="inline" set="null" expr="cast 5" line="69" static="1">
 		<x path="mz.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 5</e></m>
@@ -67564,7 +65860,7 @@
 			<m n=":enum"/>
 		</meta>
 	</X2FASTER>
-	<X4FASTER public="1" get="inline" set="null" expr="cast 6" line="105" static="1">
+	<X4FASTER public="1" get="inline" set="null" expr="cast 6" line="70" static="1">
 		<x path="mz.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 6</e></m>
@@ -67576,7 +65872,7 @@
 </class></impl>
 	</abstract>
 	<class path="mz.types._LunaTea.MoveSpeed_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-		<X8SLOWER public="1" get="inline" set="null" expr="cast 1" line="100" static="1">
+		<X8SLOWER public="1" get="inline" set="null" expr="cast 1" line="65" static="1">
 			<x path="mz.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -67584,7 +65880,7 @@
 				<m n=":enum"/>
 			</meta>
 		</X8SLOWER>
-		<X4SLOWER public="1" get="inline" set="null" expr="cast 2" line="101" static="1">
+		<X4SLOWER public="1" get="inline" set="null" expr="cast 2" line="66" static="1">
 			<x path="mz.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -67592,7 +65888,7 @@
 				<m n=":enum"/>
 			</meta>
 		</X4SLOWER>
-		<X2SLOWER public="1" get="inline" set="null" expr="cast 3" line="102" static="1">
+		<X2SLOWER public="1" get="inline" set="null" expr="cast 3" line="67" static="1">
 			<x path="mz.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -67600,7 +65896,7 @@
 				<m n=":enum"/>
 			</meta>
 		</X2SLOWER>
-		<NORMAL public="1" get="inline" set="null" expr="cast 4" line="103" static="1">
+		<NORMAL public="1" get="inline" set="null" expr="cast 4" line="68" static="1">
 			<x path="mz.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -67608,7 +65904,7 @@
 				<m n=":enum"/>
 			</meta>
 		</NORMAL>
-		<X2FASTER public="1" get="inline" set="null" expr="cast 5" line="104" static="1">
+		<X2FASTER public="1" get="inline" set="null" expr="cast 5" line="69" static="1">
 			<x path="mz.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 5</e></m>
@@ -67616,7 +65912,7 @@
 				<m n=":enum"/>
 			</meta>
 		</X2FASTER>
-		<X4FASTER public="1" get="inline" set="null" expr="cast 6" line="105" static="1">
+		<X4FASTER public="1" get="inline" set="null" expr="cast 6" line="70" static="1">
 			<x path="mz.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 6</e></m>
@@ -67630,15 +65926,13 @@
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
 		<to><icast><x path="Int"/></icast></to>
-		<haxe_doc>*  Move frequency for Characters/Events
- * in RPGMaker MV/MZ.</haxe_doc>
 		<meta>
 			<m n=":enum"/>
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="mz.types._LunaTea.MoveFrequency_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-	<LOWEST public="1" get="inline" set="null" expr="cast 1" line="115" static="1">
+	<LOWEST public="1" get="inline" set="null" expr="cast 1" line="76" static="1">
 		<x path="mz.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -67646,7 +65940,7 @@
 			<m n=":enum"/>
 		</meta>
 	</LOWEST>
-	<LOWER public="1" get="inline" set="null" expr="cast 2" line="116" static="1">
+	<LOWER public="1" get="inline" set="null" expr="cast 2" line="77" static="1">
 		<x path="mz.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -67654,7 +65948,7 @@
 			<m n=":enum"/>
 		</meta>
 	</LOWER>
-	<NORMAL public="1" get="inline" set="null" expr="cast 3" line="117" static="1">
+	<NORMAL public="1" get="inline" set="null" expr="cast 3" line="78" static="1">
 		<x path="mz.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -67662,7 +65956,7 @@
 			<m n=":enum"/>
 		</meta>
 	</NORMAL>
-	<HIGHER public="1" get="inline" set="null" expr="cast 4" line="118" static="1">
+	<HIGHER public="1" get="inline" set="null" expr="cast 4" line="79" static="1">
 		<x path="mz.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -67670,7 +65964,7 @@
 			<m n=":enum"/>
 		</meta>
 	</HIGHER>
-	<HIGHEST public="1" get="inline" set="null" expr="cast 5" line="119" static="1">
+	<HIGHEST public="1" get="inline" set="null" expr="cast 5" line="80" static="1">
 		<x path="mz.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 5</e></m>
@@ -67682,7 +65976,7 @@
 </class></impl>
 	</abstract>
 	<class path="mz.types._LunaTea.MoveFrequency_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-		<LOWEST public="1" get="inline" set="null" expr="cast 1" line="115" static="1">
+		<LOWEST public="1" get="inline" set="null" expr="cast 1" line="76" static="1">
 			<x path="mz.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -67690,7 +65984,7 @@
 				<m n=":enum"/>
 			</meta>
 		</LOWEST>
-		<LOWER public="1" get="inline" set="null" expr="cast 2" line="116" static="1">
+		<LOWER public="1" get="inline" set="null" expr="cast 2" line="77" static="1">
 			<x path="mz.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -67698,7 +65992,7 @@
 				<m n=":enum"/>
 			</meta>
 		</LOWER>
-		<NORMAL public="1" get="inline" set="null" expr="cast 3" line="117" static="1">
+		<NORMAL public="1" get="inline" set="null" expr="cast 3" line="78" static="1">
 			<x path="mz.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -67706,7 +66000,7 @@
 				<m n=":enum"/>
 			</meta>
 		</NORMAL>
-		<HIGHER public="1" get="inline" set="null" expr="cast 4" line="118" static="1">
+		<HIGHER public="1" get="inline" set="null" expr="cast 4" line="79" static="1">
 			<x path="mz.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -67714,7 +66008,7 @@
 				<m n=":enum"/>
 			</meta>
 		</HIGHER>
-		<HIGHEST public="1" get="inline" set="null" expr="cast 5" line="119" static="1">
+		<HIGHEST public="1" get="inline" set="null" expr="cast 5" line="80" static="1">
 			<x path="mz.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 5</e></m>
@@ -67728,16 +66022,13 @@
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
 		<to><icast><x path="Int"/></icast></to>
-		<haxe_doc>* Character/Events priority in RPGMaker MV/MZ.
- * This will determine if they're shown above or below or
- * on the same level as characters on the map.</haxe_doc>
 		<meta>
 			<m n=":enum"/>
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="mz.types._LunaTea.CharacterPriority_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-	<BELOW_CHARACTERS public="1" get="inline" set="null" expr="cast 0" line="130" static="1">
+	<BELOW_CHARACTERS public="1" get="inline" set="null" expr="cast 0" line="86" static="1">
 		<x path="mz.types.CharacterPriority"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -67745,7 +66036,7 @@
 			<m n=":enum"/>
 		</meta>
 	</BELOW_CHARACTERS>
-	<SAME_AS_CHARACTERS public="1" get="inline" set="null" expr="cast 1" line="131" static="1">
+	<SAME_AS_CHARACTERS public="1" get="inline" set="null" expr="cast 1" line="87" static="1">
 		<x path="mz.types.CharacterPriority"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -67753,7 +66044,7 @@
 			<m n=":enum"/>
 		</meta>
 	</SAME_AS_CHARACTERS>
-	<ABOVE_CHARACTERS public="1" get="inline" set="null" expr="cast 2" line="132" static="1">
+	<ABOVE_CHARACTERS public="1" get="inline" set="null" expr="cast 2" line="88" static="1">
 		<x path="mz.types.CharacterPriority"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -67765,7 +66056,7 @@
 </class></impl>
 	</abstract>
 	<class path="mz.types._LunaTea.CharacterPriority_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-		<BELOW_CHARACTERS public="1" get="inline" set="null" expr="cast 0" line="130" static="1">
+		<BELOW_CHARACTERS public="1" get="inline" set="null" expr="cast 0" line="86" static="1">
 			<x path="mz.types.CharacterPriority"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -67773,7 +66064,7 @@
 				<m n=":enum"/>
 			</meta>
 		</BELOW_CHARACTERS>
-		<SAME_AS_CHARACTERS public="1" get="inline" set="null" expr="cast 1" line="131" static="1">
+		<SAME_AS_CHARACTERS public="1" get="inline" set="null" expr="cast 1" line="87" static="1">
 			<x path="mz.types.CharacterPriority"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -67781,7 +66072,7 @@
 				<m n=":enum"/>
 			</meta>
 		</SAME_AS_CHARACTERS>
-		<ABOVE_CHARACTERS public="1" get="inline" set="null" expr="cast 2" line="132" static="1">
+		<ABOVE_CHARACTERS public="1" get="inline" set="null" expr="cast 2" line="88" static="1">
 			<x path="mz.types.CharacterPriority"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -67791,128 +66082,6 @@
 		</ABOVE_CHARACTERS>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<abstract path="mz.types.Color" params="" file="src/mz/types/LunaTea.hx" module="mz.types.LunaTea">
-		<from><icast><c path="String"/></icast></from>
-		<this><c path="String"/></this>
-		<to><icast><c path="String"/></icast></to>
-		<meta>
-			<m n=":enum"/>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.types._LunaTea.Color_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
-	</abstract>
-	<class path="mz.types._LunaTea.Color_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
-	<abstract path="mz.types.DamageColorType" params="" file="src/mz/types/LunaTea.hx" module="mz.types.LunaTea">
-		<from><icast><x path="Int"/></icast></from>
-		<this><x path="Int"/></this>
-		<to><icast><x path="Int"/></icast></to>
-		<meta>
-			<m n=":enum"/>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.types._LunaTea.DamageColorType_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-	<HP_DAMAGE public="1" get="inline" set="null" expr="cast 0" line="143" static="1">
-		<x path="mz.types.DamageColorType"/>
-		<meta>
-			<m n=":value"><e>cast 0</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</HP_DAMAGE>
-	<HP_RECOVER public="1" get="inline" set="null" expr="cast 1" line="144" static="1">
-		<x path="mz.types.DamageColorType"/>
-		<meta>
-			<m n=":value"><e>cast 1</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</HP_RECOVER>
-	<MP_DAMAGE public="1" get="inline" set="null" expr="cast 2" line="145" static="1">
-		<x path="mz.types.DamageColorType"/>
-		<meta>
-			<m n=":value"><e>cast 2</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</MP_DAMAGE>
-	<MP_RECOVER public="1" get="inline" set="null" expr="cast 3" line="146" static="1">
-		<x path="mz.types.DamageColorType"/>
-		<meta>
-			<m n=":value"><e>cast 3</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</MP_RECOVER>
-	<DEFAULT public="1" get="inline" set="null" expr="cast 4" line="151" static="1">
-		<x path="mz.types.DamageColorType"/>
-		<meta>
-			<m n=":value"><e>cast 4</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-		<haxe_doc>* Default can be any number</haxe_doc>
-	</DEFAULT>
-	<meta><m n=":enum"/></meta>
-</class></impl>
-	</abstract>
-	<class path="mz.types._LunaTea.DamageColorType_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1">
-		<HP_DAMAGE public="1" get="inline" set="null" expr="cast 0" line="143" static="1">
-			<x path="mz.types.DamageColorType"/>
-			<meta>
-				<m n=":value"><e>cast 0</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</HP_DAMAGE>
-		<HP_RECOVER public="1" get="inline" set="null" expr="cast 1" line="144" static="1">
-			<x path="mz.types.DamageColorType"/>
-			<meta>
-				<m n=":value"><e>cast 1</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</HP_RECOVER>
-		<MP_DAMAGE public="1" get="inline" set="null" expr="cast 2" line="145" static="1">
-			<x path="mz.types.DamageColorType"/>
-			<meta>
-				<m n=":value"><e>cast 2</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</MP_DAMAGE>
-		<MP_RECOVER public="1" get="inline" set="null" expr="cast 3" line="146" static="1">
-			<x path="mz.types.DamageColorType"/>
-			<meta>
-				<m n=":value"><e>cast 3</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</MP_RECOVER>
-		<DEFAULT public="1" get="inline" set="null" expr="cast 4" line="151" static="1">
-			<x path="mz.types.DamageColorType"/>
-			<meta>
-				<m n=":value"><e>cast 4</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-			<haxe_doc>* Default can be any number</haxe_doc>
-		</DEFAULT>
-		<meta><m n=":enum"/></meta>
-	</class>
-	<abstract path="mz.types.WaitMode" params="" file="src/mz/types/LunaTea.hx" module="mz.types.LunaTea">
-		<from><icast><x path="Int"/></icast></from>
-		<this><x path="Int"/></this>
-		<to><icast><x path="Int"/></icast></to>
-		<meta>
-			<m n=":enum"/>
-			<m n=":forward"/>
-			<m n=":forwardStatics"/>
-		</meta>
-		<impl><class path="mz.types._LunaTea.WaitMode_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
-	</abstract>
-	<class path="mz.types._LunaTea.WaitMode_Impl_" params="" file="src/mz/types/LunaTea.hx" private="1" module="mz.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
 	<typedef path="mz.types.Matrix" params="" file="src/mz/types/MZ.hx" module="mz.types.MZ"><a>
 	<value><c path="Array"><x path="Int"/></c></value>
 	<type><c path="String"/></type>
@@ -67993,10 +66162,6 @@
 	<parameters><a><key><c path="String"/></key></a></parameters>
 	<name><c path="String"/></name>
 	<description><c path="String"/></description>
-</a></typedef>
-	<typedef path="mz.types.Motion" params="" file="src/mz/types/MZ.hx" module="mz.types.MZ"><a>
-	<loop><x path="Bool"/></loop>
-	<index><x path="Int"/></index>
 </a></typedef>
 	<typedef path="mz.types.MetaData" params="" file="src/mz/types/RPG.hx" module="mz.types.RPG"><a>
 	<note><c path="String"/></note>
@@ -70860,7 +69025,7 @@
 		<paramchangeTextColor public="1" set="method">
 			<f a="change">
 				<x path="Int"/>
-				<x path="mz.types.Color"/>
+				<x path="Void"/>
 			</f>
 			<haxe_doc>* Changes the text color based on the powerUpColor, powerDownColor
   * and normal color. powerUpColor is any number greater than 0, powerDownColor
@@ -71538,205 +69703,7 @@
  *
  * The window for selecting an actor's action on the battle screen.
  * @class Window_ActorCommand</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_ActorCommand"</e></m>
-		</meta>
-	</class>
-	<class path="mz.windows.Window_BattleStatus" params="" file="src/mz/windows/Window_BattleStatus.hx" extern="1">
-		<extends path="mz.windows.Window_Selectable"/>
-		<windowWidth public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the window width.
-  *
-  * @returns {number}
-  * @memberof Window_BattleStatus</haxe_doc>
-		</windowWidth>
-		<windowHeight public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the window height.
-  *
-  * @returns {number}
-  * @memberof Window_BattleStatus</haxe_doc>
-		</windowHeight>
-		<numVisibleRows public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the number of visible rows.
-  *
-  * @returns {number}
-  * @memberof Window_BattleStatus</haxe_doc>
-		</numVisibleRows>
-		<basicAreaRect public="1" set="method"><f a="index">
-	<x path="Int"/>
-	<c path="mz.core.Rectangle"/>
-</f></basicAreaRect>
-		<gaugeAreaRect public="1" set="method">
-			<f a="index">
-				<x path="Int"/>
-				<c path="mz.core.Rectangle"/>
-			</f>
-			<haxe_doc>* returns a rectangle for the gauges in the gauge area.
-  *
-  * @param {number} index
-  * @returns {Rectangle}
-  * @memberof Window_BattleStatus</haxe_doc>
-		</gaugeAreaRect>
-		<gaugeAreaWidth public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the width of the guage area.
-  *
-  * @returns {number}
-  * @memberof Window_BattleStatus</haxe_doc>
-		</gaugeAreaWidth>
-		<drawBasicArea public="1" set="method">
-			<f a="rect:actor">
-				<c path="mz.core.Rectangle"/>
-				<c path="mz.objects.Game_Actor"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Draws the basic area for actors within the battle status window.
-  *
-  * @param {Rectangle} rect
-  * @param {Game_Actor} actor
-  * @memberof Window_BattleStatus</haxe_doc>
-		</drawBasicArea>
-		<drawGaugeArea public="1" set="method">
-			<f a="rect:actor">
-				<c path="mz.core.Rectangle"/>
-				<c path="mz.objects.Game_Actor"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Draws the gauge area for the actors within the battle status window.
-  *
-  * @param {Rectangle} rect
-  * @param {Game_Actor} actor
-  * @memberof Window_BattleStatus</haxe_doc>
-		</drawGaugeArea>
-		<drawGaugeAreaWithTp public="1" set="method">
-			<f a="rect:actor">
-				<c path="mz.core.Rectangle"/>
-				<c path="mz.objects.Game_Actor"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Draws the gauges in the basic area with tp included.
-  *
-  * @param {Rectangle} rect
-  * @param {Game_Actor} actor
-  * @memberof Window_BattleStatus</haxe_doc>
-		</drawGaugeAreaWithTp>
-		<drawGaugeAreaWithoutTp public="1" set="method">
-			<f a="rect:actor">
-				<c path="mz.core.Rectangle"/>
-				<c path="mz.objects.Game_Actor"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Draws the gauges in the basic area without tp included.
-  *
-  * @param {Rectangle} rect
-  * @param {Game_Actor} actor
-  * @memberof Window_BattleStatus</haxe_doc>
-		</drawGaugeAreaWithoutTp>
-		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Window_BattleStatus
- *
- * The window for displaying the status of party members on the battle screen.
- * @class Window_BattleStatus</haxe_doc>
-		<meta><m n=":directlyUsed"/></meta>
-	</class>
-	<class path="mz.windows.Window_BattleActor" params="" file="src/mz/windows/Window_BattleActor.hx" extern="1">
-		<extends path="mz.windows.Window_BattleStatus"/>
-		<select public="1" set="method" override="1">
-			<f a="index">
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Selects an actor within the battle actor window.
-  *
-  * @param {number} index
-  * @memberof Window_BattleActor</haxe_doc>
-		</select>
-		<actor public="1" set="method">
-			<f a=""><c path="mz.objects.Game_Actor"/></f>
-			<haxe_doc>* Returns the current selected actor.
-  *
-  * @returns {Game_Actor}
-  * @memberof Window_BattleActor</haxe_doc>
-		</actor>
-		<new public="1" set="method"><f a="x:y">
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="Void"/>
-</f></new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Window_BattleActor
- *
- * The window for selecting a target actor on the battle screen.
- * @class Window_BattleActor</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_BattleActor"</e></m>
-		</meta>
-	</class>
-	<class path="mz.windows.Window_BattleEnemy" params="" file="src/mz/windows/Window_BattleEnemy.hx" extern="1">
-		<extends path="mz.windows.Window_Selectable"/>
-		<_enemies><c path="Array"><c path="mz.objects.Game_Enemy"/></c></_enemies>
-		<windowWidth public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the window width.
-  *
-  * @returns {number}
-  * @memberof Window_BattleEnemy</haxe_doc>
-		</windowWidth>
-		<windowHeight public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the window height.
-  *
-  * @returns {number}
-  * @memberof Window_BattleEnemy</haxe_doc>
-		</windowHeight>
-		<numVisibleRows public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the number of visible rows.
-  *
-  * @returns {number}
-  * @memberof Window_BattleEnemy</haxe_doc>
-		</numVisibleRows>
-		<enemy public="1" set="method">
-			<f a=""><c path="mz.objects.Game_Enemy"/></f>
-			<haxe_doc>* Returns the current enemy.
-  *
-  * @returns {Game_Enemy}
-  * @memberof Window_BattleEnemy</haxe_doc>
-		</enemy>
-		<enemyIndex public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the current index selected.
-  *
-  * @returns {number}
-  * @memberof Window_BattleEnemy</haxe_doc>
-		</enemyIndex>
-		<select public="1" set="method" override="1">
-			<f a="index">
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Selects a specified enemy using the index.
-  *
-  * @param {number} index
-  * @memberof Window_BattleEnemy</haxe_doc>
-		</select>
-		<new public="1" set="method"><f a="x:y">
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="Void"/>
-</f></new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Window_BattleEnemy
- *
- * The window for selecting a target enemy on the battle screen.
- * @class Window_BattleEnemy</haxe_doc>
-		<meta><m n=":directlyUsed"/></meta>
+		<meta><m n=":native"><e>"Window_ActorCommand"</e></m></meta>
 	</class>
 	<class path="mz.windows.Window_ItemList" params="" file="src/mz/windows/Window_ItemList.hx" extern="1">
 		<extends path="mz.windows.Window_Selectable"/>
@@ -71772,274 +69739,7 @@
  *
  * The window for selecting an item to use on the battle screen.
  * @class Window_BattleItem</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_BattleItem"</e></m>
-		</meta>
-	</class>
-	<class path="mz.windows.Window_BattleLog" params="" file="src/mz/windows/Window_BattleLog.hx" extern="1">
-		<_lines><c path="Array"><c path="String"/></c></_lines>
-		<_methods><c path="Array"><t path="mz.types.BattleLogMethod"/></c></_methods>
-		<_waitCount><x path="Int"/></_waitCount>
-		<_waitMode><c path="String"/></_waitMode>
-		<_baseLineStack><c path="Array"><x path="Int"/></c></_baseLineStack>
-		<_spriteset><c path="mz.sprites.Spriteset_Battle"/></_spriteset>
-		<setSpriteset public="1" set="method"><f a="spriteset">
-	<c path="mz.sprites.Spriteset_Battle"/>
-	<x path="Void"/>
-</f></setSpriteset>
-		<windowWidth public="1" set="method"><f a=""><x path="Int"/></f></windowWidth>
-		<windowHeight public="1" set="method"><f a=""><x path="Int"/></f></windowHeight>
-		<maxLines public="1" set="method"><f a=""><x path="Int"/></f></maxLines>
-		<createBackBitmap public="1" set="method"><f a=""><x path="Void"/></f></createBackBitmap>
-		<createBackSprite public="1" set="method"><f a=""><x path="Void"/></f></createBackSprite>
-		<numLines public="1" set="method"><f a=""><x path="Int"/></f></numLines>
-		<messageSpeed public="1" set="method"><f a=""><x path="Int"/></f></messageSpeed>
-		<isBusy public="1" set="method"><f a=""><x path="Bool"/></f></isBusy>
-		<updateWait public="1" set="method"><f a=""><x path="Bool"/></f></updateWait>
-		<updateWaitCount public="1" set="method"><f a=""><x path="Bool"/></f></updateWaitCount>
-		<updateWaitMode public="1" set="method"><f a=""><x path="Bool"/></f></updateWaitMode>
-		<setWaitMode public="1" set="method"><f a="waitMode">
-	<c path="String"/>
-	<x path="Void"/>
-</f></setWaitMode>
-		<callNextMethod public="1" set="method"><f a=""><x path="Void"/></f></callNextMethod>
-		<isFastForward public="1" set="method"><f a=""><x path="Bool"/></f></isFastForward>
-		<push public="1" set="method"><f a="methodName:args">
-	<c path="String"/>
-	<c path="Array"><d/></c>
-	<x path="Void"/>
-</f></push>
-		<clear public="1" set="method"><f a=""><x path="Void"/></f></clear>
-		<wait public="1" set="method"><f a=""><x path="Void"/></f></wait>
-		<waitForEffect public="1" set="method"><f a=""><x path="Void"/></f></waitForEffect>
-		<waitForMovement public="1" set="method"><f a=""><x path="Void"/></f></waitForMovement>
-		<addText public="1" set="method"><f a="text">
-	<c path="String"/>
-	<x path="Void"/>
-</f></addText>
-		<pushBaseLine public="1" set="method"><f a=""><x path="Void"/></f></pushBaseLine>
-		<popBaseLine public="1" set="method"><f a=""><x path="Void"/></f></popBaseLine>
-		<waitForNewLine public="1" set="method"><f a=""><x path="Void"/></f></waitForNewLine>
-		<popupDamage public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></popupDamage>
-		<performActionStart public="1" set="method"><f a="subject:action">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="mz.objects.Game_Action"/>
-	<x path="Void"/>
-</f></performActionStart>
-		<performAction public="1" set="method"><f a="subject:action">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="mz.objects.Game_Action"/>
-	<x path="Void"/>
-</f></performAction>
-		<performActionEnd public="1" set="method"><f a="subject">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></performActionEnd>
-		<performDamage public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></performDamage>
-		<performMiss public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></performMiss>
-		<performRecovery public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></performRecovery>
-		<performEvasion public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></performEvasion>
-		<performMagicEvasion public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></performMagicEvasion>
-		<performCounter public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></performCounter>
-		<performReflection public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></performReflection>
-		<performSubstitute public="1" set="method"><f a="substitute:target">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></performSubstitute>
-		<performCollapse public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></performCollapse>
-		<showAnimation public="1" set="method"><f a="subject:targets:animationId">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Int"/>
-	<x path="Void"/>
-</f></showAnimation>
-		<showAttackAnimation public="1" set="method"><f a="subject:targets">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></showAttackAnimation>
-		<showActorAttackAnimation public="1" set="method"><f a="subject:targets">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></showActorAttackAnimation>
-		<showEnemyAttackAnimation public="1" set="method"><f a="subject:targets">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></showEnemyAttackAnimation>
-		<showNormalAnimation public="1" set="method"><f a="targets:animationId:mirror">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Int"/>
-	<x path="Bool"/>
-	<x path="Void"/>
-</f></showNormalAnimation>
-		<animationBaseDelay public="1" set="method"><f a=""><x path="Int"/></f></animationBaseDelay>
-		<animationNextDelay public="1" set="method"><f a=""><x path="Int"/></f></animationNextDelay>
-		<drawBackground public="1" set="method"><f a=""><x path="Void"/></f></drawBackground>
-		<backRect public="1" set="method"><f a=""><c path="mz.core.Rectangle"/></f></backRect>
-		<backColor public="1" set="method"><f a=""><c path="String"/></f></backColor>
-		<backPaintOpacity public="1" set="method"><f a=""><x path="Int"/></f></backPaintOpacity>
-		<drawLineText public="1" set="method"><f a="index">
-	<x path="Int"/>
-	<x path="Void"/>
-</f></drawLineText>
-		<startTurn public="1" set="method"><f a=""><x path="Void"/></f></startTurn>
-		<startAction public="1" set="method"><f a="subject:action:targets">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="mz.objects.Game_Action"/>
-	<c path="Array"><c path="mz.objects.Game_Battler"/></c>
-	<x path="Void"/>
-</f></startAction>
-		<endAction public="1" set="method"><f a="subject">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></endAction>
-		<displayCurrentState public="1" set="method"><f a="subject">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayCurrentState>
-		<displayRegeneration public="1" set="method"><f a="subject">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayRegeneration>
-		<displayAction public="1" set="method"><f a="subject:item">
-	<c path="mz.objects.Game_Battler"/>
-	<t path="mz.types.UsableItem"/>
-	<x path="Void"/>
-</f></displayAction>
-		<displayCounter public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayCounter>
-		<displayReflection public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayReflection>
-		<displaySubstitute public="1" set="method"><f a="substitute:target">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displaySubstitute>
-		<displayActionResults public="1" set="method"><f a="subject:targt">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayActionResults>
-		<displayFailure public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayFailure>
-		<displayCritical public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayCritical>
-		<displayDamage public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayDamage>
-		<displayMiss public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayMiss>
-		<displayEvasion public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayEvasion>
-		<displayHpDamage public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayHpDamage>
-		<displayMpDamage public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayMpDamage>
-		<displayTpDamage public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayTpDamage>
-		<displayAffectedStatus public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayAffectedStatus>
-		<displayAutoAffectedStatus public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayAutoAffectedStatus>
-		<displayChangedStates public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayChangedStates>
-		<displayAddedStates public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayAddedStates>
-		<displayRemovedStates public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayRemovedStates>
-		<displayChangedBuffs public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></displayChangedBuffs>
-		<displayBuffs public="1" set="method"><f a="target:buffs:fmt">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="Array"><x path="mz.types.BuffId"/></c>
-	<c path="String"/>
-	<x path="Void"/>
-</f></displayBuffs>
-		<makeHpDamageText public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<x path="Void"/>
-</f></makeHpDamageText>
-		<makeMpDamageText public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="String"/>
-</f></makeMpDamageText>
-		<makeTpDamageText public="1" set="method"><f a="target">
-	<c path="mz.objects.Game_Battler"/>
-	<c path="String"/>
-</f></makeTpDamageText>
-		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Window_BattleLog
- *
- * The window for displaying battle progress. No frame is displayed, but it is
- * handled as a window for convenience.
- * @class Window_BattleLog</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_BattleLog"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"Window_BattleItem"</e></m></meta>
 	</class>
 	<class path="mz.windows.Window_SkillList" params="" file="src/mz/windows/Window_SkillList.hx" extern="1">
 		<extends path="mz.windows.Window_Selectable"/>
@@ -72048,10 +69748,7 @@
  *
  * The window for selecting a skill on the skill screen.
  * @class Window_SkillList</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_SkillList"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"Window_SkillList"</e></m></meta>
 	</class>
 	<class path="mz.windows.Window_BattleSkill" params="" file="src/mz/windows/Window_BattleSkill.hx" extern="1">
 		<extends path="mz.windows.Window_SkillList"/>
@@ -72067,7 +69764,6 @@
  *
  * The window for selecting a skill to use on the battle screen.
  * @class Window_BattleSkill</haxe_doc>
-		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="mz.windows.Window_ChoiceList" params="" file="src/mz/windows/Window_ChoiceList.hx" extern="1">
 		<extends path="mz.windows.Window_Command"/>
@@ -72130,10 +69826,7 @@
  *
  * The window for displaying switches and variables on the debug screen.
  * @class Window_DebugEdit</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_DebugEdit"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"Window_DebugEdit"</e></m></meta>
 	</class>
 	<class path="mz.windows.Window_DebugRange" params="" file="src/mz/windows/Window_DebugRange.hx" extern="1">
 		<extends path="mz.windows.Window_Selectable"/>
@@ -72158,10 +69851,7 @@
  *
  * The window for selecting a block of switches/variables on the debug screen.
  * @class Window_DebugRange</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_DebugRange"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"Window_DebugRange"</e></m></meta>
 	</class>
 	<class path="mz.windows.Window_HorzCommand" params="" file="src/mz/windows/Window_HorzCommand.hx" extern="1">
 		<extends path="mz.windows.Window_Command"/>
@@ -72220,94 +69910,7 @@
 			<m n=":native"><e>"Window_EquipItem"</e></m>
 		</meta>
 	</class>
-	<class path="mz.windows.Window_EquipSlot" params="" file="src/mz/windows/Window_EquipSlot.hx" extern="1">
-		<extends path="mz.windows.Window_Selectable"/>
-		<_actor><c path="mz.objects.Game_Actor"/></_actor>
-		<_itemWindow><c path="mz.windows.Window_EquipItem"/></_itemWindow>
-		<_statusWindow><c path="mz.windows.Window_EquipStatus"/></_statusWindow>
-		<initialize public="1" set="method" override="1"><f a="x:y:width:height">
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="Void"/>
-</f></initialize>
-		<setActor public="1" set="method">
-			<f a="actor">
-				<c path="mz.objects.Game_Actor"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Sets the current game actor.
-  *
-  * @param {Game_Actor} actor
-  * @memberof Window_EquipSlot</haxe_doc>
-		</setActor>
-		<item public="1" set="method">
-			<f a=""><t path="mz.types.EquipItem"/></f>
-			<haxe_doc>* Returns the current equip item.
-  *
-  * @returns {RPG.EquipItem}
-  * @memberof Window_EquipSlot</haxe_doc>
-		</item>
-		<slotName public="1" set="method">
-			<f a="index">
-				<x path="Int"/>
-				<c path="String"/>
-			</f>
-			<haxe_doc>* Returns the name of the slot at the specified index.
-  *
-  * @param {number} index
-  * @returns {string}
-  * @memberof Window_EquipSlot</haxe_doc>
-		</slotName>
-		<isEnabled public="1" set="method">
-			<f a="index">
-				<x path="Int"/>
-				<x path="Bool"/>
-			</f>
-			<haxe_doc>* Returns true if the current slot is enabled.
-  *
-  * @param {number} index
-  * @returns {boolean}
-  * @memberof Window_EquipSlot</haxe_doc>
-		</isEnabled>
-		<setStatusWindow public="1" set="method">
-			<f a="statusWindow">
-				<c path="mz.windows.Window_EquipStatus"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Sets the status window within the equip slot window.
-  *
-  * @param {Window_EquipStatus} statusWindow
-  * @memberof Window_EquipSlot</haxe_doc>
-		</setStatusWindow>
-		<setItemWindow public="1" set="method">
-			<f a="itemWindow">
-				<c path="mz.windows.Window_EquipItem"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Sets the item window within the equip slot window.
-  *
-  * @param {Window_EquipItem} itemWindow
-  * @memberof Window_EquipSlot</haxe_doc>
-		</setItemWindow>
-		<new public="1" set="method"><f a="x:y:width:height">
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="Void"/>
-</f></new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Window_EquipSlot
- *
- * The window for selecting an equipment slot on the equipment screen.
- * @class Window_EquipSlot</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_EquipSlot"</e></m>
-		</meta>
-	</class>
+	<class path="mz.windows.Window_EquipSlot" params="" file="src/mz/windows/Window_EquipSlot.hx" extern="1"><meta><m n=":native"><e>"Window_EquipSlot"</e></m></meta></class>
 	<class path="mz.windows.Window_EquipStatus" params="" file="src/mz/windows/Window_EquipStatus.hx" extern="1">
 		<extends path="mz.windows.Window_Base"/>
 		<meta><m n=":native"><e>"Window_EquipStatus"</e></m></meta>
@@ -72441,10 +70044,7 @@
 	</class>
 	<class path="mz.windows.Window_ItemCategory" params="" file="src/mz/windows/Window_ItemCategory.hx" extern="1">
 		<extends path="mz.windows.Window_HorzCommand"/>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_ItemCategory"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"Window_ItemCategory"</e></m></meta>
 	</class>
 	<class path="mz.windows.Window_MapName" params="" file="src/mz/windows/Window_MapName.hx" extern="1">
 		<extends path="mz.windows.Window_Base"/>
@@ -72500,97 +70100,6 @@
 	</class>
 	<class path="mz.windows.Window_MenuStatus" params="" file="src/mz/windows/Window_MenuStatus.hx" extern="1">
 		<extends path="mz.windows.Window_Selectable"/>
-		<_formationMode><x path="Bool"/></_formationMode>
-		<_pendingIndex><x path="Int"/></_pendingIndex>
-		<windowWidth public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Window width.
-  * @return Int</haxe_doc>
-		</windowWidth>
-		<windowHeight public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Window height.
-  * @return Int</haxe_doc>
-		</windowHeight>
-		<itemHeight public="1" set="method" override="1">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the height of each item (actor status) in the main menu
-  * window.
-  * @returns {number}
-  * @memberof Window_MenuStatus</haxe_doc>
-		</itemHeight>
-		<numVisibleRows public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the number of visible rows in
-  * menu status.
-  * @returns {number}
-  * @memberof Window_MenuStatus</haxe_doc>
-		</numVisibleRows>
-		<loadImages public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Loads the images for the main menu status window.
-  *
-  * @memberof Window_MenuStatus</haxe_doc>
-		</loadImages>
-		<drawItemBackground public="1" set="method">
-			<f a="index">
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Draws the item background at the given index.
-  *
-  * @param {number} index
-  * @memberof Window_MenuStatus</haxe_doc>
-		</drawItemBackground>
-		<drawItemImage public="1" set="method"><f a="index">
-	<x path="Int"/>
-	<x path="Void"/>
-</f></drawItemImage>
-		<drawItemStatus public="1" set="method"><f a="index">
-	<x path="Int"/>
-	<x path="Void"/>
-</f></drawItemStatus>
-		<selectLast public="1" set="method"><f a=""><x path="Void"/></f></selectLast>
-		<formationMode public="1" set="method">
-			<f a=""><x path="Bool"/></f>
-			<haxe_doc>* Determines if the window is in formation mode;
-  * if true, the player can select characters to swap
-  * positions with.
-  * @returns {boolean}
-  * @memberof Window_MenuStatus</haxe_doc>
-		</formationMode>
-		<setFormationMode public="1" set="method">
-			<f a="formationMode">
-				<x path="Bool"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Sets the formation mode to true or false.
-  *
-  * @param {boolean} formationMode
-  * @memberof Window_MenuStatus</haxe_doc>
-		</setFormationMode>
-		<pendingIndex public="1" set="method"><f a=""><x path="Int"/></f></pendingIndex>
-		<setPendingIndex public="1" set="method"><f a="index">
-	<x path="Int"/>
-	<x path="Void"/>
-</f></setPendingIndex>
-		<new public="1" set="method">
-			<f a="x:y">
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Creates an instance of Window_MenuStatus.
-  * @param {number} x
-  * @param {number} y
-  * @memberof Window_MenuStatus</haxe_doc>
-		</new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Window_MenuStatus
- *
- * The window for displaying party member status on the menu screen.
- * @class Window_MenuStatus
- * @extends {Window_Selectable}</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":native"><e>"Window_MenuStatus"</e></m>
@@ -72598,7 +70107,6 @@
 	</class>
 	<class path="mz.windows.Window_MenuActor" params="" file="src/mz/windows/Window_MenuActor.hx" extern="1">
 		<extends path="mz.windows.Window_MenuStatus"/>
-		<initialize public="1" set="method" override="1"><f a=""><x path="Void"/></f></initialize>
 		<selectForItem public="1" set="method"><f a="item">
 	<t path="mz.types.BaseItem"/>
 	<x path="Void"/>
@@ -72888,102 +70396,7 @@
 			<m n=":native"><e>"Window_Message"</e></m>
 		</meta>
 	</class>
-	<class path="mz.windows.Window_NameEdit" params="" file="src/mz/windows/Window_NameEdit.hx" extern="1">
-		<_name><c path="String"/></_name>
-		<_index><x path="Int"/></_index>
-		<windowWidth public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the window width.
-  *
-  * @returns {number}
-  * @memberof Window_NameEdit</haxe_doc>
-		</windowWidth>
-		<windowHeight public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the window height.
-  *
-  * @returns {number}
-  * @memberof Window_NameEdit</haxe_doc>
-		</windowHeight>
-		<restoreDefault public="1" set="method"><f a=""><x path="Bool"/></f></restoreDefault>
-		<add public="1" set="method"><f a="ch">
-	<c path="String"/>
-	<x path="Bool"/>
-</f></add>
-		<back public="1" set="method"><f a=""><x path="Bool"/></f></back>
-		<faceWidth public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the width of the character face.
-  *
-  * @returns {number}
-  * @memberof Window_NameEdit</haxe_doc>
-		</faceWidth>
-		<charWidth public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the width of a character.
-  *
-  * @returns {number}
-  * @memberof Window_NameEdit</haxe_doc>
-		</charWidth>
-		<left public="1" set="method"><f a=""><x path="Int"/></f></left>
-		<underlineRect public="1" set="method"><f a="index">
-	<x path="Int"/>
-	<c path="mz.core.Rectangle"/>
-</f></underlineRect>
-		<underlineColor public="1" set="method">
-			<f a=""><c path="String"/></f>
-			<haxe_doc>* Returns the color of the underline as a css color String.
-  *
-  * @returns {String}
-  * @memberof Window_NameEdit</haxe_doc>
-		</underlineColor>
-		<drawUnderline public="1" set="method">
-			<f a="index">
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Draws the underline at the given index of the window.
-  *
-  * @param {number} index
-  * @memberof Window_NameEdit</haxe_doc>
-		</drawUnderline>
-		<drawChar public="1" set="method">
-			<f a="index">
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Draws a character within the window at the specified index.
-  *
-  * @param {number} index
-  * @memberof Window_NameEdit</haxe_doc>
-		</drawChar>
-		<refresh public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Refreshes the window contents.
-  *
-  * @memberof Window_NameEdit</haxe_doc>
-		</refresh>
-		<new public="1" set="method">
-			<f a="actor:maxLength">
-				<c path="mz.objects.Game_Actor"/>
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Creates an instance of Window_NameEdit.
-  * @param {Game_Actor} actor
-  * @param {number} maxLength
-  * @memberof Window_NameEdit</haxe_doc>
-		</new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Window_NameEdit
- *
- * The window for editing an actor's name on the name input screen.
- * @class Window_NameEdit</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_NameEdit"</e></m>
-		</meta>
-	</class>
+	<class path="mz.windows.Window_NameEdit" params="" file="src/mz/windows/Window_NameEdit.hx" extern="1"><meta><m n=":native"><e>"Window_NameEdit"</e></m></meta></class>
 	<class path="mz.windows.Window_NameInput" params="" file="src/mz/windows/Window_NameInput.hx" extern="1">
 		<extends path="mz.windows.Window_Selectable"/>
 		<LATIN1 public="1" static="1"><c path="Array"><c path="String"/></c></LATIN1>
@@ -73024,10 +70437,7 @@
  *
  * The window for selecting text characters on the name input screen.
  * @class Window_NameInputt</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_NameInput"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"Window_NameInput"</e></m></meta>
 	</class>
 	<class path="mz.windows.Window_NumberInput" params="" file="src/mz/windows/Window_NumberInput.hx" extern="1">
 		<extends path="mz.windows.Window_Selectable"/>
@@ -73149,10 +70559,7 @@
  *
  * The window for selecting whether to fight or escape on the battle screen.
  * @class Window_PartyCommand</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_PartyCommand"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"Window_PartyCommand"</e></m></meta>
 	</class>
 	<typedef path="mz.windows.Info" params="" file="src/mz/windows/Window_SavefileList.hx" module="mz.windows.Window_SavefileList"><a><key><c path="String"/></key></a></typedef>
 	<class path="mz.windows.Window_SavefileList" params="" file="src/mz/windows/Window_SavefileList.hx" extern="1">
@@ -73231,10 +70638,7 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></new>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_SavefileList"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"Window_SavefileList"</e></m></meta>
 	</class>
 	<class path="mz.windows.Window_ScrollText" params="" file="src/mz/windows/Window_ScrollText.hx" extern="1">
 		<extends path="mz.windows.Window_Base"/>
@@ -73276,88 +70680,6 @@
  * The window for displaying scrolling text. No frame is displayed, but it
  * is handled as a window for convenience.
  * @class Window_ScrollText</haxe_doc>
-		<meta><m n=":directlyUsed"/></meta>
-	</class>
-	<class path="mz.windows.Window_ShopBuy" params="" file="src/mz/windows/Window_ShopBuy.hx" extern="1">
-		<extends path="mz.windows.Window_Selectable"/>
-		<_shopGoods><c path="Array"><c path="Array"><x path="Any"/></c></c></_shopGoods>
-		<_money><x path="Int"/></_money>
-		<_data><c path="Array"><t path="mz.types.BaseItem"/></c></_data>
-		<_price><c path="Array"><x path="Int"/></c></_price>
-		<_statusWindow><c path="mz.windows.Window_ShopStatus"/></_statusWindow>
-		<windowWidth public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the width of the window.
-  *
-  * @returns {number}
-  * @memberof Window_ShopBuy</haxe_doc>
-		</windowWidth>
-		<item public="1" set="method">
-			<f a=""><t path="mz.types.BaseItem"/></f>
-			<haxe_doc>* Returns the current item of the window.
-  *
-  * @returns {RPG.BaseItem}
-  * @memberof Window_ShopBuy</haxe_doc>
-		</item>
-		<setMoney public="1" set="method"><f a="money">
-	<x path="Int"/>
-	<x path="Void"/>
-</f></setMoney>
-		<price public="1" set="method">
-			<f a="item">
-				<t path="mz.types.BaseItem"/>
-				<x path="Int"/>
-			</f>
-			<haxe_doc>* Returns the p rice of an item
-  * @param item
-  * @return Int</haxe_doc>
-		</price>
-		<isEnabled public="1" set="method">
-			<f a="item">
-				<t path="mz.types.BaseItem"/>
-				<x path="Bool"/>
-			</f>
-			<haxe_doc>* Checks if the current item is enabled (can be bought/sold).
-  *
-  * @param {RPG.BaseItem} item
-  * @returns {boolean}
-  * @memberof Window_ShopBuy</haxe_doc>
-		</isEnabled>
-		<makeItemList public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Creates a list of items for the shop window.
-  *
-  * @memberof Window_ShopBuy</haxe_doc>
-		</makeItemList>
-		<setStatusWindow public="1" set="method">
-			<f a="statusWindow">
-				<c path="mz.windows.Window_ShopStatus"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Sets the status window for the shop buy window.
-  * @param statusWindow</haxe_doc>
-		</setStatusWindow>
-		<new public="1" set="method">
-			<f a="x:y:height:shopGoods">
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<c path="Array"><c path="Array"><x path="Any"/></c></c>
-				<x path="Void"/>
-			</f>
-			<haxe_doc><![CDATA[* Creates an instance of Window_ShopBuy.
-  * @param {number} x
-  * @param {number} y
-  * @param {number} height
-  * @param {Array<Array<any>>} shopGoods
-  * @memberof Window_ShopBuy]]></haxe_doc>
-		</new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Window_ShopBuy
- *
- * The window for selecting an item to buy on the shop screen.
- * @class Window_ShopBuy</haxe_doc>
-		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="mz.windows.Window_ShopCommand" params="" file="src/mz/windows/Window_ShopCommand.hx" extern="1">
 		<extends path="mz.windows.Window_HorzCommand"/>
@@ -73392,185 +70714,6 @@
  * The window for selecting buy/sell on the shop screen.
  * @class Window_ShopCommand</haxe_doc>
 	</class>
-	<class path="mz.windows.Window_ShopNumber" params="" file="src/mz/windows/Window_ShopNumber.hx" extern="1">
-		<extends path="mz.windows.Window_Selectable"/>
-		<_item>
-			<t path="mz.types.BaseItem"/>
-			<haxe_doc>* The current item being bought/sold.
-  *
-  * @private var
-  * @type {RPG.BaseItem}
-  * @memberof Window_ShopNumber</haxe_doc>
-		</_item>
-		<_max>
-			<x path="Int"/>
-			<haxe_doc>* Returns the maximum number of the item
-  * that can be bought/sold.
-  * @private var
-  * @type {number}
-  * @memberof Window_ShopNumber</haxe_doc>
-		</_max>
-		<_price>
-			<x path="Int"/>
-			<haxe_doc>* The current price of the items.
-  *
-  * @private var
-  * @type {number}
-  * @memberof Window_ShopNumber</haxe_doc>
-		</_price>
-		<_number><x path="Int"/></_number>
-		<_currencyUnit>
-			<c path="String"/>
-			<haxe_doc>* Returns the currency unit of the game.
-  *
-  * @private var
-  * @type {String}
-  * @memberof Window_ShopNumber</haxe_doc>
-		</_currencyUnit>
-		<_buttons>
-			<c path="Array"><c path="mz.sprites.Sprite_Button"/></c>
-			<haxe_doc><![CDATA[* The buttons to input quantity
-  * for the quantity of the item to be bought/sold.
-  * @private var
-  * @type {Array<Sprite_Button>}
-  * @memberof Window_ShopNumber]]></haxe_doc>
-		</_buttons>
-		<windowWidth public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the width of the window.
-  *
-  * @returns {number}
-  * @memberof Window_ShopNumber</haxe_doc>
-		</windowWidth>
-		<number public="1" set="method"><f a=""><x path="Int"/></f></number>
-		<setup public="1" set="method"><f a="item:max:price">
-	<t path="mz.types.BaseItem"/>
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="Void"/>
-</f></setup>
-		<setCurrencyUnit public="1" set="method"><f a="currencyUnit">
-	<c path="String"/>
-	<x path="Void"/>
-</f></setCurrencyUnit>
-		<createButtons public="1" set="method"><f a=""><x path="Void"/></f></createButtons>
-		<placeButtons public="1" set="method"><f a=""><x path="Void"/></f></placeButtons>
-		<updateButtonsVisiblity public="1" set="method"><f a=""><x path="Void"/></f></updateButtonsVisiblity>
-		<showButtons public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Shows the quantity input buttons.
-  *
-  * @memberof Window_ShopNumber</haxe_doc>
-		</showButtons>
-		<hideButtons public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Hides the quantity input buttons.
-  *
-  * @memberof Window_ShopNumber</haxe_doc>
-		</hideButtons>
-		<drawMultiplicationSign public="1" set="method"><f a=""><x path="Void"/></f></drawMultiplicationSign>
-		<drawNumber public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Draws the number.</haxe_doc>
-		</drawNumber>
-		<drawTotalPrice public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Draws the total price of the selected
-  * quantity of item.
-  * @memberof Window_ShopNumber</haxe_doc>
-		</drawTotalPrice>
-		<itemY public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Item y position.
-  * @return Int</haxe_doc>
-		</itemY>
-		<priceY public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Y position of the price.
-  * @return Int</haxe_doc>
-		</priceY>
-		<buttonY public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Y position of the button.
-  * @return Int</haxe_doc>
-		</buttonY>
-		<cursorWidth public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the width of the cursor.
-  *
-  * @returns {number}
-  * @memberof Window_ShopNumber</haxe_doc>
-		</cursorWidth>
-		<cursorX public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Cursor x position.
-  * @return Int</haxe_doc>
-		</cursorX>
-		<maxDigits public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* The max number of digits for the shop number display
-  * window.</haxe_doc>
-		</maxDigits>
-		<processNumberChange public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Processes the change in quantity.
-  *
-  * @memberof Window_ShopNumber</haxe_doc>
-		</processNumberChange>
-		<changeNumber public="1" set="method">
-			<f a="amount">
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Changes the quantity, given a number.
-  *
-  * @param {number} amount
-  * @memberof Window_ShopNumber</haxe_doc>
-		</changeNumber>
-		<onButtonUp public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Handle for button up event.</haxe_doc>
-		</onButtonUp>
-		<onButtonUp2 public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Handler for button up event 2.</haxe_doc>
-		</onButtonUp2>
-		<onButtonDown public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Handler for button down event.</haxe_doc>
-		</onButtonDown>
-		<onButtonDown2 public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Handler for button down event.</haxe_doc>
-		</onButtonDown2>
-		<onButtonOk public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Handler for button ok event.</haxe_doc>
-		</onButtonOk>
-		<new public="1" set="method">
-			<f a="x:y:height">
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Creates an instance of Window_ShopNumber.
-  * @param {number} x
-  * @param {number} y
-  * @param {number} height
-  * @memberof Window_ShopNumber</haxe_doc>
-		</new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Window_ShopNumber
- *
- * The window for inputting quantity of items to buy or sell on the shop
- * screen.
- * @class Window_ShopNumber</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_ShopNumber"</e></m>
-		</meta>
-	</class>
 	<class path="mz.windows.Window_ShopSell" params="" file="src/mz/windows/Window_ShopSell.hx" extern="1">
 		<extends path="mz.windows.Window_ItemList"/>
 		<isEnabled public="1" set="method">
@@ -73596,143 +70739,7 @@
  *
  * The window for selecting an item to sell on the shop screen.
  * @class Window_ShopSell</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_ShopSell"</e></m>
-		</meta>
-	</class>
-	<class path="mz.windows.Window_ShopStatus" params="" file="src/mz/windows/Window_ShopStatus.hx" extern="1">
-		<extends path="mz.windows.Window_Base"/>
-		<_item><t path="mz.types.BaseItem"/></_item>
-		<_pageIndex><x path="Int"/></_pageIndex>
-		<refresh public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Refreshes the window contents.
-  *
-  * @memberof Window_ShopStatus</haxe_doc>
-		</refresh>
-		<setItem public="1" set="method">
-			<f a="item">
-				<t path="mz.types.BaseItem"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Sets the item in the window shop status for display.</haxe_doc>
-		</setItem>
-		<isEquipItem public="1" set="method">
-			<f a=""><x path="Bool"/></f>
-			<haxe_doc>* Returns true if the item in the
-  * shop status window is an equippable item.</haxe_doc>
-		</isEquipItem>
-		<drawPossession public="1" set="method"><f a="x:y">
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="Void"/>
-</f></drawPossession>
-		<drawEquipInfo public="1" set="method">
-			<f a="x:y">
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Draw Equip Information.</haxe_doc>
-		</drawEquipInfo>
-		<statusMembers public="1" set="method"><f a=""><c path="Array"><c path="mz.objects.Game_Actor"/></c></f></statusMembers>
-		<pageSize public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the page size.
-  *
-  * @returns {number}
-  * @memberof Window_ShopStatus</haxe_doc>
-		</pageSize>
-		<maxPages public="1" set="method">
-			<f a=""><x path="Int"/></f>
-			<haxe_doc>* Returns the max number of pages.
-  *
-  * @returns {number}
-  * @memberof Window_ShopStatus</haxe_doc>
-		</maxPages>
-		<drawActorEquipInfo public="1" set="method"><f a="x:y:actor">
-	<x path="Int"/>
-	<x path="Int"/>
-	<c path="mz.objects.Game_Actor"/>
-	<x path="Void"/>
-</f></drawActorEquipInfo>
-		<drawActorParamChange public="1" set="method"><f a="x:y:actor:item1">
-	<x path="Int"/>
-	<x path="Int"/>
-	<c path="mz.objects.Game_Actor"/>
-	<t path="mz.types.EquipItem"/>
-	<x path="Void"/>
-</f></drawActorParamChange>
-		<paramId public="1" set="method">
-			<f a=""><x path="mz.types.ParameterId"/></f>
-			<haxe_doc>* Returns the parameter id.
-  *
-  * @returns {number}
-  * @memberof Window_ShopStatus</haxe_doc>
-		</paramId>
-		<currentEquippedItem public="1" set="method">
-			<f a="actor:etypeId">
-				<c path="mz.objects.Game_Actor"/>
-				<x path="mz.types.EquipTypeId"/>
-				<t path="mz.types.EquipItem"/>
-			</f>
-			<haxe_doc>* Returns the current item equiped by the given actor when
-  * the respective equipment Id is passed.
-  * @param {Game_Actor} actor
-  * @param {number} etypeId
-  * @returns {RPG.EquipItem}
-  * @memberof Window_ShopStatus</haxe_doc>
-		</currentEquippedItem>
-		<updatePage public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Updates the current page.
-  *
-  * @memberof Window_ShopStatus</haxe_doc>
-		</updatePage>
-		<isPageChangeEnabled public="1" set="method">
-			<f a=""><x path="Bool"/></f>
-			<haxe_doc>* Determines if page can be changed.
-  *
-  * @returns {boolean}
-  * @memberof Window_ShopStatus</haxe_doc>
-		</isPageChangeEnabled>
-		<isPageChangeRequested public="1" set="method"><f a=""><x path="Bool"/></f></isPageChangeRequested>
-		<isTouchedInsideFrame public="1" set="method">
-			<f a=""><x path="Bool"/></f>
-			<haxe_doc>* Determines if the window is touched within it's frame.
-  *
-  * @returns {boolean}
-  * @memberof Window_ShopStatus</haxe_doc>
-		</isTouchedInsideFrame>
-		<changePage public="1" set="method">
-			<f a=""><x path="Void"/></f>
-			<haxe_doc>* Changes the current page.
-  *
-  * @memberof Window_ShopStatus</haxe_doc>
-		</changePage>
-		<new public="1" set="method">
-			<f a="x:y:width:height">
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Creates an instance of Window_ShopStatus.
-  * @param {number} x
-  * @param {number} y
-  * @param {number} width
-  * @param {number} height
-  * @memberof Window_ShopStatus</haxe_doc>
-		</new>
-		<haxe_doc>* -----------------------------------------------------------------------------
- * Window_ShopStatus
- *
- * The window for displaying number of items in possession and the actor's
- * equipment on the shop screen.
- * @class Window_ShopStatus</haxe_doc>
-		<meta><m n=":directlyUsed"/></meta>
+		<meta><m n=":native"><e>"Window_ShopSell"</e></m></meta>
 	</class>
 	<class path="mz.windows.Window_SkillStatus" params="" file="src/mz/windows/Window_SkillStatus.hx" extern="1">
 		<extends path="mz.windows.Window_Base"/>
@@ -73779,10 +70786,7 @@
  *
  * The window for displaying the skill user's status on the skill screen.
  * @class Window_SkillStatus</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Window_SkillStatus"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"Window_SkillStatus"</e></m></meta>
 	</class>
 	<class path="mz.windows.Window_SkillType" params="" file="src/mz/windows/Window_SkillType.hx" extern="1">
 		<extends path="mz.windows.Window_Command"/>
@@ -79842,18 +76846,5 @@
 	<c path="Array"><d/></c>
 	<x path="Void"/>
 </f></error>
-	</class>
-	<class path="utils._Parse.Parse_Fields_" params="" file="src/utils/Parse.hx" private="1" module="utils.Parse" final="1">
-		<parseParameters public="1" get="inline" set="null" line="11" static="1">
-			<f a="parameters">
-				<c path="String"/>
-				<x path="Any"/>
-			</f>
-			<haxe_doc>* Function for parsing parameters from JSON in MV/MZ</haxe_doc>
-		</parseParameters>
-		<isObject public="1" set="method" line="32" static="1"><f a="entity">
-	<d/>
-	<x path="Bool"/>
-</f></isObject>
 	</class>
 </haxe>
