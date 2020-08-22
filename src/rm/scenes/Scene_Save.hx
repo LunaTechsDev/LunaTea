@@ -15,6 +15,10 @@ extern class Scene_Save extends Scene_File {
 
  public function helpWindowText(): String;
 
+ #if !compileMV
+ public function executeSave(saveFileId: Int): Void;
+ #end
+
  /**
   * Returns the index of the first
   * save file within the save scene.

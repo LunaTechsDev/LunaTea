@@ -1,5 +1,6 @@
 package rm.scenes;
 
+import rm.core.Rectangle;
 import rm.windows.Window_SkillType;
 
 /**
@@ -8,6 +9,12 @@ import rm.windows.Window_SkillType;
 @:native("Scene_Skill")
 extern class Scene_Skill extends Scene_ItemBase {
  private var _skillTypeWindow: Window_SkillType;
+
+ #if !compileMV
+ public function skillTypeWindowRect(): Rectangle;
+ public function statusWindowRect(): Rectangle;
+ public function itemWindowRect(): Rectangle;
+ #end
 
  /**
   * Creates the window for skill types

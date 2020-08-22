@@ -490,6 +490,20 @@ extern class Window_Base extends _Window {
   */
  public function textWidth(text: String): Int;
 
+ #if compileMV
+ /**
+  * Draws text with text codes included; this will draw
+  * icons, increase text height, and more.
+  * @param text
+  * @param x
+  * @param y
+  * @param width
+  * @returns Int
+  * @memberof Window_Base
+  */
+ public function drawTextEx(text: String, x: Int, y: Int): Int;
+ #else
+
  /**
   * Draws text with text codes included; this will draw
   * icons, increase text height, and more.
@@ -529,6 +543,10 @@ extern class Window_Base extends _Window {
   * @return String
   */
  public function createTextBuffer(rtl: Bool): String;
+
+ public function processControlCharacter(extState: TextState,
+  character: String): Void;
+ #end
 
  /**
   * Converts the escape characters and returns the text content
@@ -645,13 +663,6 @@ extern class Window_Base extends _Window {
   * @memberof Window_Base
   */
  public function calcTextHeight(textState: TextState, all: Bool): Int;
-
- /**
-  * Returns the maximum font size for a single line in rm.
-  * @param line
-  * @return Int
-  */
- public function maxFontSizeInLine(line: String): Int;
 
  /**
   * Draws an icon given the specified iconIndex at the specified
@@ -974,7 +985,7 @@ extern class Window_Base extends _Window {
   */
  public function reserveFaceImages(): Void;
 
- #if compileMZ
+ #if !compileMV
  /**
   * Checks if object passed in is a rectangle..
   * Error is usually thrown when an MV plugin is used.
@@ -989,6 +1000,18 @@ extern class Window_Base extends _Window {
   * @return Rectangle
   */
  public function baseTextRect(): Rectangle;
+
+ public function changeOutlineColor(color: String): Void;
+
+ /**
+  * Draws a rectangle using the outline color and
+  * main text color of the window.
+  * @param x
+  * @param y
+  * @param width
+  * @param height
+  */
+ public function drawRect(x: Int, y: Int, width: Int, height: Int): Void;
 
  /**
   * Destroys the window contents.
@@ -1014,5 +1037,19 @@ extern class Window_Base extends _Window {
   * Plays the cursor sound from SoundManager;
   */
  public function playCursorSound(): Void;
+
+ /**
+  * Changes the color based on the color index.
+  * @param colorIndex
+  */
+ public function processColorChange(colorIndex: Int): Void;
+
+ /**
+  * Returns the maximum font size for a single line in rm.
+  * @param line
+  * @return Int
+  *
+  */
+ public function maxFontSizeInLine(line: String): Int;
  #end
 }

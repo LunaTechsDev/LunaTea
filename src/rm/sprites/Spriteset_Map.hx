@@ -1,8 +1,8 @@
 package rm.sprites;
 
 import rm.core.Weather;
-import rm.core.ShaderTileMap.ShaderTilemap;
-import rm.core.TileMap.Tilemap;
+import rm.core.ShaderTilemap;
+import rm.core.Tilemap;
 import rm.types.RPG.Tileset;
 import haxe.extern.EitherType;
 import rm.core.TilingSprite;
