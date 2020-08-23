@@ -79662,6 +79662,14 @@
 		<_itemWindow><c path="rm.windows.Window_EventItem"/></_itemWindow>
 		<initialize public="1" set="method" override="1"><f a=""><x path="Void"/></f></initialize>
 		<initMembers public="1" set="method"><f a=""><x path="Void"/></f></initMembers>
+		<processNormalCharacter public="1" set="method" override="1">
+			<f a="textState">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Processes normal characters displayed within the message window.
+  * @param textState</haxe_doc>
+		</processNormalCharacter>
 		<subWindows public="1" set="method">
 			<f a=""><c path="Array"><c path="rm.windows.Window_Base"/></c></f>
 			<haxe_doc><![CDATA[* Returns the sub windows attached to the message window.
@@ -79742,14 +79750,6 @@
   * @param code
   * @param textState</haxe_doc>
 		</processEscapeCharacter>
-		<processNormalCharacter public="1" set="method" override="1">
-			<f a="textState">
-				<c path="String"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Processes normal characters displayed within the message window.
-  * @param textState</haxe_doc>
-		</processNormalCharacter>
 		<startWait public="1" set="method">
 			<f a="count">
 				<x path="Int"/>
