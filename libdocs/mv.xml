@@ -62557,10 +62557,7 @@
 		<haxe_doc>* The static class that handles JSON with object information.
  *
  * @class JsonEx</haxe_doc>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":native"><e>"JsonEx"</e></m>
-		</meta>
+		<meta><m n=":native"><e>"JsonEx"</e></m></meta>
 	</class>
 	<class path="rm.core.Point" params="" file="src/rm/core/Point.hx" extern="1">
 		<extends path="pixi.core.math.Point"/>
@@ -81241,7 +81238,7 @@
 			</f>
 			<haxe_doc>* Function for parsing parameters from JSON in MV/MZ</haxe_doc>
 		</parseParameters>
-		<isObject public="1" set="method" line="33" static="1"><f a="entity">
+		<isObject public="1" set="method" line="55" static="1"><f a="entity">
 	<d/>
 	<x path="Bool"/>
 </f></isObject>
