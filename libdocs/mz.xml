@@ -82024,7 +82024,7 @@
 </f></error>
 	</class>
 	<class path="utils.Parse" params="" file="src/utils/Parse.hx">
-		<parseParameters public="1" set="method" line="12" static="1">
+		<parseParameters public="1" get="inline" set="null" line="12" static="1">
 			<f a="parameters">
 				<c path="String"/>
 				<x path="Any"/>
