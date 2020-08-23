@@ -11,13 +11,31 @@ typedef Self = String;
 
 class Fn {
  public static var self(get, null): Any;
+
+ /**
+  * Alias for JS console log.
+  */
  public static var JsLog = Console.log;
+
+ /**
+  * Allows you to acces Js syntax  Code functionality
+  * for embedding and more.
+  */
+ public static var Js = Syntax;
+
+ public static inline function thisJs(): Dynamic {
+  return js.Lib.nativeThis;
+ }
+
+ public static inline function parseIntJs(string: String, radix: Int): Float {
+  return js.Lib.parseInt(string, radix);
+ }
 
  /**
   * Wrapper for JavaScript this
   */
  private static inline function get_self() {
-  return Syntax.code("this");
+  return thisJs();
  }
 
  /**
@@ -59,6 +77,11 @@ class Fn {
  public static inline function setField(obj: Any, fieldName: String,
    value: Any) {
   return Syntax.code("{0} = {1}", Syntax.field(obj, fieldName), value);
+ }
+
+ @:analyzer(local_dce)
+ public static inline function getField(obj: Any, fieldName: String) {
+  return Syntax.field(obj, fieldName);
  }
 
  /**
