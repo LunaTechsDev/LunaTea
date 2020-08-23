@@ -49358,6 +49358,10 @@
   * @type {number}
   * @memberof Window_Base</haxe_doc>
 		</_iconWidth>
+		<__iconWidth public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_iconWidth"</e></m></meta>
+		</__iconWidth>
 		<_iconHeight static="1">
 			<x path="Int"/>
 			<haxe_doc>* The standard icon height;
@@ -49367,6 +49371,10 @@
   * @type {number}
   * @memberof Window_Base</haxe_doc>
 		</_iconHeight>
+		<__iconHeight public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_iconHeight"</e></m></meta>
+		</__iconHeight>
 		<_faceWidth static="1">
 			<x path="Int"/>
 			<haxe_doc>* The standard face width;
@@ -49376,6 +49384,10 @@
   * @type {number}
   * @memberof Window_Base</haxe_doc>
 		</_faceWidth>
+		<__faceWidth public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_faceWidth"</e></m></meta>
+		</__faceWidth>
 		<_faceHeight static="1">
 			<x path="Int"/>
 			<haxe_doc>* The standard face height;
@@ -49385,6 +49397,10 @@
   * @type {number}
   * @memberof Window_Base</haxe_doc>
 		</_faceHeight>
+		<__faceHeight public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_faceHeight"</e></m></meta>
+		</__faceHeight>
 		<_opening>
 			<x path="Bool"/>
 			<haxe_doc>* The opening property; determines if
