@@ -2,12 +2,12 @@ package rm.scenes;
 
 import js.lib.Date;
 
+@:expose("Scene_Boot")
 @:native("Scene_Boot")
 extern class Scene_Boot extends Scene_Base {
  private var _startDate: Date;
 
- 
- @native("_databaseLoaded")
+ @:native("_databaseLoaded")
  public var __databaseLoaded: Bool;
  private var _databaseLoaded: Bool;
 

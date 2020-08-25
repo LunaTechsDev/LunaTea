@@ -1,21 +1,33 @@
 package rm.managers;
 
+import js.lib.Promise;
+import haxe.Json;
 import rm.types.RPG.BaseItem;
 
 /**
  * Manages the game data: saving, loading, meta data,
  * and map information.
  */
+@:expose("DataManager")
 @:native("DataManager")
 extern class DataManager {
+ @:native("_globalId")
+ public static var __globalId: String;
  private static var _globalId: String;
+ @:native("_lastAccessId")
+ public static var __lastAccessId: Int;
  private static var _lastAccessedId: Int;
+ @:native("_errorUrl")
+ public static var __errorUrl: Any;
  private static var _errorUrl: Any;
 
  /**
   * Database Files are a JSON like Object
   */
- private static var _databaseFiles: Array<Any>;
+ private static var _databaseFiles: Array<Json>;
+
+ @:native("_databaseFiles")
+ public static var __databaseFiles: Array<Json>; // TODO:Might need to refactor
 
  public static function loadDatabase(): Void;
  public static function loadDataFile(name: String, src: String): Void;
@@ -115,6 +127,24 @@ extern class DataManager {
   */
  public static function maxSavefiles(): Int;
 
+ #if !compileMV
+ public static function isMapObject(object: Dynamic): Bool;
+
+ /**
+  * Saves the RPGMakerMV game given a savefileId.
+  * Returns true if successful.
+  * @static
+  * @param {number} savefileId
+  * @returns {Bool}
+  * @memberof DataManager
+  */
+ public static function saveGame(savefileId: Int): Promise<Any>;
+
+ public static function loadGame(savefileId: Int): Promise<Any>;
+
+ public static function makeSavename(savefileId: Int): String;
+ #else
+
  /**
   * Saves the RPGMakerMV game given a savefileId.
   * Returns true if successful.
@@ -126,6 +156,7 @@ extern class DataManager {
  public static function saveGame(savefileId: Int): Bool;
 
  public static function loadGame(savefileId: Int): Bool;
+ #end
 
  /**
   * Returns the last accessed save fileId upon

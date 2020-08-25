@@ -4,17 +4,19 @@ import rm.core.Rectangle;
 
 typedef Info = {key: String};
 
+@:expose("Window_SavefileList")
 @:native("Window_SavefileList")
 extern class Window_SavefileList extends Window_Selectable {
  private var _mode: String;
 
+ #if !compileMV
  /**
   * Whether ornot the auto save feature is enabled
   *
   * @default {Bool} false
   * @memberof Window_SavefileList
   */
- @native("_autosave")
+ @:native("_autosave")
  public var __autosave: Bool;
 
  /**
@@ -24,8 +26,14 @@ extern class Window_SavefileList extends Window_Selectable {
   * @memberof Window_SavefileList
   */
  private var _autosave: Bool;
+ #end
 
+ #if !compileMV
+ public function new(rect: Rectangle);
+ #else
  public function new(x: Int, y: Int, width: Int, height: Int);
+ #end
+
 
  /**
   * Sets the mode of the save file window.
