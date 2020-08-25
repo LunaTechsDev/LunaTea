@@ -1475,6 +1475,7 @@
 		</rgbToCssColor>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Utils"</e></m>
 			<m n=":native"><e>"Utils"</e></m>
 		</meta>
 	</class>
@@ -1746,15 +1747,15 @@
 		</set>
 	</class>
 	<class path="core.Assets" params="" file="src/core/Assets.hx">
-		<Assets_TestTXT public="1" get="inline" set="null" expr="&quot;assets/test.txt&quot;" line="41" static="1">
+		<Assets_TestTXT public="1" get="inline" set="null" expr="&quot;assets/test.txt&quot;" line="44" static="1">
 			<c path="String"/>
 			<meta><m n=":value"><e>"assets/test.txt"</e></m></meta>
 		</Assets_TestTXT>
-		<Assets_MypicPNG public="1" get="inline" set="null" expr="&quot;assets/mypic.png&quot;" line="41" static="1">
+		<Assets_MypicPNG public="1" get="inline" set="null" expr="&quot;assets/mypic.png&quot;" line="44" static="1">
 			<c path="String"/>
 			<meta><m n=":value"><e>"assets/mypic.png"</e></m></meta>
 		</Assets_MypicPNG>
-		<Yes_New_nameTXT public="1" get="inline" set="null" expr="&quot;assets/yes/new_name.txt&quot;" line="41" static="1">
+		<Yes_New_nameTXT public="1" get="inline" set="null" expr="&quot;assets/yes/new_name.txt&quot;" line="44" static="1">
 			<c path="String"/>
 			<meta><m n=":value"><e>"assets/yes/new_name.txt"</e></m></meta>
 		</Yes_New_nameTXT>
@@ -3124,7 +3125,10 @@
   * @class Stage
   * @constructor</haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"Stage"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Stage"</e></m>
+			<m n=":native"><e>"Stage"</e></m>
+		</meta>
 	</class>
 	<class path="rm.scenes.Scene_Base" params="" file="src/rm/scenes/Scene_Base.hx" extern="1">
 		<extends path="rm.core.Stage"/>
@@ -3245,6 +3249,7 @@
 		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Base"</e></m>
 			<m n=":native"><e>"Scene_Base"</e></m>
 		</meta>
 	</class>
@@ -48764,7 +48769,10 @@
   * @constructor
   * @param {Bitmap} bitmap The image for the sprite</haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"Sprite"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Sprite"</e></m>
+			<m n=":native"><e>"Sprite"</e></m>
+		</meta>
 	</class>
 	<class path="rm.sprites.Sprite_Base" params="" file="src/rm/sprites/Sprite_Base.hx" extern="1">
 		<extends path="rm.core.Sprite"/>
@@ -48839,6 +48847,7 @@
 		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Base"</e></m>
 			<m n=":native"><e>"Sprite_Base"</e></m>
 		</meta>
 	</class>
@@ -49345,7 +49354,10 @@
   * @property visible
   * @type Boolean</haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"Window"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Window"</e></m>
+			<m n=":native"><e>"Window"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_Base" params="" file="src/rm/windows/Window_Base.hx" extern="1">
 		<extends path="rm.core._Window"/>
@@ -50386,6 +50398,7 @@
 		</new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_Base"</e></m>
 			<m n=":native"><e>"Window_Base"</e></m>
 		</meta>
 	</class>
@@ -50820,6 +50833,7 @@
 </f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_Selectable"</e></m>
 			<m n=":native"><e>"Window_Selectable"</e></m>
 		</meta>
 	</class>
@@ -51002,6 +51016,7 @@
 		</new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_Command"</e></m>
 			<m n=":native"><e>"Window_Command"</e></m>
 		</meta>
 	</class>
@@ -58230,7 +58245,10 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.abstracts.objects._GameVehicle.GameVehicle_Impl_" params="" file="src/rm/abstracts/objects/GameVehicle.hx" private="1" module="rm.abstracts.objects.GameVehicle" final="1"><_new public="1" get="inline" set="null" line="8" static="1">
-	<f a=""><x path="rm.abstracts.objects.GameVehicle"/></f>
+	<f a="type">
+		<c path="String"/>
+		<x path="rm.abstracts.objects.GameVehicle"/>
+	</f>
 	<meta>
 		<m n=":impl"/>
 		<m n=":noCompletion"/>
@@ -58238,7 +58256,10 @@
 </_new></class></impl>
 	</abstract>
 	<class path="rm.abstracts.objects._GameVehicle.GameVehicle_Impl_" params="" file="src/rm/abstracts/objects/GameVehicle.hx" private="1" module="rm.abstracts.objects.GameVehicle" final="1"><_new public="1" get="inline" set="null" line="8" static="1">
-	<f a=""><x path="rm.abstracts.objects.GameVehicle"/></f>
+	<f a="type">
+		<c path="String"/>
+		<x path="rm.abstracts.objects.GameVehicle"/>
+	</f>
 	<meta>
 		<m n=":impl"/>
 		<m n=":noCompletion"/>
@@ -60318,7 +60339,7 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.abstracts.windows._WindowSavefileList.WindowSavefileList_Impl_" params="" file="src/rm/abstracts/windows/WindowSavefileList.hx" private="1" module="rm.abstracts.windows.WindowSavefileList" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
+		<impl><class path="rm.abstracts.windows._WindowSavefileList.WindowSavefileList_Impl_" params="" file="src/rm/abstracts/windows/WindowSavefileList.hx" private="1" module="rm.abstracts.windows.WindowSavefileList" final="1"><_new public="1" get="inline" set="null" line="10" static="1">
 	<f a="x:y:width:height">
 		<x path="Int"/>
 		<x path="Int"/>
@@ -60332,7 +60353,7 @@
 	</meta>
 </_new></class></impl>
 	</abstract>
-	<class path="rm.abstracts.windows._WindowSavefileList.WindowSavefileList_Impl_" params="" file="src/rm/abstracts/windows/WindowSavefileList.hx" private="1" module="rm.abstracts.windows.WindowSavefileList" final="1"><_new public="1" get="inline" set="null" line="9" static="1">
+	<class path="rm.abstracts.windows._WindowSavefileList.WindowSavefileList_Impl_" params="" file="src/rm/abstracts/windows/WindowSavefileList.hx" private="1" module="rm.abstracts.windows.WindowSavefileList" final="1"><_new public="1" get="inline" set="null" line="10" static="1">
 	<f a="x:y:width:height">
 		<x path="Int"/>
 		<x path="Int"/>
@@ -61234,7 +61255,10 @@
   * @param {Int} height The height of the bitmap</haxe_doc>
 		</new>
 		<haxe_doc>* Allows you to map pixels to the screen or draw rectangles.</haxe_doc>
-		<meta><m n=":native"><e>"Bitmap"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Bitmap"</e></m>
+			<m n=":native"><e>"Bitmap"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.CacheEntry" params="" file="src/rm/core/CacheEntry.hx" extern="1">
 		<free public="1" set="method">
@@ -61281,7 +61305,10 @@
   * @param {string} key, url of the resource
   * @param {string} item - Bitmap, HTML5Audio, WebAudio - whatever you want to store in the cache</haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"CacheEntry"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"CacheEntry"</e></m>
+			<m n=":native"><e>"CacheEntry"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.CacheMap" params="" file="src/rm/core/CacheMap.hx" extern="1">
 		<checkTTL public="1" set="method">
@@ -61317,7 +61344,10 @@
   * @param manager
   * @constructor</haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"CacheMap"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"CacheMap"</e></m>
+			<m n=":native"><e>"CacheMap"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.Graphics" params="" file="src/rm/core/Graphics.hx" extern="1">
 		<frameCount public="1" static="1">
@@ -61939,22 +61969,81 @@
 		<haxe_doc>* The static class that carries out graphics processing.
  *
  * @class Graphics</haxe_doc>
-		<meta><m n=":native"><e>"Graphics"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Graphics"</e></m>
+			<m n=":native"><e>"Graphics"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.HTML5Audio" params="" file="src/rm/core/HTML5Audio.hx" extern="1">
+		<__initialized public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_initialized"</e></m></meta>
+		</__initialized>
 		<_initialized><x path="Bool"/></_initialized>
+		<__unlocked public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_unlocked"</e></m></meta>
+		</__unlocked>
 		<_unlocked><x path="Bool"/></_unlocked>
+		<__audioElement public="1">
+			<c path="js.html.AudioElement"/>
+			<meta><m n=":native"><e>"_audioElement"</e></m></meta>
+		</__audioElement>
 		<_audioElement><c path="js.html.AudioElement"/></_audioElement>
+		<__gainTweenInterval public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_gainTweenInterval"</e></m></meta>
+		</__gainTweenInterval>
 		<_gainTweenInterval><x path="Int"/></_gainTweenInterval>
+		<__tweenGain public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_tweenGain"</e></m></meta>
+		</__tweenGain>
 		<_tweenGain><x path="Int"/></_tweenGain>
+		<__tweenTargetGain public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_tweenTargetGain"</e></m></meta>
+		</__tweenTargetGain>
 		<_tweenTargetGain><x path="Int"/></_tweenTargetGain>
+		<__tweenGainStep public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_tweenGainStep"</e></m></meta>
+		</__tweenGainStep>
 		<_tweenGainStep><x path="Int"/></_tweenGainStep>
+		<__staticSePath public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_staticSePath"</e></m></meta>
+		</__staticSePath>
 		<_staticSePath><x path="Bool"/></_staticSePath>
+		<__volume public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_volume"</e></m></meta>
+		</__volume>
 		<_volume><x path="Int"/></_volume>
+		<__loadListeners public="1">
+			<c path="Array"><f a=""><x path="Void"/></f></c>
+			<meta><m n=":native"><e>"_loadListeners"</e></m></meta>
+		</__loadListeners>
 		<_loadListeners><c path="Array"><f a=""><x path="Void"/></f></c></_loadListeners>
+		<__hasError public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_hasError"</e></m></meta>
+		</__hasError>
 		<_hasError><x path="Bool"/></_hasError>
+		<__autoPlay public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"__autoPlay"</e></m></meta>
+		</__autoPlay>
 		<_autoPlay><x path="Bool"/></_autoPlay>
+		<__isLoading public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_isLoading"</e></m></meta>
+		</__isLoading>
 		<_isLoading><x path="Bool"/></_isLoading>
+		<__buffered public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_buffered"</e></m></meta>
+		</__buffered>
 		<_buffered><x path="Bool"/></_buffered>
 		<url public="1">
 			<c path="String"/>
@@ -62186,7 +62275,10 @@
   * @param {Number} volume
   * @private</haxe_doc>
 		</_applyTweenValue>
-		<meta><m n=":native"><e>"HTML5Audio"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"HTML5Audio"</e></m>
+			<m n=":native"><e>"HTML5Audio"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.Input" params="" file="src/rm/core/Input.hx" extern="1">
 		<keyRepeatWait public="1" static="1">
@@ -62458,7 +62550,10 @@
   * @return {Boolean}
   * @private</haxe_doc>
 		</_isEscapeCompatible>
-		<meta><m n=":native"><e>"Input"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Input"</e></m>
+			<m n=":native"><e>"Input"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.JsonEx" params="" file="src/rm/core/JsonEx.hx" extern="1">
 		<makeDeepCopy public="1" set="method" static="1">
@@ -62557,7 +62652,10 @@
 		<haxe_doc>* The static class that handles JSON with object information.
  *
  * @class JsonEx</haxe_doc>
-		<meta><m n=":native"><e>"JsonEx"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"JsonEx"</e></m>
+			<m n=":native"><e>"JsonEx"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.Point" params="" file="src/rm/core/Point.hx" extern="1">
 		<extends path="pixi.core.math.Point"/>
@@ -62590,7 +62688,10 @@
   * @param {Number} x The x coordinate
   * @param {Number} y The y coordinate</haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"Point"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Point"</e></m>
+			<m n=":native"><e>"Point"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.Rectangle" params="" file="src/rm/core/Rectangle.hx" extern="1">
 		<extends path="pixi.core.math.shapes.Rectangle"/>
@@ -62619,6 +62720,7 @@
 		</new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Rectangle"</e></m>
 			<m n=":native"><e>"Rectangle"</e></m>
 		</meta>
 	</class>
@@ -62681,7 +62783,10 @@
   * @class ScreenSprite
   * @constructor</haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"ScreenSprite"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"ScreenSprite"</e></m>
+			<m n=":native"><e>"ScreenSprite"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.Tilemap" params="" file="src/rm/core/Tilemap.hx" extern="1">
 		<extends path="pixi.core.display.Container"/>
@@ -63162,7 +63267,10 @@
   * @property children
   * @type Array<PIXI.DisplayObject>]]></haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"Tilemap"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Tilemap"</e></m>
+			<m n=":native"><e>"Tilemap"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.ShaderTilemap" params="" file="src/rm/core/ShaderTilemap.hx" extern="1">
 		<extends path="rm.core.Tilemap"/>
@@ -63209,7 +63317,10 @@
   *
   * @method refreshTileset</haxe_doc>
 		</refreshTileset>
-		<meta><m n=":native"><e>"ShaderTilemap"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"ShaderTilemap"</e></m>
+			<m n=":native"><e>"ShaderTilemap"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.TilingSprite" params="" file="src/rm/core/TilingSprite.hx" extern="1">
 		<extends path="pixi.extras.TilingSprite"/>
@@ -63353,7 +63464,10 @@
   * @constructor
   * @param {Bitmap} bitmap The image for the tiling sprite</haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"TilingSprite"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"TilingSprite"</e></m>
+			<m n=":native"><e>"TilingSprite"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.ToneFilter" params="" file="src/rm/core/ToneFilter.hx" extern="1">
 		<extends path="pixi.filters.colormatrix.ColorMatrixFilter"/>
@@ -63399,7 +63513,10 @@
   * @extends PIXI.Filter
   * @constructor</haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"ToneFilter"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"ToneFilter"</e></m>
+			<m n=":native"><e>"ToneFilter"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.ToneSprite" params="" file="src/rm/core/ToneSprite.hx" extern="1">
 		<extends path="pixi.core.display.Container"/>
@@ -63454,11 +63571,26 @@
   * @class ToneSprite
   * @constructor</haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"ToneSprite"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"ToneSprite"</e></m>
+			<m n=":native"><e>"ToneSprite"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.TouchInput" params="" file="src/rm/core/TouchInput.hx" extern="1">
+		<__mousePressed public="1" static="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_mousePressed"</e></m></meta>
+		</__mousePressed>
 		<_mousePressed static="1"><x path="Bool"/></_mousePressed>
+		<__screenPressed public="1" static="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_screenPressed"</e></m></meta>
+		</__screenPressed>
 		<_screenPressed static="1"><x path="Bool"/></_screenPressed>
+		<__pressedTime public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_pressedTime"</e></m></meta>
+		</__pressedTime>
 		<_pressedTime static="1"><x path="Int"/></_pressedTime>
 		<_events static="1"><t path="rm.types.TouchInputEvents"/></_events>
 		<_triggered static="1"><x path="Bool"/></_triggered>
@@ -63469,15 +63601,19 @@
 		<_wheelY static="1"><x path="Float"/></_wheelY>
 		<_x static="1"><x path="Int"/></_x>
 		<_y static="1"><x path="Int"/></_y>
+		<__date public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_date"</e></m></meta>
+		</__date>
 		<_date static="1"><x path="Int"/></_date>
-		<px public="1" static="1">
+		<__x public="1" static="1">
 			<x path="Int"/>
 			<meta><m n=":native"><e>"_x"</e></m></meta>
-		</px>
-		<py public="1" static="1">
+		</__x>
+		<__y public="1" static="1">
 			<x path="Int"/>
 			<meta><m n=":native"><e>"_y"</e></m></meta>
-		</py>
+		</__y>
 		<keyRepeatWait public="1" static="1">
 			<x path="rm.types.Frames"/>
 			<haxe_doc>* The wait time of the pseudo key repeat in frames.
@@ -63786,7 +63922,10 @@
   * @param {Number} y
   * @private</haxe_doc>
 		</_onRelease>
-		<meta><m n=":native"><e>"TouchInput"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"TouchInput"</e></m>
+			<m n=":native"><e>"TouchInput"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.Weather" params="" file="src/rm/core/Weather.hx" extern="1">
 		<extends path="pixi.core.display.Container"/>
@@ -63906,7 +64045,10 @@
   * @class Weather
   * @constructor</haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"Weather"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Weather"</e></m>
+			<m n=":native"><e>"Weather"</e></m>
+		</meta>
 	</class>
 	<class path="rm.core.WindowLayer" params="" file="src/rm/core/WindowLayer.hx" extern="1">
 		<extends path="pixi.core.display.Container"/>
@@ -64058,7 +64200,10 @@
   * @class WindowLayer
   * @constructor</haxe_doc>
 		</new>
-		<meta><m n=":native"><e>"WindowLayer"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"WindowLayer"</e></m>
+			<m n=":native"><e>"WindowLayer"</e></m>
+		</meta>
 	</class>
 	<class path="rm.managers.AudioManager" params="" file="src/rm/managers/AudioManager.hx" extern="1">
 		<_bgmVolume static="1"><x path="Int"/></_bgmVolume>
@@ -64206,7 +64351,10 @@
 	<x path="Void"/>
 </f></createDecryptBuffer>
 		<haxe_doc>* Static class that handles BGM, BGS, ME, and SE.</haxe_doc>
-		<meta><m n=":native"><e>"AudioManager"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"AudioManager"</e></m>
+			<m n=":native"><e>"AudioManager"</e></m>
+		</meta>
 	</class>
 	<class path="rm.managers.BattleManager" params="" file="src/rm/managers/BattleManager.hx" extern="1">
 		<setup public="1" set="method" static="1"><f a="troopId:canEscape:canLose">
@@ -64433,22 +64581,25 @@
 		<_rewards><t path="rm.types.BattleRewards"/></_rewards>
 		<haxe_doc>* Manages the game battles to process all of the
  * events that happen within.</haxe_doc>
-		<meta><m n=":native"><e>"BattleManager"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"BattleManager"</e></m>
+			<m n=":native"><e>"BattleManager"</e></m>
+		</meta>
 	</class>
 	<class path="rm.managers.ColorManager" params="" file="src/rm/managers/ColorManager.hx">
-		<baseWindow public="1" expr="new WindowBase(0, 0, 0, 0)" line="213" static="1">
+		<baseWindow public="1" expr="new WindowBase(0, 0, 0, 0)" line="214" static="1">
 			<x path="rm.abstracts.windows.WindowBase"/>
 			<meta><m n=":value"><e>new WindowBase(0, 0, 0, 0)</e></m></meta>
 		</baseWindow>
-		<windowSkin public="1" expr="baseWindow.windowskin" line="214" static="1">
+		<windowSkin public="1" expr="baseWindow.windowskin" line="215" static="1">
 			<c path="rm.core.Bitmap"/>
 			<meta><m n=":value"><e>baseWindow.windowskin</e></m></meta>
 		</windowSkin>
-		<loadWindowSkin public="1" set="method" line="218" static="1">
+		<loadWindowSkin public="1" set="method" line="219" static="1">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Loads the window skin into ColorManager.</haxe_doc>
 		</loadWindowSkin>
-		<textColor public="1" set="method" line="226" static="1">
+		<textColor public="1" set="method" line="227" static="1">
 			<f a="windowSkinColorIndex">
 				<x path="Int"/>
 				<x path="rm.types.Color"/>
@@ -64456,97 +64607,97 @@
 			<haxe_doc>* Loads the text color using the window skin color Index.
   * @param windowSkinColorIndex</haxe_doc>
 		</textColor>
-		<normalColor public="1" set="method" line="234" static="1">
+		<normalColor public="1" set="method" line="235" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the normal color, index 0
   * of the window skin.</haxe_doc>
 		</normalColor>
-		<systemColor public="1" set="method" line="242" static="1">
+		<systemColor public="1" set="method" line="243" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the system color; index 16 on the window skin.
   * @return Color</haxe_doc>
 		</systemColor>
-		<crisisColor public="1" set="method" line="250" static="1">
+		<crisisColor public="1" set="method" line="251" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the crisis color; index 17 on the window skin.
   * @return Color</haxe_doc>
 		</crisisColor>
-		<deathColor public="1" set="method" line="258" static="1">
+		<deathColor public="1" set="method" line="259" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the death color; index 18 on the window skin.
   * @return Color</haxe_doc>
 		</deathColor>
-		<gaugeBackColor public="1" set="method" line="266" static="1">
+		<gaugeBackColor public="1" set="method" line="267" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the  gauge back color; index 19 on the window skin.
   * @return Color</haxe_doc>
 		</gaugeBackColor>
-		<hpGaugeColor1 public="1" set="method" line="274" static="1">
+		<hpGaugeColor1 public="1" set="method" line="275" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the hp gauge color 1. Index 20 on the window skin.
   * @return Color</haxe_doc>
 		</hpGaugeColor1>
-		<hpGaugeColor2 public="1" set="method" line="282" static="1">
+		<hpGaugeColor2 public="1" set="method" line="283" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the hp guage color 2. Index 21 on the window skin.
   * @return Color</haxe_doc>
 		</hpGaugeColor2>
-		<mpGaugeColor1 public="1" set="method" line="290" static="1">
+		<mpGaugeColor1 public="1" set="method" line="291" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the mp gauge color 1. Index 22 on the window skin.
   * @return Color</haxe_doc>
 		</mpGaugeColor1>
-		<mpGaugeColor2 public="1" set="method" line="298" static="1">
+		<mpGaugeColor2 public="1" set="method" line="299" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the mp gauge color 2. Index 23 on the window skin.
   * @return Color</haxe_doc>
 		</mpGaugeColor2>
-		<mpCostColor public="1" set="method" line="306" static="1">
+		<mpCostColor public="1" set="method" line="307" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the mp cost color. Index 23 on the window skin.
   * @return Color</haxe_doc>
 		</mpCostColor>
-		<powerUpColor public="1" set="method" line="314" static="1">
+		<powerUpColor public="1" set="method" line="315" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the power up color. Index 24 on the window skin.
   * @return Color</haxe_doc>
 		</powerUpColor>
-		<powerDownColor public="1" set="method" line="322" static="1">
+		<powerDownColor public="1" set="method" line="323" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the power down color. Index 25 on the window skin.
   * @return Color</haxe_doc>
 		</powerDownColor>
-		<ctGaugeColor1 public="1" set="method" line="330" static="1">
+		<ctGaugeColor1 public="1" set="method" line="331" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the ct gauge color 1. Index 26 on the window skin.
   * @return Color</haxe_doc>
 		</ctGaugeColor1>
-		<ctGaugeColor2 public="1" set="method" line="338" static="1">
+		<ctGaugeColor2 public="1" set="method" line="339" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the ct gauge color 2. Index 27 on the window skin.
   * @return Color</haxe_doc>
 		</ctGaugeColor2>
-		<tpGaugeColor1 public="1" set="method" line="346" static="1">
+		<tpGaugeColor1 public="1" set="method" line="347" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the tp gauge color 1. Index 28 on the window skin.
   * @return Color</haxe_doc>
 		</tpGaugeColor1>
-		<tpGaugeColor2 public="1" set="method" line="354" static="1">
+		<tpGaugeColor2 public="1" set="method" line="355" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the tp gauge color 2. Index 29 on the window skin.
   * @return Color</haxe_doc>
 		</tpGaugeColor2>
-		<tpCostColor public="1" set="method" line="362" static="1">
+		<tpCostColor public="1" set="method" line="363" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the tp cost color. Index 29 on the window skin.
   * @return Color</haxe_doc>
 		</tpCostColor>
-		<pendingColor public="1" set="method" line="370" static="1">
+		<pendingColor public="1" set="method" line="371" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the pending color.
   * @return Color</haxe_doc>
 		</pendingColor>
-		<hpColor public="1" set="method" line="383" static="1">
+		<hpColor public="1" set="method" line="384" static="1">
 			<f a="actor">
 				<c path="rm.objects.Game_Actor"/>
 				<x path="rm.types.Color"/>
@@ -64559,7 +64710,7 @@
   * @param actor
   * @return Color]]></haxe_doc>
 		</hpColor>
-		<mpColor public="1" set="method" line="391" static="1">
+		<mpColor public="1" set="method" line="392" static="1">
 			<f a="?actor">
 				<c path="rm.objects.Game_Actor"/>
 				<x path="rm.types.Color"/>
@@ -64567,7 +64718,7 @@
 			<haxe_doc>* Based on actor; currently returns normal color.
   * @return Color</haxe_doc>
 		</mpColor>
-		<tpColor public="1" set="method" line="399" static="1">
+		<tpColor public="1" set="method" line="400" static="1">
 			<f a="?actor">
 				<c path="rm.objects.Game_Actor"/>
 				<x path="rm.types.Color"/>
@@ -64575,7 +64726,7 @@
 			<haxe_doc>* Based on actor; currently returns normal color.
   * @return Color</haxe_doc>
 		</tpColor>
-		<paramChangeTextColor public="1" set="method" line="411" static="1">
+		<paramChangeTextColor public="1" set="method" line="412" static="1">
 			<f a="change">
 				<x path="Int"/>
 				<x path="rm.types.Color"/>
@@ -64587,7 +64738,7 @@
   * @param change
   * @return Color]]></haxe_doc>
 		</paramChangeTextColor>
-		<damageColor public="1" set="method" line="425" static="1">
+		<damageColor public="1" set="method" line="426" static="1">
 			<f a="colorType">
 				<x path="rm.types.DamageColorType"/>
 				<x path="rm.types.Color"/>
@@ -64601,27 +64752,27 @@
   * @param colorType
   * @return Color]]></haxe_doc>
 		</damageColor>
-		<outlineColor public="1" set="method" line="444" static="1">
+		<outlineColor public="1" set="method" line="445" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Returns the color "rgba(0, 0, 0, 0.6)"
   * @return Color</haxe_doc>
 		</outlineColor>
-		<dimColor1 public="1" set="method" line="452" static="1">
+		<dimColor1 public="1" set="method" line="453" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Returns the color "rgba(0, 0, 0, 0.6)"
   * @return Color</haxe_doc>
 		</dimColor1>
-		<dimColor2 public="1" set="method" line="460" static="1">
+		<dimColor2 public="1" set="method" line="461" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Returns the color "rgba(0, 0, 0, 0)"
   * @return Color</haxe_doc>
 		</dimColor2>
-		<itemBackColor1 public="1" set="method" line="468" static="1">
+		<itemBackColor1 public="1" set="method" line="469" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Returns the color "rgba(32, 32, 32, 0.5)"
   * @return Color</haxe_doc>
 		</itemBackColor1>
-		<itemBackColor2 public="1" set="method" line="476" static="1">
+		<itemBackColor2 public="1" set="method" line="477" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Returns the color "rgba(0, 0, 0, 0.5)"
   * @return Color</haxe_doc>
@@ -64651,16 +64802,35 @@
 	<x path="Int"/>
 </f></readVolume>
 		<haxe_doc>* Manages the configuration of RPGMakerMZ Config Data.</haxe_doc>
-		<meta><m n=":native"><e>"ConfigManager"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"ConfigManager"</e></m>
+			<m n=":native"><e>"ConfigManager"</e></m>
+		</meta>
 	</class>
 	<class path="rm.managers.DataManager" params="" file="src/rm/managers/DataManager.hx" extern="1">
+		<__globalId public="1" static="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_globalId"</e></m></meta>
+		</__globalId>
 		<_globalId static="1"><c path="String"/></_globalId>
+		<__lastAccessId public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_lastAccessId"</e></m></meta>
+		</__lastAccessId>
 		<_lastAccessedId static="1"><x path="Int"/></_lastAccessedId>
+		<__errorUrl public="1" static="1">
+			<x path="Any"/>
+			<meta><m n=":native"><e>"_errorUrl"</e></m></meta>
+		</__errorUrl>
 		<_errorUrl static="1"><x path="Any"/></_errorUrl>
 		<_databaseFiles static="1">
-			<c path="Array"><x path="Any"/></c>
+			<c path="Array"><c path="haxe.Json"/></c>
 			<haxe_doc>* Database Files are a JSON like Object</haxe_doc>
 		</_databaseFiles>
+		<__databaseFiles public="1" static="1">
+			<c path="Array"><c path="haxe.Json"/></c>
+			<meta><m n=":native"><e>"_databaseFiles"</e></m></meta>
+		</__databaseFiles>
 		<loadDatabase public="1" set="method" static="1"><f a=""><x path="Void"/></f></loadDatabase>
 		<loadDataFile public="1" set="method" static="1"><f a="name:src">
 	<c path="String"/>
@@ -64844,7 +65014,10 @@
 		</extractSaveContents>
 		<haxe_doc>* Manages the game data: saving, loading, meta data,
  * and map information.</haxe_doc>
-		<meta><m n=":native"><e>"DataManager"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"DataManager"</e></m>
+			<m n=":native"><e>"DataManager"</e></m>
+		</meta>
 	</class>
 	<typedef path="rm.managers.Effect" params="" file="src/rm/managers/EffectManager.hx" module="rm.managers.EffectManager"><x path="Any"/></typedef>
 	<class path="rm.managers.ImageManager" params="" file="src/rm/managers/ImageManager.hx" extern="1">
@@ -65104,6 +65277,7 @@
  * and create bitmap objects.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"ImageManager"</e></m>
 			<m n=":native"><e>"ImageManager"</e></m>
 		</meta>
 	</class>
@@ -65193,20 +65367,67 @@
     * @param lambda]]></haxe_doc>
 		</registerCommand>
 		<haxe_doc>* Static class that manages plugins</haxe_doc>
-		<meta><m n=":native"><e>"PluginManager"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"PluginManager"</e></m>
+			<m n=":native"><e>"PluginManager"</e></m>
+		</meta>
 	</class>
 	<class path="rm.managers.SceneManager" params="" file="src/rm/managers/SceneManager.hx" extern="1">
-		<_scene static="1"><x path="Any"/></_scene>
-		<_nextScene static="1"><x path="Any"/></_nextScene>
+		<__scene public="1" static="1">
+			<c path="rm.scenes.Scene_Base"/>
+			<meta><m n=":native"><e>"_scene"</e></m></meta>
+		</__scene>
+		<_scene static="1"><c path="rm.scenes.Scene_Base"/></_scene>
+		<__nextScene public="1" static="1">
+			<c path="rm.scenes.Scene_Base"/>
+			<meta><m n=":native"><e>"_nextScene"</e></m></meta>
+		</__nextScene>
+		<_nextScene static="1"><c path="rm.scenes.Scene_Base"/></_nextScene>
+		<__stack public="1" static="1">
+			<c path="Array"><x path="Any"/></c>
+			<meta><m n=":native"><e>"_stack"</e></m></meta>
+		</__stack>
 		<_stack static="1"><c path="Array"><x path="Any"/></c></_stack>
+		<__screenWidth public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_screenWidth"</e></m></meta>
+		</__screenWidth>
 		<_screenWidth static="1"><x path="Int"/></_screenWidth>
+		<__screenHeight public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_screenHeight"</e></m></meta>
+		</__screenHeight>
 		<_screenHeight static="1"><x path="Int"/></_screenHeight>
+		<__backgroundBitmap public="1" static="1">
+			<c path="rm.core.Bitmap"/>
+			<meta><m n=":native"><e>"_backgroundBitmap"</e></m></meta>
+		</__backgroundBitmap>
 		<_backgroundBitmap static="1"><c path="rm.core.Bitmap"/></_backgroundBitmap>
+		<__boxWidth public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_boxWidth"</e></m></meta>
+		</__boxWidth>
 		<_boxWidth static="1"><x path="Int"/></_boxWidth>
+		<__boxHeight public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_boxHeight"</e></m></meta>
+		</__boxHeight>
 		<_boxHeight static="1"><x path="Int"/></_boxHeight>
+		<__deltaTime public="1" static="1">
+			<x path="Float"/>
+			<meta><m n=":native"><e>"_deltaTime"</e></m></meta>
+		</__deltaTime>
 		<_deltaTime static="1"><x path="Float"/></_deltaTime>
+		<__currentTime public="1" static="1">
+			<x path="Float"/>
+			<meta><m n=":native"><e>"_currentTime"</e></m></meta>
+		</__currentTime>
 		<_currentTime static="1"><x path="Float"/></_currentTime>
 		<_accumulator static="1"><x path="Int"/></_accumulator>
+		<__accumulator public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_accumulator"</e></m></meta>
+		</__accumulator>
 		<currentScene public="1" static="1">
 			<x path="Any"/>
 			<meta><m n=":native"><e>"_scene"</e></m></meta>
@@ -65294,16 +65515,17 @@
 		<haxe_doc>* Manages the scenes of the game.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"SceneManager"</e></m>
 			<m n=":native"><e>"SceneManager"</e></m>
 		</meta>
 	</class>
 	<class path="rm.managers.SoundManager" params="" file="src/rm/managers/SoundManager.hx" extern="1">
 		<preloadImportantSounds public="1" set="method" static="1"><f a=""><x path="Void"/></f></preloadImportantSounds>
-		<loadSystemSound public="1" set="method" static="1"><f a="n">
+		<loadSystemSound public="1" set="method" static="1"><f a="databaseNumber">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></loadSystemSound>
-		<playSystemSound public="1" set="method" static="1"><f a="n">
+		<playSystemSound public="1" set="method" static="1"><f a="databaseNumber">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></playSystemSound>
@@ -65332,7 +65554,10 @@
 		<playUseItem public="1" set="method" static="1"><f a=""><x path="Void"/></f></playUseItem>
 		<playUseSkill public="1" set="method" static="1"><f a=""><x path="Void"/></f></playUseSkill>
 		<haxe_doc>* Static class that plays sound effects defined in the database.</haxe_doc>
-		<meta><m n=":native"><e>"SoundManager"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"SoundManager"</e></m>
+			<m n=":native"><e>"SoundManager"</e></m>
+		</meta>
 	</class>
 	<class path="rm.managers.StorageManager" params="" file="src/rm/managers/StorageManager.hx" extern="1">
 		<save public="1" set="method" static="1"><f a="savefileId:json">
@@ -65429,7 +65654,10 @@
 	<c path="String"/>
 </f></webStorageKey>
 		<haxe_doc>* The static class that manages storage of save game data.</haxe_doc>
-		<meta><m n=":native"><e>"StorageManager"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"StorageManager"</e></m>
+			<m n=":native"><e>"StorageManager"</e></m>
+		</meta>
 	</class>
 	<class path="rm.managers.TextManager" params="" file="src/rm/managers/TextManager.hx" extern="1">
 		<currencyUnit public="1" static="1"><c path="String"/></currencyUnit>
@@ -65540,7 +65768,10 @@
 	<c path="String"/>
 </f></getter>
 		<haxe_doc>* The static class that handles terms and messages.</haxe_doc>
-		<meta><m n=":native"><e>"TextManager"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"TextManager"</e></m>
+			<m n=":native"><e>"TextManager"</e></m>
+		</meta>
 	</class>
 	<class path="rm.objects.Game_Action" params="" file="src/rm/objects/Game_Action.hx" extern="1">
 		<EFFECT_RECOVER_HP public="1" static="1"><x path="Int"/></EFFECT_RECOVER_HP>
@@ -65843,6 +66074,7 @@
  * @class Game_Action</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Action"</e></m>
 			<m n=":native"><e>"Game_Action"</e></m>
 		</meta>
 	</class>
@@ -65948,6 +66180,7 @@
  * @class Game_ActionResult</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_ActionResult"</e></m>
 			<m n=":native"><e>"Game_ActionResult"</e></m>
 		</meta>
 	</class>
@@ -65956,13 +66189,637 @@
 		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_BattlerBase"</e></m>
 			<m n=":native"><e>"Game_BattlerBase"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_Battler" params="" file="src/rm/objects/Game_Battler.hx" extern="1">
 		<extends path="rm.objects.Game_BattlerBase"/>
+		<_actions><c path="Array"><c path="rm.objects.Game_Action"/></c></_actions>
+		<_speed><x path="Int"/></_speed>
+		<_result><c path="rm.objects.Game_ActionResult"/></_result>
+		<_actionState><c path="String"/></_actionState>
+		<_lastTargetIndex><x path="Int"/></_lastTargetIndex>
+		<_animations><c path="Array"><t path="rm.types.BattlerAnimation"/></c></_animations>
+		<_damagePopup><x path="Bool"/></_damagePopup>
+		<_effectType><c path="String"/></_effectType>
+		<_motionType><x path="rm.types.MotionType"/></_motionType>
+		<_weaponImageId><x path="Int"/></_weaponImageId>
+		<_motionRefresh><x path="Bool"/></_motionRefresh>
+		<_selected><x path="Bool"/></_selected>
+		<name public="1" set="method">
+			<f a=""><c path="String"/></f>
+			<haxe_doc>* Returns the name of the battler.
+  *
+  * @returns {String}
+  * @memberof Game_Battler</haxe_doc>
+		</name>
+		<battlerName public="1" set="method">
+			<f a=""><c path="String"/></f>
+			<haxe_doc>* Returns the battler name of the battler;
+  * the battler name is associated with the file used as the battler graphic.
+  * @returns {String}
+  * @memberof Game_Battler</haxe_doc>
+		</battlerName>
+		<index public="1" set="method">
+			<f a=""><x path="Int"/></f>
+			<haxe_doc>* Returns the index of the battler.
+  *
+  * @returns {number}
+  * @memberof Game_Battler</haxe_doc>
+		</index>
+		<friendsUnit public="1" set="method">
+			<f a=""><c path="rm.objects.Game_Unit"/></f>
+			<haxe_doc>* Returns the unit of the battler; this is either the
+  * game party or game troop.
+  * @returns {Game_Unit}
+  * @memberof Game_Battler</haxe_doc>
+		</friendsUnit>
+		<opponentsUnit public="1" set="method">
+			<f a=""><c path="rm.objects.Game_Unit"/></f>
+			<haxe_doc>* Returns the opponents unit; this is either
+  * game party or game troop.
+  * @returns {Game_Unit}
+  * @memberof Game_Battler</haxe_doc>
+		</opponentsUnit>
+		<clearAnimations public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Clears animations from the battler.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</clearAnimations>
+		<clearDamagePopup public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Clear damage pop up from the battler.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</clearDamagePopup>
+		<clearWeaponAnimation public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Clear weapon animation from the battler.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</clearWeaponAnimation>
+		<clearEffect public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Clears effect from the battler.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</clearEffect>
+		<clearMotion public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Clears motion from the battler.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</clearMotion>
+		<requestEffect public="1" set="method"><f a="effectType">
+	<c path="String"/>
+	<x path="Void"/>
+</f></requestEffect>
+		<requestMotion public="1" set="method">
+			<f a="motionType">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Request the specified motion on the game battler.
+  *
+  * @param {String} motionType
+  * @memberof Game_Battler</haxe_doc>
+		</requestMotion>
+		<requestMotionRefresh public="1" set="method"><f a=""><x path="Void"/></f></requestMotionRefresh>
+		<select public="1" set="method"><f a=""><x path="Void"/></f></select>
+		<deselect public="1" set="method"><f a=""><x path="Void"/></f></deselect>
+		<isAnimationRequested public="1" set="method"><f a=""><x path="Bool"/></f></isAnimationRequested>
+		<isDamagePopupRequested public="1" set="method"><f a=""><x path="Bool"/></f></isDamagePopupRequested>
+		<isEffectRequested public="1" set="method"><f a=""><x path="Bool"/></f></isEffectRequested>
+		<isMotionRequested public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if a motion is requested.
+  *
+  * @returns {Bool}
+  * @memberof Game_Battler</haxe_doc>
+		</isMotionRequested>
+		<isWeaponAnimationRequested public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if a weapon animation is requested.
+  *
+  * @returns {Bool}
+  * @memberof Game_Battler</haxe_doc>
+		</isWeaponAnimationRequested>
+		<isMotionRefreshRequested public="1" set="method"><f a=""><x path="Bool"/></f></isMotionRefreshRequested>
+		<isSelected public="1" set="method"><f a=""><x path="Bool"/></f></isSelected>
+		<effectType public="1" set="method">
+			<f a=""><c path="String"/></f>
+			<haxe_doc>* Returns the effect type of the battler.
+  *
+  * @returns {String}
+  * @memberof Game_Battler</haxe_doc>
+		</effectType>
+		<motionType public="1" set="method">
+			<f a=""><c path="String"/></f>
+			<haxe_doc>* Returns the motion type of the battler.
+  *
+  * @returns {String}
+  * @memberof Game_Battler</haxe_doc>
+		</motionType>
+		<weaponImageId public="1" set="method">
+			<f a=""><x path="rm.types.WeaponImageId"/></f>
+			<haxe_doc>* Returns the weapon image id.
+  *
+  * @returns {number}
+  * @memberof Game_Battler</haxe_doc>
+		</weaponImageId>
+		<shiftAnimation public="1" set="method">
+			<f a=""><t path="rm.types.BattlerAnimation"/></f>
+			<haxe_doc>* Shifts the battler animation.
+  *
+  * @returns {BattlerAnimation}
+  * @memberof Game_Battler</haxe_doc>
+		</shiftAnimation>
+		<startAnimation public="1" set="method">
+			<f a="animationId:mirror:delay">
+				<x path="rm.types.AnimationId"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Starts the specified animation, given the animation id on the
+  * battler.
+  * @param {number} animationId
+  * @param {Bool} mirror
+  * @param {number} delay
+  * @memberof Game_Battler</haxe_doc>
+		</startAnimation>
+		<startDamagePopup public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Starts a damage pop up on the battler.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</startDamagePopup>
+		<startWeaponAnimation public="1" set="method">
+			<f a="weaponImageId">
+				<x path="rm.types.WeaponImageId"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Starts the weapon animation on te battler given a weapon id.
+  *
+  * @param {number} weaponImageId
+  * @memberof Game_Battler</haxe_doc>
+		</startWeaponAnimation>
+		<action public="1" set="method"><f a="index">
+	<x path="Int"/>
+	<c path="rm.objects.Game_Action"/>
+</f></action>
+		<setAction public="1" set="method">
+			<f a="index:action">
+				<x path="Int"/>
+				<c path="rm.objects.Game_Action"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Sets the action at the specified index for the battler.
+  *
+  * @param {number} index
+  * @param {Game_Action} action
+  * @memberof Game_Battler</haxe_doc>
+		</setAction>
+		<numActions public="1" set="method">
+			<f a=""><x path="Int"/></f>
+			<haxe_doc>* Returns the number of battler actions.
+  *
+  * @returns {number}
+  * @memberof Game_Battler</haxe_doc>
+		</numActions>
+		<clearActions public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Clears the battler actions.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</clearActions>
+		<result public="1" set="method">
+			<f a=""><c path="rm.objects.Game_ActionResult"/></f>
+			<haxe_doc>* Returns the battler action result.
+  *
+  * @returns {Game_ActionResult}
+  * @memberof Game_Battler</haxe_doc>
+		</result>
+		<clearResult public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Clears the battler action result.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</clearResult>
+		<refresh public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Refreshes the battler.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</refresh>
+		<addState public="1" set="method">
+			<f a="stateId">
+				<x path="rm.types.StateId"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Adds a state to the battler given the specified
+  * state id.
+  * @param {number} stateId
+  * @memberof Game_Battler</haxe_doc>
+		</addState>
+		<isStateAddable public="1" set="method">
+			<f a="stateId">
+				<x path="rm.types.StateId"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Returns true if the specified state given the state id
+  * is addable.
+  * @param {number} stateId
+  * @returns {Bool}
+  * @memberof Game_Battler</haxe_doc>
+		</isStateAddable>
+		<isStateRestrict public="1" set="method">
+			<f a="stateId">
+				<x path="rm.types.StateId"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Returns true if the specified state given the state id
+  * restricts.
+  *
+  * @param {number} stateId
+  * @returns {Bool}
+  * @memberof Game_Battler</haxe_doc>
+		</isStateRestrict>
+		<onRestrict public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Handler for when theb attler is restricted.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</onRestrict>
+		<removeState public="1" set="method">
+			<f a="stateId">
+				<x path="rm.types.StateId"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Removes the specified state given the state id.
+  *
+  * @param {number} stateId
+  * @memberof Game_Battler</haxe_doc>
+		</removeState>
+		<escape public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Has the battler escape from battle; plays a sound on escaping.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</escape>
+		<addBuff public="1" set="method">
+			<f a="paramId:turns">
+				<x path="rm.types.ParameterId"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Adds a buff to the battler for the specified number of turns
+  * on the selected parameter.
+  * @param {number} paramId
+  * @param {number} turns
+  * @memberof Game_Battler</haxe_doc>
+		</addBuff>
+		<addDebuff public="1" set="method">
+			<f a="paramId:turns">
+				<x path="rm.types.ParameterId"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Adds a debuff to the battler for the specified number of turns
+  * on the selected parameter.
+  * @param {number} paramId
+  * @param {number} turns
+  * @memberof Game_Battler</haxe_doc>
+		</addDebuff>
+		<removeBuff public="1" set="method"><f a="paramId">
+	<x path="rm.types.ParameterId"/>
+	<x path="Void"/>
+</f></removeBuff>
+		<removeBattleStates public="1" set="method"><f a=""><x path="Void"/></f></removeBattleStates>
+		<removeAllBuffs public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Removes all buffs from the battler.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</removeAllBuffs>
+		<removeStatesAuto public="1" set="method"><f a="timing">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></removeStatesAuto>
+		<removeBuffsAuto public="1" set="method"><f a=""><x path="Void"/></f></removeBuffsAuto>
+		<removeStatesByDamage public="1" set="method"><f a=""><x path="Void"/></f></removeStatesByDamage>
+		<makeActionTimes public="1" set="method">
+			<f a=""><x path="Int"/></f>
+			<haxe_doc>* Creates the number of times for
+  * an action.
+  * @returns {number}
+  * @memberof Game_Battler</haxe_doc>
+		</makeActionTimes>
+		<makeActions public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Creates the actions for the battler.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</makeActions>
+		<speed public="1" set="method">
+			<f a=""><x path="Int"/></f>
+			<haxe_doc>* Returns the speed of the battler.
+  *
+  * @returns {number}
+  * @memberof Game_Battler</haxe_doc>
+		</speed>
+		<makeSpeed public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Calculates the speed of the battler.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</makeSpeed>
+		<currentAction public="1" set="method">
+			<f a=""><c path="rm.objects.Game_Action"/></f>
+			<haxe_doc>* Returns the current action of the battler.
+  *
+  * @returns {Game_Action}
+  * @memberof Game_Battler</haxe_doc>
+		</currentAction>
+		<removeCurrentAction public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Removes the current battler action.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</removeCurrentAction>
+		<setLastTarget public="1" set="method">
+			<f a="target">
+				<c path="rm.objects.Game_Battler"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Sets the last target based on the target passed in.
+  * @param target</haxe_doc>
+		</setLastTarget>
+		<forceAction public="1" set="method"><f a="skillId:targetIndex">
+	<x path="rm.types.SkillId"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></forceAction>
+		<useItem public="1" set="method">
+			<f a="item">
+				<t path="rm.types.UsableItem"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Has theb attler use the given item.
+  *
+  * @param {RPG.UsableItem} item
+  * @memberof Game_Battler</haxe_doc>
+		</useItem>
+		<consumeItem public="1" set="method">
+			<f a="item">
+				<t path="rm.types.UsableItem"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Has the battler consume the given item.
+  *
+  * @param {RPG.UsableItem} item
+  * @memberof Game_Battler</haxe_doc>
+		</consumeItem>
+		<gainHp public="1" set="method">
+			<f a="value">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Adds the specified amount of hp to the battler.
+  *
+  * @param {number} value
+  * @memberof Game_Battler</haxe_doc>
+		</gainHp>
+		<gainMp public="1" set="method">
+			<f a="value">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Adds the specified amount of mp to the battler.
+  *
+  * @param {number} value
+  * @memberof Game_Battler</haxe_doc>
+		</gainMp>
+		<gainTp public="1" set="method">
+			<f a="value">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Adds the specified amount of tp to the battler.
+  *
+  * @param {number} value
+  * @memberof Game_Battler</haxe_doc>
+		</gainTp>
+		<gainSilentTp public="1" set="method">
+			<f a="value">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Adds a specified amount of tp to the battler silently.
+  *
+  * @param {number} value
+  * @memberof Game_Battler</haxe_doc>
+		</gainSilentTp>
+		<initTp public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Initializes the battler's tp; tp is random.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</initTp>
+		<clearTp public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Clears the battler's tp.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</clearTp>
+		<chargeTpByDamage public="1" set="method"><f a="damageRate">
+	<x path="Float"/>
+	<x path="Void"/>
+</f></chargeTpByDamage>
+		<regenerateHp public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Has the battler regenerate hp based on their hp regen.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</regenerateHp>
+		<maxSlipDamage public="1" set="method"><f a=""><x path="Int"/></f></maxSlipDamage>
+		<regenerateMp public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Has the battler regenerate mp based on their mp regen.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</regenerateMp>
+		<regenerateTp public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Has the battler regenerate tp based on their tp regen.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</regenerateTp>
+		<regenerateAll public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Has the battler regenerate all resources based on
+  * their respective regeneration stats.
+  * @memberof Game_Battler</haxe_doc>
+		</regenerateAll>
+		<onBattleStart public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Handler for when battle has started.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</onBattleStart>
+		<onAllActionsEnd public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Handler for when all actions end</haxe_doc>
+		</onAllActionsEnd>
+		<onTurnEnd public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Handler for when turn ends</haxe_doc>
+		</onTurnEnd>
+		<onBattleEnd public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Handler for when battle ends</haxe_doc>
+		</onBattleEnd>
+		<onDamage public="1" set="method">
+			<f a="value">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Handler for when damage is done
+  * @param value</haxe_doc>
+		</onDamage>
+		<setActionState public="1" set="method">
+			<f a="actionState">
+				<x path="rm.types.ActionState"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Sets the action state
+  * @param actionState</haxe_doc>
+		</setActionState>
+		<isUndecided public="1" set="method"><f a=""><x path="Bool"/></f></isUndecided>
+		<isInputting public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if the battler is inputting commands in battle.
+  *
+  * @returns {Bool}
+  * @memberof Game_Battler</haxe_doc>
+		</isInputting>
+		<isWaiting public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if the battler is waiting in battle.
+  *
+  * @returns {Bool}
+  * @memberof Game_Battler</haxe_doc>
+		</isWaiting>
+		<isActing public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if the battler is performing an action in battle.
+  *
+  * @returns {Bool}
+  * @memberof Game_Battler</haxe_doc>
+		</isActing>
+		<isChanting public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if the battler is chanting in combat.
+  *
+  * @returns {Bool}
+  * @memberof Game_Battler</haxe_doc>
+		</isChanting>
+		<isGuardWaiting public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if the battler is waiting to guard.
+  *
+  * @returns {Bool}
+  * @memberof Game_Battler</haxe_doc>
+		</isGuardWaiting>
+		<performActionStart public="1" set="method">
+			<f a="action">
+				<c path="rm.objects.Game_Action"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Perform action start motion, given the specified game action.
+  *
+  * @param {Game_Action} action
+  * @memberof Game_Battler</haxe_doc>
+		</performActionStart>
+		<performAction public="1" set="method">
+			<f a="action">
+				<c path="rm.objects.Game_Action"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Perform given action motion.
+  *
+  * @param {Game_Action} action
+  * @memberof Game_Battler</haxe_doc>
+		</performAction>
+		<performActionEnd public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Perform action end motion.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</performActionEnd>
+		<performDamage public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Perform damage motion.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</performDamage>
+		<performMiss public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Perform miss motion.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</performMiss>
+		<performRecovery public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Perform recovery motion.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</performRecovery>
+		<performEvasion public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Perform evasion motion.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</performEvasion>
+		<performMagicEvasion public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Perform magic evasion motion.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</performMagicEvasion>
+		<performCounter public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Perform counter motion.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</performCounter>
+		<performReflection public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Performs the reflect motion.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</performReflection>
+		<performSubstitute public="1" set="method">
+			<f a="target">
+				<c path="rm.objects.Game_Battler"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Perform substitute motion with the specified game battler.
+  *
+  * @param {Game_Battler} target
+  * @memberof Game_Battler</haxe_doc>
+		</performSubstitute>
+		<performCollapse public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Performs the collapse motion.
+  *
+  * @memberof Game_Battler</haxe_doc>
+		</performCollapse>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Battler"</e></m>
 			<m n=":native"><e>"Game_Battler"</e></m>
 		</meta>
 	</class>
@@ -66009,7 +66866,7 @@
   * @returns {Actor}
   * @memberof Game_Actor</haxe_doc>
 		</actor>
-		<name public="1" set="method">
+		<name public="1" set="method" override="1">
 			<f a=""><c path="String"/></f>
 			<haxe_doc>* Returns the actor's name.
   * @return String</haxe_doc>
@@ -66362,14 +67219,14 @@
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></isWtypeEquipped>
-		<refresh public="1" set="method">
+		<refresh public="1" set="method" override="1">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Refreshes the actor.
   *
   * @memberof Game_Actor</haxe_doc>
 		</refresh>
-		<friendsUnit public="1" set="method"><f a=""><c path="rm.objects.Game_Party"/></f></friendsUnit>
-		<opponentsUnit public="1" set="method"><f a=""><c path="rm.objects.Game_Troop"/></f></opponentsUnit>
+		<friendsUnit public="1" set="method" override="1"><f a=""><c path="rm.objects.Game_Party"/></f></friendsUnit>
+		<opponentsUnit public="1" set="method" override="1"><f a=""><c path="rm.objects.Game_Troop"/></f></opponentsUnit>
 		<isBattleMember public="1" set="method">
 			<f a=""><x path="Bool"/></f>
 			<haxe_doc>* Returns true if the actor is a member in battle.
@@ -66612,7 +67469,7 @@
   * @returns {Bool}
   * @memberof Game_Actor</haxe_doc>
 		</isSpriteVisible>
-		<startAnimation public="1" set="method">
+		<startAnimation public="1" set="method" override="1">
 			<f a="animationId:mirror:delay">
 				<x path="Int"/>
 				<x path="Bool"/>
@@ -66715,7 +67572,7 @@
   *
   * @memberof Game_Actor</haxe_doc>
 		</performMapDamage>
-		<clearActions public="1" set="method">
+		<clearActions public="1" set="method" override="1">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Clears all of the actor's animations.
   *
@@ -66775,6 +67632,7 @@
 </f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Actor"</e></m>
 			<m n=":native"><e>"Game_Actor"</e></m>
 		</meta>
 	</class>
@@ -66795,39 +67653,160 @@
 		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Actors"</e></m>
 			<m n=":native"><e>"Game_Actors"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_CharacterBase" params="" file="src/rm/objects/Game_CharacterBase.hx" extern="1">
+		<__x public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_x"</e></m></meta>
+		</__x>
 		<_x><x path="Int"/></_x>
+		<__y public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_y"</e></m></meta>
+		</__y>
 		<_y><x path="Int"/></_y>
+		<__realX public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_realX"</e></m></meta>
+		</__realX>
 		<_realX><x path="Int"/></_realX>
+		<__realY public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_realY"</e></m></meta>
+		</__realY>
 		<_realY><x path="Int"/></_realY>
-		<_moveSpeed><x path="Int"/></_moveSpeed>
-		<_moveFrequency><x path="Int"/></_moveFrequency>
+		<__moveSpeed public="1">
+			<x path="rm.types.MoveSpeed"/>
+			<meta><m n=":native"><e>"_moveSpeed"</e></m></meta>
+		</__moveSpeed>
+		<_moveSpeed><x path="rm.types.MoveSpeed"/></_moveSpeed>
+		<__moveFrequency public="1">
+			<x path="rm.types.MoveFrequency"/>
+			<meta><m n=":native"><e>"_moveFrequency"</e></m></meta>
+		</__moveFrequency>
+		<_moveFrequency><x path="rm.types.MoveFrequency"/></_moveFrequency>
+		<__opacity public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_opacity"</e></m></meta>
+		</__opacity>
 		<_opacity><x path="Int"/></_opacity>
+		<__blendMode public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_blendMode"</e></m></meta>
+		</__blendMode>
 		<_blendMode><x path="Int"/></_blendMode>
-		<_direction><x path="Int"/></_direction>
-		<_pattern><x path="Int"/></_pattern>
-		<_priorityType><x path="Int"/></_priorityType>
+		<__direction public="1">
+			<x path="rm.types.Direction"/>
+			<meta><m n=":native"><e>"_direction"</e></m></meta>
+		</__direction>
+		<_direction><x path="rm.types.Direction"/></_direction>
+		<__patern public="1">
+			<x path="rm.types.CharacterPattern"/>
+			<meta><m n=":native"><e>"_pattern"</e></m></meta>
+		</__patern>
+		<_pattern><x path="rm.types.CharacterPattern"/></_pattern>
+		<__priorityType public="1">
+			<x path="rm.types.CharacterPriority"/>
+			<meta><m n=":native"><e>"_priorityType"</e></m></meta>
+		</__priorityType>
+		<_priorityType><x path="rm.types.CharacterPriority"/></_priorityType>
+		<__tileId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_tileId"</e></m></meta>
+		</__tileId>
 		<_tileId><x path="Int"/></_tileId>
+		<__characterName public="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_characterName"</e></m></meta>
+		</__characterName>
 		<_characterName><c path="String"/></_characterName>
+		<__characterIndex public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_characterIndex"</e></m></meta>
+		</__characterIndex>
 		<_characterIndex><x path="Int"/></_characterIndex>
+		<__isObjectCharacter public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_isObjectCharacter"</e></m></meta>
+		</__isObjectCharacter>
 		<_isObjectCharacter><x path="Bool"/></_isObjectCharacter>
+		<__walkAnime public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_walkAnime"</e></m></meta>
+		</__walkAnime>
 		<_walkAnime><x path="Bool"/></_walkAnime>
+		<__stepAnime public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_stepAnime"</e></m></meta>
+		</__stepAnime>
 		<_stepAnime><x path="Bool"/></_stepAnime>
+		<__directionFix public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_directionFix"</e></m></meta>
+		</__directionFix>
 		<_directionFix><x path="Bool"/></_directionFix>
+		<__through public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_through"</e></m></meta>
+		</__through>
 		<_through><x path="Bool"/></_through>
+		<__transparent public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_transparent"</e></m></meta>
+		</__transparent>
 		<_transparent><x path="Bool"/></_transparent>
+		<__bushDepth public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_bushDepth"</e></m></meta>
+		</__bushDepth>
 		<_bushDepth><x path="Int"/></_bushDepth>
-		<_animationId><x path="Int"/></_animationId>
-		<_balloonId><x path="Int"/></_balloonId>
+		<__animationId public="1">
+			<x path="rm.types.AnimationId"/>
+			<meta><m n=":native"><e>"_animationId"</e></m></meta>
+		</__animationId>
+		<_animationId><x path="rm.types.AnimationId"/></_animationId>
+		<__balloonId public="1">
+			<x path="rm.types.BalloonId"/>
+			<meta><m n=":native"><e>"_ballonId"</e></m></meta>
+		</__balloonId>
+		<_balloonId><x path="rm.types.BalloonId"/></_balloonId>
+		<__animationPlaying public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_animationPlaying"</e></m></meta>
+		</__animationPlaying>
 		<_animationPlaying><x path="Bool"/></_animationPlaying>
+		<__balloonPlaying public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_balloonPlaying"</e></m></meta>
+		</__balloonPlaying>
 		<_balloonPlaying><x path="Bool"/></_balloonPlaying>
+		<__animationCount public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_animationCount"</e></m></meta>
+		</__animationCount>
 		<_animationCount><x path="Int"/></_animationCount>
+		<__stopCount public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_stopCount"</e></m></meta>
+		</__stopCount>
 		<_stopCount><x path="Int"/></_stopCount>
+		<__jumpCount public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_jumpCount"</e></m></meta>
+		</__jumpCount>
 		<_jumpCount><x path="Int"/></_jumpCount>
+		<__jumpPeak public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_jumpPeak"</e></m></meta>
+		</__jumpPeak>
 		<_jumpPeak><x path="Int"/></_jumpPeak>
+		<__movementSuccess public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_movementSuccess"</e></m></meta>
+		</__movementSuccess>
 		<_movementSuccess><x path="Bool"/></_movementSuccess>
 		<initialize public="1" set="method"><f a=""><x path="Void"/></f></initialize>
 		<x public="1">
@@ -67294,6 +68273,7 @@
  * shared by all characters.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_CharacterBase"</e></m>
 			<m n=":native"><e>"Game_CharacterBase"</e></m>
 		</meta>
 	</class>
@@ -67550,11 +68530,20 @@
  * and Game_Event.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Character"</e></m>
 			<m n=":native"><e>"Game_Character"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_CommonEvent" params="" file="src/rm/objects/Game_CommonEvent.hx" extern="1">
+		<__commonEventId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_commonEventId"</e></m></meta>
+		</__commonEventId>
 		<_commonEventId><x path="Int"/></_commonEventId>
+		<__interpreter public="1">
+			<c path="rm.objects.Game_Interpreter"/>
+			<meta><m n=":native"><e>"_interpreter"</e></m></meta>
+		</__interpreter>
 		<_interpreter><c path="rm.objects.Game_Interpreter"/></_interpreter>
 		<initialize public="1" set="method"><f a="commonEventId">
 	<x path="Int"/>
@@ -67599,15 +68588,36 @@
 </f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_CommonEvent"</e></m>
 			<m n=":native"><e>"Game_CommonEvent"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_Enemy" params="" file="src/rm/objects/Game_Enemy.hx" extern="1">
 		<extends path="rm.objects.Game_Battler"/>
+		<__enemyId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_enemyId"</e></m></meta>
+		</__enemyId>
 		<_enemyId><x path="Int"/></_enemyId>
+		<__letter public="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_letter"</e></m></meta>
+		</__letter>
 		<_letter><c path="String"/></_letter>
+		<__plural public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_plural"</e></m></meta>
+		</__plural>
 		<_plural><x path="Bool"/></_plural>
+		<__screenX public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_screenX"</e></m></meta>
+		</__screenX>
 		<_screenX><x path="Int"/></_screenX>
+		<__screenY public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_screenY"</e></m></meta>
+		</__screenY>
 		<_screenY><x path="Int"/></_screenY>
 		<initialize public="1" set="method" override="1"><f a="enemyId:x:y">
 	<x path="Int"/>
@@ -67622,14 +68632,14 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></setup>
-		<friendsUnit public="1" set="method">
+		<friendsUnit public="1" set="method" override="1">
 			<f a=""><c path="rm.objects.Game_Troop"/></f>
 			<haxe_doc>* Returns the other troops in the enemy team.
   *
   * @returns {Game_Troop}
   * @memberof Game_Enemy</haxe_doc>
 		</friendsUnit>
-		<opponentsUnit public="1" set="method">
+		<opponentsUnit public="1" set="method" override="1">
 			<f a=""><c path="rm.objects.Game_Party"/></f>
 			<haxe_doc>* Returns the game party.
   *
@@ -67800,21 +68810,66 @@
  * @class Game_Enemy</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Enemy"</e></m>
 			<m n=":native"><e>"Game_Enemy"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_Event" params="" file="src/rm/objects/Game_Event.hx" extern="1">
 		<extends path="rm.objects.Game_Character"/>
+		<__mapId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_mapId"</e></m></meta>
+		</__mapId>
 		<_mapId><x path="Int"/></_mapId>
+		<__eventId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_eventId"</e></m></meta>
+		</__eventId>
 		<_eventId><x path="Int"/></_eventId>
-		<_moveType><x path="Int"/></_moveType>
-		<_trigger><x path="Int"/></_trigger>
+		<__moveType public="1">
+			<x path="rm.types.MoveType"/>
+			<meta><m n=":native"><e>"_moveType"</e></m></meta>
+		</__moveType>
+		<_moveType><x path="rm.types.MoveType"/></_moveType>
+		<__triger public="1">
+			<x path="rm.types.EventTrigger"/>
+			<meta><m n=":native"><e>"_trigger"</e></m></meta>
+		</__triger>
+		<_trigger><x path="rm.types.EventTrigger"/></_trigger>
+		<__starting public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_starting"</e></m></meta>
+		</__starting>
 		<_starting><x path="Bool"/></_starting>
+		<__erased public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_erased"</e></m></meta>
+		</__erased>
 		<_erased><x path="Bool"/></_erased>
+		<__pageIndex public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_pageIndex"</e></m></meta>
+		</__pageIndex>
 		<_pageIndex><x path="Int"/></_pageIndex>
-		<_originalPattern><x path="Int"/></_originalPattern>
-		<_originalDirection><x path="Int"/></_originalDirection>
-		<_prelockDirection><x path="Int"/></_prelockDirection>
+		<__originalPattern public="1">
+			<x path="rm.types.CharacterPattern"/>
+			<meta><m n=":native"><e>"_originalPattern"</e></m></meta>
+		</__originalPattern>
+		<_originalPattern><x path="rm.types.CharacterPattern"/></_originalPattern>
+		<__originalDirection public="1">
+			<x path="rm.types.Direction"/>
+			<meta><m n=":native"><e>"_originalDirection"</e></m></meta>
+		</__originalDirection>
+		<_originalDirection><x path="rm.types.Direction"/></_originalDirection>
+		<__prelockDirection public="1">
+			<x path="rm.types.Direction"/>
+			<meta><m n=":native"><e>"_prelockDirection"</e></m></meta>
+		</__prelockDirection>
+		<_prelockDirection><x path="rm.types.Direction"/></_prelockDirection>
+		<__locked public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_locked"</e></m></meta>
+		</__locked>
 		<_locked><x path="Bool"/></_locked>
 		<initialize public="1" set="method" override="1"><f a="mapId:eventId">
 	<x path="Int"/>
@@ -68001,11 +69056,16 @@
  * for event page switching and running parallel process events.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Event"</e></m>
 			<m n=":native"><e>"Game_Event"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_Follower" params="" file="src/rm/objects/Game_Follower.hx" extern="1">
 		<extends path="rm.objects.Game_Character"/>
+		<__memberIndex public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_memberIndex"</e></m></meta>
+		</__memberIndex>
 		<_memberIndex><x path="Int"/></_memberIndex>
 		<refresh public="1" set="method"><f a=""><x path="Void"/></f></refresh>
 		<actor public="1" set="method">
@@ -68050,12 +69110,25 @@
  * @class Game_Follower</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Follower"</e></m>
 			<m n=":native"><e>"Game_Follower"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_Followers" params="" file="src/rm/objects/Game_Followers.hx" extern="1">
+		<__visible public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_visible"</e></m></meta>
+		</__visible>
 		<_visible><x path="Bool"/></_visible>
+		<__gathering public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_gathering"</e></m></meta>
+		</__gathering>
 		<_gathering><x path="Bool"/></_gathering>
+		<__data public="1">
+			<c path="Array"><c path="rm.objects.Game_Follower"/></c>
+			<meta><m n=":native"><e>"_data"</e></m></meta>
+		</__data>
 		<_data><c path="Array"><c path="rm.objects.Game_Follower"/></c></_data>
 		<initialize public="1" set="method"><f a=""><x path="Void"/></f></initialize>
 		<isVisible public="1" set="method">
@@ -68179,6 +69252,7 @@
  * @class Game_Followers</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Followers"</e></m>
 			<m n=":native"><e>"Game_Followers"</e></m>
 		</meta>
 	</class>
@@ -68888,11 +69962,20 @@
  * @class Game_Interpreter</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Interpreter"</e></m>
 			<m n=":native"><e>"Game_Interpreter"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_Item" params="" file="src/rm/objects/Game_Item.hx" extern="1">
+		<__dataClass public="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_dataClass"</e></m></meta>
+		</__dataClass>
 		<_dataClass><c path="String"/></_dataClass>
+		<__itemId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_itemId"</e></m></meta>
+		</__itemId>
 		<_itemId><x path="Int"/></_itemId>
 		<initialize public="1" set="method"><f a=""><x path="Void"/></f></initialize>
 		<isSkill public="1" set="method">
@@ -68977,32 +70060,125 @@
  * @class Game_Item</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Item"</e></m>
 			<m n=":native"><e>"Game_Item"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_Map" params="" file="src/rm/objects/Game_Map.hx" extern="1">
+		<__interpreter public="1">
+			<c path="rm.objects.Game_Interpreter"/>
+			<meta><m n=":native"><e>"_interpreter"</e></m></meta>
+		</__interpreter>
 		<_interpreter><c path="rm.objects.Game_Interpreter"/></_interpreter>
+		<__mapId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_mapId"</e></m></meta>
+		</__mapId>
 		<_mapId><x path="Int"/></_mapId>
+		<__tilesetId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_tilesetId"</e></m></meta>
+		</__tilesetId>
 		<_tilesetId><x path="Int"/></_tilesetId>
+		<__events public="1">
+			<c path="Array"><c path="rm.objects.Game_Event"/></c>
+			<meta><m n=":native"><e>"_events"</e></m></meta>
+		</__events>
 		<_events><c path="Array"><c path="rm.objects.Game_Event"/></c></_events>
+		<__commonEvents public="1">
+			<c path="Array"><c path="rm.objects.Game_CommonEvent"/></c>
+			<meta><m n=":native"><e>"_commonEvents"</e></m></meta>
+		</__commonEvents>
 		<_commonEvents><c path="Array"><c path="rm.objects.Game_CommonEvent"/></c></_commonEvents>
+		<__vehicles public="1">
+			<c path="Array"><c path="rm.objects.Game_Vehicle"/></c>
+			<meta><m n=":native"><e>"_vehicles"</e></m></meta>
+		</__vehicles>
 		<_vehicles><c path="Array"><c path="rm.objects.Game_Vehicle"/></c></_vehicles>
+		<__displayX public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_displayX"</e></m></meta>
+		</__displayX>
 		<_displayX><x path="Int"/></_displayX>
+		<__displayY public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_displayY"</e></m></meta>
+		</__displayY>
 		<_displayY><x path="Int"/></_displayY>
+		<__nameDisplay public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_nameDisplay"</e></m></meta>
+		</__nameDisplay>
 		<_nameDisplay><x path="Bool"/></_nameDisplay>
+		<__scrollDirection public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_scrollDirection"</e></m></meta>
+		</__scrollDirection>
 		<_scrollDirection><x path="Int"/></_scrollDirection>
+		<__scrollRest public="1">
+			<x path="Float"/>
+			<meta><m n=":native"><e>"_scrollRest"</e></m></meta>
+		</__scrollRest>
 		<_scrollRest><x path="Float"/></_scrollRest>
+		<__scrollSpeed public="1">
+			<x path="Float"/>
+			<meta><m n=":native"><e>"_scrollSpeed"</e></m></meta>
+		</__scrollSpeed>
 		<_scrollSpeed><x path="Float"/></_scrollSpeed>
+		<__parallaxName public="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_parallaxName"</e></m></meta>
+		</__parallaxName>
 		<_parallaxName><c path="String"/></_parallaxName>
+		<__parallaxZero public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_parallaxZero"</e></m></meta>
+		</__parallaxZero>
 		<_parallaxZero><x path="Bool"/></_parallaxZero>
+		<__parallaxLoopX public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_parallaxLoopX"</e></m></meta>
+		</__parallaxLoopX>
 		<_parallaxLoopX><x path="Bool"/></_parallaxLoopX>
+		<__parallaxLoopY public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_parallaxLoopY"</e></m></meta>
+		</__parallaxLoopY>
 		<_parallaxLoopY><x path="Bool"/></_parallaxLoopY>
+		<__parallaxSx public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_parallaxSx"</e></m></meta>
+		</__parallaxSx>
 		<_parallaxSx><x path="Int"/></_parallaxSx>
+		<__parallaxSy public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_parallaxSy"</e></m></meta>
+		</__parallaxSy>
 		<_parallaxSy><x path="Int"/></_parallaxSy>
+		<__parallaxX public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_parallaxX"</e></m></meta>
+		</__parallaxX>
 		<_parallaxX><x path="Int"/></_parallaxX>
+		<__parallaxY public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_parallaxY"</e></m></meta>
+		</__parallaxY>
 		<_parallaxY><x path="Int"/></_parallaxY>
+		<__battleback1Name public="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_battleback1Name"</e></m></meta>
+		</__battleback1Name>
 		<_battleback1Name><c path="String"/></_battleback1Name>
+		<__battleback2Name public="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_battleback2Name"</e></m></meta>
+		</__battleback2Name>
 		<_battleback2Name><c path="String"/></_battleback2Name>
+		<__needsRefresh public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_needsRefresh"</e></m></meta>
+		</__needsRefresh>
 		<_needsRefresh><x path="Bool"/></_needsRefresh>
 		<initialize public="1" set="method"><f a=""><x path="Void"/></f></initialize>
 		<setup public="1" set="method"><f a="mapId">
@@ -69631,27 +70807,103 @@
  * along with the game interpreter.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Map"</e></m>
 			<m n=":native"><e>"Game_Map"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_Message" params="" file="src/rm/objects/Game_Message.hx" extern="1">
+		<__texts public="1">
+			<c path="Array"><c path="String"/></c>
+			<meta><m n=":native"><e>"_texts"</e></m></meta>
+		</__texts>
 		<_texts><c path="Array"><c path="String"/></c></_texts>
+		<__choices public="1">
+			<c path="Array"><c path="String"/></c>
+			<meta><m n=":native"><e>"_choices"</e></m></meta>
+		</__choices>
 		<_choices><c path="Array"><c path="String"/></c></_choices>
+		<__faceName public="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_faceName"</e></m></meta>
+		</__faceName>
 		<_faceName><c path="String"/></_faceName>
+		<__faceIndex public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_faceIndex"</e></m></meta>
+		</__faceIndex>
 		<_faceIndex><x path="Int"/></_faceIndex>
-		<_background><x path="Int"/></_background>
-		<_positionType><x path="Int"/></_positionType>
-		<_choiceDefaultType><x path="Int"/></_choiceDefaultType>
-		<_choiceCancelType><x path="Int"/></_choiceCancelType>
-		<_choiceBackground><x path="Int"/></_choiceBackground>
-		<_choicePostionType><x path="Int"/></_choicePostionType>
+		<__background public="1">
+			<x path="rm.types.MessageBackgroundType"/>
+			<meta><m n=":native"><e>"_background"</e></m></meta>
+		</__background>
+		<_background><x path="rm.types.MessageBackgroundType"/></_background>
+		<__positionType public="1">
+			<x path="rm.types.MessagePositionType"/>
+			<meta><m n=":native"><e>"_positionType"</e></m></meta>
+		</__positionType>
+		<_positionType><x path="rm.types.MessagePositionType"/></_positionType>
+		<__choiceDefaultType public="1">
+			<x path="rm.types.ChoiceDefaultType"/>
+			<meta><m n=":native"><e>"_choiceDefaultType"</e></m></meta>
+		</__choiceDefaultType>
+		<_choiceDefaultType><x path="rm.types.ChoiceDefaultType"/></_choiceDefaultType>
+		<__choiceCancelType public="1">
+			<x path="rm.types.ChoiceCancelType"/>
+			<meta><m n=":native"><e>"_choiceCancelType"</e></m></meta>
+		</__choiceCancelType>
+		<_choiceCancelType><x path="rm.types.ChoiceCancelType"/></_choiceCancelType>
+		<__choiceBackground public="1">
+			<x path="rm.types.ChocieBackgroundType"/>
+			<meta><m n=":native"><e>"_choiceBackground"</e></m></meta>
+		</__choiceBackground>
+		<_choiceBackground><x path="rm.types.ChocieBackgroundType"/></_choiceBackground>
+		<__choicePositionType public="1">
+			<x path="rm.types.ChoicePositionType"/>
+			<meta><m n=":native"><e>"_choicePositionType"</e></m></meta>
+		</__choicePositionType>
+		<_choicePostionType><x path="rm.types.ChoicePositionType"/></_choicePostionType>
+		<__numInputVariableId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_numInputVariableId"</e></m></meta>
+		</__numInputVariableId>
 		<_numInputVariableId><x path="Int"/></_numInputVariableId>
+		<__numInputMaxDigits public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_numInputMaxDigits"</e></m></meta>
+		</__numInputMaxDigits>
 		<_numInputMaxDigits><x path="Int"/></_numInputMaxDigits>
+		<__itemChoiceVariableId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_itemChoiceVariableId"</e></m></meta>
+		</__itemChoiceVariableId>
 		<_itemChoiceVariableId><x path="Int"/></_itemChoiceVariableId>
+		<__itemChoiceItypeId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_itemChoiceItypeId"</e></m></meta>
+		</__itemChoiceItypeId>
 		<_itemChoiceItypeId><x path="Int"/></_itemChoiceItypeId>
+		<__scrollMode public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_scrollMode"</e></m></meta>
+		</__scrollMode>
 		<_scrollMode><x path="Bool"/></_scrollMode>
+		<__scrollSpeed public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_scrollSpeed"</e></m></meta>
+		</__scrollSpeed>
 		<_scrollSpeed><x path="Int"/></_scrollSpeed>
+		<__scrollNoFast public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_scrollNoFast"</e></m></meta>
+		</__scrollNoFast>
 		<_scrollNoFast><x path="Bool"/></_scrollNoFast>
+		<__choiceCallback public="1">
+			<f a="n">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":native"><e>"_choiceCallback"</e></m></meta>
+		</__choiceCallback>
 		<_choiceCallback><f a="n">
 	<x path="Int"/>
 	<x path="Void"/>
@@ -69921,10 +71173,15 @@
 		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Message"</e></m>
 			<m n=":native"><e>"Game_Message"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_Unit" params="" file="src/rm/objects/Game_Unit.hx" extern="1">
+		<__inBattle public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_inBattle"</e></m></meta>
+		</__inBattle>
 		<_inBattle><x path="Bool"/></_inBattle>
 		<initialize public="1" set="method"><f a=""><x path="Void"/></f></initialize>
 		<inBattle public="1" set="method">
@@ -70046,6 +71303,7 @@
  * @class Game_Unit]]></haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Unit"</e></m>
 			<m n=":native"><e>"Game_Unit"</e></m>
 		</meta>
 	</class>
@@ -70493,6 +71751,7 @@
  * such as gold and items.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Party"</e></m>
 			<m n=":native"><e>"Game_Party"</e></m>
 		</meta>
 	</class>
@@ -70665,6 +71924,7 @@
  *</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Picture"</e></m>
 			<m n=":native"><e>"Game_Picture"</e></m>
 		</meta>
 	</class>
@@ -71098,6 +72358,7 @@
  * object.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Player"</e></m>
 			<m n=":native"><e>"Game_Player"</e></m>
 		</meta>
 	</class>
@@ -71433,11 +72694,20 @@
  * @class Game_Screen</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Screen"</e></m>
 			<m n=":native"><e>"Game_Screen"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_SelfSwitches" params="" file="src/rm/objects/Game_SelfSwitches.hx" extern="1">
-		<_data><a><key><c path="Array"><x path="Any"/></c></key></a></_data>
+		<__data public="1">
+			<x path="haxe.DynamicAccess"><d/></x>
+			<meta><m n=":native"><e>"_data"</e></m></meta>
+			<haxe_doc><![CDATA[* {key: Array<Any>}]]></haxe_doc>
+		</__data>
+		<_data>
+			<x path="haxe.DynamicAccess"><d/></x>
+			<haxe_doc><![CDATA[* {key: Array<Any>}]]></haxe_doc>
+		</_data>
 		<initialize public="1" set="method"><f a=""><x path="Void"/></f></initialize>
 		<clear public="1" set="method">
 			<f a=""><x path="Void"/></f>
@@ -71473,10 +72743,15 @@
 		<haxe_doc>*  The game object class for self switches.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_SelfSwitches"</e></m>
 			<m n=":native"><e>"Game_SelfSwitches"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_Switches" params="" file="src/rm/objects/Game_Switches.hx" extern="1">
+		<__data public="1">
+			<c path="Array"><x path="Bool"/></c>
+			<meta><m n=":native"><e>"_data"</e></m></meta>
+		</__data>
 		<_data><c path="Array"><x path="Bool"/></c></_data>
 		<initialize public="1" set="method"><f a=""><x path="Void"/></f></initialize>
 		<clear public="1" set="method"><f a=""><x path="Void"/></f></clear>
@@ -71496,6 +72771,7 @@
  * @class Game_Switches</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Switches"</e></m>
 			<m n=":native"><e>"Game_Switches"</e></m>
 		</meta>
 	</class>
@@ -71763,12 +73039,31 @@
 		<haxe_doc>* Game_System
  * The game object class representing system data.
  * @class Game_System</haxe_doc>
-		<meta><m n=":native"><e>"Game_System"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Game_System"</e></m>
+			<m n=":native"><e>"Game_System"</e></m>
+		</meta>
 	</class>
 	<class path="rm.objects.Game_Temp" params="" file="src/rm/objects/Game_Temp.hx" extern="1">
+		<__isPlaytest public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_isPlaytest"</e></m></meta>
+		</__isPlaytest>
 		<_isPlaytest><x path="Bool"/></_isPlaytest>
+		<__commonEventId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_commonEventId"</e></m></meta>
+		</__commonEventId>
 		<_commonEventId><x path="Int"/></_commonEventId>
+		<__destinationX public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_destinationX"</e></m></meta>
+		</__destinationX>
 		<_destinationX><x path="Int"/></_destinationX>
+		<__destionationY public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_destinationY"</e></m></meta>
+		</__destionationY>
 		<_destinationY><x path="Int"/></_destinationY>
 		<initialize public="1" set="method"><f a=""><x path="Void"/></f></initialize>
 		<isPlaytest public="1" set="method">
@@ -71853,6 +73148,7 @@
  * @class Game_Temp</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Temp"</e></m>
 			<m n=":native"><e>"Game_Temp"</e></m>
 		</meta>
 	</class>
@@ -71912,6 +73208,7 @@
  * @class Game_Timer</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Timer"</e></m>
 			<m n=":native"><e>"Game_Timer"</e></m>
 		</meta>
 	</class>
@@ -71919,7 +73216,15 @@
 		<extends path="rm.objects.Game_Unit"/>
 		<LETTER_TABLE_HALF public="1" static="1"><c path="Array"><c path="String"/></c></LETTER_TABLE_HALF>
 		<LETTER_TABLE_FULL public="1" static="1"><c path="Array"><c path="String"/></c></LETTER_TABLE_FULL>
+		<__interpreter public="1">
+			<c path="rm.objects.Game_Interpreter"/>
+			<meta><m n=":native"><e>"_interpreter"</e></m></meta>
+		</__interpreter>
 		<_interpreter><c path="rm.objects.Game_Interpreter"/></_interpreter>
+		<__troopId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_troopId"</e></m></meta>
+		</__troopId>
 		<_troopId><x path="Int"/></_troopId>
 		<_eventFlags>
 			<x path="haxe.DynamicAccess"><x path="Bool"/></x>
@@ -72062,10 +73367,15 @@
  * @class Game_Troop</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Temp"</e></m>
 			<m n=":native"><e>"Game_Troop"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_Variables" params="" file="src/rm/objects/Game_Variables.hx" extern="1">
+		<__data public="1">
+			<c path="Array"><x path="Int"/></c>
+			<meta><m n=":native"><e>"_data"</e></m></meta>
+		</__data>
 		<_data><c path="Array"><x path="Int"/></c></_data>
 		<initialize public="1" set="method"><f a=""><x path="Void"/></f></initialize>
 		<clear public="1" set="method"><f a=""><x path="Void"/></f></clear>
@@ -72083,15 +73393,235 @@
 		<haxe_doc>* The game object class for game variables.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Variables"</e></m>
 			<m n=":native"><e>"Game_Variables"</e></m>
 		</meta>
 	</class>
 	<class path="rm.objects.Game_Vehicle" params="" file="src/rm/objects/Game_Vehicle.hx" extern="1">
 		<extends path="rm.objects.Game_Character"/>
-		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
+		<__type public="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_type"</e></m></meta>
+		</__type>
+		<_type><c path="String"/></_type>
+		<__mapId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_mapId"</e></m></meta>
+		</__mapId>
+		<_mapId><x path="Int"/></_mapId>
+		<__altitude public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_altitude"</e></m></meta>
+		</__altitude>
+		<_altitude><x path="Int"/></_altitude>
+		<__driving public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_driving"</e></m></meta>
+		</__driving>
+		<_driving><x path="Bool"/></_driving>
+		<__bgm public="1">
+			<t path="rm.types.AudioFile"/>
+			<meta><m n=":native"><e>"_bgm"</e></m></meta>
+		</__bgm>
+		<_bgm><t path="rm.types.AudioFile"/></_bgm>
+		<initMembers public="1" set="method" override="1"><f a=""><x path="Void"/></f></initMembers>
+		<isBoat public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if the vehicle is a boat.
+  *
+  * @returns {Bool}
+  * @memberof Game_Vehicle</haxe_doc>
+		</isBoat>
+		<isShip public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if the vehicle is a ship.
+  *
+  * @returns {Bool}
+  * @memberof Game_Vehicle</haxe_doc>
+		</isShip>
+		<isAirship public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if the vehicle is an airship.
+  *
+  * @returns {Bool}
+  * @memberof Game_Vehicle</haxe_doc>
+		</isAirship>
+		<resetDirection public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Resets the direction of the vehicle.
+  *
+  * @memberof Game_Vehicle</haxe_doc>
+		</resetDirection>
+		<initMoveSpeed public="1" set="method"><f a=""><x path="Void"/></f></initMoveSpeed>
+		<vehicle public="1" set="method">
+			<f a=""><t path="rm.types.SystemVehicle"/></f>
+			<haxe_doc>* Returns the current vehicle.
+  *
+  * @returns {RPG.System.Vehicle}
+  * @memberof Game_Vehicle</haxe_doc>
+		</vehicle>
+		<loadSystemSettings public="1" set="method"><f a=""><x path="Void"/></f></loadSystemSettings>
+		<refresh public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Refreshes the game vehicle.
+  *
+  * @memberof Game_Vehicle</haxe_doc>
+		</refresh>
+		<setLocation public="1" set="method"><f a="mapId:x:y">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></setLocation>
+		<pos public="1" set="method" override="1"><f a="x:y">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Bool"/>
+</f></pos>
+		<isMapPassable public="1" set="method" override="1"><f a="x:y:d">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="rm.types.Direction"/>
+	<x path="Bool"/>
+</f></isMapPassable>
+		<getOn public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Gets on the vehicle.
+  *
+  * @memberof Game_Vehicle</haxe_doc>
+		</getOn>
+		<getOff public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Gets off the vehicle.
+  *
+  * @memberof Game_Vehicle</haxe_doc>
+		</getOff>
+		<setBgm public="1" set="method">
+			<f a="bgm">
+				<t path="rm.types.AudioFile"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Sets the bgm associated with the vehicle.
+  *
+  * @param {RPG.AudioFile} bgm
+  * @memberof Game_Vehicle</haxe_doc>
+		</setBgm>
+		<playBgm public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Plays the bgm associated with the vehicle.
+  *
+  * @memberof Game_Vehicle</haxe_doc>
+		</playBgm>
+		<syncWithPlayer public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Syncs the vehicle with the player.
+  *
+  * @memberof Game_Vehicle</haxe_doc>
+		</syncWithPlayer>
+		<screenY public="1" set="method" override="1">
+			<f a=""><x path="Int"/></f>
+			<haxe_doc>* Returns the screen y position of the vehicle.
+  *
+  * @returns {number}
+  * @memberof Game_Vehicle</haxe_doc>
+		</screenY>
+		<shadowX public="1" set="method">
+			<f a=""><x path="Int"/></f>
+			<haxe_doc>* Returns the shadow x position of the vehicle's shadow.
+  *
+  * @returns {number}
+  * @memberof Game_Vehicle</haxe_doc>
+		</shadowX>
+		<shadowY public="1" set="method">
+			<f a=""><x path="Int"/></f>
+			<haxe_doc>* Returns the shadow y position of the vehicle's shadow.
+  *
+  * @returns {number}
+  * @memberof Game_Vehicle</haxe_doc>
+		</shadowY>
+		<shadowOpacity public="1" set="method">
+			<f a=""><x path="Int"/></f>
+			<haxe_doc>* Returns the shadow opacity of the vehicle's shadow.
+  *
+  * @returns {number}
+  * @memberof Game_Vehicle</haxe_doc>
+		</shadowOpacity>
+		<canMove public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if the vehicle can move.
+  *
+  * @returns {Bool}
+  * @memberof Game_Vehicle</haxe_doc>
+		</canMove>
+		<update public="1" set="method" override="1">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Updates the vehicle.
+  *
+  * @memberof Game_Vehicle</haxe_doc>
+		</update>
+		<updateAirship public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Updates the airship.
+  *
+  * @memberof Game_Vehicle</haxe_doc>
+		</updateAirship>
+		<updateAirshipAltitude public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Updates airship altitude.
+  *
+  * @memberof Game_Vehicle</haxe_doc>
+		</updateAirshipAltitude>
+		<maxAltitude public="1" set="method">
+			<f a=""><x path="Int"/></f>
+			<haxe_doc>* Returns the max altitude of the vehicle.
+  *
+  * @returns {number}
+  * @memberof Game_Vehicle</haxe_doc>
+		</maxAltitude>
+		<isLowest public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if the vehicle is at it's lowest altitude.
+  *
+  * @returns {Bool}
+  * @memberof Game_Vehicle</haxe_doc>
+		</isLowest>
+		<isHighest public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if the vehicle is at it's highest altitude.
+  *
+  * @returns {Bool}
+  * @memberof Game_Vehicle</haxe_doc>
+		</isHighest>
+		<isTakeoffOk public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if take off is ok.
+  *
+  * @returns {Bool}
+  * @memberof Game_Vehicle</haxe_doc>
+		</isTakeoffOk>
+		<isLandOk public="1" set="method">
+			<f a="x:y:d">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="rm.types.Direction"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Returns true if the vehicle is capable of landing at the specified
+  * x, y coordinate, with the specified direction (d).
+  * @param {number} x
+  * @param {number} y
+  * @param {number} d
+  * @returns {Bool}
+  * @memberof Game_Vehicle</haxe_doc>
+		</isLandOk>
+		<new public="1" set="method"><f a="type">
+	<c path="String"/>
+	<x path="Void"/>
+</f></new>
 		<haxe_doc>* The game object class for a vehicle.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Game_Vehicle"</e></m>
 			<m n=":native"><e>"Game_Vehicle"</e></m>
 		</meta>
 	</class>
@@ -72290,6 +73820,7 @@
 		<haxe_doc>* Scene class of the battle screen.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Battle"</e></m>
 			<m n=":native"><e>"Scene_Battle"</e></m>
 		</meta>
 	</class>
@@ -72298,7 +73829,7 @@
 		<_startDate><c path="js.lib.Date"/></_startDate>
 		<__databaseLoaded public="1">
 			<x path="Bool"/>
-			<meta><m n="native"><e>"_databaseLoaded"</e></m></meta>
+			<meta><m n=":native"><e>"_databaseLoaded"</e></m></meta>
 		</__databaseLoaded>
 		<_databaseLoaded><x path="Bool"/></_databaseLoaded>
 		<loadSystemImages public="1" set="method">
@@ -72321,6 +73852,7 @@
 		</checkPlayerLocation>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Boot"</e></m>
 			<m n=":native"><e>"Scene_Boot"</e></m>
 		</meta>
 	</class>
@@ -72401,6 +73933,7 @@
 		<haxe_doc>* The super class of all menu-type scenes</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_MenuBase"</e></m>
 			<m n=":native"><e>"Scene_MenuBase"</e></m>
 		</meta>
 	</class>
@@ -72435,6 +73968,10 @@
   * @memberof Scene_Debug</haxe_doc>
 		</helpText>
 		<haxe_doc>* Scene class of the debug menu screen.</haxe_doc>
+		<meta>
+			<m n=":expose"><e>"Scene_Debug"</e></m>
+			<m n=":native"><e>"Scene_Debug"</e></m>
+		</meta>
 	</class>
 	<class path="rm.scenes.Scene_Equip" params="" file="src/rm/scenes/Scene_Equip.hx" extern="1">
 		<extends path="rm.scenes.Scene_MenuBase"/>
@@ -72491,7 +74028,10 @@
 		<onItemCancel public="1" set="method"><f a=""><x path="Void"/></f></onItemCancel>
 		<onActorChange public="1" set="method" override="1"><f a=""><x path="Void"/></f></onActorChange>
 		<haxe_doc>* Scene class of the equipment screen.</haxe_doc>
-		<meta><m n=":native"><e>"Scene_Equip"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Scene_Equip"</e></m>
+			<m n=":native"><e>"Scene_Equip"</e></m>
+		</meta>
 	</class>
 	<class path="rm.scenes.Scene_File" params="" file="src/rm/scenes/Scene_File.hx" extern="1">
 		<extends path="rm.scenes.Scene_MenuBase"/>
@@ -72528,6 +74068,7 @@
 		<haxe_doc>*  Super class of Scene_Save and Scene_Load</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_File"</e></m>
 			<m n=":native"><e>"Scene_File"</e></m>
 		</meta>
 	</class>
@@ -72554,7 +74095,10 @@
   * @memberof Scene_GameEnd</haxe_doc>
 		</commandToTitle>
 		<haxe_doc>* Scene class of the game end screen.</haxe_doc>
-		<meta><m n=":native"><e>"Scene_GameEnd"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Scene_GameEnd"</e></m>
+			<m n=":native"><e>"Scene_GameEnd"</e></m>
+		</meta>
 	</class>
 	<class path="rm.scenes.Scene_GameOver" params="" file="src/rm/scenes/Scene_GameOver.hx" extern="1">
 		<extends path="rm.scenes.Scene_Base"/>
@@ -72581,6 +74125,7 @@
 		<haxe_doc>* Scene class of the game over screen.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_GameOver"</e></m>
 			<m n=":native"><e>"Scene_GameOver"</e></m>
 		</meta>
 	</class>
@@ -72676,6 +74221,7 @@
  * Super class of Scene_Item & Scene_Skill.]]></haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_ItemBase"</e></m>
 			<m n=":native"><e>"Scene_ItemBase"</e></m>
 		</meta>
 	</class>
@@ -72726,6 +74272,7 @@
  * @extends {Scene_ItemBase}</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Item"</e></m>
 			<m n=":native"><e>"Scene_Item"</e></m>
 		</meta>
 	</class>
@@ -72754,6 +74301,7 @@
 		<haxe_doc>* The scene class of the load game screen.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Load"</e></m>
 			<m n=":native"><e>"Scene_Load"</e></m>
 		</meta>
 	</class>
@@ -72980,6 +74528,7 @@
 		<haxe_doc>* The scene class for the map screen.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Map"</e></m>
 			<m n=":native"><e>"Scene_Map"</e></m>
 		</meta>
 	</class>
@@ -73038,7 +74587,10 @@
 		<onFormationOk public="1" set="method"><f a=""><x path="Void"/></f></onFormationOk>
 		<onFormationCancel public="1" set="method"><f a=""><x path="Void"/></f></onFormationCancel>
 		<haxe_doc>* The menu scene in your RPGMakerMV game.</haxe_doc>
-		<meta><m n=":native"><e>"Scene_Menu"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Scene_Menu"</e></m>
+			<m n=":native"><e>"Scene_Menu"</e></m>
+		</meta>
 	</class>
 	<class path="rm.scenes.Scene_Name" params="" file="src/rm/scenes/Scene_Name.hx" extern="1">
 		<extends path="rm.scenes.Scene_MenuBase"/>
@@ -73076,6 +74628,7 @@
 		<haxe_doc>* Scene class of the name input screen.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Name"</e></m>
 			<m n=":native"><e>"Scene_Name"</e></m>
 		</meta>
 	</class>
@@ -73086,6 +74639,7 @@
 		<haxe_doc>* Scene class of the options screen.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Options"</e></m>
 			<m n=":native"><e>"Scene_Options"</e></m>
 		</meta>
 	</class>
@@ -73127,6 +74681,7 @@
 		<haxe_doc>* Save game screen scene for RPGMakerMV.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Save"</e></m>
 			<m n=":native"><e>"Scene_Save"</e></m>
 		</meta>
 	</class>
@@ -73295,6 +74850,7 @@
 		<haxe_doc>* Scene class of the shop screen.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Shop"</e></m>
 			<m n=":native"><e>"Scene_Shop"</e></m>
 		</meta>
 	</class>
@@ -73350,6 +74906,7 @@
 		<haxe_doc>* The scene class of the skill screen.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Skill"</e></m>
 			<m n=":native"><e>"Scene_Skill"</e></m>
 		</meta>
 	</class>
@@ -73371,6 +74928,7 @@
 		<haxe_doc>* Scene class of the status screen in RPGMakerMV.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Status"</e></m>
 			<m n=":native"><e>"Scene_Status"</e></m>
 		</meta>
 	</class>
@@ -73455,6 +75013,7 @@
 		</playTitleMusic>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Title"</e></m>
 			<m n=":native"><e>"Scene_Title"</e></m>
 		</meta>
 	</class>
@@ -73497,6 +75056,7 @@
 		</updateAnimation>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Battler"</e></m>
 			<m n=":native"><e>"Sprite_Battler"</e></m>
 		</meta>
 	</class>
@@ -73671,6 +75231,7 @@
  * The sprite for displaying an actor.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Actor"</e></m>
 			<m n=":native"><e>"Sprite_Actor"</e></m>
 		</meta>
 	</class>
@@ -73839,6 +75400,7 @@
  * The sprite for displaying an animation.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Animation"</e></m>
 			<m n=":native"><e>"Sprite_Animation"</e></m>
 		</meta>
 	</class>
@@ -73898,6 +75460,7 @@
  * The sprite for displaying a balloon icon.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Balloon"</e></m>
 			<m n=":native"><e>"Sprite_Balloon"</e></m>
 		</meta>
 	</class>
@@ -74012,6 +75575,7 @@
  * The sprite for displaying a button.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Button"</e></m>
 			<m n=":native"><e>"Sprite_Button"</e></m>
 		</meta>
 	</class>
@@ -74189,6 +75753,7 @@
  * The sprite for displaying a character.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Character"</e></m>
 			<m n=":native"><e>"Sprite_Character"</e></m>
 		</meta>
 	</class>
@@ -74267,6 +75832,7 @@
  * The sprite for displaying a popup damage.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Damage"</e></m>
 			<m n=":native"><e>"Sprite_Damage"</e></m>
 		</meta>
 	</class>
@@ -74295,7 +75861,11 @@
  * Sprite_Destination
  *
  * The sprite for displaying the destination place of the touch input.</haxe_doc>
-		<meta><m n=":directlyUsed"/></meta>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Destination"</e></m>
+			<m n=":native"><e>"Sprite_Destination"</e></m>
+		</meta>
 	</class>
 	<class path="rm.sprites.Sprite_Enemy" params="" file="src/rm/sprites/Sprite_Enemy.hx" extern="1">
 		<extends path="rm.sprites.Sprite_Battler"/>
@@ -74444,6 +76014,7 @@
  * The sprite for displaying an enemy.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Enemy"</e></m>
 			<m n=":native"><e>"Sprite_Enemy"</e></m>
 		</meta>
 	</class>
@@ -74469,6 +76040,7 @@
  * The sprite for displaying a picture.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Picture"</e></m>
 			<m n=":native"><e>"Sprite_Picture"</e></m>
 		</meta>
 	</class>
@@ -74515,6 +76087,7 @@
  * The sprite for displaying state icons.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_StateIcon"</e></m>
 			<m n=":native"><e>"Sprite_StateIcon"</e></m>
 		</meta>
 	</class>
@@ -74559,6 +76132,7 @@
  * The sprite for displaying an overlay image for a state.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_StateOverlay"</e></m>
 			<m n=":native"><e>"Sprite_StateOverlay"</e></m>
 		</meta>
 	</class>
@@ -74608,6 +76182,7 @@
  * The sprite for displaying the timer.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Timer"</e></m>
 			<m n=":native"><e>"Sprite_Timer"</e></m>
 		</meta>
 	</class>
@@ -74658,6 +76233,7 @@
  * The sprite for displaying a weapon image for attacking.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Sprite_Weapon"</e></m>
 			<m n=":native"><e>"Sprite_Weapon"</e></m>
 		</meta>
 	</class>
@@ -74757,6 +76333,7 @@
  * The superdeclare class of Spriteset_Map and Spriteset_Battle.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Spriteset_Base"</e></m>
 			<m n=":native"><e>"Spriteset_Base"</e></m>
 		</meta>
 	</class>
@@ -74961,8 +76538,13 @@
   * @returns {boolean}
   * @memberof Spriteset_Battle</haxe_doc>
 		</isBusy>
+		<haxe_doc>* -----------------------------------------------------------------------------
+ * Spriteset_Battle
+ *
+ * The set of sprites on the battle screen.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Spriteset_Battle"</e></m>
 			<m n=":native"><e>"Spriteset_Battle"</e></m>
 		</meta>
 	</class>
@@ -75062,7 +76644,8 @@
  * The set of sprites on the map screen.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
-			<m n=":native"><e>"Spriteset_map"</e></m>
+			<m n=":expose"><e>"Spriteset_Map"</e></m>
+			<m n=":native"><e>"Spriteset_Map"</e></m>
 		</meta>
 	</class>
 	<abstract path="rm.types.StateId" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
@@ -75074,9 +76657,29 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.types._LunaTea.StateId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
+		<impl><class path="rm.types._LunaTea.StateId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="6" static="1">
+		<x path="rm.types.StateId"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
 	</abstract>
-	<class path="rm.types._LunaTea.StateId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
+	<class path="rm.types._LunaTea.StateId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="6" static="1">
+			<x path="rm.types.StateId"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<abstract path="rm.types.BuffId" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
@@ -75086,9 +76689,29 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.types._LunaTea.BuffId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
+		<impl><class path="rm.types._LunaTea.BuffId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="12" static="1">
+		<x path="rm.types.BuffId"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
 	</abstract>
-	<class path="rm.types._LunaTea.BuffId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
+	<class path="rm.types._LunaTea.BuffId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="12" static="1">
+			<x path="rm.types.BuffId"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<abstract path="rm.types.ParameterId" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
@@ -75098,9 +76721,29 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.types._LunaTea.ParameterId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
+		<impl><class path="rm.types._LunaTea.ParameterId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="18" static="1">
+		<x path="rm.types.ParameterId"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
 	</abstract>
-	<class path="rm.types._LunaTea.ParameterId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
+	<class path="rm.types._LunaTea.ParameterId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="18" static="1">
+			<x path="rm.types.ParameterId"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<abstract path="rm.types.EquipTypeId" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
@@ -75110,9 +76753,93 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.types._LunaTea.EquipTypeId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
+		<impl><class path="rm.types._LunaTea.EquipTypeId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="24" static="1">
+		<x path="rm.types.EquipTypeId"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
 	</abstract>
-	<class path="rm.types._LunaTea.EquipTypeId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
+	<class path="rm.types._LunaTea.EquipTypeId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="24" static="1">
+			<x path="rm.types.EquipTypeId"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="rm.types.SkillId" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.SkillId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="30" static="1">
+		<x path="rm.types.SkillId"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.SkillId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="30" static="1">
+			<x path="rm.types.SkillId"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="rm.types.ActionState" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><c path="String"/></icast></from>
+		<this><c path="String"/></this>
+		<to><icast><c path="String"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.ActionState_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="36" static="1">
+		<x path="rm.types.ActionState"/>
+		<meta>
+			<m n=":value"><e>cast ""</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.ActionState_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="36" static="1">
+			<x path="rm.types.ActionState"/>
+			<meta>
+				<m n=":value"><e>cast ""</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<abstract path="rm.types.BalloonId" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
@@ -75126,7 +76853,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.BalloonId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-	<EXCLAMATION public="1" get="inline" set="null" expr="cast 0" line="26" static="1">
+	<EXCLAMATION public="1" get="inline" set="null" expr="cast 0" line="42" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -75134,7 +76861,7 @@
 			<m n=":impl"/>
 		</meta>
 	</EXCLAMATION>
-	<QUESTION public="1" get="inline" set="null" expr="cast 1" line="27" static="1">
+	<QUESTION public="1" get="inline" set="null" expr="cast 1" line="43" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -75142,7 +76869,7 @@
 			<m n=":impl"/>
 		</meta>
 	</QUESTION>
-	<MUSIC_NOTE public="1" get="inline" set="null" expr="cast 2" line="28" static="1">
+	<MUSIC_NOTE public="1" get="inline" set="null" expr="cast 2" line="44" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -75150,7 +76877,7 @@
 			<m n=":impl"/>
 		</meta>
 	</MUSIC_NOTE>
-	<HEART public="1" get="inline" set="null" expr="cast 3" line="29" static="1">
+	<HEART public="1" get="inline" set="null" expr="cast 3" line="45" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -75158,7 +76885,7 @@
 			<m n=":impl"/>
 		</meta>
 	</HEART>
-	<ANGER public="1" get="inline" set="null" expr="cast 4" line="30" static="1">
+	<ANGER public="1" get="inline" set="null" expr="cast 4" line="46" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -75166,7 +76893,7 @@
 			<m n=":impl"/>
 		</meta>
 	</ANGER>
-	<SWEAT public="1" get="inline" set="null" expr="cast 5" line="31" static="1">
+	<SWEAT public="1" get="inline" set="null" expr="cast 5" line="47" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 5</e></m>
@@ -75174,7 +76901,7 @@
 			<m n=":impl"/>
 		</meta>
 	</SWEAT>
-	<COBWEB public="1" get="inline" set="null" expr="cast 6" line="32" static="1">
+	<COBWEB public="1" get="inline" set="null" expr="cast 6" line="48" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 6</e></m>
@@ -75182,7 +76909,7 @@
 			<m n=":impl"/>
 		</meta>
 	</COBWEB>
-	<SILENCE public="1" get="inline" set="null" expr="cast 7" line="33" static="1">
+	<SILENCE public="1" get="inline" set="null" expr="cast 7" line="49" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 7</e></m>
@@ -75190,7 +76917,7 @@
 			<m n=":impl"/>
 		</meta>
 	</SILENCE>
-	<LIGHT_BULB public="1" get="inline" set="null" expr="cast 8" line="34" static="1">
+	<LIGHT_BULB public="1" get="inline" set="null" expr="cast 8" line="50" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 8</e></m>
@@ -75198,7 +76925,7 @@
 			<m n=":impl"/>
 		</meta>
 	</LIGHT_BULB>
-	<ZZZ public="1" get="inline" set="null" expr="cast 9" line="35" static="1">
+	<ZZZ public="1" get="inline" set="null" expr="cast 9" line="51" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 9</e></m>
@@ -75206,7 +76933,7 @@
 			<m n=":impl"/>
 		</meta>
 	</ZZZ>
-	<toString public="1" get="inline" set="null" line="38" static="1">
+	<toString public="1" get="inline" set="null" line="54" static="1">
 		<f a="value">
 			<x path="rm.types.BalloonId"/>
 			<c path="String"/>
@@ -75220,7 +76947,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.BalloonId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-		<EXCLAMATION public="1" get="inline" set="null" expr="cast 0" line="26" static="1">
+		<EXCLAMATION public="1" get="inline" set="null" expr="cast 0" line="42" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -75228,7 +76955,7 @@
 				<m n=":impl"/>
 			</meta>
 		</EXCLAMATION>
-		<QUESTION public="1" get="inline" set="null" expr="cast 1" line="27" static="1">
+		<QUESTION public="1" get="inline" set="null" expr="cast 1" line="43" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -75236,7 +76963,7 @@
 				<m n=":impl"/>
 			</meta>
 		</QUESTION>
-		<MUSIC_NOTE public="1" get="inline" set="null" expr="cast 2" line="28" static="1">
+		<MUSIC_NOTE public="1" get="inline" set="null" expr="cast 2" line="44" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -75244,7 +76971,7 @@
 				<m n=":impl"/>
 			</meta>
 		</MUSIC_NOTE>
-		<HEART public="1" get="inline" set="null" expr="cast 3" line="29" static="1">
+		<HEART public="1" get="inline" set="null" expr="cast 3" line="45" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -75252,7 +76979,7 @@
 				<m n=":impl"/>
 			</meta>
 		</HEART>
-		<ANGER public="1" get="inline" set="null" expr="cast 4" line="30" static="1">
+		<ANGER public="1" get="inline" set="null" expr="cast 4" line="46" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -75260,7 +76987,7 @@
 				<m n=":impl"/>
 			</meta>
 		</ANGER>
-		<SWEAT public="1" get="inline" set="null" expr="cast 5" line="31" static="1">
+		<SWEAT public="1" get="inline" set="null" expr="cast 5" line="47" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 5</e></m>
@@ -75268,7 +76995,7 @@
 				<m n=":impl"/>
 			</meta>
 		</SWEAT>
-		<COBWEB public="1" get="inline" set="null" expr="cast 6" line="32" static="1">
+		<COBWEB public="1" get="inline" set="null" expr="cast 6" line="48" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 6</e></m>
@@ -75276,7 +77003,7 @@
 				<m n=":impl"/>
 			</meta>
 		</COBWEB>
-		<SILENCE public="1" get="inline" set="null" expr="cast 7" line="33" static="1">
+		<SILENCE public="1" get="inline" set="null" expr="cast 7" line="49" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 7</e></m>
@@ -75284,7 +77011,7 @@
 				<m n=":impl"/>
 			</meta>
 		</SILENCE>
-		<LIGHT_BULB public="1" get="inline" set="null" expr="cast 8" line="34" static="1">
+		<LIGHT_BULB public="1" get="inline" set="null" expr="cast 8" line="50" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 8</e></m>
@@ -75292,7 +77019,7 @@
 				<m n=":impl"/>
 			</meta>
 		</LIGHT_BULB>
-		<ZZZ public="1" get="inline" set="null" expr="cast 9" line="35" static="1">
+		<ZZZ public="1" get="inline" set="null" expr="cast 9" line="51" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 9</e></m>
@@ -75300,7 +77027,7 @@
 				<m n=":impl"/>
 			</meta>
 		</ZZZ>
-		<toString public="1" get="inline" set="null" line="38" static="1">
+		<toString public="1" get="inline" set="null" line="54" static="1">
 			<f a="value">
 				<x path="rm.types.BalloonId"/>
 				<c path="String"/>
@@ -75321,9 +77048,29 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.types._LunaTea.AnimationSpeed_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
+		<impl><class path="rm.types._LunaTea.AnimationSpeed_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="86" static="1">
+		<x path="rm.types.AnimationSpeed"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
 	</abstract>
-	<class path="rm.types._LunaTea.AnimationSpeed_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
+	<class path="rm.types._LunaTea.AnimationSpeed_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="86" static="1">
+			<x path="rm.types.AnimationSpeed"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<abstract path="rm.types.WeaponImageId" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
@@ -75333,9 +77080,61 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.types._LunaTea.WeaponImageId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
+		<impl><class path="rm.types._LunaTea.WeaponImageId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="92" static="1">
+		<x path="rm.types.WeaponImageId"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
 	</abstract>
-	<class path="rm.types._LunaTea.WeaponImageId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
+	<class path="rm.types._LunaTea.WeaponImageId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="92" static="1">
+			<x path="rm.types.WeaponImageId"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="rm.types.AnimationId" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.AnimationId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="98" static="1">
+		<x path="rm.types.AnimationId"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.AnimationId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="98" static="1">
+			<x path="rm.types.AnimationId"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<abstract path="rm.types.CharacterPattern" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
@@ -75358,7 +77157,7 @@
  * on different scenes in MV/rm.</haxe_doc>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="rm.types._LunaTea.MotionType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<WALK public="1" get="inline" set="null" expr="cast &quot;walk&quot;" line="91" static="1">
+	<WALK public="1" get="inline" set="null" expr="cast &quot;walk&quot;" line="115" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "walk"</e></m>
@@ -75366,7 +77165,7 @@
 			<m n=":impl"/>
 		</meta>
 	</WALK>
-	<WAIT public="1" get="inline" set="null" expr="cast &quot;wait&quot;" line="92" static="1">
+	<WAIT public="1" get="inline" set="null" expr="cast &quot;wait&quot;" line="116" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "wait"</e></m>
@@ -75374,7 +77173,7 @@
 			<m n=":impl"/>
 		</meta>
 	</WAIT>
-	<CHANT public="1" get="inline" set="null" expr="cast &quot;chant&quot;" line="93" static="1">
+	<CHANT public="1" get="inline" set="null" expr="cast &quot;chant&quot;" line="117" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "chant"</e></m>
@@ -75382,7 +77181,7 @@
 			<m n=":impl"/>
 		</meta>
 	</CHANT>
-	<GUARD public="1" get="inline" set="null" expr="cast &quot;guard&quot;" line="94" static="1">
+	<GUARD public="1" get="inline" set="null" expr="cast &quot;guard&quot;" line="118" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "guard"</e></m>
@@ -75390,7 +77189,7 @@
 			<m n=":impl"/>
 		</meta>
 	</GUARD>
-	<DAMAGE public="1" get="inline" set="null" expr="cast &quot;damage&quot;" line="95" static="1">
+	<DAMAGE public="1" get="inline" set="null" expr="cast &quot;damage&quot;" line="119" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "damage"</e></m>
@@ -75398,7 +77197,7 @@
 			<m n=":impl"/>
 		</meta>
 	</DAMAGE>
-	<EVADE public="1" get="inline" set="null" expr="cast &quot;evade&quot;" line="96" static="1">
+	<EVADE public="1" get="inline" set="null" expr="cast &quot;evade&quot;" line="120" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "evade"</e></m>
@@ -75406,7 +77205,7 @@
 			<m n=":impl"/>
 		</meta>
 	</EVADE>
-	<THRUST public="1" get="inline" set="null" expr="cast &quot;thrust&quot;" line="97" static="1">
+	<THRUST public="1" get="inline" set="null" expr="cast &quot;thrust&quot;" line="121" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "thrust"</e></m>
@@ -75414,7 +77213,7 @@
 			<m n=":impl"/>
 		</meta>
 	</THRUST>
-	<MISSLE public="1" get="inline" set="null" expr="cast &quot;missle&quot;" line="98" static="1">
+	<MISSLE public="1" get="inline" set="null" expr="cast &quot;missle&quot;" line="122" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "missle"</e></m>
@@ -75422,7 +77221,7 @@
 			<m n=":impl"/>
 		</meta>
 	</MISSLE>
-	<SKILL public="1" get="inline" set="null" expr="cast &quot;SKILL&quot;" line="99" static="1">
+	<SKILL public="1" get="inline" set="null" expr="cast &quot;SKILL&quot;" line="123" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "SKILL"</e></m>
@@ -75430,7 +77229,7 @@
 			<m n=":impl"/>
 		</meta>
 	</SKILL>
-	<SPELL public="1" get="inline" set="null" expr="cast &quot;spell&quot;" line="100" static="1">
+	<SPELL public="1" get="inline" set="null" expr="cast &quot;spell&quot;" line="124" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "spell"</e></m>
@@ -75438,7 +77237,7 @@
 			<m n=":impl"/>
 		</meta>
 	</SPELL>
-	<ITEM public="1" get="inline" set="null" expr="cast &quot;item&quot;" line="101" static="1">
+	<ITEM public="1" get="inline" set="null" expr="cast &quot;item&quot;" line="125" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "item"</e></m>
@@ -75446,7 +77245,7 @@
 			<m n=":impl"/>
 		</meta>
 	</ITEM>
-	<ESCAPE public="1" get="inline" set="null" expr="cast &quot;escape&quot;" line="102" static="1">
+	<ESCAPE public="1" get="inline" set="null" expr="cast &quot;escape&quot;" line="126" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "escape"</e></m>
@@ -75454,7 +77253,7 @@
 			<m n=":impl"/>
 		</meta>
 	</ESCAPE>
-	<VICTORY public="1" get="inline" set="null" expr="cast &quot;victory&quot;" line="103" static="1">
+	<VICTORY public="1" get="inline" set="null" expr="cast &quot;victory&quot;" line="127" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "victory"</e></m>
@@ -75462,7 +77261,7 @@
 			<m n=":impl"/>
 		</meta>
 	</VICTORY>
-	<DYING public="1" get="inline" set="null" expr="cast &quot;dying&quot;" line="104" static="1">
+	<DYING public="1" get="inline" set="null" expr="cast &quot;dying&quot;" line="128" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "dying"</e></m>
@@ -75470,7 +77269,7 @@
 			<m n=":impl"/>
 		</meta>
 	</DYING>
-	<ABNORMAL public="1" get="inline" set="null" expr="cast &quot;abnormal&quot;" line="105" static="1">
+	<ABNORMAL public="1" get="inline" set="null" expr="cast &quot;abnormal&quot;" line="129" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "abnormal"</e></m>
@@ -75478,7 +77277,7 @@
 			<m n=":impl"/>
 		</meta>
 	</ABNORMAL>
-	<SLEEP public="1" get="inline" set="null" expr="cast &quot;sleep&quot;" line="106" static="1">
+	<SLEEP public="1" get="inline" set="null" expr="cast &quot;sleep&quot;" line="130" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "sleep"</e></m>
@@ -75486,7 +77285,7 @@
 			<m n=":impl"/>
 		</meta>
 	</SLEEP>
-	<DEAD public="1" get="inline" set="null" expr="cast &quot;dead&quot;" line="107" static="1">
+	<DEAD public="1" get="inline" set="null" expr="cast &quot;dead&quot;" line="131" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "dead"</e></m>
@@ -75498,7 +77297,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.MotionType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<WALK public="1" get="inline" set="null" expr="cast &quot;walk&quot;" line="91" static="1">
+		<WALK public="1" get="inline" set="null" expr="cast &quot;walk&quot;" line="115" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "walk"</e></m>
@@ -75506,7 +77305,7 @@
 				<m n=":impl"/>
 			</meta>
 		</WALK>
-		<WAIT public="1" get="inline" set="null" expr="cast &quot;wait&quot;" line="92" static="1">
+		<WAIT public="1" get="inline" set="null" expr="cast &quot;wait&quot;" line="116" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "wait"</e></m>
@@ -75514,7 +77313,7 @@
 				<m n=":impl"/>
 			</meta>
 		</WAIT>
-		<CHANT public="1" get="inline" set="null" expr="cast &quot;chant&quot;" line="93" static="1">
+		<CHANT public="1" get="inline" set="null" expr="cast &quot;chant&quot;" line="117" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "chant"</e></m>
@@ -75522,7 +77321,7 @@
 				<m n=":impl"/>
 			</meta>
 		</CHANT>
-		<GUARD public="1" get="inline" set="null" expr="cast &quot;guard&quot;" line="94" static="1">
+		<GUARD public="1" get="inline" set="null" expr="cast &quot;guard&quot;" line="118" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "guard"</e></m>
@@ -75530,7 +77329,7 @@
 				<m n=":impl"/>
 			</meta>
 		</GUARD>
-		<DAMAGE public="1" get="inline" set="null" expr="cast &quot;damage&quot;" line="95" static="1">
+		<DAMAGE public="1" get="inline" set="null" expr="cast &quot;damage&quot;" line="119" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "damage"</e></m>
@@ -75538,7 +77337,7 @@
 				<m n=":impl"/>
 			</meta>
 		</DAMAGE>
-		<EVADE public="1" get="inline" set="null" expr="cast &quot;evade&quot;" line="96" static="1">
+		<EVADE public="1" get="inline" set="null" expr="cast &quot;evade&quot;" line="120" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "evade"</e></m>
@@ -75546,7 +77345,7 @@
 				<m n=":impl"/>
 			</meta>
 		</EVADE>
-		<THRUST public="1" get="inline" set="null" expr="cast &quot;thrust&quot;" line="97" static="1">
+		<THRUST public="1" get="inline" set="null" expr="cast &quot;thrust&quot;" line="121" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "thrust"</e></m>
@@ -75554,7 +77353,7 @@
 				<m n=":impl"/>
 			</meta>
 		</THRUST>
-		<MISSLE public="1" get="inline" set="null" expr="cast &quot;missle&quot;" line="98" static="1">
+		<MISSLE public="1" get="inline" set="null" expr="cast &quot;missle&quot;" line="122" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "missle"</e></m>
@@ -75562,7 +77361,7 @@
 				<m n=":impl"/>
 			</meta>
 		</MISSLE>
-		<SKILL public="1" get="inline" set="null" expr="cast &quot;SKILL&quot;" line="99" static="1">
+		<SKILL public="1" get="inline" set="null" expr="cast &quot;SKILL&quot;" line="123" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "SKILL"</e></m>
@@ -75570,7 +77369,7 @@
 				<m n=":impl"/>
 			</meta>
 		</SKILL>
-		<SPELL public="1" get="inline" set="null" expr="cast &quot;spell&quot;" line="100" static="1">
+		<SPELL public="1" get="inline" set="null" expr="cast &quot;spell&quot;" line="124" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "spell"</e></m>
@@ -75578,7 +77377,7 @@
 				<m n=":impl"/>
 			</meta>
 		</SPELL>
-		<ITEM public="1" get="inline" set="null" expr="cast &quot;item&quot;" line="101" static="1">
+		<ITEM public="1" get="inline" set="null" expr="cast &quot;item&quot;" line="125" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "item"</e></m>
@@ -75586,7 +77385,7 @@
 				<m n=":impl"/>
 			</meta>
 		</ITEM>
-		<ESCAPE public="1" get="inline" set="null" expr="cast &quot;escape&quot;" line="102" static="1">
+		<ESCAPE public="1" get="inline" set="null" expr="cast &quot;escape&quot;" line="126" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "escape"</e></m>
@@ -75594,7 +77393,7 @@
 				<m n=":impl"/>
 			</meta>
 		</ESCAPE>
-		<VICTORY public="1" get="inline" set="null" expr="cast &quot;victory&quot;" line="103" static="1">
+		<VICTORY public="1" get="inline" set="null" expr="cast &quot;victory&quot;" line="127" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "victory"</e></m>
@@ -75602,7 +77401,7 @@
 				<m n=":impl"/>
 			</meta>
 		</VICTORY>
-		<DYING public="1" get="inline" set="null" expr="cast &quot;dying&quot;" line="104" static="1">
+		<DYING public="1" get="inline" set="null" expr="cast &quot;dying&quot;" line="128" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "dying"</e></m>
@@ -75610,7 +77409,7 @@
 				<m n=":impl"/>
 			</meta>
 		</DYING>
-		<ABNORMAL public="1" get="inline" set="null" expr="cast &quot;abnormal&quot;" line="105" static="1">
+		<ABNORMAL public="1" get="inline" set="null" expr="cast &quot;abnormal&quot;" line="129" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "abnormal"</e></m>
@@ -75618,7 +77417,7 @@
 				<m n=":impl"/>
 			</meta>
 		</ABNORMAL>
-		<SLEEP public="1" get="inline" set="null" expr="cast &quot;sleep&quot;" line="106" static="1">
+		<SLEEP public="1" get="inline" set="null" expr="cast &quot;sleep&quot;" line="130" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "sleep"</e></m>
@@ -75626,7 +77425,7 @@
 				<m n=":impl"/>
 			</meta>
 		</SLEEP>
-		<DEAD public="1" get="inline" set="null" expr="cast &quot;dead&quot;" line="107" static="1">
+		<DEAD public="1" get="inline" set="null" expr="cast &quot;dead&quot;" line="131" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "dead"</e></m>
@@ -75647,7 +77446,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.MoveType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-	<FIXED public="1" get="inline" set="null" expr="cast 0" line="116" static="1">
+	<FIXED public="1" get="inline" set="null" expr="cast 0" line="140" static="1">
 		<x path="rm.types.MoveType"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -75655,7 +77454,7 @@
 			<m n=":impl"/>
 		</meta>
 	</FIXED>
-	<RANDOM public="1" get="inline" set="null" expr="cast 1" line="117" static="1">
+	<RANDOM public="1" get="inline" set="null" expr="cast 1" line="141" static="1">
 		<x path="rm.types.MoveType"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -75663,7 +77462,7 @@
 			<m n=":impl"/>
 		</meta>
 	</RANDOM>
-	<APPROACH public="1" get="inline" set="null" expr="cast 2" line="118" static="1">
+	<APPROACH public="1" get="inline" set="null" expr="cast 2" line="142" static="1">
 		<x path="rm.types.MoveType"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -75671,7 +77470,7 @@
 			<m n=":impl"/>
 		</meta>
 	</APPROACH>
-	<CUSTOM public="1" get="inline" set="null" expr="cast 3" line="119" static="1">
+	<CUSTOM public="1" get="inline" set="null" expr="cast 3" line="143" static="1">
 		<x path="rm.types.MoveType"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -75679,7 +77478,7 @@
 			<m n=":impl"/>
 		</meta>
 	</CUSTOM>
-	<toString public="1" get="inline" set="null" line="122" static="1">
+	<toString public="1" get="inline" set="null" line="146" static="1">
 		<f a="value">
 			<x path="rm.types.MoveType"/>
 			<c path="String"/>
@@ -75690,7 +77489,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.MoveType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-		<FIXED public="1" get="inline" set="null" expr="cast 0" line="116" static="1">
+		<FIXED public="1" get="inline" set="null" expr="cast 0" line="140" static="1">
 			<x path="rm.types.MoveType"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -75698,7 +77497,7 @@
 				<m n=":impl"/>
 			</meta>
 		</FIXED>
-		<RANDOM public="1" get="inline" set="null" expr="cast 1" line="117" static="1">
+		<RANDOM public="1" get="inline" set="null" expr="cast 1" line="141" static="1">
 			<x path="rm.types.MoveType"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -75706,7 +77505,7 @@
 				<m n=":impl"/>
 			</meta>
 		</RANDOM>
-		<APPROACH public="1" get="inline" set="null" expr="cast 2" line="118" static="1">
+		<APPROACH public="1" get="inline" set="null" expr="cast 2" line="142" static="1">
 			<x path="rm.types.MoveType"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -75714,7 +77513,7 @@
 				<m n=":impl"/>
 			</meta>
 		</APPROACH>
-		<CUSTOM public="1" get="inline" set="null" expr="cast 3" line="119" static="1">
+		<CUSTOM public="1" get="inline" set="null" expr="cast 3" line="143" static="1">
 			<x path="rm.types.MoveType"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -75722,7 +77521,7 @@
 				<m n=":impl"/>
 			</meta>
 		</CUSTOM>
-		<toString public="1" get="inline" set="null" line="122" static="1">
+		<toString public="1" get="inline" set="null" line="146" static="1">
 			<f a="value">
 				<x path="rm.types.MoveType"/>
 				<c path="String"/>
@@ -75745,7 +77544,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.MoveSpeed_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-	<X8SLOWER public="1" get="inline" set="null" expr="cast 1" line="144" static="1">
+	<X8SLOWER public="1" get="inline" set="null" expr="cast 1" line="168" static="1">
 		<x path="rm.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -75753,7 +77552,7 @@
 			<m n=":impl"/>
 		</meta>
 	</X8SLOWER>
-	<X4SLOWER public="1" get="inline" set="null" expr="cast 2" line="145" static="1">
+	<X4SLOWER public="1" get="inline" set="null" expr="cast 2" line="169" static="1">
 		<x path="rm.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -75761,7 +77560,7 @@
 			<m n=":impl"/>
 		</meta>
 	</X4SLOWER>
-	<X2SLOWER public="1" get="inline" set="null" expr="cast 3" line="146" static="1">
+	<X2SLOWER public="1" get="inline" set="null" expr="cast 3" line="170" static="1">
 		<x path="rm.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -75769,7 +77568,7 @@
 			<m n=":impl"/>
 		</meta>
 	</X2SLOWER>
-	<NORMAL public="1" get="inline" set="null" expr="cast 4" line="147" static="1">
+	<NORMAL public="1" get="inline" set="null" expr="cast 4" line="171" static="1">
 		<x path="rm.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -75777,7 +77576,7 @@
 			<m n=":impl"/>
 		</meta>
 	</NORMAL>
-	<X2FASTER public="1" get="inline" set="null" expr="cast 5" line="148" static="1">
+	<X2FASTER public="1" get="inline" set="null" expr="cast 5" line="172" static="1">
 		<x path="rm.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 5</e></m>
@@ -75785,7 +77584,7 @@
 			<m n=":impl"/>
 		</meta>
 	</X2FASTER>
-	<X4FASTER public="1" get="inline" set="null" expr="cast 6" line="149" static="1">
+	<X4FASTER public="1" get="inline" set="null" expr="cast 6" line="173" static="1">
 		<x path="rm.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 6</e></m>
@@ -75793,7 +77592,7 @@
 			<m n=":impl"/>
 		</meta>
 	</X4FASTER>
-	<toString public="1" get="inline" set="null" line="152" static="1">
+	<toString public="1" get="inline" set="null" line="176" static="1">
 		<f a="value">
 			<x path="rm.types.MoveSpeed"/>
 			<c path="String"/>
@@ -75807,7 +77606,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.MoveSpeed_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-		<X8SLOWER public="1" get="inline" set="null" expr="cast 1" line="144" static="1">
+		<X8SLOWER public="1" get="inline" set="null" expr="cast 1" line="168" static="1">
 			<x path="rm.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -75815,7 +77614,7 @@
 				<m n=":impl"/>
 			</meta>
 		</X8SLOWER>
-		<X4SLOWER public="1" get="inline" set="null" expr="cast 2" line="145" static="1">
+		<X4SLOWER public="1" get="inline" set="null" expr="cast 2" line="169" static="1">
 			<x path="rm.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -75823,7 +77622,7 @@
 				<m n=":impl"/>
 			</meta>
 		</X4SLOWER>
-		<X2SLOWER public="1" get="inline" set="null" expr="cast 3" line="146" static="1">
+		<X2SLOWER public="1" get="inline" set="null" expr="cast 3" line="170" static="1">
 			<x path="rm.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -75831,7 +77630,7 @@
 				<m n=":impl"/>
 			</meta>
 		</X2SLOWER>
-		<NORMAL public="1" get="inline" set="null" expr="cast 4" line="147" static="1">
+		<NORMAL public="1" get="inline" set="null" expr="cast 4" line="171" static="1">
 			<x path="rm.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -75839,7 +77638,7 @@
 				<m n=":impl"/>
 			</meta>
 		</NORMAL>
-		<X2FASTER public="1" get="inline" set="null" expr="cast 5" line="148" static="1">
+		<X2FASTER public="1" get="inline" set="null" expr="cast 5" line="172" static="1">
 			<x path="rm.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 5</e></m>
@@ -75847,7 +77646,7 @@
 				<m n=":impl"/>
 			</meta>
 		</X2FASTER>
-		<X4FASTER public="1" get="inline" set="null" expr="cast 6" line="149" static="1">
+		<X4FASTER public="1" get="inline" set="null" expr="cast 6" line="173" static="1">
 			<x path="rm.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 6</e></m>
@@ -75855,7 +77654,7 @@
 				<m n=":impl"/>
 			</meta>
 		</X4FASTER>
-		<toString public="1" get="inline" set="null" line="152" static="1">
+		<toString public="1" get="inline" set="null" line="176" static="1">
 			<f a="value">
 				<x path="rm.types.MoveSpeed"/>
 				<c path="String"/>
@@ -75882,7 +77681,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.MoveFrequency_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-	<LOWEST public="1" get="inline" set="null" expr="cast 1" line="179" static="1">
+	<LOWEST public="1" get="inline" set="null" expr="cast 1" line="203" static="1">
 		<x path="rm.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -75890,7 +77689,7 @@
 			<m n=":impl"/>
 		</meta>
 	</LOWEST>
-	<LOWER public="1" get="inline" set="null" expr="cast 2" line="180" static="1">
+	<LOWER public="1" get="inline" set="null" expr="cast 2" line="204" static="1">
 		<x path="rm.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -75898,7 +77697,7 @@
 			<m n=":impl"/>
 		</meta>
 	</LOWER>
-	<NORMAL public="1" get="inline" set="null" expr="cast 3" line="181" static="1">
+	<NORMAL public="1" get="inline" set="null" expr="cast 3" line="205" static="1">
 		<x path="rm.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -75906,7 +77705,7 @@
 			<m n=":impl"/>
 		</meta>
 	</NORMAL>
-	<HIGHER public="1" get="inline" set="null" expr="cast 4" line="182" static="1">
+	<HIGHER public="1" get="inline" set="null" expr="cast 4" line="206" static="1">
 		<x path="rm.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -75914,7 +77713,7 @@
 			<m n=":impl"/>
 		</meta>
 	</HIGHER>
-	<HIGHEST public="1" get="inline" set="null" expr="cast 5" line="183" static="1">
+	<HIGHEST public="1" get="inline" set="null" expr="cast 5" line="207" static="1">
 		<x path="rm.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 5</e></m>
@@ -75922,7 +77721,7 @@
 			<m n=":impl"/>
 		</meta>
 	</HIGHEST>
-	<toString public="1" get="inline" set="null" line="186" static="1">
+	<toString public="1" get="inline" set="null" line="210" static="1">
 		<f a="value">
 			<x path="rm.types.MoveFrequency"/>
 			<c path="String"/>
@@ -75936,7 +77735,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.MoveFrequency_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-		<LOWEST public="1" get="inline" set="null" expr="cast 1" line="179" static="1">
+		<LOWEST public="1" get="inline" set="null" expr="cast 1" line="203" static="1">
 			<x path="rm.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -75944,7 +77743,7 @@
 				<m n=":impl"/>
 			</meta>
 		</LOWEST>
-		<LOWER public="1" get="inline" set="null" expr="cast 2" line="180" static="1">
+		<LOWER public="1" get="inline" set="null" expr="cast 2" line="204" static="1">
 			<x path="rm.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -75952,7 +77751,7 @@
 				<m n=":impl"/>
 			</meta>
 		</LOWER>
-		<NORMAL public="1" get="inline" set="null" expr="cast 3" line="181" static="1">
+		<NORMAL public="1" get="inline" set="null" expr="cast 3" line="205" static="1">
 			<x path="rm.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -75960,7 +77759,7 @@
 				<m n=":impl"/>
 			</meta>
 		</NORMAL>
-		<HIGHER public="1" get="inline" set="null" expr="cast 4" line="182" static="1">
+		<HIGHER public="1" get="inline" set="null" expr="cast 4" line="206" static="1">
 			<x path="rm.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -75968,7 +77767,7 @@
 				<m n=":impl"/>
 			</meta>
 		</HIGHER>
-		<HIGHEST public="1" get="inline" set="null" expr="cast 5" line="183" static="1">
+		<HIGHEST public="1" get="inline" set="null" expr="cast 5" line="207" static="1">
 			<x path="rm.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 5</e></m>
@@ -75976,7 +77775,7 @@
 				<m n=":impl"/>
 			</meta>
 		</HIGHEST>
-		<toString public="1" get="inline" set="null" line="186" static="1">
+		<toString public="1" get="inline" set="null" line="210" static="1">
 			<f a="value">
 				<x path="rm.types.MoveFrequency"/>
 				<c path="String"/>
@@ -76004,7 +77803,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.CharacterPriority_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-	<BELOW_CHARACTERS public="1" get="inline" set="null" expr="cast 0" line="212" static="1">
+	<BELOW_CHARACTERS public="1" get="inline" set="null" expr="cast 0" line="236" static="1">
 		<x path="rm.types.CharacterPriority"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -76012,7 +77811,7 @@
 			<m n=":impl"/>
 		</meta>
 	</BELOW_CHARACTERS>
-	<SAME_AS_CHARACTERS public="1" get="inline" set="null" expr="cast 1" line="213" static="1">
+	<SAME_AS_CHARACTERS public="1" get="inline" set="null" expr="cast 1" line="237" static="1">
 		<x path="rm.types.CharacterPriority"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -76020,7 +77819,7 @@
 			<m n=":impl"/>
 		</meta>
 	</SAME_AS_CHARACTERS>
-	<ABOVE_CHARACTERS public="1" get="inline" set="null" expr="cast 2" line="214" static="1">
+	<ABOVE_CHARACTERS public="1" get="inline" set="null" expr="cast 2" line="238" static="1">
 		<x path="rm.types.CharacterPriority"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -76028,7 +77827,7 @@
 			<m n=":impl"/>
 		</meta>
 	</ABOVE_CHARACTERS>
-	<toString public="1" get="inline" set="null" line="217" static="1">
+	<toString public="1" get="inline" set="null" line="241" static="1">
 		<f a="value">
 			<x path="rm.types.CharacterPriority"/>
 			<c path="String"/>
@@ -76042,7 +77841,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.CharacterPriority_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-		<BELOW_CHARACTERS public="1" get="inline" set="null" expr="cast 0" line="212" static="1">
+		<BELOW_CHARACTERS public="1" get="inline" set="null" expr="cast 0" line="236" static="1">
 			<x path="rm.types.CharacterPriority"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -76050,7 +77849,7 @@
 				<m n=":impl"/>
 			</meta>
 		</BELOW_CHARACTERS>
-		<SAME_AS_CHARACTERS public="1" get="inline" set="null" expr="cast 1" line="213" static="1">
+		<SAME_AS_CHARACTERS public="1" get="inline" set="null" expr="cast 1" line="237" static="1">
 			<x path="rm.types.CharacterPriority"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -76058,7 +77857,7 @@
 				<m n=":impl"/>
 			</meta>
 		</SAME_AS_CHARACTERS>
-		<ABOVE_CHARACTERS public="1" get="inline" set="null" expr="cast 2" line="214" static="1">
+		<ABOVE_CHARACTERS public="1" get="inline" set="null" expr="cast 2" line="238" static="1">
 			<x path="rm.types.CharacterPriority"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -76066,7 +77865,7 @@
 				<m n=":impl"/>
 			</meta>
 		</ABOVE_CHARACTERS>
-		<toString public="1" get="inline" set="null" line="217" static="1">
+		<toString public="1" get="inline" set="null" line="241" static="1">
 			<f a="value">
 				<x path="rm.types.CharacterPriority"/>
 				<c path="String"/>
@@ -76100,7 +77899,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.DamageColorType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<HP_DAMAGE public="1" get="inline" set="null" expr="cast 0" line="239" static="1">
+	<HP_DAMAGE public="1" get="inline" set="null" expr="cast 0" line="263" static="1">
 		<x path="rm.types.DamageColorType"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -76108,7 +77907,7 @@
 			<m n=":impl"/>
 		</meta>
 	</HP_DAMAGE>
-	<HP_RECOVER public="1" get="inline" set="null" expr="cast 1" line="240" static="1">
+	<HP_RECOVER public="1" get="inline" set="null" expr="cast 1" line="264" static="1">
 		<x path="rm.types.DamageColorType"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -76116,7 +77915,7 @@
 			<m n=":impl"/>
 		</meta>
 	</HP_RECOVER>
-	<MP_DAMAGE public="1" get="inline" set="null" expr="cast 2" line="241" static="1">
+	<MP_DAMAGE public="1" get="inline" set="null" expr="cast 2" line="265" static="1">
 		<x path="rm.types.DamageColorType"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -76124,7 +77923,7 @@
 			<m n=":impl"/>
 		</meta>
 	</MP_DAMAGE>
-	<MP_RECOVER public="1" get="inline" set="null" expr="cast 3" line="242" static="1">
+	<MP_RECOVER public="1" get="inline" set="null" expr="cast 3" line="266" static="1">
 		<x path="rm.types.DamageColorType"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -76132,7 +77931,7 @@
 			<m n=":impl"/>
 		</meta>
 	</MP_RECOVER>
-	<DEFAULT public="1" get="inline" set="null" expr="cast 4" line="247" static="1">
+	<DEFAULT public="1" get="inline" set="null" expr="cast 4" line="271" static="1">
 		<x path="rm.types.DamageColorType"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -76145,7 +77944,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.DamageColorType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<HP_DAMAGE public="1" get="inline" set="null" expr="cast 0" line="239" static="1">
+		<HP_DAMAGE public="1" get="inline" set="null" expr="cast 0" line="263" static="1">
 			<x path="rm.types.DamageColorType"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -76153,7 +77952,7 @@
 				<m n=":impl"/>
 			</meta>
 		</HP_DAMAGE>
-		<HP_RECOVER public="1" get="inline" set="null" expr="cast 1" line="240" static="1">
+		<HP_RECOVER public="1" get="inline" set="null" expr="cast 1" line="264" static="1">
 			<x path="rm.types.DamageColorType"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -76161,7 +77960,7 @@
 				<m n=":impl"/>
 			</meta>
 		</HP_RECOVER>
-		<MP_DAMAGE public="1" get="inline" set="null" expr="cast 2" line="241" static="1">
+		<MP_DAMAGE public="1" get="inline" set="null" expr="cast 2" line="265" static="1">
 			<x path="rm.types.DamageColorType"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -76169,7 +77968,7 @@
 				<m n=":impl"/>
 			</meta>
 		</MP_DAMAGE>
-		<MP_RECOVER public="1" get="inline" set="null" expr="cast 3" line="242" static="1">
+		<MP_RECOVER public="1" get="inline" set="null" expr="cast 3" line="266" static="1">
 			<x path="rm.types.DamageColorType"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -76177,7 +77976,7 @@
 				<m n=":impl"/>
 			</meta>
 		</MP_RECOVER>
-		<DEFAULT public="1" get="inline" set="null" expr="cast 4" line="247" static="1">
+		<DEFAULT public="1" get="inline" set="null" expr="cast 4" line="271" static="1">
 			<x path="rm.types.DamageColorType"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -76197,9 +77996,29 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.types._LunaTea.WaitMode_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
+		<impl><class path="rm.types._LunaTea.WaitMode_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="277" static="1">
+		<x path="rm.types.WaitMode"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
 	</abstract>
-	<class path="rm.types._LunaTea.WaitMode_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
+	<class path="rm.types._LunaTea.WaitMode_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="277" static="1">
+			<x path="rm.types.WaitMode"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<abstract path="rm.types.Frames" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
@@ -76209,9 +78028,29 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.types._LunaTea.Frames_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
+		<impl><class path="rm.types._LunaTea.Frames_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="283" static="1">
+		<x path="rm.types.Frames"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
 	</abstract>
-	<class path="rm.types._LunaTea.Frames_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
+	<class path="rm.types._LunaTea.Frames_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="283" static="1">
+			<x path="rm.types.Frames"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<abstract path="rm.types.Money" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
@@ -76221,9 +78060,29 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.types._LunaTea.Money_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
+		<impl><class path="rm.types._LunaTea.Money_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="289" static="1">
+		<x path="rm.types.Money"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
 	</abstract>
-	<class path="rm.types._LunaTea.Money_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
+	<class path="rm.types._LunaTea.Money_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="289" static="1">
+			<x path="rm.types.Money"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<abstract path="rm.types.GaugeType" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
 		<from><icast><c path="String"/></icast></from>
 		<this><c path="String"/></this>
@@ -76234,7 +78093,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.GaugeType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<HP public="1" get="inline" set="null" expr="cast &quot;hp&quot;" line="268" static="1">
+	<HP public="1" get="inline" set="null" expr="cast &quot;hp&quot;" line="295" static="1">
 		<x path="rm.types.GaugeType"/>
 		<meta>
 			<m n=":value"><e>cast "hp"</e></m>
@@ -76242,7 +78101,7 @@
 			<m n=":impl"/>
 		</meta>
 	</HP>
-	<MP public="1" get="inline" set="null" expr="cast &quot;mp&quot;" line="269" static="1">
+	<MP public="1" get="inline" set="null" expr="cast &quot;mp&quot;" line="296" static="1">
 		<x path="rm.types.GaugeType"/>
 		<meta>
 			<m n=":value"><e>cast "mp"</e></m>
@@ -76250,7 +78109,7 @@
 			<m n=":impl"/>
 		</meta>
 	</MP>
-	<TP public="1" get="inline" set="null" expr="cast &quot;tp&quot;" line="270" static="1">
+	<TP public="1" get="inline" set="null" expr="cast &quot;tp&quot;" line="297" static="1">
 		<x path="rm.types.GaugeType"/>
 		<meta>
 			<m n=":value"><e>cast "tp"</e></m>
@@ -76258,7 +78117,7 @@
 			<m n=":impl"/>
 		</meta>
 	</TP>
-	<TIME public="1" get="inline" set="null" expr="cast &quot;time&quot;" line="271" static="1">
+	<TIME public="1" get="inline" set="null" expr="cast &quot;time&quot;" line="298" static="1">
 		<x path="rm.types.GaugeType"/>
 		<meta>
 			<m n=":value"><e>cast "time"</e></m>
@@ -76270,7 +78129,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.GaugeType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<HP public="1" get="inline" set="null" expr="cast &quot;hp&quot;" line="268" static="1">
+		<HP public="1" get="inline" set="null" expr="cast &quot;hp&quot;" line="295" static="1">
 			<x path="rm.types.GaugeType"/>
 			<meta>
 				<m n=":value"><e>cast "hp"</e></m>
@@ -76278,7 +78137,7 @@
 				<m n=":impl"/>
 			</meta>
 		</HP>
-		<MP public="1" get="inline" set="null" expr="cast &quot;mp&quot;" line="269" static="1">
+		<MP public="1" get="inline" set="null" expr="cast &quot;mp&quot;" line="296" static="1">
 			<x path="rm.types.GaugeType"/>
 			<meta>
 				<m n=":value"><e>cast "mp"</e></m>
@@ -76286,7 +78145,7 @@
 				<m n=":impl"/>
 			</meta>
 		</MP>
-		<TP public="1" get="inline" set="null" expr="cast &quot;tp&quot;" line="270" static="1">
+		<TP public="1" get="inline" set="null" expr="cast &quot;tp&quot;" line="297" static="1">
 			<x path="rm.types.GaugeType"/>
 			<meta>
 				<m n=":value"><e>cast "tp"</e></m>
@@ -76294,7 +78153,7 @@
 				<m n=":impl"/>
 			</meta>
 		</TP>
-		<TIME public="1" get="inline" set="null" expr="cast &quot;time&quot;" line="271" static="1">
+		<TIME public="1" get="inline" set="null" expr="cast &quot;time&quot;" line="298" static="1">
 			<x path="rm.types.GaugeType"/>
 			<meta>
 				<m n=":value"><e>cast "time"</e></m>
@@ -76313,9 +78172,29 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.types._LunaTea.SkillTypeId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
+		<impl><class path="rm.types._LunaTea.SkillTypeId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="304" static="1">
+		<x path="rm.types.SkillTypeId"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
 	</abstract>
-	<class path="rm.types._LunaTea.SkillTypeId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
+	<class path="rm.types._LunaTea.SkillTypeId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="304" static="1">
+			<x path="rm.types.SkillTypeId"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<abstract path="rm.types.BattleResult" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
@@ -76325,9 +78204,285 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.types._LunaTea.BattleResult_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
+		<impl><class path="rm.types._LunaTea.BattleResult_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="310" static="1">
+		<x path="rm.types.BattleResult"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
 	</abstract>
-	<class path="rm.types._LunaTea.BattleResult_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
+	<class path="rm.types._LunaTea.BattleResult_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="310" static="1">
+			<x path="rm.types.BattleResult"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="rm.types.Direction" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.Direction_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="316" static="1">
+		<x path="rm.types.Direction"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.Direction_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="316" static="1">
+			<x path="rm.types.Direction"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="rm.types.EventTrigger" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.EventTrigger_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="322" static="1">
+		<x path="rm.types.EventTrigger"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.EventTrigger_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="322" static="1">
+			<x path="rm.types.EventTrigger"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="rm.types.MessageBackgroundType" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.MessageBackgroundType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="328" static="1">
+		<x path="rm.types.MessageBackgroundType"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.MessageBackgroundType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="328" static="1">
+			<x path="rm.types.MessageBackgroundType"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="rm.types.MessagePositionType" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.MessagePositionType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="334" static="1">
+		<x path="rm.types.MessagePositionType"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.MessagePositionType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="334" static="1">
+			<x path="rm.types.MessagePositionType"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="rm.types.ChoiceDefaultType" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.ChoiceDefaultType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="340" static="1">
+		<x path="rm.types.ChoiceDefaultType"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.ChoiceDefaultType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="340" static="1">
+			<x path="rm.types.ChoiceDefaultType"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="rm.types.ChoiceCancelType" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.ChoiceCancelType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="346" static="1">
+		<x path="rm.types.ChoiceCancelType"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.ChoiceCancelType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="346" static="1">
+			<x path="rm.types.ChoiceCancelType"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="rm.types.ChocieBackgroundType" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.ChocieBackgroundType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="352" static="1">
+		<x path="rm.types.ChocieBackgroundType"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.ChocieBackgroundType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="352" static="1">
+			<x path="rm.types.ChocieBackgroundType"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="rm.types.ChoicePositionType" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.ChoicePositionType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="358" static="1">
+		<x path="rm.types.ChoicePositionType"/>
+		<meta>
+			<m n=":value"><e>cast -1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</base>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.ChoicePositionType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="358" static="1">
+			<x path="rm.types.ChoicePositionType"/>
+			<meta>
+				<m n=":value"><e>cast -1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</base>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<typedef path="rm.types.Matrix" params="" file="src/rm/types/RM.hx" module="rm.types.RM"><a>
 	<value><c path="Array"><x path="Int"/></c></value>
 	<type><c path="String"/></type>
@@ -78329,26 +80484,26 @@
 		<addAttackCommand public="1" set="method">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Adds the attack command to the actor command window.
-   * 
-   * @memberof Window_ActorCommand</haxe_doc>
+  *
+  * @memberof Window_ActorCommand</haxe_doc>
 		</addAttackCommand>
 		<addSkillCommands public="1" set="method">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Adds the skill command to the actor command window.
-   * 
-   * @memberof Window_ActorCommand</haxe_doc>
+  *
+  * @memberof Window_ActorCommand</haxe_doc>
 		</addSkillCommands>
 		<addGuardCommand public="1" set="method">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Adds the guard command to the actor command window.
-   * 
-   * @memberof Window_ActorCommand</haxe_doc>
+  *
+  * @memberof Window_ActorCommand</haxe_doc>
 		</addGuardCommand>
 		<addItemCommand public="1" set="method">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Adds the item command to the actor command window.
-   * 
-   * @memberof Window_ActorCommand</haxe_doc>
+  *
+  * @memberof Window_ActorCommand</haxe_doc>
 		</addItemCommand>
 		<setup public="1" set="method">
 			<f a="actor">
@@ -78356,9 +80511,9 @@
 				<x path="Void"/>
 			</f>
 			<haxe_doc>* Sets up the actor command window with a specified actor.
-   * 
-   * @param {Game_Actor} actor 
-   * @memberof Window_ActorCommand</haxe_doc>
+  *
+  * @param {Game_Actor} actor
+  * @memberof Window_ActorCommand</haxe_doc>
 		</setup>
 		<selectLast public="1" set="method"><f a=""><x path="Void"/></f></selectLast>
 		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
@@ -78369,6 +80524,7 @@
  * @class Window_ActorCommand</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_ActorCommand"</e></m>
 			<m n=":native"><e>"Window_ActorCommand"</e></m>
 		</meta>
 	</class>
@@ -78471,7 +80627,11 @@
  *
  * The window for displaying the status of party members on the battle screen.
  * @class Window_BattleStatus</haxe_doc>
-		<meta><m n=":directlyUsed"/></meta>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_BattleStatus"</e></m>
+			<m n=":native"><e>"Window_BattleStatus"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_BattleActor" params="" file="src/rm/windows/Window_BattleActor.hx" extern="1">
 		<extends path="rm.windows.Window_BattleStatus"/>
@@ -78509,6 +80669,7 @@
  * @class Window_BattleActor</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_BattleActor"</e></m>
 			<m n=":native"><e>"Window_BattleActor"</e></m>
 		</meta>
 	</class>
@@ -78575,7 +80736,11 @@
  *
  * The window for selecting a target enemy on the battle screen.
  * @class Window_BattleEnemy</haxe_doc>
-		<meta><m n=":directlyUsed"/></meta>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_BattleEnemy"</e></m>
+			<m n=":native"><e>"Window_BattleEnemy"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_ItemList" params="" file="src/rm/windows/Window_ItemList.hx" extern="1">
 		<extends path="rm.windows.Window_Selectable"/>
@@ -78598,7 +80763,10 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></new>
-		<meta><m n=":native"><e>"Window_ItemList"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Window_ItemList"</e></m>
+			<m n=":native"><e>"Window_ItemList"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_BattleItem" params="" file="src/rm/windows/Window_BattleItem.hx" extern="1">
 		<extends path="rm.windows.Window_ItemList"/>
@@ -78627,6 +80795,7 @@
  * @class Window_BattleItem</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_BattleItem"</e></m>
 			<m n=":native"><e>"Window_BattleItem"</e></m>
 		</meta>
 	</class>
@@ -78893,6 +81062,7 @@
  * @class Window_BattleLog</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_BattleLog"</e></m>
 			<m n=":native"><e>"Window_BattleLog"</e></m>
 		</meta>
 	</class>
@@ -78900,7 +81070,7 @@
 		<extends path="rm.windows.Window_Selectable"/>
 		<__actor public="1">
 			<c path="rm.objects.Game_Actor"/>
-			<meta><m n="native"><e>"_actor"</e></m></meta>
+			<meta><m n=":native"><e>"_actor"</e></m></meta>
 		</__actor>
 		<_actor><c path="rm.objects.Game_Actor"/></_actor>
 		<__stypeId public="1">
@@ -78999,6 +81169,7 @@
  * @class Window_SkillList</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_SkillList"</e></m>
 			<m n=":native"><e>"Window_SkillList"</e></m>
 		</meta>
 	</class>
@@ -79025,6 +81196,7 @@
  * @class Window_BattleSkill</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_BattleSkill"</e></m>
 			<m n=":native"><e>"Window_BattleSkill"</e></m>
 		</meta>
 	</class>
@@ -79056,6 +81228,7 @@
  * @class Window_ChoiceList</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_ChoiceList"</e></m>
 			<m n=":native"><e>"Window_ChoiceList"</e></m>
 		</meta>
 	</class>
@@ -79095,6 +81268,7 @@
  * @class Window_DebugEdit</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_DebugEdit"</e></m>
 			<m n=":native"><e>"Window_DebugEdit"</e></m>
 		</meta>
 	</class>
@@ -79123,6 +81297,7 @@
  * @class Window_DebugRange</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_DebugRange"</e></m>
 			<m n=":native"><e>"Window_DebugRange"</e></m>
 		</meta>
 	</class>
@@ -79135,12 +81310,16 @@
 </f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_HorzCommand"</e></m>
 			<m n=":native"><e>"Window_HorzCommand"</e></m>
 		</meta>
 	</class>
 	<class path="rm.windows.Window_EquipCommand" params="" file="src/rm/windows/Window_EquipCommand.hx" extern="1">
 		<extends path="rm.windows.Window_HorzCommand"/>
-		<meta><m n=":native"><e>"Window_EquipCommand"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Window_EquipCommand"</e></m>
+			<m n=":native"><e>"Window_EquipCommand"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_EquipItem" params="" file="src/rm/windows/Window_EquipItem.hx" extern="1">
 		<_actor><c path="rm.objects.Game_Actor"/></_actor>
@@ -79180,6 +81359,7 @@
  * @class Window_EquipItem</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_EquipItem"</e></m>
 			<m n=":native"><e>"Window_EquipItem"</e></m>
 		</meta>
 	</class>
@@ -79268,12 +81448,16 @@
  * @class Window_EquipSlot</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_EquipSlot"</e></m>
 			<m n=":native"><e>"Window_EquipSlot"</e></m>
 		</meta>
 	</class>
 	<class path="rm.windows.Window_EquipStatus" params="" file="src/rm/windows/Window_EquipStatus.hx" extern="1">
 		<extends path="rm.windows.Window_Base"/>
-		<meta><m n=":native"><e>"Window_EquipStatus"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Window_EquipStatus"</e></m>
+			<m n=":native"><e>"Window_EquipStatus"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_EventItem" params="" file="src/rm/windows/Window_EventItem.hx" extern="1">
 		<extends path="rm.windows.Window_ItemList"/>
@@ -79318,7 +81502,10 @@
  *
  * The window used for the event command [Select Item].
  * @class Window_EventItem</haxe_doc>
-		<meta><m n=":native"><e>"Window_EventItem"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Window_EventItem"</e></m>
+			<m n=":native"><e>"Window_EventItem"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_GameEnd" params="" file="src/rm/windows/Window_GameEnd.hx" extern="1">
 		<extends path="rm.windows.Window_Base"/>
@@ -79331,6 +81518,7 @@
  * @class Window_GameEnd</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_GameEnd"</e></m>
 			<m n=":native"><e>"Window_GameEnd"</e></m>
 		</meta>
 	</class>
@@ -79355,7 +81543,10 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></new>
-		<meta><m n=":native"><e>"Window_Gold"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Window_Gold"</e></m>
+			<m n=":native"><e>"Window_Gold"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_Help" params="" file="src/rm/windows/Window_Help.hx" extern="1">
 		<extends path="rm.windows.Window_Base"/>
@@ -79399,6 +81590,7 @@
 		</new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_Help"</e></m>
 			<m n=":native"><e>"Window_Help"</e></m>
 		</meta>
 	</class>
@@ -79406,6 +81598,7 @@
 		<extends path="rm.windows.Window_HorzCommand"/>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_ItemCategory"</e></m>
 			<m n=":native"><e>"Window_ItemCategory"</e></m>
 		</meta>
 	</class>
@@ -79458,6 +81651,7 @@
  * @class Window_MapName</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_MapName"</e></m>
 			<m n=":native"><e>"Window_MapName"</e></m>
 		</meta>
 	</class>
@@ -79556,6 +81750,7 @@
  * @extends {Window_Selectable}</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_MenuStatus"</e></m>
 			<m n=":native"><e>"Window_MenuStatus"</e></m>
 		</meta>
 	</class>
@@ -79567,7 +81762,10 @@
 	<x path="Void"/>
 </f></selectForItem>
 		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
-		<meta><m n=":native"><e>"Window_MenuActor"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Window_MenuActor"</e></m>
+			<m n=":native"><e>"Window_MenuActor"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_MenuCommand" params="" file="src/rm/windows/Window_MenuCommand.hx" extern="1">
 		<extends path="rm.windows.Window_Command"/>
@@ -79641,7 +81839,10 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></new>
-		<meta><m n=":native"><e>"Window_MenuCommand"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Window_MenuCommand"</e></m>
+			<m n=":native"><e>"Window_MenuCommand"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_Message" params="" file="src/rm/windows/Window_Message.hx" extern="1">
 		<extends path="rm.windows.Window_Base"/>
@@ -79848,13 +82049,18 @@
 </f></processNewPage>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_Message"</e></m>
 			<m n=":native"><e>"Window_Message"</e></m>
 		</meta>
 	</class>
 	<class path="rm.windows.Window_NameBox" params="" file="src/rm/windows/Window_NameBox.hx">
 		<extends path="rm.windows.Window_Base"/>
-		<baseTextRect public="1" set="method" line="80"><f a=""><c path="rm.core.Rectangle"/></f></baseTextRect>
-		<new public="1" set="method" line="75"><f a=""><x path="Void"/></f></new>
+		<baseTextRect public="1" set="method" line="83"><f a=""><c path="rm.core.Rectangle"/></f></baseTextRect>
+		<new public="1" set="method" line="78"><f a=""><x path="Void"/></f></new>
+		<meta>
+			<m n=":expose"><e>"Window_NameBox"</e></m>
+			<m n=":native"><e>"Window_NameBox"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_NameEdit" params="" file="src/rm/windows/Window_NameEdit.hx" extern="1">
 		<_name><c path="String"/></_name>
@@ -79949,6 +82155,7 @@
  * @class Window_NameEdit</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_NameEdit"</e></m>
 			<m n=":native"><e>"Window_NameEdit"</e></m>
 		</meta>
 	</class>
@@ -79994,6 +82201,7 @@
  * @class Window_NameInputt</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_NameInput"</e></m>
 			<m n=":native"><e>"Window_NameInput"</e></m>
 		</meta>
 	</class>
@@ -80056,6 +82264,7 @@
 </f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_NumberInput"</e></m>
 			<m n=":native"><e>"Window_NumberInput"</e></m>
 		</meta>
 	</class>
@@ -80105,6 +82314,7 @@
 		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_Options"</e></m>
 			<m n=":native"><e>"Window_Options"</e></m>
 		</meta>
 	</class>
@@ -80119,6 +82329,7 @@
  * @class Window_PartyCommand</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_PartyCommand"</e></m>
 			<m n=":native"><e>"Window_PartyCommand"</e></m>
 		</meta>
 	</class>
@@ -80126,21 +82337,6 @@
 	<class path="rm.windows.Window_SavefileList" params="" file="src/rm/windows/Window_SavefileList.hx" extern="1">
 		<extends path="rm.windows.Window_Selectable"/>
 		<_mode><c path="String"/></_mode>
-		<__autosave public="1">
-			<x path="Bool"/>
-			<meta><m n="native"><e>"_autosave"</e></m></meta>
-			<haxe_doc>* Whether ornot the auto save feature is enabled
-  *
-  * @default {Bool} false
-  * @memberof Window_SavefileList</haxe_doc>
-		</__autosave>
-		<_autosave>
-			<x path="Bool"/>
-			<haxe_doc>* Whether ornot the auto save feature is enabled
-  *
-  * @default {Bool} false
-  * @memberof Window_SavefileList</haxe_doc>
-		</_autosave>
 		<setMode public="1" set="method">
 			<f a="mode">
 				<c path="String"/>
@@ -80217,6 +82413,7 @@
 </f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_SavefileList"</e></m>
 			<m n=":native"><e>"Window_SavefileList"</e></m>
 		</meta>
 	</class>
@@ -80260,7 +82457,11 @@
  * The window for displaying scrolling text. No frame is displayed, but it
  * is handled as a window for convenience.
  * @class Window_ScrollText</haxe_doc>
-		<meta><m n=":directlyUsed"/></meta>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_ScrollText"</e></m>
+			<m n=":native"><e>"Window_ScrollText"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_ShopBuy" params="" file="src/rm/windows/Window_ShopBuy.hx" extern="1">
 		<extends path="rm.windows.Window_Selectable"/>
@@ -80341,7 +82542,11 @@
  *
  * The window for selecting an item to buy on the shop screen.
  * @class Window_ShopBuy</haxe_doc>
-		<meta><m n=":directlyUsed"/></meta>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_ShopBuy"</e></m>
+			<m n=":native"><e>"Window_ShopBuy"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_ShopCommand" params="" file="src/rm/windows/Window_ShopCommand.hx" extern="1">
 		<extends path="rm.windows.Window_HorzCommand"/>
@@ -80375,6 +82580,10 @@
  *
  * The window for selecting buy/sell on the shop screen.
  * @class Window_ShopCommand</haxe_doc>
+		<meta>
+			<m n=":expose"><e>"Window_ShopCommand"</e></m>
+			<m n=":native"><e>"Window_ShopCommand"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_ShopNumber" params="" file="src/rm/windows/Window_ShopNumber.hx" extern="1">
 		<extends path="rm.windows.Window_Selectable"/>
@@ -80552,6 +82761,7 @@
  * @class Window_ShopNumber</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_ShopNumber"</e></m>
 			<m n=":native"><e>"Window_ShopNumber"</e></m>
 		</meta>
 	</class>
@@ -80582,6 +82792,7 @@
  * @class Window_ShopSell</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_ShopSell"</e></m>
 			<m n=":native"><e>"Window_ShopSell"</e></m>
 		</meta>
 	</class>
@@ -80716,7 +82927,11 @@
  * The window for displaying number of items in possession and the actor's
  * equipment on the shop screen.
  * @class Window_ShopStatus</haxe_doc>
-		<meta><m n=":directlyUsed"/></meta>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_ShopStatus"</e></m>
+			<m n=":native"><e>"Window_ShopStatus"</e></m>
+		</meta>
 	</class>
 	<class path="rm.windows.Window_SkillStatus" params="" file="src/rm/windows/Window_SkillStatus.hx" extern="1">
 		<extends path="rm.windows.Window_Base"/>
@@ -80765,6 +82980,7 @@
  * @class Window_SkillStatus</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_SkillStatus"</e></m>
 			<m n=":native"><e>"Window_SkillStatus"</e></m>
 		</meta>
 	</class>
@@ -80830,6 +83046,7 @@
  * @class Window_SkillType</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_SkillType"</e></m>
 			<m n=":native"><e>"Window_SkillType"</e></m>
 		</meta>
 	</class>
@@ -80918,6 +83135,7 @@
 </f></new>
 		<meta>
 			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Window_Status"</e></m>
 			<m n=":native"><e>"Window_Status"</e></m>
 		</meta>
 	</class>
@@ -80934,7 +83152,10 @@
  *
  * The window for selecting New Game/Continue on the title screen.
  * @class Window_TitleCommand</haxe_doc>
-		<meta><m n=":native"><e>"Window_TitleCommand"</e></m></meta>
+		<meta>
+			<m n=":expose"><e>"Window_TitleCommand"</e></m>
+			<m n=":native"><e>"Window_TitleCommand"</e></m>
+		</meta>
 	</class>
 	<typedef path="sys.FileStat" params="" file="/home/runner/haxe/versions/4.1.3/std/sys/FileStat.hx">
 		<a>
