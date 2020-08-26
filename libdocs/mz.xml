@@ -57642,6 +57642,10 @@
 			<meta><m n=":native"><e>"$dataMap"</e></m></meta>
 			<haxe_doc>* RPGMakerMZ database map data.</haxe_doc>
 		</DataMap>
+		<DataSkills public="1" static="1">
+			<c path="Array"><t path="rm.types.Skill"/></c>
+			<meta><m n=":native"><e>"$dataSkills"</e></m></meta>
+		</DataSkills>
 		<DataItems public="1" static="1">
 			<c path="Array"><t path="rm.types.Item"/></c>
 			<meta><m n=":native"><e>"$dataItems"</e></m></meta>
