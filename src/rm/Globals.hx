@@ -111,6 +111,9 @@ class Globals {
  @:native("$dataMap")
  public static var DataMap: RPGMap;
 
+ @:native("$dataSkills")
+ public static var DataSkills: Array<Skill>;
+
  /**
   * RPGMakerMZ database item data.
   */
