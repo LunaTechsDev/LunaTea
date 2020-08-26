@@ -69,6 +69,11 @@ class CleanJs {
    File.write(filePath).writeString(newContent);
    File.write(generatePluginGamePath() + file).writeString(newContent);
    trace("Cleaned Output File: " + filePath);
+   if (FileSystem.exists('$distDir/$file.map')) {
+    var sourcemap = File.read('$distDir/$file.map').readAll().toString();
+    File.write(generatePluginGamePath() + '$file.map').writeString(sourcemap);
+    trace("Copied sourcemaps to: " + filePath);
+   }
   });
  }
 }
