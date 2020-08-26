@@ -1,5 +1,6 @@
 package rm.types;
 
+import haxe.DynamicAccess;
 import rm.objects.Game_Player;
 import rm.objects.Game_Map;
 import rm.objects.Game_Party;
@@ -129,11 +130,34 @@ typedef SaveContents = {
  player: Game_Player
 }
 
+/**
+ * Plugin Settings for RPGMakerMV/MZ
+ */
 typedef PluginSettings = {
- name: String,
- status: String,
- description: String,
- parameters: {key: String}
+ /**
+  * Plugin Name
+  */
+ var name: String;
+
+ /**
+  * Plugin Status On/Off
+  */
+ var status: String;
+
+ /**
+  * Plugin Description
+  */
+ var description: String;
+
+ /**
+  * Plugin Parameters in a map/dictionary like syntax.
+  * Example:
+  * ```js
+  * parameters["TextSpeed"]
+  * ```
+  */
+ var parameters: DynamicAccess<Dynamic>;
+
  // Any //{key:String}:String
 }
 
