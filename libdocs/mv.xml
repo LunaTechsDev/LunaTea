@@ -78578,12 +78578,31 @@
 	<map><c path="rm.objects.Game_Map"/></map>
 	<actors><c path="rm.objects.Game_Actors"/></actors>
 </a></typedef>
-	<typedef path="rm.types.PluginSettings" params="" file="src/rm/types/RM.hx" module="rm.types.RM"><a>
-	<status><c path="String"/></status>
-	<parameters><a><key><c path="String"/></key></a></parameters>
-	<name><c path="String"/></name>
-	<description><c path="String"/></description>
-</a></typedef>
+	<typedef path="rm.types.PluginSettings" params="" file="src/rm/types/RM.hx" module="rm.types.RM">
+		<a>
+			<status>
+				<c path="String"/>
+				<haxe_doc>* Plugin Status On/Off</haxe_doc>
+			</status>
+			<parameters>
+				<x path="haxe.DynamicAccess"><d/></x>
+				<haxe_doc>* Plugin Parameters in a map/dictionary like syntax.
+  * Example:
+  * ```js
+  * parameters["TextSpeed"]
+  * ```</haxe_doc>
+			</parameters>
+			<name>
+				<c path="String"/>
+				<haxe_doc>* Plugin Name</haxe_doc>
+			</name>
+			<description>
+				<c path="String"/>
+				<haxe_doc>* Plugin Description</haxe_doc>
+			</description>
+		</a>
+		<haxe_doc>* Plugin Settings for RPGMakerMV/MZ</haxe_doc>
+	</typedef>
 	<typedef path="rm.types.Motion" params="" file="src/rm/types/RM.hx" module="rm.types.RM"><a>
 	<loop><x path="Bool"/></loop>
 	<index><x path="Int"/></index>
