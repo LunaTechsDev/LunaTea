@@ -27,8 +27,23 @@ class Fn {
   return js.Lib.nativeThis;
  }
 
- public static inline function parseIntJs(string: String, radix: Int): Float {
-  return js.Lib.parseInt(string, radix);
+ /**
+  * Native JS Parse Int
+  * @param string
+  * @param radix
+  * @return Int
+  */
+ public static inline function parseIntJs(string: String, radix: Int): Int {
+  return cast js.Lib.parseInt(string, radix);
+ }
+
+ /**
+  * Haxe Parse Float
+  * @param string
+  * @return Float
+  */
+ public static inline function parseFloat(string: String): Float {
+  return Std.parseFloat(string);
  }
 
  /**
