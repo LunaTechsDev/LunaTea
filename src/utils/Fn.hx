@@ -1,5 +1,6 @@
 package utils;
 
+import haxe.extern.EitherType;
 import js.html.Console;
 import haxe.macro.Type.ClassType;
 import js.Syntax;
@@ -35,6 +36,10 @@ class Fn {
   */
  public static inline function parseIntJs(string: String, radix: Int): Int {
   return cast js.Lib.parseInt(string, radix);
+ }
+
+ public static inline function parseFloatJs(value: EitherType<String, Int>) {
+  return Syntax.code("parseFloat({0})", value);
  }
 
  /**
