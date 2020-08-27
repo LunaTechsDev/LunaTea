@@ -81,16 +81,16 @@ class Fn {
 
  public static inline function setPrProp(obj: Any, fieldName: String,
    value: Any) {
-  Syntax.code("{0}.@{1}@ = {2}", proto(obj), (fieldName), value);
+  Syntax.code("{0}[{1}] = {2}", proto(obj), (fieldName), value);
  }
 
  public static inline function setPrPropVoidFn(obj: Any, fieldName: String,
    value: (Any) -> Void) {
-  Syntax.code("{0}.@{1}@ = {2}", proto(obj), (fieldName), value);
+  Syntax.code("{0}[{1}]  = {2}", proto(obj), (fieldName), value);
  }
 
  public static inline function getPrProp(obj: Any, fieldName: String): Any {
-  return Syntax.code("{0}.@{1}@", proto(obj), (fieldName));
+  return Syntax.code("{0}[{1}] ", proto(obj), (fieldName));
  }
 
  @:analyzer(local_dce)
@@ -139,7 +139,7 @@ class Fn {
  }
 
  public static inline function setProtoProp(obj, propName, value) {
-  return Syntax.code("{0}.prototype.@{1}@ = {2}", obj, propName, value);
+  return Syntax.code("{0}.prototype[{1}] = {2}", obj, propName, value);
  }
 
  public static inline function instanceof(v: Dynamic, cl): Bool {
