@@ -84238,7 +84238,7 @@
 	<typedef path="utils.Self" params="" file="src/utils/Fn.hx" module="utils.Fn"><c path="String"/></typedef>
 	<class path="utils.Fn" params="" file="src/utils/Fn.hx">
 		<self public="1" get="accessor" set="null" static="1"><x path="Any"/></self>
-		<JsLog public="1" expr="Console.log" line="18" static="1">
+		<JsLog public="1" expr="Console.log" line="19" static="1">
 			<f a="data">
 				<x path="haxe.extern.Rest"><d/></x>
 				<x path="Void"/>
@@ -84246,14 +84246,14 @@
 			<meta><m n=":value"><e>Console.log</e></m></meta>
 			<haxe_doc>* Alias for JS console log.</haxe_doc>
 		</JsLog>
-		<Js public="1" expr="Syntax" line="24" static="1">
+		<Js public="1" expr="Syntax" line="25" static="1">
 			<t path="Class&lt;js.Syntax&gt;"/>
 			<meta><m n=":value"><e>Syntax</e></m></meta>
 			<haxe_doc>* Allows you to acces Js syntax  Code functionality
   * for embedding and more.</haxe_doc>
 		</Js>
-		<thisJs public="1" get="inline" set="null" line="26" static="1"><f a=""><d/></f></thisJs>
-		<parseIntJs public="1" get="inline" set="null" line="36" static="1">
+		<thisJs public="1" get="inline" set="null" line="27" static="1"><f a=""><d/></f></thisJs>
+		<parseIntJs public="1" get="inline" set="null" line="37" static="1">
 			<f a="string:radix">
 				<c path="String"/>
 				<x path="Int"/>
@@ -84264,7 +84264,14 @@
   * @param radix
   * @return Int</haxe_doc>
 		</parseIntJs>
-		<parseFloat public="1" get="inline" set="null" line="45" static="1">
+		<parseFloatJs public="1" get="inline" set="null" line="41" static="1"><f a="value">
+	<x path="haxe.extern.EitherType">
+		<c path="String"/>
+		<x path="Int"/>
+	</x>
+	<unknown/>
+</f></parseFloatJs>
+		<parseFloat public="1" get="inline" set="null" line="50" static="1">
 			<f a="string">
 				<c path="String"/>
 				<x path="Float"/>
@@ -84273,11 +84280,11 @@
   * @param string
   * @return Float</haxe_doc>
 		</parseFloat>
-		<get_self get="inline" set="null" line="52" static="1">
+		<get_self get="inline" set="null" line="57" static="1">
 			<f a=""><x path="Any"/></f>
 			<haxe_doc>* Wrapper for JavaScript this</haxe_doc>
 		</get_self>
-		<eval public="1" get="inline" set="null" line="60" static="1">
+		<eval public="1" get="inline" set="null" line="65" static="1">
 			<f a="evaluation">
 				<c path="String"/>
 				<unknown/>
@@ -84285,7 +84292,7 @@
 			<haxe_doc>* Runs a JavaScript evaluation expression.
   * @param evaluation</haxe_doc>
 		</eval>
-		<embedEval public="1" get="inline" set="null" line="68" static="1">
+		<embedEval public="1" get="inline" set="null" line="73" static="1">
 			<f a="evaluation">
 				<c path="String"/>
 				<unknown/>
@@ -84293,20 +84300,20 @@
 			<haxe_doc>* Embeds a JavaScript evaluation into the output program.
   * @param evaluation</haxe_doc>
 		</embedEval>
-		<proto public="1" params="T" get="inline" set="null" line="73" static="1">
+		<proto public="1" params="T" get="inline" set="null" line="78" static="1">
 			<f a="obj">
 				<x path="Class"><c path="proto.T"/></x>
 				<x path="core.TBox"><c path="proto.T"/></x>
 			</f>
 			<meta><m n=":keep"/></meta>
 		</proto>
-		<setPrProp public="1" get="inline" set="null" line="77" static="1"><f a="obj:fieldName:value">
+		<setPrProp public="1" get="inline" set="null" line="82" static="1"><f a="obj:fieldName:value">
 	<x path="Any"/>
 	<c path="String"/>
 	<x path="Any"/>
 	<x path="Void"/>
 </f></setPrProp>
-		<setPrPropVoidFn public="1" get="inline" set="null" line="82" static="1"><f a="obj:fieldName:value">
+		<setPrPropVoidFn public="1" get="inline" set="null" line="87" static="1"><f a="obj:fieldName:value">
 	<x path="Any"/>
 	<c path="String"/>
 	<f a="">
@@ -84315,12 +84322,12 @@
 	</f>
 	<x path="Void"/>
 </f></setPrPropVoidFn>
-		<getPrProp public="1" get="inline" set="null" line="87" static="1"><f a="obj:fieldName">
+		<getPrProp public="1" get="inline" set="null" line="92" static="1"><f a="obj:fieldName">
 	<x path="Any"/>
 	<c path="String"/>
 	<x path="Any"/>
 </f></getPrProp>
-		<setField public="1" get="inline" set="null" line="92" static="1">
+		<setField public="1" get="inline" set="null" line="97" static="1">
 			<f a="obj:fieldName:value">
 				<x path="Any"/>
 				<c path="String"/>
@@ -84329,7 +84336,7 @@
 			</f>
 			<meta><m n=":analyzer"><e>local_dce</e></m></meta>
 		</setField>
-		<getField public="1" get="inline" set="null" line="98" static="1">
+		<getField public="1" get="inline" set="null" line="103" static="1">
 			<f a="obj:fieldName">
 				<x path="Any"/>
 				<c path="String"/>
@@ -84337,7 +84344,7 @@
 			</f>
 			<meta><m n=":analyzer"><e>local_dce</e></m></meta>
 		</getField>
-		<getByArrSyntax public="1" get="inline" set="null" line="107" static="1">
+		<getByArrSyntax public="1" get="inline" set="null" line="112" static="1">
 			<f a="obj:fieldName">
 				<x path="Any"/>
 				<c path="String"/>
@@ -84347,7 +84354,7 @@
   * @param obj
   * @param fieldName</haxe_doc>
 		</getByArrSyntax>
-		<renameClass public="1" params="T" get="inline" set="null" line="119" static="1">
+		<renameClass public="1" params="T" get="inline" set="null" line="124" static="1">
 			<f a="originalObj:overrideObj">
 				<x path="Any"/>
 				<c path="renameClass.T"/>
@@ -84360,7 +84367,7 @@
   * @param value
   * @return T</haxe_doc>
 		</renameClass>
-		<setProp public="1" params="T" set="method" line="131" static="1">
+		<setProp public="1" params="T" set="method" line="136" static="1">
 			<f a="obj:propName:value">
 				<c path="setProp.T"/>
 				<c path="String"/>
@@ -84373,22 +84380,22 @@
   * @param value
   * @return T</haxe_doc>
 		</setProp>
-		<setProtoProp public="1" get="inline" set="null" line="136" static="1"><f a="obj:propName:value">
+		<setProtoProp public="1" get="inline" set="null" line="141" static="1"><f a="obj:propName:value">
 	<unknown/>
 	<unknown/>
 	<unknown/>
 	<unknown/>
 </f></setProtoProp>
-		<instanceof public="1" get="inline" set="null" line="140" static="1"><f a="v:cl">
+		<instanceof public="1" get="inline" set="null" line="145" static="1"><f a="v:cl">
 	<d/>
 	<x path="Class"><d/></x>
 	<x path="Bool"/>
 </f></instanceof>
-		<typeof public="1" get="inline" set="null" line="144" static="1"><f a="v">
+		<typeof public="1" get="inline" set="null" line="149" static="1"><f a="v">
 	<d/>
 	<c path="String"/>
 </f></typeof>
-		<log public="1" get="inline" set="null" line="148" static="1"><f a="data">
+		<log public="1" get="inline" set="null" line="153" static="1"><f a="data">
 	<c path="Array"><d/></c>
 	<x path="Void"/>
 </f></log>
