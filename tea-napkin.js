@@ -31,15 +31,7 @@ const useNapkin = argv.napkin ? false : true;
 
         traverse(ast, {
           enter({ node }) {
-            if (isPrototypeLiteral(node)) {
-              const { property, object } = node.left;
-              const newLeft = literalToObject(node.left);
-              node.left = newLeft;
-            } else if (isPrototypeAliasLiteral(node)) {
-              const { init } = node.declarations[0];
-              const newInit = literalToObject(init);
-              node.declarations[0].init = newInit;
-            }
+            convertPrototypeLiteralsToObject(node);
           },
         });
 
@@ -56,6 +48,27 @@ const useNapkin = argv.napkin ? false : true;
 });
 
 /**
+ * Converts prototype literal assignments and declarations
+ * 
+ * @param {*} node 
+ * @example 
+ * var alias = Class.prototype['methodName'] - > var alias = Class.prototype.methodName;
+ * 
+ * Class.prototype['methodName'] = function (){} -> Class.prototype.methodName = function (){}
+ */
+function convertPrototypeLiteralsToObject(node) {
+  if (isPrototypeLiteralAssignment(node)) {
+    const { property, object } = node.left;
+    const newLeft = literalToObject(node.left);
+    node.left = newLeft;
+  } else if (isPrototypeAliasLiteralDeclaration(node)) {
+    const { init } = node.declarations[0];
+    const newInit = literalToObject(init);
+    node.declarations[0].init = newInit;
+  }
+}
+
+/**
  * Checks if there is a variable declaration for a class prototype using bracket
  * notation.
  *
@@ -63,7 +76,7 @@ const useNapkin = argv.napkin ? false : true;
  *
  * @example var alias = Class.prototype['methodName']
  */
-function isPrototypeAliasLiteral(node) {
+function isPrototypeAliasLiteralDeclaration(node) {
   if (tt.isVariableDeclaration(node)) {
     const declaration = node.declarations[0];
     if (
@@ -85,7 +98,7 @@ function isPrototypeAliasLiteral(node) {
  *
  * @example Class.prototype['methodName']
  */
-function isPrototypeLiteral(node) {
+function isPrototypeLiteralAssignment(node) {
   if (tt.isAssignmentExpression(node) && tt.isLiteral(node.left.property)) {
     const { property, object } = node.left;
     if (object.property) {
