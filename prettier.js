@@ -35,6 +35,10 @@ const useNapkin = argv.napkin ? false : true;
               const { property, object } = node.left;
               const newLeft = literalToObject(node.left);
               node.left = newLeft;
+            } else if (isPrototypeAliasLiteral(node)) {
+              const { init } = node.declarations[0];
+              const newInit = literalToObject(init);
+              node.declarations[0].init = newInit;
             }
           },
         });
@@ -50,6 +54,28 @@ const useNapkin = argv.napkin ? false : true;
   process.exitCode = 1;
   console.error(error);
 });
+
+/**
+ * Checks if there is a variable declaration for a class prototype using bracket
+ * notation.
+ *
+ * @param {Node} node
+ *
+ * @example var alias = Class.prototype['methodName']
+ */
+function isPrototypeAliasLiteral(node) {
+  if (tt.isVariableDeclaration(node)) {
+    const declaration = node.declarations[0];
+    if (
+      tt.isMemberExpression(declaration.init) &&
+      tt.isLiteral(declaration.init.property)
+    ) {
+      const { property } = declaration.init.object;
+      return property.name === "prototype";
+    }
+  }
+  return false;
+}
 
 /**
  * Checks if there is an assignment expression for a class prototype using
@@ -85,3 +111,10 @@ function literalToObject(leftNode) {
   const newAssignment = tt.memberExpression(object, newProperty, false);
   return newAssignment;
 }
+
+// function literalDeclarationToObject(initExpression) {
+//   const { property, object } = initExpression;
+//   const newProperty = tt.identifier(property.value);
+//   const newAssignment = tt.memberExpression(object, newProperty, true);
+//   return newAssignment;
+// }
