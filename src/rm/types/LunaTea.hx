@@ -414,7 +414,7 @@ enum abstract DamageColorType(Int) from Int to Int {
 
 @:forward
 @:forwardStatics
-enum abstract WaitMode(Int) from Int to Int {
+enum abstract WaitModeA(Int) from Int to Int {
  public inline var base = -1;
 }
 
@@ -501,7 +501,14 @@ enum abstract ChoicePositionType(Int) from Int to Int {
 
 @:forward
 @:forwardStatics
-enum abstract VehicleType(String) from String to String {
+enum abstract VehicleTypeA(String) from String to String {
+ public inline var base = "";
+}
+
+@:forward
+@:forwardStatics
+enum abstract InterpreterWaitModeA(InterpreterWaitMode)
+ from InterpreterWaitMode to InterpreterWaitMode {
  public inline var base = "";
 }
 
@@ -521,3 +528,6 @@ typedef SkillId = Int;
 typedef BuffId = Int;
 typedef FadeType = Int;
 typedef ActorId = Int;
+typedef MapId = Int;
+typedef EventId = Int;
+typedef InterpreterWaitMode = String;
