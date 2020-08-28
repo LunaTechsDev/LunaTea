@@ -23,9 +23,6 @@ const useNapkin = argv.napkin ? false : true;
     });
 
     const result = prettier.format(data, {
-      // endOfLine: "lf",
-      singleQuote: true,
-      semi: false,
       parser(text, { babel }) {
         const ast = babel(text);
 
@@ -35,8 +32,9 @@ const useNapkin = argv.napkin ? false : true;
           },
         });
 
-        // We retain lines to keep comments intact
-        return generate(ast, { retainLines: true }).code;
+        // Run generated code through prettier's default parser for even cleaner code
+        const codeTransformations = generate(ast, { retainLines: true }).code;
+        return prettier.format(codeTransformations);
       },
     });
 
