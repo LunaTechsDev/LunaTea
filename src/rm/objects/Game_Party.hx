@@ -1,5 +1,7 @@
 package rm.objects;
 
+import haxe.DynamicAccess;
+import rm.types.LunaTea.ActorId;
 import rm.types.RPG;
 import rm.types.RPG.BaseItem;
 import js.lib.Object;
@@ -18,19 +20,63 @@ extern class Game_Party extends Game_Unit {
  public static var ABILITY_GOLD_DOUBLE: Int;
  public static var ABILITY_DROP_ITEM_DOUBLE: Int;
 
+ @:native("_gold")
+ public var __gold: Int;
  private var _gold: Int;
+ @:native("_steps")
+ public var __steps: Int;
  private var _steps: Int;
+ @:native("_lastItem")
+ public var __lastItem: Game_Item;
  private var _lastItem: Game_Item;
- private var _menuActorId: Int;
- private var _targetActorId: Int;
+ @:native("_menuActorId")
+ public var __menuActorId: ActorId;
+ private var _menuActorId: ActorId;
+ @:native("_targetActorId")
+ public var __targetActorId: ActorId;
+ private var _targetActorId: ActorId;
+ @:native("_actors")
+ public var __actors: Array<Game_Actor>;
  private var _actors: Array<Game_Actor>;
- /*For _items, _weapons, _armors {
-  [itemId:Int]:Int
-  Objects
- };*/
- private var _items: Object;
- private var _weapons: Object;
- private var _armors: Object;
+
+ /**
+  * Data structure.
+  * [ItemId:Int] : Int
+  */
+ @:native("_items")
+ public var __items: DynamicAccess<Dynamic>;
+
+ /**
+  * Data structure.
+  * [ItemId:Int] : Int
+  */
+ private var _items: DynamicAccess<Dynamic>;
+
+ /**
+  * Data structure.
+  * [weaponId:Int] : Int
+  */
+ @:native("_weapons")
+ public var __weapons: DynamicAccess<Dynamic>;
+
+ /**
+  * Data structure.
+  * [weaponId:Int] : Int
+  */
+ private var _weapons: DynamicAccess<Dynamic>;
+
+ /**
+  * Data structure.
+  * [armorId:Int] : Int
+  */
+ @:native("_armors")
+ public var __armors: DynamicAccess<Dynamic>;
+
+ /**
+  * Data structure.
+  * [armorId:Int] : Int
+  */
+ private var _armors: DynamicAccess<Dynamic>;
 
  /**
   * Returns all party members.

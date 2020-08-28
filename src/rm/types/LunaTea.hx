@@ -520,3 +520,4 @@ typedef ParameterId = Int;
 typedef SkillId = Int;
 typedef BuffId = Int;
 typedef FadeType = Int;
+typedef ActorId = Int;
