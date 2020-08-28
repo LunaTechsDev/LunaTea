@@ -2,31 +2,172 @@ package rm.types;
 
 @:forward
 @:forwardStatics
-enum abstract StateId(Int) from Int to Int {
+enum abstract StateIdA(StateId) from StateId to StateId {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract BuffId(Int) from Int to Int {
+enum abstract BuffIdA(BuffId) from BuffId to BuffId {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract ParameterId(Int) from Int to Int {
+enum abstract ParameterIdA(ParameterId) from ParameterId to ParameterId {
+ public inline var base = -1;
+
+ /**
+  * Maximum HP
+  */
+ public inline var MHP = 0;
+
+ /**
+  * Maximum MP
+  */
+ public inline var MMP = 1;
+
+ /**
+  * Attack
+  */
+ public inline var ATK = 2;
+
+ /**
+  * Defense
+  */
+ public inline var DEF = 3;
+
+ /**
+  * Magic Attack
+  */
+ public inline var MAT = 4;
+
+ /**
+  * Magic Defense Power
+  */
+ public inline var MDF = 5;
+
+ /**
+  * Agility
+  */
+ public inline var AGI = 6;
+
+ /**
+  * Luck
+  */
+ public inline var LUK = 7;
+
+ /**
+  * X Param Hit  Rate
+  */
+ public inline var HIT = 0;
+
+ /**
+  * X Param Evasion Rate
+  */
+ public inline var EVA = 1;
+
+ /**
+  * X Param Critical Rate
+  */
+ public inline var CRI = 2;
+
+ /**
+  * X Param Critical Evasion Rate
+  */
+ public inline var CEV = 3;
+
+ /**
+  * X Param Magic Evasion Rate
+  */
+ public inline var MEV = 4;
+
+ /**
+  * X Param Magic Reflection Rate
+  */
+ public inline var MRF = 5;
+
+ /**
+  * X Param Counter Attack Rate
+  */
+ public inline var CNT = 6;
+
+ /**
+  * X Param HP Regeneration Rate
+  */
+ public inline var HRG = 7;
+
+ /**
+  * X Param MP Regeneration Rate
+  */
+ public inline var MRG = 8;
+
+ /**
+  * X Param TP Regeneration Rate
+  */
+ public inline var TRG = 9;
+
+ /**
+  * S Param Target Rate
+  */
+ public inline var TGR = 0;
+
+ /**
+  * S Param Guard Effect Rate
+  */
+ public inline var GRD = 1;
+
+ /**
+  * S Param Recovery Effect Rate
+  */
+ public inline var REC = 2;
+
+ /**
+  * S Param Pharmacology
+  */
+ public inline var PHA = 3;
+
+ /**
+  * S Param Mp Cost Rate
+  */
+ public inline var MCR = 4;
+
+ /**
+  * S Param TP Charge Rate
+  */
+ public inline var TCR = 5;
+
+ /**
+  * S Param Physical Damage Rate
+  */
+ public inline var PDR = 6;
+
+ /**
+  * S Param Magical Damage Rate
+  */
+ public inline var MDR = 7;
+
+ /**
+  * S Param Floor Damage Rate
+  */
+ public inline var FDR = 8;
+
+ /**
+  * S Param Experience Rate
+  */
+ public inline var EXR = 9;
+}
+
+@:forward
+@:forwardStatics
+enum abstract EquipTypeId(EquipmentTypeId) from EquipmentTypeId
+ to EquipmentTypeId {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract EquipTypeId(Int) from Int to Int {
- public inline var base = -1;
-}
-
-@:forward
-@:forwardStatics
-enum abstract SkillId(Int) from Int to Int {
+enum abstract SkillIdA(SkillId) from SkillId to SkillId {
  public inline var base = -1;
 }
 
@@ -357,3 +498,18 @@ enum abstract ChocieBackgroundType(Int) from Int to Int {
 enum abstract ChoicePositionType(Int) from Int to Int {
  public inline var base = -1;
 }
+
+typedef Icon = Int;
+typedef TraitId = Int;
+typedef ElementId = Int;
+typedef WeaponTypeId = Int;
+typedef ArmorTypeId = Int;
+typedef EquipmentTypeId = Int;
+typedef SlotType = Int;
+typedef FlagId = Int;
+typedef CollapseType = Int;
+typedef AbilityId = Int;
+typedef StateId = Int;
+typedef ParameterId = Int;
+typedef SkillId = Int;
+typedef BuffId = Int;
