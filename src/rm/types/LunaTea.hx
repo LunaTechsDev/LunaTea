@@ -499,6 +499,12 @@ enum abstract ChoicePositionType(Int) from Int to Int {
  public inline var base = -1;
 }
 
+@:forward
+@:forwardStatics
+enum abstract VehicleType(String) from String to String {
+ public inline var base = "";
+}
+
 typedef Icon = Int;
 typedef TraitId = Int;
 typedef ElementId = Int;
@@ -513,3 +519,4 @@ typedef StateId = Int;
 typedef ParameterId = Int;
 typedef SkillId = Int;
 typedef BuffId = Int;
+typedef FadeType = Int;
