@@ -1,5 +1,6 @@
 package rm.objects;
 
+import rm.types.LunaTea.ParameterId;
 import rm.types.RPG;
 import js.lib.Object;
 
@@ -455,11 +456,19 @@ extern class Game_Actor extends Game_Battler {
 
  /**
   * Returns the element id of barehanded attacks.
+  * By default this is 1.
   *
   * @returns {Int}
   * @memberof Game_Actor
   */
  public function bareHandsElementId(): Int;
+
+ /**
+  * Returns the base value of the parameter.
+  * @param paramId
+  * @return Int
+  */
+ public function paramBase(paramId: ParameterId): Int;
 
  /**
   * Returns the first attack animation id.
@@ -791,4 +800,11 @@ extern class Game_Actor extends Game_Battler {
   * @memberof Game_Actor
   */
  public function setLastCommandSymbol(symbol: String): Void;
+
+ /**
+  * Returns true if the item effect  has a special effect from game action.
+  * @param item
+  * @return Bool
+  */
+ public function testEscape(item: BaseItem): Bool;
 }
