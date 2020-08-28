@@ -111,10 +111,3 @@ function literalToObject(leftNode) {
   const newAssignment = tt.memberExpression(object, newProperty, false);
   return newAssignment;
 }
-
-// function literalDeclarationToObject(initExpression) {
-//   const { property, object } = initExpression;
-//   const newProperty = tt.identifier(property.value);
-//   const newAssignment = tt.memberExpression(object, newProperty, true);
-//   return newAssignment;
-// }
