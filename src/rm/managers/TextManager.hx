@@ -2,6 +2,8 @@ package rm.managers;
 
 /**
  * The static class that handles terms and messages.
+ * This is linked to the terms and information
+ * contained within the editor.
  */
 @:expose("TextManager")
 @:native("TextManager")
