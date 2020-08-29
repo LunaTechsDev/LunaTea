@@ -5,9 +5,9 @@ import rm.core.Sprite;
 /**
  * Scene class of the game over screen.
  */
-@:expose("Scene_GameOver")
-@:native("Scene_GameOver")
-extern class Scene_GameOver extends Scene_Base {
+@:expose("Scene_Gameover")
+@:native("Scene_Gameover")
+extern class Scene_Gameover extends Scene_Base {
  private var _backSprite: Sprite;
 
  #if !compileMV
