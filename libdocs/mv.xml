@@ -64233,24 +64233,80 @@
 		</meta>
 	</class>
 	<class path="rm.managers.AudioManager" params="" file="src/rm/managers/AudioManager.hx" extern="1">
+		<__bgmVolume public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_bgmVolume"</e></m></meta>
+		</__bgmVolume>
 		<_bgmVolume static="1"><x path="Int"/></_bgmVolume>
+		<__bgsVolume public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_bgsVolume"</e></m></meta>
+		</__bgsVolume>
 		<_bgsVolume static="1"><x path="Int"/></_bgsVolume>
+		<__meVolume public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_meVolume"</e></m></meta>
+		</__meVolume>
 		<_meVolume static="1"><x path="Int"/></_meVolume>
+		<__seVolume public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_seVolume"</e></m></meta>
+		</__seVolume>
 		<_seVolume static="1"><x path="Int"/></_seVolume>
+		<__currentBgm public="1" static="1">
+			<t path="rm.types.AudioParameters"/>
+			<meta><m n=":native"><e>"_currentBgm"</e></m></meta>
+		</__currentBgm>
 		<_currentBgm static="1"><t path="rm.types.AudioParameters"/></_currentBgm>
+		<__currentBgs public="1" static="1">
+			<t path="rm.types.AudioParameters"/>
+			<meta><m n=":native"><e>"_currentBgs"</e></m></meta>
+		</__currentBgs>
 		<_currentBgs static="1"><t path="rm.types.AudioParameters"/></_currentBgs>
+		<__bgmBuffer public="1" static="1">
+			<c path="rm.core.HTML5Audio"/>
+			<meta><m n=":native"><e>"_bgmBuffer"</e></m></meta>
+		</__bgmBuffer>
 		<_bgmBuffer static="1"><c path="rm.core.HTML5Audio"/></_bgmBuffer>
+		<__bgsBuffer public="1" static="1">
+			<c path="rm.core.HTML5Audio"/>
+			<meta><m n=":native"><e>"_bgsBuffer"</e></m></meta>
+		</__bgsBuffer>
 		<_bgsBuffer static="1"><c path="rm.core.HTML5Audio"/></_bgsBuffer>
+		<__meBuffer public="1" static="1">
+			<c path="rm.core.HTML5Audio"/>
+			<meta><m n=":native"><e>"_meBuffer"</e></m></meta>
+		</__meBuffer>
 		<_meBuffer static="1"><c path="rm.core.HTML5Audio"/></_meBuffer>
+		<__seBuffers public="1" static="1">
+			<c path="Array"><c path="rm.core.HTML5Audio"/></c>
+			<meta><m n=":native"><e>"_seBuffers"</e></m></meta>
+		</__seBuffers>
 		<_seBuffers static="1"><c path="Array"><c path="rm.core.HTML5Audio"/></c></_seBuffers>
+		<__staticBuffers public="1" static="1">
+			<c path="Array"><c path="rm.core.HTML5Audio"/></c>
+			<meta><m n=":native"><e>"_staticBuffers"</e></m></meta>
+		</__staticBuffers>
 		<_staticBuffers static="1"><c path="Array"><c path="rm.core.HTML5Audio"/></c></_staticBuffers>
+		<__replayFadeTime public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_replayFadeTime"</e></m></meta>
+		</__replayFadeTime>
 		<_replayFadeTime static="1"><x path="Int"/></_replayFadeTime>
+		<__path public="1" static="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_path"</e></m></meta>
+		</__path>
 		<_path static="1"><c path="String"/></_path>
+		<__blobUrl public="1" static="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_blobUrl"</e></m></meta>
+		</__blobUrl>
 		<_blobUrl static="1"><c path="String"/></_blobUrl>
-		<bgmVolume static="1"><x path="Int"/></bgmVolume>
-		<bgsVolume static="1"><x path="Int"/></bgsVolume>
-		<meVolume static="1"><x path="Int"/></meVolume>
-		<seVolume static="1"><x path="Int"/></seVolume>
+		<bgmVolume public="1" static="1"><x path="Int"/></bgmVolume>
+		<bgsVolume public="1" static="1"><x path="Int"/></bgsVolume>
+		<meVolume public="1" static="1"><x path="Int"/></meVolume>
+		<seVolume public="1" static="1"><x path="Int"/></seVolume>
 		<playBgm public="1" set="method" static="1"><f a="bgm:?pos">
 	<t path="rm.types.AudioParameters"/>
 	<x path="Float"/>
@@ -64614,19 +64670,19 @@
 		</meta>
 	</class>
 	<class path="rm.managers.ColorManager" params="" file="src/rm/managers/ColorManager.hx">
-		<baseWindow public="1" expr="new WindowBase(0, 0, 0, 0)" line="214" static="1">
+		<baseWindow public="1" expr="new WindowBase(0, 0, 0, 0)" line="216" static="1">
 			<x path="rm.abstracts.windows.WindowBase"/>
 			<meta><m n=":value"><e>new WindowBase(0, 0, 0, 0)</e></m></meta>
 		</baseWindow>
-		<windowSkin public="1" expr="baseWindow.windowskin" line="215" static="1">
+		<windowSkin public="1" expr="baseWindow.windowskin" line="217" static="1">
 			<c path="rm.core.Bitmap"/>
 			<meta><m n=":value"><e>baseWindow.windowskin</e></m></meta>
 		</windowSkin>
-		<loadWindowSkin public="1" set="method" line="219" static="1">
+		<loadWindowSkin public="1" set="method" line="221" static="1">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Loads the window skin into ColorManager.</haxe_doc>
 		</loadWindowSkin>
-		<textColor public="1" set="method" line="227" static="1">
+		<textColor public="1" set="method" line="229" static="1">
 			<f a="windowSkinColorIndex">
 				<x path="Int"/>
 				<x path="rm.types.Color"/>
@@ -64634,97 +64690,97 @@
 			<haxe_doc>* Loads the text color using the window skin color Index.
   * @param windowSkinColorIndex</haxe_doc>
 		</textColor>
-		<normalColor public="1" set="method" line="235" static="1">
+		<normalColor public="1" set="method" line="237" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the normal color, index 0
   * of the window skin.</haxe_doc>
 		</normalColor>
-		<systemColor public="1" set="method" line="243" static="1">
+		<systemColor public="1" set="method" line="245" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the system color; index 16 on the window skin.
   * @return Color</haxe_doc>
 		</systemColor>
-		<crisisColor public="1" set="method" line="251" static="1">
+		<crisisColor public="1" set="method" line="253" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the crisis color; index 17 on the window skin.
   * @return Color</haxe_doc>
 		</crisisColor>
-		<deathColor public="1" set="method" line="259" static="1">
+		<deathColor public="1" set="method" line="261" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the death color; index 18 on the window skin.
   * @return Color</haxe_doc>
 		</deathColor>
-		<gaugeBackColor public="1" set="method" line="267" static="1">
+		<gaugeBackColor public="1" set="method" line="269" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the  gauge back color; index 19 on the window skin.
   * @return Color</haxe_doc>
 		</gaugeBackColor>
-		<hpGaugeColor1 public="1" set="method" line="275" static="1">
+		<hpGaugeColor1 public="1" set="method" line="277" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the hp gauge color 1. Index 20 on the window skin.
   * @return Color</haxe_doc>
 		</hpGaugeColor1>
-		<hpGaugeColor2 public="1" set="method" line="283" static="1">
+		<hpGaugeColor2 public="1" set="method" line="285" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the hp guage color 2. Index 21 on the window skin.
   * @return Color</haxe_doc>
 		</hpGaugeColor2>
-		<mpGaugeColor1 public="1" set="method" line="291" static="1">
+		<mpGaugeColor1 public="1" set="method" line="293" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the mp gauge color 1. Index 22 on the window skin.
   * @return Color</haxe_doc>
 		</mpGaugeColor1>
-		<mpGaugeColor2 public="1" set="method" line="299" static="1">
+		<mpGaugeColor2 public="1" set="method" line="301" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the mp gauge color 2. Index 23 on the window skin.
   * @return Color</haxe_doc>
 		</mpGaugeColor2>
-		<mpCostColor public="1" set="method" line="307" static="1">
+		<mpCostColor public="1" set="method" line="309" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the mp cost color. Index 23 on the window skin.
   * @return Color</haxe_doc>
 		</mpCostColor>
-		<powerUpColor public="1" set="method" line="315" static="1">
+		<powerUpColor public="1" set="method" line="317" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the power up color. Index 24 on the window skin.
   * @return Color</haxe_doc>
 		</powerUpColor>
-		<powerDownColor public="1" set="method" line="323" static="1">
+		<powerDownColor public="1" set="method" line="325" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the power down color. Index 25 on the window skin.
   * @return Color</haxe_doc>
 		</powerDownColor>
-		<ctGaugeColor1 public="1" set="method" line="331" static="1">
+		<ctGaugeColor1 public="1" set="method" line="333" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the ct gauge color 1. Index 26 on the window skin.
   * @return Color</haxe_doc>
 		</ctGaugeColor1>
-		<ctGaugeColor2 public="1" set="method" line="339" static="1">
+		<ctGaugeColor2 public="1" set="method" line="341" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the ct gauge color 2. Index 27 on the window skin.
   * @return Color</haxe_doc>
 		</ctGaugeColor2>
-		<tpGaugeColor1 public="1" set="method" line="347" static="1">
+		<tpGaugeColor1 public="1" set="method" line="349" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the tp gauge color 1. Index 28 on the window skin.
   * @return Color</haxe_doc>
 		</tpGaugeColor1>
-		<tpGaugeColor2 public="1" set="method" line="355" static="1">
+		<tpGaugeColor2 public="1" set="method" line="357" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the tp gauge color 2. Index 29 on the window skin.
   * @return Color</haxe_doc>
 		</tpGaugeColor2>
-		<tpCostColor public="1" set="method" line="363" static="1">
+		<tpCostColor public="1" set="method" line="365" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the tp cost color. Index 29 on the window skin.
   * @return Color</haxe_doc>
 		</tpCostColor>
-		<pendingColor public="1" set="method" line="371" static="1">
+		<pendingColor public="1" set="method" line="373" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Uses the pending color.
   * @return Color</haxe_doc>
 		</pendingColor>
-		<hpColor public="1" set="method" line="384" static="1">
+		<hpColor public="1" set="method" line="386" static="1">
 			<f a="actor">
 				<c path="rm.objects.Game_Actor"/>
 				<x path="rm.types.Color"/>
@@ -64737,7 +64793,7 @@
   * @param actor
   * @return Color]]></haxe_doc>
 		</hpColor>
-		<mpColor public="1" set="method" line="392" static="1">
+		<mpColor public="1" set="method" line="394" static="1">
 			<f a="?actor">
 				<c path="rm.objects.Game_Actor"/>
 				<x path="rm.types.Color"/>
@@ -64745,7 +64801,7 @@
 			<haxe_doc>* Based on actor; currently returns normal color.
   * @return Color</haxe_doc>
 		</mpColor>
-		<tpColor public="1" set="method" line="400" static="1">
+		<tpColor public="1" set="method" line="402" static="1">
 			<f a="?actor">
 				<c path="rm.objects.Game_Actor"/>
 				<x path="rm.types.Color"/>
@@ -64753,7 +64809,7 @@
 			<haxe_doc>* Based on actor; currently returns normal color.
   * @return Color</haxe_doc>
 		</tpColor>
-		<paramChangeTextColor public="1" set="method" line="412" static="1">
+		<paramChangeTextColor public="1" set="method" line="414" static="1">
 			<f a="change">
 				<x path="Int"/>
 				<x path="rm.types.Color"/>
@@ -64765,7 +64821,7 @@
   * @param change
   * @return Color]]></haxe_doc>
 		</paramChangeTextColor>
-		<damageColor public="1" set="method" line="426" static="1">
+		<damageColor public="1" set="method" line="428" static="1">
 			<f a="colorType">
 				<x path="rm.types.DamageColorType"/>
 				<x path="rm.types.Color"/>
@@ -64779,27 +64835,27 @@
   * @param colorType
   * @return Color]]></haxe_doc>
 		</damageColor>
-		<outlineColor public="1" set="method" line="445" static="1">
+		<outlineColor public="1" set="method" line="447" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Returns the color "rgba(0, 0, 0, 0.6)"
   * @return Color</haxe_doc>
 		</outlineColor>
-		<dimColor1 public="1" set="method" line="453" static="1">
+		<dimColor1 public="1" set="method" line="455" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Returns the color "rgba(0, 0, 0, 0.6)"
   * @return Color</haxe_doc>
 		</dimColor1>
-		<dimColor2 public="1" set="method" line="461" static="1">
+		<dimColor2 public="1" set="method" line="463" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Returns the color "rgba(0, 0, 0, 0)"
   * @return Color</haxe_doc>
 		</dimColor2>
-		<itemBackColor1 public="1" set="method" line="469" static="1">
+		<itemBackColor1 public="1" set="method" line="471" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Returns the color "rgba(32, 32, 32, 0.5)"
   * @return Color</haxe_doc>
 		</itemBackColor1>
-		<itemBackColor2 public="1" set="method" line="477" static="1">
+		<itemBackColor2 public="1" set="method" line="479" static="1">
 			<f a=""><x path="rm.types.Color"/></f>
 			<haxe_doc>* Returns the color "rgba(0, 0, 0, 0.5)"
   * @return Color</haxe_doc>
@@ -65309,8 +65365,20 @@
 		</meta>
 	</class>
 	<class path="rm.managers.PluginManager" params="" file="src/rm/managers/PluginManager.hx" extern="1">
+		<__path public="1" static="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_path"</e></m></meta>
+		</__path>
 		<_path static="1"><c path="String"/></_path>
+		<__scripts public="1" static="1">
+			<c path="Array"><c path="String"/></c>
+			<meta><m n=":native"><e>"_scripts"</e></m></meta>
+		</__scripts>
 		<_scripts static="1"><c path="Array"><c path="String"/></c></_scripts>
+		<__errorUrls public="1" static="1">
+			<c path="Array"><c path="String"/></c>
+			<meta><m n=":native"><e>"_errorUrls"</e></m></meta>
+		</__errorUrls>
 		<_errorUrls static="1"><c path="Array"><c path="String"/></c></_errorUrls>
 		<setup public="1" set="method" static="1"><f a="plugins">
 	<c path="Array"><t path="rm.types.PluginSettings"/></c>
@@ -65794,7 +65862,9 @@
 	<x path="Int"/>
 	<c path="String"/>
 </f></getter>
-		<haxe_doc>* The static class that handles terms and messages.</haxe_doc>
+		<haxe_doc>* The static class that handles terms and messages.
+ * This is linked to the terms and information
+ * contained within the editor.</haxe_doc>
 		<meta>
 			<m n=":expose"><e>"TextManager"</e></m>
 			<m n=":native"><e>"TextManager"</e></m>
