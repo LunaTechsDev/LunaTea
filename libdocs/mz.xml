@@ -58706,6 +58706,29 @@
 		<m n=":noCompletion"/>
 	</meta>
 </_new></class>
+	<abstract path="rm.abstracts.scenes.SceneGameover" params="" file="src/rm/abstracts/scenes/SceneGameover.hx">
+		<from><icast><c path="rm.scenes.Scene_Gameover"/></icast></from>
+		<this><c path="rm.scenes.Scene_Gameover"/></this>
+		<to><icast><c path="rm.scenes.Scene_Gameover"/></icast></to>
+		<meta>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.abstracts.scenes._SceneGameover.SceneGameover_Impl_" params="" file="src/rm/abstracts/scenes/SceneGameover.hx" private="1" module="rm.abstracts.scenes.SceneGameover" final="1"><_new public="1" get="inline" set="null" line="8" static="1">
+	<f a=""><x path="rm.abstracts.scenes.SceneGameover"/></f>
+	<meta>
+		<m n=":impl"/>
+		<m n=":noCompletion"/>
+	</meta>
+</_new></class></impl>
+	</abstract>
+	<class path="rm.abstracts.scenes._SceneGameover.SceneGameover_Impl_" params="" file="src/rm/abstracts/scenes/SceneGameover.hx" private="1" module="rm.abstracts.scenes.SceneGameover" final="1"><_new public="1" get="inline" set="null" line="8" static="1">
+	<f a=""><x path="rm.abstracts.scenes.SceneGameover"/></f>
+	<meta>
+		<m n=":impl"/>
+		<m n=":noCompletion"/>
+	</meta>
+</_new></class>
 	<abstract path="rm.abstracts.scenes.SceneItem" params="" file="src/rm/abstracts/scenes/SceneItem.hx">
 		<from><icast><c path="rm.scenes.Scene_Item"/></icast></from>
 		<this><c path="rm.scenes.Scene_Item"/></this>
@@ -76429,6 +76452,36 @@
 			<m n=":directlyUsed"/>
 			<m n=":expose"><e>"Scene_GameOver"</e></m>
 			<m n=":native"><e>"Scene_GameOver"</e></m>
+		</meta>
+	</class>
+	<class path="rm.scenes.Scene_Gameover" params="" file="src/rm/scenes/Scene_Gameover.hx" extern="1">
+		<extends path="rm.scenes.Scene_Base"/>
+		<_backSprite><c path="rm.core.Sprite"/></_backSprite>
+		<adjustBackground public="1" set="method"><f a=""><x path="Void"/></f></adjustBackground>
+		<stop public="1" set="method" override="1"><f a=""><x path="Void"/></f></stop>
+		<playGameoverMusic public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Plays the game over music
+  * within the game over scene.
+  * @memberof Scene_Gameover</haxe_doc>
+		</playGameoverMusic>
+		<createBackground public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Creates the background of
+  * the game over scene.
+  * @memberof Scene_Gameover</haxe_doc>
+		</createBackground>
+		<isTriggered public="1" set="method"><f a=""><x path="Bool"/></f></isTriggered>
+		<gotoTitle public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Returns to the title scene (Scene_Title).
+  * @memberof Scene_Gameover</haxe_doc>
+		</gotoTitle>
+		<haxe_doc>* Scene class of the game over screen.</haxe_doc>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":expose"><e>"Scene_Gameover"</e></m>
+			<m n=":native"><e>"Scene_Gameover"</e></m>
 		</meta>
 	</class>
 	<class path="rm.scenes.Scene_ItemBase" params="" file="src/rm/scenes/Scene_ItemBase.hx" extern="1">
