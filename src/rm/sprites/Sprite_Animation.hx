@@ -1,5 +1,6 @@
 package rm.sprites;
 
+import haxe.DynamicAccess;
 import rm.core.Bitmap;
 import rm.core.Sprite;
 import rm.core.ScreenSprite;
@@ -15,44 +16,100 @@ import rm.types.RPG.AnimationTiming;
 @:expose("Sprite_Animation")
 @:native("Sprite_Animation")
 extern class Sprite_Animation extends Sprite {
- // TODO: Handle these in Haxe
- private static var _checker1: {
-  key: Animation
- };
- // TODO: Handle these in Haxe
- private static var _checker2: {
-  key: Animation
- };
+ /**
+  * {
+   key: Animation
+  };
+  */
+ @:native("_checker1")
+ public var __checker1: DynamicAccess<Dynamic>;
+
+ /**
+  * Structure
+  * {
+   key: Animation
+  };
+  */
+ private static var _checker1: DynamicAccess<Dynamic>;
+
+ /**
+  * Structure
+  * {
+   key: Animation
+  };
+  */
+ @:native("_checker2")
+ public static var __checker2: DynamicAccess<Dynamic>;
+
+ /**
+  * {
+   key: Animation
+  };
+  */
+ private static var _checker2: DynamicAccess<Dynamic>;
+
+ @:native("_target")
+ public var __target: Sprite_Base;
  private var _target: Sprite_Base;
 
+ @:native("_animation")
+ public var __animation: Animation;
  private var _animation: Animation;
 
+ @:native("_mirror")
+ public var __mirror: Bool;
  private var _mirror: Bool;
 
+ @:native("_delay")
+ public var __delay: Int;
  private var _delay: Int;
 
+ @:native("_rate")
+ public var __rate: Float;
  private var _rate_: Float; // TODO: Not sure if intentionaL?
 
+ @:native("_duration")
+ public var __duration: Int;
  private var _duration: Int;
 
+ @:native("_flashColor")
+ public var __flashColor: Array<Int>;
  private var _flashColor: Array<Int>;
 
+ @:native("_flashDuration")
+ public var __flashDuration: Int;
  private var _flashDuration: Int;
 
+ @:native("_screenFlashDuration")
+ public var __screenFlashDuration: Int;
  private var _screenFlashDuration: Int;
 
+ @:native("_hidingDuration")
+ public var __hidingDuration: Int;
  private var _hidingDuration: Int;
 
+ @:native("_bitmap1")
+ public var __bitmap1: Bitmap;
  private var _bitmap1: Bitmap;
 
+ @:native("_bitmap2")
+ public var __bitmap2: Bitmap;
  private var _bitmap2: Bitmap;
 
+ @:native("_cellSprites")
+ public var __cellSprites: Array<Sprite>;
  private var _cellSprites: Array<Sprite>;
 
+ @:native("_screenFlashSprite")
+ public var __screenFlashSprite: ScreenSprite;
  private var _screenFlashSprite: ScreenSprite;
 
+ @:native("_duplicated")
+ public var __duplicated: Bool;
  private var _duplicated: Bool;
 
+ @:native("_reduceArtifacts")
+ public var __reduceArtifacts: Bool;
  private var _reduceArtifacts: Bool;
 
  public function initMembers(): Void;
