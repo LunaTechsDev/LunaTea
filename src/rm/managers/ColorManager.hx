@@ -10,6 +10,8 @@ import rm.abstracts.windows.WindowBase;
 @:expose("ColorManager")
 @:native("ColorManager")
 extern class ColorManager {
+ @:native("_windowSkin")
+ public var __windowSkin: Bitmap;
  private var _windowSkin: Bitmap;
 
  /**
