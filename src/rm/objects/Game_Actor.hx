@@ -1,6 +1,5 @@
 package rm.objects;
 
-import rm.types.LunaTea.ActorId;
 import rm.types.LunaTea.ParameterId;
 import rm.types.RPG;
 import js.lib.Object;

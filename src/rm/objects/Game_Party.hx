@@ -1,7 +1,6 @@
 package rm.objects;
 
 import haxe.DynamicAccess;
-import rm.types.LunaTea.ActorId;
 import rm.types.RPG;
 import rm.types.RPG.BaseItem;
 import js.lib.Object;
@@ -30,11 +29,11 @@ extern class Game_Party extends Game_Unit {
  public var __lastItem: Game_Item;
  private var _lastItem: Game_Item;
  @:native("_menuActorId")
- public var __menuActorId: ActorId;
- private var _menuActorId: ActorId;
+ public var __menuActorId: Int;
+ private var _menuActorId: Int;
  @:native("_targetActorId")
- public var __targetActorId: ActorId;
- private var _targetActorId: ActorId;
+ public var __targetActorId: Int;
+ private var _targetActorId: Int;
  @:native("_actors")
  public var __actors: Array<Game_Actor>;
  private var _actors: Array<Game_Actor>;

@@ -3,10 +3,8 @@ package rm.objects;
 import rm.types.LunaTea.AnimationId;
 import rm.types.RM.BattlerAnimation;
 import rm.types.LunaTea.ActionState;
-import rm.types.LunaTea.SkillId;
 import rm.types.RPG.UsableItem;
 import rm.types.LunaTea.ParameterId;
-import rm.types.LunaTea.StateId;
 import rm.types.LunaTea.WeaponImageId;
 import rm.types.LunaTea.MotionType;
 
@@ -249,7 +247,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_Battler
   */
- public function addState(stateId: StateId): Void;
+ public function addState(stateId: Int): Void;
 
  /**
   * Returns true if the specified state given the state id
@@ -258,7 +256,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isStateAddable(stateId: StateId): Bool;
+ public function isStateAddable(stateId: Int): Bool;
 
  /**
   * Returns true if the specified state given the state id
@@ -268,7 +266,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isStateRestrict(stateId: StateId): Bool;
+ public function isStateRestrict(stateId: Int): Bool;
 
  /**
   * Handler for when theb attler is restricted.
@@ -283,7 +281,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_Battler
   */
- public function removeState(stateId: StateId): Void;
+ public function removeState(stateId: Int): Void;
 
  /**
   * Has the battler escape from battle; plays a sound on escaping.
@@ -375,7 +373,7 @@ extern class Game_Battler extends Game_BattlerBase {
   */
  public function setLastTarget(target: Game_Battler): Void;
 
- public function forceAction(skillId: SkillId, targetIndex: Int): Void;
+ public function forceAction(skillId: Int, targetIndex: Int): Void;
 
  /**
   * Has theb attler use the given item.

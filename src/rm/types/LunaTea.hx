@@ -2,13 +2,13 @@ package rm.types;
 
 @:forward
 @:forwardStatics
-enum abstract StateIdA(StateId) from StateId to StateId {
+enum abstract StateIdA(Int) from Int to Int {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract BuffIdA(BuffId) from BuffId to BuffId {
+enum abstract BuffIdA(Int) from Int to Int {
  public inline var base = -1;
 }
 
@@ -160,14 +160,13 @@ enum abstract ParameterIdA(ParameterId) from ParameterId to ParameterId {
 
 @:forward
 @:forwardStatics
-enum abstract EquipTypeId(EquipmentTypeId) from EquipmentTypeId
- to EquipmentTypeId {
+enum abstract EquipTypeId(Int) from Int to Int {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract SkillIdA(SkillId) from SkillId to SkillId {
+enum abstract SkillIdA(Int) from Int to Int {
  public inline var base = -1;
 }
 
@@ -441,7 +440,7 @@ enum abstract GaugeType(String) from String to String {
 
 @:forward
 @:forwardStatics
-enum abstract SkillTypeId(Int) from Int to Int {
+enum abstract SkillTypeIdA(Int) from Int to Int {
  public inline var base = -1;
 }
 

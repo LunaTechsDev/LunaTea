@@ -1,8 +1,6 @@
 package rm.objects;
 
 import rm.types.LunaTea.InterpreterWaitMode;
-import rm.types.LunaTea.EventId;
-import rm.types.LunaTea.MapId;
 import rm.types.RPG.EventCommand;
 import haxe.extern.EitherType;
 import js.lib.Object;
@@ -42,11 +40,11 @@ extern class Game_Interpreter {
  public var __freezeChecker: Int;
  private var _freezeChecker: Int;
  @:native("_mapId")
- public var __mapId: MapId;
- private var _mapId: MapId;
+ public var __mapId: Int;
+ private var _mapId: Int;
  @:native("_eventId")
- public var __eventId: EventId;
- private var _eventId: EventId;
+ public var __eventId: Int;
+ private var _eventId: Int;
  @:native("_list")
  public var __list: Array<EventCommand>;
  private var _list: Array<EventCommand>;

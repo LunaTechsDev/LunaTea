@@ -1,27 +1,16 @@
 package rm.objects;
 
 import rm.types.RPG.State;
-import rm.types.LunaTea.TraitId;
 import rm.types.RPG.Trait;
-import rm.types.LunaTea.ElementId;
 import rm.types.RPG.Item;
 import rm.types.RPG.EquipItem;
 import rm.types.RPG.UsableItem;
 import rm.types.RPG.Skill;
-import rm.types.LunaTea.AbilityId;
 import rm.types.LunaTea.CollapseType;
-import rm.types.LunaTea.FlagId;
 import rm.types.LunaTea.SlotType;
-import rm.types.LunaTea.WeaponTypeId;
-import rm.types.LunaTea.ArmorTypeId;
-import rm.types.LunaTea.EquipmentTypeId;
-import rm.types.LunaTea.SkillId;
-import rm.types.LunaTea.SkillTypeId;
 import rm.types.LunaTea.Icon;
 import rm.types.LunaTea.ParameterId;
-import rm.types.LunaTea.BuffId;
 import haxe.DynamicAccess;
-import rm.types.LunaTea.StateId;
 
 /**
  * -----------------------------------------------------------------------------
@@ -202,8 +191,8 @@ extern class Game_BattlerBase {
  public var __paramPlus: Array<Int>;
  private var _paramPlus: Array<Int>; // TODO: Update this to be parameterId?
  @:native("_states")
- public var __states: Array<StateId>;
- private var _states: Array<StateId>;
+ public var __states: Array<Int>;
+ private var _states: Array<Int>;
 
  /**
   * [stateId: Int]:Int
@@ -221,11 +210,11 @@ extern class Game_BattlerBase {
  private var _stateTurns: DynamicAccess<Dynamic>;
 
  @:native("_buffs")
- public var __buffs: Array<BuffId>;
- private var _buffs: Array<BuffId>;
+ public var __buffs: Array<Int>;
+ private var _buffs: Array<Int>;
  @:native("_buffTurns")
- public var __buffTurns: Array<BuffId>;
- private var _buffTurns: Array<BuffId>;
+ public var __buffTurns: Array<Int>;
+ private var _buffTurns: Array<Int>;
 
  /** [read-only] Hit Points */
  public var hp(get, null): Int;
@@ -339,7 +328,7 @@ extern class Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_BattlerBase
   */
- public function eraseState(stateId: StateId): Void;
+ public function eraseState(stateId: Int): Void;
 
  /**
   * Returns true if the battler is affected by the specified state given
@@ -348,7 +337,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isStateAffected(stateId: StateId): Bool;
+ public function isStateAffected(stateId: Int): Bool;
 
  public function isDeathStateAffected(): Bool;
 
@@ -358,7 +347,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function deathStateId(): Int;
+ public function deathInt(): Int;
 
  /**
   * Resets the state count of the specified state, given the state id.
@@ -366,7 +355,7 @@ extern class Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_BattlerBase
   */
- public function resetStateCounts(stateId: StateId): Void;
+ public function resetStateCounts(stateId: Int): Void;
 
  /**
   * Returns true if the state, given the state id is expired.
@@ -375,7 +364,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isStateExpired(stateId: StateId): Bool;
+ public function isStateExpired(stateId: Int): Bool;
 
  public function updateStateTurns(): Void;
 
@@ -485,9 +474,9 @@ extern class Game_BattlerBase {
  public function allTraits(): Array<Trait>;
 
  public function traits(code: Int): Array<Trait>;
- public function traitsWithId(code: Int, id: TraitId): Array<Trait>;
- public function traitsPi(code: Int, id: TraitId): Float;
- public function traitsSum(code: Int, id: TraitId): Int;
+ public function traitsWithId(code: Int, traitId: Int): Array<Trait>;
+ public function traitsPi(code: Int, traitId: Int): Float;
+ public function traitsSum(code: Int, traitId: Int): Int;
  public function traitsSumAll(code: Int): Int;
  public function traitsSet(code: Int): Array<Int>;
 
@@ -533,11 +522,11 @@ extern class Game_BattlerBase {
  public function xparam(xparamId: ParameterId): Int;
 
  public function sparam(sparamId: ParameterId): Int;
- public function elementRate(elementId: ElementId): Float;
- public function debuffRate(paramId: ElementId): Float;
- public function stateRate(stateId: StateId): Float;
+ public function elementRate(elementId: Int): Float;
+ public function debuffRate(paramId: Int): Float;
+ public function stateRate(stateId: Int): Float;
  public function stateResistSet(): Array<Int>;
- public function isStateResist(stateId: StateId): Bool;
+ public function isStateResist(stateId: Int): Bool;
 
  /**
   * Returns the attack elements of the battler
@@ -545,7 +534,7 @@ extern class Game_BattlerBase {
   * @returns {Array<number>}
   * @memberof Game_BattlerBase
   */
- public function attackElements(): Array<ElementId>;
+ public function attackElements(): Array<Int>;
 
  /**
   * Returns the attack states of the battler as a
@@ -553,9 +542,9 @@ extern class Game_BattlerBase {
   * @returns {Array<number>}
   * @memberof Game_BattlerBase
   */
- public function attackStates(): Array<StateId>;
+ public function attackStates(): Array<Int>;
 
- public function attackStatesRate(stateId: StateId): Void;
+ public function attackStatesRate(stateId: Int): Void;
 
  /**
   * Returns the attack speed of the battler.
@@ -573,14 +562,20 @@ extern class Game_BattlerBase {
   */
  public function attackTimesAdd(): Int;
 
- public function addedSkillTypes(): Array<SkillTypeId>;
- public function isSkillTypeSealed(stypeId: SkillTypeId): Bool;
- public function addedSkills(): Array<SkillId>;
- public function isSkillSealed(skillId: SkillId): Bool;
- public function isEquipWtypeOk(wtypeId: WeaponTypeId): Bool;
- public function isEquipAtypeOk(atypeId: ArmorTypeId): Bool;
- public function isEquipTypeLocked(etypeId: EquipmentTypeId): Bool;
- public function isEquipTypeSealed(etypeId: EquipmentTypeId): Bool;
+ /**
+  * Returns an array of integers
+  * representing skill type ids.
+  * @return Array<Int>
+  */
+ public function addedSkillTypes(): Array<Int>;
+
+ public function isSkillTypeSealed(skilltypeId: Int): Bool;
+ public function addedSkills(): Array<Int>;
+ public function isSkillSealed(skillId: Int): Bool;
+ public function isEquipWtypeOk(weaponTypeId: Int): Bool;
+ public function isEquipAtypeOk(armorTypeId: Int): Bool;
+ public function isEquipTypeLocked(equipmentTypeId: Int): Bool;
+ public function isEquipTypeSealed(equipmentTypeId: Int): Bool;
 
  /**
   * Returns the battler slot type of a trait.
@@ -599,7 +594,13 @@ extern class Game_BattlerBase {
  public function isDualWield(): Bool;
 
  public function actionPlusSet(): Array<Int>; // TODO: Make Typedef
- public function specialFlag(flagId: FlagId): Bool;
+
+ /**
+  * Takes a special flag
+  * @param flagId
+  * @return Bool
+  */
+ public function specialFlag(flagId: Int): Bool;
 
  /**
   * Returns the collapse type of the battler.
@@ -609,7 +610,7 @@ extern class Game_BattlerBase {
   */
  public function collapseType(): CollapseType;
 
- public function partyAbility(abilityId: AbilityId): Bool;
+ public function partyAbility(abilityId: Int): Bool;
 
  /**
   * Returns true if the battler is set to battle automatically.
@@ -834,7 +835,7 @@ extern class Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_BattlerBase
   */
- public function addNewState(stateId: StateId): Void;
+ public function addNewState(stateId: Int): Void;
 
  /**
   * Handler for when the battler is restricted.
@@ -962,7 +963,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function attackSkillId(): SkillId;
+ public function attackInt(): Int;
 
  /**
   * Returns the guard skill id in the database.
@@ -970,7 +971,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function guardSkillId(): SkillId;
+ public function guardInt(): Int;
 
  /**
   * Returns true if the battler can attack.
