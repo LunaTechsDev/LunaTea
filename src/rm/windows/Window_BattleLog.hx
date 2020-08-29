@@ -6,7 +6,6 @@ import rm.sprites.Spriteset_Battle;
 import rm.objects.Game_Action;
 import rm.core.Rectangle;
 import rm.objects.Game_Battler;
-import rm.types.LunaTea.BuffId;
 
 /**
  * -----------------------------------------------------------------------------
@@ -116,8 +115,16 @@ extern class Window_BattleLog extends Window_Base {
  public function displayAddedStates(target: Game_Battler): Void;
  public function displayRemovedStates(target: Game_Battler): Void;
  public function displayChangedBuffs(target: Game_Battler): Void;
- public function displayBuffs(target: Game_Battler, buffs: Array<BuffId>,
+
+ /**
+  *
+  * @param target
+  * @param buffs list of integers representing buff Ids
+  * @param fmt
+  */
+ public function displayBuffs(target: Game_Battler, buffs: Array<Int>,
   fmt: String): Void;
+
  public function makeHpDamageText(target: Game_Battler): Void;
  public function makeMpDamageText(target: Game_Battler): String;
  public function makeTpDamageText(target: Game_Battler): String;

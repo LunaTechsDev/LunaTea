@@ -3,27 +3,49 @@ package rm.objects;
 import rm.types.LunaTea.AnimationId;
 import rm.types.RM.BattlerAnimation;
 import rm.types.LunaTea.ActionState;
-import rm.types.LunaTea.SkillId;
 import rm.types.RPG.UsableItem;
 import rm.types.LunaTea.ParameterId;
-import rm.types.LunaTea.StateId;
 import rm.types.LunaTea.WeaponImageId;
 import rm.types.LunaTea.MotionType;
 
 @:expose("Game_Battler")
 @:native("Game_Battler")
 extern class Game_Battler extends Game_BattlerBase {
+ @:native("_actions")
+ public var __actions: Array<Game_Action>;
  private var _actions: Array<Game_Action>;
+ @:native("_speed")
+ public var __speed: Int;
  private var _speed: Int;
+ @:native("_result")
+ public var __result: Game_ActionResult;
  private var _result: Game_ActionResult;
+ @:native("_actionState")
+ public var __actionState: String;
  private var _actionState: String;
+ @:native("_lastTargetIndex")
+ public var __lastTargetIndex: Int;
  private var _lastTargetIndex: Int;
+ @:native("_animations")
+ public var __animations: Array<BattlerAnimation>;
  private var _animations: Array<BattlerAnimation>;
+ @:native("_damagePopup")
+ public var __damagePopup: Bool;
  private var _damagePopup: Bool;
+ @:native("_effectType")
+ public var __effectType: String; // TODO: Add Effect Type stuff
  private var _effectType: String;
+ @:native("_motionType")
+ public var __motionType: MotionType;
  private var _motionType: MotionType;
+ @:native("_weaponImageId")
+ public var __weaponImageId: Int;
  private var _weaponImageId: Int;
+ @:native("_motionRefresh")
+ public var __motionRefresh: Bool;
  private var _motionRefresh: Bool;
+ @:native("_selected")
+ public var __selected: Bool;
  private var _selected: Bool;
 
  /**
@@ -249,7 +271,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_Battler
   */
- public function addState(stateId: StateId): Void;
+ public function addState(stateId: Int): Void;
 
  /**
   * Returns true if the specified state given the state id
@@ -258,7 +280,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isStateAddable(stateId: StateId): Bool;
+ public function isStateAddable(stateId: Int): Bool;
 
  /**
   * Returns true if the specified state given the state id
@@ -268,7 +290,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isStateRestrict(stateId: StateId): Bool;
+ public function isStateRestrict(stateId: Int): Bool;
 
  /**
   * Handler for when theb attler is restricted.
@@ -283,7 +305,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_Battler
   */
- public function removeState(stateId: StateId): Void;
+ public function removeState(stateId: Int): Void;
 
  /**
   * Has the battler escape from battle; plays a sound on escaping.
@@ -375,7 +397,7 @@ extern class Game_Battler extends Game_BattlerBase {
   */
  public function setLastTarget(target: Game_Battler): Void;
 
- public function forceAction(skillId: SkillId, targetIndex: Int): Void;
+ public function forceAction(skillId: Int, targetIndex: Int): Void;
 
  /**
   * Has theb attler use the given item.

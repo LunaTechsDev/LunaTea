@@ -1,8 +1,6 @@
 package rm.objects;
 
 import rm.types.RPG.State;
-import rm.types.LunaTea.StateId;
-import rm.types.LunaTea.BuffId;
 
 /**
  * -----------------------------------------------------------------------------
@@ -26,11 +24,11 @@ extern class Game_ActionResult {
  public var hpDamage: Int;
  public var mpDamage: Int;
  public var tpDamage: Int;
- public var addedStates: Array<StateId>;
- public var removedStates: Array<StateId>;
- public var addedBuffs: Array<StateId>;
- public var addedDebuffs: Array<BuffId>;
- public var removedBuffs: Array<BuffId>; // TODO: Enum States and Buffs into Enums
+ public var addedStates: Array<Int>;
+ public var removedStates: Array<Int>;
+ public var addedBuffs: Array<Int>;
+ public var addedDebuffs: Array<Int>;
+ public var removedBuffs: Array<Int>; // TODO: Enum States and Buffs into Enums
 
  public function new(): Void;
  public function initialize(): Void;
@@ -68,10 +66,10 @@ extern class Game_ActionResult {
   */
  public function isHit(): Bool;
 
- public function isStateAdded(stateId: StateId): Bool;
- public function pushAddedState(stateId: StateId): Void;
- public function isStateRemoved(stateId: StateId): Bool;
- public function pushRemovedState(stateId: StateId): Void;
+ public function isStateAdded(stateId: Int): Bool;
+ public function pushAddedState(stateId: Int): Void;
+ public function isStateRemoved(stateId: Int): Bool;
+ public function pushRemovedState(stateId: Int): Void;
 
  /**
   * Returns true if the a buff is added to the specified param
@@ -80,11 +78,11 @@ extern class Game_ActionResult {
   * @returns {Bool}
   * @memberof Game_ActionResult
   */
- public function isBuffAdded(paramId: BuffId): Bool;
+ public function isBuffAdded(paramId: Int): Bool;
 
- public function pushAddedBuff(paramId: BuffId): Void;
- public function isDebuffAdded(paramId: BuffId): Bool;
- public function pushAddedDebuff(paramId: BuffId): Void;
- public function isBuffRemoved(paramId: BuffId): Bool;
- public function pushRemovedBuff(paramId: BuffId): Void;
+ public function pushAddedBuff(paramId: Int): Void;
+ public function isDebuffAdded(paramId: Int): Bool;
+ public function pushAddedDebuff(paramId: Int): Void;
+ public function isBuffRemoved(paramId: Int): Bool;
+ public function pushRemovedBuff(paramId: Int): Void;
 }

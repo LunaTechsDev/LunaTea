@@ -3,8 +3,8 @@ package rm.windows;
 import rm.types.RPG.Item;
 import rm.core.Rectangle;
 import rm.objects.Game_Actor;
-import rm.types.LunaTea.SkillTypeId;
 import rm.types.RPG.Skill;
+import rm.types.LunaTea.SkillTypeIdA;
 
 /**
  * -----------------------------------------------------------------------------
@@ -19,9 +19,18 @@ extern class Window_SkillList extends Window_Selectable {
  @:native("_actor")
  public var __actor: Game_Actor;
  private var _actor: Game_Actor;
+
+ /**
+  * Returns the Skill Type Id, which is an Int.
+  */
  @:native("_stypeId")
- public var __stypeId: SkillTypeId;
- private var _stypeId: SkillTypeId;
+ public var __stypeId: SkillTypeIdA;
+
+ /**
+  * Returns the Skill Type Id which is an Int;
+  */
+ private var _stypeId: SkillTypeIdA;
+
  @:native("_data")
  public var __data: Array<Skill>;
  private var _data: Array<Skill>;
@@ -53,10 +62,10 @@ extern class Window_SkillList extends Window_Selectable {
  /**
   * Sets the skill type id of the skill list window.
   *
-  * @param {number} stypeId
+  * @param {number} stypeId - Integer
   * @memberof Window_SkillList
   */
- public function setStypeId(stypeId: SkillTypeId): Void;
+ public function setStypeId(stypeId: SkillTypeIdA): Void;
 
  /**
   * Returns the current skill at the window index

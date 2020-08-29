@@ -3,6 +3,15 @@ package rm.objects;
 @:expose("Game_Actors")
 @:native("Game_Actors")
 extern class Game_Actors {
+ /**
+  * List of all Game_Actor in the database.
+  */
+ @:native("_data")
+ public var __data: Array<Game_Actor>;
+
+ /**
+  * List of Game_Actor in the database.
+  */
  private var _data: Array<Game_Actor>;
 
  public function new(): Void;
