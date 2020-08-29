@@ -13,15 +13,26 @@ import rm.objects.Game_Actor;
 @:expose("Sprite_Damage")
 @:native("Sprite_Damage")
 extern class Sprite_Damage extends Sprite {
+ public var __duration: Int;
  private var _duration: Int;
+
+ /**
+  * Array of 3 numbers of RGB
+  */
+ @:native("_flashColor")
+ public var __flashColor: Array<Int>;
 
  /**
   * Array of 3 numbers of RGB
   */
  private var _flashColor: Array<Int>; // TODO: create Color Abstract With Array RGB Format
 
+ @:native("_flashDuration")
+ public var __flashDuration: Int;
  private var _flashDuration: Int;
 
+ @:native("_damageBitmap")
+ public var __damageBitmap: Bitmap;
  private var _damageBitmap: Bitmap;
 
  public function setup(target: Game_Actor): Void;
