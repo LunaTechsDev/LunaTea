@@ -11,6 +11,8 @@ import rm.core.Sprite;
 @:expose("Sprite_Timer")
 @:native("Sprite_Timer")
 extern class Sprite_Timer extends Sprite {
+ @:native("_seconds")
+ public var __seconds: Int;
  private var _seconds: Int;
 
  /**

@@ -12,9 +12,17 @@ import rm.core.Sprite;
 @:expose("Sprite_Button")
 @:native("Sprite_Button")
 extern class Sprite_Button extends Sprite {
+ @:native("_touching")
+ public var __touching: Bool;
  private var _touching: Bool;
+ @:native("_coldFrame")
+ public var __coldFrame: Rectangle;
  private var _coldFrame: Rectangle;
+ @:native("_hotFrame")
+ public var __hotFrame: Rectangle;
  private var _hotFrame: Rectangle;
+ @:native("_clickHandler")
+ public var __clickHandler: () -> Void;
  private var _clickHandler: () -> Void;
 
  /**
