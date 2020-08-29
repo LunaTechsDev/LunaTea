@@ -347,7 +347,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function deathInt(): Int;
+ public function deathStateId(): Int;
 
  /**
   * Resets the state count of the specified state, given the state id.
@@ -963,7 +963,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function attackInt(): Int;
+ public function attackSkillid(): Int;
 
  /**
   * Returns the guard skill id in the database.
@@ -971,7 +971,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function guardInt(): Int;
+ public function guardSkillId(): Int;
 
  /**
   * Returns true if the battler can attack.
