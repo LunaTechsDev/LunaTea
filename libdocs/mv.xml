@@ -48776,6 +48776,15 @@
 	</class>
 	<class path="rm.sprites.Sprite_Base" params="" file="src/rm/sprites/Sprite_Base.hx" extern="1">
 		<extends path="rm.core.Sprite"/>
+		<__animationSprites public="1">
+			<c path="Array"><c path="rm.sprites.Sprite_Animation"/></c>
+			<meta><m n=":native"><e>"_animationSprites"</e></m></meta>
+			<haxe_doc><![CDATA[* The animation sprites assigned to the
+  * sprite object.
+  * @protected
+  * @type {Array<Sprite_Animation>}
+  * @memberof Sprite_Base]]></haxe_doc>
+		</__animationSprites>
 		<_animationSprites>
 			<c path="Array"><c path="rm.sprites.Sprite_Animation"/></c>
 			<haxe_doc><![CDATA[* The animation sprites assigned to the
@@ -48784,6 +48793,15 @@
   * @type {Array<Sprite_Animation>}
   * @memberof Sprite_Base]]></haxe_doc>
 		</_animationSprites>
+		<__effectTarget public="1">
+			<c path="rm.sprites.Sprite_Base"/>
+			<meta><m n=":native"><e>"_effectTarget"</e></m></meta>
+			<haxe_doc>* The target that will have the animations applied
+  * to it.
+  * @protected
+  * @type {Sprite_Base}
+  * @memberof Sprite_Base</haxe_doc>
+		</__effectTarget>
 		<_effectTarget>
 			<c path="rm.sprites.Sprite_Base"/>
 			<haxe_doc>* The target that will have the animations applied
@@ -48792,6 +48810,11 @@
   * @type {Sprite_Base}
   * @memberof Sprite_Base</haxe_doc>
 		</_effectTarget>
+		<__hiding public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_hiding"</e></m></meta>
+			<haxe_doc>* Determines sprite's visibility</haxe_doc>
+		</__hiding>
 		<_hiding>
 			<x path="Bool"/>
 			<haxe_doc>* Determines sprite's visibility</haxe_doc>
@@ -76563,14 +76586,50 @@
 	</class>
 	<class path="rm.sprites.Sprite_Battler" params="" file="src/rm/sprites/Sprite_Battler.hx" extern="1">
 		<extends path="rm.sprites.Sprite_Base"/>
+		<__battler public="1">
+			<c path="rm.objects.Game_Battler"/>
+			<meta><m n=":native"><e>"_battler"</e></m></meta>
+		</__battler>
 		<_battler><c path="rm.objects.Game_Battler"/></_battler>
+		<__homeX public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_homeX"</e></m></meta>
+		</__homeX>
 		<_homeX><x path="Int"/></_homeX>
+		<__homeY public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_homeY"</e></m></meta>
+		</__homeY>
 		<_homeY><x path="Int"/></_homeY>
+		<__offsetX public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_offsetX"</e></m></meta>
+		</__offsetX>
 		<_offsetX><x path="Int"/></_offsetX>
+		<__offsetY public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_offsetY"</e></m></meta>
+		</__offsetY>
 		<_offsetY><x path="Int"/></_offsetY>
+		<__targetOffsetX public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_targetOffsetX"</e></m></meta>
+		</__targetOffsetX>
 		<_targetOffsetX><x path="Int"/></_targetOffsetX>
+		<__targetOffsetY public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_targetOffsetY"</e></m></meta>
+		</__targetOffsetY>
 		<_targetOffsetY><x path="Int"/></_targetOffsetY>
+		<__movementDuration public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_movementDuration"</e></m></meta>
+		</__movementDuration>
 		<_movementDuration><x path="Int"/></_movementDuration>
+		<__selectionEffectCount public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_selectionEffectCount"</e></m></meta>
+		</__selectionEffectCount>
 		<_selectionEffectCount><x path="Int"/></_selectionEffectCount>
 		<initMembers public="1" set="method"><f a=""><x path="Void"/></f></initMembers>
 		<setHome public="1" set="method"><f a="x:y">
@@ -77076,7 +77135,15 @@
 	</class>
 	<class path="rm.sprites.Sprite_Balloon" params="" file="src/rm/sprites/Sprite_Balloon.hx" extern="1">
 		<extends path="rm.sprites.Sprite_Base"/>
+		<__balloonId public="1">
+			<x path="rm.types.BalloonId"/>
+			<meta><m n=":native"><e>"_balloonId"</e></m></meta>
+		</__balloonId>
 		<_balloonId><x path="rm.types.BalloonId"/></_balloonId>
+		<__duration public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_duration"</e></m></meta>
+		</__duration>
 		<_duration><x path="Int"/></_duration>
 		<initMembers public="1" set="method"><f a=""><x path="Void"/></f></initMembers>
 		<loadBitmap public="1" set="method"><f a=""><x path="Void"/></f></loadBitmap>
@@ -77136,9 +77203,25 @@
 	</class>
 	<class path="rm.sprites.Sprite_Button" params="" file="src/rm/sprites/Sprite_Button.hx" extern="1">
 		<extends path="rm.core.Sprite"/>
+		<__touching public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_touching"</e></m></meta>
+		</__touching>
 		<_touching><x path="Bool"/></_touching>
+		<__coldFrame public="1">
+			<c path="rm.core.Rectangle"/>
+			<meta><m n=":native"><e>"_coldFrame"</e></m></meta>
+		</__coldFrame>
 		<_coldFrame><c path="rm.core.Rectangle"/></_coldFrame>
+		<__hotFrame public="1">
+			<c path="rm.core.Rectangle"/>
+			<meta><m n=":native"><e>"_hotFrame"</e></m></meta>
+		</__hotFrame>
 		<_hotFrame><c path="rm.core.Rectangle"/></_hotFrame>
+		<__clickHandler public="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n=":native"><e>"_clickHandler"</e></m></meta>
+		</__clickHandler>
 		<_clickHandler><f a=""><x path="Void"/></f></_clickHandler>
 		<updateFrame public="1" set="method">
 			<f a=""><x path="Void"/></f>
@@ -77251,6 +77334,15 @@
 	</class>
 	<class path="rm.sprites.Sprite_Character" params="" file="src/rm/sprites/Sprite_Character.hx" extern="1">
 		<extends path="rm.sprites.Sprite_Base"/>
+		<__character public="1">
+			<c path="rm.objects.Game_Character"/>
+			<meta><m n=":native"><e>"_character"</e></m></meta>
+			<haxe_doc>* The Game_Character object assigned
+  * to the sprite.
+  * @private var
+  * @type {Game_Character}
+  * @memberof Sprite_Character</haxe_doc>
+		</__character>
 		<_character>
 			<c path="rm.objects.Game_Character"/>
 			<haxe_doc>* The Game_Character object assigned
@@ -77259,11 +77351,40 @@
   * @type {Game_Character}
   * @memberof Sprite_Character</haxe_doc>
 		</_character>
+		<__balloonDuration public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_balloonDuration"</e></m></meta>
+		</__balloonDuration>
 		<_balloonDuration><x path="Int"/></_balloonDuration>
+		<__tilesetId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_tilesetId"</e></m></meta>
+		</__tilesetId>
 		<_tilesetId><x path="Int"/></_tilesetId>
-		<_upperBody><x path="Int"/></_upperBody>
+		<__upperBody public="1">
+			<c path="rm.core.Sprite"/>
+			<meta><m n=":native"><e>"_upperBody"</e></m></meta>
+		</__upperBody>
+		<_upperBody><c path="rm.core.Sprite"/></_upperBody>
+		<__lowerBody public="1">
+			<c path="rm.core.Sprite"/>
+			<meta><m n=":native"><e>"_lowerBody"</e></m></meta>
+		</__lowerBody>
 		<_lowerBody><c path="rm.core.Sprite"/></_lowerBody>
+		<__bushDepth public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_bushDepth"</e></m></meta>
+		</__bushDepth>
 		<_bushDepth><x path="Int"/></_bushDepth>
+		<__balloonSprite public="1">
+			<c path="rm.sprites.Sprite_Balloon"/>
+			<meta><m n=":native"><e>"_balloonSprite"</e></m></meta>
+			<haxe_doc>* The current balloon sprite
+  * assigned to the sprite.
+  * @private var
+  * @type {Sprite_Balloon}
+  * @memberof Sprite_Character</haxe_doc>
+		</__balloonSprite>
 		<_balloonSprite>
 			<c path="rm.sprites.Sprite_Balloon"/>
 			<haxe_doc>* The current balloon sprite
@@ -77429,12 +77550,26 @@
 	</class>
 	<class path="rm.sprites.Sprite_Damage" params="" file="src/rm/sprites/Sprite_Damage.hx" extern="1">
 		<extends path="rm.core.Sprite"/>
+		<__duration public="1"><x path="Int"/></__duration>
 		<_duration><x path="Int"/></_duration>
+		<__flashColor public="1">
+			<c path="Array"><x path="Int"/></c>
+			<meta><m n=":native"><e>"_flashColor"</e></m></meta>
+			<haxe_doc>* Array of 3 numbers of RGB</haxe_doc>
+		</__flashColor>
 		<_flashColor>
 			<c path="Array"><x path="Int"/></c>
 			<haxe_doc>* Array of 3 numbers of RGB</haxe_doc>
 		</_flashColor>
+		<__flashDuration public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_flashDuration"</e></m></meta>
+		</__flashDuration>
 		<_flashDuration><x path="Int"/></_flashDuration>
+		<__damageBitmap public="1">
+			<c path="rm.core.Bitmap"/>
+			<meta><m n=":native"><e>"_damageBitmap"</e></m></meta>
+		</__damageBitmap>
 		<_damageBitmap><c path="rm.core.Bitmap"/></_damageBitmap>
 		<setup public="1" set="method"><f a="target">
 	<c path="rm.objects.Game_Actor"/>
@@ -77508,6 +77643,10 @@
 	</class>
 	<class path="rm.sprites.Sprite_Destination" params="" file="src/rm/sprites/Sprite_Destination.hx" extern="1">
 		<extends path="rm.core.Sprite"/>
+		<__frameCount public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_frameCount"</e></m></meta>
+		</__frameCount>
 		<_frameCount><x path="Int"/></_frameCount>
 		<createBitmap public="1" set="method">
 			<f a=""><x path="Void"/></f>
@@ -77539,13 +77678,45 @@
 	</class>
 	<class path="rm.sprites.Sprite_Enemy" params="" file="src/rm/sprites/Sprite_Enemy.hx" extern="1">
 		<extends path="rm.sprites.Sprite_Battler"/>
+		<__enemy public="1">
+			<c path="rm.objects.Game_Enemy"/>
+			<meta><m n=":native"><e>"_enemy"</e></m></meta>
+		</__enemy>
 		<_enemy><c path="rm.objects.Game_Enemy"/></_enemy>
+		<__appeared public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_appeared"</e></m></meta>
+		</__appeared>
 		<_appeared><x path="Bool"/></_appeared>
+		<__battlerName public="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_battlerName"</e></m></meta>
+		</__battlerName>
 		<_battlerName><c path="String"/></_battlerName>
+		<__battlerHue public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_battlerHue"</e></m></meta>
+		</__battlerHue>
 		<_battlerHue><x path="Int"/></_battlerHue>
+		<__effectType public="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_effectType"</e></m></meta>
+		</__effectType>
 		<_effectType><c path="String"/></_effectType>
+		<__effectDuration public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_effectDuration"</e></m></meta>
+		</__effectDuration>
 		<_effectDuration><x path="Int"/></_effectDuration>
+		<__shake public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_shake"</e></m></meta>
+		</__shake>
 		<_shake><x path="Int"/></_shake>
+		<__stateIconSprite public="1">
+			<c path="rm.sprites.Sprite_StateIcon"/>
+			<meta><m n=":native"><e>"_stateIconSprite"</e></m></meta>
+		</__stateIconSprite>
 		<_stateIconSprite><c path="rm.sprites.Sprite_StateIcon"/></_stateIconSprite>
 		<initialize public="1" set="method" override="1"><f a="battler">
 	<c path="rm.objects.Game_Enemy"/>
@@ -77689,8 +77860,20 @@
 		</meta>
 	</class>
 	<class path="rm.sprites.Sprite_Picture" params="" file="src/rm/sprites/Sprite_Picture.hx" extern="1">
+		<__pictureId public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_pictureId"</e></m></meta>
+		</__pictureId>
 		<_pictureId><x path="Int"/></_pictureId>
+		<__pictureName public="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_pictureName"</e></m></meta>
+		</__pictureName>
 		<_pictureName><c path="String"/></_pictureName>
+		<__isPicture public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_isPicture"</e></m></meta>
+		</__isPicture>
 		<_isPicture><x path="Bool"/></_isPicture>
 		<picture public="1" set="method"><f a=""><c path="rm.objects.Game_Picture"/></f></picture>
 		<updateBitmap public="1" set="method"><f a=""><x path="Void"/></f></updateBitmap>
@@ -77716,11 +77899,35 @@
 	</class>
 	<class path="rm.sprites.Sprite_StateIcon" params="" file="src/rm/sprites/Sprite_StateIcon.hx" extern="1">
 		<extends path="rm.core.Sprite"/>
+		<__iconWidth public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_iconWidth"</e></m></meta>
+		</__iconWidth>
 		<_iconWidth static="1"><x path="Int"/></_iconWidth>
+		<__iconHeight public="1" static="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_iconHeight"</e></m></meta>
+		</__iconHeight>
 		<_iconHeight static="1"><x path="Int"/></_iconHeight>
+		<__battler public="1">
+			<c path="rm.objects.Game_Battler"/>
+			<meta><m n=":native"><e>"_battler"</e></m></meta>
+		</__battler>
 		<_battler><c path="rm.objects.Game_Battler"/></_battler>
+		<__iconIndex public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_iconIndex"</e></m></meta>
+		</__iconIndex>
 		<_iconIndex><x path="Int"/></_iconIndex>
+		<__animationCount public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_animationCount"</e></m></meta>
+		</__animationCount>
 		<_animationCount><x path="Int"/></_animationCount>
+		<__animationIndex public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_animationIndex"</e></m></meta>
+		</__animationIndex>
 		<_animationIndex><x path="Int"/></_animationIndex>
 		<initMembers public="1" set="method">
 			<f a=""><x path="Void"/></f>
@@ -77763,9 +77970,25 @@
 	</class>
 	<class path="rm.sprites.Sprite_StateOverlay" params="" file="src/rm/sprites/Sprite_StateOverlay.hx" extern="1">
 		<extends path="rm.sprites.Sprite_Base"/>
+		<__battler public="1">
+			<c path="rm.objects.Game_Battler"/>
+			<meta><m n=":native"><e>"_battler"</e></m></meta>
+		</__battler>
 		<_battler><c path="rm.objects.Game_Battler"/></_battler>
+		<__overlayIndex public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_overlayIndex"</e></m></meta>
+		</__overlayIndex>
 		<_overlayIndex><x path="Int"/></_overlayIndex>
+		<__animationCount public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_animationCount"</e></m></meta>
+		</__animationCount>
 		<_animationCount><x path="Int"/></_animationCount>
+		<__pattern public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_pattern"</e></m></meta>
+		</__pattern>
 		<_pattern><x path="Int"/></_pattern>
 		<initMembers public="1" set="method">
 			<f a=""><x path="Void"/></f>
@@ -77808,6 +78031,10 @@
 	</class>
 	<class path="rm.sprites.Sprite_Timer" params="" file="src/rm/sprites/Sprite_Timer.hx" extern="1">
 		<extends path="rm.core.Sprite"/>
+		<__seconds public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_seconds"</e></m></meta>
+		</__seconds>
 		<_seconds><x path="Int"/></_seconds>
 		<createBitmap public="1" set="method">
 			<f a=""><x path="Void"/></f>
@@ -77858,8 +78085,20 @@
 	</class>
 	<class path="rm.sprites.Sprite_Weapon" params="" file="src/rm/sprites/Sprite_Weapon.hx" extern="1">
 		<extends path="rm.sprites.Sprite_Base"/>
+		<__weaponImageId public="1">
+			<x path="rm.types.WeaponImageId"/>
+			<meta><m n=":native"><e>"_weaponImageId"</e></m></meta>
+		</__weaponImageId>
 		<_weaponImageId><x path="rm.types.WeaponImageId"/></_weaponImageId>
+		<__animationCount public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_animaationCount"</e></m></meta>
+		</__animationCount>
 		<_animationCount><x path="Int"/></_animationCount>
+		<__pattern public="1">
+			<x path="Int"/>
+			<meta><m n=":native"><e>"_pattern"</e></m></meta>
+		</__pattern>
 		<_pattern><x path="Int"/></_pattern>
 		<initMembers public="1" set="method">
 			<f a=""><x path="Void"/></f>
@@ -77909,14 +78148,50 @@
 	</class>
 	<class path="rm.sprites.Spriteset_Base" params="" file="src/rm/sprites/Spriteset_Base.hx" extern="1">
 		<extends path="rm.core.Sprite"/>
+		<__tone public="1">
+			<c path="Array"><x path="Int"/></c>
+			<meta><m n=":native"><e>"_tone"</e></m></meta>
+		</__tone>
 		<_tone><c path="Array"><x path="Int"/></c></_tone>
+		<__baseSprite public="1">
+			<c path="rm.core.Sprite"/>
+			<meta><m n=":native"><e>"_baseSprite"</e></m></meta>
+		</__baseSprite>
 		<_baseSprite><c path="rm.core.Sprite"/></_baseSprite>
+		<__blackScreen public="1">
+			<c path="rm.core.ScreenSprite"/>
+			<meta><m n=":native"><e>"_blackScreen"</e></m></meta>
+		</__blackScreen>
 		<_blackScreen><c path="rm.core.ScreenSprite"/></_blackScreen>
+		<__toneFilter public="1">
+			<c path="rm.core.ToneFilter"/>
+			<meta><m n=":native"><e>"_toneFilter"</e></m></meta>
+		</__toneFilter>
 		<_toneFilter><c path="rm.core.ToneFilter"/></_toneFilter>
+		<__toneSprite public="1">
+			<c path="rm.core.ToneSprite"/>
+			<meta><m n=":native"><e>"_toneSprite"</e></m></meta>
+		</__toneSprite>
 		<_toneSprite><c path="rm.core.ToneSprite"/></_toneSprite>
+		<__pictureContainer public="1">
+			<c path="rm.core.Sprite"/>
+			<meta><m n=":native"><e>"_pictureContainer"</e></m></meta>
+		</__pictureContainer>
 		<_pictureContainer><c path="rm.core.Sprite"/></_pictureContainer>
+		<__timerSprite public="1">
+			<c path="rm.sprites.Sprite_Timer"/>
+			<meta><m n=":native"><e>"_timerSprite"</e></m></meta>
+		</__timerSprite>
 		<_timerSprite><c path="rm.sprites.Sprite_Timer"/></_timerSprite>
+		<__flashSprite public="1">
+			<c path="rm.core.ScreenSprite"/>
+			<meta><m n=":native"><e>"_flashSprite"</e></m></meta>
+		</__flashSprite>
 		<_flashSprite><c path="rm.core.ScreenSprite"/></_flashSprite>
+		<__fadeSprite public="1">
+			<c path="rm.core.ScreenSprite"/>
+			<meta><m n=":native"><e>"_fadeSprite"</e></m></meta>
+		</__fadeSprite>
 		<_fadeSprite><c path="rm.core.ScreenSprite"/></_fadeSprite>
 		<createLowerLayer public="1" set="method">
 			<f a=""><x path="Void"/></f>
@@ -78009,12 +78284,40 @@
 	</class>
 	<class path="rm.sprites.Spriteset_Battle" params="" file="src/rm/sprites/Spriteset_Battle.hx" extern="1">
 		<extends path="rm.sprites.Spriteset_Base"/>
+		<__battlebackLocated public="1">
+			<x path="Bool"/>
+			<meta><m n=":native"><e>"_battlebackLocated"</e></m></meta>
+		</__battlebackLocated>
 		<_battlebackLocated><x path="Bool"/></_battlebackLocated>
+		<__backgroundSprite public="1">
+			<c path="rm.core.Sprite"/>
+			<meta><m n=":native"><e>"_backgroundSprite"</e></m></meta>
+		</__backgroundSprite>
 		<_backgroundSprite><c path="rm.core.Sprite"/></_backgroundSprite>
+		<__battleField public="1">
+			<c path="rm.core.Sprite"/>
+			<meta><m n=":native"><e>"_battleField"</e></m></meta>
+		</__battleField>
 		<_battleField><c path="rm.core.Sprite"/></_battleField>
+		<__back1Sprite public="1">
+			<c path="rm.core.TilingSprite"/>
+			<meta><m n=":native"><e>"_back1Sprite"</e></m></meta>
+		</__back1Sprite>
 		<_back1Sprite><c path="rm.core.TilingSprite"/></_back1Sprite>
+		<__back2Sprite public="1">
+			<c path="rm.core.TilingSprite"/>
+			<meta><m n=":native"><e>"_back2Sprite"</e></m></meta>
+		</__back2Sprite>
 		<_back2Sprite><c path="rm.core.TilingSprite"/></_back2Sprite>
+		<__enemySprites public="1">
+			<c path="Array"><c path="rm.sprites.Sprite_Enemy"/></c>
+			<meta><m n=":native"><e>"_enemySprites"</e></m></meta>
+		</__enemySprites>
 		<_enemySprites><c path="Array"><c path="rm.sprites.Sprite_Enemy"/></c></_enemySprites>
+		<__actorSprites public="1">
+			<c path="Array"><c path="rm.sprites.Sprite_Actor"/></c>
+			<meta><m n=":native"><e>"_actorSprites"</e></m></meta>
+		</__actorSprites>
 		<_actorSprites><c path="Array"><c path="rm.sprites.Sprite_Actor"/></c></_actorSprites>
 		<createBackground public="1" set="method">
 			<f a=""><x path="Void"/></f>
@@ -78220,16 +78523,51 @@
 	</class>
 	<class path="rm.sprites.Spriteset_Map" params="" file="src/rm/sprites/Spriteset_Map.hx" extern="1">
 		<extends path="rm.sprites.Spriteset_Base"/>
+		<__parallax public="1">
+			<c path="rm.core.TilingSprite"/>
+			<meta><m n=":native"><e>"_parallax"</e></m></meta>
+		</__parallax>
 		<_parallax><c path="rm.core.TilingSprite"/></_parallax>
+		<__tilemap public="1">
+			<x path="haxe.extern.EitherType">
+				<c path="rm.core.Tilemap"/>
+				<c path="rm.core.ShaderTilemap"/>
+			</x>
+			<meta><m n=":native"><e>"_tilemap"</e></m></meta>
+		</__tilemap>
 		<_tilemap><x path="haxe.extern.EitherType">
 	<c path="rm.core.Tilemap"/>
 	<c path="rm.core.ShaderTilemap"/>
 </x></_tilemap>
+		<__tileset public="1">
+			<t path="rm.types.Tileset"/>
+			<meta><m n=":native"><e>"_tileset"</e></m></meta>
+		</__tileset>
 		<_tileset><t path="rm.types.Tileset"/></_tileset>
+		<__characterSprites public="1">
+			<c path="Array"><c path="rm.sprites.Sprite_Character"/></c>
+			<meta><m n=":native"><e>"_characterSprites"</e></m></meta>
+		</__characterSprites>
 		<_characterSprites><c path="Array"><c path="rm.sprites.Sprite_Character"/></c></_characterSprites>
+		<__shadowSprite public="1">
+			<c path="rm.core.Sprite"/>
+			<meta><m n=":native"><e>"_shadowSprite"</e></m></meta>
+		</__shadowSprite>
 		<_shadowSprite><c path="rm.core.Sprite"/></_shadowSprite>
+		<__destinationSprite public="1">
+			<c path="rm.sprites.Sprite_Destination"/>
+			<meta><m n=":native"><e>"_destinationSprite"</e></m></meta>
+		</__destinationSprite>
 		<_destinationSprite><c path="rm.sprites.Sprite_Destination"/></_destinationSprite>
+		<__weather public="1">
+			<c path="rm.core.Weather"/>
+			<meta><m n=":native"><e>"_weather"</e></m></meta>
+		</__weather>
 		<_weather><c path="rm.core.Weather"/></_weather>
+		<__parallaxName public="1">
+			<c path="String"/>
+			<meta><m n=":native"><e>"_parallaxName"</e></m></meta>
+		</__parallaxName>
 		<_parallaxName><c path="String"/></_parallaxName>
 		<hideCharacters public="1" set="method">
 			<f a=""><x path="Void"/></f>
