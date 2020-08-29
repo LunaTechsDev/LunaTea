@@ -513,21 +513,10 @@ enum abstract InterpreterWaitModeA(InterpreterWaitMode)
 }
 
 typedef Icon = Int;
-typedef TraitId = Int;
-typedef ElementId = Int;
-typedef WeaponTypeId = Int;
-typedef ArmorTypeId = Int;
-typedef EquipmentTypeId = Int;
 typedef SlotType = Int;
 typedef FlagId = Int;
 typedef CollapseType = Int;
 typedef AbilityId = Int;
-typedef StateId = Int;
 typedef ParameterId = Int;
-typedef SkillId = Int;
-typedef BuffId = Int;
 typedef FadeType = Int;
-typedef ActorId = Int;
-typedef MapId = Int;
-typedef EventId = Int;
 typedef InterpreterWaitMode = String;
