@@ -511,6 +511,12 @@ enum abstract InterpreterWaitModeA(InterpreterWaitMode)
  public inline var base = "";
 }
 
+@:forward
+@:forwardStatics
+enum abstract BlendModeA(Int) from Int to Int {
+ public inline var base = -1;
+}
+
 typedef Icon = Int;
 typedef SlotType = Int;
 typedef FlagId = Int;
