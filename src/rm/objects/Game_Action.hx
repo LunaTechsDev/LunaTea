@@ -29,11 +29,22 @@ extern class Game_Action {
  public static var HITTYPE_CERTAIN: Int;
  public static var HITTYPE_PHYSICAL: Int;
  public static var HITTYPE_MAGICAL: Int;
+ @:native("_subjectActorId")
+ public var __subjectActorId: Int;
  private var _subjectActorId: Int;
+ @:native("_subjectEnemyIndex")
+ public var __subjectEnemyIndex: Int;
  private var _subjectEnemyIndex: Int;
+ @:native("_targetIndex")
+ public var __targetIndex: Int;
  private var _targetIndex: Int;
+ @:native("_forcing")
+ public var __forcing: Bool;
  private var _forcing: Bool;
+ @:native("_item")
+ public var __item: Game_Item;
  private var _item: Game_Item;
+
  public function new(subject: Game_Battler, forcing: Bool): Void;
  public function clear(): Void;
  public function setSubject(subject: Game_Battler): Void;
