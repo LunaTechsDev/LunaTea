@@ -1473,6 +1473,8 @@
   * @param {Int} b The blue value in the range (0, 255)
   * @return {String} CSS color string</haxe_doc>
 		</rgbToCssColor>
+		<isSupportPassiveEvent public="1" set="method" static="1"><f a=""><x path="Bool"/></f></isSupportPassiveEvent>
+		<generateRuntimeId public="1" set="method" static="1"><f a=""><x path="Int"/></f></generateRuntimeId>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":expose"><e>"Utils"</e></m>
@@ -1480,28 +1482,28 @@
 		</meta>
 	</class>
 	<class path="core.Amaryllis" params="" file="src/core/Amaryllis.hx">
-		<VERSION final="1" public="1" set="null" expr="&quot;1.0.0&quot;" line="16" static="1">
+		<VERSION final="1" public="1" set="null" expr="&quot;1.0.0&quot;" line="17" static="1">
 			<c path="String"/>
 			<meta><m n=":value"><e>"1.0.0"</e></m></meta>
 		</VERSION>
-		<MZ_NAME final="1" public="1" set="null" expr="Utils.RPGMAKER_NAME" line="17" static="1">
+		<MZ_NAME final="1" public="1" set="null" expr="Utils.RPGMAKER_NAME" line="18" static="1">
 			<c path="String"/>
 			<meta><m n=":value"><e>Utils.RPGMAKER_NAME</e></m></meta>
 		</MZ_NAME>
-		<MZ_VERSION final="1" public="1" set="null" expr="Utils.RPGMAKER_VERSION" line="18" static="1">
+		<MZ_VERSION final="1" public="1" set="null" expr="Utils.RPGMAKER_VERSION" line="19" static="1">
 			<c path="String"/>
 			<meta><m n=":value"><e>Utils.RPGMAKER_VERSION</e></m></meta>
 		</MZ_VERSION>
-		<createEventEmitter public="1" get="inline" set="null" line="20" static="1"><f a=""><c path="pixi.interaction.EventEmitter"/></f></createEventEmitter>
-		<createDie public="1" get="inline" set="null" line="24" static="1"><f a="sides">
+		<createEventEmitter public="1" get="inline" set="null" line="21" static="1"><f a=""><c path="pixi.interaction.EventEmitter"/></f></createEventEmitter>
+		<createDie public="1" get="inline" set="null" line="25" static="1"><f a="sides">
 	<x path="Int"/>
 	<c path="core.Die"/>
 </f></createDie>
-		<elementName public="1" get="inline" set="null" line="28" static="1"><f a="entity">
+		<elementName public="1" get="inline" set="null" line="29" static="1"><f a="entity">
 	<d/>
 	<unknown/>
 </f></elementName>
-		<getParams public="1" set="method" line="37" static="1">
+		<getParams public="1" set="method" line="38" static="1">
 			<f a="regEx">
 				<c path="EReg"/>
 				<x path="Void"/>
@@ -1510,7 +1512,7 @@
   * on plugin description
   * @param regEx</haxe_doc>
 		</getParams>
-		<lerp public="1" set="method" line="47" static="1">
+		<lerp public="1" set="method" line="48" static="1">
 			<f a="start:end:amount">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -1523,16 +1525,16 @@
   * @param amount
   * @return {Float}</haxe_doc>
 		</lerp>
-		<currentScene public="1" get="inline" set="null" line="55" static="1">
+		<currentScene public="1" get="inline" set="null" line="56" static="1">
 			<f a=""><x path="Any"/></f>
 			<haxe_doc>* Returns the current SceneManager._scene.
   * @returns {Scene}</haxe_doc>
 		</currentScene>
-		<isImagePath public="1" get="inline" set="null" line="59" static="1"><f a="path">
+		<isImagePath public="1" get="inline" set="null" line="60" static="1"><f a="path">
 	<c path="String"/>
 	<x path="Bool"/>
 </f></isImagePath>
-		<loadImage public="1" get="inline" set="null" line="63" static="1">
+		<loadImage public="1" get="inline" set="null" line="64" static="1">
 			<f a="path:?hue" v=":0">
 				<c path="String"/>
 				<x path="Int"/>
@@ -1540,22 +1542,37 @@
 			</f>
 			<meta><m n=":value"><e>{ hue : 0 }</e></m></meta>
 		</loadImage>
-		<isNwjs public="1" get="inline" set="null" line="72" static="1">
+		<encodeURI public="1" get="inline" set="null" line="75" static="1">
+			<f a="string">
+				<c path="String"/>
+				<unknown/>
+			</f>
+			<haxe_doc>* Encodes a URI string without the slash character.
+  * Note there is a haxe version using StringTools.
+  * @param String
+  * @returns String</haxe_doc>
+		</encodeURI>
+		<loadFile public="1" get="inline" set="null" line="79" static="1"><f a="path:fileName">
+	<c path="String"/>
+	<c path="String"/>
+	<unknown/>
+</f></loadFile>
+		<isNwjs public="1" get="inline" set="null" line="87" static="1">
 			<f a=""><x path="Bool"/></f>
 			<haxe_doc>* Returns true if the game is running on desktop(nwjs).
   * @returns {boolean}</haxe_doc>
 		</isNwjs>
-		<isMobile public="1" get="inline" set="null" line="80" static="1">
+		<isMobile public="1" get="inline" set="null" line="95" static="1">
 			<f a=""><x path="Bool"/></f>
 			<haxe_doc>* Returns true if the game is running on mobile.
   * @returns{boolean}</haxe_doc>
 		</isMobile>
-		<isTest public="1" get="inline" set="null" line="88" static="1">
+		<isTest public="1" get="inline" set="null" line="103" static="1">
 			<f a=""><x path="Bool"/></f>
 			<haxe_doc>* Returns true if the game is in test mode.
   * @returns {boolean}</haxe_doc>
 		</isTest>
-		<once public="1" set="method" line="97" static="1">
+		<once public="1" set="method" line="112" static="1">
 			<f a="f">
 				<x path="haxe.Function"/>
 				<f a=""><unknown/></f>
@@ -1564,7 +1581,7 @@
   * @param {Function} f
   * @returns {Function}</haxe_doc>
 		</once>
-		<times public="1" set="method" line="115" static="1">
+		<times public="1" set="method" line="130" static="1">
 			<f a="iterations:f">
 				<x path="Int"/>
 				<x path="haxe.Function"/>
@@ -1575,11 +1592,11 @@
   * @param {number} iterations
   * @param {Function} f</haxe_doc>
 		</times>
-		<safeParse public="1" set="method" line="121" static="1"><f a="string">
+		<safeParse public="1" set="method" line="136" static="1"><f a="string">
 	<c path="String"/>
 	<c path="haxe.Exception"/>
 </f></safeParse>
-		<lines public="1" get="inline" set="null" line="134" static="1">
+		<lines public="1" get="inline" set="null" line="149" static="1">
 			<f a="num">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -1588,7 +1605,7 @@
   * @param {number} number
   * @returns {number}</haxe_doc>
 		</lines>
-		<rgbToHex public="1" get="inline" set="null" line="145" static="1">
+		<rgbToHex public="1" get="inline" set="null" line="160" static="1">
 			<f a="red:green:blue">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -1601,7 +1618,7 @@
   * @param {number} blue
   * @returns {string}</haxe_doc>
 		</rgbToHex>
-		<rgbToCss public="1" get="inline" set="null" line="157" static="1">
+		<rgbToCss public="1" get="inline" set="null" line="172" static="1">
 			<f a="red:green:blue">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -1614,7 +1631,7 @@
   * @param {Int} blue
   * @returns {string}</haxe_doc>
 		</rgbToCss>
-		<clear public="1" get="inline" set="null" line="165" static="1">
+		<clear public="1" get="inline" set="null" line="180" static="1">
 			<f a="array">
 				<c path="Array"><x path="Any"/></c>
 				<c path="Array"><x path="Any"/></c>
@@ -1622,7 +1639,7 @@
 			<haxe_doc><![CDATA[* Clears an array of all values.
   * @param {Array<Any>} array]]></haxe_doc>
 		</clear>
-		<take public="1" get="inline" set="null" line="177" static="1">
+		<take public="1" get="inline" set="null" line="192" static="1">
 			<f a="amount:list">
 				<x path="Int"/>
 				<c path="Array"><x path="Any"/></c>
@@ -1634,7 +1651,7 @@
   * @param {any[]} list
   * @returns {any[]}</haxe_doc>
 		</take>
-		<drop public="1" get="inline" set="null" line="188" static="1">
+		<drop public="1" get="inline" set="null" line="203" static="1">
 			<f a="amount:list">
 				<x path="Int"/>
 				<c path="Array"><x path="Any"/></c>
@@ -1646,12 +1663,12 @@
   * @param {any[]} list
   * @returns {any[]}</haxe_doc>
 		</drop>
-		<arrayEquals public="1" get="inline" set="null" line="192" static="1"><f a="arr1:arr2">
+		<arrayEquals public="1" get="inline" set="null" line="207" static="1"><f a="arr1:arr2">
 	<c path="Array"><x path="Any"/></c>
 	<c path="Array"><x path="Any"/></c>
 	<x path="Bool"/>
 </f></arrayEquals>
-		<addWindowToScene public="1" get="inline" set="null" line="198" static="1"><f a="window">
+		<addWindowToScene public="1" get="inline" set="null" line="213" static="1"><f a="window">
 	<c path="rm.windows.Window_Base"/>
 	<x path="Void"/>
 </f></addWindowToScene>
@@ -1937,6 +1954,15 @@
   * @param {string} string
   * @returns {string}</haxe_doc>
 		</monoSpace>
+		<encodeURI public="1" get="inline" set="null" line="61" static="1">
+			<f a="string">
+				<c path="String"/>
+				<c path="String"/>
+			</f>
+			<haxe_doc>* Encodes the URL with the slash character preserved.
+  * @param string
+  * @return String</haxe_doc>
+		</encodeURI>
 	</class>
 	<class path="pixi.interaction.EventEmitter" params="" file="/home/runner/haxe/haxe_libraries/pixijs/5.1.2/haxelib/src/pixi/interaction/EventEmitter.hx" extern="1">
 		<listeners public="1" set="method">
