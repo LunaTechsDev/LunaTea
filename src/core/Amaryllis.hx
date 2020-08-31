@@ -1,5 +1,11 @@
 package core;
 
+import js.html.XMLHttpRequestResponseType;
+import rm.types.LunaTea.XMLResponseTypeA;
+import js.html.XMLHttpRequest;
+import rm.types.LunaTea.MimeTypeA;
+import haxe.io.Mime;
+import js.html.MimeType;
 import js.Syntax;
 import rm.scenes.Scene_Base;
 import utils.Fn;
@@ -213,5 +219,17 @@ class Amaryllis {
  public static inline function addWindowToScene(window: Window_Base) {
   var scene: Scene_Base = currentScene();
   scene.windowLayer.addChild(window);
+ }
+
+ public static function loadData(url: String, responseType: XMLResponseTypeA) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url);
+  xhr.responseType = cast responseType;
+  xhr.onload = () -> {
+   if (xhr.status < 400) {
+   } else {
+   }
+  }
+  xhr.send(null);
  }
 }
