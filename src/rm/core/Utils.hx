@@ -76,4 +76,19 @@ extern class Utils {
   * @return {String} CSS color string
   */
  public static function rgbToCssColor(r: Int, g: Int, b: Int): String;
+
+ public static function isSupportPassiveEvent(): Bool;
+
+ public static function generateRuntimeId(): Int;
+
+ #if !compileMV
+ /**
+  * Encodes a URI component without escaping slash characters.
+  *
+  * @param {string} str - The input string.
+  * @returns {string} Encoded string.
+  */
+ public static function encodeURI(str: String): String;
+ #else
+ #end
 }

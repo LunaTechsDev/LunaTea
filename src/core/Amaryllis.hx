@@ -1,5 +1,6 @@
 package core;
 
+import js.Syntax;
 import rm.scenes.Scene_Base;
 import utils.Fn;
 import rm.windows.Window_Base;
@@ -63,6 +64,20 @@ class Amaryllis {
  public static inline function loadImage(path: String, hue: Int = 0) {
   return isImagePath(path) ? ImageManager.loadNormalBitmap(path + ".png",
    hue) : null;
+ }
+
+ /**
+  * Encodes a URI string without the slash character.
+  * Note there is a haxe version using StringTools.
+  * @param String
+  * @returns String
+  */
+ public static inline function encodeURI(string: String) {
+  return Syntax.code('encodeURIComponent({0}).replace(/%2F/g, "/");', string);
+ }
+
+ public static inline function loadFile(path: String, fileName: String) {
+  return encodeURI(path + fileName);
  }
 
  /**

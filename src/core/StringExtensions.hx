@@ -53,6 +53,15 @@ class StringExtensions {
   return ~/\s{2,}/gi.replace(string, " ");
  }
 
+ /**
+  * Encodes the URL with the slash character preserved.
+  * @param string
+  * @return String
+  */
+ public static inline function encodeURI(string: String): String {
+  return string.urlEncode();
+ }
+
  // inline function toBinary(number: Int) {
  //   return Std.string(number).
  // }
