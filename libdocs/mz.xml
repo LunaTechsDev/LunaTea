@@ -1834,18 +1834,18 @@
 		</set>
 	</class>
 	<class path="core.Assets" params="" file="src/core/Assets.hx">
-		<Assets_TestTXT public="1" get="inline" set="null" expr="&quot;assets/test.txt&quot;" line="44" static="1">
-			<c path="String"/>
-			<meta><m n=":value"><e>"assets/test.txt"</e></m></meta>
-		</Assets_TestTXT>
-		<Assets_MypicPNG public="1" get="inline" set="null" expr="&quot;assets/mypic.png&quot;" line="44" static="1">
-			<c path="String"/>
-			<meta><m n=":value"><e>"assets/mypic.png"</e></m></meta>
-		</Assets_MypicPNG>
 		<Yes_New_nameTXT public="1" get="inline" set="null" expr="&quot;assets/yes/new_name.txt&quot;" line="44" static="1">
 			<c path="String"/>
 			<meta><m n=":value"><e>"assets/yes/new_name.txt"</e></m></meta>
 		</Yes_New_nameTXT>
+		<Assets_MypicPNG public="1" get="inline" set="null" expr="&quot;assets/mypic.png&quot;" line="44" static="1">
+			<c path="String"/>
+			<meta><m n=":value"><e>"assets/mypic.png"</e></m></meta>
+		</Assets_MypicPNG>
+		<Assets_TestTXT public="1" get="inline" set="null" expr="&quot;assets/test.txt&quot;" line="44" static="1">
+			<c path="String"/>
+			<meta><m n=":value"><e>"assets/test.txt"</e></m></meta>
+		</Assets_TestTXT>
 		<haxe_doc>* Asset Folder Files
  * We can't import macros when using build macros
  * and have to use the full path name.
@@ -60576,8 +60576,12 @@
 		<this><c path="rm.windows.Window_Help"/></this>
 		<to><icast><c path="rm.windows.Window_Help"/></icast></to>
 		<impl><class path="rm.abstracts.windows._WindowHelp.WindowHelp_Impl_" params="" file="src/rm/abstracts/windows/WindowHelp.hx" private="1" module="rm.abstracts.windows.WindowHelp" final="1">
-	<_new public="1" get="inline" set="null" line="6" static="1">
-		<f a="numLines">
+	<_new public="1" get="inline" set="null" line="17" static="1">
+		<f a="numLines:?x:?y:?width:?height">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
 			<x path="Int"/>
 			<x path="rm.abstracts.windows.WindowHelp"/>
 		</f>
@@ -60585,8 +60589,16 @@
 			<m n=":impl"/>
 			<m n=":noCompletion"/>
 		</meta>
+		<haxe_doc>* Abstraction Layer for conditional compilation.
+  * If Compiling for MV/MZ, x, y, width, height
+  * required.
+  * @param numLines
+  * @param x
+  * @param y
+  * @param width
+  * @param height</haxe_doc>
 	</_new>
-	<raw public="1" get="inline" set="null" line="10" static="1">
+	<raw public="1" get="inline" set="null" line="27" static="1">
 		<f a="this">
 			<c path="rm.windows.Window_Help"/>
 			<c path="rm.windows.Window_Help"/>
@@ -60596,8 +60608,12 @@
 </class></impl>
 	</abstract>
 	<class path="rm.abstracts.windows._WindowHelp.WindowHelp_Impl_" params="" file="src/rm/abstracts/windows/WindowHelp.hx" private="1" module="rm.abstracts.windows.WindowHelp" final="1">
-		<_new public="1" get="inline" set="null" line="6" static="1">
-			<f a="numLines">
+		<_new public="1" get="inline" set="null" line="17" static="1">
+			<f a="numLines:?x:?y:?width:?height">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
 				<x path="Int"/>
 				<x path="rm.abstracts.windows.WindowHelp"/>
 			</f>
@@ -60605,8 +60621,16 @@
 				<m n=":impl"/>
 				<m n=":noCompletion"/>
 			</meta>
+			<haxe_doc>* Abstraction Layer for conditional compilation.
+  * If Compiling for MV/MZ, x, y, width, height
+  * required.
+  * @param numLines
+  * @param x
+  * @param y
+  * @param width
+  * @param height</haxe_doc>
 		</_new>
-		<raw public="1" get="inline" set="null" line="10" static="1">
+		<raw public="1" get="inline" set="null" line="27" static="1">
 			<f a="this">
 				<c path="rm.windows.Window_Help"/>
 				<c path="rm.windows.Window_Help"/>
@@ -85694,15 +85718,10 @@
   * @param {RPG.BaseItem} item
   * @memberof Window_Help</haxe_doc>
 		</setItem>
-		<new public="1" set="method">
-			<f a="numLines">
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>* Creates an instance of Window_Help.
-  * @param {number} numLines
-  * @memberof Window_Help</haxe_doc>
-		</new>
+		<new public="1" set="method"><f a="rect">
+	<c path="rm.core.Rectangle"/>
+	<x path="Void"/>
+</f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":expose"><e>"Window_Help"</e></m>
