@@ -1492,28 +1492,28 @@
 		</meta>
 	</class>
 	<class path="core.Amaryllis" params="" file="src/core/Amaryllis.hx">
-		<VERSION final="1" public="1" set="null" expr="&quot;1.0.0&quot;" line="17" static="1">
+		<VERSION final="1" public="1" set="null" expr="&quot;1.0.0&quot;" line="27" static="1">
 			<c path="String"/>
 			<meta><m n=":value"><e>"1.0.0"</e></m></meta>
 		</VERSION>
-		<MZ_NAME final="1" public="1" set="null" expr="Utils.RPGMAKER_NAME" line="18" static="1">
+		<MZ_NAME final="1" public="1" set="null" expr="Utils.RPGMAKER_NAME" line="28" static="1">
 			<c path="String"/>
 			<meta><m n=":value"><e>Utils.RPGMAKER_NAME</e></m></meta>
 		</MZ_NAME>
-		<MZ_VERSION final="1" public="1" set="null" expr="Utils.RPGMAKER_VERSION" line="19" static="1">
+		<MZ_VERSION final="1" public="1" set="null" expr="Utils.RPGMAKER_VERSION" line="29" static="1">
 			<c path="String"/>
 			<meta><m n=":value"><e>Utils.RPGMAKER_VERSION</e></m></meta>
 		</MZ_VERSION>
-		<createEventEmitter public="1" get="inline" set="null" line="21" static="1"><f a=""><c path="pixi.interaction.EventEmitter"/></f></createEventEmitter>
-		<createDie public="1" get="inline" set="null" line="25" static="1"><f a="sides">
+		<createEventEmitter public="1" get="inline" set="null" line="31" static="1"><f a=""><c path="pixi.interaction.EventEmitter"/></f></createEventEmitter>
+		<createDie public="1" get="inline" set="null" line="35" static="1"><f a="sides">
 	<x path="Int"/>
 	<c path="core.Die"/>
 </f></createDie>
-		<elementName public="1" get="inline" set="null" line="29" static="1"><f a="entity">
+		<elementName public="1" get="inline" set="null" line="39" static="1"><f a="entity">
 	<d/>
 	<unknown/>
 </f></elementName>
-		<getParams public="1" set="method" line="38" static="1">
+		<getParams public="1" set="method" line="48" static="1">
 			<f a="regEx">
 				<c path="EReg"/>
 				<x path="Void"/>
@@ -1522,7 +1522,7 @@
   * on plugin description
   * @param regEx</haxe_doc>
 		</getParams>
-		<lerp public="1" set="method" line="48" static="1">
+		<lerp public="1" set="method" line="58" static="1">
 			<f a="start:end:amount">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -1535,16 +1535,16 @@
   * @param amount
   * @return {Float}</haxe_doc>
 		</lerp>
-		<currentScene public="1" get="inline" set="null" line="56" static="1">
+		<currentScene public="1" get="inline" set="null" line="66" static="1">
 			<f a=""><x path="Any"/></f>
 			<haxe_doc>* Returns the current SceneManager._scene.
   * @returns {Scene}</haxe_doc>
 		</currentScene>
-		<isImagePath public="1" get="inline" set="null" line="60" static="1"><f a="path">
+		<isImagePath public="1" get="inline" set="null" line="70" static="1"><f a="path">
 	<c path="String"/>
 	<x path="Bool"/>
 </f></isImagePath>
-		<loadImage public="1" get="inline" set="null" line="64" static="1">
+		<loadImage public="1" get="inline" set="null" line="74" static="1">
 			<f a="path:?hue" v=":0">
 				<c path="String"/>
 				<x path="Int"/>
@@ -1552,7 +1552,7 @@
 			</f>
 			<meta><m n=":value"><e>{ hue : 0 }</e></m></meta>
 		</loadImage>
-		<encodeURI public="1" get="inline" set="null" line="75" static="1">
+		<encodeURI public="1" get="inline" set="null" line="85" static="1">
 			<f a="string">
 				<c path="String"/>
 				<unknown/>
@@ -1562,27 +1562,52 @@
   * @param String
   * @returns String</haxe_doc>
 		</encodeURI>
-		<loadFile public="1" get="inline" set="null" line="79" static="1"><f a="path:fileName">
+		<loadText public="1" get="inline" set="null" line="94" static="1">
+			<f a="path:?fileName">
+				<c path="String"/>
+				<c path="String"/>
+				<c path="js.lib.Promise"><c path="String"/></c>
+			</f>
+			<haxe_doc>* Handles loading files of different types.
+  * @param path  - should end with /
+  * @returns</haxe_doc>
+		</loadText>
+		<loadBlob public="1" get="inline" set="null" line="100" static="1"><f a="path:?fileName">
 	<c path="String"/>
 	<c path="String"/>
-	<unknown/>
-</f></loadFile>
-		<isNwjs public="1" get="inline" set="null" line="87" static="1">
+	<c path="js.lib.Promise"><c path="js.html.Blob"/></c>
+</f></loadBlob>
+		<loadJSON public="1" get="inline" set="null" line="106" static="1"><f a="path:?fileName">
+	<c path="String"/>
+	<c path="String"/>
+	<c path="js.lib.Promise"><c path="haxe.Json"/></c>
+</f></loadJSON>
+		<loadDocument public="1" get="inline" set="null" line="112" static="1"><f a="path:?fileName">
+	<c path="String"/>
+	<c path="String"/>
+	<c path="js.lib.Promise"><c path="js.html.Document"/></c>
+</f></loadDocument>
+		<loadArrayBuff public="1" get="inline" set="null" line="118" static="1"><f a="path:?fileName">
+	<c path="String"/>
+	<c path="String"/>
+	<c path="js.lib.Promise"><c path="js.lib.ArrayBuffer"/></c>
+</f></loadArrayBuff>
+		<isNwjs public="1" get="inline" set="null" line="128" static="1">
 			<f a=""><x path="Bool"/></f>
 			<haxe_doc>* Returns true if the game is running on desktop(nwjs).
   * @returns {boolean}</haxe_doc>
 		</isNwjs>
-		<isMobile public="1" get="inline" set="null" line="95" static="1">
+		<isMobile public="1" get="inline" set="null" line="136" static="1">
 			<f a=""><x path="Bool"/></f>
 			<haxe_doc>* Returns true if the game is running on mobile.
   * @returns{boolean}</haxe_doc>
 		</isMobile>
-		<isTest public="1" get="inline" set="null" line="103" static="1">
+		<isTest public="1" get="inline" set="null" line="144" static="1">
 			<f a=""><x path="Bool"/></f>
 			<haxe_doc>* Returns true if the game is in test mode.
   * @returns {boolean}</haxe_doc>
 		</isTest>
-		<once public="1" set="method" line="112" static="1">
+		<once public="1" set="method" line="153" static="1">
 			<f a="f">
 				<x path="haxe.Function"/>
 				<f a=""><unknown/></f>
@@ -1591,7 +1616,7 @@
   * @param {Function} f
   * @returns {Function}</haxe_doc>
 		</once>
-		<times public="1" set="method" line="130" static="1">
+		<times public="1" set="method" line="171" static="1">
 			<f a="iterations:f">
 				<x path="Int"/>
 				<x path="haxe.Function"/>
@@ -1602,11 +1627,11 @@
   * @param {number} iterations
   * @param {Function} f</haxe_doc>
 		</times>
-		<safeParse public="1" set="method" line="136" static="1"><f a="string">
+		<safeParse public="1" set="method" line="177" static="1"><f a="string">
 	<c path="String"/>
 	<c path="haxe.Exception"/>
 </f></safeParse>
-		<lines public="1" get="inline" set="null" line="149" static="1">
+		<lines public="1" get="inline" set="null" line="190" static="1">
 			<f a="num">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -1615,7 +1640,7 @@
   * @param {number} number
   * @returns {number}</haxe_doc>
 		</lines>
-		<rgbToHex public="1" get="inline" set="null" line="160" static="1">
+		<rgbToHex public="1" get="inline" set="null" line="201" static="1">
 			<f a="red:green:blue">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -1628,7 +1653,7 @@
   * @param {number} blue
   * @returns {string}</haxe_doc>
 		</rgbToHex>
-		<rgbToCss public="1" get="inline" set="null" line="172" static="1">
+		<rgbToCss public="1" get="inline" set="null" line="213" static="1">
 			<f a="red:green:blue">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -1641,7 +1666,7 @@
   * @param {Int} blue
   * @returns {string}</haxe_doc>
 		</rgbToCss>
-		<clear public="1" get="inline" set="null" line="180" static="1">
+		<clear public="1" get="inline" set="null" line="221" static="1">
 			<f a="array">
 				<c path="Array"><x path="Any"/></c>
 				<c path="Array"><x path="Any"/></c>
@@ -1649,7 +1674,7 @@
 			<haxe_doc><![CDATA[* Clears an array of all values.
   * @param {Array<Any>} array]]></haxe_doc>
 		</clear>
-		<take public="1" get="inline" set="null" line="192" static="1">
+		<take public="1" get="inline" set="null" line="233" static="1">
 			<f a="amount:list">
 				<x path="Int"/>
 				<c path="Array"><x path="Any"/></c>
@@ -1661,7 +1686,7 @@
   * @param {any[]} list
   * @returns {any[]}</haxe_doc>
 		</take>
-		<drop public="1" get="inline" set="null" line="203" static="1">
+		<drop public="1" get="inline" set="null" line="244" static="1">
 			<f a="amount:list">
 				<x path="Int"/>
 				<c path="Array"><x path="Any"/></c>
@@ -1673,15 +1698,20 @@
   * @param {any[]} list
   * @returns {any[]}</haxe_doc>
 		</drop>
-		<arrayEquals public="1" get="inline" set="null" line="207" static="1"><f a="arr1:arr2">
+		<arrayEquals public="1" get="inline" set="null" line="248" static="1"><f a="arr1:arr2">
 	<c path="Array"><x path="Any"/></c>
 	<c path="Array"><x path="Any"/></c>
 	<x path="Bool"/>
 </f></arrayEquals>
-		<addWindowToScene public="1" get="inline" set="null" line="213" static="1"><f a="window">
+		<addWindowToScene public="1" get="inline" set="null" line="254" static="1"><f a="window">
 	<c path="rm.windows.Window_Base"/>
 	<x path="Void"/>
 </f></addWindowToScene>
+		<loadData public="1" params="T" set="method" line="259" static="1"><f a="url:responseType">
+	<c path="String"/>
+	<x path="rm.types.XMLResponseTypeA"/>
+	<c path="js.lib.Promise"><c path="loadData.T"/></c>
+</f></loadData>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<abstract path="core.TBox" params="T" file="src/core/AnyBox.hx" module="core.AnyBox">
@@ -5084,6 +5114,18 @@
 	is reached.</haxe_doc>
 		<meta><m n=":keep"/></meta>
 	</class>
+	<abstract path="haxe.io.Mime" params="" file="/home/runner/haxe/versions/4.1.3/std/haxe/io/Mime.hx">
+		<from><icast><c path="String"/></icast></from>
+		<this><c path="String"/></this>
+		<to><icast><c path="String"/></icast></to>
+		<haxe_doc>HTML MimeType Enum
+	@see http://www.sitepoint.com/web-foundations/mime-types-complete-list/</haxe_doc>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="haxe.io._Mime.Mime_Impl_" params="" file="/home/runner/haxe/versions/4.1.3/std/haxe/io/Mime.hx" private="1" module="haxe.io.Mime" final="1"><meta>
+	<m n=":keep"/>
+	<m n=":enum"/>
+</meta></class></impl>
+	</abstract>
 	<class path="haxe.io.Output" params="" file="/home/runner/haxe/versions/4.1.3/std/haxe/io/Output.hx">
 		<haxe_doc>An Output is an abstract write. A specific output implementation will only
 	have to override the `writeByte` and maybe the `write`, `flush` and `close`
@@ -24461,6 +24503,242 @@
 	@see <https://developer.mozilla.org/en-US/docs/Web/API/Window>]]></haxe_doc>
 		<meta><m n=":native"><e>"Window"</e></m></meta>
 	</class>
+	<class path="js.html.XMLHttpRequestEventTarget" params="" file="/home/runner/haxe/versions/4.1.3/std/js/html/XMLHttpRequestEventTarget.hx" extern="1">
+		<extends path="js.html.EventTarget"/>
+		<onloadstart public="1"><x path="haxe.Function"/></onloadstart>
+		<onprogress public="1"><x path="haxe.Function"/></onprogress>
+		<onabort public="1"><x path="haxe.Function"/></onabort>
+		<onerror public="1"><x path="haxe.Function"/></onerror>
+		<onload public="1"><x path="haxe.Function"/></onload>
+		<ontimeout public="1"><x path="haxe.Function"/></ontimeout>
+		<onloadend public="1"><x path="haxe.Function"/></onloadend>
+		<meta><m n=":native"><e>"XMLHttpRequestEventTarget"</e></m></meta>
+	</class>
+	<class path="js.html.XMLHttpRequest" params="" file="/home/runner/haxe/versions/4.1.3/std/js/html/XMLHttpRequest.hx" extern="1">
+		<extends path="js.html.XMLHttpRequestEventTarget"/>
+		<UNSENT public="1" get="inline" set="null" expr="0" line="36" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</UNSENT>
+		<OPENED public="1" get="inline" set="null" expr="1" line="37" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>1</e></m></meta>
+		</OPENED>
+		<HEADERS_RECEIVED public="1" get="inline" set="null" expr="2" line="38" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>2</e></m></meta>
+		</HEADERS_RECEIVED>
+		<LOADING public="1" get="inline" set="null" expr="3" line="39" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>3</e></m></meta>
+		</LOADING>
+		<DONE public="1" get="inline" set="null" expr="4" line="40" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>4</e></m></meta>
+		</DONE>
+		<onreadystatechange public="1">
+			<x path="haxe.Function"/>
+			<haxe_doc>An `EventHandler` that is called whenever the `readyState` attribute changes.</haxe_doc>
+		</onreadystatechange>
+		<readyState public="1" set="null">
+			<x path="Int"/>
+			<haxe_doc>Returns an `unsigned short`, the state of the request.</haxe_doc>
+		</readyState>
+		<timeout public="1">
+			<x path="Int"/>
+			<haxe_doc>Is an `unsigned long` representing the number of milliseconds a request can take before automatically being terminated.</haxe_doc>
+		</timeout>
+		<withCredentials public="1">
+			<x path="Bool"/>
+			<haxe_doc>Is a `Boolean` that indicates whether or not cross-site `Access-Control` requests should be made using credentials such as cookies or authorization headers.</haxe_doc>
+		</withCredentials>
+		<upload public="1" set="null">
+			<c path="js.html.XMLHttpRequestUpload"/>
+			<haxe_doc>Is an `XMLHttpRequestUpload`, representing the upload process.</haxe_doc>
+		</upload>
+		<responseURL public="1" set="null">
+			<c path="String"/>
+			<haxe_doc>Returns the serialized URL of the response or the empty string if the URL is null.</haxe_doc>
+		</responseURL>
+		<status public="1" set="null">
+			<x path="Int"/>
+			<haxe_doc>Returns an `unsigned short` with the status of the response of the request.</haxe_doc>
+		</status>
+		<statusText public="1" set="null">
+			<c path="String"/>
+			<haxe_doc>Returns a `DOMString` containing the response string returned by the HTTP server. Unlike `XMLHTTPRequest.status`, this includes the entire text of the response message ("`200 OK`", for example).</haxe_doc>
+		</statusText>
+		<responseType public="1">
+			<x path="js.html.XMLHttpRequestResponseType"/>
+			<haxe_doc>Is an enumerated value that defines the response type.</haxe_doc>
+		</responseType>
+		<response public="1" set="null">
+			<d/>
+			<haxe_doc>Returns an `ArrayBuffer`, `Blob`, `Document`, JavaScript object, or a `DOMString`, depending on the value of `XMLHttpRequest.responseType`. that contains the response entity body.</haxe_doc>
+		</response>
+		<responseText public="1" set="null">
+			<c path="String"/>
+			<haxe_doc>Returns a `DOMString` that contains the response to the request as text, or `null` if the request was unsuccessful or has not yet been sent.</haxe_doc>
+		</responseText>
+		<responseXML public="1" set="null">
+			<c path="js.html.HTMLDocument"/>
+			<haxe_doc>Returns a `Document` containing the response to the request, or `null` if the request was unsuccessful, has not yet been sent, or cannot be parsed as XML or HTML.</haxe_doc>
+		</responseXML>
+		<open public="1" set="method">
+			<f a="method:url:async:?user:?password">
+				<c path="String"/>
+				<c path="String"/>
+				<x path="Bool"/>
+				<c path="String"/>
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>Initializes a request. This method is to be used from JavaScript code; to initialize a request from native code, use `openRequest()` instead.
+		@throws DOMError</haxe_doc>
+			<overloads><open public="1" set="method">
+	<f a="method:url">
+		<c path="String"/>
+		<c path="String"/>
+		<x path="Void"/>
+	</f>
+	<haxe_doc>Initializes a request. This method is to be used from JavaScript code; to initialize a request from native code, use `openRequest()` instead.
+		@throws DOMError</haxe_doc>
+</open></overloads>
+		</open>
+		<setRequestHeader public="1" set="method">
+			<f a="header:value">
+				<c path="String"/>
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>Sets the value of an HTTP request header. You must call `setRequestHeader()`after `open()`, but before `send()`.
+		@throws DOMError</haxe_doc>
+		</setRequestHeader>
+		<send public="1" set="method">
+			<f a="?body">
+				<c path="js.html.HTMLDocument"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
+		@throws DOMError</haxe_doc>
+			<overloads>
+				<send public="1" set="method">
+					<f a="?body">
+						<c path="js.html.Blob"/>
+						<x path="Void"/>
+					</f>
+					<haxe_doc>Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
+		@throws DOMError</haxe_doc>
+				</send>
+				<send public="1" set="method">
+					<f a="?body">
+						<c path="js.lib.ArrayBufferView"/>
+						<x path="Void"/>
+					</f>
+					<haxe_doc>Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
+		@throws DOMError</haxe_doc>
+				</send>
+				<send public="1" set="method">
+					<f a="?body">
+						<c path="js.lib.ArrayBuffer"/>
+						<x path="Void"/>
+					</f>
+					<haxe_doc>Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
+		@throws DOMError</haxe_doc>
+				</send>
+				<send public="1" set="method">
+					<f a="?body">
+						<c path="js.html.FormData"/>
+						<x path="Void"/>
+					</f>
+					<haxe_doc>Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
+		@throws DOMError</haxe_doc>
+				</send>
+				<send public="1" set="method">
+					<f a="?body">
+						<c path="js.html.URLSearchParams"/>
+						<x path="Void"/>
+					</f>
+					<haxe_doc>Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
+		@throws DOMError</haxe_doc>
+				</send>
+				<send public="1" set="method">
+					<f a="?body">
+						<c path="String"/>
+						<x path="Void"/>
+					</f>
+					<haxe_doc>Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
+		@throws DOMError</haxe_doc>
+				</send>
+			</overloads>
+		</send>
+		<abort public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>Aborts the request if it has already been sent.
+		@throws DOMError</haxe_doc>
+		</abort>
+		<getResponseHeader public="1" set="method">
+			<f a="header">
+				<c path="String"/>
+				<c path="String"/>
+			</f>
+			<haxe_doc>Returns the string containing the text of the specified header, or `null` if either the response has not yet been received or the header doesn't exist in the response.
+		@throws DOMError</haxe_doc>
+		</getResponseHeader>
+		<getAllResponseHeaders public="1" set="method">
+			<f a=""><c path="String"/></f>
+			<haxe_doc>Returns all the response headers, separated by CRLF, as a string, or `null` if no response has been received.
+		@throws DOMError</haxe_doc>
+		</getAllResponseHeaders>
+		<overrideMimeType public="1" set="method">
+			<f a="mime">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>Overrides the MIME type returned by the server.
+		@throws DOMError</haxe_doc>
+		</overrideMimeType>
+		<new public="1" set="method">
+			<f a="ignored">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>@throws DOMError</haxe_doc>
+			<overloads><new public="1" set="method">
+	<f a="?params">
+		<d/>
+		<x path="Void"/>
+	</f>
+	<haxe_doc>@throws DOMError</haxe_doc>
+</new></overloads>
+		</new>
+		<haxe_doc><![CDATA[Use `XMLHttpRequest` (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
+
+	Documentation [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) by [Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest$history), licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).
+
+	@see <https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest>]]></haxe_doc>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":native"><e>"XMLHttpRequest"</e></m>
+		</meta>
+	</class>
+	<abstract path="js.html.XMLHttpRequestResponseType" params="" file="/home/runner/haxe/versions/4.1.3/std/js/html/XMLHttpRequestResponseType.hx">
+		<this><c path="String"/></this>
+		<haxe_doc><![CDATA[The `XMLHttpRequestResponseType` type is an enumerated set of strings which are used to specify the type of data contained in the `response` of an `XMLHttpRequest`.
+
+	Documentation [XMLHttpRequestResponseType](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestResponseType) by [Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestResponseType$history), licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).
+
+	@see <https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestResponseType>]]></haxe_doc>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="js.html._XMLHttpRequestResponseType.XMLHttpRequestResponseType_Impl_" params="" file="/home/runner/haxe/versions/4.1.3/std/js/html/XMLHttpRequestResponseType.hx" private="1" module="js.html.XMLHttpRequestResponseType" final="1"><meta>
+	<m n=":keep"/>
+	<m n=":enum"/>
+</meta></class></impl>
+	</abstract>
+	<class path="js.html.XMLHttpRequestUpload" params="" file="/home/runner/haxe/versions/4.1.3/std/js/html/XMLHttpRequestUpload.hx" extern="1">
+		<extends path="js.html.XMLHttpRequestEventTarget"/>
+		<meta><m n=":native"><e>"XMLHttpRequestUpload"</e></m></meta>
+	</class>
 	<class path="js.html.XPathExpression" params="" file="/home/runner/haxe/versions/4.1.3/std/js/html/XPathExpression.hx" extern="1">
 		<evaluate public="1" set="method">
 			<f a="contextNode:?type:?result" v=":0:">
@@ -40025,7 +40303,10 @@
 	asynchronous operation and its resulting value.
 
 	Documentation [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) by [Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise$history), licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).</haxe_doc>
-		<meta><m n=":native"><e>"Promise"</e></m></meta>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":native"><e>"Promise"</e></m>
+		</meta>
 	</class>
 	<abstract path="js.lib.PromiseHandler" params="T:TOut" file="/home/runner/haxe/versions/4.1.3/std/js/lib/Promise.hx" module="js.lib.Promise">
 		<from>
@@ -79533,7 +79814,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.StateIdA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="6" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="9" static="1">
 		<x path="rm.types.StateIdA"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -79545,7 +79826,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.StateIdA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="6" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="9" static="1">
 			<x path="rm.types.StateIdA"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -79565,7 +79846,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.BuffIdA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="12" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="15" static="1">
 		<x path="rm.types.BuffIdA"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -79577,7 +79858,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.BuffIdA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="12" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="15" static="1">
 			<x path="rm.types.BuffIdA"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -79597,7 +79878,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.ParameterIdA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="18" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="21" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -79605,7 +79886,7 @@
 			<m n=":impl"/>
 		</meta>
 	</base>
-	<MHP public="1" get="inline" set="null" expr="cast 0" line="23" static="1">
+	<MHP public="1" get="inline" set="null" expr="cast 0" line="26" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -79614,7 +79895,7 @@
 		</meta>
 		<haxe_doc>* Maximum HP</haxe_doc>
 	</MHP>
-	<MMP public="1" get="inline" set="null" expr="cast 1" line="28" static="1">
+	<MMP public="1" get="inline" set="null" expr="cast 1" line="31" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -79623,7 +79904,7 @@
 		</meta>
 		<haxe_doc>* Maximum MP</haxe_doc>
 	</MMP>
-	<ATK public="1" get="inline" set="null" expr="cast 2" line="33" static="1">
+	<ATK public="1" get="inline" set="null" expr="cast 2" line="36" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -79632,7 +79913,7 @@
 		</meta>
 		<haxe_doc>* Attack</haxe_doc>
 	</ATK>
-	<DEF public="1" get="inline" set="null" expr="cast 3" line="38" static="1">
+	<DEF public="1" get="inline" set="null" expr="cast 3" line="41" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -79641,7 +79922,7 @@
 		</meta>
 		<haxe_doc>* Defense</haxe_doc>
 	</DEF>
-	<MAT public="1" get="inline" set="null" expr="cast 4" line="43" static="1">
+	<MAT public="1" get="inline" set="null" expr="cast 4" line="46" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -79650,7 +79931,7 @@
 		</meta>
 		<haxe_doc>* Magic Attack</haxe_doc>
 	</MAT>
-	<MDF public="1" get="inline" set="null" expr="cast 5" line="48" static="1">
+	<MDF public="1" get="inline" set="null" expr="cast 5" line="51" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 5</e></m>
@@ -79659,7 +79940,7 @@
 		</meta>
 		<haxe_doc>* Magic Defense Power</haxe_doc>
 	</MDF>
-	<AGI public="1" get="inline" set="null" expr="cast 6" line="53" static="1">
+	<AGI public="1" get="inline" set="null" expr="cast 6" line="56" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 6</e></m>
@@ -79668,7 +79949,7 @@
 		</meta>
 		<haxe_doc>* Agility</haxe_doc>
 	</AGI>
-	<LUK public="1" get="inline" set="null" expr="cast 7" line="58" static="1">
+	<LUK public="1" get="inline" set="null" expr="cast 7" line="61" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 7</e></m>
@@ -79677,7 +79958,7 @@
 		</meta>
 		<haxe_doc>* Luck</haxe_doc>
 	</LUK>
-	<HIT public="1" get="inline" set="null" expr="cast 0" line="63" static="1">
+	<HIT public="1" get="inline" set="null" expr="cast 0" line="66" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -79686,7 +79967,7 @@
 		</meta>
 		<haxe_doc>* X Param Hit  Rate</haxe_doc>
 	</HIT>
-	<EVA public="1" get="inline" set="null" expr="cast 1" line="68" static="1">
+	<EVA public="1" get="inline" set="null" expr="cast 1" line="71" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -79695,7 +79976,7 @@
 		</meta>
 		<haxe_doc>* X Param Evasion Rate</haxe_doc>
 	</EVA>
-	<CRI public="1" get="inline" set="null" expr="cast 2" line="73" static="1">
+	<CRI public="1" get="inline" set="null" expr="cast 2" line="76" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -79704,7 +79985,7 @@
 		</meta>
 		<haxe_doc>* X Param Critical Rate</haxe_doc>
 	</CRI>
-	<CEV public="1" get="inline" set="null" expr="cast 3" line="78" static="1">
+	<CEV public="1" get="inline" set="null" expr="cast 3" line="81" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -79713,7 +79994,7 @@
 		</meta>
 		<haxe_doc>* X Param Critical Evasion Rate</haxe_doc>
 	</CEV>
-	<MEV public="1" get="inline" set="null" expr="cast 4" line="83" static="1">
+	<MEV public="1" get="inline" set="null" expr="cast 4" line="86" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -79722,7 +80003,7 @@
 		</meta>
 		<haxe_doc>* X Param Magic Evasion Rate</haxe_doc>
 	</MEV>
-	<MRF public="1" get="inline" set="null" expr="cast 5" line="88" static="1">
+	<MRF public="1" get="inline" set="null" expr="cast 5" line="91" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 5</e></m>
@@ -79731,7 +80012,7 @@
 		</meta>
 		<haxe_doc>* X Param Magic Reflection Rate</haxe_doc>
 	</MRF>
-	<CNT public="1" get="inline" set="null" expr="cast 6" line="93" static="1">
+	<CNT public="1" get="inline" set="null" expr="cast 6" line="96" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 6</e></m>
@@ -79740,7 +80021,7 @@
 		</meta>
 		<haxe_doc>* X Param Counter Attack Rate</haxe_doc>
 	</CNT>
-	<HRG public="1" get="inline" set="null" expr="cast 7" line="98" static="1">
+	<HRG public="1" get="inline" set="null" expr="cast 7" line="101" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 7</e></m>
@@ -79749,7 +80030,7 @@
 		</meta>
 		<haxe_doc>* X Param HP Regeneration Rate</haxe_doc>
 	</HRG>
-	<MRG public="1" get="inline" set="null" expr="cast 8" line="103" static="1">
+	<MRG public="1" get="inline" set="null" expr="cast 8" line="106" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 8</e></m>
@@ -79758,7 +80039,7 @@
 		</meta>
 		<haxe_doc>* X Param MP Regeneration Rate</haxe_doc>
 	</MRG>
-	<TRG public="1" get="inline" set="null" expr="cast 9" line="108" static="1">
+	<TRG public="1" get="inline" set="null" expr="cast 9" line="111" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 9</e></m>
@@ -79767,7 +80048,7 @@
 		</meta>
 		<haxe_doc>* X Param TP Regeneration Rate</haxe_doc>
 	</TRG>
-	<TGR public="1" get="inline" set="null" expr="cast 0" line="113" static="1">
+	<TGR public="1" get="inline" set="null" expr="cast 0" line="116" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -79776,7 +80057,7 @@
 		</meta>
 		<haxe_doc>* S Param Target Rate</haxe_doc>
 	</TGR>
-	<GRD public="1" get="inline" set="null" expr="cast 1" line="118" static="1">
+	<GRD public="1" get="inline" set="null" expr="cast 1" line="121" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -79785,7 +80066,7 @@
 		</meta>
 		<haxe_doc>* S Param Guard Effect Rate</haxe_doc>
 	</GRD>
-	<REC public="1" get="inline" set="null" expr="cast 2" line="123" static="1">
+	<REC public="1" get="inline" set="null" expr="cast 2" line="126" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -79794,7 +80075,7 @@
 		</meta>
 		<haxe_doc>* S Param Recovery Effect Rate</haxe_doc>
 	</REC>
-	<PHA public="1" get="inline" set="null" expr="cast 3" line="128" static="1">
+	<PHA public="1" get="inline" set="null" expr="cast 3" line="131" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -79803,7 +80084,7 @@
 		</meta>
 		<haxe_doc>* S Param Pharmacology</haxe_doc>
 	</PHA>
-	<MCR public="1" get="inline" set="null" expr="cast 4" line="133" static="1">
+	<MCR public="1" get="inline" set="null" expr="cast 4" line="136" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -79812,7 +80093,7 @@
 		</meta>
 		<haxe_doc>* S Param Mp Cost Rate</haxe_doc>
 	</MCR>
-	<TCR public="1" get="inline" set="null" expr="cast 5" line="138" static="1">
+	<TCR public="1" get="inline" set="null" expr="cast 5" line="141" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 5</e></m>
@@ -79821,7 +80102,7 @@
 		</meta>
 		<haxe_doc>* S Param TP Charge Rate</haxe_doc>
 	</TCR>
-	<PDR public="1" get="inline" set="null" expr="cast 6" line="143" static="1">
+	<PDR public="1" get="inline" set="null" expr="cast 6" line="146" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 6</e></m>
@@ -79830,7 +80111,7 @@
 		</meta>
 		<haxe_doc>* S Param Physical Damage Rate</haxe_doc>
 	</PDR>
-	<MDR public="1" get="inline" set="null" expr="cast 7" line="148" static="1">
+	<MDR public="1" get="inline" set="null" expr="cast 7" line="151" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 7</e></m>
@@ -79839,7 +80120,7 @@
 		</meta>
 		<haxe_doc>* S Param Magical Damage Rate</haxe_doc>
 	</MDR>
-	<FDR public="1" get="inline" set="null" expr="cast 8" line="153" static="1">
+	<FDR public="1" get="inline" set="null" expr="cast 8" line="156" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 8</e></m>
@@ -79848,7 +80129,7 @@
 		</meta>
 		<haxe_doc>* S Param Floor Damage Rate</haxe_doc>
 	</FDR>
-	<EXR public="1" get="inline" set="null" expr="cast 9" line="158" static="1">
+	<EXR public="1" get="inline" set="null" expr="cast 9" line="161" static="1">
 		<x path="rm.types.ParameterIdA"/>
 		<meta>
 			<m n=":value"><e>cast 9</e></m>
@@ -79861,7 +80142,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.ParameterIdA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="18" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="21" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -79869,7 +80150,7 @@
 				<m n=":impl"/>
 			</meta>
 		</base>
-		<MHP public="1" get="inline" set="null" expr="cast 0" line="23" static="1">
+		<MHP public="1" get="inline" set="null" expr="cast 0" line="26" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -79878,7 +80159,7 @@
 			</meta>
 			<haxe_doc>* Maximum HP</haxe_doc>
 		</MHP>
-		<MMP public="1" get="inline" set="null" expr="cast 1" line="28" static="1">
+		<MMP public="1" get="inline" set="null" expr="cast 1" line="31" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -79887,7 +80168,7 @@
 			</meta>
 			<haxe_doc>* Maximum MP</haxe_doc>
 		</MMP>
-		<ATK public="1" get="inline" set="null" expr="cast 2" line="33" static="1">
+		<ATK public="1" get="inline" set="null" expr="cast 2" line="36" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -79896,7 +80177,7 @@
 			</meta>
 			<haxe_doc>* Attack</haxe_doc>
 		</ATK>
-		<DEF public="1" get="inline" set="null" expr="cast 3" line="38" static="1">
+		<DEF public="1" get="inline" set="null" expr="cast 3" line="41" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -79905,7 +80186,7 @@
 			</meta>
 			<haxe_doc>* Defense</haxe_doc>
 		</DEF>
-		<MAT public="1" get="inline" set="null" expr="cast 4" line="43" static="1">
+		<MAT public="1" get="inline" set="null" expr="cast 4" line="46" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -79914,7 +80195,7 @@
 			</meta>
 			<haxe_doc>* Magic Attack</haxe_doc>
 		</MAT>
-		<MDF public="1" get="inline" set="null" expr="cast 5" line="48" static="1">
+		<MDF public="1" get="inline" set="null" expr="cast 5" line="51" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 5</e></m>
@@ -79923,7 +80204,7 @@
 			</meta>
 			<haxe_doc>* Magic Defense Power</haxe_doc>
 		</MDF>
-		<AGI public="1" get="inline" set="null" expr="cast 6" line="53" static="1">
+		<AGI public="1" get="inline" set="null" expr="cast 6" line="56" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 6</e></m>
@@ -79932,7 +80213,7 @@
 			</meta>
 			<haxe_doc>* Agility</haxe_doc>
 		</AGI>
-		<LUK public="1" get="inline" set="null" expr="cast 7" line="58" static="1">
+		<LUK public="1" get="inline" set="null" expr="cast 7" line="61" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 7</e></m>
@@ -79941,7 +80222,7 @@
 			</meta>
 			<haxe_doc>* Luck</haxe_doc>
 		</LUK>
-		<HIT public="1" get="inline" set="null" expr="cast 0" line="63" static="1">
+		<HIT public="1" get="inline" set="null" expr="cast 0" line="66" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -79950,7 +80231,7 @@
 			</meta>
 			<haxe_doc>* X Param Hit  Rate</haxe_doc>
 		</HIT>
-		<EVA public="1" get="inline" set="null" expr="cast 1" line="68" static="1">
+		<EVA public="1" get="inline" set="null" expr="cast 1" line="71" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -79959,7 +80240,7 @@
 			</meta>
 			<haxe_doc>* X Param Evasion Rate</haxe_doc>
 		</EVA>
-		<CRI public="1" get="inline" set="null" expr="cast 2" line="73" static="1">
+		<CRI public="1" get="inline" set="null" expr="cast 2" line="76" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -79968,7 +80249,7 @@
 			</meta>
 			<haxe_doc>* X Param Critical Rate</haxe_doc>
 		</CRI>
-		<CEV public="1" get="inline" set="null" expr="cast 3" line="78" static="1">
+		<CEV public="1" get="inline" set="null" expr="cast 3" line="81" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -79977,7 +80258,7 @@
 			</meta>
 			<haxe_doc>* X Param Critical Evasion Rate</haxe_doc>
 		</CEV>
-		<MEV public="1" get="inline" set="null" expr="cast 4" line="83" static="1">
+		<MEV public="1" get="inline" set="null" expr="cast 4" line="86" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -79986,7 +80267,7 @@
 			</meta>
 			<haxe_doc>* X Param Magic Evasion Rate</haxe_doc>
 		</MEV>
-		<MRF public="1" get="inline" set="null" expr="cast 5" line="88" static="1">
+		<MRF public="1" get="inline" set="null" expr="cast 5" line="91" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 5</e></m>
@@ -79995,7 +80276,7 @@
 			</meta>
 			<haxe_doc>* X Param Magic Reflection Rate</haxe_doc>
 		</MRF>
-		<CNT public="1" get="inline" set="null" expr="cast 6" line="93" static="1">
+		<CNT public="1" get="inline" set="null" expr="cast 6" line="96" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 6</e></m>
@@ -80004,7 +80285,7 @@
 			</meta>
 			<haxe_doc>* X Param Counter Attack Rate</haxe_doc>
 		</CNT>
-		<HRG public="1" get="inline" set="null" expr="cast 7" line="98" static="1">
+		<HRG public="1" get="inline" set="null" expr="cast 7" line="101" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 7</e></m>
@@ -80013,7 +80294,7 @@
 			</meta>
 			<haxe_doc>* X Param HP Regeneration Rate</haxe_doc>
 		</HRG>
-		<MRG public="1" get="inline" set="null" expr="cast 8" line="103" static="1">
+		<MRG public="1" get="inline" set="null" expr="cast 8" line="106" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 8</e></m>
@@ -80022,7 +80303,7 @@
 			</meta>
 			<haxe_doc>* X Param MP Regeneration Rate</haxe_doc>
 		</MRG>
-		<TRG public="1" get="inline" set="null" expr="cast 9" line="108" static="1">
+		<TRG public="1" get="inline" set="null" expr="cast 9" line="111" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 9</e></m>
@@ -80031,7 +80312,7 @@
 			</meta>
 			<haxe_doc>* X Param TP Regeneration Rate</haxe_doc>
 		</TRG>
-		<TGR public="1" get="inline" set="null" expr="cast 0" line="113" static="1">
+		<TGR public="1" get="inline" set="null" expr="cast 0" line="116" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -80040,7 +80321,7 @@
 			</meta>
 			<haxe_doc>* S Param Target Rate</haxe_doc>
 		</TGR>
-		<GRD public="1" get="inline" set="null" expr="cast 1" line="118" static="1">
+		<GRD public="1" get="inline" set="null" expr="cast 1" line="121" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -80049,7 +80330,7 @@
 			</meta>
 			<haxe_doc>* S Param Guard Effect Rate</haxe_doc>
 		</GRD>
-		<REC public="1" get="inline" set="null" expr="cast 2" line="123" static="1">
+		<REC public="1" get="inline" set="null" expr="cast 2" line="126" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -80058,7 +80339,7 @@
 			</meta>
 			<haxe_doc>* S Param Recovery Effect Rate</haxe_doc>
 		</REC>
-		<PHA public="1" get="inline" set="null" expr="cast 3" line="128" static="1">
+		<PHA public="1" get="inline" set="null" expr="cast 3" line="131" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -80067,7 +80348,7 @@
 			</meta>
 			<haxe_doc>* S Param Pharmacology</haxe_doc>
 		</PHA>
-		<MCR public="1" get="inline" set="null" expr="cast 4" line="133" static="1">
+		<MCR public="1" get="inline" set="null" expr="cast 4" line="136" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -80076,7 +80357,7 @@
 			</meta>
 			<haxe_doc>* S Param Mp Cost Rate</haxe_doc>
 		</MCR>
-		<TCR public="1" get="inline" set="null" expr="cast 5" line="138" static="1">
+		<TCR public="1" get="inline" set="null" expr="cast 5" line="141" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 5</e></m>
@@ -80085,7 +80366,7 @@
 			</meta>
 			<haxe_doc>* S Param TP Charge Rate</haxe_doc>
 		</TCR>
-		<PDR public="1" get="inline" set="null" expr="cast 6" line="143" static="1">
+		<PDR public="1" get="inline" set="null" expr="cast 6" line="146" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 6</e></m>
@@ -80094,7 +80375,7 @@
 			</meta>
 			<haxe_doc>* S Param Physical Damage Rate</haxe_doc>
 		</PDR>
-		<MDR public="1" get="inline" set="null" expr="cast 7" line="148" static="1">
+		<MDR public="1" get="inline" set="null" expr="cast 7" line="151" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 7</e></m>
@@ -80103,7 +80384,7 @@
 			</meta>
 			<haxe_doc>* S Param Magical Damage Rate</haxe_doc>
 		</MDR>
-		<FDR public="1" get="inline" set="null" expr="cast 8" line="153" static="1">
+		<FDR public="1" get="inline" set="null" expr="cast 8" line="156" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 8</e></m>
@@ -80112,7 +80393,7 @@
 			</meta>
 			<haxe_doc>* S Param Floor Damage Rate</haxe_doc>
 		</FDR>
-		<EXR public="1" get="inline" set="null" expr="cast 9" line="158" static="1">
+		<EXR public="1" get="inline" set="null" expr="cast 9" line="161" static="1">
 			<x path="rm.types.ParameterIdA"/>
 			<meta>
 				<m n=":value"><e>cast 9</e></m>
@@ -80133,7 +80414,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.EquipTypeId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="164" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="167" static="1">
 		<x path="rm.types.EquipTypeId"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -80145,7 +80426,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.EquipTypeId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="164" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="167" static="1">
 			<x path="rm.types.EquipTypeId"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -80165,7 +80446,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.SkillIdA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="170" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="173" static="1">
 		<x path="rm.types.SkillIdA"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -80177,7 +80458,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.SkillIdA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="170" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="173" static="1">
 			<x path="rm.types.SkillIdA"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -80197,7 +80478,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.ActionState_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="176" static="1">
+	<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="179" static="1">
 		<x path="rm.types.ActionState"/>
 		<meta>
 			<m n=":value"><e>cast ""</e></m>
@@ -80209,7 +80490,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.ActionState_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="176" static="1">
+		<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="179" static="1">
 			<x path="rm.types.ActionState"/>
 			<meta>
 				<m n=":value"><e>cast ""</e></m>
@@ -80232,7 +80513,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.BalloonId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-	<EXCLAMATION public="1" get="inline" set="null" expr="cast 0" line="182" static="1">
+	<EXCLAMATION public="1" get="inline" set="null" expr="cast 0" line="185" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -80240,7 +80521,7 @@
 			<m n=":impl"/>
 		</meta>
 	</EXCLAMATION>
-	<QUESTION public="1" get="inline" set="null" expr="cast 1" line="183" static="1">
+	<QUESTION public="1" get="inline" set="null" expr="cast 1" line="186" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -80248,7 +80529,7 @@
 			<m n=":impl"/>
 		</meta>
 	</QUESTION>
-	<MUSIC_NOTE public="1" get="inline" set="null" expr="cast 2" line="184" static="1">
+	<MUSIC_NOTE public="1" get="inline" set="null" expr="cast 2" line="187" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -80256,7 +80537,7 @@
 			<m n=":impl"/>
 		</meta>
 	</MUSIC_NOTE>
-	<HEART public="1" get="inline" set="null" expr="cast 3" line="185" static="1">
+	<HEART public="1" get="inline" set="null" expr="cast 3" line="188" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -80264,7 +80545,7 @@
 			<m n=":impl"/>
 		</meta>
 	</HEART>
-	<ANGER public="1" get="inline" set="null" expr="cast 4" line="186" static="1">
+	<ANGER public="1" get="inline" set="null" expr="cast 4" line="189" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -80272,7 +80553,7 @@
 			<m n=":impl"/>
 		</meta>
 	</ANGER>
-	<SWEAT public="1" get="inline" set="null" expr="cast 5" line="187" static="1">
+	<SWEAT public="1" get="inline" set="null" expr="cast 5" line="190" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 5</e></m>
@@ -80280,7 +80561,7 @@
 			<m n=":impl"/>
 		</meta>
 	</SWEAT>
-	<COBWEB public="1" get="inline" set="null" expr="cast 6" line="188" static="1">
+	<COBWEB public="1" get="inline" set="null" expr="cast 6" line="191" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 6</e></m>
@@ -80288,7 +80569,7 @@
 			<m n=":impl"/>
 		</meta>
 	</COBWEB>
-	<SILENCE public="1" get="inline" set="null" expr="cast 7" line="189" static="1">
+	<SILENCE public="1" get="inline" set="null" expr="cast 7" line="192" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 7</e></m>
@@ -80296,7 +80577,7 @@
 			<m n=":impl"/>
 		</meta>
 	</SILENCE>
-	<LIGHT_BULB public="1" get="inline" set="null" expr="cast 8" line="190" static="1">
+	<LIGHT_BULB public="1" get="inline" set="null" expr="cast 8" line="193" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 8</e></m>
@@ -80304,7 +80585,7 @@
 			<m n=":impl"/>
 		</meta>
 	</LIGHT_BULB>
-	<ZZZ public="1" get="inline" set="null" expr="cast 9" line="191" static="1">
+	<ZZZ public="1" get="inline" set="null" expr="cast 9" line="194" static="1">
 		<x path="rm.types.BalloonId"/>
 		<meta>
 			<m n=":value"><e>cast 9</e></m>
@@ -80312,7 +80593,7 @@
 			<m n=":impl"/>
 		</meta>
 	</ZZZ>
-	<toString public="1" get="inline" set="null" line="194" static="1">
+	<toString public="1" get="inline" set="null" line="197" static="1">
 		<f a="value">
 			<x path="rm.types.BalloonId"/>
 			<c path="String"/>
@@ -80326,7 +80607,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.BalloonId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-		<EXCLAMATION public="1" get="inline" set="null" expr="cast 0" line="182" static="1">
+		<EXCLAMATION public="1" get="inline" set="null" expr="cast 0" line="185" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -80334,7 +80615,7 @@
 				<m n=":impl"/>
 			</meta>
 		</EXCLAMATION>
-		<QUESTION public="1" get="inline" set="null" expr="cast 1" line="183" static="1">
+		<QUESTION public="1" get="inline" set="null" expr="cast 1" line="186" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -80342,7 +80623,7 @@
 				<m n=":impl"/>
 			</meta>
 		</QUESTION>
-		<MUSIC_NOTE public="1" get="inline" set="null" expr="cast 2" line="184" static="1">
+		<MUSIC_NOTE public="1" get="inline" set="null" expr="cast 2" line="187" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -80350,7 +80631,7 @@
 				<m n=":impl"/>
 			</meta>
 		</MUSIC_NOTE>
-		<HEART public="1" get="inline" set="null" expr="cast 3" line="185" static="1">
+		<HEART public="1" get="inline" set="null" expr="cast 3" line="188" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -80358,7 +80639,7 @@
 				<m n=":impl"/>
 			</meta>
 		</HEART>
-		<ANGER public="1" get="inline" set="null" expr="cast 4" line="186" static="1">
+		<ANGER public="1" get="inline" set="null" expr="cast 4" line="189" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -80366,7 +80647,7 @@
 				<m n=":impl"/>
 			</meta>
 		</ANGER>
-		<SWEAT public="1" get="inline" set="null" expr="cast 5" line="187" static="1">
+		<SWEAT public="1" get="inline" set="null" expr="cast 5" line="190" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 5</e></m>
@@ -80374,7 +80655,7 @@
 				<m n=":impl"/>
 			</meta>
 		</SWEAT>
-		<COBWEB public="1" get="inline" set="null" expr="cast 6" line="188" static="1">
+		<COBWEB public="1" get="inline" set="null" expr="cast 6" line="191" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 6</e></m>
@@ -80382,7 +80663,7 @@
 				<m n=":impl"/>
 			</meta>
 		</COBWEB>
-		<SILENCE public="1" get="inline" set="null" expr="cast 7" line="189" static="1">
+		<SILENCE public="1" get="inline" set="null" expr="cast 7" line="192" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 7</e></m>
@@ -80390,7 +80671,7 @@
 				<m n=":impl"/>
 			</meta>
 		</SILENCE>
-		<LIGHT_BULB public="1" get="inline" set="null" expr="cast 8" line="190" static="1">
+		<LIGHT_BULB public="1" get="inline" set="null" expr="cast 8" line="193" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 8</e></m>
@@ -80398,7 +80679,7 @@
 				<m n=":impl"/>
 			</meta>
 		</LIGHT_BULB>
-		<ZZZ public="1" get="inline" set="null" expr="cast 9" line="191" static="1">
+		<ZZZ public="1" get="inline" set="null" expr="cast 9" line="194" static="1">
 			<x path="rm.types.BalloonId"/>
 			<meta>
 				<m n=":value"><e>cast 9</e></m>
@@ -80406,7 +80687,7 @@
 				<m n=":impl"/>
 			</meta>
 		</ZZZ>
-		<toString public="1" get="inline" set="null" line="194" static="1">
+		<toString public="1" get="inline" set="null" line="197" static="1">
 			<f a="value">
 				<x path="rm.types.BalloonId"/>
 				<c path="String"/>
@@ -80428,7 +80709,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.AnimationSpeed_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="226" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="229" static="1">
 		<x path="rm.types.AnimationSpeed"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -80440,7 +80721,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.AnimationSpeed_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="226" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="229" static="1">
 			<x path="rm.types.AnimationSpeed"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -80460,7 +80741,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.WeaponImageId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="232" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="235" static="1">
 		<x path="rm.types.WeaponImageId"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -80472,7 +80753,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.WeaponImageId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="232" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="235" static="1">
 			<x path="rm.types.WeaponImageId"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -80492,7 +80773,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.AnimationId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="238" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="241" static="1">
 		<x path="rm.types.AnimationId"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -80504,7 +80785,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.AnimationId_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="238" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="241" static="1">
 			<x path="rm.types.AnimationId"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -80536,7 +80817,7 @@
  * on different scenes in MV/rm.</haxe_doc>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="rm.types._LunaTea.MotionType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<WALK public="1" get="inline" set="null" expr="cast &quot;walk&quot;" line="255" static="1">
+	<WALK public="1" get="inline" set="null" expr="cast &quot;walk&quot;" line="258" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "walk"</e></m>
@@ -80544,7 +80825,7 @@
 			<m n=":impl"/>
 		</meta>
 	</WALK>
-	<WAIT public="1" get="inline" set="null" expr="cast &quot;wait&quot;" line="256" static="1">
+	<WAIT public="1" get="inline" set="null" expr="cast &quot;wait&quot;" line="259" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "wait"</e></m>
@@ -80552,7 +80833,7 @@
 			<m n=":impl"/>
 		</meta>
 	</WAIT>
-	<CHANT public="1" get="inline" set="null" expr="cast &quot;chant&quot;" line="257" static="1">
+	<CHANT public="1" get="inline" set="null" expr="cast &quot;chant&quot;" line="260" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "chant"</e></m>
@@ -80560,7 +80841,7 @@
 			<m n=":impl"/>
 		</meta>
 	</CHANT>
-	<GUARD public="1" get="inline" set="null" expr="cast &quot;guard&quot;" line="258" static="1">
+	<GUARD public="1" get="inline" set="null" expr="cast &quot;guard&quot;" line="261" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "guard"</e></m>
@@ -80568,7 +80849,7 @@
 			<m n=":impl"/>
 		</meta>
 	</GUARD>
-	<DAMAGE public="1" get="inline" set="null" expr="cast &quot;damage&quot;" line="259" static="1">
+	<DAMAGE public="1" get="inline" set="null" expr="cast &quot;damage&quot;" line="262" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "damage"</e></m>
@@ -80576,7 +80857,7 @@
 			<m n=":impl"/>
 		</meta>
 	</DAMAGE>
-	<EVADE public="1" get="inline" set="null" expr="cast &quot;evade&quot;" line="260" static="1">
+	<EVADE public="1" get="inline" set="null" expr="cast &quot;evade&quot;" line="263" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "evade"</e></m>
@@ -80584,7 +80865,7 @@
 			<m n=":impl"/>
 		</meta>
 	</EVADE>
-	<THRUST public="1" get="inline" set="null" expr="cast &quot;thrust&quot;" line="261" static="1">
+	<THRUST public="1" get="inline" set="null" expr="cast &quot;thrust&quot;" line="264" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "thrust"</e></m>
@@ -80592,7 +80873,7 @@
 			<m n=":impl"/>
 		</meta>
 	</THRUST>
-	<MISSLE public="1" get="inline" set="null" expr="cast &quot;missle&quot;" line="262" static="1">
+	<MISSLE public="1" get="inline" set="null" expr="cast &quot;missle&quot;" line="265" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "missle"</e></m>
@@ -80600,7 +80881,7 @@
 			<m n=":impl"/>
 		</meta>
 	</MISSLE>
-	<SKILL public="1" get="inline" set="null" expr="cast &quot;SKILL&quot;" line="263" static="1">
+	<SKILL public="1" get="inline" set="null" expr="cast &quot;SKILL&quot;" line="266" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "SKILL"</e></m>
@@ -80608,7 +80889,7 @@
 			<m n=":impl"/>
 		</meta>
 	</SKILL>
-	<SPELL public="1" get="inline" set="null" expr="cast &quot;spell&quot;" line="264" static="1">
+	<SPELL public="1" get="inline" set="null" expr="cast &quot;spell&quot;" line="267" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "spell"</e></m>
@@ -80616,7 +80897,7 @@
 			<m n=":impl"/>
 		</meta>
 	</SPELL>
-	<ITEM public="1" get="inline" set="null" expr="cast &quot;item&quot;" line="265" static="1">
+	<ITEM public="1" get="inline" set="null" expr="cast &quot;item&quot;" line="268" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "item"</e></m>
@@ -80624,7 +80905,7 @@
 			<m n=":impl"/>
 		</meta>
 	</ITEM>
-	<ESCAPE public="1" get="inline" set="null" expr="cast &quot;escape&quot;" line="266" static="1">
+	<ESCAPE public="1" get="inline" set="null" expr="cast &quot;escape&quot;" line="269" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "escape"</e></m>
@@ -80632,7 +80913,7 @@
 			<m n=":impl"/>
 		</meta>
 	</ESCAPE>
-	<VICTORY public="1" get="inline" set="null" expr="cast &quot;victory&quot;" line="267" static="1">
+	<VICTORY public="1" get="inline" set="null" expr="cast &quot;victory&quot;" line="270" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "victory"</e></m>
@@ -80640,7 +80921,7 @@
 			<m n=":impl"/>
 		</meta>
 	</VICTORY>
-	<DYING public="1" get="inline" set="null" expr="cast &quot;dying&quot;" line="268" static="1">
+	<DYING public="1" get="inline" set="null" expr="cast &quot;dying&quot;" line="271" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "dying"</e></m>
@@ -80648,7 +80929,7 @@
 			<m n=":impl"/>
 		</meta>
 	</DYING>
-	<ABNORMAL public="1" get="inline" set="null" expr="cast &quot;abnormal&quot;" line="269" static="1">
+	<ABNORMAL public="1" get="inline" set="null" expr="cast &quot;abnormal&quot;" line="272" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "abnormal"</e></m>
@@ -80656,7 +80937,7 @@
 			<m n=":impl"/>
 		</meta>
 	</ABNORMAL>
-	<SLEEP public="1" get="inline" set="null" expr="cast &quot;sleep&quot;" line="270" static="1">
+	<SLEEP public="1" get="inline" set="null" expr="cast &quot;sleep&quot;" line="273" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "sleep"</e></m>
@@ -80664,7 +80945,7 @@
 			<m n=":impl"/>
 		</meta>
 	</SLEEP>
-	<DEAD public="1" get="inline" set="null" expr="cast &quot;dead&quot;" line="271" static="1">
+	<DEAD public="1" get="inline" set="null" expr="cast &quot;dead&quot;" line="274" static="1">
 		<x path="rm.types.MotionType"/>
 		<meta>
 			<m n=":value"><e>cast "dead"</e></m>
@@ -80676,7 +80957,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.MotionType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<WALK public="1" get="inline" set="null" expr="cast &quot;walk&quot;" line="255" static="1">
+		<WALK public="1" get="inline" set="null" expr="cast &quot;walk&quot;" line="258" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "walk"</e></m>
@@ -80684,7 +80965,7 @@
 				<m n=":impl"/>
 			</meta>
 		</WALK>
-		<WAIT public="1" get="inline" set="null" expr="cast &quot;wait&quot;" line="256" static="1">
+		<WAIT public="1" get="inline" set="null" expr="cast &quot;wait&quot;" line="259" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "wait"</e></m>
@@ -80692,7 +80973,7 @@
 				<m n=":impl"/>
 			</meta>
 		</WAIT>
-		<CHANT public="1" get="inline" set="null" expr="cast &quot;chant&quot;" line="257" static="1">
+		<CHANT public="1" get="inline" set="null" expr="cast &quot;chant&quot;" line="260" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "chant"</e></m>
@@ -80700,7 +80981,7 @@
 				<m n=":impl"/>
 			</meta>
 		</CHANT>
-		<GUARD public="1" get="inline" set="null" expr="cast &quot;guard&quot;" line="258" static="1">
+		<GUARD public="1" get="inline" set="null" expr="cast &quot;guard&quot;" line="261" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "guard"</e></m>
@@ -80708,7 +80989,7 @@
 				<m n=":impl"/>
 			</meta>
 		</GUARD>
-		<DAMAGE public="1" get="inline" set="null" expr="cast &quot;damage&quot;" line="259" static="1">
+		<DAMAGE public="1" get="inline" set="null" expr="cast &quot;damage&quot;" line="262" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "damage"</e></m>
@@ -80716,7 +80997,7 @@
 				<m n=":impl"/>
 			</meta>
 		</DAMAGE>
-		<EVADE public="1" get="inline" set="null" expr="cast &quot;evade&quot;" line="260" static="1">
+		<EVADE public="1" get="inline" set="null" expr="cast &quot;evade&quot;" line="263" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "evade"</e></m>
@@ -80724,7 +81005,7 @@
 				<m n=":impl"/>
 			</meta>
 		</EVADE>
-		<THRUST public="1" get="inline" set="null" expr="cast &quot;thrust&quot;" line="261" static="1">
+		<THRUST public="1" get="inline" set="null" expr="cast &quot;thrust&quot;" line="264" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "thrust"</e></m>
@@ -80732,7 +81013,7 @@
 				<m n=":impl"/>
 			</meta>
 		</THRUST>
-		<MISSLE public="1" get="inline" set="null" expr="cast &quot;missle&quot;" line="262" static="1">
+		<MISSLE public="1" get="inline" set="null" expr="cast &quot;missle&quot;" line="265" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "missle"</e></m>
@@ -80740,7 +81021,7 @@
 				<m n=":impl"/>
 			</meta>
 		</MISSLE>
-		<SKILL public="1" get="inline" set="null" expr="cast &quot;SKILL&quot;" line="263" static="1">
+		<SKILL public="1" get="inline" set="null" expr="cast &quot;SKILL&quot;" line="266" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "SKILL"</e></m>
@@ -80748,7 +81029,7 @@
 				<m n=":impl"/>
 			</meta>
 		</SKILL>
-		<SPELL public="1" get="inline" set="null" expr="cast &quot;spell&quot;" line="264" static="1">
+		<SPELL public="1" get="inline" set="null" expr="cast &quot;spell&quot;" line="267" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "spell"</e></m>
@@ -80756,7 +81037,7 @@
 				<m n=":impl"/>
 			</meta>
 		</SPELL>
-		<ITEM public="1" get="inline" set="null" expr="cast &quot;item&quot;" line="265" static="1">
+		<ITEM public="1" get="inline" set="null" expr="cast &quot;item&quot;" line="268" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "item"</e></m>
@@ -80764,7 +81045,7 @@
 				<m n=":impl"/>
 			</meta>
 		</ITEM>
-		<ESCAPE public="1" get="inline" set="null" expr="cast &quot;escape&quot;" line="266" static="1">
+		<ESCAPE public="1" get="inline" set="null" expr="cast &quot;escape&quot;" line="269" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "escape"</e></m>
@@ -80772,7 +81053,7 @@
 				<m n=":impl"/>
 			</meta>
 		</ESCAPE>
-		<VICTORY public="1" get="inline" set="null" expr="cast &quot;victory&quot;" line="267" static="1">
+		<VICTORY public="1" get="inline" set="null" expr="cast &quot;victory&quot;" line="270" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "victory"</e></m>
@@ -80780,7 +81061,7 @@
 				<m n=":impl"/>
 			</meta>
 		</VICTORY>
-		<DYING public="1" get="inline" set="null" expr="cast &quot;dying&quot;" line="268" static="1">
+		<DYING public="1" get="inline" set="null" expr="cast &quot;dying&quot;" line="271" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "dying"</e></m>
@@ -80788,7 +81069,7 @@
 				<m n=":impl"/>
 			</meta>
 		</DYING>
-		<ABNORMAL public="1" get="inline" set="null" expr="cast &quot;abnormal&quot;" line="269" static="1">
+		<ABNORMAL public="1" get="inline" set="null" expr="cast &quot;abnormal&quot;" line="272" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "abnormal"</e></m>
@@ -80796,7 +81077,7 @@
 				<m n=":impl"/>
 			</meta>
 		</ABNORMAL>
-		<SLEEP public="1" get="inline" set="null" expr="cast &quot;sleep&quot;" line="270" static="1">
+		<SLEEP public="1" get="inline" set="null" expr="cast &quot;sleep&quot;" line="273" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "sleep"</e></m>
@@ -80804,7 +81085,7 @@
 				<m n=":impl"/>
 			</meta>
 		</SLEEP>
-		<DEAD public="1" get="inline" set="null" expr="cast &quot;dead&quot;" line="271" static="1">
+		<DEAD public="1" get="inline" set="null" expr="cast &quot;dead&quot;" line="274" static="1">
 			<x path="rm.types.MotionType"/>
 			<meta>
 				<m n=":value"><e>cast "dead"</e></m>
@@ -80825,7 +81106,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.MoveType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-	<FIXED public="1" get="inline" set="null" expr="cast 0" line="280" static="1">
+	<FIXED public="1" get="inline" set="null" expr="cast 0" line="283" static="1">
 		<x path="rm.types.MoveType"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -80833,7 +81114,7 @@
 			<m n=":impl"/>
 		</meta>
 	</FIXED>
-	<RANDOM public="1" get="inline" set="null" expr="cast 1" line="281" static="1">
+	<RANDOM public="1" get="inline" set="null" expr="cast 1" line="284" static="1">
 		<x path="rm.types.MoveType"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -80841,7 +81122,7 @@
 			<m n=":impl"/>
 		</meta>
 	</RANDOM>
-	<APPROACH public="1" get="inline" set="null" expr="cast 2" line="282" static="1">
+	<APPROACH public="1" get="inline" set="null" expr="cast 2" line="285" static="1">
 		<x path="rm.types.MoveType"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -80849,7 +81130,7 @@
 			<m n=":impl"/>
 		</meta>
 	</APPROACH>
-	<CUSTOM public="1" get="inline" set="null" expr="cast 3" line="283" static="1">
+	<CUSTOM public="1" get="inline" set="null" expr="cast 3" line="286" static="1">
 		<x path="rm.types.MoveType"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -80857,7 +81138,7 @@
 			<m n=":impl"/>
 		</meta>
 	</CUSTOM>
-	<toString public="1" get="inline" set="null" line="286" static="1">
+	<toString public="1" get="inline" set="null" line="289" static="1">
 		<f a="value">
 			<x path="rm.types.MoveType"/>
 			<c path="String"/>
@@ -80868,7 +81149,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.MoveType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-		<FIXED public="1" get="inline" set="null" expr="cast 0" line="280" static="1">
+		<FIXED public="1" get="inline" set="null" expr="cast 0" line="283" static="1">
 			<x path="rm.types.MoveType"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -80876,7 +81157,7 @@
 				<m n=":impl"/>
 			</meta>
 		</FIXED>
-		<RANDOM public="1" get="inline" set="null" expr="cast 1" line="281" static="1">
+		<RANDOM public="1" get="inline" set="null" expr="cast 1" line="284" static="1">
 			<x path="rm.types.MoveType"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -80884,7 +81165,7 @@
 				<m n=":impl"/>
 			</meta>
 		</RANDOM>
-		<APPROACH public="1" get="inline" set="null" expr="cast 2" line="282" static="1">
+		<APPROACH public="1" get="inline" set="null" expr="cast 2" line="285" static="1">
 			<x path="rm.types.MoveType"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -80892,7 +81173,7 @@
 				<m n=":impl"/>
 			</meta>
 		</APPROACH>
-		<CUSTOM public="1" get="inline" set="null" expr="cast 3" line="283" static="1">
+		<CUSTOM public="1" get="inline" set="null" expr="cast 3" line="286" static="1">
 			<x path="rm.types.MoveType"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -80900,7 +81181,7 @@
 				<m n=":impl"/>
 			</meta>
 		</CUSTOM>
-		<toString public="1" get="inline" set="null" line="286" static="1">
+		<toString public="1" get="inline" set="null" line="289" static="1">
 			<f a="value">
 				<x path="rm.types.MoveType"/>
 				<c path="String"/>
@@ -80923,7 +81204,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.MoveSpeed_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-	<X8SLOWER public="1" get="inline" set="null" expr="cast 1" line="308" static="1">
+	<X8SLOWER public="1" get="inline" set="null" expr="cast 1" line="311" static="1">
 		<x path="rm.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -80931,7 +81212,7 @@
 			<m n=":impl"/>
 		</meta>
 	</X8SLOWER>
-	<X4SLOWER public="1" get="inline" set="null" expr="cast 2" line="309" static="1">
+	<X4SLOWER public="1" get="inline" set="null" expr="cast 2" line="312" static="1">
 		<x path="rm.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -80939,7 +81220,7 @@
 			<m n=":impl"/>
 		</meta>
 	</X4SLOWER>
-	<X2SLOWER public="1" get="inline" set="null" expr="cast 3" line="310" static="1">
+	<X2SLOWER public="1" get="inline" set="null" expr="cast 3" line="313" static="1">
 		<x path="rm.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -80947,7 +81228,7 @@
 			<m n=":impl"/>
 		</meta>
 	</X2SLOWER>
-	<NORMAL public="1" get="inline" set="null" expr="cast 4" line="311" static="1">
+	<NORMAL public="1" get="inline" set="null" expr="cast 4" line="314" static="1">
 		<x path="rm.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -80955,7 +81236,7 @@
 			<m n=":impl"/>
 		</meta>
 	</NORMAL>
-	<X2FASTER public="1" get="inline" set="null" expr="cast 5" line="312" static="1">
+	<X2FASTER public="1" get="inline" set="null" expr="cast 5" line="315" static="1">
 		<x path="rm.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 5</e></m>
@@ -80963,7 +81244,7 @@
 			<m n=":impl"/>
 		</meta>
 	</X2FASTER>
-	<X4FASTER public="1" get="inline" set="null" expr="cast 6" line="313" static="1">
+	<X4FASTER public="1" get="inline" set="null" expr="cast 6" line="316" static="1">
 		<x path="rm.types.MoveSpeed"/>
 		<meta>
 			<m n=":value"><e>cast 6</e></m>
@@ -80971,7 +81252,7 @@
 			<m n=":impl"/>
 		</meta>
 	</X4FASTER>
-	<toString public="1" get="inline" set="null" line="316" static="1">
+	<toString public="1" get="inline" set="null" line="319" static="1">
 		<f a="value">
 			<x path="rm.types.MoveSpeed"/>
 			<c path="String"/>
@@ -80985,7 +81266,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.MoveSpeed_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-		<X8SLOWER public="1" get="inline" set="null" expr="cast 1" line="308" static="1">
+		<X8SLOWER public="1" get="inline" set="null" expr="cast 1" line="311" static="1">
 			<x path="rm.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -80993,7 +81274,7 @@
 				<m n=":impl"/>
 			</meta>
 		</X8SLOWER>
-		<X4SLOWER public="1" get="inline" set="null" expr="cast 2" line="309" static="1">
+		<X4SLOWER public="1" get="inline" set="null" expr="cast 2" line="312" static="1">
 			<x path="rm.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -81001,7 +81282,7 @@
 				<m n=":impl"/>
 			</meta>
 		</X4SLOWER>
-		<X2SLOWER public="1" get="inline" set="null" expr="cast 3" line="310" static="1">
+		<X2SLOWER public="1" get="inline" set="null" expr="cast 3" line="313" static="1">
 			<x path="rm.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -81009,7 +81290,7 @@
 				<m n=":impl"/>
 			</meta>
 		</X2SLOWER>
-		<NORMAL public="1" get="inline" set="null" expr="cast 4" line="311" static="1">
+		<NORMAL public="1" get="inline" set="null" expr="cast 4" line="314" static="1">
 			<x path="rm.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -81017,7 +81298,7 @@
 				<m n=":impl"/>
 			</meta>
 		</NORMAL>
-		<X2FASTER public="1" get="inline" set="null" expr="cast 5" line="312" static="1">
+		<X2FASTER public="1" get="inline" set="null" expr="cast 5" line="315" static="1">
 			<x path="rm.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 5</e></m>
@@ -81025,7 +81306,7 @@
 				<m n=":impl"/>
 			</meta>
 		</X2FASTER>
-		<X4FASTER public="1" get="inline" set="null" expr="cast 6" line="313" static="1">
+		<X4FASTER public="1" get="inline" set="null" expr="cast 6" line="316" static="1">
 			<x path="rm.types.MoveSpeed"/>
 			<meta>
 				<m n=":value"><e>cast 6</e></m>
@@ -81033,7 +81314,7 @@
 				<m n=":impl"/>
 			</meta>
 		</X4FASTER>
-		<toString public="1" get="inline" set="null" line="316" static="1">
+		<toString public="1" get="inline" set="null" line="319" static="1">
 			<f a="value">
 				<x path="rm.types.MoveSpeed"/>
 				<c path="String"/>
@@ -81060,7 +81341,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.MoveFrequency_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-	<LOWEST public="1" get="inline" set="null" expr="cast 1" line="343" static="1">
+	<LOWEST public="1" get="inline" set="null" expr="cast 1" line="346" static="1">
 		<x path="rm.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -81068,7 +81349,7 @@
 			<m n=":impl"/>
 		</meta>
 	</LOWEST>
-	<LOWER public="1" get="inline" set="null" expr="cast 2" line="344" static="1">
+	<LOWER public="1" get="inline" set="null" expr="cast 2" line="347" static="1">
 		<x path="rm.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -81076,7 +81357,7 @@
 			<m n=":impl"/>
 		</meta>
 	</LOWER>
-	<NORMAL public="1" get="inline" set="null" expr="cast 3" line="345" static="1">
+	<NORMAL public="1" get="inline" set="null" expr="cast 3" line="348" static="1">
 		<x path="rm.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -81084,7 +81365,7 @@
 			<m n=":impl"/>
 		</meta>
 	</NORMAL>
-	<HIGHER public="1" get="inline" set="null" expr="cast 4" line="346" static="1">
+	<HIGHER public="1" get="inline" set="null" expr="cast 4" line="349" static="1">
 		<x path="rm.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -81092,7 +81373,7 @@
 			<m n=":impl"/>
 		</meta>
 	</HIGHER>
-	<HIGHEST public="1" get="inline" set="null" expr="cast 5" line="347" static="1">
+	<HIGHEST public="1" get="inline" set="null" expr="cast 5" line="350" static="1">
 		<x path="rm.types.MoveFrequency"/>
 		<meta>
 			<m n=":value"><e>cast 5</e></m>
@@ -81100,7 +81381,7 @@
 			<m n=":impl"/>
 		</meta>
 	</HIGHEST>
-	<toString public="1" get="inline" set="null" line="350" static="1">
+	<toString public="1" get="inline" set="null" line="353" static="1">
 		<f a="value">
 			<x path="rm.types.MoveFrequency"/>
 			<c path="String"/>
@@ -81114,7 +81395,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.MoveFrequency_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-		<LOWEST public="1" get="inline" set="null" expr="cast 1" line="343" static="1">
+		<LOWEST public="1" get="inline" set="null" expr="cast 1" line="346" static="1">
 			<x path="rm.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -81122,7 +81403,7 @@
 				<m n=":impl"/>
 			</meta>
 		</LOWEST>
-		<LOWER public="1" get="inline" set="null" expr="cast 2" line="344" static="1">
+		<LOWER public="1" get="inline" set="null" expr="cast 2" line="347" static="1">
 			<x path="rm.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -81130,7 +81411,7 @@
 				<m n=":impl"/>
 			</meta>
 		</LOWER>
-		<NORMAL public="1" get="inline" set="null" expr="cast 3" line="345" static="1">
+		<NORMAL public="1" get="inline" set="null" expr="cast 3" line="348" static="1">
 			<x path="rm.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -81138,7 +81419,7 @@
 				<m n=":impl"/>
 			</meta>
 		</NORMAL>
-		<HIGHER public="1" get="inline" set="null" expr="cast 4" line="346" static="1">
+		<HIGHER public="1" get="inline" set="null" expr="cast 4" line="349" static="1">
 			<x path="rm.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -81146,7 +81427,7 @@
 				<m n=":impl"/>
 			</meta>
 		</HIGHER>
-		<HIGHEST public="1" get="inline" set="null" expr="cast 5" line="347" static="1">
+		<HIGHEST public="1" get="inline" set="null" expr="cast 5" line="350" static="1">
 			<x path="rm.types.MoveFrequency"/>
 			<meta>
 				<m n=":value"><e>cast 5</e></m>
@@ -81154,7 +81435,7 @@
 				<m n=":impl"/>
 			</meta>
 		</HIGHEST>
-		<toString public="1" get="inline" set="null" line="350" static="1">
+		<toString public="1" get="inline" set="null" line="353" static="1">
 			<f a="value">
 				<x path="rm.types.MoveFrequency"/>
 				<c path="String"/>
@@ -81182,7 +81463,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.CharacterPriority_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-	<BELOW_CHARACTERS public="1" get="inline" set="null" expr="cast 0" line="376" static="1">
+	<BELOW_CHARACTERS public="1" get="inline" set="null" expr="cast 0" line="379" static="1">
 		<x path="rm.types.CharacterPriority"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -81190,7 +81471,7 @@
 			<m n=":impl"/>
 		</meta>
 	</BELOW_CHARACTERS>
-	<SAME_AS_CHARACTERS public="1" get="inline" set="null" expr="cast 1" line="377" static="1">
+	<SAME_AS_CHARACTERS public="1" get="inline" set="null" expr="cast 1" line="380" static="1">
 		<x path="rm.types.CharacterPriority"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -81198,7 +81479,7 @@
 			<m n=":impl"/>
 		</meta>
 	</SAME_AS_CHARACTERS>
-	<ABOVE_CHARACTERS public="1" get="inline" set="null" expr="cast 2" line="378" static="1">
+	<ABOVE_CHARACTERS public="1" get="inline" set="null" expr="cast 2" line="381" static="1">
 		<x path="rm.types.CharacterPriority"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -81206,7 +81487,7 @@
 			<m n=":impl"/>
 		</meta>
 	</ABOVE_CHARACTERS>
-	<toString public="1" get="inline" set="null" line="381" static="1">
+	<toString public="1" get="inline" set="null" line="384" static="1">
 		<f a="value">
 			<x path="rm.types.CharacterPriority"/>
 			<c path="String"/>
@@ -81220,7 +81501,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.CharacterPriority_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" final="1">
-		<BELOW_CHARACTERS public="1" get="inline" set="null" expr="cast 0" line="376" static="1">
+		<BELOW_CHARACTERS public="1" get="inline" set="null" expr="cast 0" line="379" static="1">
 			<x path="rm.types.CharacterPriority"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -81228,7 +81509,7 @@
 				<m n=":impl"/>
 			</meta>
 		</BELOW_CHARACTERS>
-		<SAME_AS_CHARACTERS public="1" get="inline" set="null" expr="cast 1" line="377" static="1">
+		<SAME_AS_CHARACTERS public="1" get="inline" set="null" expr="cast 1" line="380" static="1">
 			<x path="rm.types.CharacterPriority"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -81236,7 +81517,7 @@
 				<m n=":impl"/>
 			</meta>
 		</SAME_AS_CHARACTERS>
-		<ABOVE_CHARACTERS public="1" get="inline" set="null" expr="cast 2" line="378" static="1">
+		<ABOVE_CHARACTERS public="1" get="inline" set="null" expr="cast 2" line="381" static="1">
 			<x path="rm.types.CharacterPriority"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -81244,7 +81525,7 @@
 				<m n=":impl"/>
 			</meta>
 		</ABOVE_CHARACTERS>
-		<toString public="1" get="inline" set="null" line="381" static="1">
+		<toString public="1" get="inline" set="null" line="384" static="1">
 			<f a="value">
 				<x path="rm.types.CharacterPriority"/>
 				<c path="String"/>
@@ -81278,7 +81559,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.DamageColorType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<HP_DAMAGE public="1" get="inline" set="null" expr="cast 0" line="403" static="1">
+	<HP_DAMAGE public="1" get="inline" set="null" expr="cast 0" line="406" static="1">
 		<x path="rm.types.DamageColorType"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -81286,7 +81567,7 @@
 			<m n=":impl"/>
 		</meta>
 	</HP_DAMAGE>
-	<HP_RECOVER public="1" get="inline" set="null" expr="cast 1" line="404" static="1">
+	<HP_RECOVER public="1" get="inline" set="null" expr="cast 1" line="407" static="1">
 		<x path="rm.types.DamageColorType"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -81294,7 +81575,7 @@
 			<m n=":impl"/>
 		</meta>
 	</HP_RECOVER>
-	<MP_DAMAGE public="1" get="inline" set="null" expr="cast 2" line="405" static="1">
+	<MP_DAMAGE public="1" get="inline" set="null" expr="cast 2" line="408" static="1">
 		<x path="rm.types.DamageColorType"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -81302,7 +81583,7 @@
 			<m n=":impl"/>
 		</meta>
 	</MP_DAMAGE>
-	<MP_RECOVER public="1" get="inline" set="null" expr="cast 3" line="406" static="1">
+	<MP_RECOVER public="1" get="inline" set="null" expr="cast 3" line="409" static="1">
 		<x path="rm.types.DamageColorType"/>
 		<meta>
 			<m n=":value"><e>cast 3</e></m>
@@ -81310,7 +81591,7 @@
 			<m n=":impl"/>
 		</meta>
 	</MP_RECOVER>
-	<DEFAULT public="1" get="inline" set="null" expr="cast 4" line="411" static="1">
+	<DEFAULT public="1" get="inline" set="null" expr="cast 4" line="414" static="1">
 		<x path="rm.types.DamageColorType"/>
 		<meta>
 			<m n=":value"><e>cast 4</e></m>
@@ -81323,7 +81604,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.DamageColorType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<HP_DAMAGE public="1" get="inline" set="null" expr="cast 0" line="403" static="1">
+		<HP_DAMAGE public="1" get="inline" set="null" expr="cast 0" line="406" static="1">
 			<x path="rm.types.DamageColorType"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -81331,7 +81612,7 @@
 				<m n=":impl"/>
 			</meta>
 		</HP_DAMAGE>
-		<HP_RECOVER public="1" get="inline" set="null" expr="cast 1" line="404" static="1">
+		<HP_RECOVER public="1" get="inline" set="null" expr="cast 1" line="407" static="1">
 			<x path="rm.types.DamageColorType"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -81339,7 +81620,7 @@
 				<m n=":impl"/>
 			</meta>
 		</HP_RECOVER>
-		<MP_DAMAGE public="1" get="inline" set="null" expr="cast 2" line="405" static="1">
+		<MP_DAMAGE public="1" get="inline" set="null" expr="cast 2" line="408" static="1">
 			<x path="rm.types.DamageColorType"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -81347,7 +81628,7 @@
 				<m n=":impl"/>
 			</meta>
 		</MP_DAMAGE>
-		<MP_RECOVER public="1" get="inline" set="null" expr="cast 3" line="406" static="1">
+		<MP_RECOVER public="1" get="inline" set="null" expr="cast 3" line="409" static="1">
 			<x path="rm.types.DamageColorType"/>
 			<meta>
 				<m n=":value"><e>cast 3</e></m>
@@ -81355,7 +81636,7 @@
 				<m n=":impl"/>
 			</meta>
 		</MP_RECOVER>
-		<DEFAULT public="1" get="inline" set="null" expr="cast 4" line="411" static="1">
+		<DEFAULT public="1" get="inline" set="null" expr="cast 4" line="414" static="1">
 			<x path="rm.types.DamageColorType"/>
 			<meta>
 				<m n=":value"><e>cast 4</e></m>
@@ -81376,7 +81657,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.WaitModeA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="417" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="420" static="1">
 		<x path="rm.types.WaitModeA"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81388,7 +81669,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.WaitModeA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="417" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="420" static="1">
 			<x path="rm.types.WaitModeA"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81408,7 +81689,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.Frames_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="423" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="426" static="1">
 		<x path="rm.types.Frames"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81420,7 +81701,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.Frames_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="423" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="426" static="1">
 			<x path="rm.types.Frames"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81440,7 +81721,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.Money_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="429" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="432" static="1">
 		<x path="rm.types.Money"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81452,7 +81733,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.Money_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="429" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="432" static="1">
 			<x path="rm.types.Money"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81472,7 +81753,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.GaugeType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<HP public="1" get="inline" set="null" expr="cast &quot;hp&quot;" line="435" static="1">
+	<HP public="1" get="inline" set="null" expr="cast &quot;hp&quot;" line="438" static="1">
 		<x path="rm.types.GaugeType"/>
 		<meta>
 			<m n=":value"><e>cast "hp"</e></m>
@@ -81480,7 +81761,7 @@
 			<m n=":impl"/>
 		</meta>
 	</HP>
-	<MP public="1" get="inline" set="null" expr="cast &quot;mp&quot;" line="436" static="1">
+	<MP public="1" get="inline" set="null" expr="cast &quot;mp&quot;" line="439" static="1">
 		<x path="rm.types.GaugeType"/>
 		<meta>
 			<m n=":value"><e>cast "mp"</e></m>
@@ -81488,7 +81769,7 @@
 			<m n=":impl"/>
 		</meta>
 	</MP>
-	<TP public="1" get="inline" set="null" expr="cast &quot;tp&quot;" line="437" static="1">
+	<TP public="1" get="inline" set="null" expr="cast &quot;tp&quot;" line="440" static="1">
 		<x path="rm.types.GaugeType"/>
 		<meta>
 			<m n=":value"><e>cast "tp"</e></m>
@@ -81496,7 +81777,7 @@
 			<m n=":impl"/>
 		</meta>
 	</TP>
-	<TIME public="1" get="inline" set="null" expr="cast &quot;time&quot;" line="438" static="1">
+	<TIME public="1" get="inline" set="null" expr="cast &quot;time&quot;" line="441" static="1">
 		<x path="rm.types.GaugeType"/>
 		<meta>
 			<m n=":value"><e>cast "time"</e></m>
@@ -81508,7 +81789,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.GaugeType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<HP public="1" get="inline" set="null" expr="cast &quot;hp&quot;" line="435" static="1">
+		<HP public="1" get="inline" set="null" expr="cast &quot;hp&quot;" line="438" static="1">
 			<x path="rm.types.GaugeType"/>
 			<meta>
 				<m n=":value"><e>cast "hp"</e></m>
@@ -81516,7 +81797,7 @@
 				<m n=":impl"/>
 			</meta>
 		</HP>
-		<MP public="1" get="inline" set="null" expr="cast &quot;mp&quot;" line="436" static="1">
+		<MP public="1" get="inline" set="null" expr="cast &quot;mp&quot;" line="439" static="1">
 			<x path="rm.types.GaugeType"/>
 			<meta>
 				<m n=":value"><e>cast "mp"</e></m>
@@ -81524,7 +81805,7 @@
 				<m n=":impl"/>
 			</meta>
 		</MP>
-		<TP public="1" get="inline" set="null" expr="cast &quot;tp&quot;" line="437" static="1">
+		<TP public="1" get="inline" set="null" expr="cast &quot;tp&quot;" line="440" static="1">
 			<x path="rm.types.GaugeType"/>
 			<meta>
 				<m n=":value"><e>cast "tp"</e></m>
@@ -81532,7 +81813,7 @@
 				<m n=":impl"/>
 			</meta>
 		</TP>
-		<TIME public="1" get="inline" set="null" expr="cast &quot;time&quot;" line="438" static="1">
+		<TIME public="1" get="inline" set="null" expr="cast &quot;time&quot;" line="441" static="1">
 			<x path="rm.types.GaugeType"/>
 			<meta>
 				<m n=":value"><e>cast "time"</e></m>
@@ -81552,7 +81833,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.SkillTypeIdA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="444" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="447" static="1">
 		<x path="rm.types.SkillTypeIdA"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81564,7 +81845,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.SkillTypeIdA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="444" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="447" static="1">
 			<x path="rm.types.SkillTypeIdA"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81584,7 +81865,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.BattleResult_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="450" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="453" static="1">
 		<x path="rm.types.BattleResult"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81596,7 +81877,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.BattleResult_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="450" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="453" static="1">
 			<x path="rm.types.BattleResult"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81616,7 +81897,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.Direction_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="456" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="459" static="1">
 		<x path="rm.types.Direction"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81628,7 +81909,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.Direction_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="456" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="459" static="1">
 			<x path="rm.types.Direction"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81648,7 +81929,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.EventTrigger_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="462" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="465" static="1">
 		<x path="rm.types.EventTrigger"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81660,7 +81941,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.EventTrigger_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="462" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="465" static="1">
 			<x path="rm.types.EventTrigger"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81680,7 +81961,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.MessageBackgroundType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="468" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="471" static="1">
 		<x path="rm.types.MessageBackgroundType"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81692,7 +81973,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.MessageBackgroundType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="468" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="471" static="1">
 			<x path="rm.types.MessageBackgroundType"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81712,7 +81993,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.MessagePositionType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="474" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="477" static="1">
 		<x path="rm.types.MessagePositionType"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81724,7 +82005,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.MessagePositionType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="474" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="477" static="1">
 			<x path="rm.types.MessagePositionType"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81744,7 +82025,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.ChoiceDefaultType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="480" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="483" static="1">
 		<x path="rm.types.ChoiceDefaultType"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81756,7 +82037,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.ChoiceDefaultType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="480" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="483" static="1">
 			<x path="rm.types.ChoiceDefaultType"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81776,7 +82057,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.ChoiceCancelType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="486" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="489" static="1">
 		<x path="rm.types.ChoiceCancelType"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81788,7 +82069,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.ChoiceCancelType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="486" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="489" static="1">
 			<x path="rm.types.ChoiceCancelType"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81808,7 +82089,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.ChocieBackgroundType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="492" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="495" static="1">
 		<x path="rm.types.ChocieBackgroundType"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81820,7 +82101,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.ChocieBackgroundType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="492" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="495" static="1">
 			<x path="rm.types.ChocieBackgroundType"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81840,7 +82121,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.ChoicePositionType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="498" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="501" static="1">
 		<x path="rm.types.ChoicePositionType"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81852,7 +82133,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.ChoicePositionType_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="498" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="501" static="1">
 			<x path="rm.types.ChoicePositionType"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81872,7 +82153,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.VehicleTypeA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="504" static="1">
+	<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="507" static="1">
 		<x path="rm.types.VehicleTypeA"/>
 		<meta>
 			<m n=":value"><e>cast ""</e></m>
@@ -81884,7 +82165,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.VehicleTypeA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="504" static="1">
+		<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="507" static="1">
 			<x path="rm.types.VehicleTypeA"/>
 			<meta>
 				<m n=":value"><e>cast ""</e></m>
@@ -81904,7 +82185,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.InterpreterWaitModeA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="511" static="1">
+	<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="514" static="1">
 		<x path="rm.types.InterpreterWaitModeA"/>
 		<meta>
 			<m n=":value"><e>cast ""</e></m>
@@ -81916,7 +82197,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.InterpreterWaitModeA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="511" static="1">
+		<base public="1" get="inline" set="null" expr="cast &quot;&quot;" line="514" static="1">
 			<x path="rm.types.InterpreterWaitModeA"/>
 			<meta>
 				<m n=":value"><e>cast ""</e></m>
@@ -81936,7 +82217,7 @@
 			<m n=":forwardStatics"/>
 		</meta>
 		<impl><class path="rm.types._LunaTea.BlendModeA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-	<base public="1" get="inline" set="null" expr="cast -1" line="517" static="1">
+	<base public="1" get="inline" set="null" expr="cast -1" line="520" static="1">
 		<x path="rm.types.BlendModeA"/>
 		<meta>
 			<m n=":value"><e>cast -1</e></m>
@@ -81948,7 +82229,7 @@
 </class></impl>
 	</abstract>
 	<class path="rm.types._LunaTea.BlendModeA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
-		<base public="1" get="inline" set="null" expr="cast -1" line="517" static="1">
+		<base public="1" get="inline" set="null" expr="cast -1" line="520" static="1">
 			<x path="rm.types.BlendModeA"/>
 			<meta>
 				<m n=":value"><e>cast -1</e></m>
@@ -81966,6 +82247,130 @@
 	<typedef path="rm.types.ParameterId" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea"><x path="Int"/></typedef>
 	<typedef path="rm.types.FadeType" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea"><x path="Int"/></typedef>
 	<typedef path="rm.types.InterpreterWaitMode" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea"><c path="String"/></typedef>
+	<abstract path="rm.types.MimeTypeA" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><x path="haxe.io.Mime"/></icast></from>
+		<this><x path="haxe.io.Mime"/></this>
+		<to><icast><x path="haxe.io.Mime"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.MimeTypeA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.MimeTypeA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1"><meta><m n=":enum"/></meta></class>
+	<abstract path="rm.types.XMLResponseTypeA" params="" file="src/rm/types/LunaTea.hx" module="rm.types.LunaTea">
+		<from><icast><c path="String"/></icast></from>
+		<this><c path="String"/></this>
+		<to><icast><c path="String"/></icast></to>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+			<m n=":forwardStatics"/>
+		</meta>
+		<impl><class path="rm.types._LunaTea.XMLResponseTypeA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+	<NONE public="1" get="inline" set="null" expr="cast &quot;&quot;" line="540" static="1">
+		<x path="rm.types.XMLResponseTypeA"/>
+		<meta>
+			<m n=":value"><e>cast ""</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</NONE>
+	<ARRAYBUFFER public="1" get="inline" set="null" expr="cast &quot;arraybuffer&quot;" line="541" static="1">
+		<x path="rm.types.XMLResponseTypeA"/>
+		<meta>
+			<m n=":value"><e>cast "arraybuffer"</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</ARRAYBUFFER>
+	<BLOB public="1" get="inline" set="null" expr="cast &quot;blob&quot;" line="542" static="1">
+		<x path="rm.types.XMLResponseTypeA"/>
+		<meta>
+			<m n=":value"><e>cast "blob"</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</BLOB>
+	<DOCUMENT public="1" get="inline" set="null" expr="cast &quot;document&quot;" line="543" static="1">
+		<x path="rm.types.XMLResponseTypeA"/>
+		<meta>
+			<m n=":value"><e>cast "document"</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</DOCUMENT>
+	<JSON public="1" get="inline" set="null" expr="cast &quot;json&quot;" line="544" static="1">
+		<x path="rm.types.XMLResponseTypeA"/>
+		<meta>
+			<m n=":value"><e>cast "json"</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</JSON>
+	<TEXT public="1" get="inline" set="null" expr="cast &quot;text&quot;" line="545" static="1">
+		<x path="rm.types.XMLResponseTypeA"/>
+		<meta>
+			<m n=":value"><e>cast "text"</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</TEXT>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="rm.types._LunaTea.XMLResponseTypeA_Impl_" params="" file="src/rm/types/LunaTea.hx" private="1" module="rm.types.LunaTea" extern="1" final="1">
+		<NONE public="1" get="inline" set="null" expr="cast &quot;&quot;" line="540" static="1">
+			<x path="rm.types.XMLResponseTypeA"/>
+			<meta>
+				<m n=":value"><e>cast ""</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</NONE>
+		<ARRAYBUFFER public="1" get="inline" set="null" expr="cast &quot;arraybuffer&quot;" line="541" static="1">
+			<x path="rm.types.XMLResponseTypeA"/>
+			<meta>
+				<m n=":value"><e>cast "arraybuffer"</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</ARRAYBUFFER>
+		<BLOB public="1" get="inline" set="null" expr="cast &quot;blob&quot;" line="542" static="1">
+			<x path="rm.types.XMLResponseTypeA"/>
+			<meta>
+				<m n=":value"><e>cast "blob"</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</BLOB>
+		<DOCUMENT public="1" get="inline" set="null" expr="cast &quot;document&quot;" line="543" static="1">
+			<x path="rm.types.XMLResponseTypeA"/>
+			<meta>
+				<m n=":value"><e>cast "document"</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</DOCUMENT>
+		<JSON public="1" get="inline" set="null" expr="cast &quot;json&quot;" line="544" static="1">
+			<x path="rm.types.XMLResponseTypeA"/>
+			<meta>
+				<m n=":value"><e>cast "json"</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</JSON>
+		<TEXT public="1" get="inline" set="null" expr="cast &quot;text&quot;" line="545" static="1">
+			<x path="rm.types.XMLResponseTypeA"/>
+			<meta>
+				<m n=":value"><e>cast "text"</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</TEXT>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<typedef path="rm.types.Matrix" params="" file="src/rm/types/RM.hx" module="rm.types.RM"><a>
 	<value><c path="Array"><x path="Int"/></c></value>
 	<type><c path="String"/></type>
