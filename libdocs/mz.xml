@@ -61498,21 +61498,51 @@
 			<m n=":forward"/>
 			<m n=":forwardStatics"/>
 		</meta>
-		<impl><class path="rm.abstracts.windows._WindowTitleCommand.WindowTitleCommand_Impl_" params="" file="src/rm/abstracts/windows/WindowTitleCommand.hx" private="1" module="rm.abstracts.windows.WindowTitleCommand" final="1"><raw public="1" get="inline" set="null" line="9" static="1">
-	<f a="this">
-		<c path="rm.windows.Window_TitleCommand"/>
-		<c path="rm.windows.Window_TitleCommand"/>
-	</f>
-	<meta><m n=":impl"/></meta>
-</raw></class></impl>
+		<impl><class path="rm.abstracts.windows._WindowTitleCommand.WindowTitleCommand_Impl_" params="" file="src/rm/abstracts/windows/WindowTitleCommand.hx" private="1" module="rm.abstracts.windows.WindowTitleCommand" final="1">
+	<_new public="1" get="inline" set="null" line="10" static="1">
+		<f a="x:y:?width:?height">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="rm.abstracts.windows.WindowTitleCommand"/>
+		</f>
+		<meta>
+			<m n=":impl"/>
+			<m n=":noCompletion"/>
+		</meta>
+	</_new>
+	<raw public="1" get="inline" set="null" line="20" static="1">
+		<f a="this">
+			<c path="rm.windows.Window_TitleCommand"/>
+			<c path="rm.windows.Window_TitleCommand"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</raw>
+</class></impl>
 	</abstract>
-	<class path="rm.abstracts.windows._WindowTitleCommand.WindowTitleCommand_Impl_" params="" file="src/rm/abstracts/windows/WindowTitleCommand.hx" private="1" module="rm.abstracts.windows.WindowTitleCommand" final="1"><raw public="1" get="inline" set="null" line="9" static="1">
-	<f a="this">
-		<c path="rm.windows.Window_TitleCommand"/>
-		<c path="rm.windows.Window_TitleCommand"/>
-	</f>
-	<meta><m n=":impl"/></meta>
-</raw></class>
+	<class path="rm.abstracts.windows._WindowTitleCommand.WindowTitleCommand_Impl_" params="" file="src/rm/abstracts/windows/WindowTitleCommand.hx" private="1" module="rm.abstracts.windows.WindowTitleCommand" final="1">
+		<_new public="1" get="inline" set="null" line="10" static="1">
+			<f a="x:y:?width:?height">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="rm.abstracts.windows.WindowTitleCommand"/>
+			</f>
+			<meta>
+				<m n=":impl"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</_new>
+		<raw public="1" get="inline" set="null" line="20" static="1">
+			<f a="this">
+				<c path="rm.windows.Window_TitleCommand"/>
+				<c path="rm.windows.Window_TitleCommand"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</raw>
+	</class>
 	<class path="rm.core.Bitmap" params="" file="src/rm/core/Bitmap.hx" extern="1">
 		<load public="1" set="method" static="1">
 			<f a="url">
@@ -87301,13 +87331,13 @@
 		<isContinueEnabled public="1" set="method"><f a=""><x path="Bool"/></f></isContinueEnabled>
 		<initCommandPosition public="1" set="method"><f a=""><x path="Void"/></f></initCommandPosition>
 		<selectLast public="1" set="method"><f a=""><x path="Void"/></f></selectLast>
-		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
 		<haxe_doc>* -----------------------------------------------------------------------------
  * Window_TitleCommand
  *
  * The window for selecting New Game/Continue on the title screen.
  * @class Window_TitleCommand</haxe_doc>
 		<meta>
+			<m n=":directlyUsed"/>
 			<m n=":expose"><e>"Window_TitleCommand"</e></m>
 			<m n=":native"><e>"Window_TitleCommand"</e></m>
 		</meta>
