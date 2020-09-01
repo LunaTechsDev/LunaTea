@@ -1,5 +1,6 @@
 package rm.windows;
 
+import rm.core.Rectangle;
 import rm.types.RPG.BaseItem;
 
 @:expose("Window_Help")
@@ -14,12 +15,17 @@ extern class Window_Help extends Window_Base {
   */
  private var _text: String;
 
+ #if compileMV
  /**
   * Creates an instance of Window_Help.
   * @param {number} numLines
   * @memberof Window_Help
   */
- public function new(numLines: Int);
+ public function new(numLines: Int): Void;
+ #else
+ public function new(rect: Rectangle): Void;
+ public function setItem(item: BaseItem): Void;
+ #end
 
  /**
   * Sets the _text property of the window;
