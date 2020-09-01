@@ -87,9 +87,11 @@ class Amaryllis {
  }
 
  /**
-  * Handles loading files of different types.
-  * @param path  - should end with /
-  * @returns
+  * Returns text content within a promise
+  * in RPGMakerMV/MZ.
+  * @param path
+  * @param fileName
+  * @return Promise<String>
   */
  public static inline function loadText(path: String,
    ?fileName: String): Promise<String> {
@@ -97,24 +99,52 @@ class Amaryllis {
   return loadData(path, XMLResponseTypeA.TEXT);
  }
 
+ /**
+  * Returns blob content within a promise
+  * in RPGMakerMV/MZ.
+  * @param path
+  * @param fileName
+  * @return Promise<Blob>
+  */
  public static inline function loadBlob(path: String,
    ?fileName: String): Promise<Blob> {
   var path = fileName != null ? encodeURI(path + fileName) : encodeURI(path);
   return loadData(path, XMLResponseTypeA.BLOB);
  }
 
+ /**
+  * Returns JSON content within a promise
+  * in RPGMakerMV/MZ.
+  * @param path
+  * @param fileName
+  * @return Promise<Json>
+  */
  public static inline function loadJSON(path: String,
    ?fileName: String): Promise<Json> {
   var path = fileName != null ? encodeURI(path + fileName) : encodeURI(path);
   return loadData(path, XMLResponseTypeA.JSON);
  }
 
+ /**
+  * Returns Document object content within a promise
+  * in RPGMakerMV/MZ.
+  * @param path
+  * @param fileName
+  * @return Promise<Document>
+  */
  public static inline function loadDocument(path: String,
    ?fileName: String): Promise<Document> {
   var path = fileName != null ? encodeURI(path + fileName) : encodeURI(path);
   return loadData(path, XMLResponseTypeA.DOCUMENT);
  }
 
+ /**
+  * Returns array buffer content within a promise
+  * in RPGMakerMV/MZ.
+  * @param path
+  * @param fileName
+  * @return Promise<ArrayBuffer>
+  */
  public static inline function loadArrayBuff(path: String,
    ?fileName: String): Promise<ArrayBuffer> {
   var path = fileName != null ? encodeURI(path + fileName) : encodeURI(path);
