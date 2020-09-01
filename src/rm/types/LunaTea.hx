@@ -537,10 +537,10 @@ enum abstract MimeTypeA(Mime) from Mime to Mime {
 @:forward
 @:forwardStatics
 enum abstract XMLResponseTypeA(String) from String to String {
- public static inline var NONE = "";
- public static inline var ARRAYBUFFER = "arraybuffer";
- public static inline var BLOB = "blob";
- public static inline var DOCUMENT = "document";
- public static inline var JSON = "json";
- public static inline var TEXT = "text";
+ public inline var NONE = "";
+ public inline var ARRAYBUFFER = "arraybuffer";
+ public inline var BLOB = "blob";
+ public inline var DOCUMENT = "document";
+ public inline var JSON = "json";
+ public inline var TEXT = "text";
 }

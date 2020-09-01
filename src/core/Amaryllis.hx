@@ -1,5 +1,6 @@
 package core;
 
+import js.lib.Promise;
 import js.html.XMLHttpRequestResponseType;
 import rm.types.LunaTea.XMLResponseTypeA;
 import js.html.XMLHttpRequest;
@@ -221,15 +222,20 @@ class Amaryllis {
   scene.windowLayer.addChild(window);
  }
 
- public static function loadData(url: String, responseType: XMLResponseTypeA) {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", url);
-  xhr.responseType = cast responseType;
-  xhr.onload = () -> {
-   if (xhr.status < 400) {
-   } else {
+ public static function loadData<T>(url: String,
+   responseType: XMLResponseTypeA): Promise<T> {
+  return new Promise((resolve, reject) -> {
+   var xhr = new XMLHttpRequest();
+   xhr.open("GET", url);
+   xhr.responseType = cast responseType;
+   xhr.onload = () -> {
+    if (xhr.status < 400) {
+     resolve(xhr.response);
+    } else {
+     reject("Failed to load" + url);
+    }
    }
-  }
-  xhr.send(null);
+   xhr.send(null);
+  });
  }
 }
