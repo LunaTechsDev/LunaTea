@@ -1552,52 +1552,82 @@
   * @param String
   * @returns String</haxe_doc>
 		</encodeURI>
-		<loadText public="1" get="inline" set="null" line="94" static="1">
+		<loadText public="1" get="inline" set="null" line="96" static="1">
 			<f a="path:?fileName">
 				<c path="String"/>
 				<c path="String"/>
 				<c path="js.lib.Promise"><c path="String"/></c>
 			</f>
-			<haxe_doc>* Handles loading files of different types.
-  * @param path  - should end with /
-  * @returns</haxe_doc>
+			<haxe_doc><![CDATA[* Returns text content within a promise
+  * in RPGMakerMV/MZ.
+  * @param path
+  * @param fileName
+  * @return Promise<String>]]></haxe_doc>
 		</loadText>
-		<loadBlob public="1" get="inline" set="null" line="100" static="1"><f a="path:?fileName">
-	<c path="String"/>
-	<c path="String"/>
-	<c path="js.lib.Promise"><c path="js.html.Blob"/></c>
-</f></loadBlob>
-		<loadJSON public="1" get="inline" set="null" line="106" static="1"><f a="path:?fileName">
-	<c path="String"/>
-	<c path="String"/>
-	<c path="js.lib.Promise"><c path="haxe.Json"/></c>
-</f></loadJSON>
-		<loadDocument public="1" get="inline" set="null" line="112" static="1"><f a="path:?fileName">
-	<c path="String"/>
-	<c path="String"/>
-	<c path="js.lib.Promise"><c path="js.html.Document"/></c>
-</f></loadDocument>
-		<loadArrayBuff public="1" get="inline" set="null" line="118" static="1"><f a="path:?fileName">
-	<c path="String"/>
-	<c path="String"/>
-	<c path="js.lib.Promise"><c path="js.lib.ArrayBuffer"/></c>
-</f></loadArrayBuff>
-		<isNwjs public="1" get="inline" set="null" line="128" static="1">
+		<loadBlob public="1" get="inline" set="null" line="109" static="1">
+			<f a="path:?fileName">
+				<c path="String"/>
+				<c path="String"/>
+				<c path="js.lib.Promise"><c path="js.html.Blob"/></c>
+			</f>
+			<haxe_doc><![CDATA[* Returns blob content within a promise
+  * in RPGMakerMV/MZ.
+  * @param path
+  * @param fileName
+  * @return Promise<Blob>]]></haxe_doc>
+		</loadBlob>
+		<loadJSON public="1" get="inline" set="null" line="122" static="1">
+			<f a="path:?fileName">
+				<c path="String"/>
+				<c path="String"/>
+				<c path="js.lib.Promise"><c path="haxe.Json"/></c>
+			</f>
+			<haxe_doc><![CDATA[* Returns JSON content within a promise
+  * in RPGMakerMV/MZ.
+  * @param path
+  * @param fileName
+  * @return Promise<Json>]]></haxe_doc>
+		</loadJSON>
+		<loadDocument public="1" get="inline" set="null" line="135" static="1">
+			<f a="path:?fileName">
+				<c path="String"/>
+				<c path="String"/>
+				<c path="js.lib.Promise"><c path="js.html.Document"/></c>
+			</f>
+			<haxe_doc><![CDATA[* Returns Document object content within a promise
+  * in RPGMakerMV/MZ.
+  * @param path
+  * @param fileName
+  * @return Promise<Document>]]></haxe_doc>
+		</loadDocument>
+		<loadArrayBuff public="1" get="inline" set="null" line="148" static="1">
+			<f a="path:?fileName">
+				<c path="String"/>
+				<c path="String"/>
+				<c path="js.lib.Promise"><c path="js.lib.ArrayBuffer"/></c>
+			</f>
+			<haxe_doc><![CDATA[* Returns array buffer content within a promise
+  * in RPGMakerMV/MZ.
+  * @param path
+  * @param fileName
+  * @return Promise<ArrayBuffer>]]></haxe_doc>
+		</loadArrayBuff>
+		<isNwjs public="1" get="inline" set="null" line="158" static="1">
 			<f a=""><x path="Bool"/></f>
 			<haxe_doc>* Returns true if the game is running on desktop(nwjs).
   * @returns {boolean}</haxe_doc>
 		</isNwjs>
-		<isMobile public="1" get="inline" set="null" line="136" static="1">
+		<isMobile public="1" get="inline" set="null" line="166" static="1">
 			<f a=""><x path="Bool"/></f>
 			<haxe_doc>* Returns true if the game is running on mobile.
   * @returns{boolean}</haxe_doc>
 		</isMobile>
-		<isTest public="1" get="inline" set="null" line="144" static="1">
+		<isTest public="1" get="inline" set="null" line="174" static="1">
 			<f a=""><x path="Bool"/></f>
 			<haxe_doc>* Returns true if the game is in test mode.
   * @returns {boolean}</haxe_doc>
 		</isTest>
-		<once public="1" set="method" line="153" static="1">
+		<once public="1" set="method" line="183" static="1">
 			<f a="f">
 				<x path="haxe.Function"/>
 				<f a=""><unknown/></f>
@@ -1606,7 +1636,7 @@
   * @param {Function} f
   * @returns {Function}</haxe_doc>
 		</once>
-		<times public="1" set="method" line="171" static="1">
+		<times public="1" set="method" line="201" static="1">
 			<f a="iterations:f">
 				<x path="Int"/>
 				<x path="haxe.Function"/>
@@ -1617,11 +1647,11 @@
   * @param {number} iterations
   * @param {Function} f</haxe_doc>
 		</times>
-		<safeParse public="1" set="method" line="177" static="1"><f a="string">
+		<safeParse public="1" set="method" line="207" static="1"><f a="string">
 	<c path="String"/>
 	<c path="haxe.Exception"/>
 </f></safeParse>
-		<lines public="1" get="inline" set="null" line="190" static="1">
+		<lines public="1" get="inline" set="null" line="220" static="1">
 			<f a="num">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -1630,7 +1660,7 @@
   * @param {number} number
   * @returns {number}</haxe_doc>
 		</lines>
-		<rgbToHex public="1" get="inline" set="null" line="201" static="1">
+		<rgbToHex public="1" get="inline" set="null" line="231" static="1">
 			<f a="red:green:blue">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -1643,7 +1673,7 @@
   * @param {number} blue
   * @returns {string}</haxe_doc>
 		</rgbToHex>
-		<rgbToCss public="1" get="inline" set="null" line="213" static="1">
+		<rgbToCss public="1" get="inline" set="null" line="243" static="1">
 			<f a="red:green:blue">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -1656,7 +1686,7 @@
   * @param {Int} blue
   * @returns {string}</haxe_doc>
 		</rgbToCss>
-		<clear public="1" get="inline" set="null" line="221" static="1">
+		<clear public="1" get="inline" set="null" line="251" static="1">
 			<f a="array">
 				<c path="Array"><x path="Any"/></c>
 				<c path="Array"><x path="Any"/></c>
@@ -1664,7 +1694,7 @@
 			<haxe_doc><![CDATA[* Clears an array of all values.
   * @param {Array<Any>} array]]></haxe_doc>
 		</clear>
-		<take public="1" get="inline" set="null" line="233" static="1">
+		<take public="1" get="inline" set="null" line="263" static="1">
 			<f a="amount:list">
 				<x path="Int"/>
 				<c path="Array"><x path="Any"/></c>
@@ -1676,7 +1706,7 @@
   * @param {any[]} list
   * @returns {any[]}</haxe_doc>
 		</take>
-		<drop public="1" get="inline" set="null" line="244" static="1">
+		<drop public="1" get="inline" set="null" line="274" static="1">
 			<f a="amount:list">
 				<x path="Int"/>
 				<c path="Array"><x path="Any"/></c>
@@ -1688,16 +1718,16 @@
   * @param {any[]} list
   * @returns {any[]}</haxe_doc>
 		</drop>
-		<arrayEquals public="1" get="inline" set="null" line="248" static="1"><f a="arr1:arr2">
+		<arrayEquals public="1" get="inline" set="null" line="278" static="1"><f a="arr1:arr2">
 	<c path="Array"><x path="Any"/></c>
 	<c path="Array"><x path="Any"/></c>
 	<x path="Bool"/>
 </f></arrayEquals>
-		<addWindowToScene public="1" get="inline" set="null" line="254" static="1"><f a="window">
+		<addWindowToScene public="1" get="inline" set="null" line="284" static="1"><f a="window">
 	<c path="rm.windows.Window_Base"/>
 	<x path="Void"/>
 </f></addWindowToScene>
-		<loadData public="1" params="T" set="method" line="259" static="1"><f a="url:responseType">
+		<loadData public="1" params="T" set="method" line="289" static="1"><f a="url:responseType">
 	<c path="String"/>
 	<x path="rm.types.XMLResponseTypeA"/>
 	<c path="js.lib.Promise"><c path="loadData.T"/></c>
