@@ -24,7 +24,6 @@ extern class Window_Help extends Window_Base {
  public function new(numLines: Int): Void;
  #else
  public function new(rect: Rectangle): Void;
- public function setItem(item: BaseItem): Void;
  #end
 
  /**
