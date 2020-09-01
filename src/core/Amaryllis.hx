@@ -1,5 +1,15 @@
 package core;
 
+import js.lib.ArrayBuffer;
+import js.html.Document;
+import js.html.Blob;
+import js.lib.Promise;
+import js.html.XMLHttpRequestResponseType;
+import rm.types.LunaTea.XMLResponseTypeA;
+import js.html.XMLHttpRequest;
+import rm.types.LunaTea.MimeTypeA;
+import haxe.io.Mime;
+import js.html.MimeType;
 import js.Syntax;
 import rm.scenes.Scene_Base;
 import utils.Fn;
@@ -76,8 +86,39 @@ class Amaryllis {
   return Syntax.code('encodeURIComponent({0}).replace(/%2F/g, "/");', string);
  }
 
- public static inline function loadFile(path: String, fileName: String) {
-  return encodeURI(path + fileName);
+ /**
+  * Handles loading files of different types.
+  * @param path  - should end with /
+  * @returns
+  */
+ public static inline function loadText(path: String,
+   ?fileName: String): Promise<String> {
+  var path = fileName != null ? encodeURI(path + fileName) : encodeURI(path);
+  return loadData(path, XMLResponseTypeA.TEXT);
+ }
+
+ public static inline function loadBlob(path: String,
+   ?fileName: String): Promise<Blob> {
+  var path = fileName != null ? encodeURI(path + fileName) : encodeURI(path);
+  return loadData(path, XMLResponseTypeA.BLOB);
+ }
+
+ public static inline function loadJSON(path: String,
+   ?fileName: String): Promise<Json> {
+  var path = fileName != null ? encodeURI(path + fileName) : encodeURI(path);
+  return loadData(path, XMLResponseTypeA.JSON);
+ }
+
+ public static inline function loadDocument(path: String,
+   ?fileName: String): Promise<Document> {
+  var path = fileName != null ? encodeURI(path + fileName) : encodeURI(path);
+  return loadData(path, XMLResponseTypeA.DOCUMENT);
+ }
+
+ public static inline function loadArrayBuff(path: String,
+   ?fileName: String): Promise<ArrayBuffer> {
+  var path = fileName != null ? encodeURI(path + fileName) : encodeURI(path);
+  return loadData(path, XMLResponseTypeA.ARRAYBUFFER);
  }
 
  /**
@@ -213,5 +254,22 @@ class Amaryllis {
  public static inline function addWindowToScene(window: Window_Base) {
   var scene: Scene_Base = currentScene();
   scene.windowLayer.addChild(window);
+ }
+
+ public static function loadData<T>(url: String,
+   responseType: XMLResponseTypeA): Promise<T> {
+  return new Promise((resolve, reject) -> {
+   var xhr = new XMLHttpRequest();
+   xhr.open("GET", url);
+   xhr.responseType = cast responseType;
+   xhr.onload = () -> {
+    if (xhr.status < 400) {
+     resolve(xhr.response);
+    } else {
+     reject("Failed to load" + url);
+    }
+   }
+   xhr.send(null);
+  });
  }
 }

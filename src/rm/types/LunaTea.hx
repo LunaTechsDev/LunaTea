@@ -1,5 +1,8 @@
 package rm.types;
 
+import js.html.XMLHttpRequestResponseType;
+import haxe.io.Mime;
+
 @:forward
 @:forwardStatics
 enum abstract StateIdA(Int) from Int to Int {
@@ -525,3 +528,19 @@ typedef AbilityId = Int;
 typedef ParameterId = Int;
 typedef FadeType = Int;
 typedef InterpreterWaitMode = String;
+
+@:forward
+@:forwardStatics
+enum abstract MimeTypeA(Mime) from Mime to Mime {
+}
+
+@:forward
+@:forwardStatics
+enum abstract XMLResponseTypeA(String) from String to String {
+ public inline var NONE = "";
+ public inline var ARRAYBUFFER = "arraybuffer";
+ public inline var BLOB = "blob";
+ public inline var DOCUMENT = "document";
+ public inline var JSON = "json";
+ public inline var TEXT = "text";
+}
