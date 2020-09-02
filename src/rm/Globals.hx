@@ -97,6 +97,10 @@ class Globals {
 
  // Data Classes
 
+ /** @global RPGMakerMV Class data. */
+ @:native("$dataClasses")
+ public static var DataClasses: Array<RPGClass>;
+
  /**
   * RPGMakerMZ database actor data.
   */
@@ -110,6 +114,10 @@ class Globals {
  //  @:expose("$dataMap")
  @:native("$dataMap")
  public static var DataMap: RPGMap;
+
+ /** @global RPGMakerMV MapInfo data. */
+ @:native("$dataMapInfos")
+ public static var $dataMapInfos:Array<MapInfo>;
 
  @:native("$dataSkills")
  public static var DataSkills: Array<Skill>;
