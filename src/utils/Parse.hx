@@ -11,21 +11,24 @@ class Parse {
   */
  public static function parseParameters(parameters: String): Any {
   return Syntax.code("(function (string) {
-    var temp;
-    try {
-        temp = JsonEx.parse(typeof string === 'object ' ? JsonEx.stringify(string) : string);
-    } catch (e) {
-        return string;
+    function superParse (string) {
+      var temp;
+      try {
+          temp = JsonEx.parse(typeof string === 'object' ? JsonEx.stringify(string) : string);
+      } catch (e) {
+          return string;
+      }
+      if (typeof temp === 'object') {
+          Object.keys(temp).forEach(function (key) {
+              temp[key] = superParse(temp[key]);
+              if (temp[key] === ' ') {
+                  temp[key] = null;
+              }
+          });
+      }
+      return temp;
     }
-    if (typeof temp === 'object ') {
-        Object.keys(temp).forEach(function (key) {
-            temp[key] = JSONSuperParse(temp[key]);
-            if (temp[key] === ' ') {
-                temp[key] = null;
-            }
-        });
-    }
-    return temp;
+    return superParse(JsonEx.stringify(string));
 })({0})", parameters);
  }
 
