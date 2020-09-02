@@ -87685,7 +87685,7 @@
 			</f>
 			<haxe_doc>* Function for parsing parameters from JSON in MV/MZ</haxe_doc>
 		</parseParameters>
-		<isObject public="1" set="method" line="53" static="1"><f a="entity">
+		<isObject public="1" set="method" line="56" static="1"><f a="entity">
 	<d/>
 	<x path="Bool"/>
 </f></isObject>
