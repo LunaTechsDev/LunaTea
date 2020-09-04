@@ -34,7 +34,8 @@ class Fn {
   * @param radix
   * @return Int
   */
- public static inline function parseIntJs(string: String, radix: Int): Int {
+ public static inline function parseIntJs(string: String,
+   radix: Int = 10): Int {
   return cast js.Lib.parseInt(string, radix);
  }
 
