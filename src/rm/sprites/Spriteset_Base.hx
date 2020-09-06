@@ -47,91 +47,91 @@ extern class Spriteset_Base extends Sprite {
   *
   * @memberof Spriteset_Base
   */
- public function createLowerLayer(): Void;
+ public dynamic function createLowerLayer(): Void;
 
  /**
   * Creates the upper layer including the pictures,
   * timer, and screen sprites.
   * @memberof Spriteset_Base
   */
- public function createUpperLayer(): Void;
+ public dynamic function createUpperLayer(): Void;
 
  /**
   * Create the base sprite.
   *
   * @memberof Spriteset_Base
   */
- public function createBaseSprite(): Void;
+ public dynamic function createBaseSprite(): Void;
 
  /**
   * Creates the tone changer sprite.
   *
   * @memberof Spriteset_Base
   */
- public function createToneChanger(): Void;
+ public dynamic function createToneChanger(): Void;
 
  /**
   * Creates the WebGL toner.
   *
   * @memberof Spriteset_Base
   */
- public function createWebGLToneChanger(): Void;
+ public dynamic function createWebGLToneChanger(): Void;
 
  /**
   * Creates the Canvas tone.
   *
   * @memberof Spriteset_Base
   */
- public function createCanvasToneChanger(): Void;
+ public dynamic function createCanvasToneChanger(): Void;
 
  /**
   * Creates a new sprite picture on the spritesetb ase.
   *
   * @memberof Spriteset_Base
   */
- public function createPictures(): Void;
+ public dynamic function createPictures(): Void;
 
  /**
   * Creates a new Sprite timer on the spriteset base.
   *
   * @memberof Spriteset_Base
   */
- public function createTimer(): Void;
+ public dynamic function createTimer(): Void;
 
  /**
   * Creates the screen sprite.
   *
   * @memberof Spriteset_Base
   */
- public function createScreenSprites(): Void;
+ public dynamic function createScreenSprites(): Void;
 
  /**
   * Updates the screen sprites on the spriteset base.
   *
   * @memberof Spriteset_Base
   */
- public function updateScreenSprites(): Void;
+ public dynamic function updateScreenSprites(): Void;
 
- public function updateToneChanger(): Void;
+ public dynamic function updateToneChanger(): Void;
 
  /**
   * Updates the WebGL tone changer.
   *
   * @memberof Spriteset_Base
   */
- public function updateWebGLToneChanger(): Void;
+ public dynamic function updateWebGLToneChanger(): Void;
 
  /**
   * Updates the Canvas tone changer.
   *
   * @memberof Spriteset_Base
   */
- public function updateCanvasToneChanger(): Void;
+ public dynamic function updateCanvasToneChanger(): Void;
 
  /**
   * Updates the position of spriteset base.
   *
   * @memberof Spriteset_Base
   */
- public function updatePosition(): Void;
+ public dynamic function updatePosition(): Void;
 }

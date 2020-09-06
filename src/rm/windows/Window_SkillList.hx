@@ -36,19 +36,20 @@ extern class Window_SkillList extends Window_Selectable {
  private var _data: Array<Skill>;
 
  #if compileMV
- public function new(x: Int, y: Int, witth: Int, height: Int);
+ public dynamic function new(x: Int, y: Int, witth: Int, height: Int);
 
- public function initialize(x: Int, y: Int, width: Int, height: Int): Void;
+ public dynamic function initialize(x: Int, y: Int, width: Int,
+  height: Int): Void;
  #else
- public function new(rect: Rectangle);
- public function initialize(rect: Rectangle): Void;
+ public dynamic function new(rect: Rectangle);
+ public dynamic function initialize(rect: Rectangle): Void;
 
  /**
   * Returns skill at the specified index.
   * @param index
   * @return Null<Skill>
   */
- public function itemAt(index: Int): Null<Skill>;
+ public dynamic function itemAt(index: Int): Null<Skill>;
  #end
 
  /**
@@ -57,7 +58,7 @@ extern class Window_SkillList extends Window_Selectable {
   * @param {Game_Actor} actor
   * @memberof Window_SkillList
   */
- public function setActor(actor: Game_Actor): Void;
+ public dynamic function setActor(actor: Game_Actor): Void;
 
  /**
   * Sets the skill type id of the skill list window.
@@ -65,7 +66,7 @@ extern class Window_SkillList extends Window_Selectable {
   * @param {number} stypeId - Integer
   * @memberof Window_SkillList
   */
- public function setStypeId(stypeId: SkillTypeIdA): Void;
+ public dynamic function setStypeId(stypeId: SkillTypeIdA): Void;
 
  /**
   * Returns the current skill at the window index
@@ -74,7 +75,7 @@ extern class Window_SkillList extends Window_Selectable {
   * @returns {RPG.Skill}
   * @memberof Window_SkillList
   */
- public function item(): Skill;
+ public dynamic function item(): Skill;
 
  /**
   * Returns true if the given skill is included.
@@ -83,7 +84,7 @@ extern class Window_SkillList extends Window_Selectable {
   * @returns {boolean}
   * @memberof Window_SkillList
   */
- public function includes(item: Skill): Bool;
+ public dynamic function includes(item: Skill): Bool;
 
  /**
   * Returns true if the given skill is enabled.
@@ -92,16 +93,17 @@ extern class Window_SkillList extends Window_Selectable {
   * @returns {boolean}
   * @memberof Window_SkillList
   */
- public function isEnabled(item: Skill): Bool;
+ public dynamic function isEnabled(item: Skill): Bool;
 
  /**
   * Creates the item list.
   *
   * @memberof Window_SkillList
   */
- public function makeItemList(): Void;
+ public dynamic function makeItemList(): Void;
 
- public function selectLast(): Void;
- public function costWidth(): Int;
- public function drawSkillCost(skill: Skill, x: Int, y: Int, width: Int): Void;
+ public dynamic function selectLast(): Void;
+ public dynamic function costWidth(): Int;
+ public dynamic function drawSkillCost(skill: Skill, x: Int, y: Int,
+  width: Int): Void;
 }

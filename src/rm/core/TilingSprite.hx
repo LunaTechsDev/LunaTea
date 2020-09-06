@@ -65,20 +65,20 @@ extern class TilingSprite extends pixi.extras.TilingSprite {
   * @constructor
   * @param {Bitmap} bitmap The image for the tiling sprite
   */
- public function new(bitmap: Bitmap);
+ public dynamic function new(bitmap: Bitmap);
 
  /**
   * Updates the tiling sprite for each frame.
   *
   * @method update
   */
- public function update(): Void;
+ public dynamic function update(): Void;
 
  /**
   * @method updateTransform
   * @private
   */
- public function updateTransform(): Void;
+ public dynamic function updateTransform(): Void;
 
  /**
   * Sets the x, y, width, and height all at once.
@@ -89,7 +89,8 @@ extern class TilingSprite extends pixi.extras.TilingSprite {
   * @param {Number} width The width of the tiling sprite
   * @param {Number} height The height of the tiling sprite
   */
- public function move(?x: Int, ?y: Int, ?width: Int, ?height: Int): Void;
+ public dynamic function move(?x: Int, ?y: Int, ?width: Int,
+  ?height: Int): Void;
 
  /**
   * Specifies the region of the image that the tiling sprite will use.
@@ -100,9 +101,10 @@ extern class TilingSprite extends pixi.extras.TilingSprite {
   * @param {Number} width The width of the frame
   * @param {Number} height The height of the frame
   */
- public function setFrame(x: Int, y: Int, width: Int, height: Int): Void;
+ public dynamic function setFrame(x: Int, y: Int, width: Int,
+  height: Int): Void;
 
- public function updateTransformTS(): Void;
+ public dynamic function updateTransformTS(): Void;
  private var _bitmap: Bitmap;
  private var _width: Int;
  private var _height: Int;
@@ -112,31 +114,31 @@ extern class TilingSprite extends pixi.extras.TilingSprite {
   * @method _onBitmapLoad
   * @private
   */
- private function _onBitmapLoad(): Void;
+ private dynamic function _onBitmapLoad(): Void;
 
  /**
   * @method _refresh
   * @private
   */
- private function _refresh(): Void;
+ private dynamic function _refresh(): Void;
 
  /**
   * @method _renderCanvas
   * @param {PIXI.CanvasRenderer} renderer
   * @private
   */
- private function _renderCanvas(renderer: CanvasRenderer): Void;
+ private dynamic function _renderCanvas(renderer: CanvasRenderer): Void;
 
  /**
   * @method _renderWebGL
   * @param {PIXI.WebGLRenderer} renderer
   * @private
   */
- private function _renderWebGL(renderer: Renderer): Void;
+ private dynamic function _renderWebGL(renderer: Renderer): Void;
 
  /**
   * @method generateTilingTexture
   * @param {Boolean} arg
   */
- public function generateTilingTexture(arg: Bool): Void;
+ public dynamic function generateTilingTexture(arg: Bool): Void;
 }

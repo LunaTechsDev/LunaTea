@@ -14,7 +14,7 @@ import rm.core.Rectangle;
 @:expose("Window_BattleStatus")
 @:native("Window_BattleStatus")
 extern class Window_BattleStatus extends Window_Selectable {
- public function new();
+ public dynamic function new();
 
  /**
   * Returns the window width.
@@ -22,7 +22,7 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleStatus
   */
- public function windowWidth(): Int;
+ public dynamic function windowWidth(): Int;
 
  /**
   * Returns the window height.
@@ -30,7 +30,7 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleStatus
   */
- public function windowHeight(): Int;
+ public dynamic function windowHeight(): Int;
 
  /**
   * Returns the number of visible rows.
@@ -38,9 +38,9 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleStatus
   */
- public function numVisibleRows(): Int;
+ public dynamic function numVisibleRows(): Int;
 
- public function basicAreaRect(index: Int): Rectangle;
+ public dynamic function basicAreaRect(index: Int): Rectangle;
 
  /**
   * returns a rectangle for the gauges in the gauge area.
@@ -49,7 +49,7 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @returns {Rectangle}
   * @memberof Window_BattleStatus
   */
- public function gaugeAreaRect(index: Int): Rectangle;
+ public dynamic function gaugeAreaRect(index: Int): Rectangle;
 
  /**
   * Returns the width of the guage area.
@@ -57,7 +57,7 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleStatus
   */
- public function gaugeAreaWidth(): Int;
+ public dynamic function gaugeAreaWidth(): Int;
 
  /**
   * Draws the basic area for actors within the battle status window.
@@ -66,7 +66,8 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @param {Game_Actor} actor
   * @memberof Window_BattleStatus
   */
- public function drawBasicArea(rect: Rectangle, actor: Game_Actor): Void;
+ public dynamic function drawBasicArea(rect: Rectangle,
+  actor: Game_Actor): Void;
 
  /**
   * Draws the gauge area for the actors within the battle status window.
@@ -75,7 +76,8 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @param {Game_Actor} actor
   * @memberof Window_BattleStatus
   */
- public function drawGaugeArea(rect: Rectangle, actor: Game_Actor): Void;
+ public dynamic function drawGaugeArea(rect: Rectangle,
+  actor: Game_Actor): Void;
 
  /**
   * Draws the gauges in the basic area with tp included.
@@ -84,7 +86,8 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @param {Game_Actor} actor
   * @memberof Window_BattleStatus
   */
- public function drawGaugeAreaWithTp(rect: Rectangle, actor: Game_Actor): Void;
+ public dynamic function drawGaugeAreaWithTp(rect: Rectangle,
+  actor: Game_Actor): Void;
 
  /**
   * Draws the gauges in the basic area without tp included.
@@ -93,7 +96,7 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @param {Game_Actor} actor
   * @memberof Window_BattleStatus
   */
- public function drawGaugeAreaWithoutTp(rect: Rectangle,
+ public dynamic function drawGaugeAreaWithoutTp(rect: Rectangle,
   actor: Game_Actor): Void;
 }
 #else
@@ -108,7 +111,7 @@ extern class Window_BattleStatus extends Window_Selectable {
 @:expose("Window_BattleStatus")
 @:native("Window_BattleStatus")
 extern class Window_BattleStatus extends Window_StatusBase {
- public function new(rect: Rectangle);
- public function initialize(rect: Rectangle): Void;
+ public dynamic function new(rect: Rectangle);
+ public dynamic function initialize(rect: Rectangle): Void;
 }
 #end

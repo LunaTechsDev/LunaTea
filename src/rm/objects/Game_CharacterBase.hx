@@ -107,8 +107,8 @@ extern class Game_CharacterBase {
  public var __movementSuccess: Bool;
  private var _movementSuccess: Bool;
 
- public function new(): Void;
- public function initialize(): Void;
+ public dynamic function new(): Void;
+ public dynamic function initialize(): Void;
 
  /** [read-only] */
  public var x: Int;
@@ -116,9 +116,9 @@ extern class Game_CharacterBase {
  /** [read-only] */
  public var y: Int;
 
- public function initMembers(): Void;
- public function pos(x: Int, y: Int): Bool;
- public function posNt(x: Int, y: Int): Bool;
+ public dynamic function initMembers(): Void;
+ public dynamic function pos(x: Int, y: Int): Bool;
+ public dynamic function posNt(x: Int, y: Int): Bool;
 
  /**
   * Returns the move speed of the game character.
@@ -126,9 +126,9 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function moveSpeed(): Int;
+ public dynamic function moveSpeed(): Int;
 
- public function setMoveSpeed(moveSpeed: Int): Void;
+ public dynamic function setMoveSpeed(moveSpeed: Int): Void;
 
  /**
   * Returns the move frequency of the character.
@@ -136,11 +136,11 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function moveFrequency(): Int;
+ public dynamic function moveFrequency(): Int;
 
- public function setMoveFrequency(moveFrequency: Int): Void;
- public function opacity(): Int;
- public function setOpacity(opacity: Int): Void;
+ public dynamic function setMoveFrequency(moveFrequency: Int): Void;
+ public dynamic function opacity(): Int;
+ public dynamic function setOpacity(opacity: Int): Void;
 
  /**
   * Returns the blend mode of the character;
@@ -148,7 +148,7 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function blendMode(): Int;
+ public dynamic function blendMode(): Int;
 
  /**
   * Sets the blend mode of the character;
@@ -156,7 +156,7 @@ extern class Game_CharacterBase {
   * @param {Int} blendMode
   * @memberof Game_CharacterBase
   */
- public function setBlendMode(blendMode: Int): Void;
+ public dynamic function setBlendMode(blendMode: Int): Void;
 
  /**
   * Returns true if the character is
@@ -164,9 +164,9 @@ extern class Game_CharacterBase {
   * @returns {Bool}
   * @memberof Game_CharacterBase
   */
- public function isNormalPriority(): Bool;
+ public dynamic function isNormalPriority(): Bool;
 
- public function setPriorityType(priorityType: Int): Void;
+ public dynamic function setPriorityType(priorityType: Int): Void;
 
  /**
   * Returns true if the character is moving.
@@ -174,7 +174,7 @@ extern class Game_CharacterBase {
   * @returns {Bool}
   * @memberof Game_CharacterBase
   */
- public function isMoving(): Bool;
+ public dynamic function isMoving(): Bool;
 
  /**
   * Returns true if the character is jumping.
@@ -182,7 +182,7 @@ extern class Game_CharacterBase {
   * @returns {Bool}
   * @memberof Game_CharacterBase
   */
- public function isJumping(): Bool;
+ public dynamic function isJumping(): Bool;
 
  /**
   * Returns the jump height of base character.
@@ -190,7 +190,7 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function jumpHeight(): Int;
+ public dynamic function jumpHeight(): Int;
 
  /**
   * Returns true if the character is stopping.
@@ -198,19 +198,19 @@ extern class Game_CharacterBase {
   * @returns {Bool}
   * @memberof Game_CharacterBase
   */
- public function isStopping(): Bool;
+ public dynamic function isStopping(): Bool;
 
- public function checkStop(threshold: Int): Bool;
+ public dynamic function checkStop(threshold: Int): Bool;
 
  /**
   * Resets the step count of the character.
   *
   * @memberof Game_CharacterBase
   */
- public function resetStopCount(): Void;
+ public dynamic function resetStopCount(): Void;
 
- public function realMoveSpeed(): Int;
- public function distancePerFrame(): Int;
+ public dynamic function realMoveSpeed(): Int;
+ public dynamic function distancePerFrame(): Int;
 
  /**
   * Returns true if the character is dashing.
@@ -218,28 +218,29 @@ extern class Game_CharacterBase {
   * @returns {Bool}
   * @memberof Game_CharacterBase
   */
- public function isDashing(): Bool;
+ public dynamic function isDashing(): Bool;
 
- public function isDebugThrough(): Bool;
+ public dynamic function isDebugThrough(): Bool;
 
  /**
   * Straightens the character.
   *
   * @memberof Game_CharacterBase
   */
- public function straighten(): Void;
+ public dynamic function straighten(): Void;
 
- public function reverseDir(d: Int): Int;
- public function canPass(x: Int, y: Int, d: Int): Bool;
- public function canPassDiagonally(x: Int, y: Int, horz: Int, vert: Int): Bool;
- public function isMapPassable(x: Int, y: Int, d: Int): Bool;
- public function isCollidedWithCharacters(x: Int, y: Int): Bool;
- public function isCollidedWithEvents(x: Int, y: Int): Bool;
- public function isCollidedWithVehicles(x: Int, y: Int): Bool;
- public function setPosition(x: Int, y: Int): Void;
- public function copyPosition(character: Game_Player): Void;
- public function locate(x: Int, y: Int): Void;
- public function direction(): Int;
+ public dynamic function reverseDir(d: Int): Int;
+ public dynamic function canPass(x: Int, y: Int, d: Int): Bool;
+ public dynamic function canPassDiagonally(x: Int, y: Int, horz: Int,
+  vert: Int): Bool;
+ public dynamic function isMapPassable(x: Int, y: Int, d: Int): Bool;
+ public dynamic function isCollidedWithCharacters(x: Int, y: Int): Bool;
+ public dynamic function isCollidedWithEvents(x: Int, y: Int): Bool;
+ public dynamic function isCollidedWithVehicles(x: Int, y: Int): Bool;
+ public dynamic function setPosition(x: Int, y: Int): Void;
+ public dynamic function copyPosition(character: Game_Player): Void;
+ public dynamic function locate(x: Int, y: Int): Void;
+ public dynamic function direction(): Int;
 
  /**
   * Sets the direction of the character based on numpad
@@ -247,7 +248,7 @@ extern class Game_CharacterBase {
   * @param {Int} d
   * @memberof Game_CharacterBase
   */
- public function setDirection(d: Int): Void;
+ public dynamic function setDirection(d: Int): Void;
 
  /**
   * Returns true if the character is a tile; these
@@ -255,7 +256,7 @@ extern class Game_CharacterBase {
   * @returns {Bool}
   * @memberof Game_CharacterBase
   */
- public function isTile(): Bool;
+ public dynamic function isTile(): Bool;
 
  /**
   * Returns true if the character is an object character;
@@ -263,11 +264,11 @@ extern class Game_CharacterBase {
   * @returns {Bool}
   * @memberof Game_CharacterBase
   */
- public function isObjectCharacter(): Bool;
+ public dynamic function isObjectCharacter(): Bool;
 
- public function shiftY(): Int;
- public function scrolledX(): Int;
- public function scrolledY(): Int;
+ public dynamic function shiftY(): Int;
+ public dynamic function scrolledX(): Int;
+ public dynamic function scrolledY(): Int;
 
  /**
   * Returns the character's scrreen x position.
@@ -275,7 +276,7 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function screenX(): Int;
+ public dynamic function screenX(): Int;
 
  /**
   * Returns the character's screen y position.
@@ -283,7 +284,7 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function screenY(): Int;
+ public dynamic function screenY(): Int;
 
  /**
   * Returns the character's screen z position.
@@ -291,25 +292,25 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function screenZ(): Int;
+ public dynamic function screenZ(): Int;
 
- public function isNearTheScreen(): Bool;
- public function update(): Void;
- public function updateStop(): Void;
- public function updateJump(): Void;
- public function updateMove(): Void;
- public function updateAnimation(): Void;
- public function animationWait(): Int;
+ public dynamic function isNearTheScreen(): Bool;
+ public dynamic function update(): Void;
+ public dynamic function updateStop(): Void;
+ public dynamic function updateJump(): Void;
+ public dynamic function updateMove(): Void;
+ public dynamic function updateAnimation(): Void;
+ public dynamic function animationWait(): Int;
 
  /**
   * Updates the character's animation count.
   *
   * @memberof Game_CharacterBase
   */
- public function updateAnimationCount(): Void;
+ public dynamic function updateAnimationCount(): Void;
 
- public function updatePattern(): Void;
- public function maxPattern(): Int;
+ public dynamic function updatePattern(): Void;
+ public dynamic function maxPattern(): Int;
 
  /**
   * Returns the pattern of the character; these are the walking
@@ -317,7 +318,7 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function pattern(): Int;
+ public dynamic function pattern(): Int;
 
  /**
   * Sets the pattern of the character, given
@@ -325,20 +326,20 @@ extern class Game_CharacterBase {
   * @param {Int} pattern
   * @memberof Game_CharacterBase
   */
- public function setPattern(pattern: Int): Void;
+ public dynamic function setPattern(pattern: Int): Void;
 
- public function isOriginalPattern(): Bool;
+ public dynamic function isOriginalPattern(): Bool;
 
  /**
   * Resets the pattern of the character.
   *
   * @memberof Game_CharacterBase
   */
- public function resetPattern(): Void;
+ public dynamic function resetPattern(): Void;
 
- public function refreshBushDepth(): Void;
- public function isOnLadder(): Bool;
- public function isOnBush(): Bool;
+ public dynamic function refreshBushDepth(): Void;
+ public dynamic function isOnLadder(): Bool;
+ public dynamic function isOnBush(): Bool;
 
  /**
   * Returns the terrain tag of the character.
@@ -346,7 +347,7 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function terrainTag(): Int;
+ public dynamic function terrainTag(): Int;
 
  /**
   * Returns the region id of the character.
@@ -354,14 +355,14 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function regionId(): Int;
+ public dynamic function regionId(): Int;
 
  /**
   * Increases the character steps.
   *
   * @memberof Game_CharacterBase
   */
- public function increaseSteps(): Void;
+ public dynamic function increaseSteps(): Void;
 
  /**
   * Returns the tile id of character.
@@ -369,21 +370,22 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function tileId(): Int;
+ public dynamic function tileId(): Int;
 
- public function characterName(): String;
- public function characterIndex(): Int;
- public function setImage(characterName: String, characterIndex: Int): Void;
- public function setTileImage(tileId: Int): Void;
- public function checkEventTriggerTouchFront(d: Int): Void;
- public function checkEventTriggerTouch(x: Int, y: Int): Bool;
- public function isMovementSucceeded(x: Int, y: Int): Bool;
- public function setMovementSuccess(success: Bool): Void;
- public function moveStraight(d: Int): Void;
- public function moveDiagonally(horz: Int, vert: Int): Void;
- public function jump(xPlus: Int, yPlus: Int): Void;
- public function hasWalkAnime(): Bool;
- public function setWalkAnime(walkAnime: Bool): Void;
+ public dynamic function characterName(): String;
+ public dynamic function characterIndex(): Int;
+ public dynamic function setImage(characterName: String,
+  characterIndex: Int): Void;
+ public dynamic function setTileImage(tileId: Int): Void;
+ public dynamic function checkEventTriggerTouchFront(d: Int): Void;
+ public dynamic function checkEventTriggerTouch(x: Int, y: Int): Bool;
+ public dynamic function isMovementSucceeded(x: Int, y: Int): Bool;
+ public dynamic function setMovementSuccess(success: Bool): Void;
+ public dynamic function moveStraight(d: Int): Void;
+ public dynamic function moveDiagonally(horz: Int, vert: Int): Void;
+ public dynamic function jump(xPlus: Int, yPlus: Int): Void;
+ public dynamic function hasWalkAnime(): Bool;
+ public dynamic function setWalkAnime(walkAnime: Bool): Void;
 
  /**
   * Returns true if the character has step animation.
@@ -391,9 +393,9 @@ extern class Game_CharacterBase {
   * @returns {Bool}
   * @memberof Game_CharacterBase
   */
- public function hasStepAnime(): Bool;
+ public dynamic function hasStepAnime(): Bool;
 
- public function setStepAnime(stepAnime: Bool): Void;
+ public dynamic function setStepAnime(stepAnime: Bool): Void;
 
  /**
   * Returns true if the character is set to a fixed direction.
@@ -401,7 +403,7 @@ extern class Game_CharacterBase {
   * @returns {Bool}
   * @memberof Game_CharacterBase
   */
- public function isDirectionFixed(): Bool;
+ public dynamic function isDirectionFixed(): Bool;
 
  /**
   * Sets the character to be fixed in a specified direction
@@ -409,7 +411,7 @@ extern class Game_CharacterBase {
   * @param {Bool} directionFix
   * @memberof Game_CharacterBase
   */
- public function setDirectionFix(directionFix: Bool): Void;
+ public dynamic function setDirectionFix(directionFix: Bool): Void;
 
  /**
   * Returns true if the character is set to pass through.
@@ -417,10 +419,10 @@ extern class Game_CharacterBase {
   * @returns {Bool}
   * @memberof Game_CharacterBase
   */
- public function isThrough(): Bool;
+ public dynamic function isThrough(): Bool;
 
- public function setThrough(through: Bool): Void;
- public function isTransparent(): Bool;
+ public dynamic function setThrough(through: Bool): Void;
+ public dynamic function isTransparent(): Bool;
 
  /**
   * Returns the bush depth around the character.
@@ -428,9 +430,9 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function bushDepth(): Int;
+ public dynamic function bushDepth(): Int;
 
- public function setTransparent(transparent: Bool): Void;
+ public dynamic function setTransparent(transparent: Bool): Void;
 
  /**
   * Requests an animation given the animation id.
@@ -438,7 +440,7 @@ extern class Game_CharacterBase {
   * @param {Int} animationId
   * @memberof Game_CharacterBase
   */
- public function requestAnimation(animationId: Int): Void;
+ public dynamic function requestAnimation(animationId: Int): Void;
 
  /**
   * Requests the balloon animation given the balloon id.
@@ -446,7 +448,7 @@ extern class Game_CharacterBase {
   * @param {Int} balloonId
   * @memberof Game_CharacterBase
   */
- public function requestBalloon(balloonId: Int): Void;
+ public dynamic function requestBalloon(balloonId: Int): Void;
 
  /**
   * Returns the animation id.
@@ -454,7 +456,7 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function animationId(): Int;
+ public dynamic function animationId(): Int;
 
  /**
   * Returns the id of the balloon animation.
@@ -462,23 +464,23 @@ extern class Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_CharacterBase
   */
- public function balloonId(): Int;
+ public dynamic function balloonId(): Int;
 
  /**
   * Starts the requested animation.
   *
   * @memberof Game_CharacterBase
   */
- public function startAnimation(): Void;
+ public dynamic function startAnimation(): Void;
 
  /**
   * Stars a balloon animation.
   *
   * @memberof Game_CharacterBase
   */
- public function startBalloon(): Void;
+ public dynamic function startBalloon(): Void;
 
- public function isAnimationPlaying(): Bool;
+ public dynamic function isAnimationPlaying(): Bool;
 
  /**
   * Returns true if a balloon animation is playing.
@@ -486,14 +488,14 @@ extern class Game_CharacterBase {
   * @returns {Bool}
   * @memberof Game_CharacterBase
   */
- public function isBalloonPlaying(): Bool;
+ public dynamic function isBalloonPlaying(): Bool;
 
- public function endAnimation(): Void;
+ public dynamic function endAnimation(): Void;
 
  /**
   * Ends the balloon animation on the character.
   *
   * @memberof Game_CharacterBase
   */
- public function endBalloon(): Void;
+ public dynamic function endBalloon(): Void;
 }

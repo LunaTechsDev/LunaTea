@@ -11,11 +11,11 @@ import rm.windows.Window_Options;
 extern class Scene_Options extends Scene_MenuBase {
  private var _optionsWindow: Window_Options;
 
- public function createOptionsWindow(): Void;
+ public dynamic function createOptionsWindow(): Void;
 
  #if !compileMV
- public function optionsWindowRect(): Rectangle;
- public function maxCommands(): Int;
- public function maxVisibleCommands(): Int;
+ public dynamic function optionsWindowRect(): Rectangle;
+ public dynamic function maxCommands(): Int;
+ public dynamic function maxVisibleCommands(): Int;
  #end
 }

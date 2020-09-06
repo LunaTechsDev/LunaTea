@@ -14,7 +14,7 @@ extern class Stage extends Container {
   * @class Stage
   * @constructor
   */
- public function new();
+ public dynamic function new();
 
  /**
   * Adds a child to the container.
@@ -23,7 +23,7 @@ extern class Stage extends Container {
   * @param {PIXI.DisplayObject} child The child to add
   * @return {PIXI.DisplayObject} The child that was added
   */
- public function addChild(child: DisplayObject): DisplayObject;
+ public dynamic function addChild(child: DisplayObject): DisplayObject;
 
  /**
   * Adds a child to the container at a specified index.
@@ -33,7 +33,8 @@ extern class Stage extends Container {
   * @param {Number} index The index to place the child in
   * @return {PIXI.DisplayObject} The child that was added
   */
- public function addChildAt(child: DisplayObject, index: Int): DisplayObject;
+ public dynamic function addChildAt(child: DisplayObject,
+  index: Int): DisplayObject;
 
  /**
   * Removes a child from the container.
@@ -42,7 +43,7 @@ extern class Stage extends Container {
   * @param {PIXI.DisplayObject} child The child to remove
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public function removeChild(child: DisplayObject): DisplayObject;
+ public dynamic function removeChild(child: DisplayObject): DisplayObject;
 
  /**
   * Removes a child from the specified index position.
@@ -51,5 +52,5 @@ extern class Stage extends Container {
   * @param {Number} index The index to get the child from
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public function removeChildAt(index: Int): DisplayObject;
+ public dynamic function removeChildAt(index: Int): DisplayObject;
 }

@@ -22,8 +22,8 @@ import haxe.DynamicAccess;
 @:expose("Game_BattlerBase")
 @:native("Game_BattlerBase")
 extern class Game_BattlerBase {
- public function new(): Void;
- public function initialize(): Void;
+ public dynamic function new(): Void;
+ public dynamic function initialize(): Void;
 
  /**
   * Trait element rate; default to 11.
@@ -309,18 +309,18 @@ extern class Game_BattlerBase {
  /** [read-only] EXperience Rate */
  public var exr(get, null): Int;
 
- public function initMembers(): Void;
+ public dynamic function initMembers(): Void;
 
  /**
   * Clears any modifications to
   * the base parameters.
   */
- public function clearParamPlus(): Void;
+ public dynamic function clearParamPlus(): Void;
 
  /**
   * Clears states applied to the actors.
   */
- public function clearStates(): Void;
+ public dynamic function clearStates(): Void;
 
  /**
   * Erases the current state from the game battler given the
@@ -328,7 +328,7 @@ extern class Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_BattlerBase
   */
- public function eraseState(stateId: Int): Void;
+ public dynamic function eraseState(stateId: Int): Void;
 
  /**
   * Returns true if the battler is affected by the specified state given
@@ -337,9 +337,9 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isStateAffected(stateId: Int): Bool;
+ public dynamic function isStateAffected(stateId: Int): Bool;
 
- public function isDeathStateAffected(): Bool;
+ public dynamic function isDeathStateAffected(): Bool;
 
  /**
   * Returns the death state id.
@@ -347,7 +347,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function deathStateId(): Int;
+ public dynamic function deathStateId(): Int;
 
  /**
   * Resets the state count of the specified state, given the state id.
@@ -355,7 +355,7 @@ extern class Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_BattlerBase
   */
- public function resetStateCounts(stateId: Int): Void;
+ public dynamic function resetStateCounts(stateId: Int): Void;
 
  /**
   * Returns true if the state, given the state id is expired.
@@ -364,18 +364,18 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isStateExpired(stateId: Int): Bool;
+ public dynamic function isStateExpired(stateId: Int): Bool;
 
- public function updateStateTurns(): Void;
+ public dynamic function updateStateTurns(): Void;
 
  /**
   * Clears buffs from the battler.
   *
   * @memberof Game_BattlerBase
   */
- public function clearBuffs(): Void;
+ public dynamic function clearBuffs(): Void;
 
- public function eraseBuff(paramId: ParameterId): Void;
+ public dynamic function eraseBuff(paramId: ParameterId): Void;
 
  /**
   * Returns the length of the buff.
@@ -383,7 +383,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function buffLength(): Int;
+ public dynamic function buffLength(): Int;
 
  /**
   * Buffs the current parameter id.
@@ -392,38 +392,39 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function buff(paramId: ParameterId): Int;
+ public dynamic function buff(paramId: ParameterId): Int;
 
- public function isBuffAffected(paramId: ParameterId): Bool;
- public function isDebuffAffected(paramId: ParameterId): Bool;
- public function isBuffOrDebuffAffected(paramId: ParameterId): Bool;
- public function isMaxBuffAffected(paramId: ParameterId): Bool;
- public function isMaxDebuffAffected(paramId: ParameterId): Bool;
- public function increaseBuff(paramId: ParameterId): Void;
- public function decreaseBuff(paramId: ParameterId): Void;
- public function overwriteBuffTurns(paramId: ParameterId, turns: Int): Void;
- public function isBuffExpired(paramId: ParameterId): Bool;
+ public dynamic function isBuffAffected(paramId: ParameterId): Bool;
+ public dynamic function isDebuffAffected(paramId: ParameterId): Bool;
+ public dynamic function isBuffOrDebuffAffected(paramId: ParameterId): Bool;
+ public dynamic function isMaxBuffAffected(paramId: ParameterId): Bool;
+ public dynamic function isMaxDebuffAffected(paramId: ParameterId): Bool;
+ public dynamic function increaseBuff(paramId: ParameterId): Void;
+ public dynamic function decreaseBuff(paramId: ParameterId): Void;
+ public dynamic function overwriteBuffTurns(paramId: ParameterId,
+  turns: Int): Void;
+ public dynamic function isBuffExpired(paramId: ParameterId): Bool;
 
  /**
   * Updates the buff turns on battler.
   *
   * @memberof Game_BattlerBase
   */
- public function updateBuffTurns(): Void;
+ public dynamic function updateBuffTurns(): Void;
 
  /**
   * Kills the battler.
   *
   * @memberof Game_BattlerBase
   */
- public function die(): Void;
+ public dynamic function die(): Void;
 
  /**
   * Revives the battler.
   *
   * @memberof Game_BattlerBase
   */
- public function revive(): Void;
+ public dynamic function revive(): Void;
 
  /**
   * Returns the states applied to the battler.
@@ -431,7 +432,7 @@ extern class Game_BattlerBase {
   * @returns {Array<RPG.State>}
   * @memberof Game_BattlerBase
   */
- public function states(): Array<State>;
+ public dynamic function states(): Array<State>;
 
  /**
   * Returns the array of state icons attached to the battler;
@@ -439,7 +440,7 @@ extern class Game_BattlerBase {
   * @returns {Array<number>}
   * @memberof Game_BattlerBase
   */
- public function stateIcons(): Array<Icon>;
+ public dynamic function stateIcons(): Array<Icon>;
 
  /**
   * Returns the array of buff icons attached to the battler;
@@ -447,9 +448,10 @@ extern class Game_BattlerBase {
   * @returns {Array<number>}
   * @memberof Game_BattlerBase
   */
- public function buffIcons(): Array<Icon>;
+ public dynamic function buffIcons(): Array<Icon>;
 
- public function buffIconIndex(buffLevel: Int, paramId: ParameterId): Int;
+ public dynamic function buffIconIndex(buffLevel: Int,
+  paramId: ParameterId): Int;
 
  /**
   * Returns all of the icons attached to the battler.
@@ -457,13 +459,13 @@ extern class Game_BattlerBase {
   * @returns {Array<number>}
   * @memberof Game_BattlerBase
   */
- public function allIcons(): Array<Icon>;
+ public dynamic function allIcons(): Array<Icon>;
 
  /**
   * Returns the trait object to the user
   * @return Array<any>
   */
- public function traitObjects(): Array<Any>; // TODO: Figure out trait object style
+ public dynamic function traitObjects(): Array<Any>; // TODO: Figure out trait object style
 
  /**
   * Returns all the traits of the battler.
@@ -471,14 +473,14 @@ extern class Game_BattlerBase {
   * @returns {Array<RPG.Trait>}
   * @memberof Game_BattlerBase
   */
- public function allTraits(): Array<Trait>;
+ public dynamic function allTraits(): Array<Trait>;
 
- public function traits(code: Int): Array<Trait>;
- public function traitsWithId(code: Int, traitId: Int): Array<Trait>;
- public function traitsPi(code: Int, traitId: Int): Float;
- public function traitsSum(code: Int, traitId: Int): Int;
- public function traitsSumAll(code: Int): Int;
- public function traitsSet(code: Int): Array<Int>;
+ public dynamic function traits(code: Int): Array<Trait>;
+ public dynamic function traitsWithId(code: Int, traitId: Int): Array<Trait>;
+ public dynamic function traitsPi(code: Int, traitId: Int): Float;
+ public dynamic function traitsSum(code: Int, traitId: Int): Int;
+ public dynamic function traitsSumAll(code: Int): Int;
+ public dynamic function traitsSet(code: Int): Array<Int>;
 
  /**
   * Returns the base parameters of the battler; this is determined by their
@@ -487,13 +489,13 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function paramBase(paramId: ParameterId): Int;
+ public dynamic function paramBase(paramId: ParameterId): Int;
 
- public function paramPlus(paramId: ParameterId): Int;
- public function paramMin(paramId: ParameterId): Int;
- public function paramMax(paramId: ParameterId): Int;
- public function paramRate(paramId: ParameterId): Float;
- public function paramBuffRate(paramId: ParameterId): Float;
+ public dynamic function paramPlus(paramId: ParameterId): Int;
+ public dynamic function paramMin(paramId: ParameterId): Int;
+ public dynamic function paramMax(paramId: ParameterId): Int;
+ public dynamic function paramRate(paramId: ParameterId): Float;
+ public dynamic function paramBuffRate(paramId: ParameterId): Float;
 
  /**
   * Returns a standard parameter, given a paramId;
@@ -502,7 +504,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function param(paramId: ParameterId): Int;
+ public dynamic function param(paramId: ParameterId): Int;
 
  /**
   * Returns the Extra parameter, given a  x parameter id.
@@ -519,14 +521,14 @@ extern class Game_BattlerBase {
   * @param xparamId
   * @return Int
   */
- public function xparam(xparamId: ParameterId): Int;
+ public dynamic function xparam(xparamId: ParameterId): Int;
 
- public function sparam(sparamId: ParameterId): Int;
- public function elementRate(elementId: Int): Float;
- public function debuffRate(paramId: Int): Float;
- public function stateRate(stateId: Int): Float;
- public function stateResistSet(): Array<Int>;
- public function isStateResist(stateId: Int): Bool;
+ public dynamic function sparam(sparamId: ParameterId): Int;
+ public dynamic function elementRate(elementId: Int): Float;
+ public dynamic function debuffRate(paramId: Int): Float;
+ public dynamic function stateRate(stateId: Int): Float;
+ public dynamic function stateResistSet(): Array<Int>;
+ public dynamic function isStateResist(stateId: Int): Bool;
 
  /**
   * Returns the attack elements of the battler
@@ -534,7 +536,7 @@ extern class Game_BattlerBase {
   * @returns {Array<number>}
   * @memberof Game_BattlerBase
   */
- public function attackElements(): Array<Int>;
+ public dynamic function attackElements(): Array<Int>;
 
  /**
   * Returns the attack states of the battler as a
@@ -542,9 +544,9 @@ extern class Game_BattlerBase {
   * @returns {Array<number>}
   * @memberof Game_BattlerBase
   */
- public function attackStates(): Array<Int>;
+ public dynamic function attackStates(): Array<Int>;
 
- public function attackStatesRate(stateId: Int): Void;
+ public dynamic function attackStatesRate(stateId: Int): Void;
 
  /**
   * Returns the attack speed of the battler.
@@ -552,7 +554,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function attackSpeed(): Int;
+ public dynamic function attackSpeed(): Int;
 
  /**
   * Returns the number of attacks available to the battler.
@@ -560,22 +562,22 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function attackTimesAdd(): Int;
+ public dynamic function attackTimesAdd(): Int;
 
  /**
   * Returns an array of integers
   * representing skill type ids.
   * @return Array<Int>
   */
- public function addedSkillTypes(): Array<Int>;
+ public dynamic function addedSkillTypes(): Array<Int>;
 
- public function isSkillTypeSealed(skilltypeId: Int): Bool;
- public function addedSkills(): Array<Int>;
- public function isSkillSealed(skillId: Int): Bool;
- public function isEquipWtypeOk(weaponTypeId: Int): Bool;
- public function isEquipAtypeOk(armorTypeId: Int): Bool;
- public function isEquipTypeLocked(equipmentTypeId: Int): Bool;
- public function isEquipTypeSealed(equipmentTypeId: Int): Bool;
+ public dynamic function isSkillTypeSealed(skilltypeId: Int): Bool;
+ public dynamic function addedSkills(): Array<Int>;
+ public dynamic function isSkillSealed(skillId: Int): Bool;
+ public dynamic function isEquipWtypeOk(weaponTypeId: Int): Bool;
+ public dynamic function isEquipAtypeOk(armorTypeId: Int): Bool;
+ public dynamic function isEquipTypeLocked(equipmentTypeId: Int): Bool;
+ public dynamic function isEquipTypeSealed(equipmentTypeId: Int): Bool;
 
  /**
   * Returns the battler slot type of a trait.
@@ -583,7 +585,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function slotType(): SlotType;
+ public dynamic function slotType(): SlotType;
 
  /**
   * Returns true if the battler dual wields.
@@ -591,16 +593,16 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isDualWield(): Bool;
+ public dynamic function isDualWield(): Bool;
 
- public function actionPlusSet(): Array<Int>; // TODO: Make Typedef
+ public dynamic function actionPlusSet(): Array<Int>; // TODO: Make Typedef
 
  /**
   * Takes a special flag
   * @param flagId
   * @return Bool
   */
- public function specialFlag(flagId: Int): Bool;
+ public dynamic function specialFlag(flagId: Int): Bool;
 
  /**
   * Returns the collapse type of the battler.
@@ -608,9 +610,9 @@ extern class Game_BattlerBase {
   * @returns {Int}
   * @memberof Game_BattlerBase
   */
- public function collapseType(): CollapseType;
+ public dynamic function collapseType(): CollapseType;
 
- public function partyAbility(abilityId: Int): Bool;
+ public dynamic function partyAbility(abilityId: Int): Bool;
 
  /**
   * Returns true if the battler is set to battle automatically.
@@ -618,7 +620,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isAutoBattle(): Bool;
+ public dynamic function isAutoBattle(): Bool;
 
  /**
   * Returns true if the battler is guarding.
@@ -626,9 +628,9 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isGuard(): Bool;
+ public dynamic function isGuard(): Bool;
 
- public function isSubstitute(): Bool;
+ public dynamic function isSubstitute(): Bool;
 
  /**
   * Returns true if tp is preserved between battles.
@@ -636,9 +638,9 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isPreserveTp(): Bool;
+ public dynamic function isPreserveTp(): Bool;
 
- public function addParam(paramId: ParameterId, value: Int): Void;
+ public dynamic function addParam(paramId: ParameterId, value: Int): Void;
 
  /**
   * Sets the battler hp.
@@ -646,7 +648,7 @@ extern class Game_BattlerBase {
   * @param {number} hp
   * @memberof Game_BattlerBase
   */
- public function setHp(hp: Int): Void;
+ public dynamic function setHp(hp: Int): Void;
 
  /**
   * Sets the battler mp.
@@ -654,7 +656,7 @@ extern class Game_BattlerBase {
   * @param {number} mp
   * @memberof Game_BattlerBase
   */
- public function setMp(mp: Int): Void;
+ public dynamic function setMp(mp: Int): Void;
 
  /**
   * Sets the battler tp.
@@ -662,7 +664,7 @@ extern class Game_BattlerBase {
   * @param {number} tp
   * @memberof Game_BattlerBase
   */
- public function setTp(tp: Int): Void;
+ public dynamic function setTp(tp: Int): Void;
 
  /**
   * Returns the maximum tp of the battler.
@@ -670,21 +672,21 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function maxTp(): Int;
+ public dynamic function maxTp(): Int;
 
  /**
   * Refreshes the battler.
   *
   * @memberof Game_BattlerBase
   */
- public function refresh(): Void;
+ public dynamic function refresh(): Void;
 
  /**
   * Recovers the battler from all states and restores the
   * battler to maximum hp and mp.
   * @memberof Game_BattlerBase
   */
- public function recoverAll(): Void;
+ public dynamic function recoverAll(): Void;
 
  /**
   * Returns the percentage of the battler's hp left as a float.
@@ -692,7 +694,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function hpRate(): Float;
+ public dynamic function hpRate(): Float;
 
  /**
   * Returns the percentage of the battler's mp left as a float.
@@ -700,7 +702,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function mpRate(): Float;
+ public dynamic function mpRate(): Float;
 
  /**
   * Returns the percentage of the battler's tp left as a float.
@@ -708,21 +710,21 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function tpRate(): Float;
+ public dynamic function tpRate(): Float;
 
  /**
   * Hides the game battler.
   *
   * @memberof Game_BattlerBase
   */
- public function hide(): Void;
+ public dynamic function hide(): Void;
 
  /**
   * Shows the game battler.
   *
   * @memberof Game_BattlerBase
   */
- public function appear(): Void;
+ public dynamic function appear(): Void;
 
  /**
   * Returns true if the game battler is hidden.
@@ -730,7 +732,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isHidden(): Bool;
+ public dynamic function isHidden(): Bool;
 
  /**
   * Returns true if the game battler is not hidden.
@@ -738,7 +740,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isAppeared(): Bool;
+ public dynamic function isAppeared(): Bool;
 
  /**
   * Returns true if the battler is dead.
@@ -746,7 +748,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isDead(): Bool;
+ public dynamic function isDead(): Bool;
 
  /**
   * Returns true if the battler is alive.
@@ -754,7 +756,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isAlive(): Bool;
+ public dynamic function isAlive(): Bool;
 
  /**
   * Returns true if the battler is dying.
@@ -762,7 +764,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isDying(): Bool;
+ public dynamic function isDying(): Bool;
 
  /**
   * Returns true if the game battler is restricted.
@@ -770,7 +772,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isRestricted(): Bool;
+ public dynamic function isRestricted(): Bool;
 
  /**
   * Returns true if the battler can input actions.
@@ -778,9 +780,9 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function canInput(): Bool;
+ public dynamic function canInput(): Bool;
 
- public function canMove(): Bool;
+ public dynamic function canMove(): Bool;
 
  /**
   * Returns true if the battler is confused.
@@ -788,7 +790,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isConfused(): Bool;
+ public dynamic function isConfused(): Bool;
 
  /**
   * Returns the confusion level of the battler.
@@ -796,7 +798,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function confusionLevel(): Int;
+ public dynamic function confusionLevel(): Int;
 
  /**
   * Returns true if the battler is an actor.
@@ -804,7 +806,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isActor(): Bool;
+ public dynamic function isActor(): Bool;
 
  /**
   * Returns true if the battler is an enemy.
@@ -812,14 +814,14 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isEnemy(): Bool;
+ public dynamic function isEnemy(): Bool;
 
  /**
   * Sorts the states attached to the battler.
   *
   * @memberof Game_BattlerBase
   */
- public function sortStates(): Void;
+ public dynamic function sortStates(): Void;
 
  /**
   * Returns the number of the restriction.
@@ -827,7 +829,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function restriction(): Int;
+ public dynamic function restriction(): Int;
 
  /**
   * Adds a new state given a state id to the battler.
@@ -835,18 +837,18 @@ extern class Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_BattlerBase
   */
- public function addNewState(stateId: Int): Void;
+ public dynamic function addNewState(stateId: Int): Void;
 
  /**
   * Handler for when the battler is restricted.
   *
   * @memberof Game_BattlerBase
   */
- public function onRestrict(): Void;
+ public dynamic function onRestrict(): Void;
 
- public function mostImportantStateText(): String;
- public function stateMotionIndex(): Int;
- public function stateOverlayIndex(): Int;
+ public dynamic function mostImportantStateText(): String;
+ public dynamic function stateMotionIndex(): Int;
+ public dynamic function stateOverlayIndex(): Int;
 
  /**
   * Returns true if the skill is a weapon type
@@ -855,7 +857,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isSkillWtypeOk(skill: Skill): Bool;
+ public dynamic function isSkillWtypeOk(skill: Skill): Bool;
 
  /**
   * Returns the mp cost of the skill.
@@ -864,7 +866,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function skillMpCost(skill: Skill): Int;
+ public dynamic function skillMpCost(skill: Skill): Int;
 
  /**
   * Returns the tp cost of the skill.
@@ -873,7 +875,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function skillTpCost(skill: Skill): Int;
+ public dynamic function skillTpCost(skill: Skill): Int;
 
  /**
   * Returns true if the battler can pay the cost
@@ -882,7 +884,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function canPaySkillCost(skill: Skill): Bool;
+ public dynamic function canPaySkillCost(skill: Skill): Bool;
 
  /**
   * Pays the cost of the skill when activating the skill.
@@ -890,7 +892,7 @@ extern class Game_BattlerBase {
   * @param {RPG.Skill} skill
   * @memberof Game_BattlerBase
   */
- public function paySkillCost(skill: Skill): Void;
+ public dynamic function paySkillCost(skill: Skill): Void;
 
  /**
   * Returns true if the item occasion is okay.
@@ -899,9 +901,9 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function isOccasionOk(item: UsableItem): Bool;
+ public dynamic function isOccasionOk(item: UsableItem): Bool;
 
- public function meetsUsableItemConditions(item: UsableItem): Bool;
+ public dynamic function meetsUsableItemConditions(item: UsableItem): Bool;
 
  /**
   * Returns true if the battler meets the skill conditions.
@@ -910,7 +912,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function meetsSkillConditions(skill: Skill): Bool;
+ public dynamic function meetsSkillConditions(skill: Skill): Bool;
 
  /**
   * Returns true if the battler meets the item conditions.
@@ -919,7 +921,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function meetsItemConditions(item: Item): Bool;
+ public dynamic function meetsItemConditions(item: Item): Bool;
 
  /**
   * Returns true if the battler can use the item.
@@ -928,7 +930,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function canUse(item: UsableItem): Bool;
+ public dynamic function canUse(item: UsableItem): Bool;
 
  /**
   * Returns true if the battler can equip the item.
@@ -937,7 +939,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function canEquip(item: EquipItem): Bool;
+ public dynamic function canEquip(item: EquipItem): Bool;
 
  /**
   * Returns true if the battler can equip a weapon.
@@ -946,7 +948,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function canEquipWeapon(item: EquipItem): Bool;
+ public dynamic function canEquipWeapon(item: EquipItem): Bool;
 
  /**
   * Returns true if the battler can equip armor.
@@ -955,7 +957,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function canEquipArmor(item: EquipItem): Bool;
+ public dynamic function canEquipArmor(item: EquipItem): Bool;
 
  /**
   * Returns the attack skill id in the database.
@@ -963,7 +965,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function attackSkillid(): Int;
+ public dynamic function attackSkillid(): Int;
 
  /**
   * Returns the guard skill id in the database.
@@ -971,7 +973,7 @@ extern class Game_BattlerBase {
   * @returns {number}
   * @memberof Game_BattlerBase
   */
- public function guardSkillId(): Int;
+ public dynamic function guardSkillId(): Int;
 
  /**
   * Returns true if the battler can attack.
@@ -979,7 +981,7 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function canAttack(): Bool;
+ public dynamic function canAttack(): Bool;
 
  /**
   * Returns true if the battler can guard.
@@ -987,5 +989,5 @@ extern class Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_BattlerBase
   */
- public function canGuard(): Bool;
+ public dynamic function canGuard(): Bool;
 }

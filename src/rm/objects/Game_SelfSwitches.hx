@@ -19,15 +19,15 @@ extern class Game_SelfSwitches {
   */
  private var _data: DynamicAccess<Dynamic>;
 
- public function new(): Void;
- public function initialize(): Void;
+ public dynamic function new(): Void;
+ public dynamic function initialize(): Void;
 
  /**
   * Clears the array of data for the game's self switches.
   *
   * @memberof Game_SelfSwitches
   */
- public function clear(): Void;
+ public dynamic function clear(): Void;
 
  /**
   * Returns the value of the switch at the current key;
@@ -36,7 +36,7 @@ extern class Game_SelfSwitches {
   * @returns {boolean}
   * @memberof Game_SelfSwitches
   */
- public function value(key: Array<Any>): Bool;
+ public dynamic function value(key: Array<Any>): Bool;
 
  /**
   * Sets the value of the key of the respected self switch.
@@ -45,7 +45,7 @@ extern class Game_SelfSwitches {
   * @param {boolean} value
   * @memberof Game_SelfSwitches
   */
- public function setValue(key: Array<Any>, value: Bool): Void;
+ public dynamic function setValue(key: Array<Any>, value: Bool): Void;
 
- public function onChange(): Void;
+ public dynamic function onChange(): Void;
 }

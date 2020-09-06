@@ -19,23 +19,36 @@ extern class TouchInput {
  @:native("_pressedTime")
  public static var __pressedTime: Int;
  private static var _pressedTime: Int;
+ @:native("_events")
+ public static var __events: TouchInputEvents;
  private static var _events: TouchInputEvents;
+ @:native("_triggered")
+ public static var __triggered: Bool;
  private static var _triggered: Bool;
+ @:native("_cancelled")
+ public static var __cancelled: Bool;
  private static var _cancelled: Bool;
+ @:native("_moved")
+ public static var __moved: Bool;
  private static var _moved: Bool;
+ @:native("_released")
+ public static var __released: Bool;
  private static var _released: Bool;
+ @:native("_wheelX")
+ public static var __wheelX: Float;
  private static var _wheelX: Float;
+ @:native("_wheelY")
+ public static var __wheelY: Float;
  private static var _wheelY: Float;
+ @:native("_x")
+ public static var __x: Int;
  private static var _x: Int;
+ @:native("_y")
+ public static var __y: Int;
  private static var _y: Int;
  @:native("_date")
  public static var __date: Int;
  private static var _date: Int;
-
- @:native("_x")
- public static var __x: Int;
- @:native("_y")
- public static var __y: Int;
 
  /**
   * The wait time of the pseudo key repeat in frames.
@@ -106,7 +119,7 @@ extern class TouchInput {
   * @static
   * @method initialize
   */
- public static function initialize(): Void;
+ public static dynamic function initialize(): Void;
 
  /**
   * Clears all the touch data.
@@ -114,7 +127,7 @@ extern class TouchInput {
   * @static
   * @method clear
   */
- public static function clear(): Void;
+ public static dynamic function clear(): Void;
 
  /**
   * Updates the touch data.
@@ -122,7 +135,7 @@ extern class TouchInput {
   * @static
   * @method update
   */
- public static function update(): Void;
+ public static dynamic function update(): Void;
 
  /**
   * Checks whether the mouse button or touchscreen is currently pressed down.
@@ -131,7 +144,7 @@ extern class TouchInput {
   * @method isPressed
   * @return {Boolean} True if the mouse button or touchscreen is pressed
   */
- public static function isPressed(): Bool;
+ public static dynamic function isPressed(): Bool;
 
  /**
   * Checks whether the left mouse button or touchscreen is just pressed.
@@ -140,7 +153,7 @@ extern class TouchInput {
   * @method isTriggered
   * @return {Boolean} True if the mouse button or touchscreen is triggered
   */
- public static function isTriggered(): Bool;
+ public static dynamic function isTriggered(): Bool;
 
  /**
   * Checks whether the left mouse button or touchscreen is just pressed
@@ -150,7 +163,7 @@ extern class TouchInput {
   * @method isRepeated
   * @return {Boolean} True if the mouse button or touchscreen is repeated
   */
- public static function isRepeated(): Bool;
+ public static dynamic function isRepeated(): Bool;
 
  /**
   * Checks whether the left mouse button or touchscreen is kept depressed.
@@ -159,7 +172,7 @@ extern class TouchInput {
   * @method isLongPressed
   * @return {Boolean} True if the left mouse button or touchscreen is long-pressed
   */
- public static function isLongPressed(): Bool;
+ public static dynamic function isLongPressed(): Bool;
 
  /**
   * Checks whether the right mouse button is just pressed.
@@ -168,7 +181,7 @@ extern class TouchInput {
   * @method isCancelled
   * @return {Boolean} True if the right mouse button is just pressed
   */
- public static function isCancelled(): Bool;
+ public static dynamic function isCancelled(): Bool;
 
  /**
   * Checks whether the mouse or a finger on the touchscreen is moved.
@@ -177,7 +190,7 @@ extern class TouchInput {
   * @method isMoved
   * @return {Boolean} True if the mouse or a finger on the touchscreen is moved
   */
- public static function isMoved(): Bool;
+ public static dynamic function isMoved(): Bool;
 
  /**
   * Checks whether the left mouse button or touchscreen is released.
@@ -186,14 +199,14 @@ extern class TouchInput {
   * @method isReleased
   * @return {Boolean} True if the mouse button or touchscreen is released
   */
- public static function isReleased(): Bool;
+ public static dynamic function isReleased(): Bool;
 
  /**
   * @static
   * @method _setupEventHandlers
   * @private
   */
- private static function _setupEventHandlers(): Void;
+ private static dynamic function _setupEventHandlers(): Void;
 
  /**
   * @static
@@ -201,7 +214,7 @@ extern class TouchInput {
   * @param {MouseEvent} event
   * @private
   */
- private static function _onMouseDown(event: MouseEvent): Void;
+ private static dynamic function _onMouseDown(event: MouseEvent): Void;
 
  /**
   * @static
@@ -209,7 +222,7 @@ extern class TouchInput {
   * @param {MouseEvent} event
   * @private
   */
- private static function _onLeftButtonDown(event: MouseEvent): Void;
+ private static dynamic function _onLeftButtonDown(event: MouseEvent): Void;
 
  /**
   * @static
@@ -217,7 +230,7 @@ extern class TouchInput {
   * @param {MouseEvent} event
   * @private
   */
- private static function _onMiddleButtonDown(event: MouseEvent): Void;
+ private static dynamic function _onMiddleButtonDown(event: MouseEvent): Void;
 
  /**
   * @static
@@ -225,7 +238,7 @@ extern class TouchInput {
   * @param {MouseEvent} event
   * @private
   */
- private static function _onRightButtonDown(event: MouseEvent): Void;
+ private static dynamic function _onRightButtonDown(event: MouseEvent): Void;
 
  /**
   * @static
@@ -233,7 +246,7 @@ extern class TouchInput {
   * @param {MouseEvent} event
   * @private
   */
- private static function _onMouseMove(event: MouseEvent): Void;
+ private static dynamic function _onMouseMove(event: MouseEvent): Void;
 
  /**
   * @static
@@ -241,7 +254,7 @@ extern class TouchInput {
   * @param {MouseEvent} event
   * @private
   */
- private static function _onMouseUp(event: MouseEvent): Void;
+ private static dynamic function _onMouseUp(event: MouseEvent): Void;
 
  /**
   * @static
@@ -249,7 +262,7 @@ extern class TouchInput {
   * @param {WheelEvent} event
   * @private
   */
- private static function _onWheel(event: WheelEvent): Void;
+ private static dynamic function _onWheel(event: WheelEvent): Void;
 
  /**
   * @static
@@ -257,7 +270,7 @@ extern class TouchInput {
   * @param {TouchEvent} event
   * @private
   */
- private static function _onTouchStart(event: TouchEvent): Void;
+ private static dynamic function _onTouchStart(event: TouchEvent): Void;
 
  /**
   * @static
@@ -265,7 +278,7 @@ extern class TouchInput {
   * @param {TouchEvent} event
   * @private
   */
- private static function _onTouchMove(event: TouchEvent): Void;
+ private static dynamic function _onTouchMove(event: TouchEvent): Void;
 
  /**
   * @static
@@ -273,7 +286,7 @@ extern class TouchInput {
   * @param {TouchEvent} event
   * @private
   */
- private static function _onTouchEnd(event: TouchEvent): Void;
+ private static dynamic function _onTouchEnd(event: TouchEvent): Void;
 
  /**
   * @static
@@ -281,7 +294,7 @@ extern class TouchInput {
   * @param {TouchEvent} event
   * @private
   */
- private static function _onTouchCancel(event: TouchEvent): Void;
+ private static dynamic function _onTouchCancel(event: TouchEvent): Void;
 
  /**
   * @static
@@ -289,7 +302,7 @@ extern class TouchInput {
   * @param {PointerEvent} event
   * @private
   */
- private static function _onPointerDown(event: PointerEvent): Void;
+ private static dynamic function _onPointerDown(event: PointerEvent): Void;
 
  /**
   * @static
@@ -298,7 +311,7 @@ extern class TouchInput {
   * @param {Number} y
   * @private
   */
- private static function _onTrigger(x: Int, y: Int): Void;
+ private static dynamic function _onTrigger(x: Int, y: Int): Void;
 
  /**
   * @static
@@ -307,7 +320,7 @@ extern class TouchInput {
   * @param {Number} y
   * @private
   */
- private static function _onCancel(x: Int, y: Int): Void;
+ private static dynamic function _onCancel(x: Int, y: Int): Void;
 
  /**
   * @static
@@ -316,7 +329,7 @@ extern class TouchInput {
   * @param {Number} y
   * @private
   */
- private static function _onMove(x: Int, y: Int): Void;
+ private static dynamic function _onMove(x: Int, y: Int): Void;
 
  /**
   * @static
@@ -325,5 +338,5 @@ extern class TouchInput {
   * @param {Number} y
   * @private
   */
- private static function _onRelease(x: Int, y: Int): Void;
+ private static dynamic function _onRelease(x: Int, y: Int): Void;
 }

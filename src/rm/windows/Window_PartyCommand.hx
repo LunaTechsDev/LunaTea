@@ -10,7 +10,7 @@ package rm.windows;
 @:expose("Window_PartyCommand")
 @:native("Window_PartyCommand")
 extern class Window_PartyCommand extends Window_Command {
- public function new();
+ public dynamic function new();
 
- public function setup(): Void;
+ public dynamic function setup(): Void;
 }

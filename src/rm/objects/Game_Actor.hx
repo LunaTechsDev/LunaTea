@@ -82,9 +82,9 @@ extern class Game_Actor extends Game_Battler {
  /** [read-only] */
  public var level: Int;
 
- public function new(actorId: Int);
+ public dynamic function new(actorId: Int);
 
- public function setup(actorId: Int): Void;
+ public dynamic function setup(actorId: Int): Void;
 
  /**
   * Returns the id of the actor.
@@ -92,7 +92,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function actorId(): Int;
+ public dynamic function actorId(): Int;
 
  /**
   * Returns the database information of the actor.
@@ -100,13 +100,13 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Actor}
   * @memberof Game_Actor
   */
- public function actor(): Actor;
+ public dynamic function actor(): Actor;
 
  /**
   * Returns the actor's name.
   * @return String
   */
- public function name(): String;
+ public dynamic function name(): String;
 
  /**
   * Sets the actor name.
@@ -114,7 +114,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {String} name
   * @memberof Game_Actor
   */
- public function setName(name: String): Void;
+ public dynamic function setName(name: String): Void;
 
  /**
   * Returns the nickname of the actor.
@@ -122,7 +122,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {String}
   * @memberof Game_Actor
   */
- public function nickname(): String;
+ public dynamic function nickname(): String;
 
  /**
   * Sets the nickname of the actor.
@@ -130,7 +130,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {String} nickname
   * @memberof Game_Actor
   */
- public function setNickname(nickname: String): Void;
+ public dynamic function setNickname(nickname: String): Void;
 
  /**
   * Returns the actor profile.
@@ -138,7 +138,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {String}
   * @memberof Game_Actor
   */
- public function profile(): String;
+ public dynamic function profile(): String;
 
  /**
   * Sets the actor profile.
@@ -146,7 +146,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {String} profile
   * @memberof Game_Actor
   */
- public function setProfile(profile: String): Void;
+ public dynamic function setProfile(profile: String): Void;
 
  /**
   * Returns the face name of the actor; this is
@@ -154,7 +154,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {String}
   * @memberof Game_Actor
   */
- public function faceName(): String;
+ public dynamic function faceName(): String;
 
  /**
   * Returns the face index of the actor.
@@ -162,14 +162,14 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function faceIndex(): Int;
+ public dynamic function faceIndex(): Int;
 
  /**
   * Clears all states from the actor.
   *
   * @memberof Game_Actor
   */
- public function clearStates(): Void;
+ public dynamic function clearStates(): Void;
 
  /**
   * Erase the specified state from the actor.
@@ -177,7 +177,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {Int} stateId
   * @memberof Game_Actor
   */
- public function eraseState(stateId: Int): Void;
+ public dynamic function eraseState(stateId: Int): Void;
 
  /**
   * Reset state count of the specified state.
@@ -185,14 +185,14 @@ extern class Game_Actor extends Game_Battler {
   * @param {Int} stateId
   * @memberof Game_Actor
   */
- public function resetStateCounts(stateId: Int): Void;
+ public dynamic function resetStateCounts(stateId: Int): Void;
 
  /**
   * Initialize images of the actor.
   *
   * @memberof Game_Actor
   */
- public function initImages(): Void;
+ public dynamic function initImages(): Void;
 
  /**
   * Returns the exp required to level.
@@ -201,14 +201,14 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function expForLevel(level: Int): Int;
+ public dynamic function expForLevel(level: Int): Int;
 
  /**
   * Initialize exp of the actor.
   *
   * @memberof Game_Actor
   */
- public function initExp(): Void;
+ public dynamic function initExp(): Void;
 
  /**
   * Returns the current experience points of the actor.
@@ -216,7 +216,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function currentExp(): Int;
+ public dynamic function currentExp(): Int;
 
  /**
   * Returns the current level's experience for the actor.
@@ -224,7 +224,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function currentLevelExp(): Int;
+ public dynamic function currentLevelExp(): Int;
 
  /**
   * Returns the experience points for the next level of the actor.
@@ -232,7 +232,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function nextLevelExp(): Int;
+ public dynamic function nextLevelExp(): Int;
 
  /**
   * Returns the next required experience points for the actor to level up.
@@ -240,14 +240,14 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function nextRequiredExp(): Int;
+ public dynamic function nextRequiredExp(): Int;
 
  /**
   * Returns the maximum level of the actor.
   *
   * @memberof Game_Actor
   */
- public function maxLevel(): Void;
+ public dynamic function maxLevel(): Void;
 
  /**
   * Returns true if the actor is max level.
@@ -255,14 +255,14 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function isMaxLevel(): Bool;
+ public dynamic function isMaxLevel(): Bool;
 
  /**
   * Initialize actor skills.
   *
   * @memberof Game_Actor
   */
- public function initSkills(): Void;
+ public dynamic function initSkills(): Void;
 
  /**
   * Initialize actor equipment in the given slots.
@@ -270,7 +270,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {Array<Int>} equips
   * @memberof Game_Actor
   */
- public function initEquips(equips: Array<Int>): Void;
+ public dynamic function initEquips(equips: Array<Int>): Void;
 
  /**
   * Returns the equip slots of the actor.
@@ -278,7 +278,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Array<Int>}
   * @memberof Game_Actor
   */
- public function equipSlots(): Array<Int>;
+ public dynamic function equipSlots(): Array<Int>;
 
  /**
   * Returns the equipment of the actor.
@@ -286,7 +286,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Array<EquipItem>}
   * @memberof Game_Actor
   */
- public function equips(): Array<EquipItem>;
+ public dynamic function equips(): Array<EquipItem>;
 
  /**
   * Returns the weapon of the actor.
@@ -294,7 +294,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Array<Weapon>}
   * @memberof Game_Actor
   */
- public function weapons(): Array<Weapon>;
+ public dynamic function weapons(): Array<Weapon>;
 
  /**
   * Returns the armor of the actor.
@@ -302,7 +302,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Array<Armor>}
   * @memberof Game_Actor
   */
- public function armors(): Array<Armor>;
+ public dynamic function armors(): Array<Armor>;
 
  /**
   * Returns true if the actor has a weapon.
@@ -311,7 +311,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function hasWeapon(weapon: Weapon): Bool;
+ public dynamic function hasWeapon(weapon: Weapon): Bool;
 
  /**
   * Returns true if the actor has armor.
@@ -320,7 +320,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function hasArmor(armor: Armor): Bool;
+ public dynamic function hasArmor(armor: Armor): Bool;
 
  /**
   * Returns true if the equip change is okay in the given slot.
@@ -329,7 +329,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function isEquipChangeOk(slotId: Int): Bool;
+ public dynamic function isEquipChangeOk(slotId: Int): Bool;
 
  /**
   * Changes the actor equipment in the given slot with the
@@ -339,7 +339,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {EquipItem} item
   * @memberof Game_Actor
   */
- public function changeEquip(slotId: Int, item: EquipItem): Void;
+ public dynamic function changeEquip(slotId: Int, item: EquipItem): Void;
 
  /**
   * Forces the actor to change equipment in the given slot
@@ -349,7 +349,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {EquipItem} item
   * @memberof Game_Actor
   */
- public function forceChangeEquip(slotId: Int, item: EquipItem): Void;
+ public dynamic function forceChangeEquip(slotId: Int, item: EquipItem): Void;
 
  /**
   * Trades the new item with the old item in the party inventory.
@@ -359,7 +359,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function tradeItemWithParty(newItem: EquipItem,
+ public dynamic function tradeItemWithParty(newItem: EquipItem,
   oldItem: EquipItem): Bool;
 
  /**
@@ -369,7 +369,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {Int} itemId
   * @memberof Game_Actor
   */
- public function changeEquipById(etypeId: Int, itemId: Int): Void;
+ public dynamic function changeEquipById(etypeId: Int, itemId: Int): Void;
 
  /**
   * Returns true if the actor is equipped with the specific item.
@@ -378,7 +378,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function isEquipped(item: EquipItem): Bool;
+ public dynamic function isEquipped(item: EquipItem): Bool;
 
  /**
   * Discards the given equip item from the actor; item
@@ -386,7 +386,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {EquipItem} item
   * @memberof Game_Actor
   */
- public function discardEquip(item: EquipItem): Void;
+ public dynamic function discardEquip(item: EquipItem): Void;
 
  /**
   * Returns items the actor can't normally equip to the party inventory.
@@ -394,21 +394,21 @@ extern class Game_Actor extends Game_Battler {
   * @param {Bool} forcing
   * @memberof Game_Actor
   */
- public function releaseUnequippableItems(forcing: Bool): Void;
+ public dynamic function releaseUnequippableItems(forcing: Bool): Void;
 
  /**
   * Clears the actor's equipment; items are returned to the inventory.
   *
   * @memberof Game_Actor
   */
- public function clearEquipments(): Void;
+ public dynamic function clearEquipments(): Void;
 
  /**
   * Optimize the actor's equipment.
   *
   * @memberof Game_Actor
   */
- public function optimizeEquipments(): Void;
+ public dynamic function optimizeEquipments(): Void;
 
  /**
   * Equips the best item in the given slot.
@@ -416,7 +416,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {Int} slotId
   * @memberof Game_Actor
   */
- public function bestEquipItem(slotId: Int): Void;
+ public dynamic function bestEquipItem(slotId: Int): Void;
 
  /**
   * Calculates the equip item performance and returns the sum/difference.
@@ -425,22 +425,22 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function calcEquipItemPerformance(item: EquipItem): Float;
+ public dynamic function calcEquipItemPerformance(item: EquipItem): Float;
 
- public function isSkillWtypeOk(skill: Skill): Bool;
+ public dynamic function isSkillWtypeOk(skill: Skill): Bool;
 
- public function isWtypeEquipped(wtypeId: Int): Bool;
+ public dynamic function isWtypeEquipped(wtypeId: Int): Bool;
 
  /**
   * Refreshes the actor.
   *
   * @memberof Game_Actor
   */
- public function refresh(): Void;
+ public dynamic function refresh(): Void;
 
- public function friendsUnit(): Game_Party;
+ public dynamic function friendsUnit(): Game_Party;
 
- public function opponentsUnit(): Game_Troop;
+ public dynamic function opponentsUnit(): Game_Troop;
 
  /**
   * Returns true if the actor is a member in battle.
@@ -448,9 +448,9 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function isBattleMember(): Bool;
+ public dynamic function isBattleMember(): Bool;
 
- public function isFormationChangeOk(): Bool;
+ public dynamic function isFormationChangeOk(): Bool;
 
  /**
   * Returns the current class of the actor from the database.
@@ -458,7 +458,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Class}
   * @memberof Game_Actor
   */
- public function currentClass(): RPGClass;
+ public dynamic function currentClass(): RPGClass;
 
  /**
   * Returns true if the actor is the specified class from the database.
@@ -467,7 +467,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function isClass(gameClass: RPGClass): Bool;
+ public dynamic function isClass(gameClass: RPGClass): Bool;
 
  /**
   * Returns the actor's skills; even if the skills are not usable.
@@ -475,7 +475,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Array<Skill>}
   * @memberof Game_Actor
   */
- public function skills(): Array<Skill>;
+ public dynamic function skills(): Array<Skill>;
 
  /**
   * Returns the usable skills of the actor.
@@ -483,7 +483,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Array<Skill>}
   * @memberof Game_Actor
   */
- public function usableSkills(): Array<Skill>;
+ public dynamic function usableSkills(): Array<Skill>;
 
  /**
   * Returns the attack element ids.
@@ -491,7 +491,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Array<Int>}
   * @memberof Game_Actor
   */
- public function attackElements(): Array<Int>;
+ public dynamic function attackElements(): Array<Int>;
 
  /**
   * Returns true if the actor has no weapon.
@@ -499,7 +499,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function hasNoWeapons(): Bool;
+ public dynamic function hasNoWeapons(): Bool;
 
  /**
   * Returns the element id of barehanded attacks.
@@ -508,14 +508,14 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function bareHandsElementId(): Int;
+ public dynamic function bareHandsElementId(): Int;
 
  /**
   * Returns the base value of the parameter.
   * @param paramId
   * @return Int
   */
- public function paramBase(paramId: ParameterId): Int;
+ public dynamic function paramBase(paramId: ParameterId): Int;
 
  /**
   * Returns the first attack animation id.
@@ -523,7 +523,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function attackAnimationId1(): Int;
+ public dynamic function attackAnimationId1(): Int;
 
  /**
   * Returns the second attack animation id.
@@ -531,7 +531,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function attackAnimationId2(): Int;
+ public dynamic function attackAnimationId2(): Int;
 
  /**
   * Returns the animation id for a barehanded attack.
@@ -539,7 +539,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function bareHandsAnimationId(): Int;
+ public dynamic function bareHandsAnimationId(): Int;
 
  /**
   * Change the actor experience points; leveling up the actor
@@ -549,23 +549,23 @@ extern class Game_Actor extends Game_Battler {
   * @param {Bool} show
   * @memberof Game_Actor
   */
- public function changeExp(exp: Int, show: Bool): Void;
+ public dynamic function changeExp(exp: Int, show: Bool): Void;
 
  /**
   * Level up the actor.
   *
   * @memberof Game_Actor
   */
- public function levelUp(): Void;
+ public dynamic function levelUp(): Void;
 
  /**
   * Level down the actor.
   *
   * @memberof Game_Actor
   */
- public function levelDown(): Void;
+ public dynamic function levelDown(): Void;
 
- public function findNewSkills(lastSkills: Array<Skill>): Array<Skill>;
+ public dynamic function findNewSkills(lastSkills: Array<Skill>): Array<Skill>;
 
  /**
   * Displays the actor level up in a message window, with the learned skills.
@@ -573,7 +573,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {Array<Skill>} newSkills
   * @memberof Game_Actor
   */
- public function displayLevelUp(newSkills: Array<Skill>): Void;
+ public dynamic function displayLevelUp(newSkills: Array<Skill>): Void;
 
  /**
   * Gives the specified exp to the actor.
@@ -581,7 +581,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {Int} exp
   * @memberof Game_Actor
   */
- public function gainExp(exp: Int): Void;
+ public dynamic function gainExp(exp: Int): Void;
 
  /**
   * Returns the final exp rate of the actor based on if the actor
@@ -589,7 +589,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function finalExpRate(): Int;
+ public dynamic function finalExpRate(): Int;
 
  /**
   * Returns the exp rate of actors not in battle; this is set in the database.
@@ -597,7 +597,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function benchMembersExpRate(): Int;
+ public dynamic function benchMembersExpRate(): Int;
 
  /**
   * Returns true if the actor should display level up in a message window.
@@ -605,7 +605,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function shouldDisplayLevelUp(): Bool;
+ public dynamic function shouldDisplayLevelUp(): Bool;
 
  /**
   * Changes the actor level; if show is set to true,
@@ -614,7 +614,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {Bool} show
   * @memberof Game_Actor
   */
- public function changeLevel(level: Int, show: Bool): Void;
+ public dynamic function changeLevel(level: Int, show: Bool): Void;
 
  /**
   * Actor learns the specified skill given the skill id.
@@ -622,7 +622,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {Int} skillId
   * @memberof Game_Actor
   */
- public function learnSkill(skillId: Int): Void;
+ public dynamic function learnSkill(skillId: Int): Void;
 
  /**
   * Actor forgets the specified skill given the skill id from
@@ -630,7 +630,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {Int} skillId
   * @memberof Game_Actor
   */
- public function forgetSkill(skillId: Int): Void;
+ public dynamic function forgetSkill(skillId: Int): Void;
 
  /**
   * Returns true if the actor has learned the specified
@@ -639,7 +639,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function isLearnedSkill(skillId: Int): Bool;
+ public dynamic function isLearnedSkill(skillId: Int): Bool;
 
  /**
   * Changes the actor class; if keep is true, the actor
@@ -648,9 +648,9 @@ extern class Game_Actor extends Game_Battler {
   * @param {Bool} keepExp
   * @memberof Game_Actor
   */
- public function changeClass(classId: Int, keepExp: Bool): Void;
+ public dynamic function changeClass(classId: Int, keepExp: Bool): Void;
 
- public function setCharacterImage(characterName: String,
+ public dynamic function setCharacterImage(characterName: String,
   characterIndex: Int): Void;
 
  /**
@@ -661,7 +661,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {Int} faceIndex
   * @memberof Game_Actor
   */
- public function setFaceImage(faceName: String, faceIndex: Int): Void;
+ public dynamic function setFaceImage(faceName: String, faceIndex: Int): Void;
 
  /**
   * Sets the battler image of the actor; this is the sprite displayed
@@ -669,7 +669,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {String} battlerName
   * @memberof Game_Actor
   */
- public function setBattlerImage(battlerName: String): Void;
+ public dynamic function setBattlerImage(battlerName: String): Void;
 
  /**
   * Returns true if the actor sprite is visible.
@@ -677,7 +677,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function isSpriteVisible(): Bool;
+ public dynamic function isSpriteVisible(): Bool;
 
  /**
   * Starts the animation on the actor given the specified animation id;
@@ -688,7 +688,7 @@ extern class Game_Actor extends Game_Battler {
   * @param {Int} delay
   * @memberof Game_Actor
   */
- public function startAnimation(animationId: Int, mirror: Bool,
+ public dynamic function startAnimation(animationId: Int, mirror: Bool,
   delay: Int): Void;
 
  /**
@@ -696,21 +696,21 @@ extern class Game_Actor extends Game_Battler {
   *
   * @memberof Game_Actor
   */
- public function performAttack(): Void;
+ public dynamic function performAttack(): Void;
 
  /**
   * Perform the victory motion for the actor.
   *
   * @memberof Game_Actor
   */
- public function performVictory(): Void;
+ public dynamic function performVictory(): Void;
 
  /**
   * Performs the escape motion for the actor.
   *
   * @memberof Game_Actor
   */
- public function performEscape(): Void;
+ public dynamic function performEscape(): Void;
 
  /**
   * Creates the action list for the actor.
@@ -718,57 +718,57 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Array<Game_Action>}
   * @memberof Game_Actor
   */
- public function makeActionList(): Array<Game_Action>;
+ public dynamic function makeActionList(): Array<Game_Action>;
 
  /**
   * Creates the auto battle actions for the game actor.
   *
   * @memberof Game_Actor
   */
- public function makeAutoBattleActions(): Void;
+ public dynamic function makeAutoBattleActions(): Void;
 
- public function makeConfusionActions(): Void;
+ public dynamic function makeConfusionActions(): Void;
 
  /**
   * Handler for when the player walks on the map scene.
   *
   * @memberof Game_Actor
   */
- public function onPlayerWalk(): Void;
+ public dynamic function onPlayerWalk(): Void;
 
- public function updateStateSteps(state: State): Void;
+ public dynamic function updateStateSteps(state: State): Void;
 
  /**
   * Shows the added states to the actor.
   *
   * @memberof Game_Actor
   */
- public function showAddedStates(): Void;
+ public dynamic function showAddedStates(): Void;
 
  /**
   * Shows the removed states from the actor.
   *
   * @memberof Game_Actor
   */
- public function showRemovedStates(): Void;
+ public dynamic function showRemovedStates(): Void;
 
- public function stepsForTurn(): Int;
+ public dynamic function stepsForTurn(): Int;
 
- public function turnEndOnMap(): Void;
+ public dynamic function turnEndOnMap(): Void;
 
  /**
   * Checks the effect of the floor on the actor.
   *
   * @memberof Game_Actor
   */
- public function checkFloorEffect(): Void;
+ public dynamic function checkFloorEffect(): Void;
 
  /**
   * Executes the floor dmaage on the actor.
   *
   * @memberof Game_Actor
   */
- public function executeFloorDamage(): Void;
+ public dynamic function executeFloorDamage(): Void;
 
  /**
   * Returns the basic floor damage.
@@ -776,7 +776,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function basicFloorDamage(): Int;
+ public dynamic function basicFloorDamage(): Int;
 
  /**
   * Returns the max floor damage.
@@ -784,21 +784,21 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Int}
   * @memberof Game_Actor
   */
- public function maxFloorDamage(): Int;
+ public dynamic function maxFloorDamage(): Int;
 
  /**
   * Perform damage to the actor on the map scene.
   *
   * @memberof Game_Actor
   */
- public function performMapDamage(): Void;
+ public dynamic function performMapDamage(): Void;
 
  /**
   * Clears all of the actor's animations.
   *
   * @memberof Game_Actor
   */
- public function clearActions(): Void;
+ public dynamic function clearActions(): Void;
 
  /**
   * Returns action the actor is inputting.
@@ -806,11 +806,11 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Game_Action}
   * @memberof Game_Actor
   */
- public function inputtingAction(): Game_Action;
+ public dynamic function inputtingAction(): Game_Action;
 
- public function selectNextCommand(): Bool;
+ public dynamic function selectNextCommand(): Bool;
 
- public function selectPreviousCommand(): Bool;
+ public dynamic function selectPreviousCommand(): Bool;
 
  /**
   * Returns the last menu skill of the actor.
@@ -818,9 +818,9 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Skill}
   * @memberof Game_Actor
   */
- public function lastMenuSkill(): Skill;
+ public dynamic function lastMenuSkill(): Skill;
 
- public function setLastMenuSkill(skill: Skill): Void;
+ public dynamic function setLastMenuSkill(skill: Skill): Void;
 
  /**
   * Returns the last battle skill of the actor.
@@ -828,9 +828,9 @@ extern class Game_Actor extends Game_Battler {
   * @returns {Skill}
   * @memberof Game_Actor
   */
- public function lastBattleSkill(): Skill;
+ public dynamic function lastBattleSkill(): Skill;
 
- public function setLastBattleSkill(skill: Skill): Void;
+ public dynamic function setLastBattleSkill(skill: Skill): Void;
 
  /**
   * Returns the last command symbol that the actor used.
@@ -838,7 +838,7 @@ extern class Game_Actor extends Game_Battler {
   * @returns {String}
   * @memberof Game_Actor
   */
- public function lastCommandSymbol(): String;
+ public dynamic function lastCommandSymbol(): String;
 
  /**
   * Sets the last command symbol to the given symbol; this is the
@@ -846,12 +846,12 @@ extern class Game_Actor extends Game_Battler {
   * @param {String} symbol
   * @memberof Game_Actor
   */
- public function setLastCommandSymbol(symbol: String): Void;
+ public dynamic function setLastCommandSymbol(symbol: String): Void;
 
  /**
   * Returns true if the item effect  has a special effect from game action.
   * @param item
   * @return Bool
   */
- public function testEscape(item: BaseItem): Bool;
+ public dynamic function testEscape(item: BaseItem): Bool;
 }

@@ -40,35 +40,35 @@ extern class Spriteset_Battle extends Spriteset_Base {
   *
   * @memberof Spriteset_Battle
   */
- public function createBackground(): Void;
+ public dynamic function createBackground(): Void;
 
  /**
   * Creates the battlefield of the battle spriteset.
   *
   * @memberof Spriteset_Battle
   */
- public function createBattleField(): Void;
+ public dynamic function createBattleField(): Void;
 
  /**
   * Creates the battleback of the battle spriteset.
   *
   * @memberof Spriteset_Battle
   */
- public function createBattleback(): Void;
+ public dynamic function createBattleback(): Void;
 
  /**
   * Updates the battleback of the battle spriteset.
   *
   * @memberof Spriteset_Battle
   */
- public function updateBattleback(): Void;
+ public dynamic function updateBattleback(): Void;
 
  /**
   * Locates the battleback and adjusts the coordinates of the
   * battleback.
   * @memberof Spriteset_Battle
   */
- public function locateBattleback(): Void;
+ public dynamic function locateBattleback(): Void;
 
  /**
   * Returns battleb ack 2 of the battle spriteset.
@@ -76,7 +76,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {Bitmap} Instance of the Bitmap class.
   * @memberof Spriteset_Battle
   */
- public function battleback1Bitmap(): Bitmap;
+ public dynamic function battleback1Bitmap(): Bitmap;
 
  /**
   * Returns battleback 2 of the battle spriteset.
@@ -84,7 +84,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {Bitmap} Instance of the Bitmap class.
   * @memberof Spriteset_Battle
   */
- public function battleback2Bitmap(): Bitmap;
+ public dynamic function battleback2Bitmap(): Bitmap;
 
  /**
   *
@@ -92,7 +92,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of battleback 1 bitmap.
   * @memberof Spriteset_Battle
   */
- public function battleback1Name(): String;
+ public dynamic function battleback1Name(): String;
 
  /**
   *
@@ -100,7 +100,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of battleback 2 bitmap.
   * @memberof Spriteset_Battle
   */
- public function battleback2Name(): String;
+ public dynamic function battleback2Name(): String;
 
  /**
   * Returns the battleback 1 name as a string.
@@ -108,7 +108,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of overworld battleback 1 bitmap.
   * @memberof Spriteset_Battle
   */
- public function overworldBattleback1Name(): String;
+ public dynamic function overworldBattleback1Name(): String;
 
  /**
   * Returns the battleback 2 name as a string.
@@ -116,7 +116,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of overworld battleback 2 bitmap.
   * @memberof Spriteset_Battle
   */
- public function overworldBattleback2Name(): String;
+ public dynamic function overworldBattleback2Name(): String;
 
  /**
   *
@@ -124,7 +124,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of the normal battleback 1 bitmap.
   * @memberof Spriteset_Battle
   */
- public function normalBattleback1Name(): String;
+ public dynamic function normalBattleback1Name(): String;
 
  /**
   *
@@ -132,7 +132,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of the normal battleback 2 bitmap.
   * @memberof Spriteset_Battle
   */
- public function normalBattleback2Name(): String;
+ public dynamic function normalBattleback2Name(): String;
 
  /**
   * Given the specified terrtain type, return
@@ -141,7 +141,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of the terrtain battleback 1 bitmap.
   * @memberof Spriteset_Battle
   */
- public function terrainBattleback1Name(type: Int): String; // TODO: Enum Terrain Type
+ public dynamic function terrainBattleback1Name(type: Int): String; // TODO: Enum Terrain Type
 
  /**
   * Given the specified terrain type, return
@@ -150,7 +150,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of the terrain battleback 2 bitmap.
   * @memberof Spriteset_Battle
   */
- public function terrainBattleback2Name(type: Int): String;
+ public dynamic function terrainBattleback2Name(type: Int): String;
 
  /**
   *
@@ -158,7 +158,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of the default battleback 1 name.
   * @memberof Spriteset_Battle
   */
- public function defaultBattleback1Name(): String;
+ public dynamic function defaultBattleback1Name(): String;
 
  /**
   *
@@ -166,7 +166,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of the default battleback 2 name.
   * @memberof Spriteset_Battle
   */
- public function defaultBattleback2Name(): String;
+ public dynamic function defaultBattleback2Name(): String;
 
  /**
   *
@@ -174,7 +174,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of the ship battleback 1  bitmap.
   * @memberof Spriteset_Battle
   */
- public function shipBattleback1Name(): String;
+ public dynamic function shipBattleback1Name(): String;
 
  /**
   *
@@ -182,32 +182,33 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of the ship battleback 2 bitmap.
   * @memberof Spriteset_Battle
   */
- public function shipBattleback2Name(): String;
+ public dynamic function shipBattleback2Name(): String;
 
- public function autotileType(z: Int): Int; // TODO: Add Enum For Auto Tile Type
+ public dynamic function autotileType(z: Int): Int; // TODO: Add Enum For Auto Tile Type
 
  /**
   * Creates sprite enemies for the battle spriteset.
   *
   * @memberof Spriteset_Battle
   */
- public function createEnemies(): Void;
+ public dynamic function createEnemies(): Void;
 
- public function compareEnemySprite(a: Sprite_Enemy, b: Sprite_Enemy): Int;
+ public dynamic function compareEnemySprite(a: Sprite_Enemy,
+  b: Sprite_Enemy): Int;
 
  /**
   * Creates sprite actors for the battle spriteset.
   *
   * @memberof Spriteset_Battle
   */
- public function createActors(): Void;
+ public dynamic function createActors(): Void;
 
  /**
   * Updates the actor sprites on the battle spriteset.
   *
   * @memberof Spriteset_Battle
   */
- public function updateActors(): Void;
+ public dynamic function updateActors(): Void;
 
  /**
   * Returns all battler sprites on the battle spriteset.
@@ -215,7 +216,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {Array<Sprite_Battler>}
   * @memberof Spriteset_Battle
   */
- public function battlerSprites(): Array<Sprite_Battler>;
+ public dynamic function battlerSprites(): Array<Sprite_Battler>;
 
  /**
   * Returns true if animation is playing on the battle spriteset.
@@ -223,9 +224,9 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {boolean}
   * @memberof Spriteset_Battle
   */
- public function isAnimationPlaying(): Bool;
+ public dynamic function isAnimationPlaying(): Bool;
 
- public function isEffecting(): Bool;
+ public dynamic function isEffecting(): Bool;
 
  /**
   * Returns true if any sprite actor or enemy is moving.
@@ -233,7 +234,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {boolean} Representing whether any battle participants are moving.
   * @memberof Spriteset_Battle
   */
- public function isAnyoneMoving(): Bool;
+ public dynamic function isAnyoneMoving(): Bool;
 
  /**
   * Returns true if the battle spriteset is busy.
@@ -241,5 +242,5 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {boolean}
   * @memberof Spriteset_Battle
   */
- public function isBusy(): Bool;
+ public dynamic function isBusy(): Bool;
 }

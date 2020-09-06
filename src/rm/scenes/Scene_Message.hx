@@ -31,19 +31,19 @@ extern class Scene_Message extends Scene_Base {
  public var __numberInputWindow: Window_NumberInput;
  private var _numberInputWindow: Window_NumberInput;
 
- public function createAllWindows(): Void;
- public function createMessageWindow(): Void;
- public function messageWindowRect(): Void;
- public function createScrollTextWindow(): Void;
- public function scrollTextWindowRect(): Void;
- public function createGoldWindow(): Void;
- public function goldWindowRect(): Void;
- public function createNameBoxWindow(): Void;
- public function createChoiceListWindow(): Void;
- public function createNumberInputWindow(): Void;
- public function createEventItemWindow(): Void;
- public function eventItemWindowRect(): Void;
- public function associateWindows(): Void;
+ public dynamic function createAllWindows(): Void;
+ public dynamic function createMessageWindow(): Void;
+ public dynamic function messageWindowRect(): Void;
+ public dynamic function createScrollTextWindow(): Void;
+ public dynamic function scrollTextWindowRect(): Void;
+ public dynamic function createGoldWindow(): Void;
+ public dynamic function goldWindowRect(): Void;
+ public dynamic function createNameBoxWindow(): Void;
+ public dynamic function createChoiceListWindow(): Void;
+ public dynamic function createNumberInputWindow(): Void;
+ public dynamic function createEventItemWindow(): Void;
+ public dynamic function eventItemWindowRect(): Void;
+ public dynamic function associateWindows(): Void;
 }
 #else
 #end

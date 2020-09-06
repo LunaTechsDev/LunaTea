@@ -63,7 +63,7 @@ extern class WindowLayer extends Container {
   * @class WindowLayer
   * @constructor
   */
- public function new();
+ public dynamic function new();
 
  /**
   * Sets the x, y, width, and height all at once.
@@ -74,14 +74,14 @@ extern class WindowLayer extends Container {
   * @param {Number} width The width of the window layer
   * @param {Number} height The height of the window layer
   */
- public function move(x: Int, y: Int, width: Int, height: Int): Void;
+ public dynamic function move(x: Int, y: Int, width: Int, height: Int): Void;
 
  /**
   * Updates the window layer for each frame.
   *
   * @method update
   */
- public function update(): Void;
+ public dynamic function update(): Void;
 
  /**
   * Adds a child to the container.
@@ -90,7 +90,7 @@ extern class WindowLayer extends Container {
   * @param {PIXI.DisplayObject} child The child to add
   * @return {PIXI.DisplayObject} The child that was added
   */
- public function addChild(child: DisplayObject): DisplayObject;
+ public dynamic function addChild(child: DisplayObject): DisplayObject;
 
  /**
   * Adds a child to the container at a specified index.
@@ -100,7 +100,8 @@ extern class WindowLayer extends Container {
   * @param {Number} index The index to place the child in
   * @return {PIXI.DisplayObject} The child that was added
   */
- public function addChildAt(child: DisplayObject, index: Int): DisplayObject;
+ public dynamic function addChildAt(child: DisplayObject,
+  index: Int): DisplayObject;
 
  /**
   * Removes a child from the container.
@@ -109,7 +110,7 @@ extern class WindowLayer extends Container {
   * @param {PIXI.DisplayObject} child The child to remove
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public function removeChild(child: DisplayObject): DisplayObject;
+ public dynamic function removeChild(child: DisplayObject): DisplayObject;
 
  /**
   * Removes a child from the specified index position.
@@ -118,7 +119,7 @@ extern class WindowLayer extends Container {
   * @param {Number} index The index to get the child from
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public function removeChildAt(index: Int): DisplayObject;
+ public dynamic function removeChildAt(index: Int): DisplayObject;
 
  /**
   * @method _renderCanvas
@@ -126,7 +127,7 @@ extern class WindowLayer extends Container {
   * @private
   */
  @:native("_renderCanvas")
- private function _renderCanvas(renderer: CanvasRenderer): Void;
+ private dynamic function _renderCanvas(renderer: CanvasRenderer): Void;
 
  /**
   * @method _renderCanvas
@@ -134,7 +135,7 @@ extern class WindowLayer extends Container {
   * @private
   */
  @:native("_renderCanvas")
- public function renderCanvas(renderer: CanvasRenderer): Void;
+ public dynamic function renderCanvas(renderer: CanvasRenderer): Void;
 
  /**
   * @method _renderWebGL
@@ -142,7 +143,7 @@ extern class WindowLayer extends Container {
   * @private
   */
  @:native("_renderWebGL")
- private function _renderWebGL(renderer: Renderer): Void;
+ private dynamic function _renderWebGL(renderer: Renderer): Void;
 
  /**
   * @method _renderWebGL
@@ -150,7 +151,7 @@ extern class WindowLayer extends Container {
   * @private
   */
  @:native("_renderWebGL")
- public function renderWebGL(renderer: Renderer): Void;
+ public dynamic function renderWebGL(renderer: Renderer): Void;
 
  private var _width: Int;
  private var _height: Int;
@@ -165,7 +166,7 @@ extern class WindowLayer extends Container {
   * @param {Window} window
   * @private
   */
- private function _canvasClearWindowRect(renderSession: CanvasRenderer,
+ private dynamic function _canvasClearWindowRect(renderSession: CanvasRenderer,
   window: Window): Void;
 
  /**
@@ -173,5 +174,5 @@ extern class WindowLayer extends Container {
   * @param {Window} window
   * @private
   */
- private function _maskWindow(window: _Window): Void;
+ private dynamic function _maskWindow(window: _Window): Void;
 }

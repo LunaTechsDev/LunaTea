@@ -33,32 +33,32 @@ extern class Sprite_Battler extends Sprite_Base {
  public var __selectionEffectCount: Int;
  private var _selectionEffectCount: Int;
 
- public function initMembers(): Void;
+ public dynamic function initMembers(): Void;
 
- public function setHome(x: Int, y: Int): Void;
+ public dynamic function setHome(x: Int, y: Int): Void;
 
  /**
   * Updates the main loop of the sprite battler.
   */
- public function updateMain(): Void;
+ public dynamic function updateMain(): Void;
 
  /**
   * Updates the bitmap of the sprite battler.
   */
- public function updateBitmap(): Void;
+ public dynamic function updateBitmap(): Void;
 
  /**
   * Updates movement on the sprite battler.
   */
- public function updateMove(): Void;
+ public dynamic function updateMove(): Void;
 
  /**
   * Updates the position of the sprite battler.
   */
- public function updatePosition(): Void;
+ public dynamic function updatePosition(): Void;
 
  /**
   * Updates the sprite battler animation.
   */
- public function updateAnimation(): Void;
+ public dynamic function updateAnimation(): Void;
 }

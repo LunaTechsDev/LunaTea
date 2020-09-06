@@ -12,10 +12,10 @@ extern class Game_Switches {
  public var __data: Array<Bool>;
  private var _data: Array<Bool>;
 
- public function new(): Void;
- public function initialize(): Void;
- public function clear(): Void;
- public function value(switchId: Int): Bool;
- public function setValue(switchId: Int, value: Bool): Void;
- public function onChange(): Void;
+ public dynamic function new(): Void;
+ public dynamic function initialize(): Void;
+ public dynamic function clear(): Void;
+ public dynamic function value(switchId: Int): Bool;
+ public dynamic function setValue(switchId: Int, value: Bool): Void;
+ public dynamic function onChange(): Void;
 }

@@ -95,17 +95,18 @@ extern class Window_Base extends _Window {
   * @param {number} height
   * @memberof Window_Base
   */
- public function new(x: Int, y: Int, width: Int, height: Int): Void;
+ public dynamic function new(x: Int, y: Int, width: Int, height: Int): Void;
 
  /**
   * Initializes the window.
   *
   * @memberof Window_Base
   */
- public function initialize(?x: Int, ?y: Int, ?width: Int, ?height: Int): Void;
+ public dynamic function initialize(?x: Int, ?y: Int, ?width: Int,
+  ?height: Int): Void;
  #else
- public function new(rect: Rectangle): Void;
- public function initialize(rect: Rectangle): Void;
+ public dynamic function new(rect: Rectangle): Void;
+ public dynamic function initialize(rect: Rectangle): Void;
  #end
 
  /**
@@ -114,7 +115,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function lineHeight(): Int;
+ public dynamic function lineHeight(): Int;
 
  /**
   * Returns the standard font face of the
@@ -122,7 +123,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function standardFontFace(): String;
+ public dynamic function standardFontFace(): String;
 
  /**
   * Returns the standard font size of the text
@@ -130,7 +131,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function standardFontSize(): Int;
+ public dynamic function standardFontSize(): Int;
 
  /**
   * Returns the standard padding of the window;
@@ -138,7 +139,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function standardPadding(): Int;
+ public dynamic function standardPadding(): Int;
 
  /**
   * Returns the text padding of the window;
@@ -146,7 +147,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function textPadding(): Int;
+ public dynamic function textPadding(): Int;
 
  /**
   * Returns the standard back opacity of the window; this is the
@@ -155,28 +156,28 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function standardBackOpacity(): Int;
+ public dynamic function standardBackOpacity(): Int;
 
  /**
   * Loads the window skin from the img/system directory.
   *
   * @memberof Window_Base
   */
- public function loadWindowSkin(): Void;
+ public dynamic function loadWindowSkin(): Void;
 
  /**
   * Updates the window padding based on the
   * standardPadding method.
   * @memberof Window_Base
   */
- public function updatePadding(): Void;
+ public dynamic function updatePadding(): Void;
 
  /**
   * Updates the back opacity of the window
   * based on the standardBackOpacity method.
   * @memberof Window_Base
   */
- public function updateBackOpacity(): Void;
+ public dynamic function updateBackOpacity(): Void;
 
  /**
   * Returns the inner content width of the window.
@@ -184,7 +185,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function contentsWidth(): Int;
+ public dynamic function contentsWidth(): Int;
 
  /**
   * Returns the inner content height of the window.
@@ -192,7 +193,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function contentsHeight(): Int;
+ public dynamic function contentsHeight(): Int;
 
  /**
   * Returns the fitting height given a number of lines based on
@@ -203,42 +204,42 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function fittingHeight(numLines: Int): Int;
+ public dynamic function fittingHeight(numLines: Int): Int;
 
  /**
   * Updates the tone of the window based on the
   * game system window tone defined in the database.
   * @memberof Window_Base
   */
- public function updateTone(): Void;
+ public dynamic function updateTone(): Void;
 
  /**
   * Creates the contents of the window; this is the area
   * of the window which text is drawn to.
   * @memberof Window_Base
   */
- public function createContents(): Void;
+ public dynamic function createContents(): Void;
 
  /**
   * Resets the font settings of the window back to the
   * default.
   * @memberof Window_Base
   */
- public function resetFontSettings(): Void;
+ public dynamic function resetFontSettings(): Void;
 
  /**
   * Resets the text color of the window back to the
   * default.
   * @memberof Window_Base
   */
- public function resetTextColor(): Void;
+ public dynamic function resetTextColor(): Void;
 
  /**
   * The update method of the window; this is
   * run every frame to do logic processing for the window.
   * @memberof Window_Base
   */
- public function update(): Void;
+ public dynamic function update(): Void;
 
  /**
   * Updates the openness of the window when the
@@ -246,7 +247,7 @@ extern class Window_Base extends _Window {
   * Openness is increased.
   * @memberof Window_Base
   */
- public function updateOpen(): Void;
+ public dynamic function updateOpen(): Void;
 
  /**
   * Updates the openness of the window when the
@@ -254,21 +255,21 @@ extern class Window_Base extends _Window {
   * Openness is decreased.
   * @memberof Window_Base
   */
- public function updateClose(): Void;
+ public dynamic function updateClose(): Void;
 
  /**
   * Opens the window.
   *
   * @memberof Window_Base
   */
- public function open(): Void;
+ public dynamic function open(): Void;
 
  /**
   * Closes the window.
   *
   * @memberof Window_Base
   */
- public function close(): Void;
+ public dynamic function close(): Void;
 
  /**
   * Returns true if the window is currently opening.
@@ -276,7 +277,7 @@ extern class Window_Base extends _Window {
   * @returns {boolean}
   * @memberof Window_Base
   */
- public function isOpening(): Bool;
+ public dynamic function isOpening(): Bool;
 
  /**
   * Returns true if the window is currently closing.
@@ -284,14 +285,14 @@ extern class Window_Base extends _Window {
   * @returns {boolean}
   * @memberof Window_Base
   */
- public function isClosing(): Bool;
+ public dynamic function isClosing(): Bool;
 
  /**
   * Shows the window, making it visible.
   *
   * @memberof Window_Base
   */
- public function show(): Void;
+ public dynamic function show(): Void;
 
  /**
   * Hides the window, making it invisible;
@@ -299,21 +300,21 @@ extern class Window_Base extends _Window {
   *
   * @memberof Window_Base
   */
- public function hide(): Void;
+ public dynamic function hide(): Void;
 
  /**
   * Activates the window, allowing it to be processed
   * and to update.
   * @memberof Window_Base
   */
- public function activate(): Void;
+ public dynamic function activate(): Void;
 
  /**
   * Deactives the window, preventing further processing.
   *
   * @memberof Window_Base
   */
- public function deactivate(): Void;
+ public dynamic function deactivate(): Void;
 
  /**
   * Returns a text color given a numbered index
@@ -324,7 +325,7 @@ extern class Window_Base extends _Window {
   * @returns {*}
   * @memberof Window_Base
   */
- public function textColor(n: Int): String;
+ public dynamic function textColor(n: Int): String;
 
  /**
   * Returns the normal color as a css
@@ -332,7 +333,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function normalColor(): String;
+ public dynamic function normalColor(): String;
 
  /**
   * Returns the system color as a
@@ -340,7 +341,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function systemColor(): String;
+ public dynamic function systemColor(): String;
 
  /**
   * Returns the crisis color as a
@@ -348,7 +349,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function crisisColor(): String;
+ public dynamic function crisisColor(): String;
 
  /**
   * Returns the death color as a
@@ -356,7 +357,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function deathColor(): String;
+ public dynamic function deathColor(): String;
 
  /**
   * Returns the gauage back color as
@@ -364,7 +365,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function gaugeBackColor(): String;
+ public dynamic function gaugeBackColor(): String;
 
  /**
   * Returns the hp gauge color 1
@@ -372,7 +373,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function hpGaugeColor1(): String;
+ public dynamic function hpGaugeColor1(): String;
 
  /**
   * Returns the hp gauge color 2
@@ -380,7 +381,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function hpGaugeColor2(): String;
+ public dynamic function hpGaugeColor2(): String;
 
  /**
   * Returns the mp gauge color 1
@@ -388,7 +389,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function mpGaugeColor1(): String;
+ public dynamic function mpGaugeColor1(): String;
 
  /**
   * Returns the mp gauge color 2
@@ -396,7 +397,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function mpGaugeColor2(): String;
+ public dynamic function mpGaugeColor2(): String;
 
  /**
   * Returns the mp cost color as a
@@ -404,7 +405,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function mpCostColor(): String;
+ public dynamic function mpCostColor(): String;
 
  /**
   * Returns the power up color as a
@@ -412,7 +413,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function powerUpColor(): String;
+ public dynamic function powerUpColor(): String;
 
  /**
   * Returns the power down color as a
@@ -420,7 +421,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function powerDownColor(): String;
+ public dynamic function powerDownColor(): String;
 
  /**
   * Returns the tp gauge color 1 as a
@@ -428,7 +429,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function tpGaugeColor1(): String;
+ public dynamic function tpGaugeColor1(): String;
 
  /**
   * Returns tp gauge color 2 as a
@@ -436,7 +437,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function tpGaugeColor2(): String;
+ public dynamic function tpGaugeColor2(): String;
 
  /**
   * Returns the tp cost color as a
@@ -444,7 +445,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function tpCostColor(): String;
+ public dynamic function tpCostColor(): String;
 
  /**
   * Returns the pending color as a
@@ -452,7 +453,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function pendingColor(): String;
+ public dynamic function pendingColor(): String;
 
  /**
   * Returns the translucentOpacity for the window;
@@ -461,7 +462,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function translucentOpacity(): Float;
+ public dynamic function translucentOpacity(): Float;
 
  /**
   * Changes the text color property given a css color String.
@@ -469,7 +470,7 @@ extern class Window_Base extends _Window {
   * @param {String} color
   * @memberof Window_Base
   */
- public function changeTextColor(color: String): Void;
+ public dynamic function changeTextColor(color: String): Void;
 
  /**
   * Changes the paintOpacity (the opacity of the text drawn to the window);
@@ -477,7 +478,7 @@ extern class Window_Base extends _Window {
   * @param {boolean} enabled
   * @memberof Window_Base
   */
- public function changePaintOpacity(enabled: Bool): Void;
+ public dynamic function changePaintOpacity(enabled: Bool): Void;
 
  /**
   * Given text or a number, draws the content to the window's contents
@@ -491,8 +492,8 @@ extern class Window_Base extends _Window {
   * @param {String} align
   * @memberof Window_Base
   */
- public function drawText(text: EitherType<String, Int>, x: Int, y: Int,
-  maxWidth: Int, align: String): Void;
+ public dynamic function drawText(text: EitherType<String, Int>, x: Int,
+  y: Int, maxWidth: Int, align: String): Void;
 
  /**
   * Calculates the width of a text String and
@@ -501,7 +502,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function textWidth(text: String): Int;
+ public dynamic function textWidth(text: String): Int;
 
  #if compileMV
  /**
@@ -514,7 +515,7 @@ extern class Window_Base extends _Window {
   * @returns Int
   * @memberof Window_Base
   */
- public function drawTextEx(text: String, x: Int, y: Int): Int;
+ public dynamic function drawTextEx(text: String, x: Int, y: Int): Int;
  #else
 
  /**
@@ -527,27 +528,28 @@ extern class Window_Base extends _Window {
   * @returns Int
   * @memberof Window_Base
   */
- public function drawTextEx(text: String, x: Int, y: Int, width: Float): Int;
+ public dynamic function drawTextEx(text: String, x: Int, y: Int,
+  width: Float): Int;
 
  /**
   * Returns the text Size of drawTextEx.
   * @param text
   * @returns {width:Int, height:Int}
   */
- public function textSizeEx(text: String): {width: Int, height: Int};
+ public dynamic function textSizeEx(text: String): {width: Int, height: Int};
 
  /**
   * Processes all the text in the window, then
   * flushes the text state.
   * @param textState
   */
- public function processAllText(textState: TextState): Void;
+ public dynamic function processAllText(textState: TextState): Void;
 
  /**
   * Flushes the text state.
   * @param textState
   */
- public function flushTextState(textState: TextState): Void;
+ public dynamic function flushTextState(textState: TextState): Void;
 
  /**
   * Create a text buffer and determines whether
@@ -555,9 +557,9 @@ extern class Window_Base extends _Window {
   * @param rtl
   * @return String
   */
- public function createTextBuffer(rtl: Bool): String;
+ public dynamic function createTextBuffer(rtl: Bool): String;
 
- public function processControlCharacter(extState: TextState,
+ public dynamic function processControlCharacter(extState: TextState,
   character: String): Void;
  #end
 
@@ -568,7 +570,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function convertEscapeCharacters(text: String): String;
+ public dynamic function convertEscapeCharacters(text: String): String;
 
  /**
   * Returns the actor name given an index;
@@ -577,7 +579,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function actorName(actorIndex: Int): String;
+ public dynamic function actorName(actorIndex: Int): String;
 
  /**
   * Returns a party member name given an index;
@@ -586,7 +588,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function partyMemberName(partyMemberIndex: Int): String;
+ public dynamic function partyMemberName(partyMemberIndex: Int): String;
 
  /**
   * Process each character in the text when drawTextEx
@@ -594,7 +596,7 @@ extern class Window_Base extends _Window {
   * @param {MV.TextState} textState
   * @memberof Window_Base
   */
- public function processCharacter(textState: TextState): Void;
+ public dynamic function processCharacter(textState: TextState): Void;
 
  /**
   * Processes the normal characters in the text
@@ -603,7 +605,7 @@ extern class Window_Base extends _Window {
   * @param {MV.TextState} textState
   * @memberof Window_Base
   */
- public function processNormalCharacter(textState: TextState): Void;
+ public dynamic function processNormalCharacter(textState: TextState): Void;
 
  /**
   * Processes new line when drawTextEx is used to draw text.
@@ -611,7 +613,7 @@ extern class Window_Base extends _Window {
   * @param {MV.TextState} textState
   * @memberof Window_Base
   */
- public function processNewLine(textState: TextState): Void;
+ public dynamic function processNewLine(textState: TextState): Void;
 
  /**
   * Processes new page when drawTexttEx is used to draw text.
@@ -619,9 +621,9 @@ extern class Window_Base extends _Window {
   * @param {MV.TextState} textState
   * @memberof Window_Base
   */
- public function processNewPage(textState: TextState): Void;
+ public dynamic function processNewPage(textState: TextState): Void;
 
- public function obtainEscapeCode(textState: TextState): String;
+ public dynamic function obtainEscapeCode(textState: TextState): String;
 
  /**
   * Obtains the escape parameters from text codes in the text state
@@ -630,7 +632,7 @@ extern class Window_Base extends _Window {
   * @returns {(number | String)}
   * @memberof Window_Base
   */
- public function obtainEscapeParam(textState: EitherType<String,
+ public dynamic function obtainEscapeParam(textState: EitherType<String,
   TextState>): EitherType<Float, String>;
 
  /**
@@ -640,7 +642,7 @@ extern class Window_Base extends _Window {
   * @param {MV.TextState} textState
   * @memberof Window_Base
   */
- public function processEscapeCharacter(code: String,
+ public dynamic function processEscapeCharacter(code: String,
   textState: TextState): Void;
 
  /**
@@ -650,21 +652,22 @@ extern class Window_Base extends _Window {
   * @param {MV.TextState} textState
   * @memberof Window_Base
   */
- public function processDrawIcon(iconIndex: Int, textState: TextState): Void;
+ public dynamic function processDrawIcon(iconIndex: Int,
+  textState: TextState): Void;
 
  /**
   * Makes the font bigger by a value of 12.
   *
   * @memberof Window_Base
   */
- public function makeFontBigger(): Void;
+ public dynamic function makeFontBigger(): Void;
 
  /**
   * Makes the font smaller by a value of 12.
   *
   * @memberof Window_Base
   */
- public function makeFontSmaller(): Void;
+ public dynamic function makeFontSmaller(): Void;
 
  /**
   * Calculates the text height of the textState (when using drawTextEx);
@@ -675,7 +678,7 @@ extern class Window_Base extends _Window {
   * @returns Int
   * @memberof Window_Base
   */
- public function calcTextHeight(textState: TextState, all: Bool): Int;
+ public dynamic function calcTextHeight(textState: TextState, all: Bool): Int;
 
  /**
   * Draws an icon given the specified iconIndex at the specified
@@ -686,10 +689,10 @@ extern class Window_Base extends _Window {
   * @param {number} y
   * @memberof Window_Base
   */
- public function drawIcon(iconIndex: Int, x: Int, y: Int): Void;
+ public dynamic function drawIcon(iconIndex: Int, x: Int, y: Int): Void;
 
- public function drawFace(faceName: String, faceIndex: Int, x: Int, y: Int,
-  width: Int, height: Int): Void;
+ public dynamic function drawFace(faceName: String, faceIndex: Int, x: Int,
+  y: Int, width: Int, height: Int): Void;
 
  /**
   * Draws a character (map sprites) at the specified x and y coordinate.
@@ -701,8 +704,8 @@ extern class Window_Base extends _Window {
   * @param {number} y
   * @memberof Window_Base
   */
- public function drawCharacter(characterName: String, characterIndex: Int,
-  x: Int, y: Int): Void;
+ public dynamic function drawCharacter(characterName: String,
+  characterIndex: Int, x: Int, y: Int): Void;
 
  /**
   * Draws a gauge at the specified x and y coordinates within the given width.
@@ -716,7 +719,7 @@ extern class Window_Base extends _Window {
   * @param {String} color2
   * @memberof Window_Base
   */
- public function drawGauge(x: Int, y: Int, width: Int, rate: Float,
+ public dynamic function drawGauge(x: Int, y: Int, width: Int, rate: Float,
   color1: String, color2: String): Void;
 
  /**
@@ -726,7 +729,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function hpColor(actor: Game_Actor): String;
+ public dynamic function hpColor(actor: Game_Actor): String;
 
  /**
   * Returns the mp color as a css color String.
@@ -735,7 +738,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function mpColor(actor: Game_Actor): String;
+ public dynamic function mpColor(actor: Game_Actor): String;
 
  /**
   * Returns the tp color as a css color String.
@@ -744,9 +747,10 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function tpColor(actor: Game_Actor): String;
+ public dynamic function tpColor(actor: Game_Actor): String;
 
- public function drawActorCharacter(actor: Game_Actor, x: Int, y: Int): Void;
+ public dynamic function drawActorCharacter(actor: Game_Actor, x: Int,
+  y: Int): Void;
 
  /**
   * Draws the actor face at the specified x and y coordinates within
@@ -758,8 +762,8 @@ extern class Window_Base extends _Window {
   * @param {number} height
   * @memberof Window_Base
   */
- public function drawActorFace(actor: Game_Actor, x: Int, y: Int, width: Int,
-  height: Int): Void;
+ public dynamic function drawActorFace(actor: Game_Actor, x: Int, y: Int,
+  width: Int, height: Int): Void;
 
  /**
   * Draws the actor name at the specified x and y coordinates within
@@ -770,7 +774,7 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorName(actor: Game_Actor, x: Int, y: Int,
+ public dynamic function drawActorName(actor: Game_Actor, x: Int, y: Int,
   width: Int): Void;
 
  /**
@@ -782,7 +786,7 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorClass(actor: Game_Actor, x: Int, y: Int,
+ public dynamic function drawActorClass(actor: Game_Actor, x: Int, y: Int,
   width: Int): Void;
 
  /**
@@ -794,7 +798,7 @@ extern class Window_Base extends _Window {
   * @param {Int} width
   * @memberof Window_Base
   */
- public function drawActorNickname(actor: Game_Actor, x: Int, y: Int,
+ public dynamic function drawActorNickname(actor: Game_Actor, x: Int, y: Int,
   width: Int): Void;
 
  /**
@@ -805,7 +809,8 @@ extern class Window_Base extends _Window {
   * @param {Int} y
   * @memberof Window_Base
   */
- public function drawActorLevel(actor: Game_Actor, x: Int, y: Int): Void;
+ public dynamic function drawActorLevel(actor: Game_Actor, x: Int,
+  y: Int): Void;
 
  /**
   * Draws the actor icons at the specified x and y coordinates
@@ -816,7 +821,7 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorIcons(actor: Game_Actor, x: Int, y: Int,
+ public dynamic function drawActorIcons(actor: Game_Actor, x: Int, y: Int,
   width: Int): Void;
 
  /**
@@ -832,8 +837,8 @@ extern class Window_Base extends _Window {
   * @param {String} color2
   * @memberof Window_Base
   */
- public function drawCurrentAndMax(current: Float, max: Float, x: Int, y: Int,
-  width: Int, color1: String, color2: String): Void;
+ public dynamic function drawCurrentAndMax(current: Float, max: Float, x: Int,
+  y: Int, width: Int, color1: String, color2: String): Void;
 
  /**
   * Draws the actor hp at the specified x and y coordinates within
@@ -844,7 +849,7 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorHp(actor: Game_Actor, x: Int, y: Int,
+ public dynamic function drawActorHp(actor: Game_Actor, x: Int, y: Int,
   width: Int): Void;
 
  /**
@@ -856,7 +861,7 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorMp(actor: Game_Actor, x: Int, y: Int,
+ public dynamic function drawActorMp(actor: Game_Actor, x: Int, y: Int,
   width: Int): Void;
 
  /**
@@ -868,7 +873,7 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorTp(actor: Game_Actor, x: Int, y: Int,
+ public dynamic function drawActorTp(actor: Game_Actor, x: Int, y: Int,
   width: Int): Void;
 
  /**
@@ -881,8 +886,8 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorSimpleStatus(actor: Game_Actor, x: Int, y: Int,
-  width: Int): Void;
+ public dynamic function drawActorSimpleStatus(actor: Game_Actor, x: Int,
+  y: Int, width: Int): Void;
 
  /**
   * Draws the item name at the specified x and y coordinates within
@@ -893,7 +898,7 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawItemName(item: BaseItem, x: Int, y: Int,
+ public dynamic function drawItemName(item: BaseItem, x: Int, y: Int,
   width: Int): Void;
 
  /**
@@ -906,8 +911,8 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawCurrencyValue(value: Int, unit: String, x: Int, y: Int,
-  width: Int): Void;
+ public dynamic function drawCurrencyValue(value: Int, unit: String, x: Int,
+  y: Int, width: Int): Void;
 
  /**
   * Changes the text color based on the powerUpColor, powerDownColor
@@ -916,7 +921,7 @@ extern class Window_Base extends _Window {
   * @param {number} change
   * @memberof Window_Base
   */
- public function paramchangeTextColor(change: Int): Color;
+ public dynamic function paramchangeTextColor(change: Int): Color;
 
  /**
   * Sets the background type of the window.
@@ -927,35 +932,35 @@ extern class Window_Base extends _Window {
   * @param {number} type
   * @memberof Window_Base
   */
- public function setBackgroundType(type: Int): Void;
+ public dynamic function setBackgroundType(type: Int): Void;
 
  /**
   * Shows the background dimmer sprite.
   *
   * @memberof Window_Base
   */
- public function showBackgroundDimmer(): Void;
+ public dynamic function showBackgroundDimmer(): Void;
 
  /**
   * Hides the background dimmer sprite.
   *
   * @memberof Window_Base
   */
- public function hideBackgroundDimmer(): Void;
+ public dynamic function hideBackgroundDimmer(): Void;
 
  /**
   * Updates the background dimmer sprite opacity based on the openness
   * of the window.
   * @memberof Window_Base
   */
- public function updateBackgroundDimmer(): Void;
+ public dynamic function updateBackgroundDimmer(): Void;
 
  /**
   * Refreshes the bitmap attached to the dimmer sprite
   * based on the window dimensions.
   * @memberof Window_Base
   */
- public function refreshDimmerBitmap(): Void;
+ public dynamic function refreshDimmerBitmap(): Void;
 
  /**
   * Color 1 of the dimmer sprite bitmap.
@@ -963,7 +968,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function dimColor1(): String;
+ public dynamic function dimColor1(): String;
 
  /**
   * Color 2 of the dimmer sprite bitmap
@@ -971,7 +976,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function dimColor2(): String;
+ public dynamic function dimColor2(): String;
 
  /**
   * Returns the x coordinate of the mouse to
@@ -980,7 +985,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function canvasToLocalX(x: Float): Float;
+ public dynamic function canvasToLocalX(x: Float): Float;
 
  /**
   * Returns the y coordinate of the mouse
@@ -989,14 +994,14 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function canvasToLocalY(y: Float): Float;
+ public dynamic function canvasToLocalY(y: Float): Float;
 
  /**
   * Reverses the face images of the
   * game party members.
   * @memberof Window_Base
   */
- public function reserveFaceImages(): Void;
+ public dynamic function reserveFaceImages(): Void;
 
  #if !compileMV
  /**
@@ -1004,7 +1009,7 @@ extern class Window_Base extends _Window {
   * Error is usually thrown when an MV plugin is used.
   * @param rect
   */
- public function checkRectObject(rect: Rectangle): Void;
+ public dynamic function checkRectObject(rect: Rectangle): Void;
 
  /**
   * Returns a new rectangle used for base text.
@@ -1012,9 +1017,9 @@ extern class Window_Base extends _Window {
   * and innerHeight properties.
   * @return Rectangle
   */
- public function baseTextRect(): Rectangle;
+ public dynamic function baseTextRect(): Rectangle;
 
- public function changeOutlineColor(color: String): Void;
+ public dynamic function changeOutlineColor(color: String): Void;
 
  /**
   * Draws a rectangle using the outline color and
@@ -1024,38 +1029,39 @@ extern class Window_Base extends _Window {
   * @param width
   * @param height
   */
- public function drawRect(x: Int, y: Int, width: Int, height: Int): Void;
+ public dynamic function drawRect(x: Int, y: Int, width: Int,
+  height: Int): Void;
 
  /**
   * Destroys the window contents.
   * Also destroys the window back contents.
   */
- public function destroyContents(): Void;
+ public dynamic function destroyContents(): Void;
 
  /**
   * Plays a sound effect when okay is processed.
   *
 
   */
- public function playOkSound(): Void;
+ public dynamic function playOkSound(): Void;
 
  /**
   * Plays the buzzer sound effect when input is
   * incorrect.
 
   */
- public function playBuzzerSound(): Void;
+ public dynamic function playBuzzerSound(): Void;
 
  /**
   * Plays the cursor sound from SoundManager;
   */
- public function playCursorSound(): Void;
+ public dynamic function playCursorSound(): Void;
 
  /**
   * Changes the color based on the color index.
   * @param colorIndex
   */
- public function processColorChange(colorIndex: Int): Void;
+ public dynamic function processColorChange(colorIndex: Int): Void;
 
  /**
   * Returns the maximum font size for a single line in rm.
@@ -1063,6 +1069,6 @@ extern class Window_Base extends _Window {
   * @return Int
   *
   */
- public function maxFontSizeInLine(line: String): Int;
+ public dynamic function maxFontSizeInLine(line: String): Int;
  #end
 }

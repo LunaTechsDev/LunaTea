@@ -15,9 +15,9 @@ extern class Game_Timer {
  public var __working: Bool;
  private var _working: Bool;
 
- public function new(): Void;
+ public dynamic function new(): Void;
 
- public function initialize(): Void;
+ public dynamic function initialize(): Void;
 
  /**
   * Updates the game timer.
@@ -25,7 +25,7 @@ extern class Game_Timer {
   * @param {boolean} sceneActive
   * @memberof Game_Timer
   */
- public function update(sceneActive: Bool): Void;
+ public dynamic function update(sceneActive: Bool): Void;
 
  /**
   * Starts the timer with the specified number of frames as count.
@@ -33,14 +33,14 @@ extern class Game_Timer {
   * @param {number} count
   * @memberof Game_Timer
   */
- public function start(count: Int): Void;
+ public dynamic function start(count: Int): Void;
 
  /**
   * Stops the timer.
   *
   * @memberof Game_Timer
   */
- public function stop(): Void;
+ public dynamic function stop(): Void;
 
  /**
   * Returns true if the timer is working and counting down.
@@ -48,7 +48,7 @@ extern class Game_Timer {
   * @returns {boolean}
   * @memberof Game_Timer
   */
- public function isWorking(): Void;
+ public dynamic function isWorking(): Void;
 
  /**
   * Returns the number of seconds on the timer.
@@ -56,12 +56,12 @@ extern class Game_Timer {
   * @returns {number}
   * @memberof Game_Timer
   */
- public function seconds(): Int;
+ public dynamic function seconds(): Int;
 
  /**
   * Handler for when the time expires on the timer.
   *
   * @memberof Game_Timer
   */
- public function onExpire(): Void;
+ public dynamic function onExpire(): Void;
 }

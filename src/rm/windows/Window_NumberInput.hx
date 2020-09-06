@@ -10,10 +10,10 @@ extern class Window_NumberInput extends Window_Selectable {
  private var _maxDigits: Int;
  private var _buttons: Array<Sprite_Button>;
 
- public function new(messageWindow: Window_Message);
+ public dynamic function new(messageWindow: Window_Message);
 
- public function start(): Void;
- public function updatePlacement(): Void;
+ public dynamic function start(): Void;
+ public dynamic function updatePlacement(): Void;
 
  /**
   * Returns the window width.
@@ -21,7 +21,7 @@ extern class Window_NumberInput extends Window_Selectable {
   * @returns {number}
   * @memberof Window_NumberInput
   */
- public function windowWidth(): Int;
+ public dynamic function windowWidth(): Int;
 
  /**
   * Returns the window height.
@@ -29,7 +29,7 @@ extern class Window_NumberInput extends Window_Selectable {
   * @returns {number}
   * @memberof Window_NumberInput
   */
- public function windowHeight(): Int;
+ public dynamic function windowHeight(): Int;
 
  /**
   * Returns the item width.
@@ -37,29 +37,29 @@ extern class Window_NumberInput extends Window_Selectable {
   * @returns {number}
   * @memberof Window_NumberInput
   */
- public function itemWidth(): Int;
+ public dynamic function itemWidth(): Int;
 
  /**
   * Creates the number input window buttons.
   *
   * @memberof Window_NumberInput
   */
- public function createButtons(): Void;
+ public dynamic function createButtons(): Void;
 
  /**
   * Places the number input window buttons.
   *
   * @memberof Window_NumberInput
   */
- public function placeButtons(): Void;
+ public dynamic function placeButtons(): Void;
 
- public function updateButtonsVisiblity(): Void;
- public function showButtons(): Void;
- public function hideButtons(): Void;
- public function buttonY(): Int;
- public function processDigitChange(): Void;
- public function changeDigit(up: Bool): Void;
- public function onButtonUp(): Void;
- public function onButtonDown(): Void;
- public function onButtonOk(): Void;
+ public dynamic function updateButtonsVisiblity(): Void;
+ public dynamic function showButtons(): Void;
+ public dynamic function hideButtons(): Void;
+ public dynamic function buttonY(): Int;
+ public dynamic function processDigitChange(): Void;
+ public dynamic function changeDigit(up: Bool): Void;
+ public dynamic function onButtonUp(): Void;
+ public dynamic function onButtonDown(): Void;
+ public dynamic function onButtonOk(): Void;
 }

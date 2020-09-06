@@ -17,21 +17,21 @@ extern class ScreenSprite extends pixi.core.sprites.Sprite {
   * @class ScreenSprite
   * @constructor
   */
- public function new();
+ public dynamic function new();
 
  /**
   * Sets black to the color of the screen sprite.
   *
   * @method setBlack
   */
- public function setBlack(): Void;
+ public dynamic function setBlack(): Void;
 
  /**
   * Sets white to the color of the screen sprite.
   *
   * @method setWhite
   */
- public function setWhite(): Void;
+ public dynamic function setWhite(): Void;
 
  /**
   * Sets the color of the screen sprite by values.
@@ -41,7 +41,7 @@ extern class ScreenSprite extends pixi.core.sprites.Sprite {
   * @param {Number} g The green value in the range (0, 255)
   * @param {Number} b The blue value in the range (0, 255)
   */
- public function setColor(?r: Int, ?g: Int, ?b: Int): Void;
+ public dynamic function setColor(?r: Int, ?g: Int, ?b: Int): Void;
 
  private var _graphics: pixi.core.graphics.Graphics;
 

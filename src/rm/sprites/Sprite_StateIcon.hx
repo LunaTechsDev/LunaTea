@@ -39,29 +39,29 @@ extern class Sprite_StateIcon extends Sprite {
   *
   * @memberof Sprite_StateIcon
   */
- public function initMembers(): Void;
+ public dynamic function initMembers(): Void;
 
  /**
   * Loads the bitmap of the sprite state icon.
   *
   * @memberof Sprite_StateIcon
   */
- public function loadBitmap(): Void;
+ public dynamic function loadBitmap(): Void;
 
- public function setup(battler: Game_Battler): Void;
- public function animationWait(): Int;
+ public dynamic function setup(battler: Game_Battler): Void;
+ public dynamic function animationWait(): Int;
 
  /**
   * Updates the icon displayed in the icon sprite.
   *
   * @memberof Sprite_StateIcon
   */
- public function updateIcon(): Void;
+ public dynamic function updateIcon(): Void;
 
  /**
   * Updates the state icon sprite frame.
   *
   * @memberof Sprite_StateIcon
   */
- public function updateFrame(): Void;
+ public dynamic function updateFrame(): Void;
 }

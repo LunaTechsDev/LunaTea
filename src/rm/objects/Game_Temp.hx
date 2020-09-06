@@ -20,9 +20,9 @@ extern class Game_Temp {
  @:native("_destinationY")
  public var __destionationY: Int;
  private var _destinationY: Int;
- public function new(): Void;
+ public dynamic function new(): Void;
 
- public function initialize(): Void;
+ public dynamic function initialize(): Void;
 
  /**
   * Determines if the game is in Play Test mode.
@@ -30,7 +30,7 @@ extern class Game_Temp {
   * @returns {boolean}
   * @memberof Game_Temp
   */
- public function isPlaytest(): Bool;
+ public dynamic function isPlaytest(): Bool;
 
  /**
   * Reserves the given commonEventId to be processed later.
@@ -38,14 +38,14 @@ extern class Game_Temp {
   * @param {number} commonEventId
   * @memberof Game_Temp
   */
- public function reserveCommonEvent(commonEventId: Int): Void;
+ public dynamic function reserveCommonEvent(commonEventId: Int): Void;
 
  /**
   * Clears the current reserved common event.
   *
   * @memberof Game_Temp
   */
- public function clearCommonEvent(): Void;
+ public dynamic function clearCommonEvent(): Void;
 
  /**
   * Returns true if a common event has been reserved.
@@ -53,7 +53,7 @@ extern class Game_Temp {
   * @returns {boolean}
   * @memberof Game_Temp
   */
- public function isCommonEventReserved(): Bool;
+ public dynamic function isCommonEventReserved(): Bool;
 
  /**
   * Returns common event data from the database.
@@ -61,7 +61,7 @@ extern class Game_Temp {
   * @returns {any}
   * @memberof Game_Temp
   */
- public function reservedCommonEvent(): Any;
+ public dynamic function reservedCommonEvent(): Any;
 
  /**
   * Sets the destination of the player for movement.
@@ -70,14 +70,14 @@ extern class Game_Temp {
   * @param {number} y
   * @memberof Game_Temp
   */
- public function setDestination(x: Int, y: Int): Void;
+ public dynamic function setDestination(x: Int, y: Int): Void;
 
  /**
   * Clears the destination of movement for the player.
   *
   * @memberof Game_Temp
   */
- public function clearDestination(): Void;
+ public dynamic function clearDestination(): Void;
 
  /**
   * Determines if the destination for the player to move to is valid.
@@ -85,7 +85,7 @@ extern class Game_Temp {
   * @returns {boolean}
   * @memberof Game_Temp
   */
- public function isDestinationValid(): Bool;
+ public dynamic function isDestinationValid(): Bool;
 
  /**
   * Returns the x coordinate of the destination.
@@ -93,7 +93,7 @@ extern class Game_Temp {
   * @returns {number}
   * @memberof Game_Temp
   */
- public function destinationX(): Int;
+ public dynamic function destinationX(): Int;
 
  /**
   * Returns the y coordinate of the destination.
@@ -101,5 +101,5 @@ extern class Game_Temp {
   * @returns {number}
   * @memberof Game_Temp
   */
- public function destinationY(): Int;
+ public dynamic function destinationY(): Int;
 }

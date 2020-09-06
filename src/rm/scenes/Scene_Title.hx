@@ -54,49 +54,49 @@ extern class Scene_Title extends Scene_Base {
  /**
   * Creates the title scene background.
   */
- public function createBackground(): Void;
+ public dynamic function createBackground(): Void;
 
  /**
   * Creates the title screen foreground.
   */
- public function createForeground(): Void;
+ public dynamic function createForeground(): Void;
 
  /**
   * Draws the game title.
   */
- public function drawGameTitle(): Void;
+ public dynamic function drawGameTitle(): Void;
 
  /**
   * Scales the background images and centers it.
   */
- public function adjustBackground(): Void;
+ public dynamic function adjustBackground(): Void;
 
  /**
   * Creates the command window and sets it's handlers.
   */
- public function createCommandWindow(): Void;
+ public dynamic function createCommandWindow(): Void;
 
- public function commandWindowRect(): Rectangle;
+ public dynamic function commandWindowRect(): Rectangle;
 
- public function centerSprite(sprite: Sprite): Void;
+ public dynamic function centerSprite(sprite: Sprite): Void;
 
  /**
   * Handler for the new game command.
   */
- public function commandNewGame(): Void;
+ public dynamic function commandNewGame(): Void;
 
  /**
   * Handler for the continue command.
   */
- public function commandContinue(): Void;
+ public dynamic function commandContinue(): Void;
 
  /**
   * Handler for the options command.
   */
- public function commandOptions(): Void;
+ public dynamic function commandOptions(): Void;
 
  /**
   * Plays the title screen music upon entering the scene.
   */
- public function playTitleMusic(): Void;
+ public dynamic function playTitleMusic(): Void;
 }

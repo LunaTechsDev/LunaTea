@@ -36,71 +36,73 @@ private var _touching: Bool;
 #if compileMV
 private var _scrollX: Float;
 private var _scrollY: Float;
-public function new(x: Int, y: Int, width: Int, height: Int): Void;
-public function initialize(x: Int, y: Int, height: Int, width: Int): Void;
+public dynamic function new(x: Int, y: Int, width: Int, height: Int): Void;
+
+public dynamic function initialize(x: Int, y: Int, height: Int,
+ width: Int): Void;
 #else
-public function new(rect: Rectangle);
-public function initialize(rect: Rectangle): Void;
+public dynamic function new(rect: Rectangle);
+public dynamic function initialize(rect: Rectangle): Void;
 
 /**
  * Forcefully selects the index and cursor
  * visibility is set to false.
  * @param index
  */
-public function forceSelect(index: Int): Void;
+public dynamic function forceSelect(index: Int): Void;
 
 /**
  * Smoothly scrolls to the index.
  * Cursor visibility is set to true.
  * @param index
  */
-public function smoothSelect(index: Int): Void;
+public dynamic function smoothSelect(index: Int): Void;
 
-public function itemRectWithPadding(index: Int): Rectangle;
+public dynamic function itemRectWithPadding(index: Int): Rectangle;
 
 /**
  * Return the rectangle for the line item with padding.
  * @param index
  */
-public function itemLineRect(index: Int): Rectangle;
+public dynamic function itemLineRect(index: Int): Rectangle;
 
 /**
- * Overwrite this or add to it to add your own draw functions.
+ * Overwrite this or add to it to add your own draw dynamic functions.
  */
-public function paint(): Void;
+public dynamic function paint(): Void;
 
 /**
  * Refreshes the cursor.
  */
-public function refreshCursor(): Void;
+public dynamic function refreshCursor(): Void;
 
 /**
  * Refreshes cursor for selecting all items.
  */
-public function refreshCursorForAll(): Void;
+public dynamic function refreshCursorForAll(): Void;
 
 /**
  * Returns true by default.
  * Determines if hover support is enabled.
  * @return Bool
  */
-public function isHoverEnabled(): Bool;
+public dynamic function isHoverEnabled(): Bool;
 
 /**
  * Handler for Touching okay in the window.
  */
-public function onTouchOk(): Void;
+public dynamic function onTouchOk(): Void;
 
 /**
  * Handler for selecting in the window.
  */
-public function onTouchSelect(): Void;
+public dynamic function onTouchSelect(): Void;
 
 /**
  * Handler for touching and processing cancel in
  * the window.
  */
-public function onTouchCancel(): Void;
+public dynamic function onTouchCancel(): Void;
 #end
 
 /**
@@ -109,7 +111,7 @@ public function onTouchCancel(): Void;
  * @returns {Int}
  * @memberof Window_Selectable
  */
-public function index(): Int;
+public dynamic function index(): Int;
 
 /**
  * Returns true if the _cursorFixed property is true;
@@ -117,7 +119,7 @@ public function index(): Int;
  * @returns {boolean}
  * @memberof Window_Selectable
  */
-public function cursorFixed(): Bool;
+public dynamic function cursorFixed(): Bool;
 
 /**
  * Sets the _cursorFixed property of the
@@ -125,10 +127,10 @@ public function cursorFixed(): Bool;
  * @param {boolean} cursorFixed
  * @memberof Window_Selectable
  */
-public function setCursorFixed(cursorFixed: Bool): Void;
+public dynamic function setCursorFixed(cursorFixed: Bool): Void;
 
-public function cursorAll(): Bool;
-public function setCursorAll(cursorAll: Bool): Void;
+public dynamic function cursorAll(): Bool;
+public dynamic function setCursorAll(cursorAll: Bool): Void;
 
 /**
  * Returns the maximum number of columns
@@ -136,7 +138,7 @@ public function setCursorAll(cursorAll: Bool): Void;
  * @returns {number}
  * @memberof Window_Selectable
  */
-public function maxCols(): Int;
+public dynamic function maxCols(): Int;
 
 /**
  * Returns the maximum number of items within the window;
@@ -145,9 +147,9 @@ public function maxCols(): Int;
  * @returns {number}
  * @memberof Window_Selectable
  */
-public function maxItems(): Int;
+public dynamic function maxItems(): Int;
 
-public function spacing(): Float;
+public dynamic function spacing(): Float;
 
 /**
  * Returns the width of an item within the window;
@@ -155,7 +157,7 @@ public function spacing(): Float;
  * @returns {number}
  * @memberof Window_Selectable
  */
-public function itemWidth(): Float;
+public dynamic function itemWidth(): Float;
 
 /**
  * Returns the height of an item within the window;
@@ -163,7 +165,7 @@ public function itemWidth(): Float;
  * @returns {number}
  * @memberof Window_Selectable
  */
-public function itemHeight(): Float;
+public dynamic function itemHeight(): Float;
 
 /**
  * Selects the current index within the window given a number.
@@ -171,25 +173,25 @@ public function itemHeight(): Float;
  * @param {number} index
  * @memberof Window_Selectable
  */
-public function select(index: Int): Void;
+public dynamic function select(index: Int): Void;
 
 /**
  * Deselects the currently selected index.
  *
  * @memberof Window_Selectable
  */
-public function deselect(): Void;
+public dynamic function deselect(): Void;
 
 /**
  * Reselects the index based on the window's _index property.
  *
  * @memberof Window_Selectable
  */
-public function reselect(): Void;
+public dynamic function reselect(): Void;
 
-public function row(): Int;
-public function topRow(): Int;
-public function maxTopRow(): Int;
+public dynamic function row(): Int;
+public dynamic function topRow(): Int;
+public dynamic function maxTopRow(): Int;
 
 /**
  * Sets the current top row of the given a number.
@@ -198,11 +200,11 @@ public function maxTopRow(): Int;
  * @param {number} row
  * @memberof Window_Selectable
  */
-public function setTopRow(row: Int): Void;
+public dynamic function setTopRow(row: Int): Void;
 
-public function resetScroll(): Void;
-public function maxPageRows(): Int;
-public function maxPageItems(): Int;
+public dynamic function resetScroll(): Void;
+public dynamic function maxPageRows(): Int;
+public dynamic function maxPageItems(): Int;
 
 /**
  * Returns true if the window is horizontal;
@@ -210,10 +212,10 @@ public function maxPageItems(): Int;
  * @returns {boolean}
  * @memberof Window_Selectable
  */
-public function isHorizontal(): Bool;
+public dynamic function isHorizontal(): Bool;
 
-public function bottomRow(): Int;
-public function setBottomRow(row: Int): Void;
+public dynamic function bottomRow(): Int;
+public dynamic function setBottomRow(row: Int): Void;
 
 /**
  * Creates a new rectangle based on itemWidth and itemHeight.
@@ -223,7 +225,7 @@ public function setBottomRow(row: Int): Void;
  * @returns {Rectangle}
  * @memberof Window_Selectable
  */
-public function itemRect(index: Int): Rectangle;
+public dynamic function itemRect(index: Int): Rectangle;
 
 /**
  * Creates a new rectangle based on itemWidth and itemHeight
@@ -233,37 +235,37 @@ public function itemRect(index: Int): Rectangle;
  * @returns {Rectangle}
  * @memberof Window_Selectable
  */
-public function itemRectForText(index: Int): Rectangle;
+public dynamic function itemRectForText(index: Int): Rectangle;
 
-public function setHelpWindow(helpWindow: Window_Help): Void;
+public dynamic function setHelpWindow(helpWindow: Window_Help): Void;
 
 /**
  * Shows the attached help window.
  *
  * @memberof Window_Selectable
  */
-public function showHelpWindow(): Void;
+public dynamic function showHelpWindow(): Void;
 
 /**
  * Hides the attached help window.
  *
  * @memberof Window_Selectable
  */
-public function hideHelpWindow(): Void;
+public dynamic function hideHelpWindow(): Void;
 
 /**
  * Creates a new handler with the symbol as the handler name
- * and a method (JS function) bound to it.
+ * and a method (JS dynamic function) bound to it.
  * @param {string} symbol
  * @param {*} method
  * @memberof Window_Selectable
  */
-public function setHandler(symbol: String, method: Any): Void;
+public dynamic function setHandler(symbol: String, method: Any): Void;
 
-public function isHandled(symbol: String): Bool;
-public function callHandler(symbol: String): Void;
-public function isOpenAndActive(): Bool;
-public function isCursorMovable(): Bool;
+public dynamic function isHandled(symbol: String): Bool;
+public dynamic function callHandler(symbol: String): Void;
+public dynamic function isOpenAndActive(): Bool;
+public dynamic function isCursorMovable(): Bool;
 
 /**
  * Moves the cursor down; if wrap is passed
@@ -272,7 +274,7 @@ public function isCursorMovable(): Bool;
  * @param {boolean} wrap
  * @memberof Window_Selectable
  */
-public function cursorDown(wrap: Bool): Void;
+public dynamic function cursorDown(wrap: Bool): Void;
 
 /**
  * Moves the cursor up; if wrap is passed
@@ -281,48 +283,48 @@ public function cursorDown(wrap: Bool): Void;
  * @param {boolean} wrap
  * @memberof Window_Selectable
  */
-public function cursorUp(wrap: Bool): Void;
+public dynamic function cursorUp(wrap: Bool): Void;
 
-public function cursorRight(wrap: Bool): Void;
-public function cursorLeft(wrap: Bool): Void;
-public function cursorPagedown(): Void;
-public function cursorPageup(): Void;
-public function scrollDown(): Void;
-public function scrollUp(): Void;
-public function updateArrows(): Void;
+public dynamic function cursorRight(wrap: Bool): Void;
+public dynamic function cursorLeft(wrap: Bool): Void;
+public dynamic function cursorPagedown(): Void;
+public dynamic function cursorPageup(): Void;
+public dynamic function scrollDown(): Void;
+public dynamic function scrollUp(): Void;
+public dynamic function updateArrows(): Void;
 
 /**
  * Handles the processing of cursor movement.
  *
  * @memberof Window_Selectable
  */
-public function processCursorMove(): Void;
+public dynamic function processCursorMove(): Void;
 
 /**
  * Handles the process of attached handlers.
  *
  * @memberof Window_Selectable
  */
-public function processHandling(): Void;
+public dynamic function processHandling(): Void;
 
 /**
  * Handles the processing of the scroll wheel within
  * the window.
  * @memberof Window_Selectable
  */
-public function processWheel(): Void;
+public dynamic function processWheel(): Void;
 
 /**
  * Handles the processing of touch input.
  *
  * @memberof Window_Selectable
  */
-public function processTouch(): Void;
+public dynamic function processTouch(): Void;
 
-public function isTouchedInsideFrame(): Bool;
-public function onTouch(triggered: Bool): Void;
-public function hitTest(x: Float, y: Float): Float;
-public function isContentsArea(x: Float, y: Float): Bool;
+public dynamic function isTouchedInsideFrame(): Bool;
+public dynamic function onTouch(triggered: Bool): Void;
+public dynamic function hitTest(x: Float, y: Float): Float;
+public dynamic function isContentsArea(x: Float, y: Float): Bool;
 
 /**
  * Determines if touch ok is enabled as an option;
@@ -331,7 +333,7 @@ public function isContentsArea(x: Float, y: Float): Bool;
  * @returns {boolean}
  * @memberof Window_Selectable
  */
-public function isTouchOkEnabled(): Bool;
+public dynamic function isTouchOkEnabled(): Bool;
 
 /**
  * Determines if ok is enabled as an option;
@@ -340,19 +342,19 @@ public function isTouchOkEnabled(): Bool;
  * @returns {boolean}
  * @memberof Window_Selectable
  */
-public function isOkEnabled(): Bool;
+public dynamic function isOkEnabled(): Bool;
 
-public function isCancelEnabled(): Bool;
-public function isOkTriggered(): Bool;
-public function isCancelTriggered(): Bool;
-public function processOk(): Void;
-public function callOkHandler(): Void;
-public function processCancel(): Void;
-public function callCancelHandler(): Void;
-public function processPageup(): Void;
-public function processPagedown(): Void;
-public function updateInputData(): Void;
-public function updateCursor(): Void;
+public dynamic function isCancelEnabled(): Bool;
+public dynamic function isOkTriggered(): Bool;
+public dynamic function isCancelTriggered(): Bool;
+public dynamic function processOk(): Void;
+public dynamic function callOkHandler(): Void;
+public dynamic function processCancel(): Void;
+public dynamic function callCancelHandler(): Void;
+public dynamic function processPageup(): Void;
+public dynamic function processPagedown(): Void;
+public dynamic function updateInputData(): Void;
+public dynamic function updateCursor(): Void;
 
 /**
  * Determines if the cursor is visible within
@@ -360,30 +362,30 @@ public function updateCursor(): Void;
  * @returns {boolean}
  * @memberof Window_Selectable
  */
-public function isCursorVisible(): Bool;
+public dynamic function isCursorVisible(): Bool;
 
-public function ensureCursorVisible(): Void;
-public function callUpdateHelp(): Void;
-public function updateHelp(): Void;
-public function setHelpWindowItem(item: Any): Void;
-public function isCurrentItemEnabled(): Bool;
+public dynamic function ensureCursorVisible(): Void;
+public dynamic function callUpdateHelp(): Void;
+public dynamic function updateHelp(): Void;
+public dynamic function setHelpWindowItem(item: Any): Void;
+public dynamic function isCurrentItemEnabled(): Bool;
 
 /**
  * Draws all items within the window; this method
  * cals drawItem multiple times.
  * @memberof Window_Selectable
  */
-public function drawAllItems(): Void;
+public dynamic function drawAllItems(): Void;
 
-public function drawItem(index: Int): Void;
-public function clearItem(index: Int): Void;
-public function redrawItem(index: Int): Void;
-public function redrawCurrentItem(): Void;
+public dynamic function drawItem(index: Int): Void;
+public dynamic function clearItem(index: Int): Void;
+public dynamic function redrawItem(index: Int): Void;
+public dynamic function redrawCurrentItem(): Void;
 
 /**
  * Refreshes the window contents.
  *
  * @memberof Window_Selectable
  */
-public function refresh(): Void;
+public dynamic function refresh(): Void;
 }

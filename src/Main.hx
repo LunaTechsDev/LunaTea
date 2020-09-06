@@ -1,3 +1,4 @@
+import rm.windows.Window_Base;
 import rm.Globals.GameVariables;
 import js.Syntax;
 import js.html.Window;
@@ -24,5 +25,6 @@ class Main {
    Fn.setField(Window, "Haxe", "Version 4.2.0");
    trace("Running Console Log From Haxe Added haxe Version");
   });
+  Fn.proto(Window_Base).update = () -> {};
  }
 }

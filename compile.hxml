@@ -30,8 +30,8 @@
 # For Compiling Separate JavaScript Files
 
 --each
-# -js dist/kiniita.js
-# -main Main
+-js dist/test.js
+-main Main
 # --macro macros.MacroTools.getSourceOutput()
 
 

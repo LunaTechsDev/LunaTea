@@ -10,12 +10,12 @@ extern class Game_Variables {
  public var __data: Array<Int>;
  private var _data: Array<Int>;
 
- public function new(): Void;
+ public dynamic function new(): Void;
 
- public function initialize(): Void;
+ public dynamic function initialize(): Void;
 
- public function clear(): Void;
- public function value(variableId: Int): Int;
- public function setValue(variableId: Int, value: Int): Void;
- public function onChange(): Void;
+ public dynamic function clear(): Void;
+ public dynamic function value(variableId: Int): Int;
+ public dynamic function setValue(variableId: Int, value: Int): Void;
+ public dynamic function onChange(): Void;
 }

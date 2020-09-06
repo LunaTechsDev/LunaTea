@@ -30,15 +30,15 @@ extern class Game_ActionResult {
  public var addedDebuffs: Array<Int>;
  public var removedBuffs: Array<Int>; // TODO: Enum States and Buffs into Enums
 
- public function new(): Void;
- public function initialize(): Void;
+ public dynamic function new(): Void;
+ public dynamic function initialize(): Void;
 
  /**
   * Clears the game action result.
   *
   * @memberof Game_ActionResult
   */
- public function clear(): Void;
+ public dynamic function clear(): Void;
 
  /**
   * Returns the added states from the action result.
@@ -46,7 +46,7 @@ extern class Game_ActionResult {
   * @returns {Array<RPG.State>}
   * @memberof Game_ActionResult
   */
- public function addedStateObjects(): Array<State>;
+ public dynamic function addedStateObjects(): Array<State>;
 
  /**
   * Returns the removes states from the result.
@@ -54,9 +54,9 @@ extern class Game_ActionResult {
   * @returns {Array<RPG.State>}
   * @memberof Game_ActionResult
   */
- public function removedStateObjects(): Array<State>;
+ public dynamic function removedStateObjects(): Array<State>;
 
- public function isStatusAffected(): Bool;
+ public dynamic function isStatusAffected(): Bool;
 
  /**
   * Returns true if the action result is a hit.
@@ -64,12 +64,12 @@ extern class Game_ActionResult {
   * @returns {Bool}
   * @memberof Game_ActionResult
   */
- public function isHit(): Bool;
+ public dynamic function isHit(): Bool;
 
- public function isStateAdded(stateId: Int): Bool;
- public function pushAddedState(stateId: Int): Void;
- public function isStateRemoved(stateId: Int): Bool;
- public function pushRemovedState(stateId: Int): Void;
+ public dynamic function isStateAdded(stateId: Int): Bool;
+ public dynamic function pushAddedState(stateId: Int): Void;
+ public dynamic function isStateRemoved(stateId: Int): Bool;
+ public dynamic function pushRemovedState(stateId: Int): Void;
 
  /**
   * Returns true if the a buff is added to the specified param
@@ -78,11 +78,11 @@ extern class Game_ActionResult {
   * @returns {Bool}
   * @memberof Game_ActionResult
   */
- public function isBuffAdded(paramId: Int): Bool;
+ public dynamic function isBuffAdded(paramId: Int): Bool;
 
- public function pushAddedBuff(paramId: Int): Void;
- public function isDebuffAdded(paramId: Int): Bool;
- public function pushAddedDebuff(paramId: Int): Void;
- public function isBuffRemoved(paramId: Int): Bool;
- public function pushRemovedBuff(paramId: Int): Void;
+ public dynamic function pushAddedBuff(paramId: Int): Void;
+ public dynamic function isDebuffAdded(paramId: Int): Bool;
+ public dynamic function pushAddedDebuff(paramId: Int): Void;
+ public dynamic function isBuffRemoved(paramId: Int): Bool;
+ public dynamic function pushRemovedBuff(paramId: Int): Void;
 }

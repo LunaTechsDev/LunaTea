@@ -12,29 +12,29 @@ extern class Scene_GameEnd extends Scene_MenuBase {
  private var _commandWindow: Window_GameEnd;
 
  #if !compileMV
- public function commandWindowRect(): Rectangle;
+ public dynamic function commandWindowRect(): Rectangle;
  #end
 
- public function stop(): Void;
+ public dynamic function stop(): Void;
 
  /**
   * Creates the background for
   * the game end scene.
   * @memberof Scene_GameEnd
   */
- public function createBackground(): Void;
+ public dynamic function createBackground(): Void;
 
  /**
   * Creates the command window
   * for the game end screen.
   * @memberof Scene_GameEnd
   */
- public function createCommandWindow(): Void;
+ public dynamic function createCommandWindow(): Void;
 
  /**
   * Handler for when to title
   * is clicked within the game end screen.
   * @memberof Scene_GameEnd
   */
- public function commandToTitle(): Void;
+ public dynamic function commandToTitle(): Void;
 }

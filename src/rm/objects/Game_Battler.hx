@@ -54,7 +54,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {String}
   * @memberof Game_Battler
   */
- public function name(): String;
+ public dynamic function name(): String;
 
  /**
   * Returns the battler name of the battler;
@@ -62,7 +62,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {String}
   * @memberof Game_Battler
   */
- public function battlerName(): String;
+ public dynamic function battlerName(): String;
 
  /**
   * Returns the index of the battler.
@@ -70,7 +70,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {number}
   * @memberof Game_Battler
   */
- public function index(): Int;
+ public dynamic function index(): Int;
 
  /**
   * Returns the unit of the battler; this is either the
@@ -78,7 +78,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Game_Unit}
   * @memberof Game_Battler
   */
- public function friendsUnit(): Game_Unit;
+ public dynamic function friendsUnit(): Game_Unit;
 
  /**
   * Returns the opponents unit; this is either
@@ -86,44 +86,44 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Game_Unit}
   * @memberof Game_Battler
   */
- public function opponentsUnit(): Game_Unit;
+ public dynamic function opponentsUnit(): Game_Unit;
 
  /**
   * Clears animations from the battler.
   *
   * @memberof Game_Battler
   */
- public function clearAnimations(): Void;
+ public dynamic function clearAnimations(): Void;
 
  /**
   * Clear damage pop up from the battler.
   *
   * @memberof Game_Battler
   */
- public function clearDamagePopup(): Void;
+ public dynamic function clearDamagePopup(): Void;
 
  /**
   * Clear weapon animation from the battler.
   *
   * @memberof Game_Battler
   */
- public function clearWeaponAnimation(): Void;
+ public dynamic function clearWeaponAnimation(): Void;
 
  /**
   * Clears effect from the battler.
   *
   * @memberof Game_Battler
   */
- public function clearEffect(): Void;
+ public dynamic function clearEffect(): Void;
 
  /**
   * Clears motion from the battler.
   *
   * @memberof Game_Battler
   */
- public function clearMotion(): Void;
+ public dynamic function clearMotion(): Void;
 
- public function requestEffect(effectType: String): Void;
+ public dynamic function requestEffect(effectType: String): Void;
 
  /**
   * Request the specified motion on the game battler.
@@ -131,14 +131,14 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {String} motionType
   * @memberof Game_Battler
   */
- public function requestMotion(motionType: String): Void;
+ public dynamic function requestMotion(motionType: String): Void;
 
- public function requestMotionRefresh(): Void;
- public function select(): Void;
- public function deselect(): Void;
- public function isAnimationRequested(): Bool;
- public function isDamagePopupRequested(): Bool;
- public function isEffectRequested(): Bool;
+ public dynamic function requestMotionRefresh(): Void;
+ public dynamic function select(): Void;
+ public dynamic function deselect(): Void;
+ public dynamic function isAnimationRequested(): Bool;
+ public dynamic function isDamagePopupRequested(): Bool;
+ public dynamic function isEffectRequested(): Bool;
 
  /**
   * Returns true if a motion is requested.
@@ -146,7 +146,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isMotionRequested(): Bool;
+ public dynamic function isMotionRequested(): Bool;
 
  /**
   * Returns true if a weapon animation is requested.
@@ -154,10 +154,10 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isWeaponAnimationRequested(): Bool;
+ public dynamic function isWeaponAnimationRequested(): Bool;
 
- public function isMotionRefreshRequested(): Bool;
- public function isSelected(): Bool;
+ public dynamic function isMotionRefreshRequested(): Bool;
+ public dynamic function isSelected(): Bool;
 
  /**
   * Returns the effect type of the battler.
@@ -165,7 +165,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {String}
   * @memberof Game_Battler
   */
- public function effectType(): String;
+ public dynamic function effectType(): String;
 
  /**
   * Returns the motion type of the battler.
@@ -173,7 +173,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {String}
   * @memberof Game_Battler
   */
- public function motionType(): String;
+ public dynamic function motionType(): String;
 
  /**
   * Returns the weapon image id.
@@ -181,7 +181,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {number}
   * @memberof Game_Battler
   */
- public function weaponImageId(): WeaponImageId;
+ public dynamic function weaponImageId(): WeaponImageId;
 
  /**
   * Shifts the battler animation.
@@ -189,7 +189,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {BattlerAnimation}
   * @memberof Game_Battler
   */
- public function shiftAnimation(): BattlerAnimation;
+ public dynamic function shiftAnimation(): BattlerAnimation;
 
  /**
   * Starts the specified animation, given the animation id on the
@@ -199,15 +199,15 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} delay
   * @memberof Game_Battler
   */
- public function startAnimation(animationId: AnimationId, mirror: Bool,
-  delay: Int): Void;
+ public dynamic function startAnimation(animationId: AnimationId,
+  mirror: Bool, delay: Int): Void;
 
  /**
   * Starts a damage pop up on the battler.
   *
   * @memberof Game_Battler
   */
- public function startDamagePopup(): Void;
+ public dynamic function startDamagePopup(): Void;
 
  /**
   * Starts the weapon animation on te battler given a weapon id.
@@ -215,9 +215,9 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} weaponImageId
   * @memberof Game_Battler
   */
- public function startWeaponAnimation(weaponImageId: WeaponImageId): Void;
+ public dynamic function startWeaponAnimation(weaponImageId: WeaponImageId): Void;
 
- public function action(index: Int): Game_Action;
+ public dynamic function action(index: Int): Game_Action;
 
  /**
   * Sets the action at the specified index for the battler.
@@ -226,7 +226,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {Game_Action} action
   * @memberof Game_Battler
   */
- public function setAction(index: Int, action: Game_Action): Void;
+ public dynamic function setAction(index: Int, action: Game_Action): Void;
 
  /**
   * Returns the number of battler actions.
@@ -234,14 +234,14 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {number}
   * @memberof Game_Battler
   */
- public function numActions(): Int;
+ public dynamic function numActions(): Int;
 
  /**
   * Clears the battler actions.
   *
   * @memberof Game_Battler
   */
- public function clearActions(): Void;
+ public dynamic function clearActions(): Void;
 
  /**
   * Returns the battler action result.
@@ -249,21 +249,21 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Game_ActionResult}
   * @memberof Game_Battler
   */
- public function result(): Game_ActionResult;
+ public dynamic function result(): Game_ActionResult;
 
  /**
   * Clears the battler action result.
   *
   * @memberof Game_Battler
   */
- public function clearResult(): Void;
+ public dynamic function clearResult(): Void;
 
  /**
   * Refreshes the battler.
   *
   * @memberof Game_Battler
   */
- public function refresh(): Void;
+ public dynamic function refresh(): Void;
 
  /**
   * Adds a state to the battler given the specified
@@ -271,7 +271,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_Battler
   */
- public function addState(stateId: Int): Void;
+ public dynamic function addState(stateId: Int): Void;
 
  /**
   * Returns true if the specified state given the state id
@@ -280,7 +280,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isStateAddable(stateId: Int): Bool;
+ public dynamic function isStateAddable(stateId: Int): Bool;
 
  /**
   * Returns true if the specified state given the state id
@@ -290,14 +290,14 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isStateRestrict(stateId: Int): Bool;
+ public dynamic function isStateRestrict(stateId: Int): Bool;
 
  /**
   * Handler for when theb attler is restricted.
   *
   * @memberof Game_Battler
   */
- public function onRestrict(): Void;
+ public dynamic function onRestrict(): Void;
 
  /**
   * Removes the specified state given the state id.
@@ -305,14 +305,14 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_Battler
   */
- public function removeState(stateId: Int): Void;
+ public dynamic function removeState(stateId: Int): Void;
 
  /**
   * Has the battler escape from battle; plays a sound on escaping.
   *
   * @memberof Game_Battler
   */
- public function escape(): Void;
+ public dynamic function escape(): Void;
 
  /**
   * Adds a buff to the battler for the specified number of turns
@@ -321,7 +321,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} turns
   * @memberof Game_Battler
   */
- public function addBuff(paramId: ParameterId, turns: Int): Void;
+ public dynamic function addBuff(paramId: ParameterId, turns: Int): Void;
 
  /**
   * Adds a debuff to the battler for the specified number of turns
@@ -330,21 +330,21 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} turns
   * @memberof Game_Battler
   */
- public function addDebuff(paramId: ParameterId, turns: Int): Void;
+ public dynamic function addDebuff(paramId: ParameterId, turns: Int): Void;
 
- public function removeBuff(paramId: ParameterId): Void;
- public function removeBattleStates(): Void;
+ public dynamic function removeBuff(paramId: ParameterId): Void;
+ public dynamic function removeBattleStates(): Void;
 
  /**
   * Removes all buffs from the battler.
   *
   * @memberof Game_Battler
   */
- public function removeAllBuffs(): Void;
+ public dynamic function removeAllBuffs(): Void;
 
- public function removeStatesAuto(timing: Int): Void;
- public function removeBuffsAuto(): Void;
- public function removeStatesByDamage(): Void;
+ public dynamic function removeStatesAuto(timing: Int): Void;
+ public dynamic function removeBuffsAuto(): Void;
+ public dynamic function removeStatesByDamage(): Void;
 
  /**
   * Creates the number of times for
@@ -352,14 +352,14 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {number}
   * @memberof Game_Battler
   */
- public function makeActionTimes(): Int;
+ public dynamic function makeActionTimes(): Int;
 
  /**
   * Creates the actions for the battler.
   *
   * @memberof Game_Battler
   */
- public function makeActions(): Void;
+ public dynamic function makeActions(): Void;
 
  /**
   * Returns the speed of the battler.
@@ -367,14 +367,14 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {number}
   * @memberof Game_Battler
   */
- public function speed(): Int;
+ public dynamic function speed(): Int;
 
  /**
   * Calculates the speed of the battler.
   *
   * @memberof Game_Battler
   */
- public function makeSpeed(): Void;
+ public dynamic function makeSpeed(): Void;
 
  /**
   * Returns the current action of the battler.
@@ -382,22 +382,22 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Game_Action}
   * @memberof Game_Battler
   */
- public function currentAction(): Game_Action;
+ public dynamic function currentAction(): Game_Action;
 
  /**
   * Removes the current battler action.
   *
   * @memberof Game_Battler
   */
- public function removeCurrentAction(): Void;
+ public dynamic function removeCurrentAction(): Void;
 
  /**
   * Sets the last target based on the target passed in.
   * @param target
   */
- public function setLastTarget(target: Game_Battler): Void;
+ public dynamic function setLastTarget(target: Game_Battler): Void;
 
- public function forceAction(skillId: Int, targetIndex: Int): Void;
+ public dynamic function forceAction(skillId: Int, targetIndex: Int): Void;
 
  /**
   * Has theb attler use the given item.
@@ -405,7 +405,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {RPG.UsableItem} item
   * @memberof Game_Battler
   */
- public function useItem(item: UsableItem): Void;
+ public dynamic function useItem(item: UsableItem): Void;
 
  /**
   * Has the battler consume the given item.
@@ -413,7 +413,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {RPG.UsableItem} item
   * @memberof Game_Battler
   */
- public function consumeItem(item: UsableItem): Void;
+ public dynamic function consumeItem(item: UsableItem): Void;
 
  /**
   * Adds the specified amount of hp to the battler.
@@ -421,7 +421,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} value
   * @memberof Game_Battler
   */
- public function gainHp(value: Int): Void;
+ public dynamic function gainHp(value: Int): Void;
 
  /**
   * Adds the specified amount of mp to the battler.
@@ -429,7 +429,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} value
   * @memberof Game_Battler
   */
- public function gainMp(value: Int): Void;
+ public dynamic function gainMp(value: Int): Void;
 
  /**
   * Adds the specified amount of tp to the battler.
@@ -437,7 +437,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} value
   * @memberof Game_Battler
   */
- public function gainTp(value: Int): Void;
+ public dynamic function gainTp(value: Int): Void;
 
  /**
   * Adds a specified amount of tp to the battler silently.
@@ -445,89 +445,89 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} value
   * @memberof Game_Battler
   */
- public function gainSilentTp(value: Int): Void;
+ public dynamic function gainSilentTp(value: Int): Void;
 
  /**
   * Initializes the battler's tp; tp is random.
   *
   * @memberof Game_Battler
   */
- public function initTp(): Void;
+ public dynamic function initTp(): Void;
 
  /**
   * Clears the battler's tp.
   *
   * @memberof Game_Battler
   */
- public function clearTp(): Void;
+ public dynamic function clearTp(): Void;
 
- public function chargeTpByDamage(damageRate: Float): Void;
+ public dynamic function chargeTpByDamage(damageRate: Float): Void;
 
  /**
   * Has the battler regenerate hp based on their hp regen.
   *
   * @memberof Game_Battler
   */
- public function regenerateHp(): Void;
+ public dynamic function regenerateHp(): Void;
 
- public function maxSlipDamage(): Int;
+ public dynamic function maxSlipDamage(): Int;
 
  /**
   * Has the battler regenerate mp based on their mp regen.
   *
   * @memberof Game_Battler
   */
- public function regenerateMp(): Void;
+ public dynamic function regenerateMp(): Void;
 
  /**
   * Has the battler regenerate tp based on their tp regen.
   *
   * @memberof Game_Battler
   */
- public function regenerateTp(): Void;
+ public dynamic function regenerateTp(): Void;
 
  /**
   * Has the battler regenerate all resources based on
   * their respective regeneration stats.
   * @memberof Game_Battler
   */
- public function regenerateAll(): Void;
+ public dynamic function regenerateAll(): Void;
 
  /**
   * Handler for when battle has started.
   *
   * @memberof Game_Battler
   */
- public function onBattleStart(): Void;
+ public dynamic function onBattleStart(): Void;
 
  /**
   * Handler for when all actions end
   */
- public function onAllActionsEnd(): Void;
+ public dynamic function onAllActionsEnd(): Void;
 
  /**
   * Handler for when turn ends
   */
- public function onTurnEnd(): Void;
+ public dynamic function onTurnEnd(): Void;
 
  /**
   * Handler for when battle ends
   */
- public function onBattleEnd(): Void;
+ public dynamic function onBattleEnd(): Void;
 
  /**
   * Handler for when damage is done
   * @param value
   */
- public function onDamage(value: Int): Void;
+ public dynamic function onDamage(value: Int): Void;
 
  /**
   * Sets the action state
   * @param actionState
   */
- public function setActionState(actionState: ActionState): Void;
+ public dynamic function setActionState(actionState: ActionState): Void;
 
- public function isUndecided(): Bool;
+ public dynamic function isUndecided(): Bool;
 
  /**
   * Returns true if the battler is inputting commands in battle.
@@ -535,7 +535,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isInputting(): Bool;
+ public dynamic function isInputting(): Bool;
 
  /**
   * Returns true if the battler is waiting in battle.
@@ -543,7 +543,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isWaiting(): Bool;
+ public dynamic function isWaiting(): Bool;
 
  /**
   * Returns true if the battler is performing an action in battle.
@@ -551,7 +551,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isActing(): Bool;
+ public dynamic function isActing(): Bool;
 
  /**
   * Returns true if the battler is chanting in combat.
@@ -559,7 +559,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isChanting(): Bool;
+ public dynamic function isChanting(): Bool;
 
  /**
   * Returns true if the battler is waiting to guard.
@@ -567,7 +567,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isGuardWaiting(): Bool;
+ public dynamic function isGuardWaiting(): Bool;
 
  /**
   * Perform action start motion, given the specified game action.
@@ -575,7 +575,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {Game_Action} action
   * @memberof Game_Battler
   */
- public function performActionStart(action: Game_Action): Void;
+ public dynamic function performActionStart(action: Game_Action): Void;
 
  /**
   * Perform given action motion.
@@ -583,63 +583,63 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {Game_Action} action
   * @memberof Game_Battler
   */
- public function performAction(action: Game_Action): Void;
+ public dynamic function performAction(action: Game_Action): Void;
 
  /**
   * Perform action end motion.
   *
   * @memberof Game_Battler
   */
- public function performActionEnd(): Void;
+ public dynamic function performActionEnd(): Void;
 
  /**
   * Perform damage motion.
   *
   * @memberof Game_Battler
   */
- public function performDamage(): Void;
+ public dynamic function performDamage(): Void;
 
  /**
   * Perform miss motion.
   *
   * @memberof Game_Battler
   */
- public function performMiss(): Void;
+ public dynamic function performMiss(): Void;
 
  /**
   * Perform recovery motion.
   *
   * @memberof Game_Battler
   */
- public function performRecovery(): Void;
+ public dynamic function performRecovery(): Void;
 
  /**
   * Perform evasion motion.
   *
   * @memberof Game_Battler
   */
- public function performEvasion(): Void;
+ public dynamic function performEvasion(): Void;
 
  /**
   * Perform magic evasion motion.
   *
   * @memberof Game_Battler
   */
- public function performMagicEvasion(): Void;
+ public dynamic function performMagicEvasion(): Void;
 
  /**
   * Perform counter motion.
   *
   * @memberof Game_Battler
   */
- public function performCounter(): Void;
+ public dynamic function performCounter(): Void;
 
  /**
   * Performs the reflect motion.
   *
   * @memberof Game_Battler
   */
- public function performReflection(): Void;
+ public dynamic function performReflection(): Void;
 
  /**
   * Perform substitute motion with the specified game battler.
@@ -647,12 +647,12 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {Game_Battler} target
   * @memberof Game_Battler
   */
- public function performSubstitute(target: Game_Battler): Void;
+ public dynamic function performSubstitute(target: Game_Battler): Void;
 
  /**
   * Performs the collapse motion.
   *
   * @memberof Game_Battler
   */
- public function performCollapse(): Void;
+ public dynamic function performCollapse(): Void;
 }

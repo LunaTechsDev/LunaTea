@@ -3,8 +3,8 @@ package rm.windows;
 @:expose("Window_MenuCommand")
 @:native("Window_MenuCommand")
 extern class Window_MenuCommand extends Window_Command {
- public function new(x: Int, y: Int): Void;
- public static function initCommandPosition(): Void;
+ public dynamic function new(x: Int, y: Int): Void;
+ public static dynamic function initCommandPosition(): Void;
  public static var _lastCommandSymbol: Any;
 
  /**
@@ -12,30 +12,30 @@ extern class Window_MenuCommand extends Window_Command {
   * RPGMakerMV main menu.
   * @memberof Window_MenuCommand
   */
- public function addMainCommands(): Void;
+ public dynamic function addMainCommands(): Void;
 
  /**
   * Adds the standard formation command to the
   * RPGMakerMV main menu.
   * @memberof Window_MenuCommand
   */
- public function addFormationCommand(): Void;
+ public dynamic function addFormationCommand(): Void;
 
  /**
   * Adds any user created commands to the
   * RPGMakerMV main menu.
   * @memberof Window_MenuCommand
   */
- public function addOriginalCommands(): Void;
+ public dynamic function addOriginalCommands(): Void;
 
  /**
   * Adds the save command to the
   * RPGMakerMV main menu.
   * @memberof Window_MenuCommand
   */
- public function addSaveCommand(): Void;
+ public dynamic function addSaveCommand(): Void;
 
- public function addGameEndCommand(): Void;
+ public dynamic function addGameEndCommand(): Void;
 
  /**
   * Checks if the standard game commands for the menu
@@ -44,7 +44,7 @@ extern class Window_MenuCommand extends Window_Command {
   * @returns {boolean}
   * @memberof Window_MenuCommand
   */
- public function needsCommand(name: String): Bool;
+ public dynamic function needsCommand(name: String): Bool;
 
  /**
   * Determines if the main commands are enabled;
@@ -52,7 +52,7 @@ extern class Window_MenuCommand extends Window_Command {
   * @returns {boolean}
   * @memberof Window_MenuCommand
   */
- public function areMainCommandsEnabled(): Bool;
+ public dynamic function areMainCommandsEnabled(): Bool;
 
  /**
   * Determines if the option command is enabled;
@@ -60,7 +60,7 @@ extern class Window_MenuCommand extends Window_Command {
   * @returns {boolean}
   * @memberof Window_MenuCommand
   */
- public function isOptionsEnabled(): Bool;
+ public dynamic function isOptionsEnabled(): Bool;
 
  /**
   * Determines if the save command is enabled;
@@ -68,12 +68,12 @@ extern class Window_MenuCommand extends Window_Command {
   * @returns {boolean}
   * @memberof Window_MenuCommand
   */
- public function isSaveEnabled(): Bool;
+ public dynamic function isSaveEnabled(): Bool;
 
  /**
   * Selects the last command in menu.
   *
   * @memberof Window_MenuCommand
   */
- public function selectLast(): Void;
+ public dynamic function selectLast(): Void;
 }

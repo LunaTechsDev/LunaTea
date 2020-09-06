@@ -76,21 +76,21 @@ extern class Game_Character extends Game_CharacterBase {
  public var __waitCount: Int;
  private var _waitCount: Int;
 
- public function initMembers(): Void;
+ public dynamic function initMembers(): Void;
 
  /**
   * Memorizes the movement route.
   *
   * @memberof Game_Character
   */
- public function memorizeMoveRoute(): Void;
+ public dynamic function memorizeMoveRoute(): Void;
 
  /**
   * Restores the original movement route.
   *
   * @memberof Game_Character
   */
- public function restoreMoveRoute(): Void;
+ public dynamic function restoreMoveRoute(): Void;
 
  /**
   * Returns true if the move route is being forced.
@@ -98,7 +98,7 @@ extern class Game_Character extends Game_CharacterBase {
   * @returns {Bool}
   * @memberof Game_Character
   */
- public function isMoveRouteForcing(): Bool;
+ public dynamic function isMoveRouteForcing(): Bool;
 
  /**
   * Sets the move route of the game character.
@@ -106,7 +106,7 @@ extern class Game_Character extends Game_CharacterBase {
   * @param {RPG.MoveRoute} moveRoute
   * @memberof Game_Character
   */
- public function setMoveRoute(moveRoute: MoveRoute): Void;
+ public dynamic function setMoveRoute(moveRoute: MoveRoute): Void;
 
  /**
   * Forces the move route of the game character.
@@ -114,16 +114,16 @@ extern class Game_Character extends Game_CharacterBase {
   * @param {RPG.MoveRoute} moveRoute
   * @memberof Game_Character
   */
- public function forceMoveRoute(moveRoute: MoveRoute): Void;
+ public dynamic function forceMoveRoute(moveRoute: MoveRoute): Void;
 
- public function updateStop(): Void;
+ public dynamic function updateStop(): Void;
 
  /**
   * Updates the game character's move routine.
   *
   * @memberof Game_Character
   */
- public function updateRoutineMove(): Void;
+ public dynamic function updateRoutineMove(): Void;
 
  /**
   * Processes the given move commands.
@@ -131,17 +131,17 @@ extern class Game_Character extends Game_CharacterBase {
   * @param {RPG.MoveCommand} command
   * @memberof Game_Character
   */
- public function processMoveCommand(command: MoveCommand): Void;
+ public dynamic function processMoveCommand(command: MoveCommand): Void;
 
- public function deltaXFrom(x: Int): Int;
- public function deltaYFrom(y: Int): Int;
+ public dynamic function deltaXFrom(x: Int): Int;
+ public dynamic function deltaYFrom(y: Int): Int;
 
  /**
   * Move's the game character at random.
   *
   * @memberof Game_Character
   */
- public function moveRandom(): Void;
+ public dynamic function moveRandom(): Void;
 
  /**
   * Moves the game character toward the other game character.
@@ -149,7 +149,7 @@ extern class Game_Character extends Game_CharacterBase {
   * @param {Game_Character} character
   * @memberof Game_Character
   */
- public function moveTowardCharacter(character: Game_Character): Void;
+ public dynamic function moveTowardCharacter(character: Game_Character): Void;
 
  /**
   * Moves the game character away from the other game character.
@@ -157,7 +157,7 @@ extern class Game_Character extends Game_CharacterBase {
   * @param {Game_Character} character
   * @memberof Game_Character
   */
- public function moveAwayFromCharacter(character: Game_Character): Void;
+ public dynamic function moveAwayFromCharacter(character: Game_Character): Void;
 
  /**
   * Turns the game character toward the other game character.
@@ -165,7 +165,7 @@ extern class Game_Character extends Game_CharacterBase {
   * @param {Game_Character} character
   * @memberof Game_Character
   */
- public function turnTowardCharacter(character: Game_Character): Void;
+ public dynamic function turnTowardCharacter(character: Game_Character): Void;
 
  /**
   * Turns the game character away from the other game character.
@@ -173,91 +173,91 @@ extern class Game_Character extends Game_CharacterBase {
   * @param {Game_Character} character
   * @memberof Game_Character
   */
- public function turnAwayFromCharacter(character: Game_Character): Void;
+ public dynamic function turnAwayFromCharacter(character: Game_Character): Void;
 
  /**
   * Turns the game character toward the player.
   *
   * @memberof Game_Character
   */
- public function turnTowardPlayer(): Void;
+ public dynamic function turnTowardPlayer(): Void;
 
  /**
   * Turns the game character away from the player.
   *
   * @memberof Game_Character
   */
- public function turnAwayFromPlayer(): Void;
+ public dynamic function turnAwayFromPlayer(): Void;
 
  /**
   * Moves the game character toward the player.
   *
   * @memberof Game_Character
   */
- public function moveTowardPlayer(): Void;
+ public dynamic function moveTowardPlayer(): Void;
 
  /**
   * Moves the game character away from the player.
   *
   * @memberof Game_Character
   */
- public function moveAwayFromPlayer(): Void;
+ public dynamic function moveAwayFromPlayer(): Void;
 
  /**
   * Moves the game character forward.
   *
   * @memberof Game_Character
   */
- public function moveForward(): Void;
+ public dynamic function moveForward(): Void;
 
  /**
   * Moves the game character backward.
   *
   * @memberof Game_Character
   */
- public function moveBackward(): Void;
+ public dynamic function moveBackward(): Void;
 
  /**
   * Handles the end of the move route.
   *
   * @memberof Game_Character
   */
- public function processRouteEnd(): Void;
+ public dynamic function processRouteEnd(): Void;
 
- public function advanceMoveRouteIndex(): Void;
+ public dynamic function advanceMoveRouteIndex(): Void;
 
  /**
   * Turns the game character right by 90 degrees.
   *
   * @memberof Game_Character
   */
- public function turnRight90(): Void;
+ public dynamic function turnRight90(): Void;
 
  /**
   * Turns the game character left by 90 degrees.
   *
   * @memberof Game_Character
   */
- public function turnLeft90(): Void;
+ public dynamic function turnLeft90(): Void;
 
- public function turn180(): Void;
+ public dynamic function turn180(): Void;
 
  /**
   * Turns the game character or left by 90 degrees.
   *
   * @memberof Game_Character
   */
- public function turnRightOrLeft90(): Void;
+ public dynamic function turnRightOrLeft90(): Void;
 
  /**
   * Turns the game character at random.
   *
   * @memberof Game_Character
   */
- public function turnRandom(): Void;
+ public dynamic function turnRandom(): Void;
 
- public function swap(character: Game_Character): Void;
- public function findDirectionTo(goalX: Int, goalY: Int): Int;
+ public dynamic function swap(character: Game_Character): Void;
+ public dynamic function findDirectionTo(goalX: Int, goalY: Int): Int;
 
  /**
   * Returns the search limit for path finding.
@@ -265,5 +265,5 @@ extern class Game_Character extends Game_CharacterBase {
   * @returns {Int}
   * @memberof Game_Character
   */
- public function searchLimit(): Int;
+ public dynamic function searchLimit(): Int;
 }

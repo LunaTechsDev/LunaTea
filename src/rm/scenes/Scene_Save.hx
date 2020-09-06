@@ -12,12 +12,12 @@ extern class Scene_Save extends Scene_File {
   * @returns {string}
   * @memberof Scene_Save
   */
- public function mode(): String;
+ public dynamic function mode(): String;
 
- public function helpWindowText(): String;
+ public dynamic function helpWindowText(): String;
 
  #if !compileMV
- public function executeSave(saveFileId: Int): Void;
+ public dynamic function executeSave(saveFileId: Int): Void;
  #end
 
  /**
@@ -26,26 +26,26 @@ extern class Scene_Save extends Scene_File {
   * @returns {number}
   * @memberof Scene_Save
   */
- public function firstSavefileIndex(): Int;
+ public dynamic function firstSavefileIndex(): Int;
 
  /**
   * Handler for when a save file
   * is confirmed within the save scene.
   * @memberof Scene_Save
   */
- public function onSavefileOk(): Void;
+ public dynamic function onSavefileOk(): Void;
 
  /**
   * Handler for when save is a success.
   *
   * @memberof Scene_Save
   */
- public function onSaveSuccess(): Void;
+ public dynamic function onSaveSuccess(): Void;
 
  /**
   * Handler for when save fails.
   *
   * @memberof Scene_Save
   */
- public function onSaveFailure(): Void;
+ public dynamic function onSaveFailure(): Void;
 }

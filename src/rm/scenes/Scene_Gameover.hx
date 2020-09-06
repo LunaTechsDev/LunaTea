@@ -11,30 +11,30 @@ extern class Scene_Gameover extends Scene_Base {
  private var _backSprite: Sprite;
 
  #if !compileMV
- public function adjustBackground(): Void;
+ public dynamic function adjustBackground(): Void;
  #end
 
- public function stop(): Void;
+ public dynamic function stop(): Void;
 
  /**
   * Plays the game over music
   * within the game over scene.
   * @memberof Scene_Gameover
   */
- public function playGameoverMusic(): Void;
+ public dynamic function playGameoverMusic(): Void;
 
  /**
   * Creates the background of
   * the game over scene.
   * @memberof Scene_Gameover
   */
- public function createBackground(): Void;
+ public dynamic function createBackground(): Void;
 
- public function isTriggered(): Bool;
+ public dynamic function isTriggered(): Bool;
 
  /**
   * Returns to the title scene (Scene_Title).
   * @memberof Scene_Gameover
   */
- public function gotoTitle(): Void;
+ public dynamic function gotoTitle(): Void;
 }

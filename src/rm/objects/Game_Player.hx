@@ -56,7 +56,7 @@ extern class Game_Player extends Game_Character {
   *
   * @memberof Game_Player
   */
- public function clearTransferInfo(): Void;
+ public dynamic function clearTransferInfo(): Void;
 
  /**
   * Returns the player followers (party members).
@@ -64,14 +64,14 @@ extern class Game_Player extends Game_Character {
   * @returns {Game_Followers}
   * @memberof Game_Player
   */
- public function followers(): Game_Followers;
+ public dynamic function followers(): Game_Followers;
 
  /**
   * Refreshes the game player.
   *
   * @memberof Game_Player
   */
- public function refresh(): Void;
+ public dynamic function refresh(): Void;
 
  /**
   * Returns true if the player is stopping.
@@ -79,7 +79,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function isStopping(): Bool;
+ public dynamic function isStopping(): Bool;
 
  /**
   * Reserves a transfer of the player to the specified map, at the given
@@ -91,12 +91,12 @@ extern class Game_Player extends Game_Character {
   * @param {Int} [fadeType]
   * @memberof Game_Player
   */
- public function reserveTransfer(mapId: Int, x: Int, y: Int, ?d: Int,
+ public dynamic function reserveTransfer(mapId: Int, x: Int, y: Int, ?d: Int,
   ?fadeType: Int): Void;
 
- public function requestMapReload(): Void;
+ public dynamic function requestMapReload(): Void;
 
- public function isTransferring(): Bool;
+ public dynamic function isTransferring(): Bool;
 
  /**
   * Returns the new map id.
@@ -104,18 +104,18 @@ extern class Game_Player extends Game_Character {
   * @returns {Int}
   * @memberof Game_Player
   */
- public function newMapId(): Int;
+ public dynamic function newMapId(): Int;
 
- public function fadeType(): Int;
+ public dynamic function fadeType(): Int;
 
  /**
   * Performs a transfer of the player to a different area or map.
   *
   * @memberof Game_Player
   */
- public function performTransfer(): Void;
+ public dynamic function performTransfer(): Void;
 
- public function isMapPassable(x: Int, y: Int, d: Int): Bool;
+ public dynamic function isMapPassable(x: Int, y: Int, d: Int): Bool;
 
  /**
   * Returns the current vehicles the player is riding in.
@@ -123,7 +123,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Game_Vehicle}
   * @memberof Game_Player
   */
- public function vehicle(): Game_Vehicle;
+ public dynamic function vehicle(): Game_Vehicle;
 
  /**
   * Returns true if the player is in a boat.
@@ -131,7 +131,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function isInBoat(): Bool;
+ public dynamic function isInBoat(): Bool;
 
  /**
   * Returns true if the player is in a ship.
@@ -139,7 +139,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function isInShip(): Bool;
+ public dynamic function isInShip(): Bool;
 
  /**
   * Returns true if the player is in an airship.
@@ -147,7 +147,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function isInAirship(): Bool;
+ public dynamic function isInAirship(): Bool;
 
  /**
   * Returns true if the player is in a vehicle.
@@ -155,7 +155,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function isInVehicle(): Bool;
+ public dynamic function isInVehicle(): Bool;
 
  /**
   * Returns true if the player is in their normal state.
@@ -163,7 +163,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function isNormal(): Bool;
+ public dynamic function isNormal(): Bool;
 
  /**
   * Returns true if the player is dashing.
@@ -171,11 +171,11 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function isDashRing(): Bool;
+ public dynamic function isDashRing(): Bool;
 
- public function isDebugThrough(): Bool;
+ public dynamic function isDebugThrough(): Bool;
 
- public function isCollided(x: Int, y: Int): Bool;
+ public dynamic function isCollided(x: Int, y: Int): Bool;
 
  /**
   * Returns the player's center x coordinate.
@@ -183,7 +183,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Int}
   * @memberof Game_Player
   */
- public function centerX(): Int;
+ public dynamic function centerX(): Int;
 
  /**
   * Returns the player's center y coordinate.
@@ -191,20 +191,20 @@ extern class Game_Player extends Game_Character {
   * @returns {Int}
   * @memberof Game_Player
   */
- public function centerY(): Int;
+ public dynamic function centerY(): Int;
 
- public function center(x: Int, y: Int): Void;
+ public dynamic function center(x: Int, y: Int): Void;
 
- public function locate(x: Int, y: Int): Void;
+ public dynamic function locate(x: Int, y: Int): Void;
 
- public function increaseSteps(): Void;
+ public dynamic function increaseSteps(): Void;
 
  /**
   * Creates the encounter count for the player.
   *
   * @memberof Game_Player
   */
- public function makeEncounterCount(): Void;
+ public dynamic function makeEncounterCount(): Void;
 
  /**
   * Creates the encounter troop id and returns it.
@@ -212,9 +212,9 @@ extern class Game_Player extends Game_Character {
   * @returns {Int}
   * @memberof Game_Player
   */
- public function makeEncounterTroopId(): Int;
+ public dynamic function makeEncounterTroopId(): Int;
 
- public function meetsEncounterConditions(encounter: MapEncounter): Bool;
+ public dynamic function meetsEncounterConditions(encounter: MapEncounter): Bool;
 
  /**
   * Executes an encounter.
@@ -222,7 +222,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function executeEncounter(): Bool;
+ public dynamic function executeEncounter(): Bool;
 
  /**
   * Has the player start a map event at the given x and y coordinates.
@@ -233,10 +233,10 @@ extern class Game_Player extends Game_Character {
   * @param {Bool} normal
   * @memberof Game_Player
   */
- public function startMapEvent(x: Int, y: Int, triggers: Array<Int>,
+ public dynamic function startMapEvent(x: Int, y: Int, triggers: Array<Int>,
   normal: Bool): Void;
 
- public function moveByInput(): Void;
+ public dynamic function moveByInput(): Void;
 
  /**
   * Returns true if the player can move.
@@ -244,7 +244,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function canMove(): Bool;
+ public dynamic function canMove(): Bool;
 
  /**
   * Gets the input direction of the player as a Int.
@@ -252,18 +252,18 @@ extern class Game_Player extends Game_Character {
   * @returns {Int}
   * @memberof Game_Player
   */
- public function getInputDirection(): Int;
+ public dynamic function getInputDirection(): Int;
 
- public function executeMove(direction: Int): Void;
+ public dynamic function executeMove(direction: Int): Void;
 
- public function update(?sceneActive: Bool): Void;
+ public dynamic function update(?sceneActive: Bool): Void;
 
  /**
   * Updates the dashing of the player.
   *
   * @memberof Game_Player
   */
- public function updateDashing(): Void;
+ public dynamic function updateDashing(): Void;
 
  /**
   * Returns true if the dash button is pressed.
@@ -271,36 +271,37 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function isDashButtonPressed(): Bool;
+ public dynamic function isDashButtonPressed(): Bool;
 
- public function updateScroll(lastScrolledX: Int, lastScrolledY: Int): Void;
+ public dynamic function updateScroll(lastScrolledX: Int,
+  lastScrolledY: Int): Void;
 
  /**
   * Updates the vehicle.
   *
   * @memberof Game_Player
   */
- public function updateVehicle(): Void;
+ public dynamic function updateVehicle(): Void;
 
  /**
   * Updates the player getting on the vehicle.
   *
   * @memberof Game_Player
   */
- public function updateVehicleGetOn(): Void;
+ public dynamic function updateVehicleGetOn(): Void;
 
  /**
   * Updates the player getting off the vehicle.
   *
   * @memberof Game_Player
   */
- public function updateVehicleGetOff(): Void;
+ public dynamic function updateVehicleGetOff(): Void;
 
- public function updateNonmoving(wasMoving: Bool): Void;
+ public dynamic function updateNonmoving(wasMoving: Bool): Void;
 
- public function triggerAction(): Bool;
+ public dynamic function triggerAction(): Bool;
 
- public function triggerButtonAction(): Bool;
+ public dynamic function triggerButtonAction(): Bool;
 
  /**
   * Returns true if the player triggered a touch action.
@@ -308,20 +309,20 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function triggerTouchAction(): Bool;
+ public dynamic function triggerTouchAction(): Bool;
 
- public function triggerTouchActionD1(x1: Int, y1: Int): Bool;
+ public dynamic function triggerTouchActionD1(x1: Int, y1: Int): Bool;
 
- public function triggerTouchActionD2(x2: Int, y2: Int): Bool;
+ public dynamic function triggerTouchActionD2(x2: Int, y2: Int): Bool;
 
- public function triggerTouchActionD3(x2: Int, y2: Int): Bool;
+ public dynamic function triggerTouchActionD3(x2: Int, y2: Int): Bool;
 
  /**
   * Updates the player encounter count.
   *
   * @memberof Game_Player
   */
- public function updateEncounterCount(): Void;
+ public dynamic function updateEncounterCount(): Void;
 
  /**
   * Returns true if the player can encounter enemies.
@@ -329,7 +330,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function canEncounter(): Bool;
+ public dynamic function canEncounter(): Bool;
 
  /**
   * Returns the encounter progress value of the player.
@@ -337,11 +338,11 @@ extern class Game_Player extends Game_Character {
   * @returns {Int}
   * @memberof Game_Player
   */
- public function encounterProgressValue(): Int;
+ public dynamic function encounterProgressValue(): Int;
 
- public function checkEventTriggerHere(triggers: Array<Int>): Void;
+ public dynamic function checkEventTriggerHere(triggers: Array<Int>): Void;
 
- public function checkEventTriggerThere(triggers: Array<Int>): Void;
+ public dynamic function checkEventTriggerThere(triggers: Array<Int>): Void;
 
  /**
   * Returns true if the player can start local events.
@@ -349,7 +350,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function canStartLocalEvents(): Bool;
+ public dynamic function canStartLocalEvents(): Bool;
 
  /**
   * Returns true if the player is getting on/off a vehicle.
@@ -357,7 +358,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function getOnOffVehicle(): Bool;
+ public dynamic function getOnOffVehicle(): Bool;
 
  /**
   * Returns true if the player is getting on a vehicle.
@@ -365,7 +366,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function getOnVehicle(): Bool;
+ public dynamic function getOnVehicle(): Bool;
 
  /**
   * Returns true if the player is getting off a vehicle.
@@ -373,14 +374,14 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function getOffVehicle(): Bool;
+ public dynamic function getOffVehicle(): Bool;
 
  /**
   * Forces the player to move forward.
   *
   * @memberof Game_Player
   */
- public function forceMoveForward(): Void;
+ public dynamic function forceMoveForward(): Void;
 
  /**
   * Returns true if the player is on a floor that does damage.
@@ -388,7 +389,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function isOnDamageFloor(): Bool;
+ public dynamic function isOnDamageFloor(): Bool;
 
  /**
   * Moves the player straight, given a direction.
@@ -396,7 +397,7 @@ extern class Game_Player extends Game_Character {
   * @param {Int} d
   * @memberof Game_Player
   */
- public function moveStraight(d: Int): Void;
+ public dynamic function moveStraight(d: Int): Void;
 
  /**
   * Moves the player diagonally, given a horizontal
@@ -405,7 +406,7 @@ extern class Game_Player extends Game_Character {
   * @param {Int} vert
   * @memberof Game_Player
   */
- public function moveDiagonally(horz: Int, vert: Int): Void;
+ public dynamic function moveDiagonally(horz: Int, vert: Int): Void;
 
  /**
   * Has the player jump in the given direction at the specified
@@ -415,28 +416,28 @@ extern class Game_Player extends Game_Character {
   * @param {Int} yPlus
   * @memberof Game_Player
   */
- public function jump(xPlus: Int, yPlus: Int): Void;
+ public dynamic function jump(xPlus: Int, yPlus: Int): Void;
 
  /**
   * Shows the player followers.
   *
   * @memberof Game_Player
   */
- public function showFollowers(): Void;
+ public dynamic function showFollowers(): Void;
 
  /**
   * Hides the player followers.
   *
   * @memberof Game_Player
   */
- public function hideFollowers(): Void;
+ public dynamic function hideFollowers(): Void;
 
  /**
   * Gather followers around the player.
   *
   * @memberof Game_Player
   */
- public function gatherFollowers(): Void;
+ public dynamic function gatherFollowers(): Void;
 
  /**
   * Returns true if the followers are currently gathering.
@@ -444,7 +445,7 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function areFollowersGathering(): Bool;
+ public dynamic function areFollowersGathering(): Bool;
 
  /**
   * Returns true if the followers are gathered.
@@ -452,5 +453,5 @@ extern class Game_Player extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Player
   */
- public function areFollowersGathered(): Bool;
+ public dynamic function areFollowersGathered(): Bool;
 }

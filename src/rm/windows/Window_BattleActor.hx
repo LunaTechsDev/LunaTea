@@ -14,11 +14,11 @@ import rm.objects.Game_Actor;
 @:native("Window_BattleActor")
 extern class Window_BattleActor extends Window_BattleStatus {
  #if compileMV
- public function new(x: Int, y: Int): Void;
- public function initialize(x: Int, y: Int): Void;
+ public dynamic function new(x: Int, y: Int): Void;
+ public dynamic function initialize(x: Int, y: Int): Void;
  #else
- public function new(rect: Rectangle);
- public function initialize(rect: Rectangle): Void;
+ public dynamic function new(rect: Rectangle);
+ public dynamic function initialize(rect: Rectangle): Void;
  #end
 
  /**
@@ -27,7 +27,7 @@ extern class Window_BattleActor extends Window_BattleStatus {
   * @param {number} index
   * @memberof Window_BattleActor
   */
- public function select(index: Int): Void;
+ public dynamic function select(index: Int): Void;
 
  /**
   * Returns the current selected actor.
@@ -35,5 +35,5 @@ extern class Window_BattleActor extends Window_BattleStatus {
   * @returns {Game_Actor}
   * @memberof Window_BattleActor
   */
- public function actor(): Game_Actor;
+ public dynamic function actor(): Game_Actor;
 }

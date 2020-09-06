@@ -16,8 +16,8 @@ extern class Scene_Menu extends Scene_MenuBase {
  private var _statusWindow: Window_MenuStatus;
 
  #if !compileMV
- public function commandWindowRect(): Rectangle;
- public function goldWindowRect(): Rectangle;
+ public dynamic function commandWindowRect(): Rectangle;
+ public dynamic function goldWindowRect(): Rectangle;
  #end
 
  /**
@@ -26,55 +26,55 @@ extern class Scene_Menu extends Scene_MenuBase {
   * menu usage.
   * @memberof Scene_Menu
   */
- public function createCommandWindow(): Void;
+ public dynamic function createCommandWindow(): Void;
 
  /**
   * Creates the gold window on the menu scene.
   *
   * @memberof Scene_Menu
   */
- public function createGoldWindow(): Void;
+ public dynamic function createGoldWindow(): Void;
 
  /**
   * Creates the status window on the menu scene.
   *
   * @memberof Scene_Menu
   */
- public function createStatusWindow(): Void;
+ public dynamic function createStatusWindow(): Void;
 
  /**
   * Handler for what to do when the 'item'
   * command is clicked.
   * @memberof Scene_Menu
   */
- public function commandItem(): Void;
+ public dynamic function commandItem(): Void;
 
- public function commandPersonal(): Void;
- public function commandFormation(): Void;
+ public dynamic function commandPersonal(): Void;
+ public dynamic function commandFormation(): Void;
 
  /**
   * Handler for what to do when the 'option'
   * command is clicked.
   * @memberof Scene_Menu
   */
- public function commandOptions(): Void;
+ public dynamic function commandOptions(): Void;
 
  /**
   * Handler for what to do when the 'save'
   * command is clicked.
   * @memberof Scene_Menu
   */
- public function commandSave(): Void;
+ public dynamic function commandSave(): Void;
 
  /**
   * Handler for what to do when the 'game end'
   * command is clicked.
   * @memberof Scene_Menu
   */
- public function commandGameEnd(): Void;
+ public dynamic function commandGameEnd(): Void;
 
- public function onPersonalOk(): Void;
- public function onPersonalCancel(): Void;
- public function onFormationOk(): Void;
- public function onFormationCancel(): Void;
+ public dynamic function onPersonalOk(): Void;
+ public dynamic function onPersonalCancel(): Void;
+ public dynamic function onFormationOk(): Void;
+ public dynamic function onFormationCancel(): Void;
 }

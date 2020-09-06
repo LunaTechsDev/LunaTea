@@ -21,53 +21,53 @@ extern class Window_Scrollable extends Window_Base {
   * Constructor for Window_Scrollable
   * @param rect
   */
- public function new(rect: Rectangle): Void;
+ public dynamic function new(rect: Rectangle): Void;
 
  /**
   * Initializes the scrollable window with a rectangle
   * called internally by new operator.
   * @param rect
   */
- public function initialize(rect: Rectangle): Void;
+ public dynamic function initialize(rect: Rectangle): Void;
 
- public function clearScrollStatus(): Void;
+ public dynamic function clearScrollStatus(): Void;
 
- public function scrollX(): Int;
+ public dynamic function scrollX(): Int;
 
- public function scrollY(): Int;
+ public dynamic function scrollY(): Int;
 
- public function scrollBaseX(): Int;
+ public dynamic function scrollBaseX(): Int;
 
- public function scrollBaseY(): Int;
+ public dynamic function scrollBaseY(): Int;
 
- public function scrollTo(x: Int, y: Int): Void;
+ public dynamic function scrollTo(x: Int, y: Int): Void;
 
- public function scrollBy(x: Int, y: Int): Void;
+ public dynamic function scrollBy(x: Int, y: Int): Void;
 
- public function smoothScrollTo(x: Int, y: Int): Void;
+ public dynamic function smoothScrollTo(x: Int, y: Int): Void;
 
- public function setScrollAccel(x: Int, y: Int): Void;
+ public dynamic function setScrollAccel(x: Int, y: Int): Void;
 
  /**
   *
   * Overall width of the window.
   * @return Int
   */
- public function overallWidth(): Int;
+ public dynamic function overallWidth(): Int;
 
  /**
   * Overall height of the window.
   * @return Int
   */
- public function overallHeight(): Int;
+ public dynamic function overallHeight(): Int;
 
- public function maxScrollX(): Int;
+ public dynamic function maxScrollX(): Int;
 
- public function maxScrollY(): Int;
+ public dynamic function maxScrollY(): Int;
 
- public function scrollBlockWidth(): Int;
+ public dynamic function scrollBlockWidth(): Int;
 
- public function scrollBlockHeight(): Int;
+ public dynamic function scrollBlockHeight(): Int;
 
  /**
   * Smoothly scrolls down to the number by the
@@ -75,7 +75,7 @@ extern class Window_Scrollable extends Window_Base {
   * @param num
   * @return Int
   */
- public function smoothScrollDown(num: Int): Int;
+ public dynamic function smoothScrollDown(num: Int): Int;
 
  /**
   * Smoothly scrolls up to the number by the height
@@ -83,90 +83,90 @@ extern class Window_Scrollable extends Window_Base {
   * @param num
   * @return Int
   */
- public function smoothScrollUp(num: Int): Int;
+ public dynamic function smoothScrollUp(num: Int): Int;
 
  /**
   * Process wheel scrolling with the TouchInput wheel.
   * @return Int
   */
- public function processWheelScroll(): Void;
+ public dynamic function processWheelScroll(): Void;
 
  /**
   * Processes touch input scrolling.
   */
- public function processTouchScroll(): Void;
+ public dynamic function processTouchScroll(): Void;
 
  /**
   * Defaults to isScrollEnabled();
   * Determines if wheel scroll is enabled.
   * @return Bool
   */
- public function isWheelScrollEnabled(): Bool;
+ public dynamic function isWheelScrollEnabled(): Bool;
 
  /**
   * Defaults to isScrollEnabled();
   * Determines if touch scroll is enabled.
   * @return Bool
   */
- public function isTouchScrollEnabled(): Bool;
+ public dynamic function isTouchScrollEnabled(): Bool;
 
  /**
   * Whether scrolling is enabled; default to true.
   * @return Bool
   */
- public function isScrollEnable(): Bool;
+ public dynamic function isScrollEnable(): Bool;
 
  /**
   * Returns true if the window is touched
   * within the frame.
   * @return Bool
   */
- public function isTouchedInsideFrame(): Bool;
+ public dynamic function isTouchedInsideFrame(): Bool;
 
  /**
   * Handler for when touch scroll is started.
   */
- public function onTouchScrollStart(): Void;
+ public dynamic function onTouchScrollStart(): Void;
 
  /**
   * Handler for when touch scrolling.
   */
- public function onTouchScroll(): Void;
+ public dynamic function onTouchScroll(): Void;
 
  /**
   * Handler for when touch scroll is ending.
   */
- public function onTouchScrollEnd(): Void;
+ public dynamic function onTouchScrollEnd(): Void;
 
  /**
-  * Update function for smooth scrolling.
+  * Update dynamic function for smooth scrolling.
   */
- public function updateSmoothScroll(): Void;
+ public dynamic function updateSmoothScroll(): Void;
 
  /**
-  * Update function for scroll accelleration.
+  * Update dynamic function for scroll accelleration.
   */
- public function updateScrollAccel(): Void;
+ public dynamic function updateScrollAccel(): Void;
 
  /**
-  * Update function for the scrolling arrows.
+  * Update dynamic function for the scrolling arrows.
   */
- public function updateArrows(): Void;
+ public dynamic function updateArrows(): Void;
 
  /**
-  * Update function for the origin when scrolling.
+  * Update dynamic function for the origin when scrolling.
   */
- public function updateOrigin(): Void;
+ public dynamic function updateOrigin(): Void;
 
  /**
-  * Update function for the Scroll Base.
+  * Update dynamic function for the Scroll Base.
   */
- public function updateScrollBase(): Void;
+ public dynamic function updateScrollBase(): Void;
 
  /**
   * Function to be overriden for your personal use.
   */
- public function paint(): Void;
+ public dynamic function paint(): Void;
 }
 #else
 #end

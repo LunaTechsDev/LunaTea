@@ -26,7 +26,7 @@ extern class Window_ShopBuy extends Window_Selectable {
   * @param {Array<Array<any>>} shopGoods
   * @memberof Window_ShopBuy
   */
- public function new(x: Int, y: Int, height: Int,
+ public dynamic function new(x: Int, y: Int, height: Int,
   shopGoods: Array<Array<Any>>);
 
  /**
@@ -35,7 +35,7 @@ extern class Window_ShopBuy extends Window_Selectable {
   * @returns {number}
   * @memberof Window_ShopBuy
   */
- public function windowWidth(): Int;
+ public dynamic function windowWidth(): Int;
 
  /**
   * Returns the current item of the window.
@@ -43,16 +43,16 @@ extern class Window_ShopBuy extends Window_Selectable {
   * @returns {RPG.BaseItem}
   * @memberof Window_ShopBuy
   */
- public function item(): BaseItem;
+ public dynamic function item(): BaseItem;
 
- public function setMoney(money: Int): Void;
+ public dynamic function setMoney(money: Int): Void;
 
  /**
   * Returns the p rice of an item
   * @param item
   * @return Int
   */
- public function price(item: BaseItem): Int;
+ public dynamic function price(item: BaseItem): Int;
 
  /**
   * Checks if the current item is enabled (can be bought/sold).
@@ -61,18 +61,18 @@ extern class Window_ShopBuy extends Window_Selectable {
   * @returns {boolean}
   * @memberof Window_ShopBuy
   */
- public function isEnabled(item: BaseItem): Bool;
+ public dynamic function isEnabled(item: BaseItem): Bool;
 
  /**
   * Creates a list of items for the shop window.
   *
   * @memberof Window_ShopBuy
   */
- public function makeItemList(): Void;
+ public dynamic function makeItemList(): Void;
 
  /**
   * Sets the status window for the shop buy window.
   * @param statusWindow
   */
- public function setStatusWindow(statusWindow: Window_ShopStatus): Void;
+ public dynamic function setStatusWindow(statusWindow: Window_ShopStatus): Void;
 }

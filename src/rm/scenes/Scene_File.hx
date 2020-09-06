@@ -12,12 +12,12 @@ extern class Scene_File extends Scene_MenuBase {
  private var _listWindow: Window_SavefileList;
 
  #if !compileMV
- public function isSavefileEnabled(): Bool;
- public function listWindowRect(): Rectangle;
+ public dynamic function isSavefileEnabled(): Bool;
+ public dynamic function listWindowRect(): Rectangle;
 
- public function needsAutosave(): Bool;
+ public dynamic function needsAutosave(): Bool;
 
- public function firstSavefileId(): Int;
+ public dynamic function firstSavefileId(): Int;
  #else
 
  /**
@@ -26,7 +26,7 @@ extern class Scene_File extends Scene_MenuBase {
   * @returns {number}
   * @memberof Scene_File
   */
- public function firstSavefileIndex(): Int;
+ public dynamic function firstSavefileIndex(): Int;
  #end
 
  /**
@@ -34,25 +34,25 @@ extern class Scene_File extends Scene_MenuBase {
   *
   * @memberof Scene_File
   */
- public function savefileId(): Int;
+ public dynamic function savefileId(): Int;
 
- public function createHelpWindow(): Void;
- public function createListWindow(): Void;
+ public dynamic function createHelpWindow(): Void;
+ public dynamic function createListWindow(): Void;
 
  /**
   * The current mode of the scene;
   * the modes are 'save' or 'load'.
   * @memberof Scene_File
   */
- public function mode(): Void;
+ public dynamic function mode(): Void;
 
- public function activateListWindow(): Void;
- public function helpWindowText(): String;
+ public dynamic function activateListWindow(): Void;
+ public dynamic function helpWindowText(): String;
 
  /**
   * Handler for when a
   * save file is selected within the file scene.
   * @memberof Scene_File
   */
- public function onSavefileOk(): Void;
+ public dynamic function onSavefileOk(): Void;
 }

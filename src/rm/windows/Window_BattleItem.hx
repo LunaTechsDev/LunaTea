@@ -14,12 +14,13 @@ import rm.types.RPG.UsableItem;
 @:native("Window_BattleItem")
 extern class Window_BattleItem extends Window_ItemList {
  #if compileMV
- public function new(x: Int, y: Int, width: Int, height: Int);
- public function initialize(x: Int, y: Int, width: Int, height: Int): Void;
+ public dynamic function new(x: Int, y: Int, width: Int, height: Int);
+ public dynamic function initialize(x: Int, y: Int, width: Int,
+  height: Int): Void;
  #else
- public function new(rect: Rectangle);
- public function initialize(rect: Rectangle): Void;
+ public dynamic function new(rect: Rectangle);
+ public dynamic function initialize(rect: Rectangle): Void;
  #end
 
- public function includes(item: UsableItem): Bool;
+ public dynamic function includes(item: UsableItem): Bool;
 }

@@ -15,7 +15,7 @@ extern class ShaderTilemap extends Tilemap {
   * @param {PIXI.SystemRenderer} pixi renderer
   * @private
   */
- private function _hackRenderer(renderer: AbstractRenderer): AbstractRenderer;
+ private dynamic function _hackRenderer(renderer: AbstractRenderer): AbstractRenderer;
 
  /**
   * PIXI render method
@@ -23,7 +23,7 @@ extern class ShaderTilemap extends Tilemap {
   * @method renderWebGL
   * @param {PIXI.WebGLRenderer} pixi renderer
   */
- public function renderWebGL(renderer: Renderer): Void;
+ public dynamic function renderWebGL(renderer: Renderer): Void;
 
  /**
   * PIXI render method
@@ -31,19 +31,19 @@ extern class ShaderTilemap extends Tilemap {
   * @method renderCanvas
   * @param {PIXI.CanvasRenderer} pixi renderer
   */
- public function renderCanvas(renderer: CanvasRenderer): Void;
+ public dynamic function renderCanvas(renderer: CanvasRenderer): Void;
 
  /**
   * Forces to repaint the entire tilemap AND update bitmaps list if needed
   *
   * @method refresh
   */
- public function refresh(): Void;
+ public dynamic function refresh(): Void;
 
  /**
   * Call after you update tileset
   *
   * @method refreshTileset
   */
- public function refreshTileset(): Void;
+ public dynamic function refreshTileset(): Void;
 }

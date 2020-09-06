@@ -21,15 +21,15 @@ extern class Window_Message extends Window_Base {
  private var _itemWindow: Window_EventItem;
 
  #if compileMV
- public function initialize(): Void;
+ public dynamic function initialize(): Void;
 
- public function initMembers(): Void;
+ public dynamic function initMembers(): Void;
 
  /**
   * Processes normal characters displayed within the message window.
   * @param textState
   */
- public function processNormalCharacter(textState: String): Void;
+ public dynamic function processNormalCharacter(textState: String): Void;
  #else
  #end
 
@@ -39,14 +39,14 @@ extern class Window_Message extends Window_Base {
   * @returns {Array<Window_Base>}
   * @memberof Window_Message
   */
- public function subWindows(): Array<Window_Base>;
+ public dynamic function subWindows(): Array<Window_Base>;
 
  /**
   * Creates the sub windows for the message window.
   *
   * @memberof Window_Message
   */
- public function createSubWindows(): Void;
+ public dynamic function createSubWindows(): Void;
 
  /**
   * Returns the width of the window.
@@ -54,7 +54,7 @@ extern class Window_Message extends Window_Base {
   * @returns {number}
   * @memberof Window_Message
   */
- public function windowWidth(): Int;
+ public dynamic function windowWidth(): Int;
 
  /**
   * Returns the height of the window.
@@ -62,7 +62,7 @@ extern class Window_Message extends Window_Base {
   * @returns {number}
   * @memberof Window_Message
   */
- public function windowHeight(): Int;
+ public dynamic function windowHeight(): Int;
 
  /**
   * Returns the number of visible rows within the message window.
@@ -70,9 +70,9 @@ extern class Window_Message extends Window_Base {
   * @returns {number}
   * @memberof Window_Message
   */
- public function numVisibleRows(): Int;
+ public dynamic function numVisibleRows(): Int;
 
- public function checkToNotClose(): Void;
+ public dynamic function checkToNotClose(): Void;
 
  /**
   * Returns true if the message window can start.
@@ -80,27 +80,27 @@ extern class Window_Message extends Window_Base {
   * @returns {boolean}
   * @memberof Window_Message
   */
- public function canStart(): Bool;
+ public dynamic function canStart(): Bool;
 
  /**
   * Starts the displaying of the message within the message window.
   *
   * @memberof Window_Message
   */
- public function startMessage(): Void;
+ public dynamic function startMessage(): Void;
 
  /**
   * Updates the placement of the message window.
   *
   * @memberof Window_Message
   */
- public function updatePlacement(): Void;
+ public dynamic function updatePlacement(): Void;
 
  /**
   * Clears the message window flags for
   * fast text, pause skip, and line show fast
   */
- public function clearFlags(): Void;
+ public dynamic function clearFlags(): Void;
 
  /**
   * Sets the background type of the window in terms
@@ -109,41 +109,42 @@ extern class Window_Message extends Window_Base {
   * 1,
   * 2
   */
- public function setBackgroundType(backgroundType: Int): Void;
+ public dynamic function setBackgroundType(backgroundType: Int): Void;
 
  /**
   * Processes the escape characters in the message window.
   * @param code
   * @param textState
   */
- public function processEscapeCharacter(code: String, textState: String): Void;
+ public dynamic function processEscapeCharacter(code: String,
+  textState: String): Void;
 
  /**
   * Starts the wait count for the message window.
   * @param count
   */
- public function startWait(count: Int): Void;
+ public dynamic function startWait(count: Int): Void;
 
  /**
   * Starts the pause for the window.
   * Sets the wait count to 10 and pauses
   * the window.
   */
- public function startPause(): Void;
+ public dynamic function startPause(): Void;
 
  /**
   * Updates the background of the message window.
   *
   * @memberof Window_Message
   */
- public function updateBackground(): Void;
+ public dynamic function updateBackground(): Void;
 
  /**
   * Terminates the message and closes the gold and message window.
   *
   * @memberof Window_Message
   */
- public function terminateMessage(): Void;
+ public dynamic function terminateMessage(): Void;
 
  /**
   * Updates the wait of the message window.
@@ -151,9 +152,9 @@ extern class Window_Message extends Window_Base {
   * @returns {Bool}
   * @memberof Window_Message
   */
- public function updateWait(): Bool;
+ public dynamic function updateWait(): Bool;
 
- public function updateLoading(): Bool;
+ public dynamic function updateLoading(): Bool;
 
  /**
   * Updates input when the message window is processing.
@@ -161,7 +162,7 @@ extern class Window_Message extends Window_Base {
   * @returns {Bool}
   * @memberof Window_Message
   */
- public function updateInput(): Bool;
+ public dynamic function updateInput(): Bool;
 
  /**
   * Returns true if any sub window is active.
@@ -169,7 +170,7 @@ extern class Window_Message extends Window_Base {
   * @returns {Bool}
   * @memberof Window_Message
   */
- public function isAnySubWindowActive(): Bool;
+ public dynamic function isAnySubWindowActive(): Bool;
 
  /**
   * Updates the message.
@@ -177,16 +178,16 @@ extern class Window_Message extends Window_Base {
   * @returns {Bool}
   * @memberof Window_Message
   */
- public function updateMessage(): Bool;
+ public dynamic function updateMessage(): Bool;
 
  /**
   * Handler for when there is no text left to display within
   * the message window.
   * @memberof Window_Message
   */
- public function onEndOfText(): Void;
+ public dynamic function onEndOfText(): Void;
 
- public function startInput(): Bool;
+ public dynamic function startInput(): Bool;
 
  /**
   * Returns true if the ok or cancel inputs have been triggered
@@ -194,7 +195,7 @@ extern class Window_Message extends Window_Base {
   * @returns {Bool}
   * @memberof Window_Message
   */
- public function isTriggered(): Bool;
+ public dynamic function isTriggered(): Bool;
 
  /**
   * Returns true if the message window still has text
@@ -202,7 +203,7 @@ extern class Window_Message extends Window_Base {
   * @returns {Bool}
   * @memberof Window_Message
   */
- public function doesContinue(): Bool;
+ public dynamic function doesContinue(): Bool;
 
  /**
   * Returns true if the message window settings have been changed.
@@ -210,13 +211,13 @@ extern class Window_Message extends Window_Base {
   * @returns {Bool}
   * @memberof Window_Message
   */
- public function areSettingsChanged(): Bool;
+ public dynamic function areSettingsChanged(): Bool;
 
- public function updateShowFast(): Void;
- public function newPage(textState: TextState): Void;
- public function loadMessageFace(): Void;
- public function drawMessageFace(): Void;
- public function newLineX(): Int;
- public function processNewLine(textState: TextState): Void;
- public function processNewPage(textState: TextState): Void;
+ public dynamic function updateShowFast(): Void;
+ public dynamic function newPage(textState: TextState): Void;
+ public dynamic function loadMessageFace(): Void;
+ public dynamic function drawMessageFace(): Void;
+ public dynamic function newLineX(): Int;
+ public dynamic function processNewLine(textState: TextState): Void;
+ public dynamic function processNewPage(textState: TextState): Void;
 }

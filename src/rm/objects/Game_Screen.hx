@@ -60,8 +60,8 @@ extern class Game_Screen {
  private var _flashColor: Array<Int>;
  private var _flashDuration: Int;
 
- public function new(): Void;
- public function initialize(): Void;
+ public dynamic function new(): Void;
+ public dynamic function initialize(): Void;
 
  /**
   * The array of Game_Pictures that are
@@ -72,14 +72,14 @@ extern class Game_Screen {
   */
  private var _pictures: Array<Game_Picture>;
 
- public function clear(): Void;
+ public dynamic function clear(): Void;
 
  /**
   * Handler for when the battle starts in game; prepares
   * the screen for the battle scene.
   * @memberof Game_Screen
   */
- public function onBattleStart(): Void;
+ public dynamic function onBattleStart(): Void;
 
  /**
   * Returns the brightness of the game screen.
@@ -87,11 +87,11 @@ extern class Game_Screen {
   * @returns {number}
   * @memberof Game_Screen
   */
- public function brightness(): Float;
+ public dynamic function brightness(): Float;
 
- public function tone(): Array<Int>;
- public function flashColor(): Array<Int>;
- public function shake(): Float;
+ public dynamic function tone(): Array<Int>;
+ public dynamic function flashColor(): Array<Int>;
+ public dynamic function shake(): Float;
 
  /**
   * Returns the  zoom x coordinate of the screen.
@@ -99,7 +99,7 @@ extern class Game_Screen {
   * @returns {number}
   * @memberof Game_Screen
   */
- public function zoomX(): Float;
+ public dynamic function zoomX(): Float;
 
  /**
   * Returns the zoom y coordiante of the screen.
@@ -107,7 +107,7 @@ extern class Game_Screen {
   * @returns {number}
   * @memberof Game_Screen
   */
- public function zoomY(): Float;
+ public dynamic function zoomY(): Float;
 
  /**
   * Returns the zoom scale of the screen.
@@ -115,7 +115,7 @@ extern class Game_Screen {
   * @returns {number}
   * @memberof Game_Screen
   */
- public function zoomScale(): Float;
+ public dynamic function zoomScale(): Float;
 
  /**
   * Returns the current weather type.
@@ -123,7 +123,7 @@ extern class Game_Screen {
   * @returns {string}
   * @memberof Game_Screen
   */
- public function weatherType(): String; // TODO: Refactor to enum for weather type
+ public dynamic function weatherType(): String; // TODO: Refactor to enum for weather type
 
  /**
   * Returns the weather power.
@@ -131,7 +131,7 @@ extern class Game_Screen {
   * @returns {number}
   * @memberof Game_Screen
   */
- public function weatherPower(): Float;
+ public dynamic function weatherPower(): Float;
 
  /**
   * Returns the specified picture given the picture id.
@@ -140,7 +140,7 @@ extern class Game_Screen {
   * @returns {Game_Picture}
   * @memberof Game_Screen
   */
- public function picture(pictureId: Int): Game_Picture;
+ public dynamic function picture(pictureId: Int): Game_Picture;
 
  /**
   * Returns the real picture id, given the picture id.
@@ -149,63 +149,63 @@ extern class Game_Screen {
   * @returns {number}
   * @memberof Game_Screen
   */
- public function realPictureId(pictureId: Int): Int;
+ public dynamic function realPictureId(pictureId: Int): Int;
 
  /**
   * Clears the screen fade.
   *
   * @memberof Game_Screen
   */
- public function clearFade(): Void;
+ public dynamic function clearFade(): Void;
 
  /**
   * Clears the screen tone.
   *
   * @memberof Game_Screen
   */
- public function clearTone(): Void;
+ public dynamic function clearTone(): Void;
 
  /**
   * Clears the screen flash.
   *
   * @memberof Game_Screen
   */
- public function clearFlash(): Void;
+ public dynamic function clearFlash(): Void;
 
  /**
   * Clears the screen shake.
   *
   * @memberof Game_Screen
   */
- public function clearShake(): Void;
+ public dynamic function clearShake(): Void;
 
  /**
   * Clears the screen zoom.
   *
   * @memberof Game_Screen
   */
- public function clearZoom(): Void;
+ public dynamic function clearZoom(): Void;
 
  /**
   * Clears the screen weather.
   *
   * @memberof Game_Screen
   */
- public function clearWeather(): Void;
+ public dynamic function clearWeather(): Void;
 
  /**
   * Clears the pictures set on the game screen.
   *
   * @memberof Game_Screen
   */
- public function clearPictures(): Void;
+ public dynamic function clearPictures(): Void;
 
  /**
   * Erases the battle pictures.
   *
   * @memberof Game_Screen
   */
- public function eraseBattlePictures(): Void;
+ public dynamic function eraseBattlePictures(): Void;
 
  /**
   * Returns the maximum number of pictures set on the game screen.
@@ -213,24 +213,25 @@ extern class Game_Screen {
   * @returns {number}
   * @memberof Game_Screen
   */
- public function maxPictures(): Int;
+ public dynamic function maxPictures(): Int;
 
- public function startFadeOut(duration: Int): Void;
+ public dynamic function startFadeOut(duration: Int): Void;
 
- public function startFadeIn(duration: Int): Void;
+ public dynamic function startFadeIn(duration: Int): Void;
 
- public function startTint(tone: Array<Int>, duration: Int): Void;
+ public dynamic function startTint(tone: Array<Int>, duration: Int): Void;
 
- public function startFlash(color: Array<Int>, duration: Int): Void;
+ public dynamic function startFlash(color: Array<Int>, duration: Int): Void;
 
- public function startShake(power: Float, speed: Float, duration: Int): Void;
-
- public function startZoom(x: Float, y: Float, scale: Float,
+ public dynamic function startShake(power: Float, speed: Float,
   duration: Int): Void;
 
- public function setZoom(x: Float, y: Float, scale: Float): Void;
+ public dynamic function startZoom(x: Float, y: Float, scale: Float,
+  duration: Int): Void;
+
+ public dynamic function setZoom(x: Float, y: Float, scale: Float): Void;
  // TODO: change the weather type to an num
- public function changeWeather(type: String, power: Float,
+ public dynamic function changeWeather(type: String, power: Float,
   duration: Int): Void;
 
  /**
@@ -238,77 +239,77 @@ extern class Game_Screen {
   *
   * @memberof Game_Screen
   */
- public function update(): Void;
+ public dynamic function update(): Void;
 
  /**
   * Updates the screen fade out.
   *
   * @memberof Game_Screen
   */
- public function updateFadeOut(): Void;
+ public dynamic function updateFadeOut(): Void;
 
  /**
   * Updates the screen fade in.
   *
   * @memberof Game_Screen
   */
- public function updateFadeIn(): Void;
+ public dynamic function updateFadeIn(): Void;
 
  /**
   * Updates the screen tone.
   *
   * @memberof Game_Screen
   */
- public function updateTone(): Void;
+ public dynamic function updateTone(): Void;
 
  /**
   * Update the screen flash.
   *
   * @memberof Game_Screen
   */
- public function updateFlash(): Void;
+ public dynamic function updateFlash(): Void;
 
  /**
   * Update the screen shake.
   *
   * @memberof Game_Screen
   */
- public function updateShake(): Void;
+ public dynamic function updateShake(): Void;
 
  /**
   * Update the screen zoom.
   *
   * @memberof Game_Screen
   */
- public function updateZoom(): Void;
+ public dynamic function updateZoom(): Void;
 
  /**
   * Update the screen weather.
   *
   * @memberof Game_Screen
   */
- public function updateWeather(): Void;
+ public dynamic function updateWeather(): Void;
 
  /**
   * Update the screen pictures.
   *
   * @memberof Game_Screen
   */
- public function updatePictures(): Void;
+ public dynamic function updatePictures(): Void;
 
- public function startFlashForDamage(): Void;
+ public dynamic function startFlashForDamage(): Void;
 
- public function showPicture(pictureId: Int, name: String, origin: Float,
-  x: Int, y: Int, scaleX: Float, scaleY: Float, opacity: Int,
+ public dynamic function showPicture(pictureId: Int, name: String,
+  origin: Float, x: Int, y: Int, scaleX: Float, scaleY: Float, opacity: Int,
   blendMode: Int): Void;
 
- public function movePicture(pictureId: Int, origin: Float, x: Int, y: Int,
-  scaleX: Float, scaleY: Float, opacity: Int, blendMode: Int,
+ public dynamic function movePicture(pictureId: Int, origin: Float, x: Int,
+  y: Int, scaleX: Float, scaleY: Float, opacity: Int, blendMode: Int,
   duration: Int): Void;
 
- public function rotatePicture(pictureId: Int, speed: Int): Void;
+ public dynamic function rotatePicture(pictureId: Int, speed: Int): Void;
 
- public function tintPicture(pictureId: Int, tone: Array<Int>,
+ public dynamic function tintPicture(pictureId: Int, tone: Array<Int>,
   duration: Int): Void;
 
  /**
@@ -317,5 +318,5 @@ extern class Game_Screen {
   * @param {number} pictureId
   * @memberof Game_Screen
   */
- public function erasePicture(pictureId: Int): Void;
+ public dynamic function erasePicture(pictureId: Int): Void;
 }

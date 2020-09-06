@@ -35,9 +35,9 @@ extern class Sprite_Damage extends Sprite {
  public var __damageBitmap: Bitmap;
  private var _damageBitmap: Bitmap;
 
- public function setup(target: Game_Actor): Void;
+ public dynamic function setup(target: Game_Actor): Void;
 
- public function setupCriticalEffect(): Void;
+ public dynamic function setupCriticalEffect(): Void;
 
  /**
   * Returns the digit width of the sprite damage.
@@ -45,7 +45,7 @@ extern class Sprite_Damage extends Sprite {
   * @returns {number}
   * @memberof Sprite_Damage
   */
- public function digitWidth(): Int;
+ public dynamic function digitWidth(): Int;
 
  /**
   * Returns the digit height of the sprite damage.
@@ -53,16 +53,16 @@ extern class Sprite_Damage extends Sprite {
   * @returns {number}
   * @memberof Sprite_Damage
   */
- public function digitHeight(): Int;
+ public dynamic function digitHeight(): Int;
 
  /**
   * Creates the miss display of the damage sprite.
   *
   * @memberof Sprite_Damage
   */
- public function createMiss(): Void;
+ public dynamic function createMiss(): Void;
 
- public function createDigits(baseRow: Int, value: Int): Void;
+ public dynamic function createDigits(baseRow: Int, value: Int): Void;
 
  /**
   * Creates the child sprite of the damage sprite for displaying damage.
@@ -70,23 +70,23 @@ extern class Sprite_Damage extends Sprite {
   * @returns {Sprite}
   * @memberof Sprite_Damage
   */
- public function createChildSprite(): Sprite;
+ public dynamic function createChildSprite(): Sprite;
 
- public function updateChild(sprite: Sprite): Void;
+ public dynamic function updateChild(sprite: Sprite): Void;
 
  /**
   * Updates the flash of the damage sprite.
   *
   * @memberof Sprite_Damage
   */
- public function updateFlash(): Void;
+ public dynamic function updateFlash(): Void;
 
  /**
   * Updates the opacity of the damage sprite.
   *
   * @memberof Sprite_Damage
   */
- public function updateOpacity(): Void;
+ public dynamic function updateOpacity(): Void;
 
  /**
   * Returns true if the damage sprite is playing.
@@ -94,5 +94,5 @@ extern class Sprite_Damage extends Sprite {
   * @returns {boolean}
   * @memberof Sprite_Damage
   */
- public function isPlaying(): Bool;
+ public dynamic function isPlaying(): Bool;
 }

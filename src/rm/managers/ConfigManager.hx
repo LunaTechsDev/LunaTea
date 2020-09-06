@@ -8,10 +8,12 @@ import rm.types.RM.ConfigData;
 @:expose("ConfigManager")
 @:native("ConfigManager")
 extern class ConfigManager {
- public static function load(): Void;
- public static function save(): Void;
- public static function makeData(): ConfigData;
- public static function applyData(config: ConfigData): Void;
- public static function readFlag(config: ConfigData, name: String): Bool;
- public static function readVolume(config: ConfigData, name: String): Int;
+ public static dynamic function load(): Void;
+ public static dynamic function save(): Void;
+ public static dynamic function makeData(): ConfigData;
+ public static dynamic function applyData(config: ConfigData): Void;
+ public static dynamic function readFlag(config: ConfigData,
+  name: String): Bool;
+ public static dynamic function readVolume(config: ConfigData,
+  name: String): Int;
 }

@@ -20,21 +20,21 @@ extern class Sprite_Timer extends Sprite {
   *
   * @memberof Sprite_Timer
   */
- public function createBitmap(): Void;
+ public dynamic function createBitmap(): Void;
 
  /**
   * Updates the bitmap of the sprite timer.
   *
   * @memberof Sprite_Timer
   */
- public function updateBitmap(): Void;
+ public dynamic function updateBitmap(): Void;
 
  /**
   * Redraws the sprite timer.
   *
   * @memberof Sprite_Timer
   */
- public function redraw(): Void;
+ public dynamic function redraw(): Void;
 
  /**
   * Returns the text of the timer.
@@ -42,19 +42,19 @@ extern class Sprite_Timer extends Sprite {
   * @returns {string} The text displayed on the timer.
   * @memberof Sprite_Timer
   */
- public function timerText(): String;
+ public dynamic function timerText(): String;
 
  /**
   * Updates the positon of the sprite timer.
   *
   * @memberof Sprite_Timer
   */
- public function updatePosition(): Void;
+ public dynamic function updatePosition(): Void;
 
  /**
   * Updates the visibility of the sprite timer.
   *
   * @memberof Sprite_Timer
   */
- public function updateVisibility(): Void;
+ public dynamic function updateVisibility(): Void;
 }

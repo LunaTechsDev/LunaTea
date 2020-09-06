@@ -7,7 +7,7 @@ import rm.windows.Window_MenuActor;
 import rm.windows.Window_Base;
 
 /**
- * Super class of all public function item(skill, items, etc) screen scenes.
+ * Super class of all public dynamic function item(skill, items, etc) screen scenes.
  * Super class of Scene_Item & Scene_Skill.
  */
 @:expose("Scene_ItemBase")
@@ -17,7 +17,7 @@ extern class Scene_ItemBase extends Scene_Base {
  private var _itemWindow: Window_Selectable;
 
  #if !compileMV
- public function actorWindowRect(): Rectangle;
+ public dynamic function actorWindowRect(): Rectangle;
  #end
 
  /**
@@ -25,7 +25,7 @@ extern class Scene_ItemBase extends Scene_Base {
   *
   * @memberof Scene_ItemBase
   */
- public function createActorWindow(): Void;
+ public dynamic function createActorWindow(): Void;
 
  /**
   * Returns the item attached to the item window within the base item scene.
@@ -33,7 +33,7 @@ extern class Scene_ItemBase extends Scene_Base {
   * @returns {*}
   * @memberof Scene_ItemBase
   */
- public function item(): Any;
+ public dynamic function item(): Any;
 
  /**
   * Returns the current game actor.
@@ -41,7 +41,7 @@ extern class Scene_ItemBase extends Scene_Base {
   * @returns {Game_Actor}
   * @memberof Scene_ItemBase
   */
- public function user(): Game_Actor;
+ public dynamic function user(): Game_Actor;
 
  /**
   * Returns true if the cursor is left.
@@ -49,7 +49,7 @@ extern class Scene_ItemBase extends Scene_Base {
   * @returns {boolean}
   * @memberof Scene_ItemBase
   */
- public function isCursorLeft(): Bool;
+ public dynamic function isCursorLeft(): Bool;
 
  /**
   * Shows the sub window.
@@ -57,7 +57,7 @@ extern class Scene_ItemBase extends Scene_Base {
   * @param {Window_Base} window
   * @memberof Scene_ItemBase
   */
- public function showSubWindow(window: Window_Base): Void;
+ public dynamic function showSubWindow(window: Window_Base): Void;
 
  /**
   * Hides the sub window.
@@ -65,27 +65,27 @@ extern class Scene_ItemBase extends Scene_Base {
   * @param {Window_Base} window
   * @memberof Scene_ItemBase
   */
- public function hideSubWindow(window: Window_Base): Void;
+ public dynamic function hideSubWindow(window: Window_Base): Void;
 
- public function onActorOk(): Void;
- public function onActorCancel(): Void;
- public function determineItem(): Void;
+ public dynamic function onActorOk(): Void;
+ public dynamic function onActorCancel(): Void;
+ public dynamic function determineItem(): Void;
 
  /**
   * Uses the current item.
   *
   * @memberof Scene_ItemBase
   */
- public function useItem(): Void;
+ public dynamic function useItem(): Void;
 
  /**
   * Activates the item window.
   *
   * @memberof Scene_ItemBase
   */
- public function activateItemWindow(): Void;
+ public dynamic function activateItemWindow(): Void;
 
- public function itemTargetActors(): Game_Actor;
+ public dynamic function itemTargetActors(): Game_Actor;
 
  /**
   * Returns true if the user (game actor) can use the item.
@@ -93,22 +93,22 @@ extern class Scene_ItemBase extends Scene_Base {
   * @returns {boolean}
   * @memberof Scene_ItemBase
   */
- public function canUse(): Bool;
+ public dynamic function canUse(): Bool;
 
  /**
-  * Returns true if the item effects are valid on the public function target(the user).
+  * Returns true if the item effects are valid on the public dynamic function target(the user).
   *
   * @returns {boolean}
   * @memberof Scene_ItemBase
   */
- public function isItemEffectsValid(): Bool;
+ public dynamic function isItemEffectsValid(): Bool;
 
- public function applyItem(): Void;
+ public dynamic function applyItem(): Void;
 
  /**
   * Checks the common event set on the item.
   *
   * @memberof Scene_ItemBase
   */
- public function checkCommonEvent(): Void;
+ public dynamic function checkCommonEvent(): Void;
 }

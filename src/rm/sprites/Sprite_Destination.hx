@@ -20,19 +20,19 @@ extern class Sprite_Destination extends Sprite {
   *
   * @memberof Sprite_Destination
   */
- public function createBitmap(): Void;
+ public dynamic function createBitmap(): Void;
 
  /**
   * Updates the position of the destination sprite.
   *
   * @memberof Sprite_Destination
   */
- public function updatePosition(): Void;
+ public dynamic function updatePosition(): Void;
 
  /**
   * Updates the destination sprite animation.
   *
   * @memberof Sprite_Destination
   */
- public function updateAnimation(): Void;
+ public dynamic function updateAnimation(): Void;
 }

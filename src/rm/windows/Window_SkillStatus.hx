@@ -28,7 +28,7 @@ extern class Window_SkillStatus extends Window_Base {
   * @param height
   * @memberof Window_SkillStatus
   */
- public function new(x: Int, y: Int, width: Int, height: Int): Void;
+ public dynamic function new(x: Int, y: Int, width: Int, height: Int): Void;
 
  /**
   * Sets the current actor for the window.
@@ -36,12 +36,12 @@ extern class Window_SkillStatus extends Window_Base {
   * @param {Game_Actor} actor
   * @memberof Window_SkillStatus
   */
- public function setActor(actor: Game_Actor): Void;
+ public dynamic function setActor(actor: Game_Actor): Void;
 
  /**
   * Refreshes the window contents.
   *
   * @memberof Window_SkillStatus
   */
- public function refresh(): Void;
+ public dynamic function refresh(): Void;
 }

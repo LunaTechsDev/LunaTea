@@ -20,19 +20,19 @@ extern class Window_MenuStatus extends Window_Selectable {
   * @param {number} y
   * @memberof Window_MenuStatus
   */
- public function new(x: Int, y: Int);
+ public dynamic function new(x: Int, y: Int);
 
  /**
   * Window width.
   * @return Int
   */
- public function windowWidth(): Int;
+ public dynamic function windowWidth(): Int;
 
  /**
   * Window height.
   * @return Int
   */
- public function windowHeight(): Int;
+ public dynamic function windowHeight(): Int;
 
  /**
   * Returns the height of each item (actor status) in the main menu
@@ -40,7 +40,7 @@ extern class Window_MenuStatus extends Window_Selectable {
   * @returns {number}
   * @memberof Window_MenuStatus
   */
- public function itemHeight(): Int;
+ public dynamic function itemHeight(): Int;
 
  /**
   * Returns the number of visible rows in
@@ -48,14 +48,14 @@ extern class Window_MenuStatus extends Window_Selectable {
   * @returns {number}
   * @memberof Window_MenuStatus
   */
- public function numVisibleRows(): Int;
+ public dynamic function numVisibleRows(): Int;
 
  /**
   * Loads the images for the main menu status window.
   *
   * @memberof Window_MenuStatus
   */
- public function loadImages(): Void;
+ public dynamic function loadImages(): Void;
 
  /**
   * Draws the item background at the given index.
@@ -63,13 +63,13 @@ extern class Window_MenuStatus extends Window_Selectable {
   * @param {number} index
   * @memberof Window_MenuStatus
   */
- public function drawItemBackground(index: Int): Void;
+ public dynamic function drawItemBackground(index: Int): Void;
 
- public function drawItemImage(index: Int): Void;
+ public dynamic function drawItemImage(index: Int): Void;
 
- public function drawItemStatus(index: Int): Void;
+ public dynamic function drawItemStatus(index: Int): Void;
 
- public function selectLast(): Void;
+ public dynamic function selectLast(): Void;
 
  /**
   * Determines if the window is in formation mode;
@@ -78,7 +78,7 @@ extern class Window_MenuStatus extends Window_Selectable {
   * @returns {boolean}
   * @memberof Window_MenuStatus
   */
- public function formationMode(): Bool;
+ public dynamic function formationMode(): Bool;
 
  /**
   * Sets the formation mode to true or false.
@@ -86,9 +86,9 @@ extern class Window_MenuStatus extends Window_Selectable {
   * @param {boolean} formationMode
   * @memberof Window_MenuStatus
   */
- public function setFormationMode(formationMode: Bool): Void;
+ public dynamic function setFormationMode(formationMode: Bool): Void;
 
- public function pendingIndex(): Int;
+ public dynamic function pendingIndex(): Int;
 
- public function setPendingIndex(index: Int): Void;
+ public dynamic function setPendingIndex(index: Int): Void;
 }

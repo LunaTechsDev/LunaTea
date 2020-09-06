@@ -151,22 +151,22 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @constructor
   * @param {Bitmap} bitmap The image for the sprite
   */
- public function new(?bitmap: Bitmap);
+ public dynamic function new(?bitmap: Bitmap);
 
- public function initialize(?bitmap: Bitmap): Void;
+ public dynamic function initialize(?bitmap: Bitmap): Void;
 
  /**
   * Updates the sprite for each frame.
   *
   * @method update
   */
- public function update(): Void;
+ public dynamic function update(): Void;
 
  /**
   * @method updateTransform
   * @private
   */
- public function updateTransform(): Void;
+ public dynamic function updateTransform(): Void;
 
  /**
   * Sets the x and y at once.
@@ -175,7 +175,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @param {Number} x The x coordinate of the sprite
   * @param {Number} y The y coordinate of the sprite
   */
- public function move(x: Float, y: Float): Void;
+ public dynamic function move(x: Float, y: Float): Void;
 
  /**
   * Sets the rectagle of the bitmap that the sprite displays.
@@ -186,7 +186,8 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @param {Number} width The width of the frame
   * @param {Number} height The height of the frame
   */
- public function setFrame(x: Int, y: Int, width: Int, height: Int): Void;
+ public dynamic function setFrame(x: Int, y: Int, width: Int,
+  height: Int): Void;
 
  /**
   * Gets the blend color for the sprite.
@@ -194,7 +195,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @method getBlendColor
   * @return {Array} The blend color [r, g, b, a]
   */
- public function getBlendColor(): Array<Float>;
+ public dynamic function getBlendColor(): Array<Float>;
 
  /**
   * Sets the blend color for the sprite.
@@ -202,7 +203,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @method setBlendColor
   * @param {Array} color The blend color [r, g, b, a]
   */
- public function setBlendColor(color: Array<Float>): Void;
+ public dynamic function setBlendColor(color: Array<Float>): Void;
 
  /**
   * Gets the color tone for the sprite.
@@ -210,7 +211,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @method getColorTone
   * @return {Array} The color tone [r, g, b, gray]
   */
- public function getColorTone(): Array<Float>;
+ public dynamic function getColorTone(): Array<Float>;
 
  /**
   * Sets the color tone for the sprite.
@@ -218,7 +219,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @method setColorTone
   * @param {Array} tone The color tone [r, g, b, gray]
   */
- public function setColorTone(tone: Array<Float>): Void;
+ public dynamic function setColorTone(tone: Array<Float>): Void;
 
  /**
   * Adds a child to the container.
@@ -227,7 +228,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @param {PIXI.DisplayObject} child The child to add
   * @return {PIXI.DisplayObject} The child that was added
   */
- public function addChild(child: DisplayObject): DisplayObject;
+ public dynamic function addChild(child: DisplayObject): DisplayObject;
 
  /**
   * Adds a child to the container at a specified index.
@@ -237,7 +238,8 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @param {Number} index The index to place the child in
   * @return {PIXI.DisplayObject} The child that was added
   */
- public function addChildAt(child: DisplayObject, index: Int): DisplayObject;
+ public dynamic function addChildAt(child: DisplayObject,
+  index: Int): DisplayObject;
 
  /**
   * Removes a child from the container.
@@ -246,7 +248,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @param {PIXI.DisplayObject} child The child to remove
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public function removeChild(child: DisplayObject): DisplayObject;
+ public dynamic function removeChild(child: DisplayObject): DisplayObject;
 
  /**
   * Removes a child from the specified index position.
@@ -255,7 +257,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @param {Number} index The index to get the child from
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public function removeChildAt(index: Int): DisplayObject;
+ public dynamic function removeChildAt(index: Int): DisplayObject;
 
  private var _bitmap: Bitmap;
  private var _frame: Rectangle;
@@ -278,13 +280,13 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @method _onBitmapLoad
   * @private
   */
- private function _onBitmapLoad(): Void;
+ private dynamic function _onBitmapLoad(): Void;
 
  /**
   * @method _refresh
   * @private
   */
- private function _refresh(): Void;
+ private dynamic function _refresh(): Void;
 
  /**
   * @method _isInBitmapRect
@@ -295,7 +297,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @return {Boolean}
   * @private
   */
- private function _isInBitmapRect(x: Float, y: Float, w: Float,
+ private dynamic function _isInBitmapRect(x: Float, y: Float, w: Float,
   h: Float): Bool;
 
  /**
@@ -303,7 +305,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @return {Boolean}
   * @private
   */
- private function _needsTint(): Bool;
+ private dynamic function _needsTint(): Bool;
 
  /**
   * @method _createTinter
@@ -311,7 +313,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @param {Number} h
   * @private
   */
- private function _createTinter(w: Float, h: Float): Void;
+ private dynamic function _createTinter(w: Float, h: Float): Void;
 
  /**
   * @method _executeTint
@@ -321,40 +323,41 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @param {Number} h
   * @private
   */
- private function _executeTint(x: Float, y: Float, w: Float, h: Float): Void;
+ private dynamic function _executeTint(x: Float, y: Float, w: Float,
+  h: Float): Void;
 
  /**
   * @method _renderCanvas
   * @param {PIXI.CanvasRenderer} renderer
   * @private
   */
- private function _renderCanvas_PIXI(renderer: CanvasRenderer): Void;
+ private dynamic function _renderCanvas_PIXI(renderer: CanvasRenderer): Void;
 
  /**
   * @method _renderWebGL
   * @param {PIXI.WebGLRenderer} renderer
   * @private
   */
- private function _renderWebGL_PIXI(renderer: Renderer): Void;
+ private dynamic function _renderWebGL_PIXI(renderer: Renderer): Void;
 
  /**
   * @method _renderCanvas
   * @param {PIXI.CanvasRenderer} renderer
   * @private
   */
- private function _renderCanvas(renderer: CanvasRenderer): Void;
+ private dynamic function _renderCanvas(renderer: CanvasRenderer): Void;
 
  /**
   * @method _renderWebGL
   * @param {PIXI.WebGLRenderer} renderer
   * @private
   */
- private function _renderWebGL(renderer: Renderer): Void;
+ private dynamic function _renderWebGL(renderer: Renderer): Void;
 
  /**
   * checks if we need to speed up custom blendmodes
   * @param renderer
   * @private
   */
- private function _speedUpCustomBlendModes(renderer: Renderer): Void;
+ private dynamic function _speedUpCustomBlendModes(renderer: Renderer): Void;
 }

@@ -83,7 +83,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Array<Game_Actor>}
   * @memberof Game_Party
   */
- public function members(): Array<Game_Actor>;
+ public dynamic function members(): Array<Game_Actor>;
 
  /**
   * Returns the living party members.
@@ -91,7 +91,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Array<Game_Actor>}
   * @memberof Game_Party
   */
- public function aliveMembers(): Array<Game_Actor>;
+ public dynamic function aliveMembers(): Array<Game_Actor>;
 
  /**
   * Returns the dead party members.
@@ -99,7 +99,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Array<Game_Actor>}
   * @memberof Game_Party
   */
- public function deadMembers(): Array<Game_Actor>;
+ public dynamic function deadMembers(): Array<Game_Actor>;
 
  /**
   * Returns the movable members in the party.
@@ -107,7 +107,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Array<Game_Actor>}
   * @memberof Game_Party
   */
- public function movableMembers(): Array<Game_Actor>;
+ public dynamic function movableMembers(): Array<Game_Actor>;
 
  /**
   * Returns the battle members in the party.
@@ -115,14 +115,14 @@ extern class Game_Party extends Game_Unit {
   * @returns {Array<Game_Actor>}
   * @memberof Game_Party
   */
- public function battleMembers(): Array<Game_Actor>;
+ public dynamic function battleMembers(): Array<Game_Actor>;
 
  /**
   * Initialize all party items.
   *
   * @memberof Game_Party
   */
- public function initAllItems(): Void;
+ public dynamic function initAllItems(): Void;
 
  /**
   * Returns true if the game party exists.
@@ -130,7 +130,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Bool}
   * @memberof Game_Party
   */
- public function exists(): Bool;
+ public dynamic function exists(): Bool;
 
  /**
   * Returns the size of the party.
@@ -138,7 +138,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Int}
   * @memberof Game_Party
   */
- public function size(): Int;
+ public dynamic function size(): Int;
 
  /**
   * Returns true if the game party is empty.
@@ -146,7 +146,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Bool}
   * @memberof Game_Party
   */
- public function isEmpty(): Bool;
+ public dynamic function isEmpty(): Bool;
 
  /**
   * Returns the maximum battle members in the party.
@@ -154,7 +154,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Int}
   * @memberof Game_Party
   */
- public function maxBattleMembers(): Int;
+ public dynamic function maxBattleMembers(): Int;
 
  /**
   * Returns the leader of the party.
@@ -162,16 +162,16 @@ extern class Game_Party extends Game_Unit {
   * @returns {Game_Actor}
   * @memberof Game_Party
   */
- public function leader(): Game_Actor;
+ public dynamic function leader(): Game_Actor;
 
  /**
   * Revive the battle members of the party.
   *
   * @memberof Game_Party
   */
- public function reviveBattleMembers(): Void;
+ public dynamic function reviveBattleMembers(): Void;
 
- public function items(): Array<Item>;
+ public dynamic function items(): Array<Item>;
 
  /**
   * Returns the weapons of the party.
@@ -179,7 +179,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Array<RPG.Weapon>}
   * @memberof Game_Party
   */
- public function weapons(): Array<Weapon>;
+ public dynamic function weapons(): Array<Weapon>;
 
  /**
   * Returns the party's armor.
@@ -187,7 +187,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Array<RPG.Armor>}
   * @memberof Game_Party
   */
- public function armors(): Array<Armor>;
+ public dynamic function armors(): Array<Armor>;
 
  /**
   * Returns the party's equippable items.
@@ -195,7 +195,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Array<RPG.EquipItem>}
   * @memberof Game_Party
   */
- public function equipItems(): Array<EquipItem>;
+ public dynamic function equipItems(): Array<EquipItem>;
 
  /**
   * Returns all items within the party's posession.
@@ -203,39 +203,39 @@ extern class Game_Party extends Game_Unit {
   * @returns {Array<RPG.BaseItem>}
   * @memberof Game_Party
   */
- public function allItems(): Array<BaseItem>;
+ public dynamic function allItems(): Array<BaseItem>;
 
- public function itemContainer(item: BaseItem): {ItemId: Int};
+ public dynamic function itemContainer(item: BaseItem): {ItemId: Int};
 
  /**
   * Sets up the starting party members.
   *
   * @memberof Game_Party
   */
- public function setupStartingMembers(): Void;
+ public dynamic function setupStartingMembers(): Void;
 
- public function name(): String;
+ public dynamic function name(): String;
 
  /**
   * Sets up a test battle with the party.
   *
   * @memberof Game_Party
   */
- public function setupBattleTest(): Void;
+ public dynamic function setupBattleTest(): Void;
 
  /**
   * Sets up the battle test members.
   *
   * @memberof Game_Party
   */
- public function setupBattleTestMembers(): Void;
+ public dynamic function setupBattleTestMembers(): Void;
 
  /**
   * Sets up the battle test items.
   *
   * @memberof Game_Party
   */
- public function setupBattleTestItems(): Void;
+ public dynamic function setupBattleTestItems(): Void;
 
  /**
   * Returns the highest level in the party.
@@ -243,7 +243,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Int}
   * @memberof Game_Party
   */
- public function highestLevel(): Int;
+ public dynamic function highestLevel(): Int;
 
  /**
   * Adds an actor to the party given the actor id.
@@ -251,7 +251,7 @@ extern class Game_Party extends Game_Unit {
   * @param {Int} actorId
   * @memberof Game_Party
   */
- public function addActor(actorId: Int): Void;
+ public dynamic function addActor(actorId: Int): Void;
 
  /**
   * Removes an actor from the party given the actor id.
@@ -259,7 +259,7 @@ extern class Game_Party extends Game_Unit {
   * @param {Int} actorId
   * @memberof Game_Party
   */
- public function removeActor(actorId: Int): Void;
+ public dynamic function removeActor(actorId: Int): Void;
 
  /**
   * Returns party gold.
@@ -267,7 +267,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Int}
   * @memberof Game_Party
   */
- public function gold(): Int;
+ public dynamic function gold(): Int;
 
  /**
   * Increases the party gold given a specified amount.
@@ -275,7 +275,7 @@ extern class Game_Party extends Game_Unit {
   * @param {Int} amount
   * @memberof Game_Party
   */
- public function gainGold(amount: Int): Void;
+ public dynamic function gainGold(amount: Int): Void;
 
  /**
   * Decreases the party gold given a specified amount.
@@ -283,7 +283,7 @@ extern class Game_Party extends Game_Unit {
   * @param {Int} amount
   * @memberof Game_Party
   */
- public function loseGold(amount: Int): Void;
+ public dynamic function loseGold(amount: Int): Void;
 
  /**
   * Returns maximum gold of the party.
@@ -291,7 +291,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Int}
   * @memberof Game_Party
   */
- public function maxGold(): Int;
+ public dynamic function maxGold(): Int;
 
  /**
   * Returns the Int of steps the party has taken.
@@ -299,14 +299,14 @@ extern class Game_Party extends Game_Unit {
   * @returns {Int}
   * @memberof Game_Party
   */
- public function steps(): Int;
+ public dynamic function steps(): Int;
 
  /**
   * Increases the Int of steps the party has taken.
   *
   * @memberof Game_Party
   */
- public function increaseSteps(): Void;
+ public dynamic function increaseSteps(): Void;
 
  /**
   * Returns the Int of items in the possession of the party of the
@@ -315,7 +315,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Int}
   * @memberof Game_Party
   */
- public function numItems(item: BaseItem): Int;
+ public dynamic function numItems(item: BaseItem): Int;
 
  /**
   * Returns the maximum Int of items of the given item.
@@ -324,9 +324,9 @@ extern class Game_Party extends Game_Unit {
   * @returns {Int}
   * @memberof Game_Party
   */
- public function maxItems(item: BaseItem): Int;
+ public dynamic function maxItems(item: BaseItem): Int;
 
- public function hasMaxItems(item: BaseItem): Bool;
+ public dynamic function hasMaxItems(item: BaseItem): Bool;
 
  /**
   * Returns true if the party has the given item;
@@ -336,7 +336,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Bool}
   * @memberof Game_Party
   */
- public function hasItem(item: BaseItem, includeEquip: Bool): Bool;
+ public dynamic function hasItem(item: BaseItem, includeEquip: Bool): Bool;
 
  /**
   * Returns true if any party member has the specified equip item.
@@ -345,12 +345,13 @@ extern class Game_Party extends Game_Unit {
   * @returns {Bool}
   * @memberof Game_Party
   */
- public function isAnyMemberEquipped(item: EquipItem): Bool;
+ public dynamic function isAnyMemberEquipped(item: EquipItem): Bool;
 
- public function gainItem(item: BaseItem, amount: Int,
+ public dynamic function gainItem(item: BaseItem, amount: Int,
   includeEquip: Bool): Void;
- public function discardMembersEquip(item: EquipItem, amount: Int): Void;
- public function loseItem(item: BaseItem, amount: Int,
+ public dynamic function discardMembersEquip(item: EquipItem,
+  amount: Int): Void;
+ public dynamic function loseItem(item: BaseItem, amount: Int,
   includeEquip: Bool): Void;
 
  /**
@@ -359,7 +360,7 @@ extern class Game_Party extends Game_Unit {
   * @param {RPG.BaseItem} item
   * @memberof Game_Party
   */
- public function consumeItem(item: BaseItem): Void;
+ public dynamic function consumeItem(item: BaseItem): Void;
 
  /**
   * Returns true if the party can use the item.
@@ -368,16 +369,16 @@ extern class Game_Party extends Game_Unit {
   * @returns {Bool}
   * @memberof Game_Party
   */
- public function canUse(item: BaseItem): Bool;
+ public dynamic function canUse(item: BaseItem): Bool;
 
- public function canInput(): Bool;
+ public dynamic function canInput(): Bool;
 
  /**
   * Handler for when the player walks.
   *
   * @memberof Game_Party
   */
- public function onPlayerWalk(): Void;
+ public dynamic function onPlayerWalk(): Void;
 
  /**
   * Returns the actor that will be used in the current menu;
@@ -385,13 +386,13 @@ extern class Game_Party extends Game_Unit {
   * @returns {Game_Actor}
   * @memberof Game_Party
   */
- public function menuActor(): Game_Actor;
+ public dynamic function menuActor(): Game_Actor;
 
- public function setMenuActor(actor: Game_Actor): Void;
- public function makeMenuActorNext(): Void;
- public function makeMenuActorPrevious(): Void;
- public function targetActor(): Game_Actor;
- public function setTargetActor(actor: Game_Actor): Void;
+ public dynamic function setMenuActor(actor: Game_Actor): Void;
+ public dynamic function makeMenuActorNext(): Void;
+ public dynamic function makeMenuActorPrevious(): Void;
+ public dynamic function targetActor(): Game_Actor;
+ public dynamic function setTargetActor(actor: Game_Actor): Void;
 
  /**
   * Returns the last item selected by the game party.
@@ -399,10 +400,10 @@ extern class Game_Party extends Game_Unit {
   * @returns {RPG.BaseItem}
   * @memberof Game_Party
   */
- public function lastItem(): BaseItem;
+ public dynamic function lastItem(): BaseItem;
 
- public function setLastItem(item: BaseItem): Void;
- public function swapOrder(index1: Int, index2: Int): Void;
+ public dynamic function setLastItem(item: BaseItem): Void;
+ public dynamic function swapOrder(index1: Int, index2: Int): Void;
 
  /**
   * Returns the characters that go on the save life.
@@ -410,7 +411,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Array<Array<any>>}
   * @memberof Game_Party
   */
- public function charactersForSavefile(): Array<Array<Any>>;
+ public dynamic function charactersForSavefile(): Array<Array<Any>>;
 
  /**
   * Returns the actor faces for the save file.
@@ -418,9 +419,9 @@ extern class Game_Party extends Game_Unit {
   * @returns {Array<Array<any>>}
   * @memberof Game_Party
   */
- public function facesForSavefile(): Array<Array<Any>>;
+ public dynamic function facesForSavefile(): Array<Array<Any>>;
 
- public function partyAbility(abilityId: Int): Bool;
+ public dynamic function partyAbility(abilityId: Int): Bool;
 
  /**
   * Returns true if the encounter rate is set to half.
@@ -428,7 +429,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Bool}
   * @memberof Game_Party
   */
- public function hasEncounterHalf(): Bool;
+ public dynamic function hasEncounterHalf(): Bool;
 
  /**
   * Returns true if the encounter rate is set to none.
@@ -436,9 +437,9 @@ extern class Game_Party extends Game_Unit {
   * @returns {Bool}
   * @memberof Game_Party
   */
- public function hasEncounterNone(): Bool;
+ public dynamic function hasEncounterNone(): Bool;
 
- public function hasCancelSurprise(): Bool;
+ public dynamic function hasCancelSurprise(): Bool;
 
  /**
   * Returns true if the party has an increased chance of preemptive strike.
@@ -446,7 +447,7 @@ extern class Game_Party extends Game_Unit {
   * @returns {Bool}
   * @memberof Game_Party
   */
- public function hasRaisePreemptive(): Bool;
+ public dynamic function hasRaisePreemptive(): Bool;
 
  /**
   * Returns true if the party has double gold in effect.
@@ -454,37 +455,37 @@ extern class Game_Party extends Game_Unit {
   * @returns {Bool}
   * @memberof Game_Party
   */
- public function hasGoldDouble(): Bool;
+ public dynamic function hasGoldDouble(): Bool;
 
- public function hasDropItemDouble(): Bool;
- public function ratePreemptive(troopAgi: Int): Int;
- public function rateSurprise(troopAgi: Int): Int;
+ public dynamic function hasDropItemDouble(): Bool;
+ public dynamic function ratePreemptive(troopAgi: Int): Int;
+ public dynamic function rateSurprise(troopAgi: Int): Int;
 
  /**
   * Performs victory motion for the entire party.
   *
   * @memberof Game_Party
   */
- public function performVictory(): Void;
+ public dynamic function performVictory(): Void;
 
  /**
   * Performs escape motion for the entire party.
   *
   * @memberof Game_Party
   */
- public function performEscape(): Void;
+ public dynamic function performEscape(): Void;
 
  /**
   * Remove battle states from all actors in the party.
   *
   * @memberof Game_Party
   */
- public function removeBattleStates(): Void;
+ public dynamic function removeBattleStates(): Void;
 
  /**
   * Refreshes the motion on all actors in the party.
   *
   * @memberof Game_Party
   */
- public function requestMotionRefresh(): Void;
+ public dynamic function requestMotionRefresh(): Void;
 }

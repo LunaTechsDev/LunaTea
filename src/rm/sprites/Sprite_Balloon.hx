@@ -18,25 +18,25 @@ extern class Sprite_Balloon extends Sprite_Base {
  public var __duration: Int;
  private var _duration: Int;
 
- public function initMembers(): Void;
+ public dynamic function initMembers(): Void;
 
- public function loadBitmap(): Void;
+ public dynamic function loadBitmap(): Void;
 
- public function setup(balloonId: BalloonId): Void;
+ public dynamic function setup(balloonId: BalloonId): Void;
 
  /**
   * Updates the balloon sprite.
   *
   * @memberof Sprite_Balloon
   */
- public function update(): Void;
+ public dynamic function update(): Void;
 
  /**
   * Updates the balloon sprite frame.
   *
   * @memberof Sprite_Balloon
   */
- public function updateFrame(): Void;
+ public dynamic function updateFrame(): Void;
 
  /**
   * Returns the speed of the balloon animation.
@@ -44,7 +44,7 @@ extern class Sprite_Balloon extends Sprite_Base {
   * @returns {number}
   * @memberof Sprite_Balloon
   */
- public function speed(): Int;
+ public dynamic function speed(): Int;
 
  /**
   * Returns the wait time.
@@ -52,7 +52,7 @@ extern class Sprite_Balloon extends Sprite_Base {
   * @returns {number}
   * @memberof Sprite_Balloon
   */
- public function waitTime(): Int;
+ public dynamic function waitTime(): Int;
 
  /**
   * Returns the frame index of the balloon animation.
@@ -60,7 +60,7 @@ extern class Sprite_Balloon extends Sprite_Base {
   * @returns {number}
   * @memberof Sprite_Balloon
   */
- public function frameIndex(): Int;
+ public dynamic function frameIndex(): Int;
 
  /**
   * Returns true if the balloon animation is playing.
@@ -68,5 +68,5 @@ extern class Sprite_Balloon extends Sprite_Base {
   * @returns {boolean}
   * @memberof Sprite_Balloon
   */
- public function isPlaying(): Bool;
+ public dynamic function isPlaying(): Bool;
 }

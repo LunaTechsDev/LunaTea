@@ -16,11 +16,11 @@ extern class Window_BattleEnemy extends Window_Selectable {
  private var _enemies: Array<Game_Enemy>;
 
  #if compileMV
- public function new(x: Int, y: Int);
- public function initialize(x: Int, y: Int): Void;
+ public dynamic function new(x: Int, y: Int);
+ public dynamic function initialize(x: Int, y: Int): Void;
  #else
- public function new(rect: Rectangle);
- public function initialize(rect: Rectangle): Void;
+ public dynamic function new(rect: Rectangle);
+ public dynamic function initialize(rect: Rectangle): Void;
  #end
 
  /**
@@ -29,7 +29,7 @@ extern class Window_BattleEnemy extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleEnemy
   */
- public function windowWidth(): Int;
+ public dynamic function windowWidth(): Int;
 
  /**
   * Returns the window height.
@@ -37,7 +37,7 @@ extern class Window_BattleEnemy extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleEnemy
   */
- public function windowHeight(): Int;
+ public dynamic function windowHeight(): Int;
 
  /**
   * Returns the number of visible rows.
@@ -45,7 +45,7 @@ extern class Window_BattleEnemy extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleEnemy
   */
- public function numVisibleRows(): Int;
+ public dynamic function numVisibleRows(): Int;
 
  /**
   * Returns the current enemy.
@@ -53,7 +53,7 @@ extern class Window_BattleEnemy extends Window_Selectable {
   * @returns {Game_Enemy}
   * @memberof Window_BattleEnemy
   */
- public function enemy(): Game_Enemy;
+ public dynamic function enemy(): Game_Enemy;
 
  /**
   * Returns the current index selected.
@@ -61,7 +61,7 @@ extern class Window_BattleEnemy extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleEnemy
   */
- public function enemyIndex(): Int;
+ public dynamic function enemyIndex(): Int;
 
  /**
   * Selects a specified enemy using the index.
@@ -69,5 +69,5 @@ extern class Window_BattleEnemy extends Window_Selectable {
   * @param {number} index
   * @memberof Window_BattleEnemy
   */
- public function select(index: Int): Void;
+ public dynamic function select(index: Int): Void;
 }
