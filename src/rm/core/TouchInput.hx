@@ -9,46 +9,33 @@ import rm.types.RM.TouchInputEvents;
 
 @:expose("TouchInput")
 @:native("TouchInput")
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class TouchInput {
- @:native("_mousePressed")
- public static var __mousePressed: Bool;
  private static var _mousePressed: Bool;
- @:native("_screenPressed")
- public static var __screenPressed: Bool;
+
  private static var _screenPressed: Bool;
- @:native("_pressedTime")
- public static var __pressedTime: Int;
+
  private static var _pressedTime: Int;
- @:native("_events")
- public static var __events: TouchInputEvents;
+
  private static var _events: TouchInputEvents;
- @:native("_triggered")
- public static var __triggered: Bool;
+
  private static var _triggered: Bool;
- @:native("_cancelled")
- public static var __cancelled: Bool;
+
  private static var _cancelled: Bool;
- @:native("_moved")
- public static var __moved: Bool;
+
  private static var _moved: Bool;
- @:native("_released")
- public static var __released: Bool;
+
  private static var _released: Bool;
- @:native("_wheelX")
- public static var __wheelX: Float;
+
  private static var _wheelX: Float;
- @:native("_wheelY")
- public static var __wheelY: Float;
+
  private static var _wheelY: Float;
- @:native("_x")
- public static var __x: Int;
+
  private static var _x: Int;
- @:native("_y")
- public static var __y: Int;
+
  private static var _y: Int;
- @:native("_date")
- public static var __date: Int;
+
  private static var _date: Int;
 
  /**

@@ -10,8 +10,6 @@ package rm.windows;
 @:expose("Window_ItemCategory")
 @:native("Window_ItemCategory")
 extern class Window_ItemCategory extends Window_HorzCommand {
- @:native("_itemWindow")
- public var __itemWindow: Window_ItemList;
  private var _itemWindow: Window_ItemList;
 
  /**

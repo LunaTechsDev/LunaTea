@@ -8,6 +8,8 @@ import js.lib.Promise;
  */
 @:expose("StorageManager")
 @:native("StorageManager")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class StorageManager {
  // @todo make type for zip
  #if !compileMV

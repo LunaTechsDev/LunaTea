@@ -10,6 +10,8 @@ import rm.core.Bitmap;
  */
 @:expose("ImageManager")
 @:native("ImageManager")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class ImageManager {
  #if !compileMV
  /**

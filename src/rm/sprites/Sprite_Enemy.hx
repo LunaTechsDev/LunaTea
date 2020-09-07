@@ -11,29 +11,20 @@ import rm.objects.Game_Enemy;
 @:expose("Sprite_Enemy")
 @:native("Sprite_Enemy")
 extern class Sprite_Enemy extends Sprite_Battler {
- @:native("_enemy")
- public var __enemy: Game_Enemy;
  private var _enemy: Game_Enemy;
- @:native("_appeared")
- public var __appeared: Bool;
+
  private var _appeared: Bool;
- @:native("_battlerName")
- public var __battlerName: String;
+
  private var _battlerName: String;
- @:native("_battlerHue")
- public var __battlerHue: Int;
+
  private var _battlerHue: Int;
- @:native("_effectType")
- public var __effectType: String;
+
  private var _effectType: String;
- @:native("_effectDuration")
- public var __effectDuration: Int;
+
  private var _effectDuration: Int;
- @:native("_shake")
- public var __shake: Int;
+
  private var _shake: Int;
- @:native("_stateIconSprite")
- public var __stateIconSprite: Sprite_StateIcon;
+
  private var _stateIconSprite: Sprite_StateIcon;
 
  public function new(battler: Game_Enemy): Void;

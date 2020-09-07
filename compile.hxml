@@ -30,8 +30,18 @@
 # For Compiling Separate JavaScript Files
 
 --each
+
+--next
 # --macro macros.JsMacros.setup()
+# --macro haxe.macro.ExampleJSGenerator.use()
 -js dist/test.js
+-main Main
+# --macro macros.MacroTools.getSourceOutput()
+
+--next
+# --macro macros.JsMacros.setup()
+# --macro haxe.macro.ExampleJSGenerator.use()
+-js dist/test1.js
 -main Main
 # --macro macros.MacroTools.getSourceOutput()
 

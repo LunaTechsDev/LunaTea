@@ -48,16 +48,10 @@ extern class Scene_MenuBase extends Scene_Base {
  public function actor(): Game_Actor;
 
  #if !compileMV
- @:native("_cancelButton")
- public var __cancelButton: Sprite_Button;
  private var _cancelButton: Sprite_Button;
 
- @:native("_pageupButton")
- public var __pageupButton: Sprite_Button;
  private var _pageupButton: Sprite_Button;
 
- @:native("_pagedownButton")
- public var __pagedownButton: Sprite_Button;
  private var _pagedownButton: Sprite_Button;
 
  public function helpAreaTop(): Void;

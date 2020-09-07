@@ -16,23 +16,13 @@ import rm.types.LunaTea.SkillTypeIdA;
 @:expose("Window_SkillList")
 @:native("Window_SkillList")
 extern class Window_SkillList extends Window_Selectable {
- @:native("_actor")
- public var __actor: Game_Actor;
  private var _actor: Game_Actor;
-
- /**
-  * Returns the Skill Type Id, which is an Int.
-  */
- @:native("_stypeId")
- public var __stypeId: SkillTypeIdA;
 
  /**
   * Returns the Skill Type Id which is an Int;
   */
  private var _stypeId: SkillTypeIdA;
 
- @:native("_data")
- public var __data: Array<Skill>;
  private var _data: Array<Skill>;
 
  #if compileMV

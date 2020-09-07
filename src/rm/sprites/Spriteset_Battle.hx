@@ -13,26 +13,18 @@ import rm.core.TilingSprite;
 @:expose("Spriteset_Battle")
 @:native("Spriteset_Battle")
 extern class Spriteset_Battle extends Spriteset_Base {
- @:native("_battlebackLocated")
- public var __battlebackLocated: Bool;
  private var _battlebackLocated: Bool;
- @:native("_backgroundSprite")
- public var __backgroundSprite: Sprite;
+
  private var _backgroundSprite: Sprite;
- @:native("_battleField")
- public var __battleField: Sprite;
+
  private var _battleField: Sprite;
- @:native("_back1Sprite")
- public var __back1Sprite: TilingSprite;
+
  private var _back1Sprite: TilingSprite;
- @:native("_back2Sprite")
- public var __back2Sprite: TilingSprite;
+
  private var _back2Sprite: TilingSprite;
- @:native("_enemySprites")
- public var __enemySprites: Array<Sprite_Enemy>;
+
  private var _enemySprites: Array<Sprite_Enemy>;
- @:native("_actorSprites")
- public var __actorSprites: Array<Sprite_Actor>;
+
  private var _actorSprites: Array<Sprite_Actor>;
 
  /**

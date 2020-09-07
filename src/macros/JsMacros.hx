@@ -4,6 +4,7 @@ import haxe.macro.Context;
 import haxe.macro.Expr;
 import haxe.macro.Compiler;
 import haxe.macro.JSGenApi;
+import haxe.macro.Context;
 import haxe.macro.TypeTools;
 import sys.io.File;
 import sys.FileSystem;

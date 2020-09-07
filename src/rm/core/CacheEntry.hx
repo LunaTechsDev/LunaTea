@@ -3,7 +3,9 @@ package rm.core;
 @:expose("CacheEntry")
 @:native("CacheEntry")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 @:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class CacheEntry {
  /**
   * The resource class. Allows to be collected as a garbage if not use for some time or ticks

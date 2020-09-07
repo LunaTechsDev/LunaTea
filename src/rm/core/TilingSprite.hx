@@ -6,7 +6,9 @@ import pixi.core.renderers.canvas.CanvasRenderer;
 @:expose("TilingSprite")
 @:native("TilingSprite")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 @:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class TilingSprite extends pixi.extras.TilingSprite {
  /**
   * The origin point of the tiling sprite for scrolling.

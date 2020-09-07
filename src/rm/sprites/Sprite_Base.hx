@@ -13,16 +13,6 @@ extern class Sprite_Base extends Sprite {
   * @type {Array<Sprite_Animation>}
   * @memberof Sprite_Base
   */
- @:native("_animationSprites")
- public var __animationSprites: Array<Sprite_Animation>;
-
- /**
-  * The animation sprites assigned to the
-  * sprite object.
-  * @protected
-  * @type {Array<Sprite_Animation>}
-  * @memberof Sprite_Base
-  */
  private var _animationSprites: Array<Sprite_Animation>;
 
  /**
@@ -32,23 +22,7 @@ extern class Sprite_Base extends Sprite {
   * @type {Sprite_Base}
   * @memberof Sprite_Base
   */
- @:native("_effectTarget")
- public var __effectTarget: Sprite_Base;
-
- /**
-  * The target that will have the animations applied
-  * to it.
-  * @protected
-  * @type {Sprite_Base}
-  * @memberof Sprite_Base
-  */
  private var _effectTarget: Sprite_Base;
-
- /**
-  * Determines sprite's visibility
-  */
- @:native("_hiding")
- public var __hiding: Bool;
 
  /**
   * Determines sprite's visibility

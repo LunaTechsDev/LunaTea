@@ -34,32 +34,23 @@ extern class Sprite_Actor extends Sprite_Battler {
   sleep: Motion,
   dead: Motion,
  };
- @:native("_battlerName")
- public var __battlerName: String;
+
  private var _battlerName: String;
- @:native("_motion")
- public var __motion: Motion;
+
  private var _motion: Motion;
- @:native("_motionCount")
- public var __motionCount: Int;
+
  private var _motionCount: Int;
- @:native("_pattern")
- public var __pattern: CharacterPattern;
+
  private var _pattern: CharacterPattern;
- @:native("_mainSprite")
- public var __mainSprite: Sprite_Base;
+
  private var _mainSprite: Sprite_Base;
- @:native("_shadowSprite")
- public var __shadowSprite: Sprite;
+
  private var _shadowSprite: Sprite;
- @:native("_weaponSprite")
- public var __weaponSprite: Sprite_Weapon;
+
  private var _weaponSprite: Sprite_Weapon;
- @:native("_stateSprite")
- public var __stateSprite: Sprite_StateOverlay;
+
  private var _stateSprite: Sprite_StateOverlay;
- @:native("_actor")
- public var __actor: Game_Actor;
+
  private var _actor: Game_Actor;
 
  /**

@@ -8,15 +8,13 @@ import rm.types.RM;
  */
 @:expose("PluginManager")
 @:native("PluginManager")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class PluginManager {
- @:native("_path")
- public static var __path: String;
  private static var _path: String;
- @:native("_scripts")
- public static var __scripts: Array<String>;
+
  private static var _scripts: Array<String>;
- @:native("_errorUrls")
- public static var __errorUrls: Array<String>;
+
  private static var _errorUrls: Array<String>;
 
  public static function setup(plugins: Array<PluginSettings>): Void;

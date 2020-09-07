@@ -23,8 +23,6 @@ extern class Scene_Map extends Scene_Base {
  private var _messageWindow: Window_Message;
 
  #if !compileMV
- @:native("_lastMapWasNull")
- public var __lastMapWasNull: Bool;
  private var _lastMapWasNull: Bool;
 
  public function shouldAutosave(): Bool;

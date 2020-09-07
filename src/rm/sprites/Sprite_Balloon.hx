@@ -11,11 +11,8 @@ import rm.types.LunaTea.BalloonId;
 @:expose("Sprite_Balloon")
 @:native("Sprite_Balloon")
 extern class Sprite_Balloon extends Sprite_Base {
- @:native("_balloonId")
- public var __balloonId: BalloonId;
  private var _balloonId: BalloonId; // TODO: Create Balloon ID abstract
- @:native("_duration")
- public var __duration: Int;
+
  private var _duration: Int;
 
  public function initMembers(): Void;

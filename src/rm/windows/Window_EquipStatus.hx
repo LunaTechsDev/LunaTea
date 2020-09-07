@@ -11,15 +11,7 @@ extern class Window_EquipStatus extends Window_Base {
 #else
 extern class Window_EquipStatus extends Window_StatusBase {
 #end
-
-@:native("_actor")
-public var __actor: Game_Actor;
-
 private var _actor: Game_Actor;
-
-@:native("_tempActor")
-public var __tempActor: Game_Actor;
-
 private var _tempActor: Game_Actor;
 #if compileMV
 public function new(x: Int, y: Int);

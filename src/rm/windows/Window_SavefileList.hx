@@ -11,16 +11,7 @@ extern class Window_SavefileList extends Window_Selectable {
 
  #if !compileMV
  /**
-  * Whether ornot the auto save feature is enabled
-  *
-  * @default {Bool} false
-  * @memberof Window_SavefileList
-  */
- @:native("_autosave")
- public var __autosave: Bool;
-
- /**
-  * Whether ornot the auto save feature is enabled
+  * Whether or not the auto save feature is enabled
   *
   * @default {Bool} false
   * @memberof Window_SavefileList

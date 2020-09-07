@@ -11,17 +11,12 @@ import rm.objects.Game_Battler;
 @:expose("Sprite_StateOverlay")
 @:native("Sprite_StateOverlay")
 extern class Sprite_StateOverlay extends Sprite_Base {
- @:native("_battler")
- public var __battler: Game_Battler;
  private var _battler: Game_Battler;
- @:native("_overlayIndex")
- public var __overlayIndex: Int;
+
  private var _overlayIndex: Int;
- @:native("_animationCount")
- public var __animationCount: Int;
+
  private var _animationCount: Int;
- @:native("_pattern")
- public var __pattern: Int;
+
  private var _pattern: Int;
 
  /**

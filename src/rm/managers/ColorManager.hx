@@ -9,9 +9,8 @@ import rm.abstracts.windows.WindowBase;
 #if !compileMV
 @:expose("ColorManager")
 @:native("ColorManager")
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class ColorManager {
- @:native("_windowSkin")
- public var __windowSkin: Bitmap;
  private var _windowSkin: Bitmap;
 
  /**
@@ -212,6 +211,7 @@ extern class ColorManager {
 #else
 @:native("ColorManager")
 @:nullSafety(Strict)
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 class ColorManager {
  public static var baseWindow: WindowBase = new WindowBase(0, 0, 0, 0);
  public static var windowSkin: Bitmap = baseWindow.windowskin;

@@ -90,9 +90,37 @@ class BuildMacroTools {
     access: fnField.access.copy().concat([Access.ADynamic]),
     kind: fnField.kind,
     pos: Context.currentPos(),
-    doc: null,
+    doc: fnField.doc,
     meta: [metaData]
    }
+   fields.push(newField);
+  });
+  return fields;
+ }
+
+ macro public static function buildPublicPrivateFields(): Array<Field> {
+  var fields = Context.getBuildFields();
+
+  fields.filter((field: Field) -> {
+   return field.access.contains(Access.APrivate);
+  }).iter((privateField) -> {
+   var metaData: MetadataEntry = {
+    name: ":native",
+    params: [macro $v{privateField.name}],
+    pos: Context.currentPos()
+   };
+   var oldAccess = privateField.access.copy();
+   oldAccess.remove(Access.APrivate);
+   var newAccessLevel = oldAccess.concat([Access.APublic]);
+   var newField: Field = {
+    name: '_${privateField.name}',
+    access: newAccessLevel,
+    kind: privateField.kind,
+    pos: Context.currentPos(),
+    doc: privateField.doc,
+    meta: [metaData]
+   };
+
    fields.push(newField);
   });
   return fields;

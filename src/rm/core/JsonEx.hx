@@ -10,7 +10,9 @@ package rm.core;
 @:expose("JsonEx")
 @:native("JsonEx")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 @:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class JsonEx {
  /**
   * The maximum depth of objects.
