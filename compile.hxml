@@ -30,7 +30,7 @@
 # For Compiling Separate JavaScript Files
 
 --each
---macro macros.JsMacros.setup()
+# --macro macros.JsMacros.setup()
 -js dist/test.js
 -main Main
 # --macro macros.MacroTools.getSourceOutput()
