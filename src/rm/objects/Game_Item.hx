@@ -18,8 +18,8 @@ extern class Game_Item {
  public var __itemId: Int;
  private var _itemId: Int;
 
- public dynamic function new(item: BaseItem): Void;
- public dynamic function initialize(): Void;
+ public function new(item: BaseItem): Void;
+ public function initialize(): Void;
 
  /**
   * Returns true the item is a skill.
@@ -27,7 +27,7 @@ extern class Game_Item {
   * @returns {boolean}
   * @memberof Game_Item
   */
- public dynamic function isSkill(): Bool;
+ public function isSkill(): Bool;
 
  /**
   * Returns true if the item is an item.
@@ -35,7 +35,7 @@ extern class Game_Item {
   * @returns {boolean}
   * @memberof Game_Item
   */
- public dynamic function isItem(): Bool;
+ public function isItem(): Bool;
 
  /**
   * Returns true if the item is a usable item, similar to a potion.
@@ -43,7 +43,7 @@ extern class Game_Item {
   * @returns {boolean}
   * @memberof Game_Item
   */
- public dynamic function isUsableItem(): Bool;
+ public function isUsableItem(): Bool;
 
  /**
   * Returns true if the item is a weapon.
@@ -51,7 +51,7 @@ extern class Game_Item {
   * @returns {boolean}
   * @memberof Game_Item
   */
- public dynamic function isWeapon(): Bool;
+ public function isWeapon(): Bool;
 
  /**
   * Returns true if the item is an armor.
@@ -59,7 +59,7 @@ extern class Game_Item {
   * @returns {boolean}
   * @memberof Game_Item
   */
- public dynamic function isArmor(): Bool;
+ public function isArmor(): Bool;
 
  /**
   * Returns true if the item is equippable (weapon or armor).
@@ -67,7 +67,7 @@ extern class Game_Item {
   * @returns {boolean}
   * @memberof Game_Item
   */
- public dynamic function isEquipItem(): Bool;
+ public function isEquipItem(): Bool;
 
  /**
   * Returns true if the item is 'null'.
@@ -75,7 +75,7 @@ extern class Game_Item {
   * @returns {boolean}
   * @memberof Game_Item
   */
- public dynamic function isNull(): Bool;
+ public function isNull(): Bool;
 
  /**
   * Returns the current itemId.
@@ -83,9 +83,9 @@ extern class Game_Item {
   * @returns {number}
   * @memberof Game_Item
   */
- public dynamic function itemId(): Int;
+ public function itemId(): Int;
 
- public dynamic function object(): BaseItem;
+ public function object(): BaseItem;
 
  /**
   * Sets the current item of the current Game_Item object.
@@ -93,7 +93,7 @@ extern class Game_Item {
   * @param {RPG.BaseItem} item
   * @memberof Game_Item
   */
- public dynamic function setObject(item: BaseItem): Void;
+ public function setObject(item: BaseItem): Void;
 
- public dynamic function setEquip(isWeapon: Bool, itemId: Int): Void;
+ public function setEquip(isWeapon: Bool, itemId: Int): Void;
 }

@@ -21,9 +21,9 @@ extern class Window_Help extends Window_Base {
   * @param {number} numLines
   * @memberof Window_Help
   */
- public dynamic function new(numLines: Int): Void;
+ public function new(numLines: Int): Void;
  #else
- public dynamic function new(rect: Rectangle): Void;
+ public function new(rect: Rectangle): Void;
  #end
 
  /**
@@ -32,9 +32,9 @@ extern class Window_Help extends Window_Base {
   * @param {string} text
   * @memberof Window_Help
   */
- public dynamic function setText(text: String): Void;
+ public function setText(text: String): Void;
 
- public dynamic function clear(): Void;
+ public function clear(): Void;
 
  /**
   * Sets the current item of the help window.
@@ -42,5 +42,5 @@ extern class Window_Help extends Window_Base {
   * @param {RPG.BaseItem} item
   * @memberof Window_Help
   */
- public dynamic function setItem(item: BaseItem): Void;
+ public function setItem(item: BaseItem): Void;
 }

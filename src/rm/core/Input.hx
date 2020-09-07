@@ -114,7 +114,7 @@ extern class Input {
   * @static
   * @method initialize
   */
- public static dynamic function initialize(): Void;
+ public static function initialize(): Void;
 
  /**
   * Clears all the input data.
@@ -122,7 +122,7 @@ extern class Input {
   * @static
   * @method clear
   */
- public static dynamic function clear(): Void;
+ public static function clear(): Void;
 
  /**
   * Updates the input data.
@@ -130,7 +130,7 @@ extern class Input {
   * @static
   * @method update
   */
- public static dynamic function update(): Void;
+ public static function update(): Void;
 
  /**
   * Checks whether a key is currently pressed down.
@@ -140,7 +140,7 @@ extern class Input {
   * @param {String} keyName The mapped name of the key
   * @return {Boolean} True if the key is pressed
   */
- public static dynamic function isPressed(keyName: String): Bool;
+ public static function isPressed(keyName: String): Bool;
 
  /**
   * Checks whether a key is just pressed.
@@ -150,7 +150,7 @@ extern class Input {
   * @param {String} keyName The mapped name of the key
   * @return {Boolean} True if the key is triggered
   */
- public static dynamic function isTriggered(keyName: String): Bool;
+ public static function isTriggered(keyName: String): Bool;
 
  /**
   * Checks whether a key is just pressed or a key repeat occurred.
@@ -160,7 +160,7 @@ extern class Input {
   * @param {String} keyName The mapped name of the key
   * @return {Boolean} True if the key is repeated
   */
- public static dynamic function nisRepeated(keyName: String): Bool;
+ public static function nisRepeated(keyName: String): Bool;
 
  /**
   * Checks whether a key is kept depressed.
@@ -170,21 +170,21 @@ extern class Input {
   * @param {String} keyName The mapped name of the key
   * @return {Boolean} True if the key is long-pressed
   */
- public static dynamic function isLongPressed(keyName: String): Bool;
+ public static function isLongPressed(keyName: String): Bool;
 
  /**
   * @static
   * @method _wrapNwjsAlert
   * @private
   */
- private static dynamic function _wrapNwjsAlert(): Void;
+ private static function _wrapNwjsAlert(): Void;
 
  /**
   * @static
   * @method _setupEventHandlers
   * @private
   */
- private static dynamic function _setupEventHandlers(): Void;
+ private static function _setupEventHandlers(): Void;
 
  /**
   * @static
@@ -192,7 +192,7 @@ extern class Input {
   * @param {KeyboardEvent} event
   * @private
   */
- private static dynamic function _onKeyDown(event: KeyboardEvent): Void;
+ private static function _onKeyDown(event: KeyboardEvent): Void;
 
  /**
   * @static
@@ -201,7 +201,7 @@ extern class Input {
   * @return {Boolean}
   * @private
   */
- private static dynamic function _shouldPreventDefault(keyCode: Int): Bool;
+ private static function _shouldPreventDefault(keyCode: Int): Bool;
 
  /**
   * @static
@@ -209,21 +209,21 @@ extern class Input {
   * @param {KeyboardEvent} event
   * @private
   */
- private static dynamic function _onKeyUp(event: KeyboardEvent): Void;
+ private static function _onKeyUp(event: KeyboardEvent): Void;
 
  /**
   * @static
   * @method _onLostFocus
   * @private
   */
- private static dynamic function _onLostFocus(): Void;
+ private static function _onLostFocus(): Void;
 
  /**
   * @static
   * @method _pollGamepads
   * @private
   */
- private static dynamic function _pollGamepads(): Void;
+ private static function _pollGamepads(): Void;
 
  /**
   * @static
@@ -231,14 +231,14 @@ extern class Input {
   * @param {Gamepad} gamepad
   * @private
   */
- private static dynamic function _updateGamepadState(gamepad: Gamepad): Void;
+ private static function _updateGamepadState(gamepad: Gamepad): Void;
 
  /**
   * @static
   * @method _updateDirection
   * @private
   */
- private static dynamic function _updateDirection(): Void;
+ private static function _updateDirection(): Void;
 
  /**
   * @static
@@ -246,7 +246,7 @@ extern class Input {
   * @return {Number}
   * @private
   */
- private dynamic function _signX(): Int;
+ private function _signX(): Int;
 
  /**
   * @static
@@ -254,7 +254,7 @@ extern class Input {
   * @return {Number}
   * @private
   */
- private dynamic function _signY(): Int;
+ private function _signY(): Int;
 
  /**
   * @static
@@ -264,7 +264,7 @@ extern class Input {
   * @return {Number}
   * @private
   */
- private dynamic function _makeNumpadDirection(x: Int, y: Int): Int;
+ private function _makeNumpadDirection(x: Int, y: Int): Int;
 
  /**
   * @static
@@ -273,5 +273,5 @@ extern class Input {
   * @return {Boolean}
   * @private
   */
- private dynamic function _isEscapeCompatible(keyName: String): Bool;
+ private function _isEscapeCompatible(keyName: String): Bool;
 }

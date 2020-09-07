@@ -36,7 +36,7 @@ extern class Window_SkillType extends Window_Command {
   * @param  y
   * @memberof Window_SkillType
   */
- public dynamic function new(x: Int, y: Int): Void;
+ public function new(x: Int, y: Int): Void;
 
  /**
   * Sets the current actor for the skill type window.
@@ -44,7 +44,7 @@ extern class Window_SkillType extends Window_Command {
   * @param {Game_Actor} actor
   * @memberof Window_SkillType
   */
- public dynamic function setActor(actor: Game_Actor): Void;
+ public function setActor(actor: Game_Actor): Void;
 
  /**
   * Sets the skill window for the current skill type.
@@ -52,12 +52,12 @@ extern class Window_SkillType extends Window_Command {
   * @param {Window_SkillList} skillWindow
   * @memberof Window_SkillType
   */
- public dynamic function setSkillWindow(skillWindow: Window_SkillList): Void;
+ public function setSkillWindow(skillWindow: Window_SkillList): Void;
 
  /**
   * Selects the last command in the window.
   *
   * @memberof Window_SkillType
   */
- public dynamic function selectLast(): Void;
+ public function selectLast(): Void;
 }

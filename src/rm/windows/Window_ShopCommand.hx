@@ -31,5 +31,5 @@ extern class Window_ShopCommand extends Window_HorzCommand {
   * @param {boolean} purchaseOnly
   * @memberof Window_ShopCommand
   */
- public dynamic function initialize(width: Int, purchaseOnly: Bool): Void;
+ public function initialize(width: Int, purchaseOnly: Bool): Void;
 }

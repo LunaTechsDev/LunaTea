@@ -23,13 +23,13 @@ extern class Sprite_Picture {
  public var __isPicture: Bool;
  private var _isPicture: Bool;
 
- public dynamic function new(pictureId: Int);
- public dynamic function picture(): Game_Picture;
- public dynamic function updateBitmap(): Void;
- public dynamic function updateOrigin(): Void;
- public dynamic function updatePosition(): Void;
- public dynamic function updateScale(): Void;
- public dynamic function updateTone(): Void;
- public dynamic function updateOther(): Void;
- public dynamic function loadBitmap(): Void;
+ public function new(pictureId: Int);
+ public function picture(): Game_Picture;
+ public function updateBitmap(): Void;
+ public function updateOrigin(): Void;
+ public function updatePosition(): Void;
+ public function updateScale(): Void;
+ public function updateTone(): Void;
+ public function updateOther(): Void;
+ public function loadBitmap(): Void;
 }

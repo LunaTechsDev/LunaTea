@@ -28,7 +28,7 @@ extern class JsonEx {
   * @param {Object} object The object to be copied
   * @return {Object} The copied object
   */
- public static dynamic function makeDeepCopy(object: Any): Any;
+ public static function makeDeepCopy(object: Any): Any;
 
  /**
   * Converts an object to a JSON string with object information.
@@ -38,7 +38,7 @@ extern class JsonEx {
   * @param {Object} object The object to be converted
   * @return {String} The JSON string
   */
- public static dynamic function stringify(object: Any): String;
+ public static function stringify(object: Any): String;
 
  /**
   * Parses a JSON string and reconstructs the corresponding object.
@@ -48,7 +48,7 @@ extern class JsonEx {
   * @param {String} json The JSON string
   * @return {Object} The reconstructed object
   */
- public static dynamic function parse(json: String): Any;
+ public static function parse(json: String): Any;
 
  /**
   * @static
@@ -58,7 +58,7 @@ extern class JsonEx {
   * @return {Object}
   * @private
   */
- private static dynamic function _encode(value: Any, depth: Int): Any;
+ private static function _encode(value: Any, depth: Int): Any;
 
  /**
   * @static
@@ -67,7 +67,7 @@ extern class JsonEx {
   * @return {Object}
   * @private
   */
- private static dynamic function _decode(value: Any): Any;
+ private static function _decode(value: Any): Any;
 
  /**
   * @static
@@ -76,7 +76,7 @@ extern class JsonEx {
   * @return {String}
   * @private
   */
- private static dynamic function _getConstructorName(value: Any): String;
+ private static function _getConstructorName(value: Any): String;
 
  /**
   * @static
@@ -86,6 +86,5 @@ extern class JsonEx {
   * @return {Object}
   * @private
   */
- private static dynamic function _resetPrototype(value: Any,
-  prototype: Any): Any;
+ private static function _resetPrototype(value: Any, prototype: Any): Any;
 }

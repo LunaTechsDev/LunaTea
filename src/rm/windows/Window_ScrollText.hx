@@ -17,10 +17,10 @@ extern class Window_ScrollText extends Window_Base {
  private var _allTextHeight: Int;
 
  #if compileMV
- public dynamic function new();
+ public function new();
  #else
- public dynamic function new(rect: Rectangle);
- public dynamic function initialize(rect: Rectangle): Void;
+ public function new(rect: Rectangle);
+ public function initialize(rect: Rectangle): Void;
  #end
 
  /**
@@ -28,11 +28,11 @@ extern class Window_ScrollText extends Window_Base {
   *
   * @memberof Window_ScrollText
   */
- public dynamic function startMessage(): Void;
+ public function startMessage(): Void;
 
- public dynamic function refresh(): Void;
- public dynamic function updateMessage(): Void;
- public dynamic function scrollSpeed(): Int;
+ public function refresh(): Void;
+ public function updateMessage(): Void;
+ public function scrollSpeed(): Int;
 
  /**
   * Returns true if the scene is in fast forward mode.
@@ -40,7 +40,7 @@ extern class Window_ScrollText extends Window_Base {
   * @returns {boolean}
   * @memberof Window_ScrollText
   */
- public dynamic function isFastForward(): Bool;
+ public function isFastForward(): Bool;
 
  /**
   * Returns the fast forward rate of the scroll text window.
@@ -48,12 +48,12 @@ extern class Window_ScrollText extends Window_Base {
   * @returns {number}
   * @memberof Window_ScrollText
   */
- public dynamic function fastForwardRate(): Float;
+ public function fastForwardRate(): Float;
 
  /**
   * Terminates the message and the scroll text window is hidden.
   *
   * @memberof Window_ScrollText
   */
- public dynamic function terminateMessage(): Void;
+ public function terminateMessage(): Void;
 }

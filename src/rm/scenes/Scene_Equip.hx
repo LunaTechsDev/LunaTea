@@ -18,11 +18,11 @@ extern class Scene_Equip extends Scene_MenuBase {
  private var _itemWindow: Window_EquipItem;
 
  #if !compileMV
- public dynamic function statusWindowRect(): Rectangle;
- public dynamic function commandWindowRect(): Rectangle;
- public dynamic function slotWindowRect(): Rectangle;
- public dynamic function itemWindowRect(): Rectangle;
- public dynamic function executeEquipChange(): Void;
+ public function statusWindowRect(): Rectangle;
+ public function commandWindowRect(): Rectangle;
+ public function slotWindowRect(): Rectangle;
+ public function itemWindowRect(): Rectangle;
+ public function executeEquipChange(): Void;
  #end
 
  /**
@@ -30,54 +30,54 @@ extern class Scene_Equip extends Scene_MenuBase {
   *
   * @memberof Scene_Equip
   */
- public dynamic function createStatusWindow(): Void;
+ public function createStatusWindow(): Void;
 
  /**
   * Creates the status window within the equip scene.
   *
   * @memberof Scene_Equip
   */
- public dynamic function createCommandWindow(): Void;
+ public function createCommandWindow(): Void;
 
  /**
   * Creates the slot window within the  equip scene.
   *
   * @memberof Scene_Equip
   */
- public dynamic function createSlotWindow(): Void;
+ public function createSlotWindow(): Void;
 
  /**
   * Creates the item window within the equip scene.
   *
   * @memberof Scene_Equip
   */
- public dynamic function createItemWindow(): Void;
+ public function createItemWindow(): Void;
 
  /**
   * Refreshes the actor within the equip scene.
   *
   * @memberof Scene_Equip
   */
- public dynamic function refreshActor(): Void;
+ public function refreshActor(): Void;
 
  /**
   * Handler for the equip command.
   *
   * @memberof Scene_Equip
   */
- public dynamic function commandEquip(): Void;
+ public function commandEquip(): Void;
 
  /**
   * Handler for the optimize command.
   *
   * @memberof Scene_Equip
   */
- public dynamic function commandOptimize(): Void;
+ public function commandOptimize(): Void;
 
- public dynamic function commandClear(): Void;
- public dynamic function onSlotOk(): Void;
- public dynamic function onSlotCancel(): Void;
- public dynamic function onItemOk(): Void;
- public dynamic function onItemCancel(): Void;
- public dynamic function onActorChange(): Void;
+ public function commandClear(): Void;
+ public function onSlotOk(): Void;
+ public function onSlotCancel(): Void;
+ public function onItemOk(): Void;
+ public function onItemCancel(): Void;
+ public function onActorChange(): Void;
 }

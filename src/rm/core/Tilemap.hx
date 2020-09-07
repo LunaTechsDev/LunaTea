@@ -33,49 +33,48 @@ extern class Tilemap extends Container {
 
  public static var WATERFALL_AUTOTILE_TABLE: Array<Array<Array<Int>>>;
 
- public static dynamic function isVisibleTile(tileId: Int): Bool;
+ public static function isVisibleTile(tileId: Int): Bool;
 
- public static dynamic function isAutotile(tileId: Int): Bool;
+ public static function isAutotile(tileId: Int): Bool;
 
- public static dynamic function getAutotileKind(tileId: Int): Int;
+ public static function getAutotileKind(tileId: Int): Int;
 
- public static dynamic function getAutotileShape(tileId: Int): Int;
+ public static function getAutotileShape(tileId: Int): Int;
  // TODO: Turn Kind into an abstract Enum
- public static dynamic function makeAutotileId(kind: Int, shape: Int): Int;
+ public static function makeAutotileId(kind: Int, shape: Int): Int;
 
- public static dynamic function isSameKindTile(tileID1: Int,
-  tileID2: Int): Bool;
+ public static function isSameKindTile(tileID1: Int, tileID2: Int): Bool;
 
- public static dynamic function isTileA1(tileId: Int): Bool;
+ public static function isTileA1(tileId: Int): Bool;
 
- public static dynamic function isTileA2(tileId: Int): Bool;
+ public static function isTileA2(tileId: Int): Bool;
 
- public static dynamic function isTileA3(tileId: Int): Bool;
+ public static function isTileA3(tileId: Int): Bool;
 
- public static dynamic function isTileA4(tileId: Int): Bool;
+ public static function isTileA4(tileId: Int): Bool;
 
- public static dynamic function isTileA5(tileId: Int): Bool;
+ public static function isTileA5(tileId: Int): Bool;
 
- public static dynamic function isWaterTile(tileId: Int): Bool;
+ public static function isWaterTile(tileId: Int): Bool;
 
- public static dynamic function isWaterfallTile(tileId: Int): Bool;
+ public static function isWaterfallTile(tileId: Int): Bool;
 
- public static dynamic function isGroundTile(tileId: Int): Bool;
+ public static function isGroundTile(tileId: Int): Bool;
 
- public static dynamic function isShadowingTile(tileId: Int): Bool;
+ public static function isShadowingTile(tileId: Int): Bool;
 
- public static dynamic function isRoofTile(tileId: Int): Bool;
+ public static function isRoofTile(tileId: Int): Bool;
 
- public static dynamic function isWallTopTile(tileId: Int): Bool;
+ public static function isWallTopTile(tileId: Int): Bool;
 
- public static dynamic function isWallSideTile(tileId: Int): Bool;
+ public static function isWallSideTile(tileId: Int): Bool;
 
- public static dynamic function isWallTile(tileId: Int): Bool;
+ public static function isWallTile(tileId: Int): Bool;
 
- public static dynamic function isFloorTypeAutotile(tileId: Int): Bool;
+ public static function isFloorTypeAutotile(tileId: Int): Bool;
 
- public static dynamic function isWallTypeAutotile(tileId: Int): Bool;
- public static dynamic function isWaterfallTypeAutotile(tileId: Int): Bool;
+ public static function isWallTypeAutotile(tileId: Int): Bool;
+ public static function isWaterfallTypeAutotile(tileId: Int): Bool;
 
  /**
   * The bitmaps used as a tileset.
@@ -177,7 +176,7 @@ extern class Tilemap extends Container {
   * @class Tilemap
   * @constructor
   */
- public dynamic function new();
+ public function new();
 
  /**
   * Sets the tilemap data.
@@ -187,8 +186,7 @@ extern class Tilemap extends Container {
   * @param {Number} height The height of the map in number of tiles
   * @param {Array} data The one dimensional array for the map data
   */
- public dynamic function setData(width: Int, height: Int,
-  data: Array<Int>): Void;
+ public function setData(width: Int, height: Int, data: Array<Int>): Void;
 
  /**
   * Checks whether the tileset is ready to render.
@@ -197,27 +195,27 @@ extern class Tilemap extends Container {
   * @type Boolean
   * @return {Boolean} True if the tilemap is ready
   */
- public dynamic function isReady(): Bool;
+ public function isReady(): Bool;
 
  /**
   * Updates the tilemap for each frame.
   *
   * @method update
   */
- public dynamic function update(): Void;
+ public function update(): Void;
 
  /**
   * @method updateTransform
   * @private
   */
- public dynamic function updateTransform(): Void;
+ public function updateTransform(): Void;
 
  /**
   * Forces to repaint the entire static
   *
   * @method refresh
   */
- public dynamic function refresh(): Void;
+ public function refresh(): Void;
 
  /**
   * Adds a child to the container.
@@ -226,7 +224,7 @@ extern class Tilemap extends Container {
   * @param {PIXI.DisplayObject} child The child to add
   * @return {PIXI.DisplayObject} The child that was added
   */
- public dynamic function addChild(child: DisplayObject): DisplayObject;
+ public function addChild(child: DisplayObject): DisplayObject;
 
  /**
   * Adds a child to the container at a specified index.
@@ -236,8 +234,7 @@ extern class Tilemap extends Container {
   * @param {Number} index The index to place the child in
   * @return {PIXI.DisplayObject} The child that was added
   */
- public dynamic function addChildAt(child: DisplayObject,
-  index: Int): DisplayObject;
+ public function addChildAt(child: DisplayObject, index: Int): DisplayObject;
 
  /**
   * Removes a child from the container.
@@ -246,7 +243,7 @@ extern class Tilemap extends Container {
   * @param {PIXI.DisplayObject} child The child to remove
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public dynamic function removeChild(child: DisplayObject): DisplayObject;
+ public function removeChild(child: DisplayObject): DisplayObject;
 
  /**
   * Removes a child from the specified index position.
@@ -255,14 +252,14 @@ extern class Tilemap extends Container {
   * @param {Number} index The index to get the child from
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public dynamic function removeChildAt(index: Int): DisplayObject;
+ public function removeChildAt(index: Int): DisplayObject;
 
  /**
   * Forces to refresh the tileset
   *
   * @method refresh
   */
- public dynamic function refreshTileset(): Void;
+ public function refreshTileset(): Void;
 
  private var _margin: Int;
  private var _width: Int;
@@ -282,7 +279,7 @@ extern class Tilemap extends Container {
   * @method _createLayers
   * @private
   */
- private dynamic function _createLayers(): Void;
+ private function _createLayers(): Void;
 
  /**
   * @method _updateLayerPositions
@@ -290,8 +287,7 @@ extern class Tilemap extends Container {
   * @param {Number} startY
   * @private
   */
- private dynamic function _updateLayerPositions(startX: Int,
-  startY: Int): Void;
+ private function _updateLayerPositions(startX: Int, startY: Int): Void;
 
  /**
   * @method _paintAllTiles
@@ -299,7 +295,7 @@ extern class Tilemap extends Container {
   * @param {Number} startY
   * @private
   */
- private dynamic function _paintAllTiles(startX: Int, startY: Int): Void;
+ private function _paintAllTiles(startX: Int, startY: Int): Void;
 
  /**
   * @method _paintTiles
@@ -309,8 +305,7 @@ extern class Tilemap extends Container {
   * @param {Number} y
   * @private
   */
- private dynamic function _paintTiles(startX: Int, startY: Int, x: Int,
-  y: Int): Void;
+ private function _paintTiles(startX: Int, startY: Int, x: Int, y: Int): Void;
 
  /**
   * @method _readLastTiles
@@ -319,7 +314,7 @@ extern class Tilemap extends Container {
   * @param {Number} y
   * @private
   */
- private dynamic function _readLastTiles(i: Int, x: Int, y: Int): Array<Int>;
+ private function _readLastTiles(i: Int, x: Int, y: Int): Array<Int>;
 
  /**
   * @method _writeLastTiles
@@ -329,7 +324,7 @@ extern class Tilemap extends Container {
   * @param {Array} tiles
   * @private
   */
- private dynamic function _writeLastTiles(i: Int, x: Int, y: Int,
+ private function _writeLastTiles(i: Int, x: Int, y: Int,
   tiles: Array<Int>): Void;
 
  /**
@@ -340,7 +335,7 @@ extern class Tilemap extends Container {
   * @param {Number} dy
   * @private
   */
- private dynamic function _drawTile(bitmap: Bitmap, tileId: Int, dx: Int,
+ private function _drawTile(bitmap: Bitmap, tileId: Int, dx: Int,
   dy: Int): Void;
 
  /**
@@ -351,8 +346,8 @@ extern class Tilemap extends Container {
   * @param {Number} dy
   * @private
   */
- private dynamic function _drawNormalTile(bitmap: Bitmap, tileId: Int,
-  dx: Int, dy: Int): Void;
+ private function _drawNormalTile(bitmap: Bitmap, tileId: Int, dx: Int,
+  dy: Int): Void;
 
  /**
   * @method _drawAutotile
@@ -362,7 +357,7 @@ extern class Tilemap extends Container {
   * @param {Number} dy
   * @private
   */
- private dynamic function _drawAutotile(bitmap: Bitmap, tileId: Int, dx: Int,
+ private function _drawAutotile(bitmap: Bitmap, tileId: Int, dx: Int,
   dy: Int): Void;
 
  /**
@@ -373,7 +368,7 @@ extern class Tilemap extends Container {
   * @param {Number} dy
   * @private
   */
- private dynamic function _drawTableEdge(bitmap: Bitmap, tileId: Int, dx: Int,
+ private function _drawTableEdge(bitmap: Bitmap, tileId: Int, dx: Int,
   dy: Int): Void;
 
  /**
@@ -384,8 +379,8 @@ extern class Tilemap extends Container {
   * @param {Number} dy
   * @private
   */
- private dynamic function _drawShadow(bitmap: Bitmap, shadowBits: Int,
-  dx: Int, dy: Int): Void;
+ private function _drawShadow(bitmap: Bitmap, shadowBits: Int, dx: Int,
+  dy: Int): Void;
 
  /**
   * @method _readMapData
@@ -395,7 +390,7 @@ extern class Tilemap extends Container {
   * @return {Number}
   * @private
   */
- private dynamic function _readMapData(x: Int, y: Int, z: Int): Int;
+ private function _readMapData(x: Int, y: Int, z: Int): Int;
 
  /**
   * @method _isHigherTile
@@ -403,7 +398,7 @@ extern class Tilemap extends Container {
   * @return {Boolean}
   * @private
   */
- private dynamic function _isHigherTile(tileId: Int): Bool;
+ private function _isHigherTile(tileId: Int): Bool;
 
  /**
   * @method _isTableTile
@@ -411,7 +406,7 @@ extern class Tilemap extends Container {
   * @return {Boolean}
   * @private
   */
- private dynamic function _isTableTile(tileId: Int): Bool;
+ private function _isTableTile(tileId: Int): Bool;
 
  /**
   * @method _isOverpassPosition
@@ -420,13 +415,13 @@ extern class Tilemap extends Container {
   * @return {Boolean}
   * @private
   */
- private dynamic function _isOverpassPosition(mx: Int, my: Int): Bool;
+ private function _isOverpassPosition(mx: Int, my: Int): Bool;
 
  /**
   * @method _sortChildren
   * @private
   */
- private dynamic function _sortChildren(): Void;
+ private function _sortChildren(): Void;
 
  /**
   * @method _compareChildOrder
@@ -434,5 +429,5 @@ extern class Tilemap extends Container {
   * @param {Sprite} b
   * @private
   */
- private dynamic function _compareChildOrder(a: Sprite, b: Sprite): Int;
+ private function _compareChildOrder(a: Sprite, b: Sprite): Int;
 }

@@ -65,10 +65,10 @@ extern class Game_Message {
  public var __choiceCallback: (n: Int) -> Void;
  private var _choiceCallback: (n: Int) -> Void;
 
- public dynamic function new(): Void;
- public dynamic function initialize(): Void;
- public dynamic function clear(): Void;
- public dynamic function choices(): Array<String>;
+ public function new(): Void;
+ public function initialize(): Void;
+ public function clear(): Void;
+ public function choices(): Array<String>;
 
  /**
   * Returns the name of the face image used for the message.
@@ -76,7 +76,7 @@ extern class Game_Message {
   * @returns {String}
   * @memberof Game_Message
   */
- public dynamic function faceName(): String;
+ public function faceName(): String;
 
  /**
   * Returns the face index within the face image to display the
@@ -84,7 +84,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public dynamic function faceIndex(): Int;
+ public function faceIndex(): Int;
 
  /**
   * Returns the background associated with the message;
@@ -92,7 +92,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public dynamic function background(): Int;
+ public function background(): Int;
 
  /**
   * Returns the current position type of the message window.
@@ -100,10 +100,10 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public dynamic function positionType(): Int;
+ public function positionType(): Int;
 
- public dynamic function choiceDefaultType(): Int;
- public dynamic function choiceCancelType(): Int;
+ public function choiceDefaultType(): Int;
+ public function choiceCancelType(): Int;
 
  /**
   * Returns the background type of the choice window.
@@ -111,7 +111,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public dynamic function choiceBackground(): Int;
+ public function choiceBackground(): Int;
 
  /**
   * Returns the position of the choice window.
@@ -119,7 +119,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public dynamic function choicePositionType(): Int;
+ public function choicePositionType(): Int;
 
  /**
   * Returns the number input variable id.
@@ -127,7 +127,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public dynamic function numInputVariableId(): Int;
+ public function numInputVariableId(): Int;
 
  /**
   * Returns the number input maximum digits.
@@ -135,7 +135,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public dynamic function numInputMaxDigits(): Int;
+ public function numInputMaxDigits(): Int;
 
  /**
   * Returns the item choice variable id.
@@ -143,7 +143,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public dynamic function itemChoiceVariableId(): Int;
+ public function itemChoiceVariableId(): Int;
 
  /**
   * Returns the item choice item type id.
@@ -151,7 +151,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public dynamic function itemChoiceItypeId(): Int;
+ public function itemChoiceItypeId(): Int;
 
  /**
   * Returns true if the scroll mode is set to true.
@@ -159,7 +159,7 @@ extern class Game_Message {
   * @returns {boolean}
   * @memberof Game_Message
   */
- public dynamic function scrollMode(): Bool;
+ public function scrollMode(): Bool;
 
  /**
   * Returns the scroll speed.
@@ -167,7 +167,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public dynamic function scrollSpeed(): Int;
+ public function scrollSpeed(): Int;
 
  /**
   * Returns true if the scroll is set to not being fast.
@@ -175,7 +175,7 @@ extern class Game_Message {
   * @returns {boolean}
   * @memberof Game_Message
   */
- public dynamic function scrollNoFast(): Bool;
+ public function scrollNoFast(): Bool;
 
  /**
   * Adds text to the game message object.
@@ -183,9 +183,9 @@ extern class Game_Message {
   * @param {String} text
   * @memberof Game_Message
   */
- public dynamic function add(text: String): Void;
+ public function add(text: String): Void;
 
- public dynamic function setFaceImage(faceName: String, faceIndex: Int): Void;
+ public function setFaceImage(faceName: String, faceIndex: Int): Void;
 
  /**
   * Sets the background of the message window;
@@ -194,7 +194,7 @@ extern class Game_Message {
   * @param {number} background
   * @memberof Game_Message
   */
- public dynamic function setBackground(background: Int): Void;
+ public function setBackground(background: Int): Void;
 
  /**
   * Sets the position of the message window;
@@ -202,7 +202,7 @@ extern class Game_Message {
   * @param {number} positionType
   * @memberof Game_Message
   */
- public dynamic function setPositionType(positionType: Int): Void;
+ public function setPositionType(positionType: Int): Void;
 
  /**
   * Sets the choices within the choice window;
@@ -212,10 +212,10 @@ extern class Game_Message {
   * @param {number} cancelType
   * @memberof Game_Message
   */
- public dynamic function setChoices(choices: Array<String>, defaultType: Int,
+ public function setChoices(choices: Array<String>, defaultType: Int,
   cancelType: Int): Void;
 
- public dynamic function setChoiceBackground(background: Int): Void;
+ public function setChoiceBackground(background: Int): Void;
 
  /**
   * Sets the position of the choice window associated with the
@@ -223,7 +223,7 @@ extern class Game_Message {
   * @param {number} positionType
   * @memberof Game_Message
   */
- public dynamic function setChoicePositionType(positionType: Int): Void;
+ public function setChoicePositionType(positionType: Int): Void;
 
  /**
   * Sets the number input and associates it with a variable id;
@@ -232,7 +232,7 @@ extern class Game_Message {
   * @param {number} maxDigits
   * @memberof Game_Message
   */
- public dynamic function setNumberInput(variableId: Int, maxDigits: Int): Void;
+ public function setNumberInput(variableId: Int, maxDigits: Int): Void;
 
  /**
   * Sets the choice and associates it with a variable id;
@@ -241,7 +241,7 @@ extern class Game_Message {
   * @param {number} itemType
   * @memberof Game_Message
   */
- public dynamic function setItemChoice(variableId: Int, itemType: Int): Void;
+ public function setItemChoice(variableId: Int, itemType: Int): Void;
 
  /**
   * Sets the scroll speed of the message window;
@@ -250,18 +250,18 @@ extern class Game_Message {
   * @param {boolean} noFast
   * @memberof Game_Message
   */
- public dynamic function setScroll(speed: Int, noFast: Bool): Void;
+ public function setScroll(speed: Int, noFast: Bool): Void;
 
  /**
   * Sets a callback to be associated with a specific choice;
-  * a callback is a JavaScript dynamic function that will be run when the
+  * a callback is a JavaScript function that will be run when the
   * choice is selected.
   * @param {((n: number) => Void)} callback
   * @memberof Game_Message
   */
- public dynamic function setChoiceCallback(callback: ((n: Int) -> Void)): Void;
+ public function setChoiceCallback(callback: ((n: Int) -> Void)): Void;
 
- public dynamic function onChoice(n: Int): Void;
+ public function onChoice(n: Int): Void;
 
  /**
   * Returns true if the game message object has text.
@@ -269,7 +269,7 @@ extern class Game_Message {
   * @returns {boolean}
   * @memberof Game_Message
   */
- public dynamic function hasText(): Bool;
+ public function hasText(): Bool;
 
  /**
   * Returns true if the game message object has a set of choices.
@@ -277,7 +277,7 @@ extern class Game_Message {
   * @returns {boolean}
   * @memberof Game_Message
   */
- public dynamic function isChoice(): Bool;
+ public function isChoice(): Bool;
 
  /**
   * Returns true if the game message object has a number input attached.
@@ -285,7 +285,7 @@ extern class Game_Message {
   * @returns {boolean}
   * @memberof Game_Message
   */
- public dynamic function isNumberInput(): Bool;
+ public function isNumberInput(): Bool;
 
  /**
   * Returns true if the game message object has an item choice attached.
@@ -293,7 +293,7 @@ extern class Game_Message {
   * @returns {boolean}
   * @memberof Game_Message
   */
- public dynamic function isItemChoice(): Bool;
+ public function isItemChoice(): Bool;
 
  /**
   * Returns true if the game message object has text, choices, number input,
@@ -301,14 +301,14 @@ extern class Game_Message {
   * @returns {boolean}
   * @memberof Game_Message
   */
- public dynamic function isBusy(): Bool;
+ public function isBusy(): Bool;
 
  /**
   * Creates a new page for the text within the message window.
   *
   * @memberof Game_Message
   */
- public dynamic function newPage(): Void;
+ public function newPage(): Void;
 
  /**
   * Returns all of the text contained within the message.
@@ -316,5 +316,5 @@ extern class Game_Message {
   * @returns {String}
   * @memberof Game_Message
   */
- public dynamic function allText(): String;
+ public function allText(): String;
 }

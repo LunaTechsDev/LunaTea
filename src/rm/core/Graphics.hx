@@ -122,7 +122,7 @@ extern class Graphics {
   * @param {String} type The type of the renderer.
   *                 'canvas', 'webgl', or 'auto'.
   */
- public static dynamic function initialize(?width: Int, ?height: Int,
+ public static function initialize(?width: Int, ?height: Int,
   ?type: String): Void;
 
  /**
@@ -131,7 +131,7 @@ extern class Graphics {
   * @static
   * @method tickStart
   */
- public static dynamic function tickStart(): Void;
+ public static function tickStart(): Void;
 
  /**
   * Marks the end of each frame for FPSMeter.
@@ -139,7 +139,7 @@ extern class Graphics {
   * @static
   * @method tickEnd
   */
- public static dynamic function tickEnd(): Void;
+ public static function tickEnd(): Void;
 
  /**
   * Renders the stage to the game screen.
@@ -148,7 +148,7 @@ extern class Graphics {
   * @method render
   * @param {Stage} stage The stage object to be rendered
   */
- public static dynamic function render(?stage: Stage): Void;
+ public static function render(?stage: Stage): Void;
 
  /**
   * Checks whether the renderer type is WebGL.
@@ -157,7 +157,7 @@ extern class Graphics {
   * @method isWebGL
   * @return {Boolean} True if the renderer type is WebGL
   */
- public static dynamic function isWebGL(): Bool;
+ public static function isWebGL(): Bool;
 
  /**
   * Checks whether the current browser supports WebGL.
@@ -166,7 +166,7 @@ extern class Graphics {
   * @method hasWebGL
   * @return {Boolean} True if the current browser supports WebGL.
   */
- public static dynamic function hasWebGL(): Bool;
+ public static function hasWebGL(): Bool;
 
  /**
   * Checks whether the canvas blend mode 'difference' is supported.
@@ -175,7 +175,7 @@ extern class Graphics {
   * @method canUseDifferenceBlend
   * @return {Boolean} True if the canvas blend mode 'difference' is supported
   */
- public static dynamic function canUseDifferenceBlend(): Bool;
+ public static function canUseDifferenceBlend(): Bool;
 
  /**
   * Checks whether the canvas blend mode 'saturation' is supported.
@@ -184,7 +184,7 @@ extern class Graphics {
   * @method canUseSaturationBlend
   * @return {Boolean} True if the canvas blend mode 'saturation' is supported
   */
- public static dynamic function canUseSaturationBlend(): Bool;
+ public static function canUseSaturationBlend(): Bool;
 
  /**
   * Sets the source of the "Now Loading" image.
@@ -193,7 +193,7 @@ extern class Graphics {
   * @method setLoadingImage
   * @param {String} Path of image
   */
- public static dynamic function setLoadingImage(src: String): Void;
+ public static function setLoadingImage(src: String): Void;
 
  /**
   * Initializes the counter for displaying the "Now Loading" image.
@@ -201,7 +201,7 @@ extern class Graphics {
   * @static
   * @method startLoading
   */
- public static dynamic function startLoading(): Void;
+ public static function startLoading(): Void;
 
  /**
   * Increments the loading counter and displays the "Now Loading" image if necessary.
@@ -209,7 +209,7 @@ extern class Graphics {
   * @static
   * @method updateLoading
   */
- public static dynamic function updateLoading(): Void;
+ public static function updateLoading(): Void;
 
  /**
   * Erases the "Now Loading" image.
@@ -217,7 +217,7 @@ extern class Graphics {
   * @static
   * @method endLoading
   */
- public static dynamic function endLoading(): Void;
+ public static function endLoading(): Void;
 
  /**
   * Displays the error text to the screen.
@@ -227,8 +227,7 @@ extern class Graphics {
   * @param {String} name The name of the error
   * @param {String} message The message of the error
   */
- public static dynamic function printError(name: String,
-  message: String): Void;
+ public static function printError(name: String, message: String): Void;
 
  /**
   * Shows the FPSMeter element.
@@ -236,7 +235,7 @@ extern class Graphics {
   * @static
   * @method showFps
   */
- public static dynamic function showFps(): Void;
+ public static function showFps(): Void;
 
  /**
   * Hides the FPSMeter element.
@@ -244,7 +243,7 @@ extern class Graphics {
   * @static
   * @method hideFps
   */
- public static dynamic function hideFps(): Void;
+ public static function hideFps(): Void;
 
  /**
   * Loads a font file.
@@ -254,7 +253,7 @@ extern class Graphics {
   * @param {String} name The face name of the font
   * @param {String} url The url of the font file
   */
- public static dynamic function loadFont(name: String, url: String): Void;
+ public static function loadFont(name: String, url: String): Void;
 
  /**
   * Checks whether the font file is loaded.
@@ -264,7 +263,7 @@ extern class Graphics {
   * @param {String} name The face name of the font
   * @return {Boolean} True if the font file is loaded
   */
- public static dynamic function isFontLoaded(name: String): Bool;
+ public static function isFontLoaded(name: String): Bool;
 
  /**
   * Starts playback of a video.
@@ -273,7 +272,7 @@ extern class Graphics {
   * @method playVideo
   * @param {String} src
   */
- public static dynamic function playVideo(src: String): Void;
+ public static function playVideo(src: String): Void;
 
  /**
   * Checks whether the video is playing.
@@ -282,7 +281,7 @@ extern class Graphics {
   * @method isVideoPlaying
   * @return {Boolean} True if the video is playing
   */
- public static dynamic function isVideoPlaying(): Bool;
+ public static function isVideoPlaying(): Bool;
 
  /**
   * Checks whether the browser can play the specified video type.
@@ -292,7 +291,7 @@ extern class Graphics {
   * @param {String} type The video type to test support for
   * @return {Boolean} True if the browser can play the specified video type
   */
- public static dynamic function canPlayVideoType(type: String): Bool;
+ public static function canPlayVideoType(type: String): Bool;
 
  /**
   * Converts an x coordinate on the page to the corresponding
@@ -303,7 +302,7 @@ extern class Graphics {
   * @param {Number} x The x coordinate on the page to be converted
   * @return {Number} The x coordinate on the canvas area
   */
- public static dynamic function pageToCanvasX(x: Int): Int;
+ public static function pageToCanvasX(x: Int): Int;
 
  /**
   * Converts a y coordinate on the page to the corresponding
@@ -314,7 +313,7 @@ extern class Graphics {
   * @param {Number} y The y coordinate on the page to be converted
   * @return {Number} The y coordinate on the canvas area
   */
- public static dynamic function pageToCanvasY(y: Int): Int;
+ public static function pageToCanvasY(y: Int): Int;
 
  /**
   * Checks whether the specified point is inside the game canvas area.
@@ -325,12 +324,12 @@ extern class Graphics {
   * @param {Number} y The y coordinate on the canvas area
   * @return {Boolean} True if the specified point is inside the game canvas area
   */
- public static dynamic function isInsideCanvas(x: Int, y: Int): Bool;
+ public static function isInsideCanvas(x: Int, y: Int): Bool;
 
  /**
   * Calls pixi.js garbage collector
   */
- public static dynamic function callGC(): Void;
+ public static function callGC(): Void;
 
  private static var _width: Int;
  private static var _height: Int;
@@ -364,21 +363,21 @@ extern class Graphics {
   * @method _createAllElements
   * @private
   */
- private static dynamic function _createAllElements(): Void;
+ private static function _createAllElements(): Void;
 
  /**
   * @static
   * @method _updateAllElements
   * @private
   */
- private static dynamic function _updateAllElements(): Void;
+ private static function _updateAllElements(): Void;
 
  /**
   * @static
   * @method _updateRealScale
   * @private
   */
- private static dynamic function _updateRealScale(): Void;
+ private static function _updateRealScale(): Void;
 
  /**
   * @static
@@ -388,134 +387,133 @@ extern class Graphics {
   * @return {String}
   * @private
   */
- private static dynamic function _makeErrorHtml(name: String,
-  message: String): Void;
+ private static function _makeErrorHtml(name: String, message: String): Void;
 
  /**
   * @static
   * @method _defaultStretchMode
   * @private
   */
- private static dynamic function _defaultStretchMode(): Bool;
+ private static function _defaultStretchMode(): Bool;
 
  /**
   * @static
   * @method _testCanvasBlendModes
   * @private
   */
- private static dynamic function _testCanvasBlendModes(): Void;
+ private static function _testCanvasBlendModes(): Void;
 
  /**
   * @static
   * @method _modifyExistingElements
   * @private
   */
- private static dynamic function _modifyExistingElements(): Void;
+ private static function _modifyExistingElements(): Void;
 
  /**
   * @static
   * @method _createErrorPrinter
   * @private
   */
- private static dynamic function _createErrorPrinter(): Void;
+ private static function _createErrorPrinter(): Void;
 
  /**
   * @static
   * @method _updateErrorPrinter
   * @private
   */
- private static dynamic function _updateErrorPrinter(): Void;
+ private static function _updateErrorPrinter(): Void;
 
  /**
   * @static
   * @method _createCanvas
   * @private
   */
- private static dynamic function _createCanvas(): Void;
+ private static function _createCanvas(): Void;
 
  /**
   * @static
   * @method _updateCanvas
   * @private
   */
- private static dynamic function _updateCanvas(): Void;
+ private static function _updateCanvas(): Void;
 
  /**
   * @static
   * @method _createVideo
   * @private
   */
- private static dynamic function _createVideo(): Void;
+ private static function _createVideo(): Void;
 
  /**
   * @static
   * @method _updateVideo
   * @private
   */
- private static dynamic function _updateVideo(): Void;
+ private static function _updateVideo(): Void;
 
  /**
   * @static
   * @method _createUpperCanvas
   * @private
   */
- private static dynamic function _createUpperCanvas(): Void;
+ private static function _createUpperCanvas(): Void;
 
  /**
   * @static
   * @method _updateUpperCanvas
   * @private
   */
- private static dynamic function _updateUpperCanvas(): Void;
+ private static function _updateUpperCanvas(): Void;
 
  /**
   * @static
   * @method _clearUpperCanvas
   * @private
   */
- private static dynamic function _clearUpperCanvas(): Void;
+ private static function _clearUpperCanvas(): Void;
 
  /**
   * @static
   * @method _paintUpperCanvas
   * @private
   */
- private static dynamic function _paintUpperCanvas(): Void;
+ private static function _paintUpperCanvas(): Void;
 
  /**
   * @static
   * @method _createRenderer
   * @private
   */
- private static dynamic function _createRenderer(): Void;
+ private static function _createRenderer(): Void;
 
  /**
   * @static
   * @method _updateRenderer
   * @private
   */
- private static dynamic function _updateRenderer(): Void;
+ private static function _updateRenderer(): Void;
 
  /**
   * @static
   * @method _createFPSMeter
   * @private
   */
- private static dynamic function _createFPSMeter(): Void;
+ private static function _createFPSMeter(): Void;
 
  /**
   * @static
   * @method _createModeBox
   * @private
   */
- private static dynamic function _createModeBox(): Void;
+ private static function _createModeBox(): Void;
 
  /**
   * @static
   * @method _createGameFontLoader
   * @private
   */
- private static dynamic function _createGameFontLoader(): Void;
+ private static function _createGameFontLoader(): Void;
 
  /**
   * @static
@@ -523,7 +521,7 @@ extern class Graphics {
   * @param {String} name
   * @private
   */
- private static dynamic function _createFontLoader(name: String): Void;
+ private static function _createFontLoader(name: String): Void;
 
  /**
   * @static
@@ -531,49 +529,49 @@ extern class Graphics {
   * @param {HTMLCanvasElement} element
   * @private
   */
- private static dynamic function _centerElement(element: CanvasElement): Void;
+ private static function _centerElement(element: CanvasElement): Void;
 
  /**
   * @static
   * @method _disableTextSelection
   * @private
   */
- private static dynamic function _disableTextSelection(): Void;
+ private static function _disableTextSelection(): Void;
 
  /**
   * @static
   * @method _disableContextMenu
   * @private
   */
- private static dynamic function _disableContextMenu(): Void;
+ private static function _disableContextMenu(): Void;
 
  /**
   * @static
   * @method _applyCanvasFilter
   * @private
   */
- private static dynamic function _applyCanvasFilter(): Void;
+ private static function _applyCanvasFilter(): Void;
 
  /**
   * @static
   * @method _onVideoLoad
   * @private
   */
- private static dynamic function _onVideoLoad(): Void;
+ private static function _onVideoLoad(): Void;
 
  /**
   * @static
   * @method _onVideoError
   * @private
   */
- private static dynamic function _onVideoError(): Void;
+ private static function _onVideoError(): Void;
 
  /**
   * @static
   * @method _onVideoEnd
   * @private
   */
- private static dynamic function _onVideoEnd(): Void;
+ private static function _onVideoEnd(): Void;
 
  /**
   * @static
@@ -581,7 +579,7 @@ extern class Graphics {
   * @param {Boolean} videoVisible
   * @private
   */
- private static dynamic function _updateVisibility(videoVisible: Bool): Void;
+ private static function _updateVisibility(videoVisible: Bool): Void;
 
  /**
   * @static
@@ -589,21 +587,21 @@ extern class Graphics {
   * @return {Boolean}
   * @private
   */
- private static dynamic function _isVideoVisible(): Bool;
+ private static function _isVideoVisible(): Bool;
 
  /**
   * @static
   * @method _setupEventHandlers
   * @private
   */
- private static dynamic function _setupEventHandlers(): Void;
+ private static function _setupEventHandlers(): Void;
 
  /**
   * @static
   * @method _onWindowResize
   * @private
   */
- private static dynamic function _onWindowResize(): Void;
+ private static function _onWindowResize(): Void;
 
  /**
   * @static
@@ -611,14 +609,14 @@ extern class Graphics {
   * @param {KeyboardEvent} event
   * @private
   */
- private static dynamic function _onKeyDown(event: KeyboardEvent): Void;
+ private static function _onKeyDown(event: KeyboardEvent): Void;
 
  /**
   * @static
   * @method _switchFPSMeter
   * @private
   */
- private static dynamic function _switchFPSMeter(): Void;
+ private static function _switchFPSMeter(): Void;
 
  /**
   * @static
@@ -626,14 +624,14 @@ extern class Graphics {
   * @return {Boolean}
   * @private
   */
- private static dynamic function _switchStretchMode(): Void;
+ private static function _switchStretchMode(): Void;
 
  /**
   * @static
   * @method _switchFullScreen
   * @private
   */
- private static dynamic function _switchFullScreen(): Void;
+ private static function _switchFullScreen(): Void;
 
  /**
   * @static
@@ -641,19 +639,19 @@ extern class Graphics {
   * @return {Boolean}
   * @private
   */
- private static dynamic function _isFullScreen(): Bool;
+ private static function _isFullScreen(): Bool;
 
  /**
   * @static
   * @method _requestFullScreen
   * @private
   */
- private static dynamic function _requestFullScreen(): Void;
+ private static function _requestFullScreen(): Void;
 
  /**
   * @static
   * @method _cancelFullScreen
   * @private
   */
- private static dynamic function _cancelFullScreen(): Void;
+ private static function _cancelFullScreen(): Void;
 }

@@ -17,8 +17,8 @@ extern class Scene_Item extends Scene_ItemBase {
  private var _categoryWindow: Window_ItemCategory;
 
  #if !compileMV
- public dynamic function categoryWindowRect(): Rectangle;
- public dynamic function itemWindowRect(): Rectangle;
+ public function categoryWindowRect(): Rectangle;
+ public function itemWindowRect(): Rectangle;
  #end
 
  /**
@@ -26,40 +26,40 @@ extern class Scene_Item extends Scene_ItemBase {
   * item scene.
   * @memberof Scene_Item
   */
- public dynamic function createCategoryWindow(): Void;
+ public function createCategoryWindow(): Void;
 
  /**
   * Creates the item window on the item
   * scene.
   * @memberof Scene_Item
   */
- public dynamic function createItemWindow(): Void;
+ public function createItemWindow(): Void;
 
  /**
   * Handler for when a cataegory is selected
   * on the item scene.
   * @memberof Scene_Item
   */
- public dynamic function onCategoryOk(): Void;
+ public function onCategoryOk(): Void;
 
  /**
   * Handler for when an item is selected
   * on the item scene.
   * @memberof Scene_Item
   */
- public dynamic function onItemOk(): Void;
+ public function onItemOk(): Void;
 
  /**
   * Handler for when an item selection
   * is canceled on the item scene.
   * @memberof Scene_Item
   */
- public dynamic function onItemCancel(): Void;
+ public function onItemCancel(): Void;
 
  /**
   * Plays a sound effect when the
   * item is confirmed.
   * @memberof Scene_Item
   */
- public dynamic function playSeForItem(): Void;
+ public function playSeForItem(): Void;
 }

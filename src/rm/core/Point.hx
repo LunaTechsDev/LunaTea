@@ -11,7 +11,7 @@ extern class Point extends pixi.core.math.Point {
   * @param {Number} x The x coordinate
   * @param {Number} y The y coordinate
   */
- public dynamic function new(?x: Int, ?y: Int);
+ public function new(?x: Int, ?y: Int);
 
  /**
   * The x coordinate.

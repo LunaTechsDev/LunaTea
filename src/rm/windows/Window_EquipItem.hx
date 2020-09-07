@@ -16,10 +16,10 @@ extern class Window_EquipItem {
  private var _actor: Game_Actor;
  private var _slotId: Int;
  private var _statusWindow: Window_EquipStatus;
- public dynamic function new(x: Int, y: Int, width: Int, height: Int): Void;
- public dynamic function setActor(actor: Game_Actor): Void;
- public dynamic function setSlotId(slotId: Int): Void;
- public dynamic function includes(item: EquipItem): Bool;
- public dynamic function isEnabled(item: EquipItem): Bool;
- public dynamic function setStatusWindow(statusWindow: Window_EquipStatus): Void;
+ public function new(x: Int, y: Int, width: Int, height: Int): Void;
+ public function setActor(actor: Game_Actor): Void;
+ public function setSlotId(slotId: Int): Void;
+ public function includes(item: EquipItem): Bool;
+ public function isEnabled(item: EquipItem): Bool;
+ public function setStatusWindow(statusWindow: Window_EquipStatus): Void;
 }

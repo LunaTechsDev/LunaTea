@@ -29,29 +29,29 @@ extern class Game_System {
  private var _savedBgm: AudioFile;
  private var _walkingBgm: AudioFile;
 
- public dynamic function initialize(): Void;
- public dynamic function isJapanese(): Bool;
- public dynamic function isChinese(): Bool;
- public dynamic function isKorean(): Bool;
- public dynamic function isCJK(): Bool;
- public dynamic function isRussian(): Bool;
- public dynamic function isSideView(): Bool;
- public dynamic function isAutoSaveEnabled(): Bool;
- public dynamic function isSaveEnabled(): Bool;
+ public function initialize(): Void;
+ public function isJapanese(): Bool;
+ public function isChinese(): Bool;
+ public function isKorean(): Bool;
+ public function isCJK(): Bool;
+ public function isRussian(): Bool;
+ public function isSideView(): Bool;
+ public function isAutoSaveEnabled(): Bool;
+ public function isSaveEnabled(): Bool;
 
  /**
   * Disables the ability to save the game.
   *
   * @memberof Game_System
   */
- public dynamic function disableSave(): Void;
+ public function disableSave(): Void;
 
  /**
   * Enables the ability to save the game.
   *
   * @memberof Game_System
   */
- public dynamic function enableSave(): Void;
+ public function enableSave(): Void;
 
  /**
   * Returns true if the menu is enabled.
@@ -59,47 +59,47 @@ extern class Game_System {
   * @returns {Bool}
   * @memberof Game_System
   */
- public dynamic function isMenuEnabled(): Bool;
+ public function isMenuEnabled(): Bool;
 
  /**
   * Disables the menu from being accessed.
   *
   * @memberof Game_System
   */
- public dynamic function disableMenu(): Void;
+ public function disableMenu(): Void;
 
  /**
   * Enables the menu to be accessed.
   *
   * @memberof Game_System
   */
- public dynamic function enableMenu(): Void;
+ public function enableMenu(): Void;
 
- public dynamic function isEncounterEnabled(): Bool;
+ public function isEncounterEnabled(): Bool;
 
  /**
   * Returns true if the player can encounter enemies.
   *
   * @memberof Game_System
   */
- public dynamic function disableEncounter(): Void;
+ public function disableEncounter(): Void;
 
- public dynamic function enableEncounter(): Void;
- public dynamic function isFormationEnabled(): Bool;
+ public function enableEncounter(): Void;
+ public function isFormationEnabled(): Bool;
 
  /**
   * Disables the use of the formation command in the menu.
   *
   * @memberof Game_System
   */
- public dynamic function disableFormation(): Void;
+ public function disableFormation(): Void;
 
  /**
   * Enables the use of the formation command in the menu.
   *
   * @memberof Game_System
   */
- public dynamic function enableFormation(): Void;
+ public function enableFormation(): Void;
 
  /**
   * Returns the number of battles the player has participated in.
@@ -107,7 +107,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public dynamic function battleCount(): Int;
+ public function battleCount(): Int;
 
  /**
   * Returns the number of the wins the player has gained in battle.
@@ -115,7 +115,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public dynamic function winCount(): Int;
+ public function winCount(): Int;
 
  /**
   * Returns the number of battles the player has escaped from in battle.
@@ -123,7 +123,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public dynamic function escapeCount(): Int;
+ public function escapeCount(): Int;
 
  /**
   * Returns the number of saves the player has made in game.
@@ -131,7 +131,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public dynamic function saveCount(): Int;
+ public function saveCount(): Int;
 
  /**
   * Returns the version id represented in the database.
@@ -139,7 +139,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public dynamic function versionId(): Int;
+ public function versionId(): Int;
 
  /**
   * Returns the current save file id
@@ -147,7 +147,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public dynamic function savefileId(): Int;
+ public function savefileId(): Int;
 
  /**
   * Sets the save file id
@@ -155,7 +155,7 @@ extern class Game_System {
   * @returns {Void}
   * @memberof Game_System
   */
- public dynamic function setSavefileId(savefileId: Int): Void;
+ public function setSavefileId(savefileId: Int): Void;
 
  /**
   * Returns the tone of the window in the database.
@@ -163,7 +163,7 @@ extern class Game_System {
   * @returns {Array<Int>}
   * @memberof Game_System
   */
- public dynamic function windowTone(): Array<Int>;
+ public function windowTone(): Array<Int>;
 
  /**
   * Sets the window tone, given an array
@@ -171,7 +171,7 @@ extern class Game_System {
   * @param {Array<Int>} value
   * @memberof Game_System
   */
- public dynamic function setWindowTone(value: Array<Int>): Void;
+ public function setWindowTone(value: Array<Int>): Void;
 
  /**
   * Returns the current battle background music.
@@ -179,7 +179,7 @@ extern class Game_System {
   * @returns {AudioFile}
   * @memberof Game_System
   */
- public dynamic function battleBgm(): AudioFile;
+ public function battleBgm(): AudioFile;
 
  /**
   * Sets the battle background music.
@@ -187,7 +187,7 @@ extern class Game_System {
   * @param {AudioFile} value
   * @memberof Game_System
   */
- public dynamic function setBattleBgm(value: AudioFile): Void;
+ public function setBattleBgm(value: AudioFile): Void;
 
  /**
   * Returns the victory musical effect.
@@ -195,7 +195,7 @@ extern class Game_System {
   * @returns {AudioFile}
   * @memberof Game_System
   */
- public dynamic function victoryMe(): AudioFile;
+ public function victoryMe(): AudioFile;
 
  /**
   * Sets the victory musical effect.
@@ -203,7 +203,7 @@ extern class Game_System {
   * @param {AudioFile} value
   * @memberof Game_System
   */
- public dynamic function setVictoryMe(value: AudioFile): Void;
+ public function setVictoryMe(value: AudioFile): Void;
 
  /**
   * Returns the defeat musical effect.
@@ -211,13 +211,13 @@ extern class Game_System {
   * @returns {AudioFile}
   * @memberof Game_System
   */
- public dynamic function defeatMe(): AudioFile;
+ public function defeatMe(): AudioFile;
 
- public dynamic function onBattleStart(): Void;
- public dynamic function onBattleWin(): Void;
- public dynamic function onBattleEscape(): Void;
- public dynamic function onBeforeSave(): Void;
- public dynamic function onAfterLoad(): Void;
+ public function onBattleStart(): Void;
+ public function onBattleWin(): Void;
+ public function onBattleEscape(): Void;
+ public function onBeforeSave(): Void;
+ public function onAfterLoad(): Void;
 
  /**
   * Returns the total play time.
@@ -225,44 +225,44 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public dynamic function playtime(): Int;
+ public function playtime(): Int;
 
- public dynamic function playtimeText(): String;
+ public function playtimeText(): String;
 
  /**
   * Saves background music to the game system object.
   *
   * @memberof Game_System
   */
- public dynamic function saveBgm(): Void;
+ public function saveBgm(): Void;
 
  /**
   * Replays the saved background music.
   *
   * @memberof Game_System
   */
- public dynamic function replayBgm(): Void;
+ public function replayBgm(): Void;
 
  /**
   * Saves the walking background music.
   *
   * @memberof Game_System
   */
- public dynamic function saveWalkingBgm(): Void;
+ public function saveWalkingBgm(): Void;
 
  /**
   * Replays the saved walking background music.
   *
   * @memberof Game_System
   */
- public dynamic function replayWalkingBgm(): Void;
+ public function replayWalkingBgm(): Void;
 
  /**
   * Saves the second walking bgm from the map data.
   *
   * @memberof Game_System
   */
- public dynamic function saveWalkingBgm2(): Void;
+ public function saveWalkingBgm2(): Void;
 
  /**
   * Returns the main font face
@@ -270,7 +270,7 @@ extern class Game_System {
   * @returns {String}
   * @memberof Game_System
   */
- public dynamic function mainFontFace(): String;
+ public function mainFontFace(): String;
 
  /**
   * Returns the font face for number
@@ -278,7 +278,7 @@ extern class Game_System {
   * @returns {String}
   * @memberof Game_System
   */
- public dynamic function numberFontFace(): String;
+ public function numberFontFace(): String;
 
  /**
   * Returns the main font size
@@ -286,7 +286,7 @@ extern class Game_System {
   * @returns {Int}
   * @memberof Game_System
   */
- public dynamic function mainFontSize(): Int;
+ public function mainFontSize(): Int;
 
  /**
   * Returns the window padding
@@ -294,5 +294,5 @@ extern class Game_System {
   * @returns {Int}
   * @memberof Game_System
   */
- public dynamic function windowPadding(): Int;
+ public function windowPadding(): Int;
 }

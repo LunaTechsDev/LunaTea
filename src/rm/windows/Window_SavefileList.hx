@@ -29,9 +29,9 @@ extern class Window_SavefileList extends Window_Selectable {
  #end
 
  #if !compileMV
- public dynamic function new(rect: Rectangle);
+ public function new(rect: Rectangle);
  #else
- public dynamic function new(x: Int, y: Int, width: Int, height: Int);
+ public function new(x: Int, y: Int, width: Int, height: Int);
  #end
 
  /**
@@ -40,7 +40,7 @@ extern class Window_SavefileList extends Window_Selectable {
   * @param {string} mode
   * @memberof Window_SavefileList
   */
- public dynamic function setMode(mode: String): Void;
+ public function setMode(mode: String): Void;
 
  /**
   * Returns the maximum number of visible items.
@@ -48,9 +48,9 @@ extern class Window_SavefileList extends Window_Selectable {
   * @returns {number}
   * @memberof Window_SavefileList
   */
- public dynamic function maxVisibleItems(): Int;
+ public function maxVisibleItems(): Int;
 
- public dynamic function itemHeight(): Float;
+ public function itemHeight(): Float;
 
  /**
   * Draws the file id at the specified x and y coordinates.
@@ -60,13 +60,11 @@ extern class Window_SavefileList extends Window_Selectable {
   * @param {number} y
   * @memberof Window_SavefileList
   */
- public dynamic function drawFileId(id: Int, x: Int, y: Int): Void;
+ public function drawFileId(id: Int, x: Int, y: Int): Void;
 
- public dynamic function drawContents(info: Info, rect: Rectangle,
-  valid: Bool): Void;
- public dynamic function drawGameTitle(info: Info, x: Int, y: Int,
-  width: Int): Void;
- public dynamic function drawPartyCharacters(info: Info, x: Int, y: Int): Void;
+ public function drawContents(info: Info, rect: Rectangle, valid: Bool): Void;
+ public function drawGameTitle(info: Info, x: Int, y: Int, width: Int): Void;
+ public function drawPartyCharacters(info: Info, x: Int, y: Int): Void;
 
  /**
   * Draws the current playtime at the specified x and y coordinates within the given
@@ -77,6 +75,5 @@ extern class Window_SavefileList extends Window_Selectable {
   * @param {number} width
   * @memberof Window_SavefileList
   */
- public dynamic function drawPlaytime(info: Info, x: Int, y: Int,
-  width: Int): Void;
+ public function drawPlaytime(info: Info, x: Int, y: Int, width: Int): Void;
 }

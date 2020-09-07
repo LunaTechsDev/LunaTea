@@ -14,35 +14,35 @@ import rm.objects.Game_Actor;
 extern class Window_ActorCommand extends Window_Command {
  private var _actor: Game_Actor;
 
- public dynamic function new();
+ public function new();
 
  /**
   * Adds the attack command to the actor command window.
   *
   * @memberof Window_ActorCommand
   */
- public dynamic function addAttackCommand(): Void;
+ public function addAttackCommand(): Void;
 
  /**
   * Adds the skill command to the actor command window.
   *
   * @memberof Window_ActorCommand
   */
- public dynamic function addSkillCommands(): Void;
+ public function addSkillCommands(): Void;
 
  /**
   * Adds the guard command to the actor command window.
   *
   * @memberof Window_ActorCommand
   */
- public dynamic function addGuardCommand(): Void;
+ public function addGuardCommand(): Void;
 
  /**
   * Adds the item command to the actor command window.
   *
   * @memberof Window_ActorCommand
   */
- public dynamic function addItemCommand(): Void;
+ public function addItemCommand(): Void;
 
  /**
   * Sets up the actor command window with a specified actor.
@@ -50,7 +50,7 @@ extern class Window_ActorCommand extends Window_Command {
   * @param {Game_Actor} actor
   * @memberof Window_ActorCommand
   */
- public dynamic function setup(actor: Game_Actor): Void;
+ public function setup(actor: Game_Actor): Void;
 
- public dynamic function selectLast(): Void;
+ public function selectLast(): Void;
 }

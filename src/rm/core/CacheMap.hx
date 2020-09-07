@@ -10,21 +10,21 @@ extern class CacheMap {
   * @param manager
   * @constructor
   */
- public dynamic function new(manager: ImageManager);
+ public function new(manager: ImageManager);
 
  /**
   * checks ttl of all elements and removes dead ones
   */
- public dynamic function checkTTL(): Void;
+ public function checkTTL(): Void;
 
  /**
   * cache item
   * @param key url of cache element
   * @returns {*|null}
   */
- public dynamic function getItem(key: String): Any;
+ public function getItem(key: String): Any;
 
- public dynamic function clear(): Void;
- public dynamic function setItem(key: String, item: Any): CacheEntry;
- public dynamic function update(ticks: Int, delta: Float): Void;
+ public function clear(): Void;
+ public function setItem(key: String, item: Any): CacheEntry;
+ public function update(ticks: Int, delta: Float): Void;
 }

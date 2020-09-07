@@ -15,9 +15,9 @@ extern class Game_Follower extends Game_Character {
  public var __memberIndex: Int;
  private var _memberIndex: Int;
 
- public dynamic function new(memberIndex: Int);
+ public function new(memberIndex: Int);
 
- public dynamic function refresh(): Void;
+ public function refresh(): Void;
 
  /**
   * Returns the current actor.
@@ -25,7 +25,7 @@ extern class Game_Follower extends Game_Character {
   * @returns {Game_Actor}
   * @memberof Game_Follower
   */
- public dynamic function actor(): Game_Actor;
+ public function actor(): Game_Actor;
 
  /**
   * Returns true if the follower is visible.
@@ -33,14 +33,14 @@ extern class Game_Follower extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Follower
   */
- public dynamic function isVisible(): Bool;
+ public function isVisible(): Bool;
 
  /**
   * Updates the game follower.
   *
   * @memberof Game_Follower
   */
- public dynamic function update(): Void;
+ public function update(): Void;
 
  /**
   * Has the follower chase a game actor.
@@ -48,5 +48,5 @@ extern class Game_Follower extends Game_Character {
   * @param {Game_Character} character
   * @memberof Game_Follower
   */
- public dynamic function chaseCharacter(character: Game_Character): Void;
+ public function chaseCharacter(character: Game_Character): Void;
 }

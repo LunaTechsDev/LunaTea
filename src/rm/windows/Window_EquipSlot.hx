@@ -17,9 +17,8 @@ extern class Window_EquipSlot extends Window_Selectable {
  private var _itemWindow: Window_EquipItem;
  private var _statusWindow: Window_EquipStatus;
 
- public dynamic function new(x: Int, y: Int, width: Int, height: Int): Void;
- public dynamic function initialize(x: Int, y: Int, width: Int,
-  height: Int): Void;
+ public function new(x: Int, y: Int, width: Int, height: Int): Void;
+ public function initialize(x: Int, y: Int, width: Int, height: Int): Void;
 
  /**
   * Sets the current game actor.
@@ -27,7 +26,7 @@ extern class Window_EquipSlot extends Window_Selectable {
   * @param {Game_Actor} actor
   * @memberof Window_EquipSlot
   */
- public dynamic function setActor(actor: Game_Actor): Void;
+ public function setActor(actor: Game_Actor): Void;
 
  /**
   * Returns the current equip item.
@@ -35,7 +34,7 @@ extern class Window_EquipSlot extends Window_Selectable {
   * @returns {RPG.EquipItem}
   * @memberof Window_EquipSlot
   */
- public dynamic function item(): EquipItem;
+ public function item(): EquipItem;
 
  /**
   * Returns the name of the slot at the specified index.
@@ -44,7 +43,7 @@ extern class Window_EquipSlot extends Window_Selectable {
   * @returns {string}
   * @memberof Window_EquipSlot
   */
- public dynamic function slotName(index: Int): String;
+ public function slotName(index: Int): String;
 
  /**
   * Returns true if the current slot is enabled.
@@ -53,7 +52,7 @@ extern class Window_EquipSlot extends Window_Selectable {
   * @returns {boolean}
   * @memberof Window_EquipSlot
   */
- public dynamic function isEnabled(index: Int): Bool;
+ public function isEnabled(index: Int): Bool;
 
  /**
   * Sets the status window within the equip slot window.
@@ -61,7 +60,7 @@ extern class Window_EquipSlot extends Window_Selectable {
   * @param {Window_EquipStatus} statusWindow
   * @memberof Window_EquipSlot
   */
- public dynamic function setStatusWindow(statusWindow: Window_EquipStatus): Void;
+ public function setStatusWindow(statusWindow: Window_EquipStatus): Void;
 
  /**
   * Sets the item window within the equip slot window.
@@ -69,5 +68,5 @@ extern class Window_EquipSlot extends Window_Selectable {
   * @param {Window_EquipItem} itemWindow
   * @memberof Window_EquipSlot
   */
- public dynamic function setItemWindow(itemWindow: Window_EquipItem): Void;
+ public function setItemWindow(itemWindow: Window_EquipItem): Void;
 }

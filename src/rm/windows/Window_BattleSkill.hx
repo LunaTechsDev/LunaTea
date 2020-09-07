@@ -13,11 +13,10 @@ import rm.core.Rectangle;
 @:native("Window_BattleSkill")
 extern class Window_BattleSkill extends Window_SkillList {
  #if compileMV
- public dynamic function new(x: Int, y: Int, width: Int, height: Int);
- public dynamic function initialize(x: Int, y: Int, width: Int,
-  height: Int): Void;
+ public function new(x: Int, y: Int, width: Int, height: Int);
+ public function initialize(x: Int, y: Int, width: Int, height: Int): Void;
  #else
- public dynamic function new(rect: Rectangle);
- public dynamic function initialize(rect: Rectangle): Void;
+ public function new(rect: Rectangle);
+ public function initialize(rect: Rectangle): Void;
  #end
 }

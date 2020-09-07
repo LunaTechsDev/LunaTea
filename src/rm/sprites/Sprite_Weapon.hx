@@ -26,31 +26,31 @@ extern class Sprite_Weapon extends Sprite_Base {
   *
   * @memberof Sprite_Weapon
   */
- public dynamic function initMembers(): Void;
+ public function initMembers(): Void;
 
- public dynamic function setup(weaponImageId: WeaponImageId): Void;
- public dynamic function animationWait(): Int;
+ public function setup(weaponImageId: WeaponImageId): Void;
+ public function animationWait(): Int;
 
  /**
   * Updates the pattern of the weapon sprite.
   *
   * @memberof Sprite_Weapon
   */
- public dynamic function updatePattern(): Void;
+ public function updatePattern(): Void;
 
  /**
   * Loads the bitmap of the weapon sprite.
   *
   * @memberof Sprite_Weapon
   */
- public dynamic function loadBitmap(): Void;
+ public function loadBitmap(): Void;
 
  /**
   * Updates the weapon sprite frames.
   *
   * @memberof Sprite_Weapon
   */
- public dynamic function updateFrame(): Void;
+ public function updateFrame(): Void;
 
  /**
   * Returns true if the weapon sprite is playing.
@@ -58,5 +58,5 @@ extern class Sprite_Weapon extends Sprite_Base {
   * @returns {boolean}
   * @memberof Sprite_Weapon
   */
- public dynamic function isPlaying(): Bool;
+ public function isPlaying(): Bool;
 }

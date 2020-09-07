@@ -14,28 +14,28 @@ extern class Window_NameBox extends Window_Base {
   * Sets the current message window.
   * @param messageWindow
   */
- public dynamic function setMessageWindow(messageWindow: Window_Message): Void;
+ public function setMessageWindow(messageWindow: Window_Message): Void;
 
  /**
   * Sets the name in the message window box.
   * @param name
   */
- public dynamic function setName(name: String): Void;
+ public function setName(name: String): Void;
 
  /**
   * Clears the name in the message box.
   */
- public dynamic function clear(): Void;
+ public function clear(): Void;
 
  /**
   * Starts the name box window.
   */
- public dynamic function start(): Void;
+ public function start(): Void;
 
  /**
   * Updates the placement of the name box window.
   */
- public dynamic function updatePlacement(): Void;
+ public function updatePlacement(): Void;
 
  /**
   * Updates the name box background
@@ -44,20 +44,20 @@ extern class Window_NameBox extends Window_Base {
   *  this.setBackgroundType($gameMessage.background());
   * ```
   */
- public dynamic function updateBackground(): Void;
+ public function updateBackground(): Void;
 
  /**
   * Returns the window width based on the text size.
   * @returns Int
   */
- public dynamic function windowWidth(): Int;
+ public function windowWidth(): Int;
 
  /**
   * Returns the window height based on
   * the fitting height.
   * @return Int
   */
- public dynamic function windowHeight(): Int;
+ public function windowHeight(): Int;
 
  /**
   * Refreshes the window and
@@ -69,18 +69,18 @@ extern class Window_NameBox extends Window_Base {
   * ```
   * @return Int
   */
- public dynamic function refresh(): Void;
+ public function refresh(): Void;
 }
 #else
 @:expose("Window_NameBox")
 @:native("Window_NameBox")
 class Window_NameBox extends Window_Base {
- public dynamic function new() {
+ public function new() {
   // TODO: Fix and update with proper coordinates
   super(0, 0, 100, 100);
  }
 
- public dynamic function baseTextRect() {
+ public function baseTextRect() {
   var rect = new Rectangle(0, 0, 100, 100);
   return rect;
  }

@@ -15,10 +15,8 @@ private var _actor: Game_Actor;
 private var _stypeId: Int;
 private var _data: Array<Skill>;
 #if compileMV
-public dynamic function new(x: Int, y: Int, width: Int, height: Int);
-
-public dynamic function initialize(x: Int, y: Int, width: Int,
- height: Int): Void;
+public function new(x: Int, y: Int, width: Int, height: Int);
+public function initialize(x: Int, y: Int, width: Int, height: Int): Void;
 
 /**
  * Sets the skill type id of the skill list window.
@@ -26,7 +24,7 @@ public dynamic function initialize(x: Int, y: Int, width: Int,
  * @param {number} stypeId
  * @memberof Window_SkillList
  */
-public dynamic function setStypeId(stypeId: Int): Void;
+public function setStypeId(stypeId: Int): Void;
 
 /**
  * Returns the current skill from the databse.
@@ -34,7 +32,7 @@ public dynamic function setStypeId(stypeId: Int): Void;
  * @returns {RPG.Skill}
  * @memberof Window_SkillList
  */
-public dynamic function item(): Skill;
+public function item(): Skill;
 
 /**
  * Returns true if the given skill is included.
@@ -43,7 +41,7 @@ public dynamic function item(): Skill;
  * @returns {boolean}
  * @memberof Window_SkillList
  */
-public dynamic function includes(item: Skill): Bool;
+public function includes(item: Skill): Bool;
 
 /**
  * Returns true if the given skill is enabled.
@@ -52,30 +50,28 @@ public dynamic function includes(item: Skill): Bool;
  * @returns {boolean}
  * @memberof Window_SkillList
  */
-public dynamic function isEnabled(item: Skill): Bool;
+public function isEnabled(item: Skill): Bool;
 
 /**
  * Creates the item list.
  *
  * @memberof Window_SkillList
  */
-public dynamic function makeItemList(): Void;
+public function makeItemList(): Void;
 
-public dynamic function selectLast(): Void;
-public dynamic function costWidth(): Int;
-
-public dynamic function drawSkillCost(skill: Skill, x: Int, y: Int,
- width: Int): Void;
+public function selectLast(): Void;
+public function costWidth(): Int;
+public function drawSkillCost(skill: Skill, x: Int, y: Int, width: Int): Void;
 #else
-public dynamic function new(rect: Rectangle);
-public dynamic function initialize(rect: Rectangle): Void;
+public function new(rect: Rectangle);
+public function initialize(rect: Rectangle): Void;
 
 /**
  * Returns the Y value for block1.
  * Defaults to 0.
  * @return Int
  */
-public dynamic function block1Y(): Int;
+public function block1Y(): Int;
 
 /**
  * Draws the basic info and exp info as a block.
@@ -86,7 +82,7 @@ public dynamic function block1Y(): Int;
  * this.drawExpInfo(456, y);
  * ```
  */
-public dynamic function drawBlock2(): Void;
+public function drawBlock2(): Void;
 
 /**
  * Returns the Y value for block2.
@@ -99,7 +95,7 @@ public dynamic function drawBlock2(): Void;
  * ```
  * @return Int
  */
-public dynamic function block2Y(): Int;
+public function block2Y(): Int;
 
 /**
  * Draws the basic info such as
@@ -108,7 +104,7 @@ public dynamic function block2Y(): Int;
  * @param x
  * @param y
  */
-public dynamic function drawBasicInfo(x: Int, y: Int): Void;
+public function drawBasicInfo(x: Int, y: Int): Void;
 
 /**
  * Draws the experience info
@@ -116,21 +112,21 @@ public dynamic function drawBasicInfo(x: Int, y: Int): Void;
  * @param x
  * @param y
  */
-public dynamic function drawExpInfo(x: Int, y: Int): Void;
+public function drawExpInfo(x: Int, y: Int): Void;
 
 /**
  * Returns the exp total value as a string otherwise
  * returns "-------".
  * @return String
  */
-public dynamic function expTotalValue(): String;
+public function expTotalValue(): String;
 
 /**
  * Returns the exp next value as a string
  * otherise returns "-------".
  * @return String
  */
-public dynamic function expNextValue(): String;
+public function expNextValue(): String;
 #end
 
 /**
@@ -139,5 +135,5 @@ public dynamic function expNextValue(): String;
  * @param {Game_Actor} actor
  * @memberof Window_SkillList
  */
-public dynamic function setActor(actor: Game_Actor): Void;
+public function setActor(actor: Game_Actor): Void;
 }

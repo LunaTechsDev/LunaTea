@@ -12,7 +12,7 @@ import rm.types.RPG.BaseItem;
 @:expose("Window_ShopSell")
 @:native("Window_ShopSell")
 extern class Window_ShopSell extends Window_ItemList {
- public dynamic function new(x: Int, y: Int, width: Int, height: Int);
+ public function new(x: Int, y: Int, width: Int, height: Int);
 
  /**
   * Determines if the item is sellable, otherwise, greyed out.
@@ -21,5 +21,5 @@ extern class Window_ShopSell extends Window_ItemList {
   * @returns {boolean}
   * @memberof Window_ShopSell
   */
- public dynamic function isEnabled(item: BaseItem): Bool;
+ public function isEnabled(item: BaseItem): Bool;
 }

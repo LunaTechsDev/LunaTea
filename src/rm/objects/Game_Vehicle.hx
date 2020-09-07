@@ -26,9 +26,9 @@ extern class Game_Vehicle extends Game_Character {
  public var __bgm: AudioFile;
  private var _bgm: AudioFile;
 
- public dynamic function new(type: String);
+ public function new(type: String);
 
- public dynamic function initMembers(): Void;
+ public function initMembers(): Void;
 
  /**
   * Returns true if the vehicle is a boat.
@@ -36,7 +36,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Vehicle
   */
- public dynamic function isBoat(): Bool;
+ public function isBoat(): Bool;
 
  /**
   * Returns true if the vehicle is a ship.
@@ -44,7 +44,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Vehicle
   */
- public dynamic function isShip(): Bool;
+ public function isShip(): Bool;
 
  /**
   * Returns true if the vehicle is an airship.
@@ -52,16 +52,16 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Vehicle
   */
- public dynamic function isAirship(): Bool;
+ public function isAirship(): Bool;
 
  /**
   * Resets the direction of the vehicle.
   *
   * @memberof Game_Vehicle
   */
- public dynamic function resetDirection(): Void;
+ public function resetDirection(): Void;
 
- public dynamic function initMoveSpeed(): Void;
+ public function initMoveSpeed(): Void;
 
  /**
   * Returns the current vehicle.
@@ -69,36 +69,36 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {RPG.System.Vehicle}
   * @memberof Game_Vehicle
   */
- public dynamic function vehicle(): SystemVehicle;
+ public function vehicle(): SystemVehicle;
 
- public dynamic function loadSystemSettings(): Void;
+ public function loadSystemSettings(): Void;
 
  /**
   * Refreshes the game vehicle.
   *
   * @memberof Game_Vehicle
   */
- public dynamic function refresh(): Void;
+ public function refresh(): Void;
 
- public dynamic function setLocation(mapId: Int, x: Int, y: Int): Void;
+ public function setLocation(mapId: Int, x: Int, y: Int): Void;
 
- public dynamic function pos(x: Int, y: Int): Bool;
+ public function pos(x: Int, y: Int): Bool;
 
- public dynamic function isMapPassable(x: Int, y: Int, d: Direction): Bool;
+ public function isMapPassable(x: Int, y: Int, d: Direction): Bool;
 
  /**
   * Gets on the vehicle.
   *
   * @memberof Game_Vehicle
   */
- public dynamic function getOn(): Void;
+ public function getOn(): Void;
 
  /**
   * Gets off the vehicle.
   *
   * @memberof Game_Vehicle
   */
- public dynamic function getOff(): Void;
+ public function getOff(): Void;
 
  /**
   * Sets the bgm associated with the vehicle.
@@ -106,21 +106,21 @@ extern class Game_Vehicle extends Game_Character {
   * @param {RPG.AudioFile} bgm
   * @memberof Game_Vehicle
   */
- public dynamic function setBgm(bgm: AudioFile): Void;
+ public function setBgm(bgm: AudioFile): Void;
 
  /**
   * Plays the bgm associated with the vehicle.
   *
   * @memberof Game_Vehicle
   */
- public dynamic function playBgm(): Void;
+ public function playBgm(): Void;
 
  /**
   * Syncs the vehicle with the player.
   *
   * @memberof Game_Vehicle
   */
- public dynamic function syncWithPlayer(): Void;
+ public function syncWithPlayer(): Void;
 
  /**
   * Returns the screen y position of the vehicle.
@@ -128,7 +128,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {number}
   * @memberof Game_Vehicle
   */
- public dynamic function screenY(): Int;
+ public function screenY(): Int;
 
  /**
   * Returns the shadow x position of the vehicle's shadow.
@@ -136,7 +136,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {number}
   * @memberof Game_Vehicle
   */
- public dynamic function shadowX(): Int;
+ public function shadowX(): Int;
 
  /**
   * Returns the shadow y position of the vehicle's shadow.
@@ -144,7 +144,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {number}
   * @memberof Game_Vehicle
   */
- public dynamic function shadowY(): Int;
+ public function shadowY(): Int;
 
  /**
   * Returns the shadow opacity of the vehicle's shadow.
@@ -152,7 +152,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {number}
   * @memberof Game_Vehicle
   */
- public dynamic function shadowOpacity(): Int;
+ public function shadowOpacity(): Int;
 
  /**
   * Returns true if the vehicle can move.
@@ -160,28 +160,28 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Vehicle
   */
- public dynamic function canMove(): Bool;
+ public function canMove(): Bool;
 
  /**
   * Updates the vehicle.
   *
   * @memberof Game_Vehicle
   */
- public dynamic function update(): Void;
+ public function update(): Void;
 
  /**
   * Updates the airship.
   *
   * @memberof Game_Vehicle
   */
- public dynamic function updateAirship(): Void;
+ public function updateAirship(): Void;
 
  /**
   * Updates airship altitude.
   *
   * @memberof Game_Vehicle
   */
- public dynamic function updateAirshipAltitude(): Void;
+ public function updateAirshipAltitude(): Void;
 
  /**
   * Returns the max altitude of the vehicle.
@@ -189,7 +189,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {number}
   * @memberof Game_Vehicle
   */
- public dynamic function maxAltitude(): Int;
+ public function maxAltitude(): Int;
 
  /**
   * Returns true if the vehicle is at it's lowest altitude.
@@ -197,7 +197,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Vehicle
   */
- public dynamic function isLowest(): Bool;
+ public function isLowest(): Bool;
 
  /**
   * Returns true if the vehicle is at it's highest altitude.
@@ -205,7 +205,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Vehicle
   */
- public dynamic function isHighest(): Bool;
+ public function isHighest(): Bool;
 
  /**
   * Returns true if take off is ok.
@@ -213,7 +213,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Vehicle
   */
- public dynamic function isTakeoffOk(): Bool;
+ public function isTakeoffOk(): Bool;
 
  /**
   * Returns true if the vehicle is capable of landing at the specified
@@ -224,5 +224,5 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Vehicle
   */
- public dynamic function isLandOk(x: Int, y: Int, d: Direction): Bool;
+ public function isLandOk(x: Int, y: Int, d: Direction): Bool;
 }

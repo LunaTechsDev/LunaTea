@@ -22,31 +22,23 @@ public var __tempActor: Game_Actor;
 
 private var _tempActor: Game_Actor;
 #if compileMV
-public dynamic function new(x: Int, y: Int);
-public dynamic function initialize(x: Int, y: Int): Void;
+public function new(x: Int, y: Int);
+public function initialize(x: Int, y: Int): Void;
 #else
-public dynamic function new(rect: Rectangle): Void;
-public dynamic function initialize(rect: Rectangle): Void;
+public function new(rect: Rectangle): Void;
+public function initialize(rect: Rectangle): Void;
 #end
-public dynamic function windowWidth(): Int;
-public dynamic function windowHeight(): Int;
-public dynamic function numVisibleRows(): Int;
-public dynamic function setActor(actor: Game_Actor): Void;
-public dynamic function refresh(): Void;
-public dynamic function setTempActor(tempActor: Game_Actor): Void;
-public dynamic function drawItem(x: Int, y: Int, paramId: ParameterIdA): Void;
-
-public dynamic function drawParamName(x: Int, y: Int,
- paramId: ParameterIdA): Void;
-
-public dynamic function drawCurrentParam(x: Int, y: Int,
- paramId: ParameterIdA): Void;
-
-public dynamic function drawRightArrow(x: Int, y: Int): Void;
-
-public dynamic function drawNewParam(x: Int, y: Int,
- paramId: ParameterIdA): Void;
-
+public function windowWidth(): Int;
+public function windowHeight(): Int;
+public function numVisibleRows(): Int;
+public function setActor(actor: Game_Actor): Void;
+public function refresh(): Void;
+public function setTempActor(tempActor: Game_Actor): Void;
+public function drawItem(x: Int, y: Int, paramId: ParameterIdA): Void;
+public function drawParamName(x: Int, y: Int, paramId: ParameterIdA): Void;
+public function drawCurrentParam(x: Int, y: Int, paramId: ParameterIdA): Void;
+public function drawRightArrow(x: Int, y: Int): Void;
+public function drawNewParam(x: Int, y: Int, paramId: ParameterIdA): Void;
 #if compileMV
 #else
 
@@ -56,13 +48,13 @@ public dynamic function drawNewParam(x: Int, y: Int,
  * Defaults to 0.
  * @return Int
  */
-public dynamic function colSpacing(): Int;
+public function colSpacing(): Int;
 
 /**
  * Draws all the parameters within the
  * equip status window.
  */
-public dynamic function drawAllParams(): Void;
+public function drawAllParams(): Void;
 
 /**
  * The width of the right arrow within the equip
@@ -70,7 +62,7 @@ public dynamic function drawAllParams(): Void;
  * Defaults to 32.
  * @return Int
  */
-public dynamic function rightArrowWidth(): Int;
+public function rightArrowWidth(): Int;
 
 /**
  * The width of the parameter text within
@@ -78,7 +70,7 @@ public dynamic function rightArrowWidth(): Int;
  * Defaults to 48.
  * @return Int
  */
-public dynamic function paramWidth(): Int;
+public function paramWidth(): Int;
 
 /**
  * The x position of the parameter
@@ -91,7 +83,7 @@ public dynamic function paramWidth(): Int;
  * ```
  * @return Int
  */
-public dynamic function paramX(): Int;
+public function paramX(): Int;
 
 /**
  * The  y position of the parameter

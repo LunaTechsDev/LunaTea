@@ -10,7 +10,7 @@ package rm.windows;
 @:expose("Window_GameEnd")
 @:native("Window_GameEnd")
 extern class Window_GameEnd extends Window_Base {
- public dynamic function new();
+ public function new();
 
- public dynamic function updatePlacement(): Void;
+ public function updatePlacement(): Void;
 }

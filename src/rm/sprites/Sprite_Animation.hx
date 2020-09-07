@@ -112,8 +112,8 @@ extern class Sprite_Animation extends Sprite {
  public var __reduceArtifacts: Bool;
  private var _reduceArtifacts: Bool;
 
- public dynamic function initMembers(): Void;
- public dynamic function setup(target: Sprite_Base, animation: Animation,
+ public function initMembers(): Void;
+ public function setup(target: Sprite_Base, animation: Animation,
   mirror: Bool, delay: Int): Void;
 
  /**
@@ -121,20 +121,20 @@ extern class Sprite_Animation extends Sprite {
   *
   * @memberof Sprite_Animation
   */
- public dynamic function remove(): Void;
+ public function remove(): Void;
 
- public dynamic function setupRate(): Void;
+ public function setupRate(): Void;
 
- public dynamic function setupDuration(): Void;
+ public function setupDuration(): Void;
 
  /**
   * Updates the flash animation of the sprite animation.
   *
   * @memberof Sprite_Animation
   */
- public dynamic function updateFlash(): Void;
+ public function updateFlash(): Void;
 
- public dynamic function updateScreenFlash(): Void;
+ public function updateScreenFlash(): Void;
 
  /**
   * Returns the absolute x position of the sprite animation.
@@ -142,7 +142,7 @@ extern class Sprite_Animation extends Sprite {
   * @returns {number}
   * @memberof Sprite_Animation
   */
- public dynamic function absoluteX(): Float;
+ public function absoluteX(): Float;
 
  /**
   * Returns the absolute y position of the sprite aniamtion.
@@ -150,14 +150,14 @@ extern class Sprite_Animation extends Sprite {
   * @returns {number}
   * @memberof Sprite_Animation
   */
- public dynamic function absoluteY(): Float;
+ public function absoluteY(): Float;
 
  /**
   * Updates the hiding of the sprite animation.
   *
   * @memberof Sprite_Animation
   */
- public dynamic function updateHiding(): Void;
+ public function updateHiding(): Void;
 
  /**
   * Returns true if the sprite animation is playing.
@@ -165,14 +165,14 @@ extern class Sprite_Animation extends Sprite {
   * @returns {boolean}
   * @memberof Sprite_Animation
   */
- public dynamic function isPlaying(): Bool;
+ public function isPlaying(): Bool;
 
  /**
   * Loads the bitmaps of the sprite animation.
   *
   * @memberof Sprite_Animation
   */
- public dynamic function loadBitmaps(): Void;
+ public function loadBitmaps(): Void;
 
  /**
   * Returns true if the sprite animation is ready.
@@ -180,49 +180,49 @@ extern class Sprite_Animation extends Sprite {
   * @returns {boolean}
   * @memberof Sprite_Animation
   */
- public dynamic function isReady(): Bool;
+ public function isReady(): Bool;
 
  /**
   * Create the sprites of the sprite animation.
   *
   * @memberof Sprite_Animation
   */
- public dynamic function createSprites(): Void;
+ public function createSprites(): Void;
 
  /**
   * Create the cell sprites of the sprite animation.
   *
   * @memberof Sprite_Animation
   */
- public dynamic function createCellSprites(): Void;
+ public function createCellSprites(): Void;
 
  /**
   * Create the screen flash sprite of the sprite animation.
   *
   * @memberof Sprite_Animation
   */
- public dynamic function createScreenFlashSprite(): Void;
+ public function createScreenFlashSprite(): Void;
 
  /**
   * Updates the main loop of the sprite animation.
   *
   * @memberof Sprite_Animation
   */
- public dynamic function updateMain(): Void;
+ public function updateMain(): Void;
 
  /**
   * Updates the position of the sprite animation.
   *
   * @memberof Sprite_Animation
   */
- public dynamic function updatePosition(): Void;
+ public function updatePosition(): Void;
 
  /**
   * Updates the frame of the sprite aniamtion.
   *
   * @memberof Sprite_Animation
   */
- public dynamic function updateFrame(): Void;
+ public function updateFrame(): Void;
 
  /**
   * Returns the current frame index of the sprite aniamtion.
@@ -230,15 +230,13 @@ extern class Sprite_Animation extends Sprite {
   * @returns {number}
   * @memberof Sprite_Animation
   */
- public dynamic function currentFrameIndex(): Int;
+ public function currentFrameIndex(): Int;
 
- public dynamic function updateAllCellSprites(frame: Array<Array<Int>>): Void;
- public dynamic function updateCellSprite(sprite: Sprite,
-  cell: Array<Int>): Void;
- public dynamic function processTimingData(timing: AnimationTiming): Void;
- public dynamic function startFlash(color: Array<Int>, duration: Int): Void;
- public dynamic function startScreenFlash(color: Array<Int>,
-  duration: Int): Void;
+ public function updateAllCellSprites(frame: Array<Array<Int>>): Void;
+ public function updateCellSprite(sprite: Sprite, cell: Array<Int>): Void;
+ public function processTimingData(timing: AnimationTiming): Void;
+ public function startFlash(color: Array<Int>, duration: Int): Void;
+ public function startScreenFlash(color: Array<Int>, duration: Int): Void;
 
  /**
   * Starts hiding the sprite animation.
@@ -246,5 +244,5 @@ extern class Sprite_Animation extends Sprite {
   * @param {number} duration The duration of the hide.
   * @memberof Sprite_Animation
   */
- public dynamic function startHiding(duration: Int): Void;
+ public function startHiding(duration: Int): Void;
 }

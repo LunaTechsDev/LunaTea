@@ -183,14 +183,14 @@ extern class _Window extends Container {
   * @class Window
   * @constructor
   */
- public dynamic function new();
+ public function new();
 
  /**
   * Updates the window for each frame.
   *
   * @method update
   */
- public dynamic function update(): Void;
+ public function update(): Void;
 
  /**
   * Sets the x, y, width, and height all at once.
@@ -201,7 +201,7 @@ extern class _Window extends Container {
   * @param {Number} width The width of the window
   * @param {Number} height The height of the window
   */
- public dynamic function move(?x: Float, ?y: Float, ?width: Float,
+ public function move(?x: Float, ?y: Float, ?width: Float,
   ?height: Float): Void;
 
  /**
@@ -210,7 +210,7 @@ extern class _Window extends Container {
   * @method isOpen
   * @return {Boolean}
   */
- public dynamic function isOpen(): Bool;
+ public function isOpen(): Bool;
 
  /**
   * Returns true if the window is completely closed (openness == 0).
@@ -218,7 +218,7 @@ extern class _Window extends Container {
   * @method isClosed
   * @return {Boolean}
   */
- public dynamic function isClosed(): Bool;
+ public function isClosed(): Bool;
 
  /**
   * Sets the position of the command cursor.
@@ -229,7 +229,7 @@ extern class _Window extends Container {
   * @param {Number} width The width of the cursor
   * @param {Number} height The height of the cursor
   */
- public dynamic function setCursorRect(?x: Float, ?y: Float, ?width: Float,
+ public function setCursorRect(?x: Float, ?y: Float, ?width: Float,
   ?height: Float): Void;
 
  /**
@@ -240,7 +240,7 @@ extern class _Window extends Container {
   * @param {Number} g The green value in the range (-255, 255)
   * @param {Number} b The blue value in the range (-255, 255)
   */
- public dynamic function setTone(r: Int, g: Int, b: Int): Void;
+ public function setTone(r: Int, g: Int, b: Int): Void;
 
  /**
   * Adds a child between the background and contents.
@@ -249,7 +249,7 @@ extern class _Window extends Container {
   * @param {PIXI.DisplayObject} child The child to add
   * @return {PIXI.DisplayObject} The child that was added
   */
- public dynamic function addChildToBack(child: DisplayObject): DisplayObject;
+ public function addChildToBack(child: DisplayObject): DisplayObject;
 
  /**
   * Adds a child to the container.
@@ -258,7 +258,7 @@ extern class _Window extends Container {
   * @param {PIXI.DisplayObject} child The child to add
   * @return {PIXI.DisplayObject} The child that was added
   */
- public dynamic function addChild(child: DisplayObject): DisplayObject;
+ public function addChild(child: DisplayObject): DisplayObject;
 
  /**
   * Adds a child to the container at a specified index.
@@ -268,8 +268,7 @@ extern class _Window extends Container {
   * @param {Number} index The index to place the child in
   * @return {PIXI.DisplayObject} The child that was added
   */
- public dynamic function addChildAt(child: DisplayObject,
-  index: Int): DisplayObject;
+ public function addChildAt(child: DisplayObject, index: Int): DisplayObject;
 
  /**
   * Removes a child from the container.
@@ -278,7 +277,7 @@ extern class _Window extends Container {
   * @param {PIXI.DisplayObject} child The child to remove
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public dynamic function removeChild(child: DisplayObject): DisplayObject;
+ public function removeChild(child: DisplayObject): DisplayObject;
 
  /**
   * Removes a child from the specified index position.
@@ -287,45 +286,45 @@ extern class _Window extends Container {
   * @param {Number} index The index to get the child from
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public dynamic function removeChildAt(index: Int): DisplayObject;
+ public function removeChildAt(index: Int): DisplayObject;
 
  /**
   * Move the cursor position by the given amount
   * @param x
   * @param y
   */
- public dynamic function moveCursorBy(x: Float, y: Float): Void;
+ public function moveCursorBy(x: Float, y: Float): Void;
 
  /**
   * Moves the inner children by the given amount.
   * @param x
   * @param y
   */
- public dynamic function moveInnerChildrenBy(x: Float, y: Float): Void;
+ public function moveInnerChildrenBy(x: Float, y: Float): Void;
 
  /**
   * Adds a child to the client area.
   * @param child
   * @return DisplayObject
   */
- public dynamic function addInnerChild(child: DisplayObject): DisplayObject;
+ public function addInnerChild(child: DisplayObject): DisplayObject;
 
  /**
   * Draws the window shape into PIXI.Graphics object. Used by WindowLayer.
   * @param graphics
   */
- public dynamic function drawShape(graphics: pixi.core.graphics.Graphics): Void;
+ public function drawShape(graphics: pixi.core.graphics.Graphics): Void;
 
  /**
   * Destroys the window
   */
- public dynamic function destroy(): Void;
+ public function destroy(): Void;
 
  /**
   * @method updateTransform
   * @private
   */
- public dynamic function updateTransform(): Void;
+ public function updateTransform(): Void;
 
  private var _isWindow: Bool;
  private var _windowskin: Bitmap;
@@ -348,149 +347,149 @@ extern class _Window extends Container {
   * @method _createAllParts
   * @private
   */
- private dynamic function _createAllParts(): Void;
+ private function _createAllParts(): Void;
 
  /**
   * Creates the container for the window.
   */
- private dynamic function _createContainer(): Void;
+ private function _createContainer(): Void;
 
  /**
   * Creates the back sprite for the window.
   */
- private dynamic function _createBackSprite(): Void;
+ private function _createBackSprite(): Void;
 
  /**
   * Creates a frame sprite(standard sprite) and adds
   * it to the container.
   */
- private dynamic function _createFrameSprite(): Void;
+ private function _createFrameSprite(): Void;
 
  /**
   * Creates the client area for the window(window contents).
   */
- private dynamic function _createClientArea(): Void;
+ private function _createClientArea(): Void;
 
  /**
   * Creates the contents back sprite in the client area.
   */
- private dynamic function _createContentsBackSprite(): Void;
+ private function _createContentsBackSprite(): Void;
 
  /**
   * Creates the cursor sprites and
   * adds them to the client area.
   */
- private dynamic function _createCursorSprite(): Void;
+ private function _createCursorSprite(): Void;
 
  /**
   * Creates the contents sprite and adds it
   * to the client area.
   */
- private dynamic function _createContentsSprite(): Void;
+ private function _createContentsSprite(): Void;
 
  /**
   * Create the arrow sprites for the window.
   * These are the up and down arrows.
   */
- private dynamic function _createArrowSprites(): Void;
+ private function _createArrowSprites(): Void;
 
  /**
   * Creates the pause sign sprites.
   */
- private dynamic function _createPauseSignSprites(): Void;
+ private function _createPauseSignSprites(): Void;
 
  /**
   * @method _onWindowskinLoad
   * @private
   */
- private dynamic function _onWindowskinLoad(): Void;
+ private function _onWindowskinLoad(): Void;
 
  /**
   * @method _refreshAllParts
   * @private
   */
- private dynamic function _refreshAllParts(): Void;
+ private function _refreshAllParts(): Void;
 
  /**
   * @method _refreshBack
   * @private
   */
- private dynamic function _refreshBack(): Void;
+ private function _refreshBack(): Void;
 
  /**
   * @method _refreshFrame
   * @private
   */
- private dynamic function _refreshFrame(): Void;
+ private function _refreshFrame(): Void;
 
  /**
   * @method _refreshCursor
   * @private
   */
- private dynamic function _refreshCursor(): Void;
+ private function _refreshCursor(): Void;
 
  /**
   * @method _refreshContents
   * @private
   */
- private dynamic function _refreshContents(): Void;
+ private function _refreshContents(): Void;
 
  /**
   * @method _refreshArrows
   * @private
   */
- private dynamic function _refreshArrows(): Void;
+ private function _refreshArrows(): Void;
 
  /**
   * @method _refreshPauseSign
   * @private
   */
- private dynamic function _refreshPauseSign(): Void;
+ private function _refreshPauseSign(): Void;
 
  /**
   * @method _updateCursor
   * @private
   */
- private dynamic function _updateCursor(): Void;
+ private function _updateCursor(): Void;
 
  /**
   * @method _updateContents
   * @private
   */
- private dynamic function _updateContents(): Void;
+ private function _updateContents(): Void;
 
  /**
   * @method _updateArrows
   * @private
   */
- private dynamic function _updateArrows(): Void;
+ private function _updateArrows(): Void;
 
  /**
   * @method _updatePauseSign
   * @private
   */
- private dynamic function _updatePauseSign(): Void;
+ private function _updatePauseSign(): Void;
 
  /**
   *
   * Updates the client area.
   */
- private dynamic function _updateClientArea(): Void;
+ private function _updateClientArea(): Void;
 
  /**
   * Updates the contents back.
   */
- private dynamic function _updateContentsBack(): Void;
+ private function _updateContentsBack(): Void;
 
  /**
   * Makes the cursor alpha levels.
   */
- private dynamic function _makeCursorAlpha(): Void;
+ private function _makeCursorAlpha(): Void;
 
  /**
   * Updates the filter area of the client area.
   */
- private dynamic function _updateFilterArea(): Void;
+ private function _updateFilterArea(): Void;
 
  /**
   * Sets the geometry for the rectangles.
@@ -499,6 +498,6 @@ extern class _Window extends Container {
   * @param drect
   * @param m
   */
- private dynamic function _setRectPartsGeometry(sprite: Sprite,
-  srect: Rectangle, drect: Rectangle, m: Float): Void;
+ private function _setRectPartsGeometry(sprite: Sprite, srect: Rectangle,
+  drect: Rectangle, m: Float): Void;
 }

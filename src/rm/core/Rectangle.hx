@@ -20,6 +20,5 @@ extern class Rectangle extends pixi.core.math.shapes.Rectangle {
   * @param {Number} width The width of the rectangle
   * @param {Number} height The height of the rectangle
   */
- public dynamic function new(?x: Float, ?y: Float, ?width: Float,
-  ?height: Float);
+ public function new(?x: Float, ?y: Float, ?width: Float, ?height: Float);
 }

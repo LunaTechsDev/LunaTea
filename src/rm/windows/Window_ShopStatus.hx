@@ -28,34 +28,34 @@ extern class Window_ShopStatus extends Window_Base {
   * @param {number} height
   * @memberof Window_ShopStatus
   */
- public dynamic function new(x: Int, y: Int, width: Int, height: Int);
+ public function new(x: Int, y: Int, width: Int, height: Int);
 
  /**
   * Refreshes the window contents.
   *
   * @memberof Window_ShopStatus
   */
- public dynamic function refresh(): Void;
+ public function refresh(): Void;
 
  /**
   * Sets the item in the window shop status for display.
   */
- public dynamic function setItem(item: BaseItem): Void;
+ public function setItem(item: BaseItem): Void;
 
  /**
   * Returns true if the item in the
   * shop status window is an equippable item.
   */
- public dynamic function isEquipItem(): Bool;
+ public function isEquipItem(): Bool;
 
- public dynamic function drawPossession(x: Int, y: Int): Void;
+ public function drawPossession(x: Int, y: Int): Void;
 
  /**
   * Draw Equip Information.
   */
- public dynamic function drawEquipInfo(x: Int, y: Int): Void;
+ public function drawEquipInfo(x: Int, y: Int): Void;
 
- public dynamic function statusMembers(): Array<Game_Actor>;
+ public function statusMembers(): Array<Game_Actor>;
 
  /**
   * Returns the page size.
@@ -63,7 +63,7 @@ extern class Window_ShopStatus extends Window_Base {
   * @returns {number}
   * @memberof Window_ShopStatus
   */
- public dynamic function pageSize(): Int;
+ public function pageSize(): Int;
 
  /**
   * Returns the max number of pages.
@@ -71,13 +71,12 @@ extern class Window_ShopStatus extends Window_Base {
   * @returns {number}
   * @memberof Window_ShopStatus
   */
- public dynamic function maxPages(): Int;
+ public function maxPages(): Int;
 
- public dynamic function drawActorEquipInfo(x: Int, y: Int,
-  actor: Game_Actor): Void;
+ public function drawActorEquipInfo(x: Int, y: Int, actor: Game_Actor): Void;
 
- public dynamic function drawActorParamChange(x: Int, y: Int,
-  actor: Game_Actor, item1: EquipItem): Void;
+ public function drawActorParamChange(x: Int, y: Int, actor: Game_Actor,
+  item1: EquipItem): Void;
 
  /**
   * Returns the parameter id.
@@ -85,7 +84,7 @@ extern class Window_ShopStatus extends Window_Base {
   * @returns {number}
   * @memberof Window_ShopStatus
   */
- public dynamic function paramId(): ParameterId;
+ public function paramId(): ParameterId;
 
  /**
   * Returns the current item equiped by the given actor when
@@ -95,7 +94,7 @@ extern class Window_ShopStatus extends Window_Base {
   * @returns {RPG.EquipItem}
   * @memberof Window_ShopStatus
   */
- public dynamic function currentEquippedItem(actor: Game_Actor,
+ public function currentEquippedItem(actor: Game_Actor,
   etypeId: EquipTypeId): EquipItem;
 
  /**
@@ -103,7 +102,7 @@ extern class Window_ShopStatus extends Window_Base {
   *
   * @memberof Window_ShopStatus
   */
- public dynamic function updatePage(): Void;
+ public function updatePage(): Void;
 
  /**
   * Determines if page can be changed.
@@ -111,9 +110,9 @@ extern class Window_ShopStatus extends Window_Base {
   * @returns {boolean}
   * @memberof Window_ShopStatus
   */
- public dynamic function isPageChangeEnabled(): Bool;
+ public function isPageChangeEnabled(): Bool;
 
- public dynamic function isPageChangeRequested(): Bool;
+ public function isPageChangeRequested(): Bool;
 
  /**
   * Determines if the window is touched within it's frame.
@@ -121,12 +120,12 @@ extern class Window_ShopStatus extends Window_Base {
   * @returns {boolean}
   * @memberof Window_ShopStatus
   */
- public dynamic function isTouchedInsideFrame(): Bool;
+ public function isTouchedInsideFrame(): Bool;
 
  /**
   * Changes the current page.
   *
   * @memberof Window_ShopStatus
   */
- public dynamic function changePage(): Void;
+ public function changePage(): Void;
 }

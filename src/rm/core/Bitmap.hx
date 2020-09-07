@@ -19,7 +19,7 @@ extern class Bitmap {
   * @param {String} url The image url of the texture
   * @return Bitmap
   */
- public static dynamic function load(url: String): Bitmap;
+ public static function load(url: String): Bitmap;
 
  /**
   * Takes a snapshot of the game screen and returns a new bitmap object.
@@ -29,7 +29,7 @@ extern class Bitmap {
   * @param {Stage} stage The stage object
   * @return Bitmap
   */
- public static dynamic function snap(stage: Stage): Bitmap;
+ public static function snap(stage: Stage): Bitmap;
 
  /**
   * The face name of the font.
@@ -165,7 +165,7 @@ extern class Bitmap {
   * @param {Int} width The width of the bitmap
   * @param {Int} height The height of the bitmap
   */
- public dynamic function new(?width: Int, ?height: Int);
+ public function new(?width: Int, ?height: Int);
 
  /**
   * Checks whether the bitmap is ready to render.
@@ -173,7 +173,7 @@ extern class Bitmap {
   * @method isReady
   * @return {Boolean} True if the bitmap is ready to render
   */
- public dynamic function isReady(): Bool;
+ public function isReady(): Bool;
 
  /**
   * Checks whether a loading error has occurred.
@@ -181,7 +181,7 @@ extern class Bitmap {
   * @method isError
   * @return {Boolean} True if a loading error has occurred
   */
- public dynamic function isError(): Bool;
+ public function isError(): Bool;
 
  /**
   * Resizes the bitmap.
@@ -190,7 +190,7 @@ extern class Bitmap {
   * @param {Number} width The new width of the bitmap
   * @param {Number} height The new height of the bitmap
   */
- public dynamic function resize(width: Int, height: Int): Void;
+ public function resize(width: Int, height: Int): Void;
 
  /**
   * Performs a block transfer.
@@ -206,8 +206,8 @@ extern class Bitmap {
   * @param {Number} [dw=sw] The width to draw the image in the destination
   * @param {Number} [dh=sh] The height to draw the image in the destination
   */
- public dynamic function blt(source: Bitmap, sx: Int, sy: Int, sw: Int,
-  sh: Int, dx: Int, dy: Int, ?dw: Int, ?dh: Int): Void;
+ public function blt(source: Bitmap, sx: Int, sy: Int, sw: Int, sh: Int,
+  dx: Int, dy: Int, ?dw: Int, ?dh: Int): Void;
 
  /**
   * Returns pixel color at the specified point.
@@ -217,7 +217,7 @@ extern class Bitmap {
   * @param {Number} y The y coordinate of the pixel in the bitmap
   * @return {String} The pixel color (hex format)
   */
- public dynamic function getPixel(x: Int, y: Int): String;
+ public function getPixel(x: Int, y: Int): String;
 
  /**
   * Returns alpha pixel value at the specified point.
@@ -227,7 +227,7 @@ extern class Bitmap {
   * @param {Number} y The y coordinate of the pixel in the bitmap
   * @return {String} The alpha value
   */
- public dynamic function getAlphaPixel(x: Int, y: Int): String;
+ public function getAlphaPixel(x: Int, y: Int): String;
 
  /**
   * Clears the specified rectangle.
@@ -238,15 +238,14 @@ extern class Bitmap {
   * @param {Number} width The width of the rectangle to clear
   * @param {Number} height The height of the rectangle to clear
   */
- public dynamic function clearRect(x: Int, y: Int, width: Int,
-  height: Int): Void;
+ public function clearRect(x: Int, y: Int, width: Int, height: Int): Void;
 
  /**
   * Clears the entire bitmap.
   *
   * @method clear
   */
- public dynamic function clear(): Void;
+ public function clear(): Void;
 
  /**
   * Fills the specified rectangle.
@@ -258,7 +257,7 @@ extern class Bitmap {
   * @param {Number} height The height of the rectangle to clear
   * @param {String} color The color of the rectangle in CSS format
   */
- public dynamic function fillRect(x: Int, y: Int, width: Int, height: Int,
+ public function fillRect(x: Int, y: Int, width: Int, height: Int,
   color: String): Void;
 
  /**
@@ -267,7 +266,7 @@ extern class Bitmap {
   * @method fillAll
   * @param {String} color The color of the rectangle in CSS format
   */
- public dynamic function fillAll(color: String): Void;
+ public function fillAll(color: String): Void;
 
  /**
   * Draws the rectangle with a gradation.
@@ -281,8 +280,8 @@ extern class Bitmap {
   * @param {String} color2 The end color of the gradation
   * @param {Boolean} vertical Whether it draws a vertical gradient
   */
- public dynamic function gradientFillRect(x: Int, y: Int, width: Int,
-  height: Int, color1: String, color2: String, ?vertical: Bool): Void;
+ public function gradientFillRect(x: Int, y: Int, width: Int, height: Int,
+  color1: String, color2: String, ?vertical: Bool): Void;
 
  /**
   * Draw the filled circle.
@@ -293,7 +292,7 @@ extern class Bitmap {
   * @param {Number} radius The radius of the circle
   * @param {String} color The color of the circle in CSS format
   */
- public dynamic function drawCircle(x: Float, y: Float, radius: Float,
+ public function drawCircle(x: Float, y: Float, radius: Float,
   color: String): Void;
 
  /**
@@ -307,7 +306,7 @@ extern class Bitmap {
   * @param {Number} lineHeight The height of the text line
   * @param {String} align The alignment of the text
   */
- public dynamic function drawText(text: String, x: Int, y: Int, maxWidth: Int,
+ public function drawText(text: String, x: Int, y: Int, maxWidth: Int,
   lineHeight: Int, ?align: String): Void;
 
  /**
@@ -317,7 +316,7 @@ extern class Bitmap {
   * @param {String} text The text to be measured
   * @return {Number} The width of the text in pixels
   */
- public dynamic function measureTextWidth(text: String): Int;
+ public function measureTextWidth(text: String): Int;
 
  /**
   * Changes the color tone of the entire bitmap.
@@ -327,7 +326,7 @@ extern class Bitmap {
   * @param {Number} g The green strength in the range (-255, 255)
   * @param {Number} b The blue strength in the range (-255, 255)
   */
- public dynamic function adjustTone(r: Int, g: Int, b: Int): Void;
+ public function adjustTone(r: Int, g: Int, b: Int): Void;
 
  /**
   * Rotates the hue of the entire bitmap.
@@ -335,29 +334,28 @@ extern class Bitmap {
   * @method rotateHue
   * @param {Number} offset The hue offset in 360 degrees
   */
- public dynamic function rotateHue(offset: Float): Void;
+ public function rotateHue(offset: Float): Void;
 
  /**
   * Applies a blur effect to the bitmap.
   *
   * @method blur
   */
- public dynamic function blur(): Void;
+ public function blur(): Void;
 
  /**
-  * Add a callback dynamic function that will be called when the bitmap is loaded.
+  * Add a callback function that will be called when the bitmap is loaded.
   *
   * @method addLoadListener
-  * @param {Function} listner The callback dynamic function
+  * @param {Function} listner The callback function
   */
- public dynamic function addLoadListener(listner: (bitmap: Bitmap) ->
-  Void): Void;
+ public function addLoadListener(listner: (bitmap: Bitmap) -> Void): Void;
 
  /**
   * touch the resource
   * @method touch
   */
- public dynamic function touch(): Void;
+ public function touch(): Void;
 
  /**
   * Performs a block transfer, using assumption that original image was not modified (no hue)
@@ -373,8 +371,8 @@ extern class Bitmap {
   * @param {Int} [dw=sw] The width to draw the image in the destination
   * @param {Int} [dh=sh] The height to draw the image in the destination
   */
- public dynamic function bltImage(source: Bitmap, sx: Int, sy: Int, sw: Int,
-  sh: Int, dx: Int, dy: Int, ?dw: Int, ?dh: Int): Void;
+ public function bltImage(source: Bitmap, sx: Int, sy: Int, sw: Int, sh: Int,
+  dx: Int, dy: Int, ?dw: Int, ?dh: Int): Void;
 
  private var _canvas: CanvasElement;
  private var _context: CanvasRenderingContext2D;
@@ -392,7 +390,7 @@ extern class Bitmap {
   * @return {String} FontNameText
   * @private
   */
- private dynamic function _makeFontNameText(): String;
+ private function _makeFontNameText(): String;
 
  /**
   * @method _drawTextOutline
@@ -402,7 +400,7 @@ extern class Bitmap {
   * @param {Number} maxWidth
   * @private
   */
- private dynamic function _drawTextOutline(text: String, tx: Int, ty: Int,
+ private function _drawTextOutline(text: String, tx: Int, ty: Int,
   maxWidth: Int): Void;
 
  /**
@@ -413,30 +411,30 @@ extern class Bitmap {
   * @param {Number} maxWidth
   * @private
   */
- private dynamic function _drawTextBody(text: String, tx: Int, ty: Int,
+ private function _drawTextBody(text: String, tx: Int, ty: Int,
   maxWidth: Int): Void;
 
  /**
   * @method _onLoad
   * @private
   */
- private dynamic function _onLoad(): Void;
+ private function _onLoad(): Void;
 
  /**
   * @method _callLoadListeners
   * @private
   */
- private dynamic function _callLoadListeners(): Void;
+ private function _callLoadListeners(): Void;
 
  /**
   * @method _onError
   * @private
   */
- private dynamic function _onError(): Void;
+ private function _onError(): Void;
 
  /**
   * @method _setDirty
   * @private
   */
- private dynamic function _setDirty(): Void;
+ private function _setDirty(): Void;
 }

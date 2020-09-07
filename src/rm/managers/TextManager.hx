@@ -94,9 +94,9 @@ extern class TextManager {
  public static var debuffAdd: String;
  public static var buffRemove: String;
  public static var actionFailure: String;
- public static dynamic function basic(basicId: Int): String;
- public static dynamic function param(paramId: Int): String;
- public static dynamic function command(commandId: Int): String;
- public static dynamic function message(messageId: String): String;
- public static dynamic function getter(method: String, param: Int): String;
+ public static function basic(basicId: Int): String;
+ public static function param(paramId: Int): String;
+ public static function command(commandId: Int): String;
+ public static function message(messageId: String): String;
+ public static function getter(method: String, param: Int): String;
 }

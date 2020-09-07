@@ -12,9 +12,9 @@ extern class Scene_Skill extends Scene_ItemBase {
  private var _skillTypeWindow: Window_SkillType;
 
  #if !compileMV
- public dynamic function skillTypeWindowRect(): Rectangle;
- public dynamic function statusWindowRect(): Rectangle;
- public dynamic function itemWindowRect(): Rectangle;
+ public function skillTypeWindowRect(): Rectangle;
+ public function statusWindowRect(): Rectangle;
+ public function itemWindowRect(): Rectangle;
  #end
 
  /**
@@ -22,52 +22,52 @@ extern class Scene_Skill extends Scene_ItemBase {
   * within the skill scene.
   * @memberof Scene_Skill
   */
- public dynamic function createSkillTypeWindow(): Void;
+ public function createSkillTypeWindow(): Void;
 
  /**
   * Creates the status window within
   * the skill scene.
   * @memberof Scene_Skill
   */
- public dynamic function createStatusWindow(): Void;
+ public function createStatusWindow(): Void;
 
  /**
   * Creates the item window
   * within the skill scene.
   * @memberof Scene_Skill
   */
- public dynamic function createItemWindow(): Void;
+ public function createItemWindow(): Void;
 
  /**
   * Refreshes the current actor displayed in the Skill
   * window with updated information on changes.
   */
- public dynamic function refreshActor(): Void;
+ public function refreshActor(): Void;
 
  /**
   * Handler for when a skill is
   * selected/confirmed within the skill scene.
   * @memberof Scene_Skill
   */
- public dynamic function commandSkill(): Void;
+ public function commandSkill(): Void;
 
  /**
   * Function to run when selection is cancelled
   * on the skill scene.
   */
- public dynamic function onItemCancel(): Void;
+ public function onItemCancel(): Void;
 
  /**
   * Plays a sound effect on item
   * confirmation withiin the skill scene.
   * @memberof Scene_Skill
   */
- public dynamic function playSeForItem(): Void;
+ public function playSeForItem(): Void;
 
  /**
   * Handler for when an an actor is
   * changed within the skill scene.
   * @memberof Scene_Skill
   */
- public dynamic function onActorChange(): Void;
+ public function onActorChange(): Void;
 }

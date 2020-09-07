@@ -12,8 +12,8 @@ package rm.windows;
 extern class Window_TitleCommand extends Window_Command {
  private static var _lastCommandSymbol: String;
 
- public dynamic function updatePlacement(): Void;
- public dynamic function isContinueEnabled(): Bool;
- public dynamic function initCommandPosition(): Void;
- public dynamic function selectLast(): Void;
+ public function updatePlacement(): Void;
+ public function isContinueEnabled(): Bool;
+ public function initCommandPosition(): Void;
+ public function selectLast(): Void;
 }

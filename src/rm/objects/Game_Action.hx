@@ -45,206 +45,197 @@ extern class Game_Action {
  public var __item: Game_Item;
  private var _item: Game_Item;
 
- public dynamic function new(subject: Game_Battler, forcing: Bool): Void;
- public dynamic function clear(): Void;
- public dynamic function setSubject(subject: Game_Battler): Void;
- public dynamic function subject(): Game_Battler;
- public dynamic function friendsUnit(): Game_Unit;
- public dynamic function opponentsUnit(): Game_Unit;
+ public function new(subject: Game_Battler, forcing: Bool): Void;
+ public function clear(): Void;
+ public function setSubject(subject: Game_Battler): Void;
+ public function subject(): Game_Battler;
+ public function friendsUnit(): Game_Unit;
+ public function opponentsUnit(): Game_Unit;
 
- public dynamic function setEnemyAction(action: EnemyAction): Void;
+ public function setEnemyAction(action: EnemyAction): Void;
 
- public dynamic function setAttack(): Void;
+ public function setAttack(): Void;
 
- public dynamic function setGuard(): Void;
+ public function setGuard(): Void;
 
- public dynamic function setSkill(skillId: Int): Void;
+ public function setSkill(skillId: Int): Void;
 
- public dynamic function setItem(itemId: Int): Void;
+ public function setItem(itemId: Int): Void;
 
- public dynamic function setItemObject(object: UsableItem): Void;
+ public function setItemObject(object: UsableItem): Void;
 
- public dynamic function setTarget(targetIndex: Int): Void;
+ public function setTarget(targetIndex: Int): Void;
 
- public dynamic function item(): UsableItem;
+ public function item(): UsableItem;
 
- public dynamic function isSkill(): Bool;
+ public function isSkill(): Bool;
 
- public dynamic function isItem(): Bool;
+ public function isItem(): Bool;
 
- public dynamic function numRepeats(): Int;
+ public function numRepeats(): Int;
 
- public dynamic function checkItemScope(list: Array<Int>): Bool;
+ public function checkItemScope(list: Array<Int>): Bool;
 
- public dynamic function isForOpponent(): Bool;
+ public function isForOpponent(): Bool;
 
- public dynamic function isForFriend(): Bool;
+ public function isForFriend(): Bool;
 
- public dynamic function isForDeadFriend(): Bool;
+ public function isForDeadFriend(): Bool;
 
- public dynamic function isForUser(): Bool;
+ public function isForUser(): Bool;
 
- public dynamic function isForOne(): Bool;
+ public function isForOne(): Bool;
 
- public dynamic function isForRandom(): Bool;
+ public function isForRandom(): Bool;
 
- public dynamic function isForAll(): Bool;
+ public function isForAll(): Bool;
 
- public dynamic function needsSelection(): Int;
+ public function needsSelection(): Int;
 
- public dynamic function numTargets(): Int;
+ public function numTargets(): Int;
 
- public dynamic function checkDamageType(list: Array<Int>): Bool;
+ public function checkDamageType(list: Array<Int>): Bool;
 
- public dynamic function isHpEffect(): Bool;
+ public function isHpEffect(): Bool;
 
- public dynamic function isMpEffect(): Bool;
+ public function isMpEffect(): Bool;
 
- public dynamic function isDamage(): Bool;
+ public function isDamage(): Bool;
 
- public dynamic function isRecover(): Bool;
+ public function isRecover(): Bool;
 
- public dynamic function isDrain(): Bool;
+ public function isDrain(): Bool;
 
- public dynamic function isHpRecover(): Bool;
+ public function isHpRecover(): Bool;
 
- public dynamic function isMpRecover(): Bool;
+ public function isMpRecover(): Bool;
 
- public dynamic function isCertainHit(): Bool;
+ public function isCertainHit(): Bool;
 
- public dynamic function isPhysical(): Bool;
+ public function isPhysical(): Bool;
 
- public dynamic function isMagical(): Bool;
+ public function isMagical(): Bool;
 
- public dynamic function isAttack(): Bool;
- public dynamic function isGuard(): Bool;
+ public function isAttack(): Bool;
+ public function isGuard(): Bool;
 
- public dynamic function isMagicSkill(): Bool;
+ public function isMagicSkill(): Bool;
 
- public dynamic function decideRandomTarget(): Void;
+ public function decideRandomTarget(): Void;
 
- public dynamic function setConfusion(): Void;
+ public function setConfusion(): Void;
 
- public dynamic function prepare(): Void;
+ public function prepare(): Void;
 
- public dynamic function isValid(): Bool;
+ public function isValid(): Bool;
 
- public dynamic function speed(): Float;
+ public function speed(): Float;
 
- public dynamic function makeTargets(): Array<Game_Battler>;
+ public function makeTargets(): Array<Game_Battler>;
 
- public dynamic function repeatTargets(targets: Array<Game_Battler>): Array<Game_Battler>;
+ public function repeatTargets(targets: Array<Game_Battler>): Array<Game_Battler>;
 
- public dynamic function confusionTarget(): Game_Battler;
+ public function confusionTarget(): Game_Battler;
 
- public dynamic function targetsForOpponents(): Array<Game_Battler>;
+ public function targetsForOpponents(): Array<Game_Battler>;
 
- public dynamic function targetsForFriends(): Array<Game_Battler>;
+ public function targetsForFriends(): Array<Game_Battler>;
 
- public dynamic function evaluate(): Float;
+ public function evaluate(): Float;
 
- public dynamic function itemTargetCandidates(): Array<Game_Battler>;
+ public function itemTargetCandidates(): Array<Game_Battler>;
 
- public dynamic function evaluateWithTarget(target: Game_Battler): Float;
+ public function evaluateWithTarget(target: Game_Battler): Float;
 
- public dynamic function testApply(target: Game_Battler): Bool;
+ public function testApply(target: Game_Battler): Bool;
 
- public dynamic function hasItemAnyValidEffects(target: Game_Battler): Bool;
+ public function hasItemAnyValidEffects(target: Game_Battler): Bool;
 
- public dynamic function testItemEffect(target: Game_Battler,
-  effect: Effect): Bool;
+ public function testItemEffect(target: Game_Battler, effect: Effect): Bool;
 
- public dynamic function itemCnt(target: Game_Battler): Float;
+ public function itemCnt(target: Game_Battler): Float;
 
- public dynamic function itemMrf(target: Game_Battler): Float;
+ public function itemMrf(target: Game_Battler): Float;
 
- public dynamic function itemHit(target: Game_Battler): Float;
+ public function itemHit(target: Game_Battler): Float;
 
- public dynamic function itemEva(target: Game_Battler): Float;
+ public function itemEva(target: Game_Battler): Float;
 
- public dynamic function itemCri(target: Game_Battler): Float;
+ public function itemCri(target: Game_Battler): Float;
 
- public dynamic function apply(target: Game_Battler): Void;
+ public function apply(target: Game_Battler): Void;
 
- public dynamic function makeDamageValue(target: Game_Battler,
-  critical: Bool): Float;
+ public function makeDamageValue(target: Game_Battler, critical: Bool): Float;
 
- public dynamic function evalDamageFormula(target: Game_Battler): Float;
+ public function evalDamageFormula(target: Game_Battler): Float;
 
- public dynamic function calcElementRate(target: Game_Battler): Float;
+ public function calcElementRate(target: Game_Battler): Float;
 
- public dynamic function elementsMaxRate(target: Game_Battler,
+ public function elementsMaxRate(target: Game_Battler,
   elements: Array<Int>): Float;
 
- public dynamic function applyCritical(damage: Int): Float;
+ public function applyCritical(damage: Int): Float;
 
- public dynamic function applyVariance(damage: Int, variance: Float): Float;
+ public function applyVariance(damage: Int, variance: Float): Float;
 
- public dynamic function applyGuard(damage: Int, target: Game_Battler): Float;
+ public function applyGuard(damage: Int, target: Game_Battler): Float;
 
- public dynamic function executeDamage(target: Game_Battler, value: Int): Void;
+ public function executeDamage(target: Game_Battler, value: Int): Void;
 
- public dynamic function executeHpDamage(target: Game_Battler,
-  value: Int): Void;
+ public function executeHpDamage(target: Game_Battler, value: Int): Void;
 
- public dynamic function executeMpDamage(target: Game_Battler,
-  value: Int): Void;
+ public function executeMpDamage(target: Game_Battler, value: Int): Void;
 
- public dynamic function gainDrainedHp(value: Int): Void;
+ public function gainDrainedHp(value: Int): Void;
 
- public dynamic function gainDrainedMp(value: Int): Void;
- public dynamic function applyItemEffect(target: Game_Battler,
+ public function gainDrainedMp(value: Int): Void;
+ public function applyItemEffect(target: Game_Battler, effect: Effect): Void;
+
+ public function itemEffectRecoverHp(target: Game_Battler,
   effect: Effect): Void;
 
- public dynamic function itemEffectRecoverHp(target: Game_Battler,
+ public function itemEffectRecoverMp(target: Game_Battler,
   effect: Effect): Void;
 
- public dynamic function itemEffectRecoverMp(target: Game_Battler,
+ public function itemEffectGainTp(target: Game_Battler, effect: Effect): Void;
+
+ public function itemEffectAddState(target: Game_Battler,
   effect: Effect): Void;
 
- public dynamic function itemEffectGainTp(target: Game_Battler,
+ public function itemEffectAddAttackState(target: Game_Battler,
   effect: Effect): Void;
 
- public dynamic function itemEffectAddState(target: Game_Battler,
+ public function itemEffectAddNormalState(target: Game_Battler,
   effect: Effect): Void;
 
- public dynamic function itemEffectAddAttackState(target: Game_Battler,
+ public function itemEffectRemoveState(target: Game_Battler,
   effect: Effect): Void;
 
- public dynamic function itemEffectAddNormalState(target: Game_Battler,
+ public function itemEffectAddBuff(target: Game_Battler, effect: Effect): Void;
+
+ public function itemEffectAddDebuff(target: Game_Battler,
   effect: Effect): Void;
 
- public dynamic function itemEffectRemoveState(target: Game_Battler,
+ public function itemEffectRemoveBuff(target: Game_Battler,
   effect: Effect): Void;
 
- public dynamic function itemEffectAddBuff(target: Game_Battler,
+ public function itemEffectRemoveDebuff(target: Game_Battler,
   effect: Effect): Void;
 
- public dynamic function itemEffectAddDebuff(target: Game_Battler,
+ public function itemEffectSpecial(target: Game_Battler, effect: Effect): Void;
+
+ public function itemEffectGrow(target: Game_Battler, effect: Effect): Void;
+
+ public function itemEffectLearnSkill(target: Game_Battler,
   effect: Effect): Void;
 
- public dynamic function itemEffectRemoveBuff(target: Game_Battler,
+ public function itemEffectCommonEvent(target: Game_Battler,
   effect: Effect): Void;
 
- public dynamic function itemEffectRemoveDebuff(target: Game_Battler,
-  effect: Effect): Void;
+ public function makeSuccess(target: Game_Battler): Void;
 
- public dynamic function itemEffectSpecial(target: Game_Battler,
-  effect: Effect): Void;
+ public function applyItemUserEffect(target: Game_Battler): Void;
 
- public dynamic function itemEffectGrow(target: Game_Battler,
-  effect: Effect): Void;
-
- public dynamic function itemEffectLearnSkill(target: Game_Battler,
-  effect: Effect): Void;
-
- public dynamic function itemEffectCommonEvent(target: Game_Battler,
-  effect: Effect): Void;
-
- public dynamic function makeSuccess(target: Game_Battler): Void;
-
- public dynamic function applyItemUserEffect(target: Game_Battler): Void;
-
- public dynamic function lukEffectRate(target: Game_Battler): Float;
- public dynamic function applyGlobal(): Void;
+ public function lukEffectRate(target: Game_Battler): Float;
+ public function applyGlobal(): Void;
 }

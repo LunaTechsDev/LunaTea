@@ -15,11 +15,11 @@ extern class Window_DebugRange extends Window_Selectable {
 
  private var _editWindow: Window_DebugEdit;
 
- public dynamic function new(x: Int, y: Int);
+ public function new(x: Int, y: Int);
 
- public dynamic function windowWidth(): Int;
- public dynamic function windowHeight(): Int;
- public dynamic function mode(): String;
- public dynamic function topId(): Int;
- public dynamic function setEditWindow(editWindow: Window_DebugEdit): Void;
+ public function windowWidth(): Int;
+ public function windowHeight(): Int;
+ public function mode(): String;
+ public function topId(): Int;
+ public function setEditWindow(editWindow: Window_DebugEdit): Void;
 }

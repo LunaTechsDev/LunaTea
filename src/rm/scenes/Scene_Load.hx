@@ -14,7 +14,7 @@ extern class Scene_Load extends Scene_File {
   * @returns {string}
   * @memberof Scene_Load
   */
- public dynamic function mode(): String;
+ public function mode(): String;
 
  /**
   * Returns the help window text on the
@@ -22,15 +22,15 @@ extern class Scene_Load extends Scene_File {
   * @returns {string}
   * @memberof Scene_Load
   */
- public dynamic function helpWindowText(): String;
+ public function helpWindowText(): String;
 
  #if !compileMV
- public dynamic function executeLoad(saveFileId: Int): Void;
+ public function executeLoad(saveFileId: Int): Void;
  #end
 
- public dynamic function firstSavefileIndex(): Int;
- public dynamic function onSavefileOk(): Void;
- public dynamic function onLoadSuccess(): Void;
- public dynamic function onLoadFailure(): Void;
- public dynamic function reloadMapIfUpdated(): Void;
+ public function firstSavefileIndex(): Int;
+ public function onSavefileOk(): Void;
+ public function onLoadSuccess(): Void;
+ public function onLoadFailure(): Void;
+ public function reloadMapIfUpdated(): Void;
 }

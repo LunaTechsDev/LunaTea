@@ -20,9 +20,9 @@ extern class Game_Followers {
  public var __data: Array<Game_Follower>;
  private var _data: Array<Game_Follower>;
 
- public dynamic function new(): Void;
+ public function new(): Void;
 
- public dynamic function initialize(): Void;
+ public function initialize(): Void;
 
  /**
   * Returns true if the followers are visible.
@@ -30,21 +30,21 @@ extern class Game_Followers {
   * @returns {Bool}
   * @memberof Game_Followers
   */
- public dynamic function isVisible(): Bool;
+ public function isVisible(): Bool;
 
  /**
   * Shows  the followers.
   *
   * @memberof Game_Followers
   */
- public dynamic function show(): Void;
+ public function show(): Void;
 
  /**
   * Hides the followers.
   *
   * @memberof Game_Followers
   */
- public dynamic function hide(): Void;
+ public function hide(): Void;
 
  /**
   * Returns the followers at the specified index.
@@ -53,42 +53,41 @@ extern class Game_Followers {
   * @returns {Game_Follower}
   * @memberof Game_Followers
   */
- public dynamic function follower(index: Int): Game_Follower;
+ public function follower(index: Int): Game_Follower;
 
- public dynamic function forEach(callback: () -> Void, thisObject: Any): Void;
- public dynamic function reverseEach(callback: () -> Void,
-  thisObject: Any): Void;
+ public function forEach(callback: () -> Void, thisObject: Any): Void;
+ public function reverseEach(callback: () -> Void, thisObject: Any): Void;
 
  /**
   * Refreshes the game followers.
   *
   * @memberof Game_Followers
   */
- public dynamic function refresh(): Void;
+ public function refresh(): Void;
 
  /**
   * Updates the game followers.
   *
   * @memberof Game_Followers
   */
- public dynamic function update(): Void;
+ public function update(): Void;
 
  /**
   * Updates the movement of game followers.
   *
   * @memberof Game_Followers
   */
- public dynamic function updateMove(): Void;
+ public function updateMove(): Void;
 
- public dynamic function jumpAll(): Void;
- public dynamic function synchronize(x: Int, y: Int, d: Int): Void;
+ public function jumpAll(): Void;
+ public function synchronize(x: Int, y: Int, d: Int): Void;
 
  /**
   * Gathers the followers.
   *
   * @memberof Game_Followers
   */
- public dynamic function gather(): Void;
+ public function gather(): Void;
 
  /**
   * Returns true if the followers are gathering.
@@ -96,7 +95,7 @@ extern class Game_Followers {
   * @returns {Bool}
   * @memberof Game_Followers
   */
- public dynamic function areGathering(): Bool;
+ public function areGathering(): Bool;
 
  /**
   * Returns the visible followers.
@@ -104,7 +103,7 @@ extern class Game_Followers {
   * @returns {Array<Game_Follower>}
   * @memberof Game_Followers
   */
- public dynamic function visibleFollowers(): Array<Game_Follower>;
+ public function visibleFollowers(): Array<Game_Follower>;
 
  /**
   * Returns true if the followers are moving.
@@ -112,7 +111,7 @@ extern class Game_Followers {
   * @returns {Bool}
   * @memberof Game_Followers
   */
- public dynamic function areMoving(): Bool;
+ public function areMoving(): Bool;
 
  /**
   * Returns true if the followers are gathered.
@@ -120,7 +119,7 @@ extern class Game_Followers {
   * @returns {Bool}
   * @memberof Game_Followers
   */
- public dynamic function areGathered(): Bool;
+ public function areGathered(): Bool;
 
  /**
   * Returns true if the specified follower is collided at the specified x and y
@@ -131,5 +130,5 @@ extern class Game_Followers {
   * @returns {Bool}
   * @memberof Game_Followers
   */
- public dynamic function isSomeoneCollided(x: Int, y: Int): Bool;
+ public function isSomeoneCollided(x: Int, y: Int): Bool;
 }

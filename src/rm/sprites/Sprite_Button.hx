@@ -31,7 +31,7 @@ extern class Sprite_Button extends Sprite {
   *
   * @memberof Sprite_Button
   */
- public dynamic function updateFrame(): Void;
+ public function updateFrame(): Void;
 
  /**
   * Set the button sprites cold frame.
@@ -44,8 +44,7 @@ extern class Sprite_Button extends Sprite {
   * @memberof Sprite_Button
   *
   */
- public dynamic function setColdFrame(x: Int, y: Int, width: Int,
-  height: Int): Void;
+ public function setColdFrame(x: Int, y: Int, width: Int, height: Int): Void;
 
  /**
   * Set the button sprites hot frame
@@ -58,45 +57,44 @@ extern class Sprite_Button extends Sprite {
   * @memberof Sprite_Button
   *
   */
- public dynamic function setHotFrame(x: Int, y: Int, width: Int,
-  height: Int): Void;
+ public function setHotFrame(x: Int, y: Int, width: Int, height: Int): Void;
 
  /**
   * Creates a new handler and binds it to the button.
   *
-  * @param {dynamic function} height
+  * @param {function} height
   * @memberof Sprite_Button
   */
- public dynamic function setClickHandler(method: () -> Void): Void;
+ public function setClickHandler(method: () -> Void): Void;
 
  /**
   * Calls the handler method bound to the button.
   *
-  * @param {dynamic function} height
+  * @param {function} height
   * @memberof Sprite_Button
   */
- public dynamic function callClickHandler(): Void;
+ public function callClickHandler(): Void;
 
  /**
   * Processes weather or not the button is being touched and calls the handler
   * bound to the button.
   * @memberof Sprite_Button
   */
- public dynamic function processTouch(): Void;
+ public function processTouch(): Void;
 
  /**
   * Returns true if the sprite button is currently active.
   * @returns {Bool}
   * @memberof Sprite_Button
   */
- public dynamic function isActive(): Bool;
+ public function isActive(): Bool;
 
  /**
   * Returns true is the button is presently being touched.
   * @returns {Bool}
   * @memberof Sprite_Button
   */
- public dynamic function isButtonTouched(): Bool;
+ public function isButtonTouched(): Bool;
 
  /**
   * Changes the x coordinate of the screen to local sprite x coordinate.
@@ -104,7 +102,7 @@ extern class Sprite_Button extends Sprite {
   * @returns {Int}
   * @memberof Sprite_Button
   */
- public dynamic function canvasToLocalX(x: Int): Int;
+ public function canvasToLocalX(x: Int): Int;
 
  /**
   * Changes the y coordinate of the screen
@@ -113,5 +111,5 @@ extern class Sprite_Button extends Sprite {
   * @returns {Int}
   * @memberof Sprite_Button
   */
- public dynamic function canvasToLocalY(y: Int): Int;
+ public function canvasToLocalY(y: Int): Int;
 }

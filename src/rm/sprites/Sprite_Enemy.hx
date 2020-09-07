@@ -36,11 +36,11 @@ extern class Sprite_Enemy extends Sprite_Battler {
  public var __stateIconSprite: Sprite_StateIcon;
  private var _stateIconSprite: Sprite_StateIcon;
 
- public dynamic function new(battler: Game_Enemy): Void;
+ public function new(battler: Game_Enemy): Void;
 
- public dynamic function initialize(battler: Game_Enemy): Void;
+ public function initialize(battler: Game_Enemy): Void;
 
- public dynamic function createStateIconSprite(): Void;
+ public function createStateIconSprite(): Void;
 
  /**
   * Sets the battler to an instance of game enemy.
@@ -48,73 +48,73 @@ extern class Sprite_Enemy extends Sprite_Battler {
   * @param {Game_Enemy} battler Instance of game enemy.
   * @memberof Sprite_Enemy
   */
- public dynamic function setBattler(battler: Game_Enemy): Void;
+ public function setBattler(battler: Game_Enemy): Void;
 
- public dynamic function loadBitmap(name: String, hue: Int): Void;
+ public function loadBitmap(name: String, hue: Int): Void;
 
  /**
   * Updates the state sprite on the sprite enemy.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function updateStateSprite(): Void;
+ public function updateStateSprite(): Void;
 
- public dynamic function initVisibility(): Void;
+ public function initVisibility(): Void;
 
- public dynamic function setupEffect(): Void;
+ public function setupEffect(): Void;
 
- public dynamic function startEffect(effectType: String): Void;
+ public function startEffect(effectType: String): Void;
 
  /**
   * Starts the appearinig effect on the sprite enemy.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function startAppear(): Void;
+ public function startAppear(): Void;
 
  /**
   * Starts the disappearing effect on the sprite enemy.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function startDisappear(): Void;
+ public function startDisappear(): Void;
 
  /**
   * Starts the whiten effect on the sprite enemy.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function startWhiten(): Void;
+ public function startWhiten(): Void;
 
  /**
   * Starts the blink effect on the sprite enemy.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function startBlink(): Void;
+ public function startBlink(): Void;
 
  /**
   * Starts the collapse effect of the sprite
   * enemy.
   * @memberof Sprite_Enemy
   */
- public dynamic function startCollapse(): Void;
+ public function startCollapse(): Void;
 
  /**
   * Starts the boss collapse effect of the sprite
   * enemy.
   * @memberof Sprite_Enemy
   */
- public dynamic function startBossCollapse(): Void;
+ public function startBossCollapse(): Void;
 
  /**
   * Starts the instant collapse effect of the sprite enemy.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function startInstantCollapse(): Void;
+ public function startInstantCollapse(): Void;
 
- public dynamic function updateEffect(): Void;
+ public function updateEffect(): Void;
 
  /**
   * Returns true if the effect type on the sprite enemy
@@ -122,59 +122,59 @@ extern class Sprite_Enemy extends Sprite_Battler {
   * @returns {Bool}
   * @memberof Sprite_Enemy
   */
- public dynamic function isEffecting(): Bool;
+ public function isEffecting(): Bool;
 
  /**
   * Revers the sprite enemy to a normal state.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function revertToNormal(): Void;
+ public function revertToNormal(): Void;
 
  /**
   * Updates the whiten effect on the sprite enemy.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function updateWhiten(): Void;
+ public function updateWhiten(): Void;
 
  /**
   * Updates the blink effect on the sprite enemy.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function updateBlink(): Void;
+ public function updateBlink(): Void;
 
  /**
   * Updates the appear effect on the sprite enemy.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function updateAppear(): Void;
+ public function updateAppear(): Void;
 
- public dynamic function updateDisappear(): Void;
+ public function updateDisappear(): Void;
 
  /**
   * Updates the collapse effect.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function updateCollapse(): Void;
+ public function updateCollapse(): Void;
 
  /**
   * Updates the boss collapse effect.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function updateBossCollapse(): Void;
+ public function updateBossCollapse(): Void;
 
  /**
   * Updates the instant collapse effect.
   *
   * @memberof Sprite_Enemy
   */
- public dynamic function updateInstantCollapse(): Void;
+ public function updateInstantCollapse(): Void;
 
- public dynamic function damageOffsetX(): Int;
- public dynamic function damageOffsetY(): Int;
+ public function damageOffsetX(): Int;
+ public function damageOffsetY(): Int;
 }

@@ -24,14 +24,14 @@ extern class Utils {
   * @param {String} name The option name
   * @return {Boolean} True if the option is in the query string
   */
- public static dynamic function isOptionValid(name: String): Bool;
+ public static function isOptionValid(name: String): Bool;
 
  /**
   * Checks whether the platform is NW.js.
   *
   * @return {Boolean} True if the platform is NW.js
   */
- public static dynamic function isNwjs(): Bool;
+ public static function isNwjs(): Bool;
 
  /**
   * Checks whether the platform is a mobile device.
@@ -40,7 +40,7 @@ extern class Utils {
   * @method isMobileDevice
   * @return {Boolean} True if the platform is a mobile device
   */
- public static dynamic function isMobileDevice(): Bool;
+ public static function isMobileDevice(): Bool;
 
  /**
   * Checks whether the browser is Mobile Safari.
@@ -49,21 +49,21 @@ extern class Utils {
   * @method isMobileSafari
   * @return {Boolean} True if the browser is Mobile Safari
   */
- public static dynamic function isMobileSafari(): Bool;
+ public static function isMobileSafari(): Bool;
 
  /**
   * Checks whether the browser is Android Chrome.
   *
   * @return {Boolean} True if the browser is Android Chrome
   */
- public static dynamic function isAndroidChrome(): Bool;
+ public static function isAndroidChrome(): Bool;
 
  /**
   * Checks whether the browser can read files in the game folder.
   *
   * @return {Boolean} True if the browser can read files in the game folder
   */
- public static dynamic function canReadGameFiles(): Bool;
+ public static function canReadGameFiles(): Bool;
 
  /**
   * Makes a CSS color string from RGB values.
@@ -75,11 +75,11 @@ extern class Utils {
   * @param {Int} b The blue value in the range (0, 255)
   * @return {String} CSS color string
   */
- public static dynamic function rgbToCssColor(r: Int, g: Int, b: Int): String;
+ public static function rgbToCssColor(r: Int, g: Int, b: Int): String;
 
- public static dynamic function isSupportPassiveEvent(): Bool;
+ public static function isSupportPassiveEvent(): Bool;
 
- public static dynamic function generateRuntimeId(): Int;
+ public static function generateRuntimeId(): Int;
 
  #if !compileMV
  /**
@@ -88,7 +88,7 @@ extern class Utils {
   * @param {string} str - The input string.
   * @returns {string} Encoded string.
   */
- public static dynamic function encodeURI(str: String): String;
+ public static function encodeURI(str: String): String;
  #else
  #end
 }

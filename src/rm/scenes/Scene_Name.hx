@@ -9,8 +9,8 @@ import rm.core.Rectangle;
 @:native("Scene_Name")
 extern class Scene_Name extends Scene_MenuBase {
  #if !compileMV
- public dynamic function editWindowRect(): Void;
- public dynamic function inputWindowRect(): Rectangle;
+ public function editWindowRect(): Void;
+ public function inputWindowRect(): Rectangle;
  #end
 
  /**
@@ -21,26 +21,26 @@ extern class Scene_Name extends Scene_MenuBase {
   * @param {number} maxLength
   * @memberof Scene_Name
   */
- public dynamic function prepare(actorId: Int, maxLength: Int): Void;
+ public function prepare(actorId: Int, maxLength: Int): Void;
 
  /**
   * Creates the edit window.
   *
   * @memberof Scene_Name
   */
- public dynamic function createEditWindow(): Void;
+ public function createEditWindow(): Void;
 
  /**
   * Creates the input window.
   *
   * @memberof Scene_Name
   */
- public dynamic function createInputWindow(): Void;
+ public function createInputWindow(): Void;
 
  /**
   * Handler for when ok is processed on the name input scene.
   *
   * @memberof Scene_Name
   */
- public dynamic function onInputOk(): Void;
+ public function onInputOk(): Void;
 }

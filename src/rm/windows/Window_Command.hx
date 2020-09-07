@@ -12,12 +12,12 @@ extern class Window_Command extends Window_Selectable {
   * @param {number} y
   * @memberof Window_Command
   */
- public dynamic function new(x: Int, y: Int): Void;
+ public function new(x: Int, y: Int): Void;
 
- public dynamic function initialize(x: Int, y: Int): Void;
+ public function initialize(x: Int, y: Int): Void;
  #else
- public dynamic function new(rect: Rectangle);
- public dynamic function initialize(rect: Rectangle): Void;
+ public function new(rect: Rectangle);
+ public function initialize(rect: Rectangle): Void;
  #end
 
  /**
@@ -26,7 +26,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {number}
   * @memberof Window_Command
   */
- public dynamic function windowWidth(): Int;
+ public function windowWidth(): Int;
 
  /**
   * Returns the height of the window;
@@ -34,7 +34,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {number}
   * @memberof Window_Command
   */
- public dynamic function windowHeight(): Int;
+ public function windowHeight(): Int;
 
  /**
   * Returns the number of visible rows within the window.
@@ -42,7 +42,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {number}
   * @memberof Window_Command
   */
- public dynamic function numVisibleRows(): Int;
+ public function numVisibleRows(): Int;
 
  /**
   * Returns the maximum number of items within the window.
@@ -50,21 +50,21 @@ extern class Window_Command extends Window_Selectable {
   * @returns {number}
   * @memberof Window_Command
   */
- public dynamic function maxItems(): Int;
+ public function maxItems(): Int;
 
  /**
   * Clears the list of commands from the window;
   * this is useful for refreshing changing commands.
   * @memberof Window_Command
   */
- public dynamic function clearCommandList(): Void;
+ public function clearCommandList(): Void;
 
  /**
   * Convenient method for overwriting and adding
   * commands with the addCommand method.
   * @memberof Window_Command
   */
- public dynamic function makeCommandList(): Void;
+ public function makeCommandList(): Void;
 
  /**
   * Adds commands to the window list with the specified
@@ -75,8 +75,8 @@ extern class Window_Command extends Window_Selectable {
   * @param {(any | object)} [ext]
   * @memberof Window_Command
   */
- public dynamic function addCommand(name: String, symbol: String,
-  enabled: Bool, ?ext: Any): Void;
+ public function addCommand(name: String, symbol: String, enabled: Bool,
+  ?ext: Any): Void;
 
  /**
   * Returns the command name given an index.
@@ -85,7 +85,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {String}
   * @memberof Window_Command
   */
- public dynamic function commandName(index: Int): String;
+ public function commandName(index: Int): String;
 
  /**
   * Returns the command symbol given an index.
@@ -94,7 +94,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {String}
   * @memberof Window_Command
   */
- public dynamic function commandSymbol(index: Int): String;
+ public function commandSymbol(index: Int): String;
 
  /**
   * Determines if the command is enabled;
@@ -103,7 +103,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {boolean}
   * @memberof Window_Command
   */
- public dynamic function isCommandEnabled(index: Int): Bool;
+ public function isCommandEnabled(index: Int): Bool;
 
  /**
   * Returns the command object at the current index.
@@ -111,7 +111,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {object}
   * @memberof Window_Command
   */
- public dynamic function currentData(): Any;
+ public function currentData(): Any;
 
  /**
   * Returns the command symbol at the current index.
@@ -119,7 +119,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {String}
   * @memberof Window_Command
   */
- public dynamic function currentSymbol(): String;
+ public function currentSymbol(): String;
 
  /**
   * Returns the ext property of the command at the current index.
@@ -127,7 +127,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {(any | object)}
   * @memberof Window_Command
   */
- public dynamic function currentExt(): Any;
+ public function currentExt(): Any;
 
  /**
   * Finds a command object and returns the index number based
@@ -136,7 +136,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {number}
   * @memberof Window_Command
   */
- public dynamic function findSymbol(symbol: String): Bool;
+ public function findSymbol(symbol: String): Bool;
 
  /**
   * Selects a command object based on the symbol property.
@@ -144,7 +144,7 @@ extern class Window_Command extends Window_Selectable {
   * @param {String} symbol
   * @memberof Window_Command
   */
- public dynamic function selectSymbol(symbol: String): Void;
+ public function selectSymbol(symbol: String): Void;
 
  /**
   * Finds a command object and returns the index number
@@ -153,7 +153,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {number}
   * @memberof Window_Command
   */
- public dynamic function findExt(ext: Any): Int;
+ public function findExt(ext: Any): Int;
 
  /**
   * Selects a command object based on the ext property.
@@ -161,7 +161,7 @@ extern class Window_Command extends Window_Selectable {
   * @param {(any | object)} ext
   * @memberof Window_Command
   */
- public dynamic function selectExt(ext: Any): Void;
+ public function selectExt(ext: Any): Void;
 
  /**
   * Returns the text align of the commands;
@@ -169,5 +169,5 @@ extern class Window_Command extends Window_Selectable {
   * @returns {String}
   * @memberof Window_Command
   */
- public dynamic function itemTextAlign(): String;
+ public function itemTextAlign(): String;
 }

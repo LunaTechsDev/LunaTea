@@ -58,52 +58,50 @@ extern class AudioManager {
  public static var meVolume: Int;
  public static var seVolume: Int;
 
- public static dynamic function playBgm(bgm: AudioParameters,
-  ?pos: Float): Void;
- public static dynamic function replayBgm(bgm: AudioParameters): Void;
- public static dynamic function isCurrentBgm(bgm: AudioParameters): Bool;
- public static dynamic function updateBgmParameters(bgm: AudioParameters): Void;
- public static dynamic function pdateCurrentBgm(bgm: AudioParameters,
+ public static function playBgm(bgm: AudioParameters, ?pos: Float): Void;
+ public static function replayBgm(bgm: AudioParameters): Void;
+ public static function isCurrentBgm(bgm: AudioParameters): Bool;
+ public static function updateBgmParameters(bgm: AudioParameters): Void;
+ public static function pdateCurrentBgm(bgm: AudioParameters,
   pos: Float): Void;
- public static dynamic function stopBgm(): Void;
- public static dynamic function fadeOutBgm(duration: Int): Void;
- public static dynamic function fadeInBgm(duration: Int): Void;
+ public static function stopBgm(): Void;
+ public static function fadeOutBgm(duration: Int): Void;
+ public static function fadeInBgm(duration: Int): Void;
 
- public static dynamic function playBgs(bgs: AudioParameters,
-  ?pos: Float): Void;
- public static dynamic function replayBgs(bgs: AudioParameters): Void;
- public static dynamic function isCurrentBgs(bgs: AudioParameters): Bool;
- public static dynamic function updateBgsParameters(bgs: AudioParameters): Void;
- public static dynamic function updateCurrentBgs(bgs: AudioParameters,
+ public static function playBgs(bgs: AudioParameters, ?pos: Float): Void;
+ public static function replayBgs(bgs: AudioParameters): Void;
+ public static function isCurrentBgs(bgs: AudioParameters): Bool;
+ public static function updateBgsParameters(bgs: AudioParameters): Void;
+ public static function updateCurrentBgs(bgs: AudioParameters,
   pos: Float): Void;
- public static dynamic function stopBgs(): Void;
- public static dynamic function fadeOutBgs(duration: Int): Void;
- public static dynamic function fadeInBgs(duration: Int): Void;
- public static dynamic function playMe(me: AudioParameters): Void;
- public static dynamic function updateMeParameters(me: AudioParameters): Void;
- public static dynamic function fadeOutMe(duration: Int): Void;
- public static dynamic function stopMe(): Void;
+ public static function stopBgs(): Void;
+ public static function fadeOutBgs(duration: Int): Void;
+ public static function fadeInBgs(duration: Int): Void;
+ public static function playMe(me: AudioParameters): Void;
+ public static function updateMeParameters(me: AudioParameters): Void;
+ public static function fadeOutMe(duration: Int): Void;
+ public static function stopMe(): Void;
 
- public static dynamic function playSe(se: AudioParameters): Void;
- public static dynamic function updateSeParameters(buffer: AudioParameters,
+ public static function playSe(se: AudioParameters): Void;
+ public static function updateSeParameters(buffer: AudioParameters,
   se: AudioParameters): Void;
- public static dynamic function stopSe(): Void;
- public static dynamic function playStaticSe(se: AudioParameters): Void;
- public static dynamic function loadStaticSe(se: AudioParameters): Void;
- public static dynamic function isStaticSe(se: AudioParameters): Bool;
- public static dynamic function stopAll(): Void;
- public static dynamic function saveBgm(): AudioParameters;
- public static dynamic function saveBgs(): AudioParameters;
- public static dynamic function makeEmptyAudioObject(): AudioParameters;
- public static dynamic function createBuffer(): HTML5Audio;
- public static dynamic function updateBufferParameters(buffer: AudioParameters,
+ public static function stopSe(): Void;
+ public static function playStaticSe(se: AudioParameters): Void;
+ public static function loadStaticSe(se: AudioParameters): Void;
+ public static function isStaticSe(se: AudioParameters): Bool;
+ public static function stopAll(): Void;
+ public static function saveBgm(): AudioParameters;
+ public static function saveBgs(): AudioParameters;
+ public static function makeEmptyAudioObject(): AudioParameters;
+ public static function createBuffer(): HTML5Audio;
+ public static function updateBufferParameters(buffer: AudioParameters,
   configVolume: Int, audio: AudioParameters): Void;
- public static dynamic function audioFileExt(): String;
- public static dynamic function shouldUseHtml5Audio(): String;
- public static dynamic function checkErrors(): Void;
- public static dynamic function checkWebAudioError(?webAudio: HTML5Audio): Void;
- public static dynamic function playEncryptedBgm(bgm: AudioParameters,
+ public static function audioFileExt(): String;
+ public static function shouldUseHtml5Audio(): String;
+ public static function checkErrors(): Void;
+ public static function checkWebAudioError(?webAudio: HTML5Audio): Void;
+ public static function playEncryptedBgm(bgm: AudioParameters,
   ?pos: Float): Void;
- public static dynamic function createDecryptBuffer(url: String,
-  bgm: AudioParameters, ?pos: Float): Void;
+ public static function createDecryptBuffer(url: String, bgm: AudioParameters,
+  ?pos: Float): Void;
 }

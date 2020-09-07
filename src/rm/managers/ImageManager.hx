@@ -52,18 +52,18 @@ extern class ImageManager {
   * @param url
   * @return Bitmap
   */
- public static dynamic function loadBitmapFromUrl(url: String): Bitmap;
+ public static function loadBitmapFromUrl(url: String): Bitmap;
 
  /**
   * Throws a load error and retries loading the bitmap.
   * @param bitmap
   */
- public static dynamic function throwLoadError(bitmap: Bitmap): Void;
+ public static function throwLoadError(bitmap: Bitmap): Void;
  #else
  public static var cache: CacheMap;
  #end
 
- public static dynamic function loadFace(filename: String, ?hue: Int): Bitmap;
+ public static function loadFace(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from the 'img/parallaxes/' folder
@@ -73,8 +73,7 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadParallax(filename: String,
-  ?hue: Int): Bitmap;
+ public static function loadParallax(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from the 'img/pictures/' folder
@@ -84,8 +83,7 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadPicture(filename: String,
-  ?hue: Int): Bitmap;
+ public static function loadPicture(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from the 'img/animations/' folder
@@ -95,8 +93,7 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadAnimation(filename: String,
-  ?hue: Int): Bitmap;
+ public static function loadAnimation(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from the 'img/battlebacks1/' folder
@@ -106,8 +103,7 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadBattleback1(filename: String,
-  ?hue: Int): Bitmap;
+ public static function loadBattleback1(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from the 'img/battlebacks2/' folder
@@ -117,8 +113,7 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadBattleback2(filename: String,
-  ?hue: Int): Bitmap;
+ public static function loadBattleback2(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from the 'img/enemies/' folder
@@ -128,7 +123,7 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadEnemy(filename: String, ?hue: Int): Bitmap;
+ public static function loadEnemy(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from the 'img/characters/' folder
@@ -138,11 +133,9 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadCharacter(filename: String,
-  ?hue: Int): Bitmap;
+ public static function loadCharacter(filename: String, ?hue: Int): Bitmap;
 
- public static dynamic function loadSvActor(filename: String,
-  ?hue: Int): Bitmap;
+ public static function loadSvActor(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from the 'img/sv_enemies/' folder
@@ -152,8 +145,7 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadSvEnemy(filename: String,
-  ?hue: Int): Bitmap;
+ public static function loadSvEnemy(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from 'img/system/' folder
@@ -163,8 +155,7 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadSystem(filename: String,
-  ?hue: Int): Bitmap;
+ public static function loadSystem(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from the 'img/tilesets/' folder
@@ -174,8 +165,7 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadTileset(filename: String,
-  ?hue: Int): Bitmap;
+ public static function loadTileset(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from the 'img/titles1/' folder
@@ -185,8 +175,7 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadTitle1(filename: String,
-  ?hue: Int): Bitmap;
+ public static function loadTitle1(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from the 'img/titles2/' folder
@@ -196,8 +185,7 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadTitle2(filename: String,
-  ?hue: Int): Bitmap;
+ public static function loadTitle2(filename: String, ?hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object from any folder and returns it.
@@ -209,8 +197,8 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadBitmap(folder: String, filename: String,
-  hue: Int, smooth: Bool): Bitmap;
+ public static function loadBitmap(folder: String, filename: String, hue: Int,
+  smooth: Bool): Bitmap;
 
  /**
   * Loads an empty Bitmap object and returns it.
@@ -220,8 +208,7 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadEmptyBitmap(path: String,
-  hue: Int): Bitmap;
+ public static function loadEmptyBitmap(path: String, hue: Int): Bitmap;
 
  /**
   * Loads a Bitmap object given a path
@@ -231,15 +218,14 @@ extern class ImageManager {
   * @returns {Bitmap}
   * @memberof ImageManagerStatic
   */
- public static dynamic function loadNormalBitmap(path: String,
-  hue: Int): Bitmap;
+ public static function loadNormalBitmap(path: String, hue: Int): Bitmap;
 
  /**
   * Clears the image cache in RPGMakerMV.
   *
   * @memberof ImageManagerStatic
   */
- public static dynamic function clear(): Void;
+ public static function clear(): Void;
 
  /**
   * Returns true if the image cache
@@ -247,7 +233,7 @@ extern class ImageManager {
   * @returns {boolean}
   * @memberof ImageManagerStatic
   */
- public static dynamic function isReady(): Bool;
+ public static function isReady(): Bool;
 
  /**
   * Returns true if the given filename
@@ -258,7 +244,7 @@ extern class ImageManager {
   * @returns {boolean}
   * @memberof ImageManagerStatic
   */
- public static dynamic function isObjectCharacter(filename: String): Bool;
+ public static function isObjectCharacter(filename: String): Bool;
 
  /**
   * Returns true if the given filename is
@@ -268,7 +254,7 @@ extern class ImageManager {
   * @returns {boolean}
   * @memberof ImageManagerStatic
   */
- public static dynamic function isBigCharacter(filename: String): Bool;
+ public static function isBigCharacter(filename: String): Bool;
 
- public static dynamic function isZeroParallax(filename: String): Bool;
+ public static function isZeroParallax(filename: String): Bool;
 }

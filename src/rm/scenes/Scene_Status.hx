@@ -12,15 +12,15 @@ extern class Scene_Status extends Scene_MenuBase {
  private var _statusWindow: Window_Status;
 
  #if !compileMV
- public dynamic function createProfileWindow(): Void;
- public dynamic function createStatusWindow(): Void;
- public dynamic function createStatusParamsWindow(): Void;
- public dynamic function createStatusEquipWindow(): Void;
- public dynamic function statusParamsWindowRect(): Rectangle;
- public dynamic function statusEquipWindowRect(): Rectangle;
- public dynamic function statusParamsWidth(): Int;
- public dynamic function statusParamsHeight(): Int;
- public dynamic function profileHeight(): Int;
+ public function createProfileWindow(): Void;
+ public function createStatusWindow(): Void;
+ public function createStatusParamsWindow(): Void;
+ public function createStatusEquipWindow(): Void;
+ public function statusParamsWindowRect(): Rectangle;
+ public function statusEquipWindowRect(): Rectangle;
+ public function statusParamsWidth(): Int;
+ public function statusParamsHeight(): Int;
+ public function profileHeight(): Int;
  #end
 
  /**
@@ -28,12 +28,12 @@ extern class Scene_Status extends Scene_MenuBase {
   *
   * @memberof Scene_Status
   */
- public dynamic function refreshActor(): Void;
+ public function refreshActor(): Void;
 
  /**
   * Handler for when the actor is changed within the status scene.
   *
   * @memberof Scene_Status
   */
- public dynamic function onActorChange(): Void;
+ public function onActorChange(): Void;
 }

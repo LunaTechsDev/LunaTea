@@ -45,7 +45,7 @@ extern class Scene_MenuBase extends Scene_Base {
   * @returns {Game_Actor}
   * @memberof Scene_MenuBase
   */
- public dynamic function actor(): Game_Actor;
+ public function actor(): Game_Actor;
 
  #if !compileMV
  @:native("_cancelButton")
@@ -60,20 +60,20 @@ extern class Scene_MenuBase extends Scene_Base {
  public var __pagedownButton: Sprite_Button;
  private var _pagedownButton: Sprite_Button;
 
- public dynamic function helpAreaTop(): Void;
- public dynamic function helpAreaBottom(): Void;
- public dynamic function helpAreaHeight(): Void;
- public dynamic function mainAreaTop(): Void;
- public dynamic function mainAreaBottom(): Void;
- public dynamic function mainAreaHeight(): Void;
- public dynamic function helpWindowRect(): Rectangle;
- public dynamic function createButtons(): Void;
- public dynamic function needsCancelButton(): Bool;
- public dynamic function createCancelButton(): Void;
- public dynamic function needsPageButtons(): Bool;
- public dynamic function createPageButtons(): Void;
- public dynamic function updatePageButtons(): Void;
- public dynamic function arePageButtonsEnabled(): Bool;
+ public function helpAreaTop(): Void;
+ public function helpAreaBottom(): Void;
+ public function helpAreaHeight(): Void;
+ public function mainAreaTop(): Void;
+ public function mainAreaBottom(): Void;
+ public function mainAreaHeight(): Void;
+ public function helpWindowRect(): Rectangle;
+ public function createButtons(): Void;
+ public function needsCancelButton(): Bool;
+ public function createCancelButton(): Void;
+ public function needsPageButtons(): Bool;
+ public function createPageButtons(): Void;
+ public function updatePageButtons(): Void;
+ public function arePageButtonsEnabled(): Bool;
  #end
 
  /**
@@ -81,14 +81,14 @@ extern class Scene_MenuBase extends Scene_Base {
   *
   * @memberof Scene_MenuBase
   */
- public dynamic function updateActor(): Void;
+ public function updateActor(): Void;
 
  /**
   * Creates the background of the base menu scene.
   *
   * @memberof Scene_MenuBase
   */
- public dynamic function createBackground(): Void;
+ public function createBackground(): Void;
 
  /**
   * Sets the background opacity of the base menu scene background.
@@ -96,28 +96,28 @@ extern class Scene_MenuBase extends Scene_Base {
   * @param {number} opacity
   * @memberof Scene_MenuBase
   */
- public dynamic function setBackgroundOpacity(opacity: Int): Void;
+ public function setBackgroundOpacity(opacity: Int): Void;
 
  /**
   * Creates the help window.
   *
   * @memberof Scene_MenuBase
   */
- public dynamic function createHelpWindow(): Void;
+ public function createHelpWindow(): Void;
 
  /**
   * Moves to the next actor in the party.
   *
   * @memberof Scene_MenuBase
   */
- public dynamic function nextActor(): Void;
+ public function nextActor(): Void;
 
  /**
   * Moves to the previous actor in the party.
   *
   * @memberof Scene_MenuBase
   */
- public dynamic function previousActor(): Void;
+ public function previousActor(): Void;
 
- public dynamic function onActorChange(): Void;
+ public function onActorChange(): Void;
 }

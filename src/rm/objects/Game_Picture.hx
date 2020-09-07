@@ -102,8 +102,8 @@ extern class Game_Picture {
  public var __rotationSpeed: Float;
  private var _rotationSpeed: Float;
 
- public dynamic function new(): Void;
- public dynamic function initialize(): Void;
+ public function new(): Void;
+ public function initialize(): Void;
 
  /**
   * Returns the name of the game picture.
@@ -111,7 +111,7 @@ extern class Game_Picture {
   * @returns {string}
   * @memberof Game_Picture
   */
- public dynamic function name(): String;
+ public function name(): String;
 
  /**
   * Returns the origin of the game picture.
@@ -119,7 +119,7 @@ extern class Game_Picture {
   * @returns {number}
   * @memberof Game_Picture
   */
- public dynamic function origin(): Float;
+ public function origin(): Float;
 
  /**
   * Returns the picture x coordinate.
@@ -127,7 +127,7 @@ extern class Game_Picture {
   * @returns {number}
   * @memberof Game_Picture
   */
- public dynamic function x(): Int;
+ public function x(): Int;
 
  /**
   * Returns the picture y coordinate.
@@ -135,7 +135,7 @@ extern class Game_Picture {
   * @returns {number}
   * @memberof Game_Picture
   */
- public dynamic function y(): Int;
+ public function y(): Int;
 
  /**
   * Returns x scale of the game picture.
@@ -143,7 +143,7 @@ extern class Game_Picture {
   * @returns {number}
   * @memberof Game_Picture
   */
- public dynamic function scaleX(): Float;
+ public function scaleX(): Float;
 
  /**
   * Returns the y scale of the game picture.
@@ -151,7 +151,7 @@ extern class Game_Picture {
   * @returns {number}
   * @memberof Game_Picture
   */
- public dynamic function scaleY(): Float;
+ public function scaleY(): Float;
 
  /**
   * Returns the opacity of the game picture.
@@ -159,7 +159,7 @@ extern class Game_Picture {
   * @returns {number}
   * @memberof Game_Picture
   */
- public dynamic function opacity(): Int;
+ public function opacity(): Int;
 
  /**
   * Returns the blend mode of the game picture.
@@ -167,7 +167,7 @@ extern class Game_Picture {
   * @returns {number}
   * @memberof Game_Picture
   */
- public dynamic function blendMode(): Int; // TODO: turn this into an enum
+ public function blendMode(): Int; // TODO: turn this into an enum
 
  /**
   * Returns the tone of the game picture.
@@ -175,7 +175,7 @@ extern class Game_Picture {
   * @returns {Array<number>}
   * @memberof Game_Picture
   */
- public dynamic function tone(): Array<Int>;
+ public function tone(): Array<Int>;
 
  /**
   * Returns the angle of the game picture.
@@ -183,51 +183,51 @@ extern class Game_Picture {
   * @returns {number}
   * @memberof Game_Picture
   */
- public dynamic function angle(): Float;
+ public function angle(): Float;
 
- public dynamic function initBasic(): Void;
- public dynamic function initTarget(): Void;
- public dynamic function initTone(): Void;
- public dynamic function initRotation(): Void;
- public dynamic function show(name: String, origin: Float, x: Int, y: Int,
+ public function initBasic(): Void;
+ public function initTarget(): Void;
+ public function initTone(): Void;
+ public function initRotation(): Void;
+ public function show(name: String, origin: Float, x: Int, y: Int,
   scaleX: Float, scaleY: Float, opacity: Int, blendMode: Int): Void;
- public dynamic function move(origin: Float, x: Int, y: Int, scaleX: Float,
+ public function move(origin: Float, x: Int, y: Int, scaleX: Float,
   scaleY: Float, opacity: Int, blendMode: Int, duration: Int): Void;
- public dynamic function rotate(speed: Float): Void;
- public dynamic function tint(tone: Array<Int>, duration: Int): Void;
+ public function rotate(speed: Float): Void;
+ public function tint(tone: Array<Int>, duration: Int): Void;
 
  /**
   * Erases the game picture.
   *
   * @memberof Game_Picture
   */
- public dynamic function erase(): Void;
+ public function erase(): Void;
 
  /**
   * Updates the game picture.
   *
   * @memberof Game_Picture
   */
- public dynamic function update(): Void;
+ public function update(): Void;
 
  /**
   * Updates the movement of the game picture.
   *
   * @memberof Game_Picture
   */
- public dynamic function updateMove(): Void;
+ public function updateMove(): Void;
 
  /**
   * Updates the tone of the game picture.
   *
   * @memberof Game_Picture
   */
- public dynamic function updateTone(): Void;
+ public function updateTone(): Void;
 
  /**
   * Updates the rotation of the game picture.
   *
   * @memberof Game_Picture
   */
- public dynamic function updateRotation(): Void;
+ public function updateRotation(): Void;
 }

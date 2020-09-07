@@ -11,7 +11,7 @@ import rm.types.RPG.Event;
 import rm.types.RPG.EventCommand;
 
 /**
- * THe game object class for an event. It contains dynamic functionality
+ * THe game object class for an event. It contains functionality
  * for event page switching and running parallel process events.
  */
 @:expose("Game_Event")
@@ -51,10 +51,10 @@ extern class Game_Event extends Game_Character {
  public var __locked: Bool;
  private var _locked: Bool;
 
- public dynamic function new(mapId: Int, eventId: Int);
- public dynamic function initialize(mapId: Int, eventId: Int): Void;
+ public function new(mapId: Int, eventId: Int);
+ public function initialize(mapId: Int, eventId: Int): Void;
 
- public dynamic function initMembers(): Void;
+ public function initMembers(): Void;
 
  /**
   * Returns the event id of the game event.
@@ -62,7 +62,7 @@ extern class Game_Event extends Game_Character {
   * @returns {Int}
   * @memberof Game_Event
   */
- public dynamic function eventId(): Int;
+ public function eventId(): Int;
 
  /**
   * Returns the event database information.
@@ -70,7 +70,7 @@ extern class Game_Event extends Game_Character {
   * @returns {RPG.Event}
   * @memberof Game_Event
   */
- public dynamic function event(): Event;
+ public function event(): Event;
 
  /**
   * Returns the event page created in the database.
@@ -78,7 +78,7 @@ extern class Game_Event extends Game_Character {
   * @returns {RPG.EventPage}
   * @memberof Game_Event
   */
- public dynamic function page(): EventPage;
+ public function page(): EventPage;
 
  /**
   * Returns the list of event commands on the current page of the game event.
@@ -86,10 +86,10 @@ extern class Game_Event extends Game_Character {
   * @returns {Array<RPG.EventCommand>}
   * @memberof Game_Event
   */
- public dynamic function list(): Array<EventCommand>;
+ public function list(): Array<EventCommand>;
 
- public dynamic function isCollidedWithCharacters(x: Int, y: Int): Bool;
- public dynamic function isCollidedWithEvents(x: Int, y: Int): Bool;
+ public function isCollidedWithCharacters(x: Int, y: Int): Bool;
+ public function isCollidedWithEvents(x: Int, y: Int): Bool;
 
  /**
   * Returns true if the event has collided with the player character
@@ -99,34 +99,34 @@ extern class Game_Event extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Event
   */
- public dynamic function isCollidedWithPlayerCharacters(x: Int, y: Int): Bool;
+ public function isCollidedWithPlayerCharacters(x: Int, y: Int): Bool;
 
  /**
   * Locks the game event.
   *
   * @memberof Game_Event
   */
- public dynamic function lock(): Void;
+ public function lock(): Void;
 
  /**
   * Unlocks the game eveent.
   *
   * @memberof Game_Event
   */
- public dynamic function unlock(): Void;
+ public function unlock(): Void;
 
- public dynamic function updateStop(): Void;
+ public function updateStop(): Void;
 
  /**
   * Updates the self movement of the game event.
   *
   * @memberof Game_Event
   */
- public dynamic function updateSelfMovement(): Void;
+ public function updateSelfMovement(): Void;
 
- public dynamic function stopCountThreshold(): Int;
- public dynamic function moveTypeRandom(): Void;
- public dynamic function moveTypeTowardPlayer(): Void;
+ public function stopCountThreshold(): Int;
+ public function moveTypeRandom(): Void;
+ public function moveTypeTowardPlayer(): Void;
 
  /**
   * Returns true if the game event is near the player.
@@ -134,9 +134,9 @@ extern class Game_Event extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Event
   */
- public dynamic function isNearThePlayer(): Bool;
+ public function isNearThePlayer(): Bool;
 
- public dynamic function moveTypeCustom(): Void;
+ public function moveTypeCustom(): Void;
 
  /**
   * Returns true if the event is staring.
@@ -144,37 +144,37 @@ extern class Game_Event extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Event
   */
- public dynamic function isStarting(): Bool;
+ public function isStarting(): Bool;
 
  /**
   * Clears the starting flag.
   *
   * @memberof Game_Event
   */
- public dynamic function clearStartingFlag(): Void;
+ public function clearStartingFlag(): Void;
 
- public dynamic function isTriggerIn(triggers: Array<Int>): Bool;
+ public function isTriggerIn(triggers: Array<Int>): Bool;
 
  /**
   * Starts the game event.
   *
   * @memberof Game_Event
   */
- public dynamic function start(): Void;
+ public function start(): Void;
 
  /**
   * Erases the event.
   *
   * @memberof Game_Event
   */
- public dynamic function erase(): Void;
+ public function erase(): Void;
 
  /**
   * Refreshes the game event.
   *
   * @memberof Game_Event
   */
- public dynamic function refresh(): Void;
+ public function refresh(): Void;
 
  /**
   * Finds the proper page index of the game event for
@@ -182,44 +182,44 @@ extern class Game_Event extends Game_Character {
   * @returns {Int}
   * @memberof Game_Event
   */
- public dynamic function findProperPageIndex(): Int;
+ public function findProperPageIndex(): Int;
 
- public dynamic function meetsConditions(page: EventPage): Bool;
+ public function meetsConditions(page: EventPage): Bool;
 
  /**
   * Sets up the event page.
   *
   * @memberof Game_Event
   */
- public dynamic function setupPage(): Void;
+ public function setupPage(): Void;
 
  /**
   * Clears the page settings of the game event.
   *
   * @memberof Game_Event
   */
- public dynamic function clearPageSettings(): Void;
+ public function clearPageSettings(): Void;
 
  /**
   * Sets up the event page settings.
   *
   * @memberof Game_Event
   */
- public dynamic function setupPageSettings(): Void;
+ public function setupPageSettings(): Void;
 
- public dynamic function isOriginalPattern(): Bool;
+ public function isOriginalPattern(): Bool;
 
  /**
   * Resets the pattern of the game event.
   *
   * @memberof Game_Event
   */
- public dynamic function resetPattern(): Void;
+ public function resetPattern(): Void;
 
- public dynamic function checkEventTriggerAuto(): Void;
- public dynamic function update(): Void;
- public dynamic function updateParallel(): Void;
- public dynamic function locate(x: Int, y: Int): Void;
+ public function checkEventTriggerAuto(): Void;
+ public function update(): Void;
+ public function updateParallel(): Void;
+ public function locate(x: Int, y: Int): Void;
 
  /**
   * Forces the game event to move along the specified route.
@@ -227,5 +227,5 @@ extern class Game_Event extends Game_Character {
   * @param {RPG.MoveRoute} moveRoute
   * @memberof Game_Event
   */
- public dynamic function forceMoveRoute(moveRoute: MoveRoute): Void;
+ public function forceMoveRoute(moveRoute: MoveRoute): Void;
 }

@@ -71,7 +71,7 @@ extern class HTML5Audio {
   * @method setup
   * @param {String} url The url of the audio file
   */
- public dynamic function setup(url: String): Void;
+ public function setup(url: String): Void;
 
  /**
   * Initializes the audio system.
@@ -80,7 +80,7 @@ extern class HTML5Audio {
   * @method initialize
   * @return {Boolean} True if the audio system is available
   */
- public dynamic function initialize(): Void;
+ public function initialize(): Void;
 
  /**
   * Clears the audio data.
@@ -88,7 +88,7 @@ extern class HTML5Audio {
   * @static
   * @method clear
   */
- public dynamic function clear(): Void;
+ public function clear(): Void;
 
  /**
   * Set the URL of static se.
@@ -96,7 +96,7 @@ extern class HTML5Audio {
   * @static
   * @param {String} url
   */
- public dynamic function setStaticSe(url: String): Void;
+ public function setStaticSe(url: String): Void;
 
  /**
   * Checks whether the audio data is ready to play.
@@ -105,7 +105,7 @@ extern class HTML5Audio {
   * @method isReady
   * @return {Boolean} True if the audio data is ready to play
   */
- public dynamic function isReady(): Bool;
+ public function isReady(): Bool;
 
  /**
   * Checks whether a loading error has occurred.
@@ -114,7 +114,7 @@ extern class HTML5Audio {
   * @method isError
   * @return {Boolean} True if a loading error has occurred
   */
- public dynamic function isError(): Bool;
+ public function isError(): Bool;
 
  /**
   * Checks whether the audio is playing.
@@ -123,7 +123,7 @@ extern class HTML5Audio {
   * @method isPlaying
   * @return {Boolean} True if the audio is playing
   */
- public dynamic function isPlaying(): Bool;
+ public function isPlaying(): Bool;
 
  /**
   * Plays the audio.
@@ -133,7 +133,7 @@ extern class HTML5Audio {
   * @param {Boolean} loop Whether the audio data play in a loop
   * @param {Number} offset The start position to play in seconds
   */
- public dynamic function play(loop: Bool, offset: Float): Void;
+ public function play(loop: Bool, offset: Float): Void;
 
  /**
   * Stops the audio.
@@ -141,7 +141,7 @@ extern class HTML5Audio {
   * @static
   * @method stop
   */
- public dynamic function stop(): Void;
+ public function stop(): Void;
 
  /**
   * Performs the audio fade-in.
@@ -150,7 +150,7 @@ extern class HTML5Audio {
   * @method fadeIn
   * @param {Number} duration Fade-in time in seconds
   */
- public dynamic function fadeIn(duration: Int): Void;
+ public function fadeIn(duration: Int): Void;
 
  /**
   * Performs the audio fade-out.
@@ -159,7 +159,7 @@ extern class HTML5Audio {
   * @method fadeOut
   * @param {Number} duration Fade-out time in seconds
   */
- public dynamic function fadeOut(duration: Int): Void;
+ public function fadeOut(duration: Int): Void;
 
  /**
   * Gets the seek position of the audio.
@@ -167,72 +167,72 @@ extern class HTML5Audio {
   * @static
   * @method seek
   */
- public dynamic function seek(): Void;
+ public function seek(): Void;
 
  /**
-  * Add a callback dynamic function that will be called when the audio data is loaded.
+  * Add a callback function that will be called when the audio data is loaded.
   *
   * @static
   * @method addLoadListener
-  * @param {Function} listner The callback dynamic function
+  * @param {Function} listner The callback function
   */
- private dynamic function addLoadListener(listner: () -> Void): Void;
+ private function addLoadListener(listner: () -> Void): Void;
 
  /**
   * @static
   * @method _setupEventHandlers
   * @private
   */
- private dynamic function _setupEventHandlers(): Void;
+ private function _setupEventHandlers(): Void;
 
  /**
   * @static
   * @method _onTouchStart
   * @private
   */
- private dynamic function _onTouchStart(): Void;
+ private function _onTouchStart(): Void;
 
  /**
   * @static
   * @method _onVisibilityChange
   * @private
   */
- private dynamic function _onVisibilityChange(): Void;
+ private function _onVisibilityChange(): Void;
 
  /**
   * @static
   * @method _onLoadedData
   * @private
   */
- private dynamic function _onLoadedData(): Void;
+ private function _onLoadedData(): Void;
 
  /**
   * @static
   * @method _onError
   * @private
   */
- private dynamic function _onError(): Void;
+ private function _onError(): Void;
 
  /**
   * @static
   * @method _onEnded
   * @private
   */
- private dynamic function _onEnded(): Void;
+ private function _onEnded(): Void;
 
  /**
   * @static
   * @method _onHide
   * @private
   */
- private dynamic function _onHide(): Void;
+ private function _onHide(): Void;
 
  /**
   * @static
   * @method _onShow
   * @private
   */
- private dynamic function _onShow(): Void;
+ private function _onShow(): Void;
 
  /**
   * @static
@@ -240,7 +240,7 @@ extern class HTML5Audio {
   * @param {String} url
   * @private
   */
- private dynamic function _load(url: String): Void;
+ private function _load(url: String): Void;
 
  /**
   * @static
@@ -249,14 +249,14 @@ extern class HTML5Audio {
   * @param {Number} offset
   * @private
   */
- private dynamic function _startPlaying(loop: Bool, offset: Float): Void;
+ private function _startPlaying(loop: Bool, offset: Float): Void;
 
  /**
   * @static
   * @method _onLoad
   * @private
   */
- private dynamic function _onLoad(): Void;
+ private function _onLoad(): Void;
 
  /**
   * @static
@@ -264,7 +264,7 @@ extern class HTML5Audio {
   * @params {Number} duration
   * @private
   */
- private dynamic function _startGainTween(duration: Float): Void;
+ private function _startGainTween(duration: Float): Void;
 
  /**
   * @static
@@ -272,5 +272,5 @@ extern class HTML5Audio {
   * @param {Number} volume
   * @private
   */
- private dynamic function _applyTweenValue(volume: Int): Void;
+ private function _applyTweenValue(volume: Int): Void;
 }

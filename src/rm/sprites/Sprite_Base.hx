@@ -55,31 +55,31 @@ extern class Sprite_Base extends Sprite {
   */
  private var _hiding: Bool;
 
- public dynamic function new(): Void;
+ public function new(): Void;
 
  /**
   * Initializes the sprite.
   *
   * @memberof Sprite_Base
   */
- public dynamic function initialize(): Void;
+ public function initialize(): Void;
 
  /**
   * Hides the sprite.
   */
- public dynamic function hide(): Void;
+ public function hide(): Void;
 
  /**
   * Shows the sprite.
   */
- public dynamic function show(): Void;
+ public function show(): Void;
 
  /**
   * Updadtes the visibility of the sprite based
   * on the _hiding property.
   * @memberof Sprite_Base
   */
- public dynamic function updateVisibility(): Void;
+ public function updateVisibility(): Void;
 
  /**
   * Updates the animation sprites, cloning them;
@@ -87,7 +87,7 @@ extern class Sprite_Base extends Sprite {
   * animation sprites, otherwise the sprite is removed.
   * @memberof Sprite_Base
   */
- public dynamic function updateAnimationSprites(): Void;
+ public function updateAnimationSprites(): Void;
 
  /**
   * Starts a new animation on the current
@@ -98,7 +98,7 @@ extern class Sprite_Base extends Sprite {
   * @param {number} delay
   * @memberof Sprite_Base
   */
- public dynamic function startAnimation(animation: Animation, mirror: Bool,
+ public function startAnimation(animation: Animation, mirror: Bool,
   delay: Int): Void;
 
  /**
@@ -106,5 +106,5 @@ extern class Sprite_Base extends Sprite {
   * @returns {boolean}
   * @memberof Sprite_Base
   */
- public dynamic function isAnimationPlaying(): Bool;
+ public function isAnimationPlaying(): Bool;
 }

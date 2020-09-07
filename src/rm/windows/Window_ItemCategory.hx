@@ -20,5 +20,5 @@ extern class Window_ItemCategory extends Window_HorzCommand {
   * @param {Window_ItemList} itemWindow
   * @memberof Window_ItemCategory
   */
- public dynamic function setItemWindow(itemWindow: Window_ItemList): Void;
+ public function setItemWindow(itemWindow: Window_ItemList): Void;
 }

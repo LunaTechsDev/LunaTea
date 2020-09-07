@@ -17,122 +17,122 @@ extern class ColorManager {
  /**
   * Loads the window skin into ColorManager.
   */
- public static dynamic function loadWindowSkin(): Void;
+ public static function loadWindowSkin(): Void;
 
  /**
   * Loads the text color using the window skin color Index.
   * @param windowSkinColorIndex
   * @returns Color
   */
- public static dynamic function textColor(windowSkinColorIndex: Int): Color;
+ public static function textColor(windowSkinColorIndex: Int): Color;
 
  /**
   * Uses the normal color, index 0
   * of the window skin.
   */
- public static dynamic function normalColor(): Color;
+ public static function normalColor(): Color;
 
  /**
   * Uses the system color; index 16 on the window skin.
   * @return Color
   */
- public static dynamic function systemColor(): Color;
+ public static function systemColor(): Color;
 
  /**
   * Uses the crisis color; index 17 on the window skin.
   * @return Color
   */
- public static dynamic function crisisColor(): Color;
+ public static function crisisColor(): Color;
 
  /**
   * Uses the death color; index 18 on the window skin.
   * @return Color
   */
- public static dynamic function deathColor(): Color;
+ public static function deathColor(): Color;
 
  /**
   * Uses the  gauge back color; index 19 on the window skin.
   * @return Color
   */
- public static dynamic function gaugeBackColor(): Color;
+ public static function gaugeBackColor(): Color;
 
  /**
   * Uses the hp gauge color 1. Index 20 on the window skin.
   * @return Color
   */
- public static dynamic function hpGaugeColor1(): Color;
+ public static function hpGaugeColor1(): Color;
 
  /**
   * Uses the hp guage color 2. Index 21 on the window skin.
   * @return Color
   */
- public static dynamic function hpGaugeColor2(): Color;
+ public static function hpGaugeColor2(): Color;
 
  /**
   * Uses the mp gauge color 1. Index 22 on the window skin.
   * @return Color
   */
- public static dynamic function mpGaugeColor1(): Color;
+ public static function mpGaugeColor1(): Color;
 
  /**
   * Uses the mp gauge color 2. Index 23 on the window skin.
   * @return Color
   */
- public static dynamic function mpGaugeColor2(): Color;
+ public static function mpGaugeColor2(): Color;
 
  /**
   * Uses the mp cost color. Index 23 on the window skin.
   * @return Color
   */
- public static dynamic function mpCostColor(): Color;
+ public static function mpCostColor(): Color;
 
  /**
   * Uses the power up color. Index 24 on the window skin.
   * @return Color
   */
- public static dynamic function powerUpColor(): Color;
+ public static function powerUpColor(): Color;
 
  /**
   * Uses the power down color. Index 25 on the window skin.
   * @return Color
   */
- public static dynamic function powerDownColor(): Color;
+ public static function powerDownColor(): Color;
 
  /**
   * Uses the ct gauge color 1. Index 26 on the window skin.
   * @return Color
   */
- public static dynamic function ctGaugeColor1(): Color;
+ public static function ctGaugeColor1(): Color;
 
  /**
   * Uses the ct gauge color 2. Index 27 on the window skin.
   * @return Color
   */
- public static dynamic function ctGaugeColor2(): Color;
+ public static function ctGaugeColor2(): Color;
 
  /**
   * Uses the tp gauge color 1. Index 28 on the window skin.
   * @return Color
   */
- public static dynamic function tpGaugeColor1(): Color;
+ public static function tpGaugeColor1(): Color;
 
  /**
   * Uses the tp gauge color 2. Index 29 on the window skin.
   * @return Color
   */
- public static dynamic function tpGaugeColor2(): Color;
+ public static function tpGaugeColor2(): Color;
 
  /**
   * Uses the tp cost color. Index 29 on the window skin.
   * @return Color
   */
- public static dynamic function tpCostColor(): Color;
+ public static function tpCostColor(): Color;
 
  /**
   * Uses the pending color.
   * @return Color
   */
- public static dynamic function pendingColor(): Color;
+ public static function pendingColor(): Color;
 
  /**
   * Given the actor status the color is different.
@@ -143,19 +143,19 @@ extern class ColorManager {
   * @param actor
   * @return Color
   */
- public static dynamic function hpColor(actor: Game_Actor): Color;
+ public static function hpColor(actor: Game_Actor): Color;
 
  /**
   * Based on actor; currently returns normal color.
   * @return Color
   */
- public static dynamic function mpColor(): Color; // TODO: Will be taking actor
+ public static function mpColor(): Color; // TODO: Will be taking actor
 
  /**
   * Based on actor; currently returns normal color.
   * @return Color
   */
- public static dynamic function tpColor(): Color; // TODO: Will be taking actor
+ public static function tpColor(): Color; // TODO: Will be taking actor
 
  /**
   * This returns the text color based on change.
@@ -165,7 +165,7 @@ extern class ColorManager {
   * @param change
   * @return Color
   */
- public static dynamic function paramChangeTextColor(change: Int): Color;
+ public static function paramChangeTextColor(change: Int): Color;
 
  /**
   * Returns the color based on Color Type.
@@ -177,37 +177,37 @@ extern class ColorManager {
   * @param colorType
   * @return Color
   */
- public static dynamic function damageColor(colorType: DamageColorType): Color;
+ public static function damageColor(colorType: DamageColorType): Color;
 
  /**
   * Returns the color "rgba(0, 0, 0, 0.6)"
   * @return Color
   */
- public static dynamic function outlineColor(): Color;
+ public static function outlineColor(): Color;
 
  /**
   * Returns the color "rgba(0, 0, 0, 0.6)"
   * @return Color
   */
- public static dynamic function dimColor1(): Color;
+ public static function dimColor1(): Color;
 
  /**
   * Returns the color "rgba(0, 0, 0, 0)"
   * @return Color
   */
- public static dynamic function dimColor2(): Color;
+ public static function dimColor2(): Color;
 
  /**
   * Returns the color "rgba(32, 32, 32, 0.5)"
   * @return Color
   */
- public static dynamic function itemBackColor1(): Color;
+ public static function itemBackColor1(): Color;
 
  /**
   * Returns the color "rgba(0, 0, 0, 0.5)"
   * @return Color
   */
- public static dynamic function itemBackColor2(): Color;
+ public static function itemBackColor2(): Color;
 }
 #else
 @:native("ColorManager")
@@ -218,7 +218,7 @@ class ColorManager {
 
  /**
   * Loads the window skin into ColorManager.
-  */ public static dynamic function loadWindowSkin(): Void {
+  */ public static function loadWindowSkin(): Void {
   // Do nothing in MV
  }
 
@@ -226,7 +226,7 @@ class ColorManager {
   * Loads the text color using the window skin color Index.
   * @param windowSkinColorIndex
   */
- public static dynamic function textColor(windowSkinColorIndex: Int): Color {
+ public static function textColor(windowSkinColorIndex: Int): Color {
   return baseWindow.textColor(windowSkinColorIndex);
  }
 
@@ -234,7 +234,7 @@ class ColorManager {
   * Uses the normal color, index 0
   * of the window skin.
   */
- public static dynamic function normalColor(): Color {
+ public static function normalColor(): Color {
   return baseWindow.normalColor();
  };
 
@@ -242,7 +242,7 @@ class ColorManager {
   * Uses the system color; index 16 on the window skin.
   * @return Color
   */
- public static dynamic function systemColor(): Color {
+ public static function systemColor(): Color {
   return baseWindow.systemColor();
  };
 
@@ -250,7 +250,7 @@ class ColorManager {
   * Uses the crisis color; index 17 on the window skin.
   * @return Color
   */
- public static dynamic function crisisColor(): Color {
+ public static function crisisColor(): Color {
   return baseWindow.crisisColor();
  };
 
@@ -258,7 +258,7 @@ class ColorManager {
   * Uses the death color; index 18 on the window skin.
   * @return Color
   */
- public static dynamic function deathColor(): Color {
+ public static function deathColor(): Color {
   return baseWindow.deathColor();
  };
 
@@ -266,7 +266,7 @@ class ColorManager {
   * Uses the  gauge back color; index 19 on the window skin.
   * @return Color
   */
- public static dynamic function gaugeBackColor(): Color {
+ public static function gaugeBackColor(): Color {
   return baseWindow.gaugeBackColor();
  };
 
@@ -274,7 +274,7 @@ class ColorManager {
   * Uses the hp gauge color 1. Index 20 on the window skin.
   * @return Color
   */
- public static dynamic function hpGaugeColor1(): Color {
+ public static function hpGaugeColor1(): Color {
   return baseWindow.hpGaugeColor1();
  };
 
@@ -282,7 +282,7 @@ class ColorManager {
   * Uses the hp guage color 2. Index 21 on the window skin.
   * @return Color
   */
- public static dynamic function hpGaugeColor2(): Color {
+ public static function hpGaugeColor2(): Color {
   return baseWindow.hpGaugeColor2();
  };
 
@@ -290,7 +290,7 @@ class ColorManager {
   * Uses the mp gauge color 1. Index 22 on the window skin.
   * @return Color
   */
- public static dynamic function mpGaugeColor1(): Color {
+ public static function mpGaugeColor1(): Color {
   return baseWindow.mpGaugeColor1();
  };
 
@@ -298,7 +298,7 @@ class ColorManager {
   * Uses the mp gauge color 2. Index 23 on the window skin.
   * @return Color
   */
- public static dynamic function mpGaugeColor2(): Color {
+ public static function mpGaugeColor2(): Color {
   return baseWindow.mpGaugeColor2();
  };
 
@@ -306,7 +306,7 @@ class ColorManager {
   * Uses the mp cost color. Index 23 on the window skin.
   * @return Color
   */
- public static dynamic function mpCostColor(): Color {
+ public static function mpCostColor(): Color {
   return baseWindow.mpCostColor();
  };
 
@@ -314,7 +314,7 @@ class ColorManager {
   * Uses the power up color. Index 24 on the window skin.
   * @return Color
   */
- public static dynamic function powerUpColor(): Color {
+ public static function powerUpColor(): Color {
   return baseWindow.powerUpColor();
  };
 
@@ -322,7 +322,7 @@ class ColorManager {
   * Uses the power down color. Index 25 on the window skin.
   * @return Color
   */
- public static dynamic function powerDownColor(): Color {
+ public static function powerDownColor(): Color {
   return baseWindow.powerDownColor();
  };
 
@@ -330,7 +330,7 @@ class ColorManager {
   * Uses the ct gauge color 1. Index 26 on the window skin.
   * @return Color
   */
- public static dynamic function ctGaugeColor1(): Color {
+ public static function ctGaugeColor1(): Color {
   return baseWindow.textColor(26);
  };
 
@@ -338,7 +338,7 @@ class ColorManager {
   * Uses the ct gauge color 2. Index 27 on the window skin.
   * @return Color
   */
- public static dynamic function ctGaugeColor2(): Color {
+ public static function ctGaugeColor2(): Color {
   return baseWindow.textColor(27);
  };
 
@@ -346,7 +346,7 @@ class ColorManager {
   * Uses the tp gauge color 1. Index 28 on the window skin.
   * @return Color
   */
- public static dynamic function tpGaugeColor1(): Color {
+ public static function tpGaugeColor1(): Color {
   return baseWindow.tpGaugeColor1();
  };
 
@@ -354,7 +354,7 @@ class ColorManager {
   * Uses the tp gauge color 2. Index 29 on the window skin.
   * @return Color
   */
- public static dynamic function tpGaugeColor2(): Color {
+ public static function tpGaugeColor2(): Color {
   return baseWindow.tpGaugeColor2();
  };
 
@@ -362,7 +362,7 @@ class ColorManager {
   * Uses the tp cost color. Index 29 on the window skin.
   * @return Color
   */
- public static dynamic function tpCostColor(): Color {
+ public static function tpCostColor(): Color {
   return baseWindow.tpCostColor();
  };
 
@@ -370,7 +370,7 @@ class ColorManager {
   * Uses the pending color.
   * @return Color
   */
- public static dynamic function pendingColor(): Color {
+ public static function pendingColor(): Color {
   return baseWindow.pendingColor();
  };
 
@@ -383,7 +383,7 @@ class ColorManager {
   * @param actor
   * @return Color
   */
- public static dynamic function hpColor(actor: Game_Actor): Color {
+ public static function hpColor(actor: Game_Actor): Color {
   return baseWindow.hpColor(actor);
  }
 
@@ -391,7 +391,7 @@ class ColorManager {
   * Based on actor; currently returns normal color.
   * @return Color
   */
- public static dynamic function mpColor(?actor: Game_Actor): Color {
+ public static function mpColor(?actor: Game_Actor): Color {
   return actor != null ? baseWindow.mpColor(actor) : baseWindow.normalColor();
  } // TODO: Will be taking actor
 
@@ -399,7 +399,7 @@ class ColorManager {
   * Based on actor; currently returns normal color.
   * @return Color
   */
- public static dynamic function tpColor(?actor: Game_Actor): Color {
+ public static function tpColor(?actor: Game_Actor): Color {
   return actor != null ? baseWindow.tpColor(actor) : baseWindow.normalColor();
  } // TODO: Will be taking actor
 
@@ -411,7 +411,7 @@ class ColorManager {
   * @param change
   * @return Color
   */
- public static dynamic function paramChangeTextColor(change: Int): Color {
+ public static function paramChangeTextColor(change: Int): Color {
   return baseWindow.paramchangeTextColor(change);
  };
 
@@ -425,7 +425,7 @@ class ColorManager {
   * @param colorType
   * @return Color
   */
- public static dynamic function damageColor(colorType: DamageColorType): Color {
+ public static function damageColor(colorType: DamageColorType): Color {
   switch (colorType) {
    case 0: // HP damage
     return "#ffffff";
@@ -444,7 +444,7 @@ class ColorManager {
   * Returns the color "rgba(0, 0, 0, 0.6)"
   * @return Color
   */
- public static dynamic function outlineColor(): Color {
+ public static function outlineColor(): Color {
   return "rgba(0, 0, 0, 0.6)";
  }
 
@@ -452,7 +452,7 @@ class ColorManager {
   * Returns the color "rgba(0, 0, 0, 0.6)"
   * @return Color
   */
- public static dynamic function dimColor1(): Color {
+ public static function dimColor1(): Color {
   return baseWindow.dimColor1();
  }
 
@@ -460,7 +460,7 @@ class ColorManager {
   * Returns the color "rgba(0, 0, 0, 0)"
   * @return Color
   */
- public static dynamic function dimColor2(): Color {
+ public static function dimColor2(): Color {
   return baseWindow.dimColor2();
  }
 
@@ -468,7 +468,7 @@ class ColorManager {
   * Returns the color "rgba(32, 32, 32, 0.5)"
   * @return Color
   */
- public static dynamic function itemBackColor1(): Color {
+ public static function itemBackColor1(): Color {
   return "rgba(32, 32, 32, 0.5)";
  }
 
@@ -476,7 +476,7 @@ class ColorManager {
   * Returns the color "rgba(0, 0, 0, 0.5)"
   * @return Color
   */
- public static dynamic function itemBackColor2(): Color {
+ public static function itemBackColor2(): Color {
   return "rgba(0, 0, 0, 0.5)";
  }
 }

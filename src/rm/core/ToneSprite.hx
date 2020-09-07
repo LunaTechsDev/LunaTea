@@ -13,14 +13,14 @@ extern class ToneSprite extends Container {
   * @class ToneSprite
   * @constructor
   */
- public dynamic function new(): Void;
+ public function new(): Void;
 
  /**
   * Clears the tone.
   *
   * @method reset
   */
- public dynamic function clear(): Void;
+ public function clear(): Void;
 
  /**
   * Sets the tone.
@@ -31,7 +31,7 @@ extern class ToneSprite extends Container {
   * @param {Number} b The blue strength in the range (-255, 255)
   * @param {Number} gray The grayscale level in the range (0, 255)
   */
- public dynamic function setTone(r: Int, g: Int, b: Int, gray: Int): Void;
+ public function setTone(r: Int, g: Int, b: Int, gray: Int): Void;
 
  private var _red: Int;
  private var _green: Int;
@@ -43,12 +43,12 @@ extern class ToneSprite extends Container {
   * @param {PIXI.CanvasRenderer} renderer
   * @private
   */
- private dynamic function _renderCanvas(renderer: CanvasRenderer): Void;
+ private function _renderCanvas(renderer: CanvasRenderer): Void;
 
  /**
   * @method _renderWebGL
   * @param {PIXI.WebGLRenderer} renderer
   * @private
   */
- private dynamic function _renderWebGL(renderer: Renderer): Void;
+ private function _renderWebGL(renderer: Renderer): Void;
 }

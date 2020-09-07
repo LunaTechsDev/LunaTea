@@ -12,9 +12,9 @@ extern class Game_CommonEvent {
  public var __interpreter: Game_Interpreter;
  private var _interpreter: Game_Interpreter;
 
- public dynamic function new(commonEventId: Int);
+ public function new(commonEventId: Int);
 
- public dynamic function initialize(commonEventId: Int): Void;
+ public function initialize(commonEventId: Int): Void;
 
  /**
   * Returns the common event information from the database.
@@ -22,7 +22,7 @@ extern class Game_CommonEvent {
   * @returns {CommonEvent}
   * @memberof Game_CommonEvent
   */
- public dynamic function event(): CommonEvent;
+ public function event(): CommonEvent;
 
  /**
   * Returns the common event's list of event commands.
@@ -30,14 +30,14 @@ extern class Game_CommonEvent {
   * @returns {Array<EventCommand>}
   * @memberof Game_CommonEvent
   */
- public dynamic function list(): Array<EventCommand>;
+ public function list(): Array<EventCommand>;
 
  /**
   * Refreshes the common event.
   *
   * @memberof Game_CommonEvent
   */
- public dynamic function refresh(): Void;
+ public function refresh(): Void;
 
  /**
   * Returns true if the common event is active.
@@ -45,12 +45,12 @@ extern class Game_CommonEvent {
   * @returns {boolean}
   * @memberof Game_CommonEvent
   */
- public dynamic function isActive(): Bool;
+ public function isActive(): Bool;
 
  /**
   * Updates the common event.
   *
   * @memberof Game_CommonEvent
   */
- public dynamic function update(): Void;
+ public function update(): Void;
 }

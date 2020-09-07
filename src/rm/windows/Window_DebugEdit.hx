@@ -13,13 +13,13 @@ extern class Window_DebugEdit extends Window_Selectable {
  private var _mode: String;
  private var _topId: Int;
 
- public dynamic function new(x: Int, y: Int, width: Int);
+ public function new(x: Int, y: Int, width: Int);
 
- public dynamic function itemName(dataId: Int): String;
- public dynamic function itemStatus(dataId: String): String;
- public dynamic function setMode(mode: String): Void;
- public dynamic function setTopId(id: Int): Void;
- public dynamic function currentId(): Int;
- public dynamic function updateSwitch(): Void;
- public dynamic function updateVariable(): Void;
+ public function itemName(dataId: Int): String;
+ public function itemStatus(dataId: String): String;
+ public function setMode(mode: String): Void;
+ public function setTopId(id: Int): Void;
+ public function currentId(): Int;
+ public function updateSwitch(): Void;
+ public function updateVariable(): Void;
 }

@@ -29,29 +29,29 @@ extern class Sprite_StateOverlay extends Sprite_Base {
   *
   * @memberof Sprite_StateOverlay
   */
- public dynamic function initMembers(): Void;
+ public function initMembers(): Void;
 
  /**
   * Loads the bitmap of the overlay sprite.
   *
   * @memberof Sprite_StateOverlay
   */
- public dynamic function loadBitmap(): Void;
+ public function loadBitmap(): Void;
 
- public dynamic function setup(battler: Game_Battler): Void;
- public dynamic function animationWait(): Int;
+ public function setup(battler: Game_Battler): Void;
+ public function animationWait(): Int;
 
  /**
   * Updates the overlay sprite pattern.
   *
   * @memberof Sprite_StateOverlay
   */
- public dynamic function updatePattern(): Void;
+ public function updatePattern(): Void;
 
  /**
   * Updates the overlay sprite frame.
   *
   * @memberof Sprite_StateOverlay
   */
- public dynamic function updateFrame(): Void;
+ public function updateFrame(): Void;
 }

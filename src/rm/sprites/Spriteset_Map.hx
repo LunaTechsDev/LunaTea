@@ -47,89 +47,89 @@ extern class Spriteset_Map extends Spriteset_Base {
   *
   * @memberof Spriteset_Map
   */
- public dynamic function hideCharacters(): Void;
+ public function hideCharacters(): Void;
 
  /**
   * Creates the map spriteset parallax.
   *
   * @memberof Spriteset_Map
   */
- public dynamic function createParallax(): Void;
+ public function createParallax(): Void;
 
  /**
   * Creates the map spriteset tile map.
   *
   * @memberof Spriteset_Map
   */
- public dynamic function createTilemap(): Void;
+ public function createTilemap(): Void;
 
  /**
   * Loads the map spriteset tileset.
   *
   * @memberof Spriteset_Map
   */
- public dynamic function loadTileset(): Void;
+ public function loadTileset(): Void;
 
  /**
   * Creates the map spriteset character sprite.
   *
   * @memberof Spriteset_Map
   */
- public dynamic function createCharacters(): Void;
+ public function createCharacters(): Void;
 
  /**
   * Creates the map spriteset shadow sprite.
   *
   * @memberof Spriteset_Map
   */
- public dynamic function createShadow(): Void;
+ public function createShadow(): Void;
 
  /**
   * Creates the map spriteset destination sprite.
   *
   * @memberof Spriteset_Map
   */
- public dynamic function createDestination(): Void;
+ public function createDestination(): Void;
 
  /**
   * Creates the map spriteset weather.
   *
   * @memberof Spriteset_Map
   */
- public dynamic function createWeather(): Void;
+ public function createWeather(): Void;
 
  /**
   * Updates the map spriteset tileset.
   *
   * @memberof Spriteset_Map
   */
- public dynamic function updateTileset(): Void;
+ public function updateTileset(): Void;
 
  /**
   * Simple fix for canvas parallax issue, destroy old parallax and readd to  the tree.
   */
- private dynamic function _canvasReAddParallax(): Void;
+ private function _canvasReAddParallax(): Void;
 
- public dynamic function updateParallax(): Void;
+ public function updateParallax(): Void;
 
  /**
   * Updates the map spriteset tile map.
   *
   * @memberof Spriteset_Map
   */
- public dynamic function updateTilemap(): Void;
+ public function updateTilemap(): Void;
 
  /**
   * Updates the map spriteset shadow.
   *
   * @memberof Spriteset_Map
   */
- public dynamic function updateShadow(): Void;
+ public function updateShadow(): Void;
 
  /**
   * Updates the map spriteset weather.
   *
   * @memberof Spriteset_Map
   */
- public dynamic function updateWeather(): Void;
+ public function updateWeather(): Void;
 }

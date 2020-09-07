@@ -68,37 +68,37 @@ extern class Sprite_Actor extends Sprite_Battler {
   * @param {Game_Actor} [battler]
   * @memberof Sprite_Actor
   */
- public dynamic function new(?battler: Game_Actor): Void;
+ public function new(?battler: Game_Actor): Void;
 
- public dynamic function initialize(?battler: Game_Actor): Void;
+ public function initialize(?battler: Game_Actor): Void;
 
  /**
   * Creates the main sprite of the sprite actor.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function createMainSprite(): Void;
+ public function createMainSprite(): Void;
 
  /**
   * Creates the shadow sprite of the sprite actor.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function createShadowSprite(): Void;
+ public function createShadowSprite(): Void;
 
  /**
   * Sets the weapon sprite of the sprite actor.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function createWeaponSprite(): Void;
+ public function createWeaponSprite(): Void;
 
  /**
   * Creates the state sprite of the sprite actor.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function createStateSprite(): Void;
+ public function createStateSprite(): Void;
 
  /**
   * Sets the battler of the sprite actor.
@@ -106,32 +106,32 @@ extern class Sprite_Actor extends Sprite_Battler {
   * @param {Game_Actor} battler
   * @memberof Sprite_Actor
   */
- public dynamic function setBattler(battler: Game_Actor): Void;
+ public function setBattler(battler: Game_Actor): Void;
 
  /**
   * Moves the sprite actor to the start position.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function moveToStartPosition(): Void;
+ public function moveToStartPosition(): Void;
 
- public dynamic function setActorHome(index: Int): Void;
+ public function setActorHome(index: Int): Void;
 
- public dynamic function updateShadow(): Void;
+ public function updateShadow(): Void;
 
  /**
   * Sets up motion on the sprite actor.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function setupMotion(): Void;
+ public function setupMotion(): Void;
 
  /**
   * Sets up weapon animation on the sprite actor.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function setupWeaponAnimation(): Void;
+ public function setupWeaponAnimation(): Void;
 
  /**
   * Starts the motion given the specified motion
@@ -139,25 +139,25 @@ extern class Sprite_Actor extends Sprite_Battler {
   * @param {string} motionType
   * @memberof Sprite_Actor
   */
- public dynamic function startMotion(motionType: String): Void;
+ public function startMotion(motionType: String): Void;
 
- public dynamic function updateTargetPosition(): Void;
+ public function updateTargetPosition(): Void;
 
  /**
   * Updates the sprite actor's movement.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function updateMove(): Void;
+ public function updateMove(): Void;
 
  /**
   * Updates the sprite actor's motion.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function updateMotion(): Void;
+ public function updateMotion(): Void;
 
- public dynamic function updateMotionCount(): Void;
+ public function updateMotionCount(): Void;
 
  /**
   * Returns the speed of the motion for the sprite actor.
@@ -165,43 +165,43 @@ extern class Sprite_Actor extends Sprite_Battler {
   * @returns {Int}
   * @memberof Sprite_Actor
   */
- public dynamic function motionSpeed(): Int;
+ public function motionSpeed(): Int;
 
  /**
   * Refreshes the motion of the sprite actor.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function refreshMotion(): Void;
+ public function refreshMotion(): Void;
 
  /**
   * Starts the entry motion of the sprite actor.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function startEntryMotion(): Void;
+ public function startEntryMotion(): Void;
 
  /**
   * Has the sprite actor step forward.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function stepForward(): Void;
+ public function stepForward(): Void;
 
  /**
   * Has the sprite actor step back.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function stepBack(): Void;
+ public function stepBack(): Void;
 
  /**
   * Has the sprite actor retreat.
   *
   * @memberof Sprite_Actor
   */
- public dynamic function retreat(): Void;
+ public function retreat(): Void;
 
- public dynamic function damageOffsetX(): Int;
- public dynamic function damageOffsetY(): Int;
+ public function damageOffsetX(): Int;
+ public function damageOffsetY(): Int;
 }

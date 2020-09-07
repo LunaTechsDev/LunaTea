@@ -12,7 +12,7 @@ extern class ToneFilter extends ColorMatrixFilter {
   * @extends PIXI.Filter
   * @constructor
   */
- public dynamic function new();
+ public function new();
 
  /**
   * Changes the hue.
@@ -20,7 +20,7 @@ extern class ToneFilter extends ColorMatrixFilter {
   * @method adjustHue
   * @param {Number} value The hue value in the range (-360, 360)
   */
- public dynamic function adjustHue(?value: Int): Void;
+ public function adjustHue(?value: Int): Void;
 
  /**
   * Changes the saturation.
@@ -28,7 +28,7 @@ extern class ToneFilter extends ColorMatrixFilter {
   * @method adjustSaturation
   * @param {Number} value The saturation value in the range (-255, 255)
   */
- public dynamic function adjustSaturation(?value: Int): Void;
+ public function adjustSaturation(?value: Int): Void;
 
  /**
   * Changes the tone.
@@ -38,5 +38,5 @@ extern class ToneFilter extends ColorMatrixFilter {
   * @param {Number} g The green strength in the range (-255, 255)
   * @param {Number} b The blue strength in the range (-255, 255)
   */
- public dynamic function adjustTone(?r: Int, ?g: Int, ?b: Int): Void;
+ public function adjustTone(?r: Int, ?g: Int, ?b: Int): Void;
 }

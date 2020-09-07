@@ -12,18 +12,18 @@ extern class CacheEntry {
   * @param {string} key, url of the resource
   * @param {string} item - Bitmap, HTML5Audio, WebAudio - whatever you want to store in the cache
   */
- public dynamic function new(cache: CacheMap, key: String, item: String);
+ public function new(cache: CacheMap, key: String, item: String);
 
  /**
   * frees the resource
   */
- public dynamic function free(?byTTL: Bool): Void;
+ public function free(?byTTL: Bool): Void;
 
  /**
   * Allocates the resource
   * @returns {CacheEntry}
   */
- public dynamic function allocate(): CacheEntry;
+ public function allocate(): CacheEntry;
 
  /**
   * Sets the time to live
@@ -31,13 +31,13 @@ extern class CacheEntry {
   * @param {number} time TTL in seconds, 0 if not set
   * @returns {CacheEntry}
   */
- public dynamic function setTimeToLive(?ticks: Int, ?seconds: Int): CacheEntry;
+ public function setTimeToLive(?ticks: Int, ?seconds: Int): CacheEntry;
 
- public dynamic function isStillAlive(): Bool;
+ public function isStillAlive(): Bool;
 
  /**
   * makes sure that resource wont freed by Time To Live
   * if resource was already freed by TTL, put it in cache again
   */
- public dynamic function touch(): Void;
+ public function touch(): Void;
 }

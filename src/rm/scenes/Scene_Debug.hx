@@ -13,12 +13,12 @@ extern class Scene_Debug extends Scene_MenuBase {
   *
   * @memberof Scene_Debug
   */
- public dynamic function createRangeWindow(): Void;
+ public function createRangeWindow(): Void;
 
  #if !compileMV
- public dynamic function rangeWindowRect(): Rectangle;
- public dynamic function editWindowRect(): Rectangle;
- public dynamic function debugHelpWindowRect(): Rectangle;
+ public function rangeWindowRect(): Rectangle;
+ public function editWindowRect(): Rectangle;
+ public function debugHelpWindowRect(): Rectangle;
  #end
 
  /**
@@ -26,18 +26,18 @@ extern class Scene_Debug extends Scene_MenuBase {
   *
   * @memberof Scene_Debug
   */
- public dynamic function createEditWindow(): Void;
+ public function createEditWindow(): Void;
 
  /**
   * Creates the debug help .window.
   *
   * @memberof Scene_Debug
   */
- public dynamic function createDebugHelpWindow(): Void;
+ public function createDebugHelpWindow(): Void;
 
- public dynamic function onRangeOk(): Void;
- public dynamic function onEditCancel(): Void;
- public dynamic function refreshHelpWindow(): Void;
+ public function onRangeOk(): Void;
+ public function onEditCancel(): Void;
+ public function refreshHelpWindow(): Void;
 
  /**
   * Returns the help text within the
@@ -45,5 +45,5 @@ extern class Scene_Debug extends Scene_MenuBase {
   * @returns {String}
   * @memberof Scene_Debug
   */
- public dynamic function helpText(): String;
+ public function helpText(): String;
 }

@@ -29,23 +29,23 @@ extern class DataManager {
  @:native("_databaseFiles")
  public static var __databaseFiles: Array<Json>; // TODO:Might need to refactor
 
- public static dynamic function loadDatabase(): Void;
- public static dynamic function loadDataFile(name: String, src: String): Void;
- public static dynamic function isDatabaseLoaded(): Bool;
- public static dynamic function loadMapData(mapId: Int): Void;
- public static dynamic function makeEmptyMap(): Void;
- public static dynamic function isMapLoaded(): Bool;
- public static dynamic function onLoad(object: Any): Void;
+ public static function loadDatabase(): Void;
+ public static function loadDataFile(name: String, src: String): Void;
+ public static function isDatabaseLoaded(): Bool;
+ public static function loadMapData(mapId: Int): Void;
+ public static function makeEmptyMap(): Void;
+ public static function isMapLoaded(): Bool;
+ public static function onLoad(object: Any): Void;
 
  /**
   * Extracts Meta Data. A Json Like Object
   * @param data
   */
- public static dynamic function extractMetaData(data: Any): Void;
+ public static function extractMetaData(data: Any): Void;
 
- public static dynamic function checkError(): Void;
- public static dynamic function isBattleTest(): Bool;
- public static dynamic function isEventTest(): Bool;
+ public static function checkError(): Void;
+ public static function isBattleTest(): Bool;
+ public static function isEventTest(): Bool;
 
  /**
   * Returns a Bool value given an item.
@@ -55,7 +55,7 @@ extern class DataManager {
   * @returns {Bool}
   * @memberof DataManager
   */
- public static dynamic function isSkill(item: BaseItem): Bool;
+ public static function isSkill(item: BaseItem): Bool;
 
  /**
   * Returns a Bool value given an item.
@@ -65,7 +65,7 @@ extern class DataManager {
   * @returns {Bool}
   * @memberof DataManager
   */
- public static dynamic function isItem(item: BaseItem): Bool;
+ public static function isItem(item: BaseItem): Bool;
 
  /**
   * Returns a Bool value given an item.
@@ -75,7 +75,7 @@ extern class DataManager {
   * @returns {Bool}
   * @memberof DataManager
   */
- public static dynamic function isWeapon(item: BaseItem): Bool;
+ public static function isWeapon(item: BaseItem): Bool;
 
  /**
   * Returns a Bool value given an item.
@@ -85,19 +85,19 @@ extern class DataManager {
   * @returns {Bool}
   * @memberof DataManager
   */
- public static dynamic function isArmor(item: BaseItem): Bool;
+ public static function isArmor(item: BaseItem): Bool;
 
- public static dynamic function createGameObjects(): Void;
- public static dynamic function setupNewGame(): Void;
- public static dynamic function setupBattleTest(): Void;
- public static dynamic function setupEventTest(): Void;
- public static dynamic function loadGlobalInfo(): Void;
+ public static function createGameObjects(): Void;
+ public static function setupNewGame(): Void;
+ public static function setupBattleTest(): Void;
+ public static function setupEventTest(): Void;
+ public static function loadGlobalInfo(): Void;
 
  /**
   * JSON like object
   * @param info
   */
- public static dynamic function saveGlobalInfo(info: Any): Void;
+ public static function saveGlobalInfo(info: Any): Void;
 
  /**
   * Returns a Bool value given a savefileId.
@@ -107,16 +107,16 @@ extern class DataManager {
   * @returns {Bool}
   * @memberof DataManager
   */
- public static dynamic function isThisGameFile(savefileId: Int): Bool;
+ public static function isThisGameFile(savefileId: Int): Bool;
 
- public static dynamic function isAnySavefileExists(): Bool;
- public static dynamic function latestSavefileId(): Int;
- public static dynamic function loadAllSavefileImages(): Void;
+ public static function isAnySavefileExists(): Bool;
+ public static function latestSavefileId(): Int;
+ public static function loadAllSavefileImages(): Void;
 
  /**
   * JSON Like Object for save file images
   */
- public static dynamic function loadSavefileImages(info: Any): Void;
+ public static function loadSavefileImages(info: Any): Void;
 
  /**
   * Returns the maximum number of save files
@@ -125,10 +125,10 @@ extern class DataManager {
   * @returns {number}
   * @memberof DataManager
   */
- public static dynamic function maxSavefiles(): Int;
+ public static function maxSavefiles(): Int;
 
  #if !compileMV
- public static dynamic function isMapObject(object: Dynamic): Bool;
+ public static function isMapObject(object: Dynamic): Bool;
 
  /**
   * Saves the RPGMakerMV game given a savefileId.
@@ -138,11 +138,11 @@ extern class DataManager {
   * @returns {Bool}
   * @memberof DataManager
   */
- public static dynamic function saveGame(savefileId: Int): Promise<Any>;
+ public static function saveGame(savefileId: Int): Promise<Any>;
 
- public static dynamic function loadGame(savefileId: Int): Promise<Any>;
+ public static function loadGame(savefileId: Int): Promise<Any>;
 
- public static dynamic function makeSavename(savefileId: Int): String;
+ public static function makeSavename(savefileId: Int): String;
  #else
 
  /**
@@ -153,9 +153,9 @@ extern class DataManager {
   * @returns {Bool}
   * @memberof DataManager
   */
- public static dynamic function saveGame(savefileId: Int): Bool;
+ public static function saveGame(savefileId: Int): Bool;
 
- public static dynamic function loadGame(savefileId: Int): Bool;
+ public static function loadGame(savefileId: Int): Bool;
  #end
 
  /**
@@ -165,11 +165,11 @@ extern class DataManager {
   * @returns {number}
   * @memberof DataManager
   */
- public static dynamic function lastAccessedSavefileId(): Int;
+ public static function lastAccessedSavefileId(): Int;
 
- public static dynamic function saveGameWithoutRescue(savefileId: Int): Bool;
- public static dynamic function loadGameWithoutRescue(savefileId: Int): Bool;
- public static dynamic function selectSavefileForNewGame(): Void;
+ public static function saveGameWithoutRescue(savefileId: Int): Bool;
+ public static function loadGameWithoutRescue(savefileId: Int): Bool;
+ public static function selectSavefileForNewGame(): Void;
 
  /**
   * Creates a new save file on the global
@@ -178,7 +178,7 @@ extern class DataManager {
   * @static
   * @memberof DataManager
   */
- public static dynamic function makeSavefileInfo(): Void;
+ public static function makeSavefileInfo(): Void;
 
  /**
   * Creates the save file contents when saving your game.
@@ -188,7 +188,7 @@ extern class DataManager {
   * @returns {object}
   * @memberof DataManager
   */
- public static dynamic function makeSaveContents(): Any;
+ public static function makeSaveContents(): Any;
 
  /**
   * Extracts the save file contents into the game's
@@ -198,5 +198,5 @@ extern class DataManager {
   * @param {object} contents
   * @memberof DataManager
   */
- public static dynamic function extractSaveContents(contents: Any): Void;
+ public static function extractSaveContents(contents: Any): Void;
 }

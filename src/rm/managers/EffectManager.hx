@@ -21,51 +21,51 @@ extern class EffectManager {
   * @param fileName
   * @return Effect
   */
- public static dynamic function load(fileName: String): Effect;
+ public static function load(fileName: String): Effect;
 
  /**
   * Starts loading  the Effect from URL
   * @param url
   * @return Effect
   */
- public static dynamic function startLoading(url: String): Effect;
+ public static function startLoading(url: String): Effect;
 
  /**
   * Clears the cache and releases the Effect from
   * Graphics.
   */
- public static dynamic function clear(): Void;
+ public static function clear(): Void;
 
  // TODO: Still needs to be implemented.
 
  /**
   * Not Implemented
   */
- public static dynamic function onLoad(): Void;
+ public static function onLoad(): Void;
 
  /**
   * Makes a url to an Effekseer file.
   * @param fileName
   * @return String
   */
- public static dynamic function makeUrl(fileName: String): String;
+ public static function makeUrl(fileName: String): String;
 
  /**
   * Checks the error in the errorUrls.
   */
- public static dynamic function checkErrors(): Void;
+ public static function checkErrors(): Void;
 
  /**
   * Throws the loading error.
   * @param url
   */
- public static dynamic function throwLoadError(url: String): Void;
+ public static function throwLoadError(url: String): Void;
 
  /**
   * Returns true if the EffectManager is ready.
   * @return Bool
   */
- public static dynamic function isReady(): Bool;
+ public static function isReady(): Bool;
 }
 #else
 #end

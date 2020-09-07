@@ -23,7 +23,7 @@ extern class Game_Troop extends Game_Unit {
  public var __troopId: Int;
  private var _troopId: Int;
 
- public dynamic function new(): Void;
+ public function new(): Void;
 
  /**
   * _eventFlags:{
@@ -48,7 +48,7 @@ extern class Game_Troop extends Game_Unit {
   * @returns {Array<Game_Enemy>}
   * @memberof Game_Troop
   */
- public dynamic function members(): Array<Game_Enemy>;
+ public function members(): Array<Game_Enemy>;
 
  /**
   * Returns all alive enemies.
@@ -56,7 +56,7 @@ extern class Game_Troop extends Game_Unit {
   * @returns {Array<Game_Enemy>}
   * @memberof Game_Troop
   */
- public dynamic function aliveMembers(): Array<Game_Enemy>;
+ public function aliveMembers(): Array<Game_Enemy>;
 
  /**
   * Returns all dead enemies.
@@ -64,7 +64,7 @@ extern class Game_Troop extends Game_Unit {
   * @returns {Array<Game_Enemy>}
   * @memberof Game_Troop
   */
- public dynamic function deadMembers(): Array<Game_Enemy>;
+ public function deadMembers(): Array<Game_Enemy>;
 
  /**
   * Returns movable enemies.
@@ -72,7 +72,7 @@ extern class Game_Troop extends Game_Unit {
   * @returns {Array<Game_Enemy>}
   * @memberof Game_Troop
   */
- public dynamic function movableMembers(): Array<Game_Enemy>;
+ public function movableMembers(): Array<Game_Enemy>;
 
  /**
   * Returns true if event is running.
@@ -80,14 +80,14 @@ extern class Game_Troop extends Game_Unit {
   * @returns {boolean}
   * @memberof Game_Troop
   */
- public dynamic function isEventRunning(): Bool;
+ public function isEventRunning(): Bool;
 
  /**
   * Updates the game interpreter.
   *
   * @memberof Game_Troop
   */
- public dynamic function updateInterpreter(): Void;
+ public function updateInterpreter(): Void;
 
  /**
   * Returns the turn count.
@@ -95,9 +95,9 @@ extern class Game_Troop extends Game_Unit {
   * @returns {number}
   * @memberof Game_Troop
   */
- public dynamic function turnCount(): Int;
+ public function turnCount(): Int;
 
- public dynamic function clear(): Void;
+ public function clear(): Void;
 
  /**
   * Returns troop information from the database.
@@ -105,16 +105,16 @@ extern class Game_Troop extends Game_Unit {
   * @returns {RPG.Troop}
   * @memberof Game_Troop
   */
- public dynamic function troop(): Troop;
+ public function troop(): Troop;
 
- public dynamic function setup(troopId: Int): Void;
+ public function setup(troopId: Int): Void;
 
  /**
   * Creates unique names for each enemy.
   *
   * @memberof Game_Troop
   */
- public dynamic function makeUniqueNames(): Void;
+ public function makeUniqueNames(): Void;
 
  /**
   * Returns the letter table for enemy troops.
@@ -122,7 +122,7 @@ extern class Game_Troop extends Game_Unit {
   * @returns {Array<string>}
   * @memberof Game_Troop
   */
- public dynamic function letterTable(): Array<String>;
+ public function letterTable(): Array<String>;
 
  /**
   * Returns the name of enemies within the troop.
@@ -130,17 +130,17 @@ extern class Game_Troop extends Game_Unit {
   * @returns {Array<string>}
   * @memberof Game_Troop
   */
- public dynamic function enemyNames(): Array<String>;
+ public function enemyNames(): Array<String>;
 
- public dynamic function meetsConditions(page: EventPage): Bool;
- public dynamic function setupBattleEvent(): Void;
+ public function meetsConditions(page: EventPage): Bool;
+ public function setupBattleEvent(): Void;
 
  /**
   * Increases the turn number.
   *
   * @memberof Game_Troop
   */
- public dynamic function increaseTurn(): Void;
+ public function increaseTurn(): Void;
 
  /**
   * Returns the total exp of all members of the enemy troop.
@@ -148,7 +148,7 @@ extern class Game_Troop extends Game_Unit {
   * @returns {number}
   * @memberof Game_Troop
   */
- public dynamic function expTotal(): Int;
+ public function expTotal(): Int;
 
  /**
   * Return the total gold of all enemies.
@@ -156,7 +156,7 @@ extern class Game_Troop extends Game_Unit {
   * @returns {number}
   * @memberof Game_Troop
   */
- public dynamic function goldTotal(): Int;
+ public function goldTotal(): Int;
 
  /**
   * Returns the gold rate based on game party gold rate.
@@ -164,7 +164,7 @@ extern class Game_Troop extends Game_Unit {
   * @returns {number}
   * @memberof Game_Troop
   */
- public dynamic function goldRate(): Int;
+ public function goldRate(): Int;
 
  /**
   * Creates the drop items for all members of the enemy troop, and
@@ -172,5 +172,5 @@ extern class Game_Troop extends Game_Unit {
   * @returns {Array<RPG.BaseItem>}
   * @memberof Game_Troop
   */
- public dynamic function makeDropItems(): Array<BaseItem>;
+ public function makeDropItems(): Array<BaseItem>;
 }

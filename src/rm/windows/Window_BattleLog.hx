@@ -25,97 +25,96 @@ extern class Window_BattleLog extends Window_Base {
  private var _baseLineStack: Array<Int>;
  private var _spriteset: Spriteset_Battle;
  #if compileMV
- public dynamic function new();
- public dynamic function initialize(): Void;
+ public function new();
+ public function initialize(): Void;
  #else
- public dynamic function new(rect: Rectangle);
- public dynamic function initialize(rect: Rectangle): Void;
+ public function new(rect: Rectangle);
+ public function initialize(rect: Rectangle): Void;
  #end
- public dynamic function setSpriteset(spriteset: Spriteset_Battle): Void;
- public dynamic function windowWidth(): Int;
- public dynamic function windowHeight(): Int;
- public dynamic function maxLines(): Int;
- public dynamic function createBackBitmap(): Void;
- public dynamic function createBackSprite(): Void;
- public dynamic function numLines(): Int;
- public dynamic function messageSpeed(): Int;
- public dynamic function isBusy(): Bool;
- public dynamic function updateWait(): Bool;
- public dynamic function updateWaitCount(): Bool;
- public dynamic function updateWaitMode(): Bool;
- public dynamic function setWaitMode(waitMode: String): Void;
- public dynamic function callNextMethod(): Void;
- public dynamic function isFastForward(): Bool;
- public dynamic function push(methodName: String, args: Array<Dynamic>): Void;
- public dynamic function clear(): Void;
- public dynamic function wait(): Void;
- public dynamic function waitForEffect(): Void;
- public dynamic function waitForMovement(): Void;
- public dynamic function addText(text: String): Void;
- public dynamic function pushBaseLine(): Void;
- public dynamic function popBaseLine(): Void;
- public dynamic function waitForNewLine(): Void;
- public dynamic function popupDamage(target: Game_Battler): Void;
- public dynamic function performActionStart(subject: Game_Battler,
+ public function setSpriteset(spriteset: Spriteset_Battle): Void;
+ public function windowWidth(): Int;
+ public function windowHeight(): Int;
+ public function maxLines(): Int;
+ public function createBackBitmap(): Void;
+ public function createBackSprite(): Void;
+ public function numLines(): Int;
+ public function messageSpeed(): Int;
+ public function isBusy(): Bool;
+ public function updateWait(): Bool;
+ public function updateWaitCount(): Bool;
+ public function updateWaitMode(): Bool;
+ public function setWaitMode(waitMode: String): Void;
+ public function callNextMethod(): Void;
+ public function isFastForward(): Bool;
+ public function push(methodName: String, args: Array<Dynamic>): Void;
+ public function clear(): Void;
+ public function wait(): Void;
+ public function waitForEffect(): Void;
+ public function waitForMovement(): Void;
+ public function addText(text: String): Void;
+ public function pushBaseLine(): Void;
+ public function popBaseLine(): Void;
+ public function waitForNewLine(): Void;
+ public function popupDamage(target: Game_Battler): Void;
+ public function performActionStart(subject: Game_Battler,
   action: Game_Action): Void;
- public dynamic function performAction(subject: Game_Battler,
+ public function performAction(subject: Game_Battler,
   action: Game_Action): Void;
- public dynamic function performActionEnd(subject: Game_Battler): Void;
- public dynamic function performDamage(target: Game_Battler): Void;
- public dynamic function performMiss(target: Game_Battler): Void;
- public dynamic function performRecovery(target: Game_Battler): Void;
- public dynamic function performEvasion(target: Game_Battler): Void;
- public dynamic function performMagicEvasion(target: Game_Battler): Void;
- public dynamic function performCounter(target: Game_Battler): Void;
- public dynamic function performReflection(target: Game_Battler): Void;
- public dynamic function performSubstitute(substitute: Game_Battler,
+ public function performActionEnd(subject: Game_Battler): Void;
+ public function performDamage(target: Game_Battler): Void;
+ public function performMiss(target: Game_Battler): Void;
+ public function performRecovery(target: Game_Battler): Void;
+ public function performEvasion(target: Game_Battler): Void;
+ public function performMagicEvasion(target: Game_Battler): Void;
+ public function performCounter(target: Game_Battler): Void;
+ public function performReflection(target: Game_Battler): Void;
+ public function performSubstitute(substitute: Game_Battler,
   target: Game_Battler): Void;
- public dynamic function performCollapse(target: Game_Battler): Void;
- public dynamic function showAnimation(subject: Game_Battler,
-  targets: Game_Battler, animationId: Int): Void;
- public dynamic function showAttackAnimation(subject: Game_Battler,
+ public function performCollapse(target: Game_Battler): Void;
+ public function showAnimation(subject: Game_Battler, targets: Game_Battler,
+  animationId: Int): Void;
+ public function showAttackAnimation(subject: Game_Battler,
   targets: Game_Battler): Void;
- public dynamic function showActorAttackAnimation(subject: Game_Battler,
+ public function showActorAttackAnimation(subject: Game_Battler,
   targets: Game_Battler): Void;
- public dynamic function showEnemyAttackAnimation(subject: Game_Battler,
+ public function showEnemyAttackAnimation(subject: Game_Battler,
   targets: Game_Battler): Void;
- public dynamic function showNormalAnimation(targets: Game_Battler,
-  animationId: Int, mirror: Bool): Void;
- public dynamic function animationBaseDelay(): Int;
- public dynamic function animationNextDelay(): Int;
- public dynamic function drawBackground(): Void;
- public dynamic function backRect(): Rectangle;
- public dynamic function backColor(): String;
- public dynamic function backPaintOpacity(): Int;
- public dynamic function drawLineText(index: Int): Void;
- public dynamic function startTurn(): Void;
- public dynamic function startAction(subject: Game_Battler,
-  action: Game_Action, targets: Array<Game_Battler>): Void;
- public dynamic function endAction(subject: Game_Battler): Void;
- public dynamic function displayCurrentState(subject: Game_Battler): Void;
- public dynamic function displayRegeneration(subject: Game_Battler): Void;
- public dynamic function displayAction(subject: Game_Battler,
-  item: UsableItem): Void;
- public dynamic function displayCounter(target: Game_Battler): Void;
- public dynamic function displayReflection(target: Game_Battler): Void;
- public dynamic function displaySubstitute(substitute: Game_Battler,
+ public function showNormalAnimation(targets: Game_Battler, animationId: Int,
+  mirror: Bool): Void;
+ public function animationBaseDelay(): Int;
+ public function animationNextDelay(): Int;
+ public function drawBackground(): Void;
+ public function backRect(): Rectangle;
+ public function backColor(): String;
+ public function backPaintOpacity(): Int;
+ public function drawLineText(index: Int): Void;
+ public function startTurn(): Void;
+ public function startAction(subject: Game_Battler, action: Game_Action,
+  targets: Array<Game_Battler>): Void;
+ public function endAction(subject: Game_Battler): Void;
+ public function displayCurrentState(subject: Game_Battler): Void;
+ public function displayRegeneration(subject: Game_Battler): Void;
+ public function displayAction(subject: Game_Battler, item: UsableItem): Void;
+ public function displayCounter(target: Game_Battler): Void;
+ public function displayReflection(target: Game_Battler): Void;
+ public function displaySubstitute(substitute: Game_Battler,
   target: Game_Battler): Void;
- public dynamic function displayActionResults(subject: Game_Battler,
+ public function displayActionResults(subject: Game_Battler,
   targt: Game_Battler): Void;
- public dynamic function displayFailure(target: Game_Battler): Void;
- public dynamic function displayCritical(target: Game_Battler): Void;
- public dynamic function displayDamage(target: Game_Battler): Void;
- public dynamic function displayMiss(target: Game_Battler): Void;
- public dynamic function displayEvasion(target: Game_Battler): Void;
- public dynamic function displayHpDamage(target: Game_Battler): Void;
- public dynamic function displayMpDamage(target: Game_Battler): Void;
- public dynamic function displayTpDamage(target: Game_Battler): Void;
- public dynamic function displayAffectedStatus(target: Game_Battler): Void;
- public dynamic function displayAutoAffectedStatus(target: Game_Battler): Void;
- public dynamic function displayChangedStates(target: Game_Battler): Void;
- public dynamic function displayAddedStates(target: Game_Battler): Void;
- public dynamic function displayRemovedStates(target: Game_Battler): Void;
- public dynamic function displayChangedBuffs(target: Game_Battler): Void;
+ public function displayFailure(target: Game_Battler): Void;
+ public function displayCritical(target: Game_Battler): Void;
+ public function displayDamage(target: Game_Battler): Void;
+ public function displayMiss(target: Game_Battler): Void;
+ public function displayEvasion(target: Game_Battler): Void;
+ public function displayHpDamage(target: Game_Battler): Void;
+ public function displayMpDamage(target: Game_Battler): Void;
+ public function displayTpDamage(target: Game_Battler): Void;
+ public function displayAffectedStatus(target: Game_Battler): Void;
+ public function displayAutoAffectedStatus(target: Game_Battler): Void;
+ public function displayChangedStates(target: Game_Battler): Void;
+ public function displayAddedStates(target: Game_Battler): Void;
+ public function displayRemovedStates(target: Game_Battler): Void;
+ public function displayChangedBuffs(target: Game_Battler): Void;
 
  /**
   *
@@ -123,10 +122,10 @@ extern class Window_BattleLog extends Window_Base {
   * @param buffs list of integers representing buff Ids
   * @param fmt
   */
- public dynamic function displayBuffs(target: Game_Battler, buffs: Array<Int>,
+ public function displayBuffs(target: Game_Battler, buffs: Array<Int>,
   fmt: String): Void;
 
- public dynamic function makeHpDamageText(target: Game_Battler): Void;
- public dynamic function makeMpDamageText(target: Game_Battler): String;
- public dynamic function makeTpDamageText(target: Game_Battler): String;
+ public function makeHpDamageText(target: Game_Battler): Void;
+ public function makeMpDamageText(target: Game_Battler): String;
+ public function makeTpDamageText(target: Game_Battler): String;
 }

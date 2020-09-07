@@ -20,7 +20,7 @@ extern class Window_NameInput extends Window_Selectable {
  private var _editWindow: Window_NameEdit;
  private var _page: Int;
 
- public dynamic function new(editWindow: Window_NameEdit);
+ public function new(editWindow: Window_NameEdit);
 
  /**
   * Returns the window height.
@@ -28,7 +28,7 @@ extern class Window_NameInput extends Window_Selectable {
   * @returns {number}
   * @memberof Window_NameInput
   */
- public dynamic function windowHeight(): Int;
+ public function windowHeight(): Int;
 
  /**
   * Returns the table of characters to input.
@@ -36,13 +36,13 @@ extern class Window_NameInput extends Window_Selectable {
   * @returns {Array<Array<String>>}
   * @memberof Window_NameInput
   */
- public dynamic function table(): Array<Array<String>>;
+ public function table(): Array<Array<String>>;
 
- public dynamic function character(): String;
- public dynamic function isPageChange(): Bool;
- public dynamic function isOk(): Bool;
- public dynamic function processJump(): Void;
- public dynamic function processBack(): Void;
- public dynamic function onNameAdd(): Void;
- public dynamic function onNameOk(): Void;
+ public function character(): String;
+ public function isPageChange(): Bool;
+ public function isOk(): Bool;
+ public function processJump(): Void;
+ public function processBack(): Void;
+ public function onNameAdd(): Void;
+ public function onNameOk(): Void;
 }

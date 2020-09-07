@@ -12,7 +12,7 @@ package rm.windows;
 extern class Window_MapName extends Window_Base {
  private var _showCount: Int;
 
- public dynamic function new();
+ public function new();
 
  /**
   * Returns the window width.
@@ -20,7 +20,7 @@ extern class Window_MapName extends Window_Base {
   * @returns {number}
   * @memberof Window_MapName
   */
- public dynamic function windowWidth(): Int;
+ public function windowWidth(): Int;
 
  /**
   * Returns the window height.
@@ -28,17 +28,17 @@ extern class Window_MapName extends Window_Base {
   * @returns {number}
   * @memberof Window_MapName
   */
- public dynamic function windowHeight(): Int;
+ public function windowHeight(): Int;
 
- public dynamic function updateFadeIn(): Void;
- public dynamic function updateFadeOut(): Void;
+ public function updateFadeIn(): Void;
+ public function updateFadeOut(): Void;
 
  /**
   * Windows the map name window.
   *
   * @memberof Window_MapName
   */
- public dynamic function refresh(): Void;
+ public function refresh(): Void;
 
  /**
   * Draws the background of the map name window.
@@ -49,6 +49,5 @@ extern class Window_MapName extends Window_Base {
   * @param {number} height
   * @memberof Window_MapName
   */
- public dynamic function drawBackground(x: Int, y: Int, width: Int,
-  height: Int): Void;
+ public function drawBackground(x: Int, y: Int, width: Int, height: Int): Void;
 }

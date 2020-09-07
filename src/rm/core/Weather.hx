@@ -35,14 +35,14 @@ extern class Weather extends Container {
   * @class Weather
   * @constructor
   */
- public dynamic function new();
+ public function new();
 
  /**
   * Updates the weather for each frame.
   *
   * @method update
   */
- public dynamic function update(): Void;
+ public function update(): Void;
 
  private var _width: Int;
  private var _height: Int;
@@ -56,70 +56,70 @@ extern class Weather extends Container {
   * @method _createBitmaps
   * @private
   */
- private dynamic function _createBitmaps(): Void;
+ private function _createBitmaps(): Void;
 
  /**
   * @method _createDimmer
   * @private
   */
- private dynamic function _createDimmer(): Void;
+ private function _createDimmer(): Void;
 
  /**
   * @method _updateDimmer
   * @private
   */
- private dynamic function _updateDimmer(): Void;
+ private function _updateDimmer(): Void;
 
  /**
   * @method _updateAllSprites
   * @private
   */
- private dynamic function _updateAllSprites(): Void;
+ private function _updateAllSprites(): Void;
 
  /**
   * @method _addSprite
   * @private
   */
- private dynamic function _addSprite(): Void;
+ private function _addSprite(): Void;
 
  /**
   * @method _removeSprite
   * @private
   */
- private dynamic function _removeSprite(): Void;
+ private function _removeSprite(): Void;
 
  /**
   * @method _updateSprite
   * @param {Sprite} sprite
   * @private
   */
- private dynamic function _updateSprite(sprite: Sprite): Void;
+ private function _updateSprite(sprite: Sprite): Void;
 
  /**
   * @method _updateRainSprite
   * @param {Sprite} sprite
   * @private
   */
- private dynamic function _updateRainSprite(sprite: Sprite): Void;
+ private function _updateRainSprite(sprite: Sprite): Void;
 
  /**
   * @method _updateStormSprite
   * @param {Sprite} sprite
   * @private
   */
- private dynamic function _updateStormSprite(sprite: Sprite): Void;
+ private function _updateStormSprite(sprite: Sprite): Void;
 
  /**
   * @method _updateSnowSprite
   * @param {Sprite} sprite
   * @private
   */
- private dynamic function _updateSnowSprite(sprite: Sprite): Void;
+ private function _updateSnowSprite(sprite: Sprite): Void;
 
  /**
   * @method _rebornSprite
   * @param {Sprite} sprite
   * @private
   */
- private dynamic function _rebornSprite(sprite: Sprite): Void;
+ private function _rebornSprite(sprite: Sprite): Void;
 }

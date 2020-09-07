@@ -31,133 +31,132 @@ extern class Scene_Shop extends Scene_MenuBase {
  private var _sellWindow: Window_ShopSell;
 
  #if !compileMV
- public dynamic function commandWindowRect(): Rectangle;
- public dynamic function dummyWindowRect(): Rectangle;
- public dynamic function numberWindowRect(): Rectangle;
- public dynamic function statusWindowRect(): Rectangle;
- public dynamic function buyWindowRect(): Rectangle;
- public dynamic function categoryWindowRect(): Rectangle;
- public dynamic function sellWindowRect(): Rectangle;
+ public function commandWindowRect(): Rectangle;
+ public function dummyWindowRect(): Rectangle;
+ public function numberWindowRect(): Rectangle;
+ public function statusWindowRect(): Rectangle;
+ public function buyWindowRect(): Rectangle;
+ public function categoryWindowRect(): Rectangle;
+ public function sellWindowRect(): Rectangle;
  #end
 
  // Redefinition
  //  private var _helpWindow: Window_Help;
- public dynamic function prepare(goods: Array<Array<Any>>,
-  purchaseOnly: Bool): Void;
+ public function prepare(goods: Array<Array<Any>>, purchaseOnly: Bool): Void;
 
  /**
   * Creates the gold window on the shop scene.
   *
   * @memberof Scene_Shop
   */
- public dynamic function createGoldWindow(): Void;
+ public function createGoldWindow(): Void;
 
  /**
   * Creates the command window for buying or selling.
   *
   * @memberof Scene_Shop
   */
- public dynamic function createCommandWindow(): Void;
+ public function createCommandWindow(): Void;
 
- public dynamic function createDummyWindow(): Void;
+ public function createDummyWindow(): Void;
 
  /**
   * Creates the number input window on the shop scene.
   *
   * @memberof Scene_Shop
   */
- public dynamic function createNumberWindow(): Void;
+ public function createNumberWindow(): Void;
 
  /**
   * Creates the status window.
   *
   * @memberof Scene_Shop
   */
- public dynamic function createStatusWindow(): Void;
+ public function createStatusWindow(): Void;
 
  /**
   * Creates the buy window.
   *
   * @memberof Scene_Shop
   */
- public dynamic function createBuyWindow(): Void;
+ public function createBuyWindow(): Void;
 
  /**
   * Creates the category window.
   *
   * @memberof Scene_Shop
   */
- public dynamic function createCategoryWindow(): Void;
+ public function createCategoryWindow(): Void;
 
  /**
   * Creates the sell window.
   *
   * @memberof Scene_Shop
   */
- public dynamic function createSellWindow(): Void;
+ public function createSellWindow(): Void;
 
  /**
   * Activates the buy window within the shop scene.
   *
   * @memberof Scene_Shop
   */
- public dynamic function activateBuyWindow(): Void;
+ public function activateBuyWindow(): Void;
 
  /**
   * Activates the sell window within the shop scene.
   *
   * @memberof Scene_Shop
   */
- public dynamic function activateSellWindow(): Void;
+ public function activateSellWindow(): Void;
 
  /**
   * Handler for pressing buy within the shop scene.
   *
   * @memberof Scene_Shop
   */
- public dynamic function commandBuy(): Void;
+ public function commandBuy(): Void;
 
  /**
   * Handler for pressing sell within the shop scene.
   *
   * @memberof Scene_Shop
   */
- public dynamic function commandSell(): Void;
+ public function commandSell(): Void;
 
  /**
   * Handler for when buying is confirmed.
   *
   * @memberof Scene_Shop
   */
- public dynamic function onBuyOk(): Void;
+ public function onBuyOk(): Void;
 
  /**
   * Handler for when buying is cancelled.
   *
   * @memberof Scene_Shop
   */
- public dynamic function onBuyCancel(): Void;
+ public function onBuyCancel(): Void;
 
- public dynamic function onCategoryOk(): Void;
- public dynamic function onCategoryCancel(): Void;
- public dynamic function onSellOk(): Void;
- public dynamic function onSellCancel(): Void;
- public dynamic function onNumberOk(): Void;
- public dynamic function onNumberCancel(): Void;
+ public function onCategoryOk(): Void;
+ public function onCategoryCancel(): Void;
+ public function onSellOk(): Void;
+ public function onSellCancel(): Void;
+ public function onNumberOk(): Void;
+ public function onNumberCancel(): Void;
 
  /**
   * Amount of item to buy.
   * @param number
   */
- public dynamic function doBuy(number: Int): Void;
+ public function doBuy(number: Int): Void;
 
  /**
   * Amount of item to sell.
   * @param number
   */
- public dynamic function doSell(number: Int): Void;
+ public function doSell(number: Int): Void;
 
- public dynamic function endNumberInput(): Void;
+ public function endNumberInput(): Void;
 
  /**
   * Returns the maximum number bought.
@@ -165,7 +164,7 @@ extern class Scene_Shop extends Scene_MenuBase {
   * @returns {number}
   * @memberof Scene_Shop
   */
- public dynamic function maxBuy(): Int;
+ public function maxBuy(): Int;
 
  /**
   * Returns the maximum number sold.
@@ -173,7 +172,7 @@ extern class Scene_Shop extends Scene_MenuBase {
   * @returns {number}
   * @memberof Scene_Shop
   */
- public dynamic function maxSell(): Int;
+ public function maxSell(): Int;
 
  /**
   * Returns the player gold within
@@ -181,7 +180,7 @@ extern class Scene_Shop extends Scene_MenuBase {
   * @returns {number}
   * @memberof Scene_Shop
   */
- public dynamic function money(): Money;
+ public function money(): Money;
 
  /**
   * Returns the currency unit of the
@@ -189,7 +188,7 @@ extern class Scene_Shop extends Scene_MenuBase {
   * @returns {string}
   * @memberof Scene_Shop
   */
- public dynamic function currencyUnit(): String;
+ public function currencyUnit(): String;
 
  /**
   * Returns the buying price for the current item.
@@ -197,7 +196,7 @@ extern class Scene_Shop extends Scene_MenuBase {
   * @returns {number}
   * @memberof Scene_Shop
   */
- public dynamic function buyingPrice(): Money;
+ public function buyingPrice(): Money;
 
  /**
   * Returns the selling price for the current item.
@@ -205,5 +204,5 @@ extern class Scene_Shop extends Scene_MenuBase {
   * @returns {number}
   * @memberof Scene_Shop
   */
- public dynamic function sellingPrice(): Money;
+ public function sellingPrice(): Money;
 }
