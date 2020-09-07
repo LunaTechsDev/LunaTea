@@ -94,6 +94,6 @@ public function paramX(): Int;
  * ```
  * @return Int
  */
-public dynamic paramY():Int;
+public function paramY(): Int;
 #end
 }

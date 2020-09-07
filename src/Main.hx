@@ -1,7 +1,5 @@
-import rm.windows.Window_MenuStatus;
 import rm.windows.Window_Base;
 import rm.Globals.GameVariables;
-import js.Syntax;
 import js.html.Window;
 import js.lib.Function;
 import rm.scenes.Scene_Base;
