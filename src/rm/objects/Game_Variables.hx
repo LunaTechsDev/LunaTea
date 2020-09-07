@@ -6,10 +6,13 @@ package rm.objects;
 @:expose("Game_Variables")
 @:native("Game_Variables")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 @:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Variables {
- @:native("_data")
- public var __data: Array<Int>;
+ /**
+  * List of all active game variables in the game and their values.
+  */
  private var _data: Array<Int>;
 
  public function new(): Void;

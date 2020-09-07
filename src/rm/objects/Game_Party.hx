@@ -19,31 +19,17 @@ extern class Game_Party extends Game_Unit {
  public static var ABILITY_GOLD_DOUBLE: Int;
  public static var ABILITY_DROP_ITEM_DOUBLE: Int;
 
- @:native("_gold")
- public var __gold: Int;
  private var _gold: Int;
- @:native("_steps")
- public var __steps: Int;
- private var _steps: Int;
- @:native("_lastItem")
- public var __lastItem: Game_Item;
- private var _lastItem: Game_Item;
- @:native("_menuActorId")
- public var __menuActorId: Int;
- private var _menuActorId: Int;
- @:native("_targetActorId")
- public var __targetActorId: Int;
- private var _targetActorId: Int;
- @:native("_actors")
- public var __actors: Array<Game_Actor>;
- private var _actors: Array<Game_Actor>;
 
- /**
-  * Data structure.
-  * [ItemId:Int] : Int
-  */
- @:native("_items")
- public var __items: DynamicAccess<Dynamic>;
+ private var _steps: Int;
+
+ private var _lastItem: Game_Item;
+
+ private var _menuActorId: Int;
+
+ private var _targetActorId: Int;
+
+ private var _actors: Array<Game_Actor>;
 
  /**
   * Data structure.
@@ -55,21 +41,7 @@ extern class Game_Party extends Game_Unit {
   * Data structure.
   * [weaponId:Int] : Int
   */
- @:native("_weapons")
- public var __weapons: DynamicAccess<Dynamic>;
-
- /**
-  * Data structure.
-  * [weaponId:Int] : Int
-  */
  private var _weapons: DynamicAccess<Dynamic>;
-
- /**
-  * Data structure.
-  * [armorId:Int] : Int
-  */
- @:native("_armors")
- public var __armors: DynamicAccess<Dynamic>;
 
  /**
   * Data structure.

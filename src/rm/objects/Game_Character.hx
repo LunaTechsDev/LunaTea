@@ -57,23 +57,16 @@ extern class Game_Character extends Game_CharacterBase {
  public static var ROUTE_PLAY_SE: Int;
  public static var ROUTE_SCRIPT: Int;
 
- @:native("_moveRouteForcing")
- public var __moveRouteForcing: Bool;
  private var _moveRouteForcing: Bool;
- @:native("_moveRoute")
- public var __moveRoute: MoveRoute;
+
  private var _moveRoute: MoveRoute;
- @:native("_moveRouteIndex")
- public var __moveRouteIndex: Int;
+
  private var _moveRouteIndex: Int;
- @:native("_originalMoveRoute")
- public var __originalMoveRoute: MoveRoute;
+
  private var _originalMoveRoute: MoveRoute;
- @:native("_originalMoveRouteIndex")
- public var __originalMoveRouteIndex: Int;
+
  private var _originalMoveRouteIndex: Int;
- @:native("_waitCount")
- public var __waitCount: Int;
+
  private var _waitCount: Int;
 
  public function initMembers(): Void;

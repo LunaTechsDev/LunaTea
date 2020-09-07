@@ -3,13 +3,8 @@ package rm.objects;
 @:expose("Game_Actors")
 @:native("Game_Actors")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Actors {
- /**
-  * List of all Game_Actor in the database.
-  */
- @:native("_data")
- public var __data: Array<Game_Actor>;
-
  /**
   * List of Game_Actor in the database.
   */

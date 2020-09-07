@@ -11,12 +11,10 @@ import rm.types.RPG.BaseItem;
 @:expose("Game_Item")
 @:native("Game_Item")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Item {
- @:native("_dataClass")
- public var __dataClass: String;
  private var _dataClass: String;
- @:native("_itemId")
- public var __itemId: Int;
+
  private var _itemId: Int;
 
  public function new(item: BaseItem): Void;

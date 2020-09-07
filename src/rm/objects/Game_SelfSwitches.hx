@@ -8,13 +8,8 @@ import haxe.DynamicAccess;
 @:expose("Game_SelfSwitches")
 @:native("Game_SelfSwitches")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_SelfSwitches {
- /**
-  * {key: Array<Any>}
-  */
- @:native("_data")
- public var __data: DynamicAccess<Dynamic>;
-
  /**
   * {key: Array<Any>}
   */

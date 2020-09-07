@@ -10,15 +10,12 @@ package rm.objects;
 @:expose("Game_Followers")
 @:native("Game_Followers")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Followers {
- @:native("_visible")
- public var __visible: Bool;
  private var _visible: Bool;
- @:native("_gathering")
- public var __gathering: Bool;
+
  private var _gathering: Bool;
- @:native("_data")
- public var __data: Array<Game_Follower>;
+
  private var _data: Array<Game_Follower>;
 
  public function new(): Void;

@@ -8,12 +8,10 @@ package rm.objects;
 @:expose("Game_Timer")
 @:native("Game_Timer")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Timer {
- @:native("_frames")
- public var __frames: Int;
  private var _frames: Int;
- @:native("_working")
- public var __working: Bool;
+
  private var _working: Bool;
 
  public function new(): Void;

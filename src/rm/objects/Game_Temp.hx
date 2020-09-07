@@ -8,18 +8,14 @@ package rm.objects;
 @:expose("Game_Temp")
 @:native("Game_Temp")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Temp {
- @:native("_isPlaytest")
- public var __isPlaytest: Bool;
  private var _isPlaytest: Bool;
- @:native("_commonEventId")
- public var __commonEventId: Int;
+
  private var _commonEventId: Int;
- @:native("_destinationX")
- public var __destinationX: Int;
+
  private var _destinationX: Int;
- @:native("_destinationY")
- public var __destionationY: Int;
+
  private var _destinationY: Int;
  public function new(): Void;
 

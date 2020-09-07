@@ -11,6 +11,7 @@ import rm.objects.Game_Picture;
 @:expose("Game_Screen")
 @:native("Game_Screen")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Screen {
  private var _shake: Int;
  private var _shakePower: Int;

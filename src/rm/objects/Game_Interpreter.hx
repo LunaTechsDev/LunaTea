@@ -21,51 +21,36 @@ typedef Branch = {
 @:expose("Game_Interpreter")
 @:native("Game_Interpreter")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Interpreter {
- @:native("_depth")
- public var __depth: Int;
  private var _depth: Int;
- @:native("_branch")
- public var __branch: Object;
+
  private var _branch: Object; // Branch
- @:native("_params")
- public var __params: Array<Any>;
+
  private var _params: Array<Any>;
- @:native("_indent")
- public var __indent: Int;
+
  private var _indent: Int;
- @:native("_frameCount")
- public var __frameCount: Int;
+
  private var _frameCount: Int;
- @:native("_freezeChecker")
- public var __freezeChecker: Int;
+
  private var _freezeChecker: Int;
- @:native("_mapId")
- public var __mapId: Int;
+
  private var _mapId: Int;
- @:native("_eventId")
- public var __eventId: Int;
+
  private var _eventId: Int;
- @:native("_list")
- public var __list: Array<EventCommand>;
+
  private var _list: Array<EventCommand>;
- @:native("_index")
- public var __index: Int;
+
  private var _index: Int;
- @:native("_waitCount")
- public var __waitCount: Int;
+
  private var _waitCount: Int;
- @:native("_waitMode")
- public var __waitMode: InterpreterWaitMode;
+
  private var _waitMode: InterpreterWaitMode;
- @:native("_comments")
- public var __comments: String;
+
  private var _comments: String;
- @:native("_character")
- public var __character: Game_Event;
+
  private var _character: Game_Event;
- @:native("_childInterpreter")
- public var __childInterpreter: Game_Interpreter;
+
  private var _childInterpreter: Game_Interpreter;
 
  public function new(depth: Int);

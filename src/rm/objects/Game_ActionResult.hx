@@ -13,6 +13,7 @@ import rm.types.RPG.State;
 @:expose("Game_ActionResult")
 @:native("Game_ActionResult")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_ActionResult {
  public var used: Bool;
  public var missed: Bool;
