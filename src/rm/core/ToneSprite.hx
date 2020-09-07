@@ -6,6 +6,7 @@ import pixi.core.display.Container;
 
 @:expose("ToneSprite")
 @:native("ToneSprite")
+@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
 extern class ToneSprite extends Container {
  /**
   * The sprite which changes the screen color in 2D canvas mode.

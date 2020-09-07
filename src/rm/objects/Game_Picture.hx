@@ -7,6 +7,7 @@ package rm.objects;
  */
 @:expose("Game_Picture")
 @:native("Game_Picture")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Picture {
  /**
   * _name property of the current picture.

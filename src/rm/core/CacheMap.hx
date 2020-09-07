@@ -4,6 +4,8 @@ import rm.managers.ImageManager;
 
 @:expose("CacheMap")
 @:native("CacheMap")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
 extern class CacheMap {
  /**
   * Cache for images, audio, or any other kind of resource

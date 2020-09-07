@@ -7,6 +7,7 @@ package rm.objects;
  */
 @:expose("Game_Temp")
 @:native("Game_Temp")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Temp {
  @:native("_isPlaytest")
  public var __isPlaytest: Bool;

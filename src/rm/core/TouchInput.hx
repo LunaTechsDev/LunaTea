@@ -9,6 +9,7 @@ import rm.types.RM.TouchInputEvents;
 
 @:expose("TouchInput")
 @:native("TouchInput")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class TouchInput {
  @:native("_mousePressed")
  public static var __mousePressed: Bool;

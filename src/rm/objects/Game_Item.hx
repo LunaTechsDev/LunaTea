@@ -10,6 +10,7 @@ import rm.types.RPG.BaseItem;
  */
 @:expose("Game_Item")
 @:native("Game_Item")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Item {
  @:native("_dataClass")
  public var __dataClass: String;

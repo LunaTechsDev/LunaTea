@@ -4,6 +4,7 @@ import rm.types.RPG;
 
 @:expose("Game_CommonEvent")
 @:native("Game_CommonEvent")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_CommonEvent {
  @:native("_commonEventId")
  public var __commonEventId: Int;

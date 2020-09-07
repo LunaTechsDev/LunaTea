@@ -35,20 +35,22 @@ class Main {
 
   var d = abc.map((i) -> i * 2);
 
-  Fn.proto(Window_Base).update = () -> {
+  Fn.proto(Window_Base).updateD = () -> {
    var self: Window_Base = Fn.self;
    self.update();
    self.hide();
   };
 
   Fn.updateProto(Window_Base, (self) -> {
-   self.update = () -> {
+   self.updateD = () -> {
     self.hide();
    }
 
-   self.standardBackOpacity = () -> {
+   self.standardBackOpacityD = () -> {
     return 3;
    }
   });
  }
+
+ var update = 3;
 }

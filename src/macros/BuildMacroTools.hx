@@ -66,6 +66,38 @@ class BuildMacroTools {
   });
   return fields;
  }
+
+ macro public static function buildDynamicFunctions(): Array<Field> {
+  var fields = Context.getBuildFields();
+
+  fields.filter((field: Field) -> {
+   return field.name != "new" && switch (field.kind) {
+    case FFun(_):
+     true;
+    case FVar(t, e):
+     false;
+    case FProp(get, set, t, e):
+     false;
+   }
+  }).iter((fnField) -> {
+   var metaData: MetadataEntry = {
+    name: ":native",
+    params: [macro $v{fnField.name}],
+    pos: Context.currentPos()
+   };
+   var newField: Field = {
+    name: fnField.name + "D",
+    access: fnField.access.copy().concat([Access.ADynamic]),
+    kind: fnField.kind,
+    pos: Context.currentPos(),
+    doc: null,
+    meta: [metaData]
+   }
+   fields.push(newField);
+  });
+  return fields;
+ }
+
  //  macro public static function rmClass(original: Dynamic): Array<Field> {
  //   var pos = Context.currentPos();
  //   var fields = Context.getBuildFields();

@@ -12,6 +12,8 @@ import pixi.core.sprites.Sprite;
 
 @:expose("Sprite")
 @:native("Sprite")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Sprite extends pixi.core.sprites.Sprite {
  /**
   * Number of the created objects.

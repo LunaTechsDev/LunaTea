@@ -2,6 +2,7 @@ package rm.core;
 
 @:expose("ScreenSprite")
 @:native("ScreenSprite")
+@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
 extern class ScreenSprite extends pixi.core.sprites.Sprite {
  /**
   * The opacity of the sprite (0 to 255).

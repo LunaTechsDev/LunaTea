@@ -4,6 +4,7 @@ import pixi.filters.colormatrix.ColorMatrixFilter;
 
 @:expose("ToneFilter")
 @:native("ToneFilter")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class ToneFilter extends ColorMatrixFilter {
  /**
   * The color matrix filter for WebGL.

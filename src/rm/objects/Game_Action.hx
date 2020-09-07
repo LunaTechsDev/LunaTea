@@ -11,6 +11,7 @@ import rm.types.RPG.Effect;
  */
 @:expose("Game_Action")
 @:native("Game_Action")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Action {
  public static var EFFECT_RECOVER_HP: Int;
  public static var EFFECT_RECOVER_MP: Int;

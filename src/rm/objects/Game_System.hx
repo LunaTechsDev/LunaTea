@@ -9,6 +9,7 @@ import rm.types.RPG.AudioFile;
  */
 @:expose("Game_System")
 @:native("Game_System")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_System {
  private var _saveEnabled: Bool;
  private var _menuEnabled: Bool;

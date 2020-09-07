@@ -15,6 +15,8 @@ import rm.types.LunaTea.MoveFrequency;
  */
 @:expose("Game_CharacterBase")
 @:native("Game_CharacterBase")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_CharacterBase {
  @:native("_x")
  public var __x: Int;

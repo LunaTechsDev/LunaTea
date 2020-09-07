@@ -4,6 +4,8 @@ import pixi.core.display.Container;
 
 @:expose("Weather")
 @:native("Weather")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Weather extends Container {
  /**
   * The type of the weather in ['none', 'rain', 'storm', 'snow'].

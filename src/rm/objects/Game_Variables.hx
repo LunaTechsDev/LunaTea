@@ -5,6 +5,8 @@ package rm.objects;
  */
 @:expose("Game_Variables")
 @:native("Game_Variables")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Variables {
  @:native("_data")
  public var __data: Array<Int>;

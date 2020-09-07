@@ -4,6 +4,8 @@ import js.html.AudioElement;
 
 @:expose("HTML5Audio")
 @:native("HTML5Audio")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
 extern class HTML5Audio {
  @:native("_initialized")
  public var __initialized: Bool;

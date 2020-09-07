@@ -8,6 +8,7 @@ import rm.types.RPG;
  */
 @:expose("Game_Map")
 @:native("Game_Map")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Map {
  @:native("_interpreter")
  public var __interpreter: Game_Interpreter;

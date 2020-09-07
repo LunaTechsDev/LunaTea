@@ -7,6 +7,8 @@ package rm.objects;
  */
 @:expose("Game_Unit")
 @:native("Game_Unit")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Unit {
  @:native("_inBattle")
  public var __inBattle: Bool;

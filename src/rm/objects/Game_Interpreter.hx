@@ -20,6 +20,7 @@ typedef Branch = {
  */
 @:expose("Game_Interpreter")
 @:native("Game_Interpreter")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Interpreter {
  @:native("_depth")
  public var __depth: Int;

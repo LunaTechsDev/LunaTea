@@ -21,6 +21,8 @@ import haxe.DynamicAccess;
  */
 @:expose("Game_BattlerBase")
 @:native("Game_BattlerBase")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_BattlerBase {
  public function new(): Void;
  public function initialize(): Void;

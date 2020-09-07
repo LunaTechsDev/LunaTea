@@ -17,6 +17,8 @@ import js.html.CanvasElement;
  */
 @:expose("Graphics")
 @:native("Graphics")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Graphics {
  /**
   * The total frame count of the game screen.

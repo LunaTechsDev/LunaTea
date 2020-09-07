@@ -7,6 +7,7 @@ package rm.objects;
  */
 @:expose("Game_Switches")
 @:native("Game_Switches")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Switches {
  @:native("_data")
  public var __data: Array<Bool>;

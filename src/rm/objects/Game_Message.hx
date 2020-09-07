@@ -9,6 +9,7 @@ import rm.types.LunaTea.MessageBackgroundType;
 
 @:expose("Game_Message")
 @:native("Game_Message")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Message {
  @:native("_texts")
  public var __texts: Array<String>;

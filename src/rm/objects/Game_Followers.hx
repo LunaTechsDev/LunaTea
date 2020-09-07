@@ -9,6 +9,7 @@ package rm.objects;
  */
 @:expose("Game_Followers")
 @:native("Game_Followers")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Followers {
  @:native("_visible")
  public var __visible: Bool;

@@ -2,6 +2,7 @@ package rm.objects;
 
 @:expose("Game_Actors")
 @:native("Game_Actors")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Actors {
  /**
   * List of all Game_Actor in the database.

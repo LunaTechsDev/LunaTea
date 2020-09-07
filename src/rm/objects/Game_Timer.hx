@@ -7,6 +7,7 @@ package rm.objects;
  */
 @:expose("Game_Timer")
 @:native("Game_Timer")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Timer {
  @:native("_frames")
  public var __frames: Int;

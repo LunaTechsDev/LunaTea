@@ -6,6 +6,8 @@ import js.lib.Object;
 
 @:expose("Input")
 @:native("Input")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Input {
  /**
   * Current Input State Object
