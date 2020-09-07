@@ -1,5 +1,6 @@
 package utils;
 
+import haxe.Constraints.Function;
 import haxe.extern.EitherType;
 import js.html.Console;
 import haxe.macro.Type.ClassType;
@@ -76,8 +77,20 @@ class Fn {
  }
 
  @:keep
- public static inline function proto<T>(obj: Class<T>): TBox<T> {
+ public static inline function proto<T>(obj: Class<T>): T {
   return Syntax.field(obj, "prototype");
+ }
+
+ @:keep
+ public static inline function updateProto<T>(obj: Class<T>,
+   fn: T->Void): Dynamic {
+  return Syntax.code("({1})({0}.prototype)", obj, fn);
+ }
+
+ @:keep
+ public static inline function updateEntity<T>(obj: Class<T>,
+   fn: T->Void): Dynamic {
+  return Syntax.code("({1})({0})", obj, fn);
  }
 
  public static inline function setPrProp(obj: Any, fieldName: String,

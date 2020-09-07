@@ -1,3 +1,4 @@
+import rm.windows.Window_MenuStatus;
 import rm.windows.Window_Base;
 import rm.Globals.GameVariables;
 import js.Syntax;
@@ -7,6 +8,9 @@ import rm.scenes.Scene_Base;
 import utils.Fn;
 import utils.Comment;
 import macros.MacroTools;
+
+using core.LambdaTea;
+using Lambda;
 
 class Main {
  public static function main() {
@@ -25,6 +29,26 @@ class Main {
    Fn.setField(Window, "Haxe", "Version 4.2.0");
    trace("Running Console Log From Haxe Added haxe Version");
   });
-  Fn.proto(Window_Base).update = () -> {};
+
+  var abc = [1, 2, 3, 4, 5, 10];
+  var x = abc.fold((x, result) -> result = x * 2, 0);
+
+  var d = abc.map((i) -> i * 2);
+
+  Fn.proto(Window_Base).update = () -> {
+   var self: Window_Base = Fn.self;
+   self.update();
+   self.hide();
+  };
+
+  Fn.updateProto(Window_Base, (self) -> {
+   self.update = () -> {
+    self.hide();
+   }
+
+   self.standardBackOpacity = () -> {
+    return 3;
+   }
+  });
  }
 }
