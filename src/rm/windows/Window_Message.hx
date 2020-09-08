@@ -22,16 +22,11 @@ extern class Window_Message extends Window_Base {
 
  #if compileMV
  public function initialize(): Void;
+ #else
+ public function initialize(rect: Rectangle): Void;
+ #end
 
  public function initMembers(): Void;
-
- /**
-  * Processes normal characters displayed within the message window.
-  * @param textState
-  */
- public function processNormalCharacter(textState: String): Void;
- #else
- #end
 
  /**
   * Returns the sub windows attached to the message window.
