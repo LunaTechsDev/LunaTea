@@ -2,6 +2,7 @@ package rm.windows;
 
 import rm.core.Bitmap;
 import rm.types.RM.TextState;
+import rm.core.Rectangle;
 
 @:expose("Window_Message")
 @:native("Window_Message")
