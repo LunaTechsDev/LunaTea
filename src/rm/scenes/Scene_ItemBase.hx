@@ -12,6 +12,8 @@ import rm.windows.Window_Base;
  */
 @:expose("Scene_ItemBase")
 @:native("Scene_ItemBase")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_ItemBase extends Scene_Base {
  private var _actorWindow: Window_MenuActor;
  private var _itemWindow: Window_Selectable;

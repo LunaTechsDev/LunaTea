@@ -10,6 +10,8 @@ import rm.objects.Game_Enemy;
  */
 @:expose("Sprite_Enemy")
 @:native("Sprite_Enemy")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Enemy extends Sprite_Battler {
  private var _enemy: Game_Enemy;
 

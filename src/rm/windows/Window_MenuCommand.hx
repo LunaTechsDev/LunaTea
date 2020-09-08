@@ -2,6 +2,8 @@ package rm.windows;
 
 @:expose("Window_MenuCommand")
 @:native("Window_MenuCommand")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_MenuCommand extends Window_Command {
  public function new(x: Int, y: Int): Void;
  public static function initCommandPosition(): Void;

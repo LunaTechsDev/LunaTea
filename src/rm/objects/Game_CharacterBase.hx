@@ -17,8 +17,6 @@ import rm.types.LunaTea.MoveFrequency;
 @:native("Game_CharacterBase")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
-@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
-@:autoBuild(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_CharacterBase {
  private var _x: Int;
 

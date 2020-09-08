@@ -13,6 +13,8 @@ import rm.types.RPG.Enemy;
  */
 @:expose("Game_Enemy")
 @:native("Game_Enemy")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Enemy extends Game_Battler {
  private var _enemyId: Int;
 

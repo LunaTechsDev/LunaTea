@@ -16,6 +16,7 @@ import rm.types.LunaTea.BattleResult;
  */
 @:expose("BattleManager")
 @:native("BattleManager")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class BattleManager {
  private var _phase: String;

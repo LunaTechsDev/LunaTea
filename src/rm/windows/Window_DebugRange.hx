@@ -9,6 +9,8 @@ package rm.windows;
  */
 @:expose("Window_DebugRange")
 @:native("Window_DebugRange")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_DebugRange extends Window_Selectable {
  private static var lastTopRow: Int;
  private static var lastIndex: Int;

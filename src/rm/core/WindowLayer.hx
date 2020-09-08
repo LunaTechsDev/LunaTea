@@ -13,8 +13,6 @@ import pixi.core.display.Container;
 @:native("WindowLayer")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
-@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
-@:autoBuild(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class WindowLayer extends Container {
  /**
   * The width of the window layer in pixels.

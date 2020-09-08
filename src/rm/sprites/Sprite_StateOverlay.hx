@@ -10,6 +10,8 @@ import rm.objects.Game_Battler;
  */
 @:expose("Sprite_StateOverlay")
 @:native("Sprite_StateOverlay")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_StateOverlay extends Sprite_Base {
  private var _battler: Game_Battler;
 

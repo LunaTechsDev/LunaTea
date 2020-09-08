@@ -9,6 +9,8 @@ package rm.windows;
  */
 @:expose("Window_ItemCategory")
 @:native("Window_ItemCategory")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ItemCategory extends Window_HorzCommand {
  private var _itemWindow: Window_ItemList;
 

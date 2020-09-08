@@ -16,6 +16,8 @@ import rm.core.Sprite;
  */
 @:expose("Spriteset_Map")
 @:native("Spriteset_Map")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Spriteset_Map extends Spriteset_Base {
  private var _parallax: TilingSprite;
 

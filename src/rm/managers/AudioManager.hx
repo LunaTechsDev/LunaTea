@@ -9,6 +9,7 @@ import rm.types.RM;
  */
 @:expose("AudioManager")
 @:native("AudioManager")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class AudioManager {
  private static var _bgmVolume: Int;

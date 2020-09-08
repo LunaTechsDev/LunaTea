@@ -7,7 +7,8 @@ import rm.types.RM.ConfigData;
  */
 @:expose("ConfigManager")
 @:native("ConfigManager")
-@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class ConfigManager {
  public static function load(): Void;
  public static function save(): Void;

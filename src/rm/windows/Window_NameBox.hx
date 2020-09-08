@@ -9,6 +9,8 @@ import rm.core.Rectangle;
  */
 @:expose("Window_NameBox")
 @:native("Window_NameBox")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_NameBox extends Window_Base {
  /**
   * Sets the current message window.
@@ -74,6 +76,8 @@ extern class Window_NameBox extends Window_Base {
 #else
 @:expose("Window_NameBox")
 @:native("Window_NameBox")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 class Window_NameBox extends Window_Base {
  public function new() {
   // TODO: Fix and update with proper coordinates

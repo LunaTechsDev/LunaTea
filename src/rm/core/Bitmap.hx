@@ -12,8 +12,6 @@ import js.html.CanvasElement;
 @:native("Bitmap")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
-@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
-@:autoBuild(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Bitmap {
  /**
   * Loads a image file and returns a new bitmap object.

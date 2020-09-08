@@ -13,6 +13,8 @@ import rm.windows.Window_ItemCategory;
  */
 @:expose("Scene_Item")
 @:native("Scene_Item")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Item extends Scene_ItemBase {
  private var _categoryWindow: Window_ItemCategory;
 

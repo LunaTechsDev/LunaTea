@@ -9,6 +9,8 @@ package rm.windows;
  */
 @:expose("Window_GameEnd")
 @:native("Window_GameEnd")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_GameEnd extends Window_Base {
  public function new();
 

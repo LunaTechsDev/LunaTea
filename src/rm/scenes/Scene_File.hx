@@ -8,6 +8,8 @@ import rm.windows.Window_SavefileList;
  */
 @:expose("Scene_File")
 @:native("Scene_File")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_File extends Scene_MenuBase {
  private var _listWindow: Window_SavefileList;
 

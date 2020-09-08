@@ -12,6 +12,8 @@ import rm.objects.Game_Actor;
  */
 @:expose("Sprite_Damage")
 @:native("Sprite_Damage")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Damage extends Sprite {
  private var _duration: Int;
 

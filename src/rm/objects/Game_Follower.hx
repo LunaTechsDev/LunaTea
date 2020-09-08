@@ -10,6 +10,8 @@ package rm.objects;
  */
 @:expose("Game_Follower")
 @:native("Game_Follower")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Follower extends Game_Character {
  private var _memberIndex: Int;
 

@@ -12,6 +12,7 @@ import utils.Fn;
 
 @:expose("Window_Base")
 @:native("Window_Base")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Window_Base extends _Window {
  #if compileMV
  /**

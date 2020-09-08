@@ -7,8 +7,6 @@ import pixi.core.display.Container;
 @:native("Stage")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
-@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
-@:autoBuild(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Stage extends Container {
  // The interactive flag causes a memory leak.
 

@@ -10,6 +10,8 @@ import rm.types.LunaTea.WeaponImageId;
  */
 @:expose("Sprite_Weapon")
 @:native("Sprite_Weapon")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Weapon extends Sprite_Base {
  private var _weaponImageId: WeaponImageId;
 

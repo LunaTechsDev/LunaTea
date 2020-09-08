@@ -10,6 +10,8 @@ import rm.core.Sprite;
  */
 @:expose("Sprite_Destination")
 @:native("Sprite_Destination")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Destination extends Sprite {
  private var _frameCount: Int;
 

@@ -7,8 +7,6 @@ package rm.objects;
 @:native("Game_Variables")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
-@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
-@:autoBuild(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Variables {
  /**
   * List of all active game variables in the game and their values.

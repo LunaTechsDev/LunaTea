@@ -7,6 +7,8 @@ import rm.core.Sprite;
  */
 @:expose("Scene_Gameover")
 @:native("Scene_Gameover")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Gameover extends Scene_Base {
  private var _backSprite: Sprite;
 

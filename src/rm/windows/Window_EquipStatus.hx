@@ -6,6 +6,8 @@ import rm.objects.Game_Actor;
 
 @:expose("Window_EquipStatus")
 @:native("Window_EquipStatus")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 #if compileMV
 extern class Window_EquipStatus extends Window_Base {
 #else

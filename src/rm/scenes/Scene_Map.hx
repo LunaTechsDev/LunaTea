@@ -11,6 +11,8 @@ import rm.windows.Window_ScrollText;
  */
 @:expose("Scene_Map")
 @:native("Scene_Map")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Map extends Scene_Base {
  private var _waitCount: Int;
  private var _encounterEffectDuration: Int;

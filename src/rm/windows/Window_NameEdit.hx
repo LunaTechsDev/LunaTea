@@ -12,6 +12,8 @@ import rm.core.Rectangle;
  */
 @:expose("Window_NameEdit")
 @:native("Window_NameEdit")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_NameEdit {
  private var _name: String;
  private var _index: Int;

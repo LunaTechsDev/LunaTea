@@ -8,6 +8,8 @@ import rm.windows.Window_Options;
  */
 @:expose("Scene_Options")
 @:native("Scene_Options")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Options extends Scene_MenuBase {
  private var _optionsWindow: Window_Options;
 

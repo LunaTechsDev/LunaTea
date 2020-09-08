@@ -11,6 +11,8 @@ import rm.core.Sprite;
  */
 @:expose("Sprite_Button")
 @:native("Sprite_Button")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Button extends Sprite {
  private var _touching: Bool;
 

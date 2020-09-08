@@ -9,6 +9,8 @@ import rm.types.LunaTea.Direction;
  */
 @:expose("Game_Vehicle")
 @:native("Game_Vehicle")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Vehicle extends Game_Character {
  private var _type: String;
 

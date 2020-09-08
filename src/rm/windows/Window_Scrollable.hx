@@ -5,6 +5,8 @@ import rm.core.Rectangle;
 #if !compileMV
 @:expose("Window_Scrollable")
 @:native("Window_Scrollable")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_Scrollable extends Window_Base {
  private var _scrollX: Int;
  private var _ScrollY: Int;

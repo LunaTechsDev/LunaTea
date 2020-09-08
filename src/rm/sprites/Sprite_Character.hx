@@ -13,6 +13,8 @@ import rm.core.Sprite;
  */
 @:expose("Sprite_Character")
 @:native("Sprite_Character")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Character extends Sprite_Base {
  /**
   * The Game_Character object assigned

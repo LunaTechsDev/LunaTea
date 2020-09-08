@@ -8,8 +8,6 @@ import js.lib.Object;
 @:native("Input")
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
-@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
-@:autoBuild(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Input {
  /**
   * Current Input State Object

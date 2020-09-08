@@ -13,6 +13,8 @@ import rm.types.RM.Motion;
  */
 @:expose("Sprite_Actor")
 @:native("Sprite_Actor")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Actor extends Sprite_Battler {
  public static var MOTIONS: {
   walk: Motion,

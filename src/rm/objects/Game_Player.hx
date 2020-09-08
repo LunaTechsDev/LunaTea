@@ -12,6 +12,8 @@ import rm.types.RPG.MapEncounter;
  */
 @:expose("Game_Player")
 @:native("Game_Player")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Player extends Game_Character {
  private var _vehicleType: String;
 

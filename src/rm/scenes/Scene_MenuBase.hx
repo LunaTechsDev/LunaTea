@@ -11,6 +11,8 @@ import rm.objects.Game_Actor;
  */
 @:expose("Scene_MenuBase")
 @:native("Scene_MenuBase")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_MenuBase extends Scene_Base {
  /**
   * The current actor selected in the base menu scene.

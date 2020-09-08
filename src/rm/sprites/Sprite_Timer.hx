@@ -10,6 +10,8 @@ import rm.core.Sprite;
  */
 @:expose("Sprite_Timer")
 @:native("Sprite_Timer")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Timer extends Sprite {
  private var _seconds: Int;
 

@@ -15,6 +15,8 @@ import rm.types.LunaTea.SkillTypeIdA;
  */
 @:expose("Window_SkillList")
 @:native("Window_SkillList")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_SkillList extends Window_Selectable {
  private var _actor: Game_Actor;
 

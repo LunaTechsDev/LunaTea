@@ -10,6 +10,8 @@ import rm.types.LunaTea.MotionType;
 
 @:expose("Game_Battler")
 @:native("Game_Battler")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Battler extends Game_BattlerBase {
  private var _actions: Array<Game_Action>;
 

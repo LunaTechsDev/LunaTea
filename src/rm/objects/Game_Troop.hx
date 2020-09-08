@@ -13,6 +13,8 @@ import rm.types.RPG;
  */
 @:expose("Game_Temp")
 @:native("Game_Troop")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Troop extends Game_Unit {
  public static var LETTER_TABLE_HALF: Array<String>;
  public static var LETTER_TABLE_FULL: Array<String>;

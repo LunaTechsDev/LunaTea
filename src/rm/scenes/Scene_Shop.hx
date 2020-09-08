@@ -17,6 +17,8 @@ import rm.windows.Window_Gold;
  */
 @:expose("Scene_Shop")
 @:native("Scene_Shop")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Shop extends Scene_MenuBase {
  private var _goods: Array<Array<Any>>;
  private var _purchaseOnly: Bool;

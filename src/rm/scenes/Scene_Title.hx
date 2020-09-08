@@ -6,6 +6,8 @@ import rm.windows.Window_TitleCommand;
 
 @:expose("Scene_Title")
 @:native("Scene_Title")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Title extends Scene_Base {
  /**
   * The command window for title scene commands like new game, continue, or options.

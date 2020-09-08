@@ -13,6 +13,8 @@ import rm.core.Rectangle;
  */
 @:expose("Window_BattleStatus")
 @:native("Window_BattleStatus")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_BattleStatus extends Window_Selectable {
  public function new();
 

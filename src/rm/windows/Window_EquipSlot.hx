@@ -12,6 +12,8 @@ import rm.objects.Game_Actor;
  */
 @:expose("Window_EquipSlot")
 @:native("Window_EquipSlot")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_EquipSlot extends Window_Selectable {
  private var _actor: Game_Actor;
  private var _itemWindow: Window_EquipItem;

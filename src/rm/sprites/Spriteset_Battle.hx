@@ -12,6 +12,8 @@ import rm.core.TilingSprite;
  */
 @:expose("Spriteset_Battle")
 @:native("Spriteset_Battle")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Spriteset_Battle extends Spriteset_Base {
  private var _battlebackLocated: Bool;
 

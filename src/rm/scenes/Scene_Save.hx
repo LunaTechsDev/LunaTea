@@ -5,6 +5,8 @@ package rm.scenes;
  */
 @:expose("Scene_Save")
 @:native("Scene_Save")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Save extends Scene_File {
  /**
   * Returns the mode of the

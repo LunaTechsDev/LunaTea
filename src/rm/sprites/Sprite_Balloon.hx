@@ -10,6 +10,8 @@ import rm.types.LunaTea.BalloonId;
  */
 @:expose("Sprite_Balloon")
 @:native("Sprite_Balloon")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Balloon extends Sprite_Base {
  private var _balloonId: BalloonId; // TODO: Create Balloon ID abstract
 

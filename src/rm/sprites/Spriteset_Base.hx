@@ -13,6 +13,8 @@ import rm.core.Sprite;
  */
 @:expose("Spriteset_Base")
 @:native("Spriteset_Base")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Spriteset_Base extends Sprite {
  private var _tone: Array<Int>;
 

@@ -7,8 +7,6 @@ import pixi.core.display.Container;
 @:native("Tilemap")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
-@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
-@:autoBuild(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Tilemap extends Container {
  // Tile type checkers
  public static var TILE_ID_A1: Int;

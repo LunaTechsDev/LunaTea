@@ -6,8 +6,6 @@ import js.html.AudioElement;
 @:native("HTML5Audio")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
-@:autoBuild(macros.BuildMacroTools.buildDynamicFunctions())
-@:autoBuild(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class HTML5Audio {
  private var _initialized: Bool;
 

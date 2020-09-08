@@ -9,6 +9,8 @@ package rm.windows;
  */
 @:expose("Window_ShopCommand")
 @:native("Window_ShopCommand")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ShopCommand extends Window_HorzCommand {
  private var _windowWidth: Int;
 

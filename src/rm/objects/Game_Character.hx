@@ -9,6 +9,8 @@ import rm.types.RPG.MoveRoute;
  */
 @:expose("Game_Character")
 @:native("Game_Character")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Character extends Game_CharacterBase {
  public static var ROUTE_END: Int;
  public static var ROUTE_MOVE_DOWN: Int;

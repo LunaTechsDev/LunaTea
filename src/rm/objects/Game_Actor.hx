@@ -12,6 +12,8 @@ import js.lib.Object;
  */
 @:expose("Game_Actor")
 @:native("Game_Actor")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Actor extends Game_Battler {
  private var _actorId: Int;
 

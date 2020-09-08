@@ -85,6 +85,7 @@ class BuildMacroTools {
     params: [macro $v{fnField.name}],
     pos: Context.currentPos()
    };
+   trace(fnField.name);
    var newField: Field = {
     name: fnField.name + "D",
     access: fnField.access.copy().concat([Access.ADynamic]),
@@ -93,6 +94,7 @@ class BuildMacroTools {
     doc: fnField.doc,
     meta: [metaData]
    }
+
    fields.push(newField);
   });
   return fields;

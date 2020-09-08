@@ -11,6 +11,8 @@ import js.lib.Object;
  */
 @:expose("Game_Party")
 @:native("Game_Party")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Party extends Game_Unit {
  public static var ABILITY_ENCOUNTER_HALF: Int;
  public static var ABILITY_ENCOUNTER_NONE: Int;

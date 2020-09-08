@@ -11,6 +11,8 @@ import rm.core.Sprite;
  */
 @:expose("Sprite_StateIcon")
 @:native("Sprite_StateIcon")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_StateIcon extends Sprite {
  #if compileMV
  private static var _iconWidth: Int;

@@ -11,6 +11,7 @@ import rm.objects.Game_Actor;
  */
 @:expose("Window_ActorCommand")
 @:native("Window_ActorCommand")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Window_ActorCommand extends Window_Command {
  private var _actor: Game_Actor;
 

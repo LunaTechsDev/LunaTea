@@ -11,6 +11,8 @@ import rm.objects.Game_Actor;
  */
 @:expose("Window_SkillType")
 @:native("Window_SkillType")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_SkillType extends Window_Command {
  /**
   * The current game actor attached to the window.

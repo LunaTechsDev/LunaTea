@@ -4,6 +4,8 @@ import rm.objects.Game_Battler;
 
 @:expose("Sprite_Battler")
 @:native("Sprite_Battler")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Battler extends Sprite_Base {
  private var _battler: Game_Battler;
 

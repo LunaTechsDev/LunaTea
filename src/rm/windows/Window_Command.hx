@@ -4,6 +4,8 @@ import rm.core.Rectangle;
 
 @:expose("Window_Command")
 @:native("Window_Command")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_Command extends Window_Selectable {
  #if compileMV
  /**

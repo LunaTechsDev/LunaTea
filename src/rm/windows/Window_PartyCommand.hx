@@ -9,6 +9,8 @@ package rm.windows;
  */
 @:expose("Window_PartyCommand")
 @:native("Window_PartyCommand")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_PartyCommand extends Window_Command {
  public function new();
 

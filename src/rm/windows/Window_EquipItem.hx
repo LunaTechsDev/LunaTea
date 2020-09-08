@@ -12,6 +12,8 @@ import rm.types.RPG.EquipItem;
  */
 @:expose("Window_EquipItem")
 @:native("Window_EquipItem")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_EquipItem {
  private var _actor: Game_Actor;
  private var _slotId: Int;

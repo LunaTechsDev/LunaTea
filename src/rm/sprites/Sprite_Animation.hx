@@ -15,6 +15,8 @@ import rm.types.RPG.AnimationTiming;
  */
 @:expose("Sprite_Animation")
 @:native("Sprite_Animation")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Animation extends Sprite {
  /**
   * Structure

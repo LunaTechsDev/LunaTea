@@ -9,6 +9,8 @@ package rm.windows;
  */
 @:expose("Window_NameInput")
 @:native("Window_NameInput")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_NameInput extends Window_Selectable {
  public static var LATIN1: Array<String>;
  public static var LATIN2: Array<String>;

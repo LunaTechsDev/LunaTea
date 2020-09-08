@@ -8,6 +8,8 @@ import rm.windows.Window_GameEnd;
  */
 @:expose("Scene_GameEnd")
 @:native("Scene_GameEnd")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_GameEnd extends Scene_MenuBase {
  private var _commandWindow: Window_GameEnd;
 

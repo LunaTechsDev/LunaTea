@@ -11,6 +11,8 @@ import rm.types.RPG.BaseItem;
  */
 @:expose("Window_EventItem")
 @:native("Window_EventItem")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_EventItem extends Window_ItemList {
  private var _messageWindow: Window_Message;
 

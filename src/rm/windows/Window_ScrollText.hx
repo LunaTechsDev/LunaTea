@@ -12,6 +12,8 @@ import rm.core.Rectangle;
  */
 @:expose("Window_ScrollText")
 @:native("Window_ScrollText")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ScrollText extends Window_Base {
  private var _text: String;
  private var _allTextHeight: Int;

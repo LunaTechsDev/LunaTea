@@ -7,6 +7,8 @@ import haxe.extern.EitherType;
 
 @:expose("Scene_Base")
 @:native("Scene_Base")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Base extends Stage {
  #if !compileMV
  private var _started: Bool;

@@ -12,6 +12,8 @@ import rm.objects.Game_Actor;
  */
 @:expose("Window_BattleActor")
 @:native("Window_BattleActor")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_BattleActor extends Window_BattleStatus {
  #if compileMV
  public function new(x: Int, y: Int): Void;

@@ -11,6 +11,8 @@ import rm.windows.Window_EquipCommand;
  */
 @:expose("Scene_Equip")
 @:native("Scene_Equip")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Equip extends Scene_MenuBase {
  private var _statusWindow: Window_EquipStatus;
  private var _commandWindow: Window_EquipCommand;

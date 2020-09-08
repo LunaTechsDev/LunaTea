@@ -11,6 +11,8 @@ import rm.types.RPG.BaseItem;
  */
 @:expose("Window_ShopBuy")
 @:native("Window_ShopBuy")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ShopBuy extends Window_Selectable {
  private var _shopGoods: Array<Array<Any>>;
  private var _money: Int;

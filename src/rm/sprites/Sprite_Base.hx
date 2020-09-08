@@ -5,6 +5,8 @@ import rm.types.RPG;
 
 @:expose("Sprite_Base")
 @:native("Sprite_Base")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Base extends Sprite {
  /**
   * The animation sprites assigned to the

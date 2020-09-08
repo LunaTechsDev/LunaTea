@@ -17,6 +17,8 @@ import rm.objects.Game_Battler;
  */
 @:expose("Window_BattleLog")
 @:native("Window_BattleLog")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_BattleLog extends Window_Base {
  private var _lines: Array<String>;
  private var _methods: Array<BattleLogMethod>;
