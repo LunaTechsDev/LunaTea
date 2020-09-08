@@ -48,7 +48,8 @@ class Main {
     return 3;
    }
   });
+  #if compileMV
+  trace("Test comment");
+  #end
  }
-
- var update = 3;
 }

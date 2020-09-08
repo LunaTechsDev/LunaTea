@@ -493,6 +493,15 @@ extern class Window_Base extends _Window {
 
  #if compileMV
  /**
+  * Processes the normal characters in the text
+  * when drawTextEx is used to draw text.
+  * Normal characters are letters and numbers.
+  * @param {MV.TextState} textState
+  * @memberof Window_Base
+  */
+ public function processNormalCharacter(textState: TextState): Void;
+
+ /**
   * Draws text with text codes included; this will draw
   * icons, increase text height, and more.
   * @param text
@@ -583,15 +592,6 @@ extern class Window_Base extends _Window {
   * @memberof Window_Base
   */
  public function processCharacter(textState: TextState): Void;
-
- /**
-  * Processes the normal characters in the text
-  * when drawTextEx is used to draw text.
-  * Normal characters are letters and numbers.
-  * @param {MV.TextState} textState
-  * @memberof Window_Base
-  */
- public function processNormalCharacter(textState: TextState): Void;
 
  /**
   * Processes new line when drawTextEx is used to draw text.
