@@ -95,8 +95,35 @@ class BuildMacroTools {
     meta: [metaData]
    }
 
+   var newReadField: Field = {
+    name: fnField.name + "R",
+    access: fnField.access.copy(),
+    kind: FieldType.FVar(macro:Dynamic),
+    pos: Context.currentPos(),
+    doc: fnField.doc,
+    meta: [metaData]
+   }
+
+   var classType = Context.getLocalClass();
+   var superType = classType.get().superClass;
+
    fields.push(newField);
+   var allFields = allInheritedFields(classType.get());
+   if (allFields.find((field) -> field.name == newReadField.name) == null) {
+    fields.push(newReadField);
+   }
   });
+  return fields;
+ }
+
+ private static function allInheritedFields(cType: ClassType): Array<Field> {
+  var fields: Array<Field> = cast cType.fields.get();
+  var superClass = cType.superClass;
+  if (superClass != null) {
+   return allInheritedFields(superClass.t.get()).concat(fields);
+  } else {
+   return fields;
+  }
   return fields;
  }
 

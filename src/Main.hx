@@ -29,6 +29,9 @@ class Main {
    trace("Running Console Log From Haxe Added haxe Version");
   });
 
+  var sceneTitleStart2 = Fn.proto(Scene_Base).startR;
+  trace(sceneTitleStart2);
+
   var abc = [1, 2, 3, 4, 5, 10];
   var x = abc.fold((x, result) -> result = x * 2, 0);
 

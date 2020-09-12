@@ -14,7 +14,7 @@ class Lambda {
 Lambda.__name__ = true;
 class Main {
 	static main() {
-		// @"Build Date: 2020-09-07 22:25:39"@ ;
+		// @"Build Date: 2020-09-11 20:17:48"@ ;
 		
 //=============================================================================
 // @"Kiniitta"@
@@ -32,6 +32,7 @@ class Main {
 			Window.Haxe = "Version 4.2.0";
 			console.log("src/Main.hx:29:","Running Console Log From Haxe Added haxe Version");
 		};
+		console.log("src/Main.hx:33:",Scene_Base.prototype.start);
 		let abc = [1,2,3,4,5,10];
 		Lambda.fold(abc,function(x,result) {
 			result = x * 2;
@@ -44,7 +45,7 @@ class Main {
 			let i = _g++;
 			result[i] = abc[i] * 2;
 		}
-		console.log("src/Main.hx:53:","Test comment");
+		console.log("src/Main.hx:56:","Test comment");
 	}
 }
 Main.__name__ = true;
@@ -54,7 +55,7 @@ class LTWinMsg extends Window_Message {
 	}
 	initialize() {
 		super.initialize();
-		console.log("src/Main.hx:74:",this._background);
+		console.log("src/Main.hx:77:",this._background);
 	}
 }
 LTWinMsg.__name__ = true;
