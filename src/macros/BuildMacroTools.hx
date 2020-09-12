@@ -69,6 +69,9 @@ class BuildMacroTools {
 
  macro public static function buildDynamicFunctions(): Array<Field> {
   var fields = Context.getBuildFields();
+  var classType = Context.getLocalClass();
+  var superType = classType.get().superClass;
+  var allFields = allInheritedFields(classType.get());
 
   fields.filter((field: Field) -> {
    return field.name != "new" && switch (field.kind) {
@@ -104,11 +107,8 @@ class BuildMacroTools {
     meta: [metaData]
    }
 
-   var classType = Context.getLocalClass();
-   var superType = classType.get().superClass;
-
    fields.push(newField);
-   var allFields = allInheritedFields(classType.get());
+
    if (allFields.find((field) -> field.name == newReadField.name) == null) {
     fields.push(newReadField);
    }
