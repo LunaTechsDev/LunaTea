@@ -45,6 +45,18 @@ class FontManager {
  private static var _urls: DynamicAccess<String>;
  private static var _states: DynamicAccess<String>;
 
+ public static function load(family: String, filename: String): Void {
+  if (_states[family] != "loaded") {
+   if (filename != null) {
+    var url = makeUrl(filename);
+    startLoading(family, url);
+   } else {
+    _urls[family] = "";
+    _states[family] = "loaded";
+   }
+  }
+ };
+
  public static function isReady(): Bool {
   for (family in _states) {
    var state = _states[family];
