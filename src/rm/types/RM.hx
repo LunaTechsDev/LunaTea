@@ -80,6 +80,8 @@ typedef TextState = {
 typedef TextState = {
  var text: String;
  var index: Int;
+ var x: Int;
+ var y: Int;
  var startX: Int;
  var startY: Int;
  var width: Int;
