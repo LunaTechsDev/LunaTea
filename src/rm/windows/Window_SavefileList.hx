@@ -23,10 +23,11 @@ extern class Window_SavefileList extends Window_Selectable {
 
  #if !compileMV
  public function new(rect: Rectangle);
+
+ public function setMode(mode: String, autosave: Bool): Void;
+ public function selectSavefile(savefileId: Int): Void;
  #else
  public function new(x: Int, y: Int, width: Int, height: Int);
- #end
-
  /**
   * Sets the mode of the save file window.
   *
@@ -34,6 +35,7 @@ extern class Window_SavefileList extends Window_Selectable {
   * @memberof Window_SavefileList
   */
  public function setMode(mode: String): Void;
+ #end
 
  /**
   * Returns the maximum number of visible items.

@@ -38,7 +38,9 @@ extern class Game_System {
  public function isCJK(): Bool;
  public function isRussian(): Bool;
  public function isSideView(): Bool;
- public function isAutoSaveEnabled(): Bool;
+ #if !compileMV
+ public function isAutosaveEnabled(): Bool;
+ #end
  public function isSaveEnabled(): Bool;
 
  /**
