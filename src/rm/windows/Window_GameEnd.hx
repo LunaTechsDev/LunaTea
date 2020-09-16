@@ -11,7 +11,7 @@ package rm.windows;
 @:native("Window_GameEnd")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
-extern class Window_GameEnd extends Window_Base {
+extern class Window_GameEnd extends Window_Command {
  public function new();
 
  public function updatePlacement(): Void;
