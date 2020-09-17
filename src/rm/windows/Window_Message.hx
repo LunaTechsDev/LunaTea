@@ -7,6 +7,7 @@ import rm.core.Rectangle;
 @:expose("Window_Message")
 @:native("Window_Message")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_Message extends Window_Base {
  private var _positionType: Int;
  private var _background: Int;
