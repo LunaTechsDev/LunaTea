@@ -211,7 +211,6 @@ extern class ColorManager {
 }
 #else
 @:native("ColorManager")
-@:nullSafety(Strict)
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 class ColorManager {
