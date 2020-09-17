@@ -83,7 +83,7 @@ extern class Scene_Base extends Stage {
  public function buttonAreaBottom(): Int;
  public function buttonAreaHeight(): Int;
  public function buttonY(): Int;
- public function calcWindowHeight(): Int;
+ public function calcWindowHeight(numLines: Int, selectable: Bool): Int;
  public function requestAutosave(): Void;
  public function isAutosaveEnabled(): Bool;
  public function executeAutosave(): Void;
