@@ -62,6 +62,11 @@ class StringExtensions {
   return string.urlEncode();
  }
 
+ public static inline function isControlCharacter(string: String,
+   index: Int): Bool {
+  return string.charCodeAt(index) < 0x20;
+ }
+
  // inline function toBinary(number: Int) {
  //   return Std.string(number).
  // }
