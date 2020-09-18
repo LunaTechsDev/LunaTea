@@ -1,5 +1,6 @@
 package rm.windows;
 
+import rm.types.RM.CommandItem;
 import rm.core.Rectangle;
 
 @:expose("Window_Command")
@@ -21,6 +22,8 @@ extern class Window_Command extends Window_Selectable {
  public function new(rect: Rectangle);
  public function initialize(rect: Rectangle): Void;
  #end
+ 
+ private var _list: Array<CommandItem>;
 
  /**
   * Returns the width of the window;
