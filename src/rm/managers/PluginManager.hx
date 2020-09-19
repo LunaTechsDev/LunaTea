@@ -42,6 +42,16 @@ extern class PluginManager {
 
  #if !compileMV
  /**
+  * Makes the URL to the plugins folder.
+  * ```js
+  * return "js/plugins/" + Utils.encodeURI(fileName) + ".js";
+  *```js
+  * @return String
+  */
+ public static function makeUrl = function(fileName):String;
+  
+ 
+ /**
      * Regsters a new plugin command in MZ using a lambda expression
      * The Variable of the lambda should be transformed into the appropriate
      * typed def struct for your use case for your command.
