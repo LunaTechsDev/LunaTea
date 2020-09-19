@@ -48,7 +48,7 @@ extern class PluginManager {
   *```js
   * @return String
   */
- public static function makeUrl(fileName): String;
+ public static function makeUrl(fileName: String): String;
 
  /**
      * Regsters a new plugin command in MZ using a lambda expression
