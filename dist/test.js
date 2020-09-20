@@ -2,7 +2,7 @@
 // test.js
 //=============================================================================
 //=============================================================================
-// Build Date: 2020-09-11 20:31:17
+// Build Date: 2020-09-20 17:59:36
 //=============================================================================
 //=============================================================================
 // Made with Kiniita -- Haxe
@@ -42,7 +42,7 @@ class Lambda {
 Lambda.__name__ = true;
 class Main {
 	static main() {
-		// Build Date: 2020-09-11 20:31:15 
+		// Build Date: 2020-09-20 17:59:33 
 		
 //=============================================================================
 // Kiniitta
@@ -75,7 +75,10 @@ class Main {
 			let i = _g++;
 			result[i] = abc[i] * 2;
 		}
-		console.log("src/Main.hx:56:","Test comment");
+		Scene_Base.prototype["test"]  = function(self,args) {
+			self.update();
+		}.bind(Scene_Base.prototype);
+		console.log("src/Main.hx:60:","Test comment");
 	}
 }
 Main.__name__ = true;
@@ -85,7 +88,7 @@ class LTWinMsg extends Window_Message {
 	}
 	initialize() {
 		super.initialize();
-		console.log("src/Main.hx:77:",this._background);
+		console.log("src/Main.hx:81:",this._background);
 	}
 }
 LTWinMsg.__name__ = true;

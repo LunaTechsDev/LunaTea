@@ -37,6 +37,10 @@ class Main {
 
   var d = abc.map((i) -> i * 2);
 
+  Fn.setPrPropFn(Scene_Base, "test", (self: Scene_Base, ?args) -> {
+   self.update();
+  });
+
   // Fn.proto(Window_Base).updateD = () -> {
   //  var self: Window_Base = Fn.self;
   //  self.update();
