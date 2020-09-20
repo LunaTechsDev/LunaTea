@@ -33,18 +33,6 @@ class Patch {
   return result;
  }
 
- private static function createField(fieldName, value, pos): Field {
-  var newField: Field = {
-   name: fieldName,
-   access: [Access.APublic,
-    Access.AStatic],
-   kind: FieldType.FVar(macro:Dynamic, $v{value}),
-   pos: pos
-  }
-
-  return newField;
- }
-
  macro public static function applyInline() {
   var localClass = Context.getLocalClass().get();
   var staticFields = localClass.statics.get();
