@@ -33,6 +33,10 @@ class Patch {
   return result;
  }
 
+ /** 
+   Finds all inline methods within the class its called from and calls each
+   inline method it finds.
+ **/
  macro public static function applyInline() {
   var localClass = Context.getLocalClass().get();
   var staticFields = localClass.statics.get();
@@ -54,7 +58,14 @@ class Patch {
   return macro $b{expressions}
  }
 
- macro public static function rmClass(original: Dynamic, protoT: Dynamic, selfT: Dynamic): Array<Field> {
+ /**
+  * **EXPERIMENTAL:** This macro adds 2 new fields `_proto` and `_self` both are
+  * inline method used to quicly override, alias or extend rm classes.
+  * @param protoT The prototype of the class you want proto and self to use
+  * @param selfT The native js `this`, use `js.lib.nativeThis` or `Fn.self`
+  * @return Array<Field>
+  */
+ macro public static function rmClass(protoT: Dynamic, selfT: Dynamic): Array<Field> {
   var localFields = Context.getBuildFields();
 
   var selfFunc: Function = {
