@@ -93,7 +93,7 @@ class Fn {
   return Syntax.code("({1})({0})", obj, fn);
  }
 
- public static inline function setPrProp(obj: Any, fieldName: String,
+ public static inline function setPrProp<T>(obj: Class<T>, fieldName: String,
    value: Any) {
   Syntax.code("{0}[{1}] = {2}", proto(obj), (fieldName), value);
  }
