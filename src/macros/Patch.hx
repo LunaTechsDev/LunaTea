@@ -72,7 +72,7 @@ class Patch {
    args: []
   }
   var protoFunc: Function = {
-   expr: macro return $original,
+   expr: macro return $protoT,
    ret: (macro: Dynamic),
    args: []
   }
