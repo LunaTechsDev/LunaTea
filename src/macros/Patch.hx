@@ -50,7 +50,6 @@ class Patch {
   var staticFields = localClass.statics.get();
   var calledFromFieldName = Context.getLocalMethod().toString();
 
-  var string = localClass.statics.toString();
   var expressions: Array<Expr> = [];
 
   for (field in staticFields) {
