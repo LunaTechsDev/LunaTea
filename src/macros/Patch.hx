@@ -48,11 +48,15 @@ class Patch {
  macro public static function applyInline() {
   var localClass = Context.getLocalClass().get();
   var staticFields = localClass.statics.get();
+  var calledFromFieldName = Context.getLocalMethod().toString();
 
   var string = localClass.statics.toString();
   var expressions: Array<Expr> = [];
 
   for (field in staticFields) {
+   if (field.name == calledFromFieldName) {
+     continue;
+   }
    switch (field.kind.getParameters()) {
       case [MethInline]:
         var name = field.name;
