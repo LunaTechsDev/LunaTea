@@ -101,7 +101,7 @@ class Fn {
 
  public static inline function setPrPropFn<T>(obj: Class<T>,
    fieldName: String, value: Any) {
-  Syntax.code("{0}[{1}]  = {2}.bind({0})", proto(obj), (fieldName), value);
+  Syntax.code("{0}[{1}]  = {2}", proto(obj), (fieldName), value);
  }
 
  public static inline function getPrProp(obj: Any, fieldName: String): Any {
