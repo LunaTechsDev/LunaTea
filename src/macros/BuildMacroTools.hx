@@ -98,6 +98,10 @@ class BuildMacroTools {
     meta: [metaData]
    }
 
+   if (fnField.meta.length > 0) {
+    newField.meta = fnField.meta;
+   }
+
    var newReadField: Field = {
     name: fnField.name + "R",
     access: fnField.access.copy(),

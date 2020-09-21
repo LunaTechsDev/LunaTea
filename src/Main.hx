@@ -1,3 +1,4 @@
+import rm.core.TouchInput;
 import rm.windows.Window_Message;
 import rm.windows.Window_Base;
 import rm.Globals.GameVariables;
@@ -32,6 +33,7 @@ class Main {
   var sceneTitleStart2 = Fn.proto(Scene_Base).startR;
   trace(sceneTitleStart2);
 
+  Fn.proto(Scene_Base).startD = () -> {};
   var abc = [1, 2, 3, 4, 5, 10];
   var x = abc.fold((x, result) -> result = x * 2, 0);
 
@@ -40,6 +42,10 @@ class Main {
   Fn.setPrPropFn(Scene_Base, "test", (self: Scene_Base, ?args) -> {
    self.update();
   });
+
+  TouchInput.__onMouseMoveD = (event: Dynamic) -> {
+   trace(event);
+  };
 
   // Fn.proto(Window_Base).updateD = () -> {
   //  var self: Window_Base = Fn.self;

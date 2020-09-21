@@ -2,7 +2,7 @@
 // test.js
 //=============================================================================
 //=============================================================================
-// Build Date: 2020-09-20 17:59:36
+// Build Date: 2020-09-21 19:41:31
 //=============================================================================
 //=============================================================================
 // Made with Kiniita -- Haxe
@@ -42,7 +42,7 @@ class Lambda {
 Lambda.__name__ = true;
 class Main {
 	static main() {
-		// Build Date: 2020-09-20 17:59:33 
+		// Build Date: 2020-09-21 19:41:29 
 		
 //=============================================================================
 // Kiniitta
@@ -60,9 +60,11 @@ class Main {
 			sceneTitleStart.call(self);
 			_$LTGlobals_$.$gameVariables.setValue(1,3);
 			Window.Haxe = "Version 4.2.0";
-			console.log("src/Main.hx:29:","Running Console Log From Haxe Added haxe Version");
+			console.log("src/Main.hx:30:","Running Console Log From Haxe Added haxe Version");
 		};
-		console.log("src/Main.hx:33:",Scene_Base.prototype.start);
+		console.log("src/Main.hx:34:",Scene_Base.prototype.start);
+		Scene_Base.prototype.start = function() {
+		};
 		let abc = [1,2,3,4,5,10];
 		Lambda.fold(abc,function(x,result) {
 			result = x * 2;
@@ -77,8 +79,11 @@ class Main {
 		}
 		Scene_Base.prototype["test"]  = function(self,args) {
 			self.update();
-		}.bind(Scene_Base.prototype);
-		console.log("src/Main.hx:60:","Test comment");
+		};
+		TouchInput._onMouseMove = function(event) {
+			console.log("src/Main.hx:47:",event);
+		};
+		console.log("src/Main.hx:66:","Test comment");
 	}
 }
 Main.__name__ = true;
@@ -88,7 +93,7 @@ class LTWinMsg extends Window_Message {
 	}
 	initialize() {
 		super.initialize();
-		console.log("src/Main.hx:81:",this._background);
+		console.log("src/Main.hx:87:",this._background);
 	}
 }
 LTWinMsg.__name__ = true;
