@@ -19,6 +19,11 @@ extern class Stage extends Container {
  public function new();
 
  /**
+  * The initialize method is called upon instantiation of a new Stage.
+  */
+ public function initialize(): Void;
+
+ /**
   * Adds a child to the container.
   *
   * @method addChild
