@@ -49,4 +49,28 @@ class FnMacros {
   fields.push(macro var hello = 3);
   return macro $b{fields};
  }
+
+ public static inline macro function self(typeName: Expr,
+   exprs: Array<Expr>): Expr {
+  var finalType = '';
+  // Breakdown Expression Based On Type
+  switch (typeName.expr) {
+   case EConst(const):
+    switch (const) {
+     case CIdent(identifier):
+      finalType = identifier;
+
+     case CString(str, _):
+      finalType = str;
+     case _:
+      // Do nothing
+    }
+   case _:
+    // Do nothing
+  }
+
+  exprs.unshift(Context.parseInlineString('var self:${finalType} = Fn.self',
+   Context.currentPos()));
+  return macro $b{exprs};
+ }
 }
