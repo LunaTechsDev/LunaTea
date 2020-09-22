@@ -1,3 +1,4 @@
+import macros.FnMacros;
 import rm.core.TouchInput;
 import rm.windows.Window_Message;
 import rm.windows.Window_Base;
@@ -65,6 +66,8 @@ class Main {
   #if compileMV
   trace("Test comment");
   #end
+
+  FnMacros.jsPatch(Window_Message, LTWinMsgUpdate);
  }
 }
 
@@ -91,6 +94,12 @@ class LTWinMsgUpdate extends Window_Message {
   super.initialize(rect);
  }
  #end
+
+ public function newTestFunction() {
+  trace(this.x, this.y);
+  trace("Hello World");
+ }
+
  //  #if compileMV
  //  public override function processNormalCharacter(textState: String) {
  //   super.processNormalCharacter(textState);
