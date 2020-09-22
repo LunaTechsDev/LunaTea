@@ -1,5 +1,7 @@
 package macros;
 
+import haxe.macro.Expr.Field;
+import haxe.macro.Type.ClassType;
 #if macro
 import haxe.macro.Expr;
 import haxe.macro.Context;
@@ -117,14 +119,86 @@ class FnMacros {
   * @param rest
   * @return Expr
   */
- public static macro function jsPatch(rest: Array<Expr>): Expr {
+ public static macro function jsPatch(prototype: Bool = true,
+   rest: Array<Expr>): Expr {
   var newPatchExprs = [];
+  var originalNames = [];
+  var classTypes = [];
 
-  for (classInfo in rest) {
-   trace(classInfo);
+  for (classExpr in rest) {
+   switch (classExpr.expr) {
+    case EConst(constant):
+     switch (constant) {
+      case CIdent(identifier):
+       // Create TInst of the class type
+       originalNames.push(identifier);
+       switch (Context.getType(identifier)) {
+        case TInst(cType, _):
+         classTypes.push(cType.get());
+        case _:
+         // Do nothing
+       }
+      case _:
+       // Do nothing
+     }
+    case _:
+     // Do nothing
+   }
+  }
+
+  // Have access to class therefore we have access to class fields/methods
+  var classToPatch = classTypes[0];
+  var classToPatchName = originalNames[0];
+  var classForPatching = classTypes[1];
+  var classForPatchingName = originalNames[1];
+
+  trace(originalNames);
+  var fields = classForPatching.fields;
+  if (fields != null) {
+   fields.get().iter((classField) -> {
+    // storeTypedExpr ?
+    trace(classField.name);
+    var classFieldToUse = null;
+    if (allInheritedFields(classForPatching).exists((cField) -> {
+     cField.name == classField.name + "R";
+    })) {
+     classFieldToUse = classField.name + "R";
+    } else {
+     classFieldToUse = classField.name;
+    }
+    var newExpr = null;
+    if (prototype) {
+     newExpr = Context.parseInlineString('untyped Fn.proto(${classToPatchName}).${classFieldToUse}',
+      Context.currentPos());
+    } else {
+     newExpr = Context.parseInlineString('untyped ${classToPatchName}.${classFieldToUse}',
+      Context.currentPos());
+    }
+
+    var valueExpr = classField.expr();
+    var finalExpr = null;
+    if (valueExpr != null) {
+     finalExpr = macro ${newExpr} = ${Context.storeTypedExpr(valueExpr)};
+    } else {
+     finalExpr = macro ${newExpr} = ${macro null};
+    }
+
+    newPatchExprs.push(finalExpr);
+   });
   }
 
   // Return new result macro of the patched class fields
   return macro $b{newPatchExprs};
+ }
+
+ private static function allInheritedFields(cType: ClassType): Array<Field> {
+  var fields: Array<Field> = cast cType.fields.get();
+  var superClass = cType.superClass;
+  if (superClass != null) {
+   return allInheritedFields(superClass.t.get()).concat(fields);
+  } else {
+   return fields;
+  }
+  return fields;
  }
 }

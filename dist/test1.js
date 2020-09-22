@@ -4,6 +4,21 @@
  */
 ;(function ($hx_exports, $global) { "use strict";
 var $estr = function() { return js_Boot.__string_rec(this,''); },$hxEnums = $hxEnums || {};
+class LTWinMsg extends Window_Message {
+	constructor(x,y,width,height) {
+		super(x,y,width,height);
+	}
+	initialize() {
+		Window_Message.prototype.initialize();
+		this._testingNewCharacter = "Actor1_1";
+		haxe_Log.trace(this._background,{ fileName : "src/LTWinMsg.hx", lineNumber : 23, className : "LTWinMsgUpdate", methodName : "initialize"});
+	}
+	newTestFunction() {
+		haxe_Log.trace(this.x,{ fileName : "src/LTWinMsg.hx", lineNumber : 32, className : "LTWinMsgUpdate", methodName : "newTestFunction", customParams : [this.y]});
+		haxe_Log.trace("Hello World",{ fileName : "src/LTWinMsg.hx", lineNumber : 33, className : "LTWinMsgUpdate", methodName : "newTestFunction"});
+	}
+}
+LTWinMsg.__name__ = true;
 class Lambda {
 	static fold(it,f,first) {
 		let x = $getIterator(it);
@@ -14,7 +29,7 @@ class Lambda {
 Lambda.__name__ = true;
 class Main {
 	static main() {
-		// @"Build Date: 2020-09-21 19:41:30"@ ;
+		// @"Build Date: 2020-09-21 21:25:04"@ ;
 		
 //=============================================================================
 // @"Kiniitta"@
@@ -30,13 +45,14 @@ class Main {
 			sceneTitleStart.call(self);
 			_$LTGlobals_$.$gameVariables.setValue(1,3);
 			Window.Haxe = "Version 4.2.0";
-			console.log("src/Main.hx:30:","Running Console Log From Haxe Added haxe Version");
+			haxe_Log.trace("Running Console Log From Haxe Added haxe Version",{ fileName : "src/Main.hx", lineNumber : 32, className : "Main", methodName : "main"});
 		};
-		console.log("src/Main.hx:34:",Scene_Base.prototype.start);
+		let sceneTitleStart2 = Scene_Base.prototype.start;
+		haxe_Log.trace(sceneTitleStart2,{ fileName : "src/Main.hx", lineNumber : 36, className : "Main", methodName : "main"});
 		Scene_Base.prototype.start = function() {
 		};
 		let abc = [1,2,3,4,5,10];
-		Lambda.fold(abc,function(x,result) {
+		let x = Lambda.fold(abc,function(x,result) {
 			result = x * 2;
 			return result;
 		},0);
@@ -47,27 +63,66 @@ class Main {
 			let i = _g++;
 			result[i] = abc[i] * 2;
 		}
+		let d = result;
 		Scene_Base.prototype["test"]  = function(self,args) {
 			self.update();
 		};
 		TouchInput._onMouseMove = function(event) {
-			console.log("src/Main.hx:47:",event);
+			haxe_Log.trace(event,{ fileName : "src/Main.hx", lineNumber : 49, className : "Main", methodName : "main"});
 		};
-		console.log("src/Main.hx:66:","Test comment");
+		haxe_Log.trace("Test comment",{ fileName : "src/Main.hx", lineNumber : 68, className : "Main", methodName : "main"});
+		Window_Message.prototype._testingNewCharacter = null;
+		Window_Message.prototype.initialize = function() {
+			Window_Message.prototype.initialize();
+			this._testingNewCharacter = "Actor1_1";
+			haxe_Log.trace(this._background,{ fileName : "src/LTWinMsg.hx", lineNumber : 23, className : "LTWinMsgUpdate", methodName : "initialize"});
+		};
+		Window_Message.prototype.newTestFunction = function() {
+			haxe_Log.trace(this.x,{ fileName : "src/LTWinMsg.hx", lineNumber : 32, className : "LTWinMsgUpdate", methodName : "newTestFunction", customParams : [this.y]});
+			haxe_Log.trace("Hello World",{ fileName : "src/LTWinMsg.hx", lineNumber : 33, className : "LTWinMsgUpdate", methodName : "newTestFunction"});
+		};
+		Window_Message._testingNewCharacter = null;
+		Window_Message.initializeR = function() {
+			Window_Message.prototype.initialize();
+			this._testingNewCharacter = "Actor1_1";
+			haxe_Log.trace(this._background,{ fileName : "src/LTWinMsg.hx", lineNumber : 23, className : "LTWinMsgUpdate", methodName : "initialize"});
+		};
+		Window_Message.newTestFunction = function() {
+			haxe_Log.trace(this.x,{ fileName : "src/LTWinMsg.hx", lineNumber : 32, className : "LTWinMsgUpdate", methodName : "newTestFunction", customParams : [this.y]});
+			haxe_Log.trace("Hello World",{ fileName : "src/LTWinMsg.hx", lineNumber : 33, className : "LTWinMsgUpdate", methodName : "newTestFunction"});
+		};
 	}
 }
 Main.__name__ = true;
-class LTWinMsg extends Window_Message {
-	constructor(x,y,width,height) {
-		super(x,y,width,height);
-	}
-	initialize() {
-		super.initialize();
-		console.log("src/Main.hx:87:",this._background);
+Math.__name__ = true;
+class Std {
+	static string(s) {
+		return js_Boot.__string_rec(s,"");
 	}
 }
-LTWinMsg.__name__ = true;
-Math.__name__ = true;
+Std.__name__ = true;
+class haxe_Log {
+	static formatOutput(v,infos) {
+		let str = Std.string(v);
+		if(infos == null) {
+			return str;
+		}
+		let pstr = infos.fileName + ":" + infos.lineNumber;
+		if(infos.customParams != null) {
+			let _g = 0;
+			let _g1 = infos.customParams;
+			while(_g < _g1.length) str += ", " + Std.string(_g1[_g++]);
+		}
+		return pstr + ": " + str;
+	}
+	static trace(v,infos) {
+		let str = haxe_Log.formatOutput(v,infos);
+		if(typeof(console) != "undefined" && console.log != null) {
+			console.log(str);
+		}
+	}
+}
+haxe_Log.__name__ = true;
 class haxe_iterators_ArrayIterator {
 	constructor(array) {
 		this.current = 0;

@@ -9,6 +9,7 @@ import rm.scenes.Scene_Base;
 import utils.Fn;
 import utils.Comment;
 import macros.MacroTools;
+import LTWinMsg.LTWinMsgUpdate;
 
 using core.LambdaTea;
 using Lambda;
@@ -67,53 +68,7 @@ class Main {
   trace("Test comment");
   #end
 
-  FnMacros.jsPatch(Window_Message, LTWinMsgUpdate);
+  FnMacros.jsPatch(true, Window_Message, LTWinMsgUpdate);
+  FnMacros.jsPatch(false, Window_Message, LTWinMsgUpdate);
  }
-}
-
-@:keep
-@:native("LTWinMsg")
-class LTWinMsgUpdate extends Window_Message {
- #if compileMV
- public function new(x: Int, y: Int, width: Int, height: Int) {
-  super(x, y, width, height);
- }
- #else
- public function new(rect: Rectangle) {
-  super(rect);
- }
- #end
-
- #if compileMV
- public override function initialize() {
-  super.initialize();
-  trace(this._background);
- }
- #else
- public override function initialize(rect: Rectangle) {
-  super.initialize(rect);
- }
- #end
-
- public function newTestFunction() {
-  trace(this.x, this.y);
-  trace("Hello World");
- }
-
- //  #if compileMV
- //  public override function processNormalCharacter(textState: String) {
- //   super.processNormalCharacter(textState);
- //  #else
- //  public override function processCharacter(textState: TextState) {
- //   super.processCharacter(textState);
- //  #end
- //   var se = {
- //    name: "Paralyze3",
- //    volume: 25,
- //    pitch: 50,
- //    pan: 0
- //   };
- //   untyped AudioManager.playTalkSe(se);
- //   trace("Playing SE");
- //  }
 }
