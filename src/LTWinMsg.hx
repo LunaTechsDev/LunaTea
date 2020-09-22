@@ -18,7 +18,7 @@ class LTWinMsgUpdate extends Window_Message {
 
  #if compileMV
  public override function initialize() {
-  untyped Fn.proto(Window_Message).initializeR();
+  untyped _Window_Message_intiailizeR.call(this);
   this._testingNewCharacter = "Actor1_1";
   trace(this._background);
  }

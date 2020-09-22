@@ -1,0 +1,20 @@
+{
+  pos: #pos(src / macros / FnMacros.hx: 181: characters 25 - 73),
+  expr: EBinop(OpAssign, {
+    pos: #pos(src / Main.hx: 71: characters 3 - 47),
+    expr: EUntyped({
+      pos: #pos(src / Main.hx: 71: characters 11 - 47),
+      expr: EField( < ... > , < ... > )
+    })
+  }, {
+    pos: #pos(src / LTWinMsg.hx: 20: lines 20 - 24),
+    expr: EMeta({
+      name:: storedTypedExpr,
+      params: [],
+      pos: #pos(src / LTWinMsg.hx: 20: lines 20 - 24)
+    }, {
+      pos: #pos(src / LTWinMsg.hx: 20: lines 20 - 24),
+      expr: EConst( < ... > )
+    })
+  })
+}

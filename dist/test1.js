@@ -9,7 +9,7 @@ class LTWinMsg extends Window_Message {
 		super(x,y,width,height);
 	}
 	initialize() {
-		Window_Message.prototype.initialize();
+		_Window_Message_intiailizeR.call(this);
 		this._testingNewCharacter = "Actor1_1";
 		haxe_Log.trace(this._background,{ fileName : "src/LTWinMsg.hx", lineNumber : 23, className : "LTWinMsgUpdate", methodName : "initialize"});
 	}
@@ -29,7 +29,7 @@ class Lambda {
 Lambda.__name__ = true;
 class Main {
 	static main() {
-		// @"Build Date: 2020-09-21 21:25:04"@ ;
+		// @"Build Date: 2020-09-21 23:03:02"@ ;
 		
 //=============================================================================
 // @"Kiniitta"@
@@ -71,19 +71,22 @@ class Main {
 			haxe_Log.trace(event,{ fileName : "src/Main.hx", lineNumber : 49, className : "Main", methodName : "main"});
 		};
 		haxe_Log.trace("Test comment",{ fileName : "src/Main.hx", lineNumber : 68, className : "Main", methodName : "main"});
+		let _Window_Message__testingNewCharacter = Window_Message.prototype._testingNewCharacter;
 		Window_Message.prototype._testingNewCharacter = null;
+		let _Window_Message_initializeR = Window_Message.prototype.initialize;
 		Window_Message.prototype.initialize = function() {
-			Window_Message.prototype.initialize();
+			_Window_Message_intiailizeR.call(this);
 			this._testingNewCharacter = "Actor1_1";
 			haxe_Log.trace(this._background,{ fileName : "src/LTWinMsg.hx", lineNumber : 23, className : "LTWinMsgUpdate", methodName : "initialize"});
 		};
+		let _Window_Message_newTestFunction = Window_Message.prototype.newTestFunction;
 		Window_Message.prototype.newTestFunction = function() {
 			haxe_Log.trace(this.x,{ fileName : "src/LTWinMsg.hx", lineNumber : 32, className : "LTWinMsgUpdate", methodName : "newTestFunction", customParams : [this.y]});
 			haxe_Log.trace("Hello World",{ fileName : "src/LTWinMsg.hx", lineNumber : 33, className : "LTWinMsgUpdate", methodName : "newTestFunction"});
 		};
 		Window_Message._testingNewCharacter = null;
 		Window_Message.initializeR = function() {
-			Window_Message.prototype.initialize();
+			_Window_Message_intiailizeR.call(this);
 			this._testingNewCharacter = "Actor1_1";
 			haxe_Log.trace(this._background,{ fileName : "src/LTWinMsg.hx", lineNumber : 23, className : "LTWinMsgUpdate", methodName : "initialize"});
 		};

@@ -1,5 +1,8 @@
 package macros;
 
+import haxe.macro.TypedExprTools;
+import haxe.macro.Type.TypedExpr;
+import haxe.macro.ExprTools;
 import haxe.macro.Expr.Field;
 import haxe.macro.Type.ClassType;
 #if macro
@@ -167,7 +170,12 @@ class FnMacros {
      classFieldToUse = classField.name;
     }
     var newExpr = null;
+    var oldFuncExpr = null;
+    // Creates the new prototype function and also the previous function aliased.
     if (prototype) {
+     oldFuncExpr = Context.parseInlineString('untyped var _${classToPatchName}_${classFieldToUse} =  Fn.proto(${classToPatchName}).${classFieldToUse}',
+      Context.currentPos());
+
      newExpr = Context.parseInlineString('untyped Fn.proto(${classToPatchName}).${classFieldToUse}',
       Context.currentPos());
     } else {
@@ -177,12 +185,16 @@ class FnMacros {
 
     var valueExpr = classField.expr();
     var finalExpr = null;
+    var count = 0;
     if (valueExpr != null) {
      finalExpr = macro ${newExpr} = ${Context.storeTypedExpr(valueExpr)};
     } else {
      finalExpr = macro ${newExpr} = ${macro null};
     }
-
+    if (prototype) {
+     // Adds the old function above the finalExpr for overwriting.
+     newPatchExprs.push(oldFuncExpr);
+    }
     newPatchExprs.push(finalExpr);
    });
   }
