@@ -4,6 +4,8 @@ import haxe.extern.EitherType;
 
 @:expose("Window_Options")
 @:native("Window_Options")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_Options extends Window_Command {
  public function new();
 

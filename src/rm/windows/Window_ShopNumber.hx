@@ -13,6 +13,8 @@ import rm.types.RPG.BaseItem;
  */
 @:expose("Window_ShopNumber")
 @:native("Window_ShopNumber")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ShopNumber extends Window_Selectable {
  /**
   * The current item being bought/sold.

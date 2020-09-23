@@ -11,6 +11,8 @@ import rm.types.RPG.BaseItem;
  */
 @:expose("Window_ShopSell")
 @:native("Window_ShopSell")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ShopSell extends Window_ItemList {
  public function new(x: Int, y: Int, width: Int, height: Int);
 

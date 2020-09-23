@@ -16,89 +16,49 @@ import rm.types.LunaTea.BattleResult;
  */
 @:expose("BattleManager")
 @:native("BattleManager")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class BattleManager {
- @:native("_phase")
- public var __phase: String;
  private var _phase: String;
 
- @:native("_canEscape")
- public var __canEscape: Bool;
  private var _canEscape: Bool;
 
- @:native("_canLose")
- public var __canLose: Bool;
  private var _canLose: Bool;
 
- @:native("_battleTest")
- public var __battleTest: Bool;
  private var _battleTest: Bool;
 
- @:native("_eventCallback")
- public var __eventCallback: () -> Void;
  private var _eventCallback: () -> Void;
 
- @:native("_preemptive")
- public var __preemptive: Bool;
  private var _preemptive: Bool;
 
- @:native("_surprise")
- public var __surprise: Bool;
  private var _surprise: Bool;
 
- @:native("_actorIndex")
- public var __actorIndex: Int;
  private var _actorIndex: Int;
 
- @:native("_actionForceBattler")
- public var __actionForcedBattler: Game_Battler;
  private var _actionForcedBattler: Game_Battler;
 
- @:native("_mapBgm")
- public var __mapBgm: AudioParameters;
  private var _mapBgm: AudioParameters;
 
- @:native("_mapBgs")
- public var __mapBgs: AudioParameters;
  private var _mapBgs: AudioParameters;
 
- @:native("_actionBattlers")
- public var __actionBattlers: Array<Game_Battler>;
  private var _actionBattlers: Array<Game_Battler>;
 
- @:native("_subject")
- public var __subject: Game_Battler;
  private var _subject: Game_Battler;
 
- @:native("_action")
- public var __action: Game_Action;
  private var _action: Game_Action;
 
- @:native("_targets")
- public var __targets: Array<Game_Battler>;
  private var _targets: Array<Game_Battler>;
 
- @:native("_logWindow")
- public var __logWindow: Window_BattleLog;
  private var _logWindow: Window_BattleLog;
 
- @:native("_statusWindow")
- public var __statusWindow: Window_BattleStatus;
  private var _statusWindow: Window_BattleStatus;
 
- @:native("_spriteset")
- public var __spriteset: Spriteset_Battle;
  private var _spriteset: Spriteset_Battle;
 
- @:native("_escapeRatio")
- public var __escapeRatio: Float;
  private var _escapeRatio: Float;
 
- @:native("_escaped")
- public var __escaped: Bool;
  private var _escaped: Bool;
 
- @:native("_rewards")
- public var __rewards: BattleRewards;
  private var _rewards: BattleRewards;
 
  public static function setup(troopId: Int, canEscape: Bool,

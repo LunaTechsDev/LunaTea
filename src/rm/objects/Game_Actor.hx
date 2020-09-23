@@ -1,5 +1,6 @@
 package rm.objects;
 
+import haxe.DynamicAccess;
 import rm.types.LunaTea.ParameterId;
 import rm.types.RPG;
 import js.lib.Object;
@@ -11,72 +12,51 @@ import js.lib.Object;
  */
 @:expose("Game_Actor")
 @:native("Game_Actor")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Actor extends Game_Battler {
- @:native("_actorId")
- public var __actorId: Int;
  private var _actorId: Int;
- @:native("_name")
- public var __name: String;
+
  private var _name: String;
- @:native("_nickname")
- public var __nickname: String;
+
  private var _nickname: String;
- @:native("_profile")
- public var __profile: String;
+
  private var _profile: String;
- @:native("_classId")
- public var __classId: Int;
+
  private var _classId: Int;
- @:native("_level")
- public var __level: Int;
+
  private var _level: Int;
- @:native("_characterName")
- public var __characterName: String;
+
  private var _characterName: String;
- @:native("_characterIndex")
- public var __characterIndex: Int;
+
  private var _characterIndex: Int;
- @:native("_faceName")
- public var __faceName: String;
+
  private var _faceName: String;
- @:native("_faceIndex")
- public var __faceIndex: Int;
+
  private var _faceIndex: Int;
- @:native("_battlerName")
- public var __battlerName: String;
+
  private var _battlerName: String;
- @:native("_exp")
- public var __exp: Object;
- private var _exp: Object;
 
  /**
-  * Skill Ids
+  * Experience Obj
   */
- @:native("_skills")
- public var __skills: Array<Int>;
+ private var _exp: DynamicAccess<Dynamic>;
 
  /**
   * Skill Ids
   */
  private var _skills: Array<Int>;
 
- @:native("_equips")
- public var __equips: Array<Game_Item>;
  private var _equips: Array<Game_Item>;
- @:native("_actionInputIndex")
- public var __actionInputIndex: Int;
+
  private var _actionInputIndex: Int;
- @:native("_lastMenuSkill")
- public var __lastMenuSkill: Game_Item;
+
  private var _lastMenuSkill: Game_Item;
- @:native("_lastBattleSkill")
- public var __lastBattleSkill: Game_Item;
+
  private var _lastBattleSkill: Game_Item;
- @:native("_lastCommandSymbol")
- public var __lastCommandSymbol: String;
+
  private var _lastCommandSymbol: String;
- @:native("_stateSteps")
- public var __stateSteps: Object; // TODO: Find Structure
+
  private var _stateSteps: Object;
 
  /** [read-only] */

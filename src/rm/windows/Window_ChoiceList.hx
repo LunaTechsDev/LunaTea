@@ -9,6 +9,8 @@ package rm.windows;
  */
 @:expose("Window_ChoiceList")
 @:native("Window_ChoiceList")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ChoiceList extends Window_Command {
  private var _messageWindow: Window_Message;
  private var _background: Int;

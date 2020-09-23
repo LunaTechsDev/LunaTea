@@ -9,6 +9,8 @@ package rm.windows;
  */
 @:expose("Window_DebugEdit")
 @:native("Window_DebugEdit")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_DebugEdit extends Window_Selectable {
  private var _mode: String;
  private var _topId: Int;

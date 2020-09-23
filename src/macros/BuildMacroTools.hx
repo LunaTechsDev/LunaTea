@@ -66,6 +66,99 @@ class BuildMacroTools {
   });
   return fields;
  }
+
+ macro public static function buildDynamicFunctions(): Array<Field> {
+  var fields = Context.getBuildFields();
+  var classType = Context.getLocalClass();
+  var superType = classType.get().superClass;
+  var allFields = allInheritedFields(classType.get());
+
+  fields.filter((field: Field) -> {
+   return field.name != "new" && switch (field.kind) {
+    case FFun(_):
+     true;
+    case FVar(t, e):
+     false;
+    case FProp(get, set, t, e):
+     false;
+   }
+  }).iter((fnField) -> {
+   var metaData: MetadataEntry = {
+    name: ":native",
+    params: [macro $v{fnField.name}],
+    pos: Context.currentPos()
+   };
+
+   var newField: Field = {
+    name: fnField.name + "D",
+    access: fnField.access.copy().concat([Access.ADynamic]),
+    kind: fnField.kind,
+    pos: Context.currentPos(),
+    doc: fnField.doc,
+    meta: [metaData]
+   }
+
+   if (fnField.meta.length > 0) {
+    newField.meta = fnField.meta;
+   }
+
+   var newReadField: Field = {
+    name: fnField.name + "R",
+    access: fnField.access.copy(),
+    kind: FieldType.FVar(macro:Dynamic),
+    pos: Context.currentPos(),
+    doc: fnField.doc,
+    meta: [metaData]
+   }
+
+   fields.push(newField);
+
+   if (allFields.find((field) -> field.name == newReadField.name) == null) {
+    fields.push(newReadField);
+   }
+  });
+  return fields;
+ }
+
+ private static function allInheritedFields(cType: ClassType): Array<Field> {
+  var fields: Array<Field> = cast cType.fields.get();
+  var superClass = cType.superClass;
+  if (superClass != null) {
+   return allInheritedFields(superClass.t.get()).concat(fields);
+  } else {
+   return fields;
+  }
+  return fields;
+ }
+
+ macro public static function buildPublicPrivateFields(): Array<Field> {
+  var fields = Context.getBuildFields();
+
+  fields.filter((field: Field) -> {
+   return field.access.contains(Access.APrivate);
+  }).iter((privateField) -> {
+   var metaData: MetadataEntry = {
+    name: ":native",
+    params: [macro $v{privateField.name}],
+    pos: Context.currentPos()
+   };
+   var oldAccess = privateField.access.copy();
+   oldAccess.remove(Access.APrivate);
+   var newAccessLevel = oldAccess.concat([Access.APublic]);
+   var newField: Field = {
+    name: '_${privateField.name}',
+    access: newAccessLevel,
+    kind: privateField.kind,
+    pos: Context.currentPos(),
+    doc: privateField.doc,
+    meta: [metaData]
+   };
+
+   fields.push(newField);
+  });
+  return fields;
+ }
+
  //  macro public static function rmClass(original: Dynamic): Array<Field> {
  //   var pos = Context.currentPos();
  //   var fields = Context.getBuildFields();

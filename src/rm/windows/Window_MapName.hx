@@ -9,6 +9,8 @@ package rm.windows;
  */
 @:expose("Window_MapName")
 @:native("Window_MapName")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_MapName extends Window_Base {
  private var _showCount: Int;
 

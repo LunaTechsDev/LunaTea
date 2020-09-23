@@ -16,6 +16,8 @@ import rm.types.LunaTea.EquipTypeId;
  */
 @:expose("Window_ShopStatus")
 @:native("Window_ShopStatus")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ShopStatus extends Window_Base {
  private var _item: BaseItem;
  private var _pageIndex: Int;

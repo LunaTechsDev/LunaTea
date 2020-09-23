@@ -9,6 +9,8 @@ package rm.windows;
  */
 @:expose("Window_TitleCommand")
 @:native("Window_TitleCommand")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_TitleCommand extends Window_Command {
  private static var _lastCommandSymbol: String;
 

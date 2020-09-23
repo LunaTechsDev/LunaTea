@@ -2,6 +2,8 @@ package rm.core;
 
 @:expose("Point")
 @:native("Point")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Point extends pixi.core.math.Point {
  /**
   * The point class.

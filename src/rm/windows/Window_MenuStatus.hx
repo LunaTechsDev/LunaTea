@@ -10,6 +10,8 @@ package rm.windows;
  */
 @:expose("Window_MenuStatus")
 @:native("Window_MenuStatus")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_MenuStatus extends Window_Selectable {
  private var _formationMode: Bool;
  private var _pendingIndex: Int;

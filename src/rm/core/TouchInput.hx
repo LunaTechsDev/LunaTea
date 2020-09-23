@@ -9,33 +9,34 @@ import rm.types.RM.TouchInputEvents;
 
 @:expose("TouchInput")
 @:native("TouchInput")
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class TouchInput {
- @:native("_mousePressed")
- public static var __mousePressed: Bool;
  private static var _mousePressed: Bool;
- @:native("_screenPressed")
- public static var __screenPressed: Bool;
- private static var _screenPressed: Bool;
- @:native("_pressedTime")
- public static var __pressedTime: Int;
- private static var _pressedTime: Int;
- private static var _events: TouchInputEvents;
- private static var _triggered: Bool;
- private static var _cancelled: Bool;
- private static var _moved: Bool;
- private static var _released: Bool;
- private static var _wheelX: Float;
- private static var _wheelY: Float;
- private static var _x: Int;
- private static var _y: Int;
- @:native("_date")
- public static var __date: Int;
- private static var _date: Int;
 
- @:native("_x")
- public static var __x: Int;
- @:native("_y")
- public static var __y: Int;
+ private static var _screenPressed: Bool;
+
+ private static var _pressedTime: Int;
+
+ private static var _events: TouchInputEvents;
+
+ private static var _triggered: Bool;
+
+ private static var _cancelled: Bool;
+
+ private static var _moved: Bool;
+
+ private static var _released: Bool;
+
+ private static var _wheelX: Float;
+
+ private static var _wheelY: Float;
+
+ private static var _x: Int;
+
+ private static var _y: Int;
+
+ private static var _date: Int;
 
  /**
   * The wait time of the pseudo key repeat in frames.

@@ -5,6 +5,8 @@ package rm.scenes;
  */
 @:expose("Scene_Load")
 @:native("Scene_Load")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Load extends Scene_File {
  private var _loadSuccess: Bool;
 

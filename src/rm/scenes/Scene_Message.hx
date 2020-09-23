@@ -12,23 +12,17 @@ import haxe.extern.EitherType;
 #if !compileMV
 @:expose("Scene_Message")
 @:native("Scene_Message")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Message extends Scene_Base {
  public var isMessageWindowClosing: Bool;
 
- @:native("_choiceListWindow")
- public var __choiceListWindow: Window_ChoiceList;
  private var _choiceListWindow: Window_ChoiceList;
 
- @:native("_eventItemWindow")
- public var __eventItemWindow: Window_EventItem;
  private var _eventItemWindow: Window_EventItem;
 
- @:native("_nameBoxWindow")
- public var __nameBoxWindow: Window_NameBox;
  private var _nameBoxWindow: Window_NameBox;
 
- @:native("_numberInputWindow")
- public var __numberInputWindow: Window_NumberInput;
  private var _numberInputWindow: Window_NumberInput;
 
  public function createAllWindows(): Void;

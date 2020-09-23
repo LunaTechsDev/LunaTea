@@ -7,6 +7,8 @@ import pixi.core.renderers.AbstractRenderer;
 
 @:expose("ShaderTilemap")
 @:native("ShaderTilemap")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class ShaderTilemap extends Tilemap {
  /**
   * Uploads animation state in renderer

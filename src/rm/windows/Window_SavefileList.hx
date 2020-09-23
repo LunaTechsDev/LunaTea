@@ -6,21 +6,14 @@ typedef Info = {key: String};
 
 @:expose("Window_SavefileList")
 @:native("Window_SavefileList")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_SavefileList extends Window_Selectable {
  private var _mode: String;
 
  #if !compileMV
  /**
-  * Whether ornot the auto save feature is enabled
-  *
-  * @default {Bool} false
-  * @memberof Window_SavefileList
-  */
- @:native("_autosave")
- public var __autosave: Bool;
-
- /**
-  * Whether ornot the auto save feature is enabled
+  * Whether or not the auto save feature is enabled
   *
   * @default {Bool} false
   * @memberof Window_SavefileList
@@ -30,11 +23,11 @@ extern class Window_SavefileList extends Window_Selectable {
 
  #if !compileMV
  public function new(rect: Rectangle);
+
+ public function setMode(mode: String, autosave: Bool): Void;
+ public function selectSavefile(savefileId: Int): Void;
  #else
  public function new(x: Int, y: Int, width: Int, height: Int);
- #end
-
-
  /**
   * Sets the mode of the save file window.
   *
@@ -42,6 +35,7 @@ extern class Window_SavefileList extends Window_Selectable {
   * @memberof Window_SavefileList
   */
  public function setMode(mode: String): Void;
+ #end
 
  /**
   * Returns the maximum number of visible items.

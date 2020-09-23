@@ -12,43 +12,32 @@ import rm.types.RPG.MapEncounter;
  */
 @:expose("Game_Player")
 @:native("Game_Player")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Player extends Game_Character {
- @:native("_vehicleType")
- public var __vehicleType: String;
  private var _vehicleType: String;
- @:native("_vehicleGettingOn")
- public var __vehicleGettingOn: Bool;
+
  private var _vehicleGettingOn: Bool;
- @:native("_vehicleGettingOff")
- public var __vehicleGettingOff: Bool;
+
  private var _vehicleGettingOff: Bool;
- @:native("_dashing")
- public var __dashing: Bool;
+
  private var _dashing: Bool;
- @:native("_needsMapReload")
- public var __needsMapReload: Bool;
+
  private var _needsMapReload: Bool;
- @:native("_transferring")
- public var __transferring: Bool;
+
  private var _transferring: Bool;
  private var _newMapId: Int;
- @:native("_newX")
- public var __newX: Int;
+
  private var _newX: Int;
- @:native("_newY")
- public var __newY: Int;
+
  private var _newY: Int;
- @:native("_newDirection")
- public var __newDirection: Direction;
+
  private var _newDirection: Direction;
- @:native("_fadeType")
- public var __fadeType: FadeType;
+
  private var _fadeType: FadeType;
- @:native("_followers")
- public var __followers: Game_Followers;
+
  private var _followers: Game_Followers;
- @:native("_encounterCount")
- public var __encounterCount: Int;
+
  private var _encounterCount: Int;
 
  /**

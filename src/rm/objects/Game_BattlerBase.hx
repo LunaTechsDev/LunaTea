@@ -21,6 +21,8 @@ import haxe.DynamicAccess;
  */
 @:expose("Game_BattlerBase")
 @:native("Game_BattlerBase")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_BattlerBase {
  public function new(): Void;
  public function initialize(): Void;
@@ -175,32 +177,17 @@ extern class Game_BattlerBase {
   */
  public static var ICON_DEBUFF_START: Int;
 
- @:native("_hp")
- public var __hp: Int;
  private var _hp: Int;
- @:native("_mp")
- public var __mp: Int;
- private var _mp: Int;
- @:native("_tp")
- public var __tp: Int;
- private var _tp: Int;
- @:native("_hidden")
- public var __hidden: Bool;
- private var _hidden: Bool;
- @:native("_paramPlus")
- public var __paramPlus: Array<Int>;
- private var _paramPlus: Array<Int>; // TODO: Update this to be parameterId?
- @:native("_states")
- public var __states: Array<Int>;
- private var _states: Array<Int>;
 
- /**
-  * [stateId: Int]:Int
-  }
-  Access using number/integer
-  */
- @:native("_stateTurns")
- public var __stateTurns: DynamicAccess<Dynamic>;
+ private var _mp: Int;
+
+ private var _tp: Int;
+
+ private var _hidden: Bool;
+
+ private var _paramPlus: Array<Int>; // TODO: Update this to be parameterId?
+
+ private var _states: Array<Int>;
 
  /**
   * [stateId: Int]:Int
@@ -209,11 +196,8 @@ extern class Game_BattlerBase {
   */
  private var _stateTurns: DynamicAccess<Dynamic>;
 
- @:native("_buffs")
- public var __buffs: Array<Int>;
  private var _buffs: Array<Int>;
- @:native("_buffTurns")
- public var __buffTurns: Array<Int>;
+
  private var _buffTurns: Array<Int>;
 
  /** [read-only] Hit Points */

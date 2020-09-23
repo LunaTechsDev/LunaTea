@@ -12,6 +12,8 @@ import rm.types.RPG.UsableItem;
  */
 @:expose("Window_BattleItem")
 @:native("Window_BattleItem")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_BattleItem extends Window_ItemList {
  #if compileMV
  public function new(x: Int, y: Int, width: Int, height: Int);

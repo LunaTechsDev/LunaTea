@@ -7,6 +7,8 @@ import rm.core.Rectangle;
 #if !compileMV
 @:expose("Window_StatusBase")
 @:native("Window_StatusBase")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_StatusBase extends Window_Selectable {
  public function new(rect: Rectangle);
  public function initialize(rect: Rectangle): Void;

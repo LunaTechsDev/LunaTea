@@ -4,6 +4,8 @@ import rm.sprites.Sprite_Button;
 
 @:expose("Window_NumberInput")
 @:native("Window_NumberInput")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_NumberInput extends Window_Selectable {
  private var _messageWindow: Window_Message;
  private var _number: Int;

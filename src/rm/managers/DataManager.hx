@@ -10,24 +10,19 @@ import rm.types.RPG.BaseItem;
  */
 @:expose("DataManager")
 @:native("DataManager")
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class DataManager {
- @:native("_globalId")
- public static var __globalId: String;
  private static var _globalId: String;
- @:native("_lastAccessId")
- public static var __lastAccessId: Int;
+
  private static var _lastAccessedId: Int;
- @:native("_errorUrl")
- public static var __errorUrl: Any;
+
  private static var _errorUrl: Any;
 
  /**
   * Database Files are a JSON like Object
   */
  private static var _databaseFiles: Array<Json>;
-
- @:native("_databaseFiles")
- public static var __databaseFiles: Array<Json>; // TODO:Might need to refactor
 
  public static function loadDatabase(): Void;
  public static function loadDataFile(name: String, src: String): Void;

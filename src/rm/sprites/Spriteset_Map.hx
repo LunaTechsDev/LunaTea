@@ -16,30 +16,23 @@ import rm.core.Sprite;
  */
 @:expose("Spriteset_Map")
 @:native("Spriteset_Map")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Spriteset_Map extends Spriteset_Base {
- @:native("_parallax")
- public var __parallax: TilingSprite;
  private var _parallax: TilingSprite;
- @:native("_tilemap")
- public var __tilemap: EitherType<Tilemap, ShaderTilemap>;
+
  private var _tilemap: EitherType<Tilemap, ShaderTilemap>;
- @:native("_tileset")
- public var __tileset: Tileset;
+
  private var _tileset: Tileset;
- @:native("_characterSprites")
- public var __characterSprites: Array<Sprite_Character>;
+
  private var _characterSprites: Array<Sprite_Character>;
- @:native("_shadowSprite")
- public var __shadowSprite: Sprite;
+
  private var _shadowSprite: Sprite;
- @:native("_destinationSprite")
- public var __destinationSprite: Sprite_Destination;
+
  private var _destinationSprite: Sprite_Destination;
- @:native("_weather")
- public var __weather: Weather;
+
  private var _weather: Weather;
- @:native("_parallaxName")
- public var __parallaxName: String;
+
  private var _parallaxName: String;
 
  /**

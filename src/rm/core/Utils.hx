@@ -2,6 +2,8 @@ package rm.core;
 
 @:expose("Utils")
 @:native("Utils")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Utils {
  /**
   * The name of the RPG Maker. 'MV' in the current version.

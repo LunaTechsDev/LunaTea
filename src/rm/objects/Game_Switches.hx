@@ -7,9 +7,12 @@ package rm.objects;
  */
 @:expose("Game_Switches")
 @:native("Game_Switches")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Switches {
- @:native("_data")
- public var __data: Array<Bool>;
+ /**
+  * List of all the game switches in game.
+  */
  private var _data: Array<Bool>;
 
  public function new(): Void;

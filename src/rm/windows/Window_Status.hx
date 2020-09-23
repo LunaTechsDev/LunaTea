@@ -6,6 +6,8 @@ import rm.types.RPG;
 
 @:expose("Window_Status")
 @:native("Window_Status")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 #if compileMV
 extern class Window_Status extends Window_Selectable {
 #else

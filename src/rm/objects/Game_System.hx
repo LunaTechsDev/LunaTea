@@ -9,6 +9,8 @@ import rm.types.RPG.AudioFile;
  */
 @:expose("Game_System")
 @:native("Game_System")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_System {
  private var _saveEnabled: Bool;
  private var _menuEnabled: Bool;
@@ -36,7 +38,9 @@ extern class Game_System {
  public function isCJK(): Bool;
  public function isRussian(): Bool;
  public function isSideView(): Bool;
- public function isAutoSaveEnabled(): Bool;
+ #if !compileMV
+ public function isAutosaveEnabled(): Bool;
+ #end
  public function isSaveEnabled(): Bool;
 
  /**

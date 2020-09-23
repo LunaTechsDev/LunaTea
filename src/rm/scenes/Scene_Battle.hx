@@ -19,6 +19,8 @@ import rm.sprites.Spriteset_Battle;
  */
 @:expose("Scene_Battle")
 @:native("Scene_Battle")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 #if compileMV
 extern class Scene_Battle extends Scene_Base {
 #else

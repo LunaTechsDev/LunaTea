@@ -8,6 +8,8 @@ import rm.windows.Window_SkillType;
  */
 @:expose("Scene_Skill")
 @:native("Scene_Skill")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Skill extends Scene_ItemBase {
  private var _skillTypeWindow: Window_SkillType;
 

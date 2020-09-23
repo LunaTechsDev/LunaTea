@@ -10,6 +10,8 @@ import rm.windows.Window_MenuStatus;
  */
 @:expose("Scene_Menu")
 @:native("Scene_Menu")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Menu extends Scene_MenuBase {
  private var _commandWindow: Window_MenuCommand;
  private var _goldWindow: Window_Gold;

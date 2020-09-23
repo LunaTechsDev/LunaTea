@@ -8,6 +8,8 @@ import rm.windows.Window_Status;
  */
 @:expose("Scene_Status")
 @:native("Scene_Status")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Status extends Scene_MenuBase {
  private var _statusWindow: Window_Status;
 

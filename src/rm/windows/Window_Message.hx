@@ -2,9 +2,12 @@ package rm.windows;
 
 import rm.core.Bitmap;
 import rm.types.RM.TextState;
+import rm.core.Rectangle;
 
 @:expose("Window_Message")
 @:native("Window_Message")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_Message extends Window_Base {
  private var _positionType: Int;
  private var _background: Int;
@@ -22,16 +25,11 @@ extern class Window_Message extends Window_Base {
 
  #if compileMV
  public function initialize(): Void;
+ #else
+ public function initialize(rect: Rectangle): Void;
+ #end
 
  public function initMembers(): Void;
-
- /**
-  * Processes normal characters displayed within the message window.
-  * @param textState
-  */
- public function processNormalCharacter(textState: String): Void;
- #else
- #end
 
  /**
   * Returns the sub windows attached to the message window.

@@ -7,6 +7,8 @@ import rm.core.Rectangle;
  */
 @:expose("Scene_Debug")
 @:native("Scene_Debug")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Debug extends Scene_MenuBase {
  /**
   * Creates the range window.

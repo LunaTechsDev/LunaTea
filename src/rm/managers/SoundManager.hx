@@ -5,6 +5,8 @@ package rm.managers;
  */
 @:expose("SoundManager")
 @:native("SoundManager")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class SoundManager {
  public static function preloadImportantSounds(): Void;
  public static function loadSystemSound(databaseNumber: Int): Void;

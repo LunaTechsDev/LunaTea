@@ -11,6 +11,8 @@ import rm.core.Rectangle;
  */
 @:expose("Window_BattleSkill")
 @:native("Window_BattleSkill")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_BattleSkill extends Window_SkillList {
  #if compileMV
  public function new(x: Int, y: Int, width: Int, height: Int);

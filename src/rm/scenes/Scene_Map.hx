@@ -11,6 +11,8 @@ import rm.windows.Window_ScrollText;
  */
 @:expose("Scene_Map")
 @:native("Scene_Map")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Map extends Scene_Base {
  private var _waitCount: Int;
  private var _encounterEffectDuration: Int;
@@ -23,8 +25,6 @@ extern class Scene_Map extends Scene_Base {
  private var _messageWindow: Window_Message;
 
  #if !compileMV
- @:native("_lastMapWasNull")
- public var __lastMapWasNull: Bool;
  private var _lastMapWasNull: Bool;
 
  public function shouldAutosave(): Bool;

@@ -12,6 +12,8 @@ import rm.objects.Game_Enemy;
  */
 @:expose("Window_BattleEnemy")
 @:native("Window_BattleEnemy")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_BattleEnemy extends Window_Selectable {
  private var _enemies: Array<Game_Enemy>;
 

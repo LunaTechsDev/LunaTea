@@ -6,6 +6,8 @@ import pixi.core.display.Container;
 
 @:expose("Window")
 @:native("Window")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class _Window extends Container {
  /**
   * The origin point of the window for scrolling.

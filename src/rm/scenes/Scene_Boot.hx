@@ -4,11 +4,11 @@ import js.lib.Date;
 
 @:expose("Scene_Boot")
 @:native("Scene_Boot")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Boot extends Scene_Base {
  private var _startDate: Date;
 
- @:native("_databaseLoaded")
- public var __databaseLoaded: Bool;
  private var _databaseLoaded: Bool;
 
  #if !compileMV

@@ -13,33 +13,25 @@ import rm.core.Sprite;
  */
 @:expose("Spriteset_Base")
 @:native("Spriteset_Base")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Spriteset_Base extends Sprite {
- @:native("_tone")
- public var __tone: Array<Int>;
  private var _tone: Array<Int>;
- @:native("_baseSprite")
- public var __baseSprite: Sprite;
+
  private var _baseSprite: Sprite;
- @:native("_blackScreen")
- public var __blackScreen: ScreenSprite;
+
  private var _blackScreen: ScreenSprite;
- @:native("_toneFilter")
- public var __toneFilter: ToneFilter;
+
  private var _toneFilter: ToneFilter;
- @:native("_toneSprite")
- public var __toneSprite: ToneSprite;
+
  private var _toneSprite: ToneSprite;
- @:native("_pictureContainer")
- public var __pictureContainer: Sprite;
+
  private var _pictureContainer: Sprite;
- @:native("_timerSprite")
- public var __timerSprite: Sprite_Timer;
+
  private var _timerSprite: Sprite_Timer;
- @:native("_flashSprite")
- public var __flashSprite: ScreenSprite;
+
  private var _flashSprite: ScreenSprite;
- @:native("_fadeSprite")
- public var __fadeSprite: ScreenSprite;
+
  private var _fadeSprite: ScreenSprite;
 
  /**

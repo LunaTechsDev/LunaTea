@@ -7,6 +7,8 @@ import rm.core.Rectangle;
  */
 @:expose("Scene_Name")
 @:native("Scene_Name")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Name extends Scene_MenuBase {
  #if !compileMV
  public function editWindowRect(): Void;

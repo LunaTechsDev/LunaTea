@@ -2,6 +2,8 @@ package rm.core;
 
 @:expose("Rectangle")
 @:native("Rectangle")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Rectangle extends pixi.core.math.shapes.Rectangle {
  /**
   * @static

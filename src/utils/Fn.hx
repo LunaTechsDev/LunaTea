@@ -1,5 +1,7 @@
 package utils;
 
+import haxe.extern.Rest;
+import haxe.Constraints.Function;
 import haxe.extern.EitherType;
 import js.html.Console;
 import haxe.macro.Type.ClassType;
@@ -34,7 +36,8 @@ class Fn {
   * @param radix
   * @return Int
   */
- public static inline function parseIntJs(string: String, radix: Int): Int {
+ public static inline function parseIntJs(string: String,
+   radix: Int = 10): Int {
   return cast js.Lib.parseInt(string, radix);
  }
 
@@ -75,17 +78,29 @@ class Fn {
  }
 
  @:keep
- public static inline function proto<T>(obj: Class<T>): TBox<T> {
+ public static inline function proto<T>(obj: Class<T>): T {
   return Syntax.field(obj, "prototype");
  }
 
- public static inline function setPrProp(obj: Any, fieldName: String,
+ @:keep
+ public static inline function updateProto<T>(obj: Class<T>,
+   fn: T->Void): Dynamic {
+  return Syntax.code("({1})({0}.prototype)", obj, fn);
+ }
+
+ @:keep
+ public static inline function updateEntity<T>(obj: Class<T>,
+   fn: T->Void): Dynamic {
+  return Syntax.code("({1})({0})", obj, fn);
+ }
+
+ public static inline function setPrProp<T>(obj: Class<T>, fieldName: String,
    value: Any) {
   Syntax.code("{0}[{1}] = {2}", proto(obj), (fieldName), value);
  }
 
- public static inline function setPrPropVoidFn(obj: Any, fieldName: String,
-   value: (Any) -> Void) {
+ public static inline function setPrPropFn<T>(obj: Class<T>,
+   fieldName: String, value: Any) {
   Syntax.code("{0}[{1}]  = {2}", proto(obj), (fieldName), value);
  }
 

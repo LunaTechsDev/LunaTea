@@ -7,6 +7,8 @@ import haxe.extern.EitherType;
 
 @:expose("Scene_Base")
 @:native("Scene_Base")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Base extends Stage {
  #if !compileMV
  private var _started: Bool;
@@ -81,7 +83,7 @@ extern class Scene_Base extends Stage {
  public function buttonAreaBottom(): Int;
  public function buttonAreaHeight(): Int;
  public function buttonY(): Int;
- public function calcWindowHeight(): Int;
+ public function calcWindowHeight(numLines: Int, selectable: Bool): Int;
  public function requestAutosave(): Void;
  public function isAutosaveEnabled(): Bool;
  public function executeAutosave(): Void;

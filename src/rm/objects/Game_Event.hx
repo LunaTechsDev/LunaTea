@@ -17,38 +17,26 @@ import rm.types.RPG.EventCommand;
 @:expose("Game_Event")
 @:native("Game_Event")
 extern class Game_Event extends Game_Character {
- @:native("_mapId")
- public var __mapId: Int;
  private var _mapId: Int;
- @:native("_eventId")
- public var __eventId: Int;
+
  private var _eventId: Int;
- @:native("_moveType")
- public var __moveType: MoveType;
+
  private var _moveType: MoveType; // Cast this  to an abstract enum
- @:native("_trigger")
- public var __triger: EventTrigger;
+
  private var _trigger: EventTrigger;
- @:native("_starting")
- public var __starting: Bool;
+
  private var _starting: Bool;
- @:native("_erased")
- public var __erased: Bool;
+
  private var _erased: Bool;
- @:native("_pageIndex")
- public var __pageIndex: Int;
+
  private var _pageIndex: Int;
- @:native("_originalPattern")
- public var __originalPattern: CharacterPattern;
+
  private var _originalPattern: CharacterPattern;
- @:native("_originalDirection")
- public var __originalDirection: Direction;
+
  private var _originalDirection: Direction;
- @:native("_prelockDirection")
- public var __prelockDirection: Direction;
+
  private var _prelockDirection: Direction;
- @:native("_locked")
- public var __locked: Bool;
+
  private var _locked: Bool;
 
  public function new(mapId: Int, eventId: Int);

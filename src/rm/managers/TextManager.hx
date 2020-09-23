@@ -7,6 +7,8 @@ package rm.managers;
  */
 @:expose("TextManager")
 @:native("TextManager")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class TextManager {
  public static var currencyUnit: String;
  public static var level: String;

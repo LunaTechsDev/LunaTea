@@ -9,48 +9,33 @@ import rm.types.RM;
  */
 @:expose("AudioManager")
 @:native("AudioManager")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class AudioManager {
- @:native("_bgmVolume")
- public static var __bgmVolume: Int;
  private static var _bgmVolume: Int;
- @:native("_bgsVolume")
- public static var __bgsVolume: Int;
+
  private static var _bgsVolume: Int;
- @:native("_meVolume")
- public static var __meVolume: Int;
+
  private static var _meVolume: Int;
- @:native("_seVolume")
- public static var __seVolume: Int;
+
  private static var _seVolume: Int;
- @:native("_currentBgm")
- public static var __currentBgm: AudioParameters;
+
  private static var _currentBgm: AudioParameters;
- @:native("_currentBgs")
- public static var __currentBgs: AudioParameters;
+
  private static var _currentBgs: AudioParameters; // TODO: Create Unifieid Type for Web Audio
- @:native("_bgmBuffer")
- public static var __bgmBuffer: HTML5Audio;
+
  private static var _bgmBuffer: HTML5Audio; // WebAudio
- @:native("_bgsBuffer")
- public static var __bgsBuffer: HTML5Audio;
+
  private static var _bgsBuffer: HTML5Audio; // WebAudio
- @:native("_meBuffer")
- public static var __meBuffer: HTML5Audio;
+
  private static var _meBuffer: HTML5Audio; // WebAudio
- @:native("_seBuffers")
- public static var __seBuffers: Array<HTML5Audio>;
+
  private static var _seBuffers: Array<HTML5Audio>;
- @:native("_staticBuffers")
- public static var __staticBuffers: Array<HTML5Audio>;
+
  private static var _staticBuffers: Array<HTML5Audio>;
- @:native("_replayFadeTime")
- public static var __replayFadeTime: Int;
+
  private static var _replayFadeTime: Int;
- @:native("_path")
- public static var __path: String;
  private static var _path: String;
- @:native("_blobUrl")
- public static var __blobUrl: String;
  private static var _blobUrl: String;
 
  public static var bgmVolume: Int;

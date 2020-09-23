@@ -5,6 +5,8 @@ import rm.core.Rectangle;
 
 @:expose("Window_ItemList")
 @:native("Window_ItemList")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ItemList extends Window_Selectable {
  private var _category: String;
 

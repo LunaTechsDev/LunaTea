@@ -13,17 +13,9 @@ import rm.core.Sprite;
  */
 @:expose("Sprite_Character")
 @:native("Sprite_Character")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Character extends Sprite_Base {
- /**
-  * The Game_Character object assigned
-  * to the sprite.
-  * @private var
-  * @type {Game_Character}
-  * @memberof Sprite_Character
-  */
- @:native("_character")
- public var __character: Game_Character;
-
  /**
   * The Game_Character object assigned
   * to the sprite.
@@ -33,31 +25,15 @@ extern class Sprite_Character extends Sprite_Base {
   */
  private var _character: Game_Character;
 
- @:native("_balloonDuration")
- public var __balloonDuration: Int;
  private var _balloonDuration: Int;
- @:native("_tilesetId")
- public var __tilesetId: Int;
- private var _tilesetId: Int;
- @:native("_upperBody")
- public var __upperBody: Sprite;
- private var _upperBody: Sprite;
- @:native("_lowerBody")
- public var __lowerBody: Sprite;
- private var _lowerBody: Sprite;
- @:native("_bushDepth")
- public var __bushDepth: Int;
- private var _bushDepth: Int;
 
- /**
-  * The current balloon sprite
-  * assigned to the sprite.
-  * @private var
-  * @type {Sprite_Balloon}
-  * @memberof Sprite_Character
-  */
- @:native("_balloonSprite")
- public var __balloonSprite: Sprite_Balloon;
+ private var _tilesetId: Int;
+
+ private var _upperBody: Sprite;
+
+ private var _lowerBody: Sprite;
+
+ private var _bushDepth: Int;
 
  /**
   * The current balloon sprite

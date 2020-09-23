@@ -5,6 +5,8 @@ import pixi.core.display.Container;
 
 @:expose("Stage")
 @:native("Stage")
+@:build(macros.BuildMacroTools.buildDynamicFunctions())
+@:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Stage extends Container {
  // The interactive flag causes a memory leak.
 
@@ -15,6 +17,11 @@ extern class Stage extends Container {
   * @constructor
   */
  public function new();
+
+ /**
+  * The initialize method is called upon instantiation of a new Stage.
+  */
+ public function initialize(): Void;
 
  /**
   * Adds a child to the container.
