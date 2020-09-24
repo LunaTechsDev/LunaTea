@@ -155,12 +155,11 @@ class FnMacros {
   var classForPatching = classTypes[1];
   var classForPatchingName = originalNames[1];
 
-  trace(originalNames);
   var fields = classForPatching.fields;
   if (fields != null) {
    fields.get().iter((classField) -> {
     // storeTypedExpr ?
-    trace(classField.name);
+
     var classFieldToUse = null;
     if (allInheritedFields(classForPatching).exists((cField) -> {
      cField.name == classField.name + "R";
@@ -179,6 +178,8 @@ class FnMacros {
      newExpr = Context.parseInlineString('untyped Fn.proto(${classToPatchName}).${classFieldToUse}',
       Context.currentPos());
     } else {
+     oldFuncExpr = Context.parseInlineString('untyped var _${classToPatchName}_${classFieldToUse} =  ${classToPatchName}.${classFieldToUse}',
+      Context.currentPos());
      newExpr = Context.parseInlineString('untyped ${classToPatchName}.${classFieldToUse}',
       Context.currentPos());
     }
@@ -191,10 +192,11 @@ class FnMacros {
     } else {
      finalExpr = macro ${newExpr} = ${macro null};
     }
-    if (prototype) {
-     // Adds the old function above the finalExpr for overwriting.
-     newPatchExprs.push(oldFuncExpr);
-    }
+    // if (prototype) {
+    //  // Adds the old function above the finalExpr for overwriting.
+    //  newPatchExprs.push(oldFuncExpr);
+    // }
+    newPatchExprs.push(oldFuncExpr);
     newPatchExprs.push(finalExpr);
    });
   }

@@ -10,6 +10,8 @@ import utils.Fn;
 import utils.Comment;
 import macros.MacroTools;
 import LTWinMsg.LTWinMsgUpdate;
+import rm.managers.DataManager;
+import DataMgr.LunaDataManager;
 
 using core.LambdaTea;
 using Lambda;
@@ -69,6 +71,6 @@ class Main {
   #end
 
   FnMacros.jsPatch(true, Window_Message, LTWinMsgUpdate);
-  FnMacros.jsPatch(false, Window_Message, LTWinMsgUpdate);
+  FnMacros.jsPatch(false, DataManager, LunaDataManager);
  }
 }
