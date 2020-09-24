@@ -33,6 +33,10 @@ class LTWinMsgUpdate extends Window_Message {
   trace("Hello World");
  }
 
+ public function saveGame() {
+  this.tabIndex = 3;
+ }
+
  //  #if compileMV
  //  public override function processNormalCharacter(textState: String) {
  //   super.processNormalCharacter(textState);
