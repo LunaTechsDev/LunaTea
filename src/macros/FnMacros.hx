@@ -127,6 +127,7 @@ class FnMacros {
    rest: Array<Expr>): Expr {
   var newPatchExprs = [];
   var originalNames = [];
+  var originalNameFromAliasedImport = '';
   var classTypes = [];
 
   for (classExpr in rest) {
@@ -144,18 +145,19 @@ class FnMacros {
          var d = cType.get();
          switch (Context.getType(d.type.toString())) {
           case TInst(dType, _):
-           classTypes.push(dType.get());
+           var classPath = dType.get();
+           originalNameFromAliasedImport = classPath.name;
+           classTypes.push(classPath);
           case _:
            // do nothing
          }
-        // Do nothing
         case _:
          // Do nothing
        }
+      // Do nothing
       case _:
        // Do nothing
      }
-
     case _:
      // Do nothing
    }
@@ -166,6 +168,8 @@ class FnMacros {
   var classToPatchName = originalNames[0];
   var classForPatching = classTypes[1];
   var classForPatchingName = originalNames[1];
+  
+  var classToPatchAliasName = originalNameFromAliasedImport != null ? originalNameFromAliasedImport : classToPatchName;
 
   var fields = classForPatching.fields;
 
@@ -195,13 +199,13 @@ class FnMacros {
     var oldFuncExpr = null;
     // Creates the new prototype function and also the previous function aliased.
     if (prototype) {
-     oldFuncExpr = Context.parseInlineString('untyped var _${classToPatchName}_${classFieldRealName} =  utils.Fn.proto(${classToPatchName}).${classFieldToUse}',
+     oldFuncExpr = Context.parseInlineString('untyped var _${classToPatchAliasName}_${classFieldRealName} =  utils.Fn.proto(${classToPatchName}).${classFieldToUse}',
       Context.currentPos());
 
      newExpr = Context.parseInlineString('untyped utils.Fn.proto(${classToPatchName}).${classFieldToUse}',
       Context.currentPos());
     } else {
-     oldFuncExpr = Context.parseInlineString('untyped var _${classToPatchName}_${classFieldRealName} =  ${classToPatchName}.${classFieldToUse}',
+     oldFuncExpr = Context.parseInlineString('untyped var _${classToPatchAliasName}_${classFieldRealName} =  ${classToPatchName}.${classFieldToUse}',
       Context.currentPos());
      newExpr = Context.parseInlineString('untyped ${classToPatchName}.${classFieldToUse}',
       Context.currentPos());
