@@ -12,6 +12,7 @@ import haxe.macro.TypeTools;
 
 using haxe.macro.Tools;
 using Lambda;
+using StringTools;
 #end
 
 class FnMacros {
@@ -156,29 +157,40 @@ class FnMacros {
   var classForPatchingName = originalNames[1];
 
   var fields = classForPatching.fields;
+
   if (fields != null) {
    fields.get().iter((classField) -> {
+    var isRType = false;
     // storeTypedExpr ?
 
     var classFieldToUse = null;
+    var classFieldRealName = null;
     if (allInheritedFields(classForPatching).exists((cField) -> {
      cField.name == classField.name + "R";
     })) {
      classFieldToUse = classField.name + "R";
+     isRType = true;
     } else {
      classFieldToUse = classField.name;
     }
+
+    if (isRType) {
+     classFieldRealName = classField.name.substring(0, classField.name.length);
+    } else {
+     classFieldRealName = classField.name;
+    }
+
     var newExpr = null;
     var oldFuncExpr = null;
     // Creates the new prototype function and also the previous function aliased.
     if (prototype) {
-     oldFuncExpr = Context.parseInlineString('untyped var _${classToPatchName}_${classFieldToUse} =  Fn.proto(${classToPatchName}).${classFieldToUse}',
+     oldFuncExpr = Context.parseInlineString('untyped var _${classToPatchName}_${classFieldRealName} =  utils.Fn.proto(${classToPatchName}).${classFieldToUse}',
       Context.currentPos());
 
-     newExpr = Context.parseInlineString('untyped Fn.proto(${classToPatchName}).${classFieldToUse}',
+     newExpr = Context.parseInlineString('untyped utils.Fn.proto(${classToPatchName}).${classFieldToUse}',
       Context.currentPos());
     } else {
-     oldFuncExpr = Context.parseInlineString('untyped var _${classToPatchName}_${classFieldToUse} =  ${classToPatchName}.${classFieldToUse}',
+     oldFuncExpr = Context.parseInlineString('untyped var _${classToPatchName}_${classFieldRealName} =  ${classToPatchName}.${classFieldToUse}',
       Context.currentPos());
      newExpr = Context.parseInlineString('untyped ${classToPatchName}.${classFieldToUse}',
       Context.currentPos());
