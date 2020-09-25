@@ -134,17 +134,28 @@ class FnMacros {
     case EConst(constant):
      switch (constant) {
       case CIdent(identifier):
-       // Create TInst of the class type
        originalNames.push(identifier);
+       // Create TInst of the class type
        switch (Context.getType(identifier)) {
         case TInst(cType, _):
          classTypes.push(cType.get());
+
+        case TType(cType, _):
+         var d = cType.get();
+         switch (Context.getType(d.type.toString())) {
+          case TInst(dType, _):
+           classTypes.push(dType.get());
+          case _:
+           // do nothing
+         }
+        // Do nothing
         case _:
          // Do nothing
        }
       case _:
        // Do nothing
      }
+
     case _:
      // Do nothing
    }
