@@ -2,7 +2,7 @@
 // test.js
 //=============================================================================
 //=============================================================================
-// Build Date: 2020-09-24 18:55:48
+// Build Date: 2020-09-24 21:06:24
 //=============================================================================
 //=============================================================================
 // Made with Kiniita -- Haxe
@@ -66,7 +66,7 @@ class Lambda {
 Lambda.__name__ = true;
 class Main {
 	static main() {
-		// Build Date: 2020-09-24 18:55:45 
+		// Build Date: 2020-09-24 21:06:21 
 		
 //=============================================================================
 // Kiniitta
@@ -112,7 +112,7 @@ class Main {
 		haxe_Log.trace("Test comment",{ fileName : "src/Main.hx", lineNumber : 70, className : "Main", methodName : "main"});
 		let _Window_Message__testingNewCharacter = Window_Message.prototype._testingNewCharacter;
 		Window_Message.prototype._testingNewCharacter = null;
-		let _Window_Message_initializeR = Window_Message.prototype.initialize;
+		let _Window_Message_initialize = Window_Message.prototype.initialize;
 		Window_Message.prototype.initialize = function() {
 			_Window_Message_intiailizeR.call(this);
 			this._testingNewCharacter = "Actor1_1";
