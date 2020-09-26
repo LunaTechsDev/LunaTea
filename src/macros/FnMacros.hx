@@ -198,8 +198,6 @@ class FnMacros {
   var classForPatching = classTypes[1];
   var classForPatchingName = originalNames[1];
 
-  var classToPatchAliasName = originalNameFromAliasedImport != null ? originalNameFromAliasedImport : classToPatchName;
-
   var fields = classForPatching.fields;
 
   if (fields != null) {
@@ -223,6 +221,8 @@ class FnMacros {
     } else {
      classFieldRealName = classField.name;
     }
+
+    var classToPatchAliasName = originalNameFromAliasedImport.length > 0 ? originalNameFromAliasedImport : classToPatchName;
 
     var newExpr = null;
     var oldFuncExpr = null;
