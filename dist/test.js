@@ -2,7 +2,7 @@
 // test.js
 //=============================================================================
 //=============================================================================
-// Build Date: 2020-09-24 21:06:24
+// Build Date: 2020-09-26 14:08:09
 //=============================================================================
 //=============================================================================
 // Made with Kiniita -- Haxe
@@ -66,7 +66,7 @@ class Lambda {
 Lambda.__name__ = true;
 class Main {
 	static main() {
-		// Build Date: 2020-09-24 21:06:21 
+		// Build Date: 2020-09-26 14:08:06 
 		
 //=============================================================================
 // Kiniitta
@@ -84,10 +84,10 @@ class Main {
 			sceneTitleStart.call(self);
 			_$LTGlobals_$.$gameVariables.setValue(1,3);
 			Window.Haxe = "Version 4.2.0";
-			haxe_Log.trace("Running Console Log From Haxe Added haxe Version",{ fileName : "src/Main.hx", lineNumber : 34, className : "Main", methodName : "main"});
+			haxe_Log.trace("Running Console Log From Haxe Added haxe Version",{ fileName : "src/Main.hx", lineNumber : 37, className : "Main", methodName : "main"});
 		};
 		let sceneTitleStart2 = Scene_Base.prototype.start;
-		haxe_Log.trace(sceneTitleStart2,{ fileName : "src/Main.hx", lineNumber : 38, className : "Main", methodName : "main"});
+		haxe_Log.trace(sceneTitleStart2,{ fileName : "src/Main.hx", lineNumber : 41, className : "Main", methodName : "main"});
 		Scene_Base.prototype.start = function() {
 		};
 		let abc = [1,2,3,4,5,10];
@@ -107,32 +107,51 @@ class Main {
 			self.update();
 		};
 		TouchInput._onMouseMove = function(event) {
-			haxe_Log.trace(event,{ fileName : "src/Main.hx", lineNumber : 51, className : "Main", methodName : "main"});
+			haxe_Log.trace(event,{ fileName : "src/Main.hx", lineNumber : 54, className : "Main", methodName : "main"});
 		};
-		haxe_Log.trace("Test comment",{ fileName : "src/Main.hx", lineNumber : 70, className : "Main", methodName : "main"});
-		let _Window_Message__testingNewCharacter = Window_Message.prototype._testingNewCharacter;
+		haxe_Log.trace("Test comment",{ fileName : "src/Main.hx", lineNumber : 73, className : "Main", methodName : "main"});
+		let tmp_1_x = 3;
+		let tmp_1_b = "Hello";
+		let tmp_1_y = 22;
+		let tmp_1_c = 33;
+		let tmp_2_z = 3;
+		haxe_Log.trace({ z : tmp_2_z, y : tmp_1_y, x : tmp_1_x, c : tmp_1_c, b : tmp_1_b},{ fileName : "src/Main.hx", lineNumber : 81, className : "Main", methodName : "main"});
+		let xY = function(other) {
+			return { y : other.y, x : other.x};
+		};
+		let x1 = _$LTGlobals_$.$gamePlayer;
+		let result1 = xY(x1);
+		haxe_Log.trace(result1.x,{ fileName : "src/Main.hx", lineNumber : 85, className : "Main", methodName : "main"});
+		let result2_c = tmp_1_c;
+		let result2_b = tmp_1_b;
+		haxe_Log.trace(result2_b,{ fileName : "src/Main.hx", lineNumber : 87, className : "Main", methodName : "main"});
+		Main.test(...[1,2]);
+		let ___testingNewCharacter = Window_Message.prototype._testingNewCharacter;
 		Window_Message.prototype._testingNewCharacter = null;
-		let _Window_Message_initialize = Window_Message.prototype.initialize;
+		let __initialize = Window_Message.prototype.initialize;
 		Window_Message.prototype.initialize = function() {
 			_Window_Message_intiailizeR.call(this);
 			this._testingNewCharacter = "Actor1_1";
 			haxe_Log.trace(this._background,{ fileName : "src/LTWinMsg.hx", lineNumber : 23, className : "LTWinMsgUpdate", methodName : "initialize"});
 		};
-		let _Window_Message_newTestFunction = Window_Message.prototype.newTestFunction;
+		let __newTestFunction = Window_Message.prototype.newTestFunction;
 		Window_Message.prototype.newTestFunction = function() {
 			haxe_Log.trace(this.x,{ fileName : "src/LTWinMsg.hx", lineNumber : 32, className : "LTWinMsgUpdate", methodName : "newTestFunction", customParams : [this.y]});
 			haxe_Log.trace("Hello World",{ fileName : "src/LTWinMsg.hx", lineNumber : 33, className : "LTWinMsgUpdate", methodName : "newTestFunction"});
 		};
-		let _Window_Message_saveGame = Window_Message.prototype.saveGame;
+		let __saveGame = Window_Message.prototype.saveGame;
 		Window_Message.prototype.saveGame = function() {
 			this.tabIndex = 3;
 		};
-		let _DataManager__testingNewCharacter = DataManager._testingNewCharacter;
+		let ___testingNewCharacter1 = DataManager._testingNewCharacter;
 		DataManager._testingNewCharacter = null;
-		let _DataManager_saveGame = DataManager.saveGame;
+		let __saveGame1 = DataManager.saveGame;
 		DataManager.saveGame = function() {
 			DataManager.setupEventTest();
 		};
+	}
+	static test(x,y) {
+		return x + y;
 	}
 }
 Main.__name__ = true;

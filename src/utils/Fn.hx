@@ -168,4 +168,10 @@ class Fn {
  public static inline function log(data: Array<Dynamic>) {
   Console.log(data);
  }
+
+ public static inline function rest(fn: Function,
+   args: Array<Dynamic>): Dynamic {
+  return Syntax.code('{0}(...{1})', fn, args);
+  // return Reflect.callMethod(null, fn, args);
+ }
 }

@@ -22,43 +22,72 @@ class FnMacros {
   return macro $b{exprs};
  }
 
- public static macro function destruct(entity: Expr,
-   fieldNames: Array<ExprOf<String>>): Expr {
-  var pos = Context.currentPos();
-  var localVars = Context.getLocalVars();
-  var classFields = Context.getLocalClass().get().fields;
+ public static macro function restx(arr: Expr): Expr {
+  var arrVals = [];
+  var innerExpr = [];
+  trace(arr.toString()); // @:this this
 
-  var fields: Array<Expr> = [];
+  switch (arr.expr) {
+   case EArrayDecl(values):
+    arrVals = values.map((x) -> $v{x});
+    innerExpr = values;
 
-  var tentity = Context.typeof(entity);
-  switch (TypeTools.follow(tentity)) {
-   case TAnonymous(_.get() => tr):
-    for (field in tr.fields) {
-     var name = field.name;
-     var value = field.expr();
-
-     var tmp = macro $v{value};
-
-     fields.push(macro var $name = $tmp);
-     localVars.set(name, field.type);
-     classFields.get().push(field);
-     //  localVars.clear();
-    }
    case _:
-    return Context.error("Object type expected instead of"
-     + tentity.getName(), pos); // Do nothing
+    return Context.error('Incorrect type, must be array type',
+     Context.currentPos());
   }
 
-  // for (element in entity) {
-  //  trace(element);
-  //  if (fieldNames.contains(element)) {
-  //   var fieldNameValue = macro entity.$element;
-  //   fields.push(macro var element = entity.$element);
-  //  }
-  // };
+  var result = {
+   expr: EArrayDecl(arrVals),
+   pos: Context.currentPos()
+  };
+  var resultArr = [macro $result];
 
-  fields.push(macro var hello = 3);
-  return macro $b{fields};
+  return macro $a{innerExpr};
+ }
+
+ public static macro function destruct(typeRef: Expr, objectRef: Expr) {
+  var assignmentExprs = [];
+  var typeRefType = Context.typeof(typeRef);
+  var objectIdentifier = '';
+
+  var valueFields = new Map<String, haxe.macro.ObjectField>();
+  switch (objectRef.expr) {
+   case EConst(c):
+    switch (c) {
+     case CIdent(refIdentifier):
+      objectIdentifier = refIdentifier;
+     case _:
+      // Do nothing
+    }
+   case _:
+    return Context.error('Incorrect type, must be constant identifier',
+     Context.currentPos());
+  }
+
+  switch (TypeTools.follow(typeRefType)) {
+   case TAnonymous(_.get() => tr):
+    tr.fields.iter((field) -> {
+     var name = field.name;
+     var objId = macro $i{objectIdentifier};
+     var value = macro $objId.$name;
+
+     valueFields.set(name, {field: name, expr: value});
+    });
+   case _:
+    return Context.error('Object type expected instead of' + typeRef.getValue(),
+     Context.currentPos());
+  }
+  /* Return a list of basic assignment expressions when destructuring.
+   Example: var x = a.x; <-- a being the identifier of the expr passed in.
+   */
+  // trace(assignmentExprs);
+  var objResult = {
+   expr: EObjectDecl(valueFields.array()),
+   pos: Context.currentPos()
+  };
+  assignmentExprs.push(macro $objResult);
+  return macro $b{assignmentExprs};
  }
 
  public static inline macro function self(typeName: Expr,
@@ -168,7 +197,7 @@ class FnMacros {
   var classToPatchName = originalNames[0];
   var classForPatching = classTypes[1];
   var classForPatchingName = originalNames[1];
-  
+
   var classToPatchAliasName = originalNameFromAliasedImport != null ? originalNameFromAliasedImport : classToPatchName;
 
   var fields = classForPatching.fields;
