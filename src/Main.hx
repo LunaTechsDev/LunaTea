@@ -1,3 +1,4 @@
+import rm.core.Rectangle;
 import rm.Globals;
 import macros.FnMacros;
 import rm.core.TouchInput;
@@ -16,6 +17,8 @@ import DataMgr.LunaDataManager;
 
 using core.LambdaTea;
 using Lambda;
+using macros.FnMacros;
+using utils.Fn;
 
 class Main {
  public static function main() {
@@ -76,6 +79,7 @@ class Main {
    y: 22,
    c: 33
   };
+  trace(a.combine({z: 3}));
   var xY = (other) -> FnMacros.destruct({x: Int, y: Int}, other);
   var x = Globals.GamePlayer;
   var result = xY(x);
@@ -83,7 +87,13 @@ class Main {
   var result2 = FnMacros.destruct({b: String, c: Int}, a);
   trace(result2.b);
 
+  test.rest([1, 2]);
+
   FnMacros.jsPatch(true, Window_Message, LTWinMsgUpdate);
   FnMacros.jsPatch(false, DataManager, LunaDataManager);
+ }
+
+ public static function test(x: Int, y: Int) {
+  return x + y;
  }
 }

@@ -22,6 +22,30 @@ class FnMacros {
   return macro $b{exprs};
  }
 
+ public static macro function restx(arr: Expr): Expr {
+  var arrVals = [];
+  var innerExpr = [];
+  trace(arr.toString()); // @:this this
+
+  switch (arr.expr) {
+   case EArrayDecl(values):
+    arrVals = values.map((x) -> $v{x});
+    innerExpr = values;
+
+   case _:
+    return Context.error('Incorrect type, must be array type',
+     Context.currentPos());
+  }
+
+  var result = {
+   expr: EArrayDecl(arrVals),
+   pos: Context.currentPos()
+  };
+  var resultArr = [macro $result];
+
+  return macro $a{innerExpr};
+ }
+
  public static macro function destruct(typeRef: Expr, objectRef: Expr) {
   var assignmentExprs = [];
   var typeRefType = Context.typeof(typeRef);
@@ -43,7 +67,6 @@ class FnMacros {
 
   switch (TypeTools.follow(typeRefType)) {
    case TAnonymous(_.get() => tr):
-    trace(tr.status.getName());
     tr.fields.iter((field) -> {
      var name = field.name;
      var objId = macro $i{objectIdentifier};
