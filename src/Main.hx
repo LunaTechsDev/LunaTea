@@ -1,3 +1,4 @@
+import rm.Globals;
 import macros.FnMacros;
 import rm.core.TouchInput;
 import rm.windows.Window_Message;
@@ -69,6 +70,18 @@ class Main {
   #if compileMV
   trace("Test comment");
   #end
+  var a = {
+   x: 3,
+   b: "Hello",
+   y: 22,
+   c: 33
+  };
+  var xY = (other) -> FnMacros.destruct({x: Int, y: Int}, other);
+  var x = Globals.GamePlayer;
+  var result = xY(x);
+  trace(result.x);
+  var result2 = FnMacros.destruct({b: String, c: Int}, a);
+  trace(result2.b);
 
   FnMacros.jsPatch(true, Window_Message, LTWinMsgUpdate);
   FnMacros.jsPatch(false, DataManager, LunaDataManager);
