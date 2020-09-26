@@ -1,3 +1,5 @@
+package core;
+
 import pixi.core.math.Point;
 import rm.core.TouchInput;
 import rm.windows.Window_Base;
