@@ -1734,7 +1734,7 @@ typedef State = {
  * The data class for actors.
  */
 typedef Actor = {
- > Metadata,
+ > MetaData,
 
  /**
   * The ID.
