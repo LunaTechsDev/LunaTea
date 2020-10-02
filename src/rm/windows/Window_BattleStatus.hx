@@ -24,7 +24,7 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleStatus
   */
- public function windowWidth(): Int;
+ public function windowWidth(): Float;
 
  /**
   * Returns the window height.
@@ -32,7 +32,7 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleStatus
   */
- public function windowHeight(): Int;
+ public function windowHeight(): Float;
 
  /**
   * Returns the number of visible rows.
@@ -40,9 +40,9 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleStatus
   */
- public function numVisibleRows(): Int;
+ public function numVisibleRows(): Float;
 
- public function basicAreaRect(index: Int): Rectangle;
+ public function basicAreaRect(index: Float): Rectangle;
 
  /**
   * returns a rectangle for the gauges in the gauge area.
@@ -51,7 +51,7 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @returns {Rectangle}
   * @memberof Window_BattleStatus
   */
- public function gaugeAreaRect(index: Int): Rectangle;
+ public function gaugeAreaRect(index: Float): Rectangle;
 
  /**
   * Returns the width of the guage area.
@@ -59,7 +59,7 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleStatus
   */
- public function gaugeAreaWidth(): Int;
+ public function gaugeAreaWidth(): Float;
 
  /**
   * Draws the basic area for actors within the battle status window.

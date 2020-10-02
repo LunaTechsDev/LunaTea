@@ -21,7 +21,7 @@ extern class Weather extends Container {
   * @property power
   * @type Number
   */
- public var power: Int;
+ public var power: Float;
 
  /**
   * The origin point of the weather for scrolling.
@@ -46,8 +46,8 @@ extern class Weather extends Container {
   */
  public function update(): Void;
 
- private var _width: Int;
- private var _height: Int;
+ private var _width: Float;
+ private var _height: Float;
  private var _sprites: Array<Sprite>;
  private var _rainBitmap: Bitmap;
  private var _stormBitmap: Bitmap;

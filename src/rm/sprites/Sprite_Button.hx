@@ -33,28 +33,30 @@ extern class Sprite_Button extends Sprite {
  /**
   * Set the button sprites cold frame.
   *
-  * @param {Int} x
-  * @param {Int} y
-  * @param {Int} width
-  * @param {Int} height
+  * @param {Float} x
+  * @param {Float} y
+  * @param {Float} width
+  * @param {Float} height
   *
   * @memberof Sprite_Button
   *
   */
- public function setColdFrame(x: Int, y: Int, width: Int, height: Int): Void;
+ public function setColdFrame(x: Float, y: Float, width: Float,
+  height: Float): Void;
 
  /**
   * Set the button sprites hot frame
   *
-  * @param {Int} x
-  * @param {Int} y
-  * @param {Int} width
-  * @param {Int} height
+  * @param {Float} x
+  * @param {Float} y
+  * @param {Float} width
+  * @param {Float} height
   *
   * @memberof Sprite_Button
   *
   */
- public function setHotFrame(x: Int, y: Int, width: Int, height: Int): Void;
+ public function setHotFrame(x: Float, y: Float, width: Float,
+  height: Float): Void;
 
  /**
   * Creates a new handler and binds it to the button.
@@ -95,18 +97,18 @@ extern class Sprite_Button extends Sprite {
 
  /**
   * Changes the x coordinate of the screen to local sprite x coordinate.
-  * @param {Int} x
-  * @returns {Int}
+  * @param {Float} x
+  * @returns {Float}
   * @memberof Sprite_Button
   */
- public function canvasToLocalX(x: Int): Int;
+ public function canvasToLocalX(x: Float): Float;
 
  /**
   * Changes the y coordinate of the screen
   * to local sprite y coordinate.
-  * @param {Int} y
-  * @returns {Int}
+  * @param {Float} y
+  * @returns {Float}
   * @memberof Sprite_Button
   */
- public function canvasToLocalY(y: Int): Int;
+ public function canvasToLocalY(y: Float): Float;
 }

@@ -15,7 +15,7 @@ import rm.types.RPG.BaseItem;
 extern class Game_Item {
  private var _dataClass: String;
 
- private var _itemId: Int;
+ private var _itemId: Float;
 
  public function new(item: BaseItem): Void;
  public function initialize(): Void;
@@ -82,7 +82,7 @@ extern class Game_Item {
   * @returns {number}
   * @memberof Game_Item
   */
- public function itemId(): Int;
+ public function itemId(): Float;
 
  public function object(): BaseItem;
 
@@ -94,5 +94,5 @@ extern class Game_Item {
   */
  public function setObject(item: BaseItem): Void;
 
- public function setEquip(isWeapon: Bool, itemId: Int): Void;
+ public function setEquip(isWeapon: Bool, itemId: Float): Void;
 }

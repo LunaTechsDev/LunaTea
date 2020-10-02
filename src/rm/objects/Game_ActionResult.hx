@@ -23,14 +23,14 @@ extern class Game_ActionResult {
  public var critical: Bool;
  public var success: Bool;
  public var hpAffected: Bool;
- public var hpDamage: Int;
- public var mpDamage: Int;
- public var tpDamage: Int;
- public var addedStates: Array<Int>;
- public var removedStates: Array<Int>;
- public var addedBuffs: Array<Int>;
- public var addedDebuffs: Array<Int>;
- public var removedBuffs: Array<Int>; // TODO: Enum States and Buffs into Enums
+ public var hpDamage: Float;
+ public var mpDamage: Float;
+ public var tpDamage: Float;
+ public var addedStates: Array<Float>;
+ public var removedStates: Array<Float>;
+ public var addedBuffs: Array<Float>;
+ public var addedDebuffs: Array<Float>;
+ public var removedBuffs: Array<Float>; // TODO: Enum States and Buffs into Enums
 
  public function new(): Void;
  public function initialize(): Void;
@@ -68,10 +68,10 @@ extern class Game_ActionResult {
   */
  public function isHit(): Bool;
 
- public function isStateAdded(stateId: Int): Bool;
- public function pushAddedState(stateId: Int): Void;
- public function isStateRemoved(stateId: Int): Bool;
- public function pushRemovedState(stateId: Int): Void;
+ public function isStateAdded(stateId: Float): Bool;
+ public function pushAddedState(stateId: Float): Void;
+ public function isStateRemoved(stateId: Float): Bool;
+ public function pushRemovedState(stateId: Float): Void;
 
  /**
   * Returns true if the a buff is added to the specified param
@@ -80,11 +80,11 @@ extern class Game_ActionResult {
   * @returns {Bool}
   * @memberof Game_ActionResult
   */
- public function isBuffAdded(paramId: Int): Bool;
+ public function isBuffAdded(paramId: Float): Bool;
 
- public function pushAddedBuff(paramId: Int): Void;
- public function isDebuffAdded(paramId: Int): Bool;
- public function pushAddedDebuff(paramId: Int): Void;
- public function isBuffRemoved(paramId: Int): Bool;
- public function pushRemovedBuff(paramId: Int): Void;
+ public function pushAddedBuff(paramId: Float): Void;
+ public function isDebuffAdded(paramId: Float): Bool;
+ public function pushAddedDebuff(paramId: Float): Void;
+ public function isBuffRemoved(paramId: Float): Bool;
+ public function pushRemovedBuff(paramId: Float): Void;
 }

@@ -16,8 +16,9 @@ import rm.types.RPG.UsableItem;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_BattleItem extends Window_ItemList {
  #if compileMV
- public function new(x: Int, y: Int, width: Int, height: Int);
- public function initialize(x: Int, y: Int, width: Int, height: Int): Void;
+ public function new(x: Float, y: Float, width: Float, height: Float);
+ public function initialize(x: Float, y: Float, width: Float,
+  height: Float): Void;
  #else
  public function new(rect: Rectangle);
  public function initialize(rect: Rectangle): Void;

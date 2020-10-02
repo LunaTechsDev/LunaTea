@@ -20,28 +20,28 @@ extern class WindowLayer extends Container {
   * @property width
   * @type Number
   */
- //  public var width:Int;
+ //  public var width:Float;
  /**
   * The height of the window layer in pixels.
   *
   * @property height
   * @type Number
   */
- //  public var height:Int;
+ //  public var height:Float;
  /**
   * The x coordinate of the sprite.
   *
   * @property x
   * @type Number
   */
- //  public var x:Int;
+ //  public var x:Float;
  /**
   * The y coordinate of the sprite.
   *
   * @property y
   * @type Number
   */
- //  public var y:Int;
+ //  public var y:Float;
  /**
   * [read-only] The array of children of the sprite.
   *
@@ -76,7 +76,7 @@ extern class WindowLayer extends Container {
   * @param {Number} width The width of the window layer
   * @param {Number} height The height of the window layer
   */
- public function move(x: Int, y: Int, width: Int, height: Int): Void;
+ public function move(x: Float, y: Float, width: Float, height: Float): Void;
 
  /**
   * Updates the window layer for each frame.
@@ -102,7 +102,7 @@ extern class WindowLayer extends Container {
   * @param {Number} index The index to place the child in
   * @return {PIXI.DisplayObject} The child that was added
   */
- public function addChildAt(child: DisplayObject, index: Int): DisplayObject;
+ public function addChildAt(child: DisplayObject, index: Float): DisplayObject;
 
  /**
   * Removes a child from the container.
@@ -120,7 +120,7 @@ extern class WindowLayer extends Container {
   * @param {Number} index The index to get the child from
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public function removeChildAt(index: Int): DisplayObject;
+ public function removeChildAt(index: Float): DisplayObject;
 
  /**
   * @method _renderCanvas
@@ -154,8 +154,8 @@ extern class WindowLayer extends Container {
  @:native("_renderWebGL")
  public function renderWebGL(renderer: Renderer): Void;
 
- private var _width: Int;
- private var _height: Int;
+ private var _width: Float;
+ private var _height: Float;
  private var _tempCanvas: CanvasElement;
  private var _translationMatrix: Array<Float>;
  private var _windowMask: Graphics;

@@ -9,9 +9,9 @@ import rm.core.Rectangle;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_Message extends Window_Base {
- private var _positionType: Int;
- private var _background: Int;
- private var _waitCount: Int;
+ private var _positionType: Float;
+ private var _background: Float;
+ private var _waitCount: Float;
  private var _faceBitmap: Bitmap;
  private var _textState: TextState;
  private var _pauseSkip: Bool;
@@ -52,7 +52,7 @@ extern class Window_Message extends Window_Base {
   * @returns {number}
   * @memberof Window_Message
   */
- public function windowWidth(): Int;
+ public function windowWidth(): Float;
 
  /**
   * Returns the height of the window.
@@ -60,7 +60,7 @@ extern class Window_Message extends Window_Base {
   * @returns {number}
   * @memberof Window_Message
   */
- public function windowHeight(): Int;
+ public function windowHeight(): Float;
 
  /**
   * Returns the number of visible rows within the message window.
@@ -68,7 +68,7 @@ extern class Window_Message extends Window_Base {
   * @returns {number}
   * @memberof Window_Message
   */
- public function numVisibleRows(): Int;
+ public function numVisibleRows(): Float;
 
  public function checkToNotClose(): Void;
 
@@ -107,7 +107,7 @@ extern class Window_Message extends Window_Base {
   * 1,
   * 2
   */
- public function setBackgroundType(backgroundType: Int): Void;
+ public function setBackgroundType(backgroundType: Float): Void;
 
  /**
   * Processes the escape characters in the message window.
@@ -120,7 +120,7 @@ extern class Window_Message extends Window_Base {
   * Starts the wait count for the message window.
   * @param count
   */
- public function startWait(count: Int): Void;
+ public function startWait(count: Float): Void;
 
  /**
   * Starts the pause for the window.
@@ -214,7 +214,7 @@ extern class Window_Message extends Window_Base {
  public function newPage(textState: TextState): Void;
  public function loadMessageFace(): Void;
  public function drawMessageFace(): Void;
- public function newLineX(): Int;
+ public function newLineX(): Float;
  public function processNewLine(textState: TextState): Void;
  public function processNewPage(textState: TextState): Void;
 }

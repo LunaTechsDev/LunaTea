@@ -25,9 +25,10 @@ extern class Window_SavefileList extends Window_Selectable {
  public function new(rect: Rectangle);
 
  public function setMode(mode: String, autosave: Bool): Void;
- public function selectSavefile(savefileId: Int): Void;
+ public function selectSavefile(savefileId: Float): Void;
+
  #else
- public function new(x: Int, y: Int, width: Int, height: Int);
+ public function new(x: Float, y: Float, width: Float, height: Float);
  /**
   * Sets the mode of the save file window.
   *
@@ -43,7 +44,7 @@ extern class Window_SavefileList extends Window_Selectable {
   * @returns {number}
   * @memberof Window_SavefileList
   */
- public function maxVisibleItems(): Int;
+ public function maxVisibleItems(): Float;
 
  public function itemHeight(): Float;
 
@@ -55,11 +56,12 @@ extern class Window_SavefileList extends Window_Selectable {
   * @param {number} y
   * @memberof Window_SavefileList
   */
- public function drawFileId(id: Int, x: Int, y: Int): Void;
+ public function drawFileId(id: Float, x: Float, y: Float): Void;
 
  public function drawContents(info: Info, rect: Rectangle, valid: Bool): Void;
- public function drawGameTitle(info: Info, x: Int, y: Int, width: Int): Void;
- public function drawPartyCharacters(info: Info, x: Int, y: Int): Void;
+ public function drawGameTitle(info: Info, x: Float, y: Float,
+  width: Float): Void;
+ public function drawPartyCharacters(info: Info, x: Float, y: Float): Void;
 
  /**
   * Draws the current playtime at the specified x and y coordinates within the given
@@ -70,5 +72,6 @@ extern class Window_SavefileList extends Window_Selectable {
   * @param {number} width
   * @memberof Window_SavefileList
   */
- public function drawPlaytime(info: Info, x: Int, y: Int, width: Int): Void;
+ public function drawPlaytime(info: Info, x: Float, y: Float,
+  width: Float): Void;
 }

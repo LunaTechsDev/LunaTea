@@ -15,7 +15,7 @@ import rm.types.RPG.BaseItem;
 extern class DataManager {
  private static var _globalId: String;
 
- private static var _lastAccessedId: Int;
+ private static var _lastAccessedId: Float;
 
  private static var _errorUrl: Any;
 
@@ -27,7 +27,7 @@ extern class DataManager {
  public static function loadDatabase(): Void;
  public static function loadDataFile(name: String, src: String): Void;
  public static function isDatabaseLoaded(): Bool;
- public static function loadMapData(mapId: Int): Void;
+ public static function loadMapData(mapId: Float): Void;
  public static function makeEmptyMap(): Void;
  public static function isMapLoaded(): Bool;
  public static function onLoad(object: Any): Void;
@@ -102,10 +102,10 @@ extern class DataManager {
   * @returns {Bool}
   * @memberof DataManager
   */
- public static function isThisGameFile(savefileId: Int): Bool;
+ public static function isThisGameFile(savefileId: Float): Bool;
 
  public static function isAnySavefileExists(): Bool;
- public static function latestSavefileId(): Int;
+ public static function latestSavefileId(): Float;
  public static function loadAllSavefileImages(): Void;
 
  /**
@@ -120,7 +120,7 @@ extern class DataManager {
   * @returns {number}
   * @memberof DataManager
   */
- public static function maxSavefiles(): Int;
+ public static function maxSavefiles(): Float;
 
  #if !compileMV
  public static function isMapObject(object: Dynamic): Bool;
@@ -133,11 +133,11 @@ extern class DataManager {
   * @returns {Bool}
   * @memberof DataManager
   */
- public static function saveGame(savefileId: Int): Promise<Any>;
+ public static function saveGame(savefileId: Float): Promise<Any>;
 
- public static function loadGame(savefileId: Int): Promise<Any>;
+ public static function loadGame(savefileId: Float): Promise<Any>;
 
- public static function makeSavename(savefileId: Int): String;
+ public static function makeSavename(savefileId: Float): String;
  #else
 
  /**
@@ -148,9 +148,9 @@ extern class DataManager {
   * @returns {Bool}
   * @memberof DataManager
   */
- public static function saveGame(savefileId: Int): Bool;
+ public static function saveGame(savefileId: Float): Bool;
 
- public static function loadGame(savefileId: Int): Bool;
+ public static function loadGame(savefileId: Float): Bool;
  #end
 
  /**
@@ -160,10 +160,10 @@ extern class DataManager {
   * @returns {number}
   * @memberof DataManager
   */
- public static function lastAccessedSavefileId(): Int;
+ public static function lastAccessedSavefileId(): Float;
 
- public static function saveGameWithoutRescue(savefileId: Int): Bool;
- public static function loadGameWithoutRescue(savefileId: Int): Bool;
+ public static function saveGameWithoutRescue(savefileId: Float): Bool;
+ public static function loadGameWithoutRescue(savefileId: Float): Bool;
  public static function selectSavefileForNewGame(): Void;
 
  /**

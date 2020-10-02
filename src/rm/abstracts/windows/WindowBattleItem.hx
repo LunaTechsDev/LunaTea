@@ -7,7 +7,7 @@ import rm.windows.Window_BattleItem;
 @:forwardStatics
 abstract WindowBattleItem(Window_BattleItem) from Window_BattleItem
  to Window_BattleItem {
- public inline function new(x: Int, y: Int, width: Int, height: Int) {
+ public inline function new(x: Float, y: Float, width: Float, height: Float) {
   #if compileMV
   this = new Window_BattleItem(x, y, width, height);
   #else

@@ -7,7 +7,7 @@ import js.lib.Object;
 
 /*
  _exp:{
-  [classId:Int]:Int
+  [classId:Float]:Float
  };
  */
 @:expose("Game_Actor")
@@ -15,7 +15,7 @@ import js.lib.Object;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Actor extends Game_Battler {
- private var _actorId: Int;
+ private var _actorId: Float;
 
  private var _name: String;
 
@@ -23,17 +23,17 @@ extern class Game_Actor extends Game_Battler {
 
  private var _profile: String;
 
- private var _classId: Int;
+ private var _classId: Float;
 
- private var _level: Int;
+ private var _level: Float;
 
  private var _characterName: String;
 
- private var _characterIndex: Int;
+ private var _characterIndex: Float;
 
  private var _faceName: String;
 
- private var _faceIndex: Int;
+ private var _faceIndex: Float;
 
  private var _battlerName: String;
 
@@ -45,11 +45,11 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Skill Ids
   */
- private var _skills: Array<Int>;
+ private var _skills: Array<Float>;
 
  private var _equips: Array<Game_Item>;
 
- private var _actionInputIndex: Int;
+ private var _actionInputIndex: Float;
 
  private var _lastMenuSkill: Game_Item;
 
@@ -60,19 +60,19 @@ extern class Game_Actor extends Game_Battler {
  private var _stateSteps: Object;
 
  /** [read-only] */
- public var level: Int;
+ public var level: Float;
 
- public function new(actorId: Int);
+ public function new(actorId: Float);
 
- public function setup(actorId: Int): Void;
+ public function setup(actorId: Float): Void;
 
  /**
   * Returns the id of the actor.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function actorId(): Int;
+ public function actorId(): Float;
 
  /**
   * Returns the database information of the actor.
@@ -139,10 +139,10 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Returns the face index of the actor.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function faceIndex(): Int;
+ public function faceIndex(): Float;
 
  /**
   * Clears all states from the actor.
@@ -154,18 +154,18 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Erase the specified state from the actor.
   *
-  * @param {Int} stateId
+  * @param {Float} stateId
   * @memberof Game_Actor
   */
- public function eraseState(stateId: Int): Void;
+ public function eraseState(stateId: Float): Void;
 
  /**
   * Reset state count of the specified state.
   *
-  * @param {Int} stateId
+  * @param {Float} stateId
   * @memberof Game_Actor
   */
- public function resetStateCounts(stateId: Int): Void;
+ public function resetStateCounts(stateId: Float): Void;
 
  /**
   * Initialize images of the actor.
@@ -177,11 +177,11 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Returns the exp required to level.
   *
-  * @param {Int} level
-  * @returns {Int}
+  * @param {Float} level
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function expForLevel(level: Int): Int;
+ public function expForLevel(level: Float): Float;
 
  /**
   * Initialize exp of the actor.
@@ -193,34 +193,34 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Returns the current experience points of the actor.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function currentExp(): Int;
+ public function currentExp(): Float;
 
  /**
   * Returns the current level's experience for the actor.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function currentLevelExp(): Int;
+ public function currentLevelExp(): Float;
 
  /**
   * Returns the experience points for the next level of the actor.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function nextLevelExp(): Int;
+ public function nextLevelExp(): Float;
 
  /**
   * Returns the next required experience points for the actor to level up.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function nextRequiredExp(): Int;
+ public function nextRequiredExp(): Float;
 
  /**
   * Returns the maximum level of the actor.
@@ -247,18 +247,18 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Initialize actor equipment in the given slots.
   *
-  * @param {Array<Int>} equips
+  * @param {Array<Float>} equips
   * @memberof Game_Actor
   */
- public function initEquips(equips: Array<Int>): Void;
+ public function initEquips(equips: Array<Float>): Void;
 
  /**
   * Returns the equip slots of the actor.
   *
-  * @returns {Array<Int>}
+  * @returns {Array<Float>}
   * @memberof Game_Actor
   */
- public function equipSlots(): Array<Int>;
+ public function equipSlots(): Array<Float>;
 
  /**
   * Returns the equipment of the actor.
@@ -305,31 +305,31 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Returns true if the equip change is okay in the given slot.
   *
-  * @param {Int} slotId
+  * @param {Float} slotId
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function isEquipChangeOk(slotId: Int): Bool;
+ public function isEquipChangeOk(slotId: Float): Bool;
 
  /**
   * Changes the actor equipment in the given slot with the
   * given equip item. Places the original item into the party
   * inventory.
-  * @param {Int} slotId
+  * @param {Float} slotId
   * @param {EquipItem} item
   * @memberof Game_Actor
   */
- public function changeEquip(slotId: Int, item: EquipItem): Void;
+ public function changeEquip(slotId: Float, item: EquipItem): Void;
 
  /**
   * Forces the actor to change equipment in the given slot
   * with the given equip item without placing the item back into
   * the party inventory.
-  * @param {Int} slotId
+  * @param {Float} slotId
   * @param {EquipItem} item
   * @memberof Game_Actor
   */
- public function forceChangeEquip(slotId: Int, item: EquipItem): Void;
+ public function forceChangeEquip(slotId: Float, item: EquipItem): Void;
 
  /**
   * Trades the new item with the old item in the party inventory.
@@ -345,11 +345,11 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Changes the actor equip with an item based on the equip id.
   *
-  * @param {Int} etypeId
-  * @param {Int} itemId
+  * @param {Float} etypeId
+  * @param {Float} itemId
   * @memberof Game_Actor
   */
- public function changeEquipById(etypeId: Int, itemId: Int): Void;
+ public function changeEquipById(etypeId: Float, itemId: Float): Void;
 
  /**
   * Returns true if the actor is equipped with the specific item.
@@ -393,23 +393,23 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Equips the best item in the given slot.
   *
-  * @param {Int} slotId
+  * @param {Float} slotId
   * @memberof Game_Actor
   */
- public function bestEquipItem(slotId: Int): Void;
+ public function bestEquipItem(slotId: Float): Void;
 
  /**
   * Calculates the equip item performance and returns the sum/difference.
   *
   * @param {EquipItem} item
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
  public function calcEquipItemPerformance(item: EquipItem): Float;
 
  public function isSkillWtypeOk(skill: Skill): Bool;
 
- public function isWtypeEquipped(wtypeId: Int): Bool;
+ public function isWtypeEquipped(wtypeId: Float): Bool;
 
  /**
   * Refreshes the actor.
@@ -468,10 +468,10 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Returns the attack element ids.
   *
-  * @returns {Array<Int>}
+  * @returns {Array<Float>}
   * @memberof Game_Actor
   */
- public function attackElements(): Array<Int>;
+ public function attackElements(): Array<Float>;
 
  /**
   * Returns true if the actor has no weapon.
@@ -485,51 +485,51 @@ extern class Game_Actor extends Game_Battler {
   * Returns the element id of barehanded attacks.
   * By default this is 1.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function bareHandsElementId(): Int;
+ public function bareHandsElementId(): Float;
 
  /**
   * Returns the base value of the parameter.
   * @param paramId
-  * @return Int
+  * @return Float
   */
- public function paramBase(paramId: ParameterId): Int;
+ public function paramBase(paramId: ParameterId): Float;
 
  /**
   * Returns the first attack animation id.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function attackAnimationId1(): Int;
+ public function attackAnimationId1(): Float;
 
  /**
   * Returns the second attack animation id.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function attackAnimationId2(): Int;
+ public function attackAnimationId2(): Float;
 
  /**
   * Returns the animation id for a barehanded attack.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function bareHandsAnimationId(): Int;
+ public function bareHandsAnimationId(): Float;
 
  /**
   * Change the actor experience points; leveling up the actor
   * if it's above the required exp for the current level.
   * If show is set to true, actor level up with be displayed.
-  * @param {Int} exp
+  * @param {Float} exp
   * @param {Bool} show
   * @memberof Game_Actor
   */
- public function changeExp(exp: Int, show: Bool): Void;
+ public function changeExp(exp: Float, show: Bool): Void;
 
  /**
   * Level up the actor.
@@ -558,26 +558,26 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Gives the specified exp to the actor.
   *
-  * @param {Int} exp
+  * @param {Float} exp
   * @memberof Game_Actor
   */
- public function gainExp(exp: Int): Void;
+ public function gainExp(exp: Float): Void;
 
  /**
   * Returns the final exp rate of the actor based on if the actor
   * is a reserved party member or an active battle member.
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function finalExpRate(): Int;
+ public function finalExpRate(): Float;
 
  /**
   * Returns the exp rate of actors not in battle; this is set in the database.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function benchMembersExpRate(): Int;
+ public function benchMembersExpRate(): Float;
 
  /**
   * Returns true if the actor should display level up in a message window.
@@ -590,58 +590,58 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Changes the actor level; if show is set to true,
   * the actor level will be displayed.
-  * @param {Int} level
+  * @param {Float} level
   * @param {Bool} show
   * @memberof Game_Actor
   */
- public function changeLevel(level: Int, show: Bool): Void;
+ public function changeLevel(level: Float, show: Bool): Void;
 
  /**
   * Actor learns the specified skill given the skill id.
   *
-  * @param {Int} skillId
+  * @param {Float} skillId
   * @memberof Game_Actor
   */
- public function learnSkill(skillId: Int): Void;
+ public function learnSkill(skillId: Float): Void;
 
  /**
   * Actor forgets the specified skill given the skill id from
   * the actor's usable skills.
-  * @param {Int} skillId
+  * @param {Float} skillId
   * @memberof Game_Actor
   */
- public function forgetSkill(skillId: Int): Void;
+ public function forgetSkill(skillId: Float): Void;
 
  /**
   * Returns true if the actor has learned the specified
   * skill given the specified skill id.
-  * @param {Int} skillId
+  * @param {Float} skillId
   * @returns {Bool}
   * @memberof Game_Actor
   */
- public function isLearnedSkill(skillId: Int): Bool;
+ public function isLearnedSkill(skillId: Float): Bool;
 
  /**
   * Changes the actor class; if keep is true, the actor
   * will retain their experience points.
-  * @param {Int} classId
+  * @param {Float} classId
   * @param {Bool} keepExp
   * @memberof Game_Actor
   */
- public function changeClass(classId: Int, keepExp: Bool): Void;
+ public function changeClass(classId: Float, keepExp: Bool): Void;
 
  public function setCharacterImage(characterName: String,
-  characterIndex: Int): Void;
+  characterIndex: Float): Void;
 
  /**
   * Sets the face image of the actor given the face image (from database)
   * and face index within the iamge.
   *
   * @param {String} faceName
-  * @param {Int} faceIndex
+  * @param {Float} faceIndex
   * @memberof Game_Actor
   */
- public function setFaceImage(faceName: String, faceIndex: Int): Void;
+ public function setFaceImage(faceName: String, faceIndex: Float): Void;
 
  /**
   * Sets the battler image of the actor; this is the sprite displayed
@@ -663,13 +663,13 @@ extern class Game_Actor extends Game_Battler {
   * Starts the animation on the actor given the specified animation id;
   * if  mirror is set to true, the animation will be mirrored. If a delay is enter,
   * the animation will be delayed.
-  * @param {Int} animationId
+  * @param {Float} animationId
   * @param {Bool} mirror
-  * @param {Int} delay
+  * @param {Float} delay
   * @memberof Game_Actor
   */
- public function startAnimation(animationId: Int, mirror: Bool,
-  delay: Int): Void;
+ public function startAnimation(animationId: Float, mirror: Bool,
+  delay: Float): Void;
 
  /**
   * Performs the attack motion for the actor.
@@ -732,7 +732,7 @@ extern class Game_Actor extends Game_Battler {
   */
  public function showRemovedStates(): Void;
 
- public function stepsForTurn(): Int;
+ public function stepsForTurn(): Float;
 
  public function turnEndOnMap(): Void;
 
@@ -753,18 +753,18 @@ extern class Game_Actor extends Game_Battler {
  /**
   * Returns the basic floor damage.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function basicFloorDamage(): Int;
+ public function basicFloorDamage(): Float;
 
  /**
   * Returns the max floor damage.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Actor
   */
- public function maxFloorDamage(): Int;
+ public function maxFloorDamage(): Float;
 
  /**
   * Perform damage to the actor on the map scene.

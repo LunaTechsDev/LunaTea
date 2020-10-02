@@ -12,16 +12,16 @@ package rm.windows;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_DebugRange extends Window_Selectable {
- private static var lastTopRow: Int;
- private static var lastIndex: Int;
+ private static var lastTopRow: Float;
+ private static var lastIndex: Float;
 
  private var _editWindow: Window_DebugEdit;
 
- public function new(x: Int, y: Int);
+ public function new(x: Float, y: Float);
 
- public function windowWidth(): Int;
- public function windowHeight(): Int;
+ public function windowWidth(): Float;
+ public function windowHeight(): Float;
  public function mode(): String;
- public function topId(): Int;
+ public function topId(): Float;
  public function setEditWindow(editWindow: Window_DebugEdit): Void;
 }

@@ -22,7 +22,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @property _counter
   * @type Number
   */
- public static var _counter: Int;
+ public static var _counter: Float;
 
  /**
   * The image for the sprite.
@@ -115,7 +115,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @type Number
   */
  @:native("blendMode")
- public var blendMode_: Int;
+ public var blendMode_: Float;
 
  /**
   * Sets the filters for the sprite.
@@ -141,7 +141,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @type PIXI.DisplayObjectContainer
   */
  //  public var parent: Container;
- public var spriteId: Int;
+ public var spriteId: Float;
 
  public var opaque: Bool;
  public var voidFilter: Filter;
@@ -188,7 +188,8 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @param {Number} width The width of the frame
   * @param {Number} height The height of the frame
   */
- public function setFrame(x: Int, y: Int, width: Int, height: Int): Void;
+ public function setFrame(x: Float, y: Float, width: Float,
+  height: Float): Void;
 
  /**
   * Gets the blend color for the sprite.
@@ -239,7 +240,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @param {Number} index The index to place the child in
   * @return {PIXI.DisplayObject} The child that was added
   */
- public function addChildAt(child: DisplayObject, index: Int): DisplayObject;
+ public function addChildAt(child: DisplayObject, index: Float): DisplayObject;
 
  /**
   * Removes a child from the container.
@@ -257,7 +258,7 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @param {Number} index The index to get the child from
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public function removeChildAt(index: Int): DisplayObject;
+ public function removeChildAt(index: Float): DisplayObject;
 
  private var _bitmap: Bitmap;
  private var _frame: Rectangle;

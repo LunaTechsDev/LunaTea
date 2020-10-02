@@ -14,7 +14,7 @@ package rm.windows;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_MenuStatus extends Window_Selectable {
  private var _formationMode: Bool;
- private var _pendingIndex: Int;
+ private var _pendingIndex: Float;
 
  /**
   * Creates an instance of Window_MenuStatus.
@@ -22,19 +22,19 @@ extern class Window_MenuStatus extends Window_Selectable {
   * @param {number} y
   * @memberof Window_MenuStatus
   */
- public function new(x: Int, y: Int);
+ public function new(x: Float, y: Float);
 
  /**
   * Window width.
-  * @return Int
+  * @return Float
   */
- public function windowWidth(): Int;
+ public function windowWidth(): Float;
 
  /**
   * Window height.
-  * @return Int
+  * @return Float
   */
- public function windowHeight(): Int;
+ public function windowHeight(): Float;
 
  /**
   * Returns the height of each item (actor status) in the main menu
@@ -42,7 +42,7 @@ extern class Window_MenuStatus extends Window_Selectable {
   * @returns {number}
   * @memberof Window_MenuStatus
   */
- public function itemHeight(): Int;
+ public function itemHeight(): Float;
 
  /**
   * Returns the number of visible rows in
@@ -50,7 +50,7 @@ extern class Window_MenuStatus extends Window_Selectable {
   * @returns {number}
   * @memberof Window_MenuStatus
   */
- public function numVisibleRows(): Int;
+ public function numVisibleRows(): Float;
 
  /**
   * Loads the images for the main menu status window.
@@ -65,11 +65,11 @@ extern class Window_MenuStatus extends Window_Selectable {
   * @param {number} index
   * @memberof Window_MenuStatus
   */
- public function drawItemBackground(index: Int): Void;
+ public function drawItemBackground(index: Float): Void;
 
- public function drawItemImage(index: Int): Void;
+ public function drawItemImage(index: Float): Void;
 
- public function drawItemStatus(index: Int): Void;
+ public function drawItemStatus(index: Float): Void;
 
  public function selectLast(): Void;
 
@@ -90,7 +90,7 @@ extern class Window_MenuStatus extends Window_Selectable {
   */
  public function setFormationMode(formationMode: Bool): Void;
 
- public function pendingIndex(): Int;
+ public function pendingIndex(): Float;
 
- public function setPendingIndex(index: Int): Void;
+ public function setPendingIndex(index: Float): Void;
 }

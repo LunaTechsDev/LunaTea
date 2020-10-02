@@ -6,7 +6,7 @@ import rm.windows.Window_HorzCommand;
 @:forwardStatics
 abstract WindowHorzCommand(Window_HorzCommand) from Window_HorzCommand
  to Window_HorzCommand {
- public inline function new(x: Int, y: Int) {
+ public inline function new(x: Float, y: Float) {
   this = new Window_HorzCommand(x, y);
  }
 

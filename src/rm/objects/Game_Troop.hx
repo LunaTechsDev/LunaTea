@@ -21,7 +21,7 @@ extern class Game_Troop extends Game_Unit {
 
  private var _interpreter: Game_Interpreter;
 
- private var _troopId: Int;
+ private var _troopId: Float;
 
  public function new(): Void;
 
@@ -33,14 +33,14 @@ extern class Game_Troop extends Game_Unit {
  private var _eventFlags: DynamicAccess<Bool>;
 
  private var _enemies: Array<Game_Enemy>;
- private var _turnCount: Int;
+ private var _turnCount: Float;
 
  /**
   * {
    [name:string]:number
   }
   */
- private var _namesCount: DynamicAccess<Int>; // TODO: Use DynamicAccess
+ private var _namesCount: DynamicAccess<Float>; // TODO: Use DynamicAccess
 
  /**
   * Returns all enemies in the battle.
@@ -95,7 +95,7 @@ extern class Game_Troop extends Game_Unit {
   * @returns {number}
   * @memberof Game_Troop
   */
- public function turnCount(): Int;
+ public function turnCount(): Float;
 
  public function clear(): Void;
 
@@ -107,7 +107,7 @@ extern class Game_Troop extends Game_Unit {
   */
  public function troop(): Troop;
 
- public function setup(troopId: Int): Void;
+ public function setup(troopId: Float): Void;
 
  /**
   * Creates unique names for each enemy.
@@ -148,7 +148,7 @@ extern class Game_Troop extends Game_Unit {
   * @returns {number}
   * @memberof Game_Troop
   */
- public function expTotal(): Int;
+ public function expTotal(): Float;
 
  /**
   * Return the total gold of all enemies.
@@ -156,7 +156,7 @@ extern class Game_Troop extends Game_Unit {
   * @returns {number}
   * @memberof Game_Troop
   */
- public function goldTotal(): Int;
+ public function goldTotal(): Float;
 
  /**
   * Returns the gold rate based on game party gold rate.
@@ -164,7 +164,7 @@ extern class Game_Troop extends Game_Unit {
   * @returns {number}
   * @memberof Game_Troop
   */
- public function goldRate(): Int;
+ public function goldRate(): Float;
 
  /**
   * Creates the drop items for all members of the enemy troop, and

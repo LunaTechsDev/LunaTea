@@ -30,7 +30,7 @@ extern class TilingSprite extends pixi.extras.TilingSprite {
   * @property opacity
   * @type Number
   */
- public var opacity: Int; // TODO: Add Opacity as an Int that only goes to 0 - 255
+ public var opacity: Float; // TODO: Add Opacity as an Float that only goes to 0 - 255
 
  /**
   * The visibility of the tiling sprite.
@@ -47,7 +47,7 @@ extern class TilingSprite extends pixi.extras.TilingSprite {
   * @type Number
   */
  @:native("x") // TODO: Remove as x and y are redefinition
- public var _x: Int;
+ public var _x: Float;
 
  /**
   * The y coordinate of the tiling sprite.
@@ -56,9 +56,9 @@ extern class TilingSprite extends pixi.extras.TilingSprite {
   * @type Number
   */
  @:native("y")
- public var _y: Int;
+ public var _y: Float;
 
- public var spriteId: Int;
+ public var spriteId: Float;
 
  /**
   * The sprite object for a tiling image.
@@ -91,7 +91,8 @@ extern class TilingSprite extends pixi.extras.TilingSprite {
   * @param {Number} width The width of the tiling sprite
   * @param {Number} height The height of the tiling sprite
   */
- public function move(?x: Int, ?y: Int, ?width: Int, ?height: Int): Void;
+ public function move(?x: Float, ?y: Float, ?width: Float,
+  ?height: Float): Void;
 
  /**
   * Specifies the region of the image that the tiling sprite will use.
@@ -102,12 +103,13 @@ extern class TilingSprite extends pixi.extras.TilingSprite {
   * @param {Number} width The width of the frame
   * @param {Number} height The height of the frame
   */
- public function setFrame(x: Int, y: Int, width: Int, height: Int): Void;
+ public function setFrame(x: Float, y: Float, width: Float,
+  height: Float): Void;
 
  public function updateTransformTS(): Void;
  private var _bitmap: Bitmap;
- private var _width: Int;
- private var _height: Int;
+ private var _width: Float;
+ private var _height: Float;
  private var _frame: Rectangle;
 
  /**

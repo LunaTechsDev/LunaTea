@@ -15,18 +15,18 @@ import rm.core.Sprite;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_StateIcon extends Sprite {
  #if compileMV
- private static var _iconWidth: Int;
+ private static var _iconWidth: Float;
 
- private static var _iconHeight: Int;
+ private static var _iconHeight: Float;
  #else
  #end
  private var _battler: Game_Battler;
 
- private var _iconIndex: Int;
+ private var _iconIndex: Float;
 
- private var _animationCount: Int;
+ private var _animationCount: Float;
 
- private var _animationIndex: Int;
+ private var _animationIndex: Float;
 
  /**
   * Initializes the sprite state icon properties.
@@ -43,7 +43,7 @@ extern class Sprite_StateIcon extends Sprite {
  public function loadBitmap(): Void;
 
  public function setup(battler: Game_Battler): Void;
- public function animationWait(): Int;
+ public function animationWait(): Float;
 
  /**
   * Updates the icon displayed in the icon sprite.

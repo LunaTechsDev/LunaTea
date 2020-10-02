@@ -50,16 +50,16 @@ extern class Window_NameBox extends Window_Base {
 
  /**
   * Returns the window width based on the text size.
-  * @returns Int
+  * @returns Float
   */
- public function windowWidth(): Int;
+ public function windowWidth(): Float;
 
  /**
   * Returns the window height based on
   * the fitting height.
-  * @return Int
+  * @return Float
   */
- public function windowHeight(): Int;
+ public function windowHeight(): Float;
 
  /**
   * Refreshes the window and
@@ -69,7 +69,7 @@ extern class Window_NameBox extends Window_Base {
     this.contents.clear();
     this.drawTextEx(this._name, rect.x, rect.y, rect.width);
   * ```
-  * @return Int
+  * @return Float
   */
  public function refresh(): Void;
 }

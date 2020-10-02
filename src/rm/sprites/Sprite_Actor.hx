@@ -41,7 +41,7 @@ extern class Sprite_Actor extends Sprite_Battler {
 
  private var _motion: Motion;
 
- private var _motionCount: Int;
+ private var _motionCount: Float;
 
  private var _pattern: CharacterPattern;
 
@@ -108,7 +108,7 @@ extern class Sprite_Actor extends Sprite_Battler {
   */
  public function moveToStartPosition(): Void;
 
- public function setActorHome(index: Int): Void;
+ public function setActorHome(index: Float): Void;
 
  public function updateShadow(): Void;
 
@@ -155,10 +155,10 @@ extern class Sprite_Actor extends Sprite_Battler {
  /**
   * Returns the speed of the motion for the sprite actor.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Sprite_Actor
   */
- public function motionSpeed(): Int;
+ public function motionSpeed(): Float;
 
  /**
   * Refreshes the motion of the sprite actor.
@@ -195,6 +195,6 @@ extern class Sprite_Actor extends Sprite_Battler {
   */
  public function retreat(): Void;
 
- public function damageOffsetX(): Int;
- public function damageOffsetY(): Int;
+ public function damageOffsetX(): Float;
+ public function damageOffsetY(): Float;
 }

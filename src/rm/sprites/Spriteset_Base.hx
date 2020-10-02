@@ -16,7 +16,7 @@ import rm.core.Sprite;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Spriteset_Base extends Sprite {
- private var _tone: Array<Int>;
+ private var _tone: Array<Float>;
 
  private var _baseSprite: Sprite;
 

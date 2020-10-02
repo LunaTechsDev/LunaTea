@@ -12,11 +12,11 @@ package rm.objects;
 extern class Game_Temp {
  private var _isPlaytest: Bool;
 
- private var _commonEventId: Int;
+ private var _commonEventId: Float;
 
- private var _destinationX: Int;
+ private var _destinationX: Float;
 
- private var _destinationY: Int;
+ private var _destinationY: Float;
  public function new(): Void;
 
  public function initialize(): Void;
@@ -35,7 +35,7 @@ extern class Game_Temp {
   * @param {number} commonEventId
   * @memberof Game_Temp
   */
- public function reserveCommonEvent(commonEventId: Int): Void;
+ public function reserveCommonEvent(commonEventId: Float): Void;
 
  /**
   * Clears the current reserved common event.
@@ -67,7 +67,7 @@ extern class Game_Temp {
   * @param {number} y
   * @memberof Game_Temp
   */
- public function setDestination(x: Int, y: Int): Void;
+ public function setDestination(x: Float, y: Float): Void;
 
  /**
   * Clears the destination of movement for the player.
@@ -90,7 +90,7 @@ extern class Game_Temp {
   * @returns {number}
   * @memberof Game_Temp
   */
- public function destinationX(): Int;
+ public function destinationX(): Float;
 
  /**
   * Returns the y coordinate of the destination.
@@ -98,5 +98,5 @@ extern class Game_Temp {
   * @returns {number}
   * @memberof Game_Temp
   */
- public function destinationY(): Int;
+ public function destinationY(): Float;
 }

@@ -27,10 +27,10 @@ extern class Scene_Load extends Scene_File {
  public function helpWindowText(): String;
 
  #if !compileMV
- public function executeLoad(saveFileId: Int): Void;
+ public function executeLoad(saveFileId: Float): Void;
  #end
 
- public function firstSavefileIndex(): Int;
+ public function firstSavefileIndex(): Float;
  public function onSavefileOk(): Void;
  public function onLoadSuccess(): Void;
  public function onLoadFailure(): Void;

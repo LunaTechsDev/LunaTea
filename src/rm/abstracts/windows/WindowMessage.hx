@@ -6,7 +6,7 @@ import rm.windows.Window_Message;
 @:forward
 @:forwardStatics
 abstract WindowMessage(Window_Message) from Window_Message to Window_Message {
- public inline function new(x: Int, y: Int, width: Int, height: Int) {
+ public inline function new(x: Float, y: Float, width: Float, height: Float) {
   #if compileMV
   this = new Window_Message(x, y, width, height);
   #else

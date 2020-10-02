@@ -47,7 +47,7 @@ extern class Bitmap {
   * @property fontSize
   * @type Number
   */
- public var fontSize: Int;
+ public var fontSize: Float;
 
  /**
   * Whether the font is italic.
@@ -55,7 +55,7 @@ extern class Bitmap {
   * @property fontItalic
   * @type Boolean
   */
- public var fontItalic: Int;
+ public var fontItalic: Float;
 
  /**
   * The color of the text in CSS format.
@@ -79,7 +79,7 @@ extern class Bitmap {
   * @property outlineWidth
   * @type Number
   */
- public var outlineWidth: Int;
+ public var outlineWidth: Float;
 
  /**
   * [read-only] The url of the image file.
@@ -119,7 +119,7 @@ extern class Bitmap {
   * @property width
   * @type Number
   */
- public var width: Int;
+ public var width: Float;
 
  /**
   * [read-only] The height of the bitmap.
@@ -127,7 +127,7 @@ extern class Bitmap {
   * @property height
   * @type Number
   */
- public var height: Int;
+ public var height: Float;
 
  /**
   * [read-only] The rectangle of the bitmap.
@@ -164,10 +164,10 @@ extern class Bitmap {
   *
   * @class Bitmap
   * @constructor
-  * @param {Int} width The width of the bitmap
-  * @param {Int} height The height of the bitmap
+  * @param {Float} width The width of the bitmap
+  * @param {Float} height The height of the bitmap
   */
- public function new(?width: Int, ?height: Int);
+ public function new(?width: Float, ?height: Float);
 
  /**
   * Checks whether the bitmap is ready to render.
@@ -192,7 +192,7 @@ extern class Bitmap {
   * @param {Number} width The new width of the bitmap
   * @param {Number} height The new height of the bitmap
   */
- public function resize(width: Int, height: Int): Void;
+ public function resize(width: Float, height: Float): Void;
 
  /**
   * Performs a block transfer.
@@ -208,8 +208,8 @@ extern class Bitmap {
   * @param {Number} [dw=sw] The width to draw the image in the destination
   * @param {Number} [dh=sh] The height to draw the image in the destination
   */
- public function blt(source: Bitmap, sx: Int, sy: Int, sw: Int, sh: Int,
-  dx: Int, dy: Int, ?dw: Int, ?dh: Int): Void;
+ public function blt(source: Bitmap, sx: Float, sy: Float, sw: Float,
+  sh: Float, dx: Float, dy: Float, ?dw: Float, ?dh: Float): Void;
 
  /**
   * Returns pixel color at the specified point.
@@ -219,7 +219,7 @@ extern class Bitmap {
   * @param {Number} y The y coordinate of the pixel in the bitmap
   * @return {String} The pixel color (hex format)
   */
- public function getPixel(x: Int, y: Int): String;
+ public function getPixel(x: Float, y: Float): String;
 
  /**
   * Returns alpha pixel value at the specified point.
@@ -229,7 +229,7 @@ extern class Bitmap {
   * @param {Number} y The y coordinate of the pixel in the bitmap
   * @return {String} The alpha value
   */
- public function getAlphaPixel(x: Int, y: Int): String;
+ public function getAlphaPixel(x: Float, y: Float): String;
 
  /**
   * Clears the specified rectangle.
@@ -240,7 +240,8 @@ extern class Bitmap {
   * @param {Number} width The width of the rectangle to clear
   * @param {Number} height The height of the rectangle to clear
   */
- public function clearRect(x: Int, y: Int, width: Int, height: Int): Void;
+ public function clearRect(x: Float, y: Float, width: Float,
+  height: Float): Void;
 
  /**
   * Clears the entire bitmap.
@@ -259,7 +260,7 @@ extern class Bitmap {
   * @param {Number} height The height of the rectangle to clear
   * @param {String} color The color of the rectangle in CSS format
   */
- public function fillRect(x: Int, y: Int, width: Int, height: Int,
+ public function fillRect(x: Float, y: Float, width: Float, height: Float,
   color: String): Void;
 
  /**
@@ -282,8 +283,8 @@ extern class Bitmap {
   * @param {String} color2 The end color of the gradation
   * @param {Boolean} vertical Whether it draws a vertical gradient
   */
- public function gradientFillRect(x: Int, y: Int, width: Int, height: Int,
-  color1: String, color2: String, ?vertical: Bool): Void;
+ public function gradientFillRect(x: Float, y: Float, width: Float,
+  height: Float, color1: String, color2: String, ?vertical: Bool): Void;
 
  /**
   * Draw the filled circle.
@@ -308,8 +309,8 @@ extern class Bitmap {
   * @param {Number} lineHeight The height of the text line
   * @param {String} align The alignment of the text
   */
- public function drawText(text: String, x: Int, y: Int, maxWidth: Int,
-  lineHeight: Int, ?align: String): Void;
+ public function drawText(text: String, x: Float, y: Float, maxWidth: Float,
+  lineHeight: Float, ?align: String): Void;
 
  /**
   * Returns the width of the specified text.
@@ -318,7 +319,7 @@ extern class Bitmap {
   * @param {String} text The text to be measured
   * @return {Number} The width of the text in pixels
   */
- public function measureTextWidth(text: String): Int;
+ public function measureTextWidth(text: String): Float;
 
  /**
   * Changes the color tone of the entire bitmap.
@@ -328,7 +329,7 @@ extern class Bitmap {
   * @param {Number} g The green strength in the range (-255, 255)
   * @param {Number} b The blue strength in the range (-255, 255)
   */
- public function adjustTone(r: Int, g: Int, b: Int): Void;
+ public function adjustTone(r: Float, g: Float, b: Float): Void;
 
  /**
   * Rotates the hue of the entire bitmap.
@@ -364,17 +365,17 @@ extern class Bitmap {
   *
   * @method blt
   * @param {Bitmap} source The bitmap to draw
-  * @param {Int} sx The x coordinate in the source
-  * @param {Int} sy The y coordinate in the source
-  * @param {Int} sw The width of the source image
-  * @param {Int} sh The height of the source image
-  * @param {Int} dx The x coordinate in the destination
-  * @param {Int} dy The y coordinate in the destination
-  * @param {Int} [dw=sw] The width to draw the image in the destination
-  * @param {Int} [dh=sh] The height to draw the image in the destination
+  * @param {Float} sx The x coordinate in the source
+  * @param {Float} sy The y coordinate in the source
+  * @param {Float} sw The width of the source image
+  * @param {Float} sh The height of the source image
+  * @param {Float} dx The x coordinate in the destination
+  * @param {Float} dy The y coordinate in the destination
+  * @param {Float} [dw=sw] The width to draw the image in the destination
+  * @param {Float} [dh=sh] The height to draw the image in the destination
   */
- public function bltImage(source: Bitmap, sx: Int, sy: Int, sw: Int, sh: Int,
-  dx: Int, dy: Int, ?dw: Int, ?dh: Int): Void;
+ public function bltImage(source: Bitmap, sx: Float, sy: Float, sw: Float,
+  sh: Float, dx: Float, dy: Float, ?dw: Float, ?dh: Float): Void;
 
  private var _canvas: CanvasElement;
  private var _context: CanvasRenderingContext2D;
@@ -402,8 +403,8 @@ extern class Bitmap {
   * @param {Number} maxWidth
   * @private
   */
- private function _drawTextOutline(text: String, tx: Int, ty: Int,
-  maxWidth: Int): Void;
+ private function _drawTextOutline(text: String, tx: Float, ty: Float,
+  maxWidth: Float): Void;
 
  /**
   * @method _drawTextBody
@@ -413,8 +414,8 @@ extern class Bitmap {
   * @param {Number} maxWidth
   * @private
   */
- private function _drawTextBody(text: String, tx: Int, ty: Int,
-  maxWidth: Int): Void;
+ private function _drawTextBody(text: String, tx: Float, ty: Float,
+  maxWidth: Float): Void;
 
  /**
   * @method _onLoad

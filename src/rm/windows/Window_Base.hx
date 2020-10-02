@@ -23,7 +23,7 @@ extern class Window_Base extends _Window {
   * @type {number}
   * @memberof Window_Base
   */
- private static var _iconWidth: Int; // TODO: Move to the ImageManager class
+ private static var _iconWidth: Float; // TODO: Move to the ImageManager class
 
  /**
   * The standard icon height;
@@ -33,7 +33,7 @@ extern class Window_Base extends _Window {
   * @type {number}
   * @memberof Window_Base
   */
- private static var _iconHeight: Int;
+ private static var _iconHeight: Float;
 
  /**
   * The standard face width;
@@ -43,7 +43,7 @@ extern class Window_Base extends _Window {
   * @type {number}
   * @memberof Window_Base
   */
- private static var _faceWidth: Int;
+ private static var _faceWidth: Float;
 
  /**
   * The standard face height;
@@ -53,7 +53,7 @@ extern class Window_Base extends _Window {
   * @type {number}
   * @memberof Window_Base
   */
- private static var _faceHeight: Int;
+ private static var _faceHeight: Float;
  #else
  #end
 
@@ -84,14 +84,15 @@ extern class Window_Base extends _Window {
   * @param {number} height
   * @memberof Window_Base
   */
- public function new(x: Int, y: Int, width: Int, height: Int): Void;
+ public function new(x: Float, y: Float, width: Float, height: Float): Void;
 
  /**
   * Initializes the window.
   *
   * @memberof Window_Base
   */
- public function initialize(?x: Int, ?y: Int, ?width: Int, ?height: Int): Void;
+ public function initialize(?x: Float, ?y: Float, ?width: Float,
+  ?height: Float): Void;
  #else
  public function new(rect: Rectangle): Void;
  public function initialize(rect: Rectangle): Void;
@@ -103,7 +104,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function lineHeight(): Int;
+ public function lineHeight(): Float;
 
  /**
   * Returns the standard font face of the
@@ -119,7 +120,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function standardFontSize(): Int;
+ public function standardFontSize(): Float;
 
  /**
   * Returns the standard padding of the window;
@@ -127,7 +128,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function standardPadding(): Int;
+ public function standardPadding(): Float;
 
  /**
   * Returns the text padding of the window;
@@ -135,7 +136,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function textPadding(): Int;
+ public function textPadding(): Float;
 
  /**
   * Returns the standard back opacity of the window; this is the
@@ -144,7 +145,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function standardBackOpacity(): Int;
+ public function standardBackOpacity(): Float;
 
  /**
   * Loads the window skin from the img/system directory.
@@ -173,7 +174,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function contentsWidth(): Int;
+ public function contentsWidth(): Float;
 
  /**
   * Returns the inner content height of the window.
@@ -181,7 +182,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function contentsHeight(): Int;
+ public function contentsHeight(): Float;
 
  /**
   * Returns the fitting height given a number of lines based on
@@ -192,7 +193,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function fittingHeight(numLines: Int): Int;
+ public function fittingHeight(numLines: Float): Float;
 
  /**
   * Updates the tone of the window based on the
@@ -313,7 +314,7 @@ extern class Window_Base extends _Window {
   * @returns {*}
   * @memberof Window_Base
   */
- public function textColor(n: Int): String;
+ public function textColor(n: Float): String;
 
  /**
   * Returns the normal color as a css
@@ -480,8 +481,8 @@ extern class Window_Base extends _Window {
   * @param {String} align
   * @memberof Window_Base
   */
- public function drawText(text: EitherType<String, Int>, x: Int, y: Int,
-  maxWidth: Int, align: String): Void;
+ public function drawText(text: EitherType<String, Float>, x: Float, y: Float,
+  maxWidth: Float, align: String): Void;
 
  /**
   * Calculates the width of a text String and
@@ -490,7 +491,7 @@ extern class Window_Base extends _Window {
   * @returns {number}
   * @memberof Window_Base
   */
- public function textWidth(text: String): Int;
+ public function textWidth(text: String): Float;
 
  #if compileMV
  /**
@@ -509,10 +510,10 @@ extern class Window_Base extends _Window {
   * @param x
   * @param y
   * @param width
-  * @returns Int
+  * @returns Float
   * @memberof Window_Base
   */
- public function drawTextEx(text: String, x: Int, y: Int): Int;
+ public function drawTextEx(text: String, x: Float, y: Float): Float;
  #else
 
  /**
@@ -522,17 +523,18 @@ extern class Window_Base extends _Window {
   * @param x
   * @param y
   * @param width
-  * @returns Int
+  * @returns Float
   * @memberof Window_Base
   */
- public function drawTextEx(text: String, x: Int, y: Int, width: Float): Int;
+ public function drawTextEx(text: String, x: Float, y: Float,
+  width: Float): Float;
 
  /**
   * Returns the text Size of drawTextEx.
   * @param text
-  * @returns {width:Int, height:Int}
+  * @returns {width:Float, height:Float}
   */
- public function textSizeEx(text: String): {width: Int, height: Int};
+ public function textSizeEx(text: String): {width: Float, height: Float};
 
  /**
   * Processes all the text in the window, then
@@ -575,7 +577,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function actorName(actorIndex: Int): String;
+ public function actorName(actorIndex: Float): String;
 
  /**
   * Returns a party member name given an index;
@@ -584,7 +586,7 @@ extern class Window_Base extends _Window {
   * @returns {String}
   * @memberof Window_Base
   */
- public function partyMemberName(partyMemberIndex: Int): String;
+ public function partyMemberName(partyMemberIndex: Float): String;
 
  /**
   * Process each character in the text when drawTextEx
@@ -639,7 +641,7 @@ extern class Window_Base extends _Window {
   * @param {MV.TextState} textState
   * @memberof Window_Base
   */
- public function processDrawIcon(iconIndex: Int, textState: TextState): Void;
+ public function processDrawIcon(iconIndex: Float, textState: TextState): Void;
 
  /**
   * Makes the font bigger by a value of 12.
@@ -661,10 +663,10 @@ extern class Window_Base extends _Window {
   * only a single line is processed.
   * @param {rm.TextState} textState
   * @param {Bool} all
-  * @returns Int
+  * @returns Float
   * @memberof Window_Base
   */
- public function calcTextHeight(textState: TextState, all: Bool): Int;
+ public function calcTextHeight(textState: TextState, all: Bool): Float;
 
  /**
   * Draws an icon given the specified iconIndex at the specified
@@ -675,10 +677,10 @@ extern class Window_Base extends _Window {
   * @param {number} y
   * @memberof Window_Base
   */
- public function drawIcon(iconIndex: Int, x: Int, y: Int): Void;
+ public function drawIcon(iconIndex: Float, x: Float, y: Float): Void;
 
- public function drawFace(faceName: String, faceIndex: Int, x: Int, y: Int,
-  width: Int, height: Int): Void;
+ public function drawFace(faceName: String, faceIndex: Float, x: Float,
+  y: Float, width: Float, height: Float): Void;
 
  /**
   * Draws a character (map sprites) at the specified x and y coordinate.
@@ -690,8 +692,8 @@ extern class Window_Base extends _Window {
   * @param {number} y
   * @memberof Window_Base
   */
- public function drawCharacter(characterName: String, characterIndex: Int,
-  x: Int, y: Int): Void;
+ public function drawCharacter(characterName: String, characterIndex: Float,
+  x: Float, y: Float): Void;
 
  /**
   * Draws a gauge at the specified x and y coordinates within the given width.
@@ -705,7 +707,7 @@ extern class Window_Base extends _Window {
   * @param {String} color2
   * @memberof Window_Base
   */
- public function drawGauge(x: Int, y: Int, width: Int, rate: Float,
+ public function drawGauge(x: Float, y: Float, width: Float, rate: Float,
   color1: String, color2: String): Void;
 
  /**
@@ -735,7 +737,8 @@ extern class Window_Base extends _Window {
   */
  public function tpColor(actor: Game_Actor): String;
 
- public function drawActorCharacter(actor: Game_Actor, x: Int, y: Int): Void;
+ public function drawActorCharacter(actor: Game_Actor, x: Float,
+  y: Float): Void;
 
  /**
   * Draws the actor face at the specified x and y coordinates within
@@ -747,8 +750,8 @@ extern class Window_Base extends _Window {
   * @param {number} height
   * @memberof Window_Base
   */
- public function drawActorFace(actor: Game_Actor, x: Int, y: Int, width: Int,
-  height: Int): Void;
+ public function drawActorFace(actor: Game_Actor, x: Float, y: Float,
+  width: Float, height: Float): Void;
 
  /**
   * Draws the actor name at the specified x and y coordinates within
@@ -759,8 +762,8 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorName(actor: Game_Actor, x: Int, y: Int,
-  width: Int): Void;
+ public function drawActorName(actor: Game_Actor, x: Float, y: Float,
+  width: Float): Void;
 
  /**
   * Draws the actor class at the specified x and y coordinates
@@ -771,30 +774,30 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorClass(actor: Game_Actor, x: Int, y: Int,
-  width: Int): Void;
+ public function drawActorClass(actor: Game_Actor, x: Float, y: Float,
+  width: Float): Void;
 
  /**
   * Draws the actor nickname at the specified x and y coordinates
   * within the given width.
   * @param {Game_Actor} actor
-  * @param {Int} x
-  * @param {Int} y
-  * @param {Int} width
+  * @param {Float} x
+  * @param {Float} y
+  * @param {Float} width
   * @memberof Window_Base
   */
- public function drawActorNickname(actor: Game_Actor, x: Int, y: Int,
-  width: Int): Void;
+ public function drawActorNickname(actor: Game_Actor, x: Float, y: Float,
+  width: Float): Void;
 
  /**
   * Draws the actor level at the specified x and y coordinates.
   *
   * @param {Game_Actor} actor
-  * @param {Int} x
-  * @param {Int} y
+  * @param {Float} x
+  * @param {Float} y
   * @memberof Window_Base
   */
- public function drawActorLevel(actor: Game_Actor, x: Int, y: Int): Void;
+ public function drawActorLevel(actor: Game_Actor, x: Float, y: Float): Void;
 
  /**
   * Draws the actor icons at the specified x and y coordinates
@@ -805,8 +808,8 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorIcons(actor: Game_Actor, x: Int, y: Int,
-  width: Int): Void;
+ public function drawActorIcons(actor: Game_Actor, x: Float, y: Float,
+  width: Float): Void;
 
  /**
   * Draws the current and max number at the specified x and y coordinate
@@ -821,8 +824,8 @@ extern class Window_Base extends _Window {
   * @param {String} color2
   * @memberof Window_Base
   */
- public function drawCurrentAndMax(current: Float, max: Float, x: Int, y: Int,
-  width: Int, color1: String, color2: String): Void;
+ public function drawCurrentAndMax(current: Float, max: Float, x: Float,
+  y: Float, width: Float, color1: String, color2: String): Void;
 
  /**
   * Draws the actor hp at the specified x and y coordinates within
@@ -833,8 +836,8 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorHp(actor: Game_Actor, x: Int, y: Int,
-  width: Int): Void;
+ public function drawActorHp(actor: Game_Actor, x: Float, y: Float,
+  width: Float): Void;
 
  /**
   * Draws the actor mp at the specified x and y coordinates within
@@ -845,8 +848,8 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorMp(actor: Game_Actor, x: Int, y: Int,
-  width: Int): Void;
+ public function drawActorMp(actor: Game_Actor, x: Float, y: Float,
+  width: Float): Void;
 
  /**
   * Draws the actor tp at the specified x and y coordinates within the
@@ -857,8 +860,8 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorTp(actor: Game_Actor, x: Int, y: Int,
-  width: Int): Void;
+ public function drawActorTp(actor: Game_Actor, x: Float, y: Float,
+  width: Float): Void;
 
  /**
   * Draws a simple status for the game actor passed into the method at the
@@ -870,8 +873,8 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawActorSimpleStatus(actor: Game_Actor, x: Int, y: Int,
-  width: Int): Void;
+ public function drawActorSimpleStatus(actor: Game_Actor, x: Float, y: Float,
+  width: Float): Void;
 
  /**
   * Draws the item name at the specified x and y coordinates within
@@ -882,8 +885,8 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawItemName(item: BaseItem, x: Int, y: Int,
-  width: Int): Void;
+ public function drawItemName(item: BaseItem, x: Float, y: Float,
+  width: Float): Void;
 
  /**
   * Draws the currency value given at the specified x and y coordinates within
@@ -895,8 +898,8 @@ extern class Window_Base extends _Window {
   * @param {number} width
   * @memberof Window_Base
   */
- public function drawCurrencyValue(value: Int, unit: String, x: Int, y: Int,
-  width: Int): Void;
+ public function drawCurrencyValue(value: Float, unit: String, x: Float,
+  y: Float, width: Float): Void;
 
  /**
   * Changes the text color based on the powerUpColor, powerDownColor
@@ -905,7 +908,7 @@ extern class Window_Base extends _Window {
   * @param {number} change
   * @memberof Window_Base
   */
- public function paramchangeTextColor(change: Int): Color;
+ public function paramchangeTextColor(change: Float): Color;
 
  /**
   * Sets the background type of the window.
@@ -916,7 +919,7 @@ extern class Window_Base extends _Window {
   * @param {number} type
   * @memberof Window_Base
   */
- public function setBackgroundType(type: Int): Void;
+ public function setBackgroundType(type: Float): Void;
 
  /**
   * Shows the background dimmer sprite.
@@ -1013,7 +1016,8 @@ extern class Window_Base extends _Window {
   * @param width
   * @param height
   */
- public function drawRect(x: Int, y: Int, width: Int, height: Int): Void;
+ public function drawRect(x: Float, y: Float, width: Float,
+  height: Float): Void;
 
  /**
   * Destroys the window contents.
@@ -1044,14 +1048,14 @@ extern class Window_Base extends _Window {
   * Changes the color based on the color index.
   * @param colorIndex
   */
- public function processColorChange(colorIndex: Int): Void;
+ public function processColorChange(colorIndex: Float): Void;
 
  /**
   * Returns the maximum font size for a single line in rm.
   * @param line
-  * @return Int
+  * @return Float
   *
   */
- public function maxFontSizeInLine(line: String): Int;
+ public function maxFontSizeInLine(line: String): Float;
  #end
 }

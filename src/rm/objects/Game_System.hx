@@ -16,15 +16,15 @@ extern class Game_System {
  private var _menuEnabled: Bool;
  private var _encounterEnabled: Bool;
  private var _formationEnabled: Bool;
- private var _battleCount: Int;
- private var _winCount: Int;
- private var _escapeCount: Int;
- private var _saveCount: Int;
- private var _versionId: Int;
- private var _framesOnSave: Int;
+ private var _battleCount: Float;
+ private var _winCount: Float;
+ private var _escapeCount: Float;
+ private var _saveCount: Float;
+ private var _versionId: Float;
+ private var _framesOnSave: Float;
  private var _bgmOnSave: AudioFile;
  private var _bgsOnSave: AudioFile;
- private var _windowTone: Array<Int>;
+ private var _windowTone: Array<Float>;
  private var _battleBgm: AudioFile;
  private var _victoryMe: AudioFile;
  private var _defeatMe: AudioFile;
@@ -111,7 +111,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public function battleCount(): Int;
+ public function battleCount(): Float;
 
  /**
   * Returns the number of the wins the player has gained in battle.
@@ -119,7 +119,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public function winCount(): Int;
+ public function winCount(): Float;
 
  /**
   * Returns the number of battles the player has escaped from in battle.
@@ -127,7 +127,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public function escapeCount(): Int;
+ public function escapeCount(): Float;
 
  /**
   * Returns the number of saves the player has made in game.
@@ -135,7 +135,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public function saveCount(): Int;
+ public function saveCount(): Float;
 
  /**
   * Returns the version id represented in the database.
@@ -143,7 +143,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public function versionId(): Int;
+ public function versionId(): Float;
 
  /**
   * Returns the current save file id
@@ -151,7 +151,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public function savefileId(): Int;
+ public function savefileId(): Float;
 
  /**
   * Sets the save file id
@@ -159,23 +159,23 @@ extern class Game_System {
   * @returns {Void}
   * @memberof Game_System
   */
- public function setSavefileId(savefileId: Int): Void;
+ public function setSavefileId(savefileId: Float): Void;
 
  /**
   * Returns the tone of the window in the database.
   *
-  * @returns {Array<Int>}
+  * @returns {Array<Float>}
   * @memberof Game_System
   */
- public function windowTone(): Array<Int>;
+ public function windowTone(): Array<Float>;
 
  /**
   * Sets the window tone, given an array
   * of rgb. Example:  [0, 255, 255].
-  * @param {Array<Int>} value
+  * @param {Array<Float>} value
   * @memberof Game_System
   */
- public function setWindowTone(value: Array<Int>): Void;
+ public function setWindowTone(value: Array<Float>): Void;
 
  /**
   * Returns the current battle background music.
@@ -229,7 +229,7 @@ extern class Game_System {
   * @returns {number}
   * @memberof Game_System
   */
- public function playtime(): Int;
+ public function playtime(): Float;
 
  public function playtimeText(): String;
 
@@ -287,16 +287,16 @@ extern class Game_System {
  /**
   * Returns the main font size
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_System
   */
- public function mainFontSize(): Int;
+ public function mainFontSize(): Float;
 
  /**
   * Returns the window padding
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_System
   */
- public function windowPadding(): Int;
+ public function windowPadding(): Float;
 }

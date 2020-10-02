@@ -21,16 +21,17 @@ extern class Window_SkillList extends Window_Selectable {
  private var _actor: Game_Actor;
 
  /**
-  * Returns the Skill Type Id which is an Int;
+  * Returns the Skill Type Id which is an Float;
   */
  private var _stypeId: SkillTypeIdA;
 
  private var _data: Array<Skill>;
 
  #if compileMV
- public function new(x: Int, y: Int, witth: Int, height: Int);
+ public function new(x: Float, y: Float, witth: Float, height: Float);
 
- public function initialize(x: Int, y: Int, width: Int, height: Int): Void;
+ public function initialize(x: Float, y: Float, width: Float,
+  height: Float): Void;
  #else
  public function new(rect: Rectangle);
  public function initialize(rect: Rectangle): Void;
@@ -40,7 +41,7 @@ extern class Window_SkillList extends Window_Selectable {
   * @param index
   * @return Null<Skill>
   */
- public function itemAt(index: Int): Null<Skill>;
+ public function itemAt(index: Float): Null<Skill>;
  #end
 
  /**
@@ -94,6 +95,7 @@ extern class Window_SkillList extends Window_Selectable {
  public function makeItemList(): Void;
 
  public function selectLast(): Void;
- public function costWidth(): Int;
- public function drawSkillCost(skill: Skill, x: Int, y: Int, width: Int): Void;
+ public function costWidth(): Float;
+ public function drawSkillCost(skill: Skill, x: Float, y: Float,
+  width: Float): Void;
 }

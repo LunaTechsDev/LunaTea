@@ -20,7 +20,7 @@ extern class JsonEx {
   * @type Number
   * @default 100
   */
- public var maxDepth: Int;
+ public var maxDepth: Float;
 
  /**
   * Makes a deep copy of the specified object.
@@ -60,7 +60,7 @@ extern class JsonEx {
   * @return {Object}
   * @private
   */
- private static function _encode(value: Any, depth: Int): Any;
+ private static function _encode(value: Any, depth: Float): Any;
 
  /**
   * @static

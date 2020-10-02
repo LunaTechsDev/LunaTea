@@ -13,11 +13,11 @@ import rm.objects.Game_Picture;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Screen {
- private var _shake: Int;
- private var _shakePower: Int;
- private var _shakeSpeed: Int;
- private var _shakeDuration: Int;
- private var _shakeDirection: Int;
+ private var _shake: Float;
+ private var _shakePower: Float;
+ private var _shakeSpeed: Float;
+ private var _shakeDuration: Float;
+ private var _shakeDirection: Float;
 
  /**
   * _zoomX property of the game screen.
@@ -39,11 +39,11 @@ extern class Game_Screen {
 
  private var _zoomScale: Float;
  private var _zoomScaleTarget: Float;
- private var _zoomDuration: Int;
+ private var _zoomDuration: Float;
  private var _weatherType: String;
  private var _weatherPower: Float;
- private var _weatherPowerTarget: Int;
- private var _weatherDuration: Int;
+ private var _weatherPowerTarget: Float;
+ private var _weatherDuration: Float;
 
  /**
   * The _brightness property of the game screen;
@@ -54,13 +54,13 @@ extern class Game_Screen {
   */
  private var _brightness: Float;
 
- private var _fadeOutDuration: Int;
- private var _fadeInDuration: Int;
- private var _tone: Array<Int>;
- private var _toneTarget: Array<Int>;
- private var _toneDuration: Int;
- private var _flashColor: Array<Int>;
- private var _flashDuration: Int;
+ private var _fadeOutDuration: Float;
+ private var _fadeInDuration: Float;
+ private var _tone: Array<Float>;
+ private var _toneTarget: Array<Float>;
+ private var _toneDuration: Float;
+ private var _flashColor: Array<Float>;
+ private var _flashDuration: Float;
 
  public function new(): Void;
  public function initialize(): Void;
@@ -91,8 +91,8 @@ extern class Game_Screen {
   */
  public function brightness(): Float;
 
- public function tone(): Array<Int>;
- public function flashColor(): Array<Int>;
+ public function tone(): Array<Float>;
+ public function flashColor(): Array<Float>;
  public function shake(): Float;
 
  /**
@@ -142,7 +142,7 @@ extern class Game_Screen {
   * @returns {Game_Picture}
   * @memberof Game_Screen
   */
- public function picture(pictureId: Int): Game_Picture;
+ public function picture(pictureId: Float): Game_Picture;
 
  /**
   * Returns the real picture id, given the picture id.
@@ -151,7 +151,7 @@ extern class Game_Screen {
   * @returns {number}
   * @memberof Game_Screen
   */
- public function realPictureId(pictureId: Int): Int;
+ public function realPictureId(pictureId: Float): Float;
 
  /**
   * Clears the screen fade.
@@ -215,25 +215,25 @@ extern class Game_Screen {
   * @returns {number}
   * @memberof Game_Screen
   */
- public function maxPictures(): Int;
+ public function maxPictures(): Float;
 
- public function startFadeOut(duration: Int): Void;
+ public function startFadeOut(duration: Float): Void;
 
- public function startFadeIn(duration: Int): Void;
+ public function startFadeIn(duration: Float): Void;
 
- public function startTint(tone: Array<Int>, duration: Int): Void;
+ public function startTint(tone: Array<Float>, duration: Float): Void;
 
- public function startFlash(color: Array<Int>, duration: Int): Void;
+ public function startFlash(color: Array<Float>, duration: Float): Void;
 
- public function startShake(power: Float, speed: Float, duration: Int): Void;
+ public function startShake(power: Float, speed: Float, duration: Float): Void;
 
  public function startZoom(x: Float, y: Float, scale: Float,
-  duration: Int): Void;
+  duration: Float): Void;
 
  public function setZoom(x: Float, y: Float, scale: Float): Void;
  // TODO: change the weather type to an num
  public function changeWeather(type: String, power: Float,
-  duration: Int): Void;
+  duration: Float): Void;
 
  /**
   * Updates the game screen.
@@ -300,18 +300,18 @@ extern class Game_Screen {
 
  public function startFlashForDamage(): Void;
 
- public function showPicture(pictureId: Int, name: String, origin: Float,
-  x: Int, y: Int, scaleX: Float, scaleY: Float, opacity: Int,
-  blendMode: Int): Void;
+ public function showPicture(pictureId: Float, name: String, origin: Float,
+  x: Float, y: Float, scaleX: Float, scaleY: Float, opacity: Float,
+  blendMode: Float): Void;
 
- public function movePicture(pictureId: Int, origin: Float, x: Int, y: Int,
-  scaleX: Float, scaleY: Float, opacity: Int, blendMode: Int,
-  duration: Int): Void;
+ public function movePicture(pictureId: Float, origin: Float, x: Float,
+  y: Float, scaleX: Float, scaleY: Float, opacity: Float, blendMode: Float,
+  duration: Float): Void;
 
- public function rotatePicture(pictureId: Int, speed: Int): Void;
+ public function rotatePicture(pictureId: Float, speed: Float): Void;
 
- public function tintPicture(pictureId: Int, tone: Array<Int>,
-  duration: Int): Void;
+ public function tintPicture(pictureId: Float, tone: Array<Float>,
+  duration: Float): Void;
 
  /**
   * Erases a picture from the screen given the respected picture id.
@@ -319,5 +319,5 @@ extern class Game_Screen {
   * @param {number} pictureId
   * @memberof Game_Screen
   */
- public function erasePicture(pictureId: Int): Void;
+ public function erasePicture(pictureId: Float): Void;
 }

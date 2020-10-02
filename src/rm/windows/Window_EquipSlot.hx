@@ -19,8 +19,9 @@ extern class Window_EquipSlot extends Window_Selectable {
  private var _itemWindow: Window_EquipItem;
  private var _statusWindow: Window_EquipStatus;
 
- public function new(x: Int, y: Int, width: Int, height: Int): Void;
- public function initialize(x: Int, y: Int, width: Int, height: Int): Void;
+ public function new(x: Float, y: Float, width: Float, height: Float): Void;
+ public function initialize(x: Float, y: Float, width: Float,
+  height: Float): Void;
 
  /**
   * Sets the current game actor.
@@ -45,7 +46,7 @@ extern class Window_EquipSlot extends Window_Selectable {
   * @returns {string}
   * @memberof Window_EquipSlot
   */
- public function slotName(index: Int): String;
+ public function slotName(index: Float): String;
 
  /**
   * Returns true if the current slot is enabled.
@@ -54,7 +55,7 @@ extern class Window_EquipSlot extends Window_Selectable {
   * @returns {boolean}
   * @memberof Window_EquipSlot
   */
- public function isEnabled(index: Int): Bool;
+ public function isEnabled(index: Float): Bool;
 
  /**
   * Sets the status window within the equip slot window.

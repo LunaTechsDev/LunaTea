@@ -20,7 +20,7 @@ import rm.types.LunaTea.EquipTypeId;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ShopStatus extends Window_Base {
  private var _item: BaseItem;
- private var _pageIndex: Int;
+ private var _pageIndex: Float;
 
  /**
   * Creates an instance of Window_ShopStatus.
@@ -30,7 +30,7 @@ extern class Window_ShopStatus extends Window_Base {
   * @param {number} height
   * @memberof Window_ShopStatus
   */
- public function new(x: Int, y: Int, width: Int, height: Int);
+ public function new(x: Float, y: Float, width: Float, height: Float);
 
  /**
   * Refreshes the window contents.
@@ -50,12 +50,12 @@ extern class Window_ShopStatus extends Window_Base {
   */
  public function isEquipItem(): Bool;
 
- public function drawPossession(x: Int, y: Int): Void;
+ public function drawPossession(x: Float, y: Float): Void;
 
  /**
   * Draw Equip Information.
   */
- public function drawEquipInfo(x: Int, y: Int): Void;
+ public function drawEquipInfo(x: Float, y: Float): Void;
 
  public function statusMembers(): Array<Game_Actor>;
 
@@ -65,7 +65,7 @@ extern class Window_ShopStatus extends Window_Base {
   * @returns {number}
   * @memberof Window_ShopStatus
   */
- public function pageSize(): Int;
+ public function pageSize(): Float;
 
  /**
   * Returns the max number of pages.
@@ -73,11 +73,12 @@ extern class Window_ShopStatus extends Window_Base {
   * @returns {number}
   * @memberof Window_ShopStatus
   */
- public function maxPages(): Int;
+ public function maxPages(): Float;
 
- public function drawActorEquipInfo(x: Int, y: Int, actor: Game_Actor): Void;
+ public function drawActorEquipInfo(x: Float, y: Float,
+  actor: Game_Actor): Void;
 
- public function drawActorParamChange(x: Int, y: Int, actor: Game_Actor,
+ public function drawActorParamChange(x: Float, y: Float, actor: Game_Actor,
   item1: EquipItem): Void;
 
  /**

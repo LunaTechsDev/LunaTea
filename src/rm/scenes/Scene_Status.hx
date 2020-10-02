@@ -20,9 +20,9 @@ extern class Scene_Status extends Scene_MenuBase {
  public function createStatusEquipWindow(): Void;
  public function statusParamsWindowRect(): Rectangle;
  public function statusEquipWindowRect(): Rectangle;
- public function statusParamsWidth(): Int;
- public function statusParamsHeight(): Int;
- public function profileHeight(): Int;
+ public function statusParamsWidth(): Float;
+ public function statusParamsHeight(): Float;
+ public function profileHeight(): Float;
  #end
 
  /**

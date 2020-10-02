@@ -19,7 +19,7 @@ extern class Scene_Save extends Scene_File {
  public function helpWindowText(): String;
 
  #if !compileMV
- public function executeSave(saveFileId: Int): Void;
+ public function executeSave(saveFileId: Float): Void;
  #end
 
  /**
@@ -28,7 +28,7 @@ extern class Scene_Save extends Scene_File {
   * @returns {number}
   * @memberof Scene_Save
   */
- public function firstSavefileIndex(): Int;
+ public function firstSavefileIndex(): Float;
 
  /**
   * Handler for when a save file

@@ -7,7 +7,8 @@ import rm.windows.Window_BattleStatus;
 @:forwardStatics
 abstract WindowBattleStatus(Window_BattleStatus) from Window_BattleStatus
  to Window_BattleStatus {
- public inline function new(?x: Int, ?y: Int, ?width: Int, ?height: Int) {
+ public inline function new(?x: Float, ?y: Float, ?width: Float,
+   ?height: Float) {
   #if compileMV
   this = new Window_BattleStatus();
   #else

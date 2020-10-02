@@ -20,5 +20,5 @@ extern class Game_Actors {
   * @returns {Game_Actor}
   * @memberof Game_Actors
   */
- public function actor(actorId: Int): Game_Actor;
+ public function actor(actorId: Float): Game_Actor;
 }

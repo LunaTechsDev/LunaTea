@@ -13,7 +13,7 @@ extern class Point extends pixi.core.math.Point {
   * @param {Number} x The x coordinate
   * @param {Number} y The y coordinate
   */
- public function new(?x: Int, ?y: Int);
+ public function new(?x: Float, ?y: Float);
 
  /**
   * The x coordinate.
@@ -22,7 +22,7 @@ extern class Point extends pixi.core.math.Point {
   * @type Number
   */
  @:native("x")
- public var _x: Int;
+ public var _x: Float;
 
  /**
   * The y coordinate.
@@ -31,5 +31,5 @@ extern class Point extends pixi.core.math.Point {
   * @type Number
   */
  @:native("y")
- public var _y: Int;
+ public var _y: Float;
 }

@@ -8,15 +8,15 @@ import rm.core.Rectangle;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_Scrollable extends Window_Base {
- private var _scrollX: Int;
- private var _ScrollY: Int;
- private var _scrollBaseX: Int;
- private var _scrollBaseY: Int;
- private var _scrollAccelX: Int;
- private var _scrollAccelY: Int;
+ private var _scrollX: Float;
+ private var _ScrollY: Float;
+ private var _scrollBaseX: Float;
+ private var _scrollBaseY: Float;
+ private var _scrollAccelX: Float;
+ private var _scrollAccelY: Float;
  private var _scrollTouching: Bool;
- private var _scrollLastTouchX: Int;
- private var _scrollLastTouchY: Int;
+ private var _scrollLastTouchX: Float;
+ private var _scrollLastTouchY: Float;
  private var _scrollLastCursorVisible: Bool;
 
  /**
@@ -34,62 +34,62 @@ extern class Window_Scrollable extends Window_Base {
 
  public function clearScrollStatus(): Void;
 
- public function scrollX(): Int;
+ public function scrollX(): Float;
 
- public function scrollY(): Int;
+ public function scrollY(): Float;
 
- public function scrollBaseX(): Int;
+ public function scrollBaseX(): Float;
 
- public function scrollBaseY(): Int;
+ public function scrollBaseY(): Float;
 
- public function scrollTo(x: Int, y: Int): Void;
+ public function scrollTo(x: Float, y: Float): Void;
 
- public function scrollBy(x: Int, y: Int): Void;
+ public function scrollBy(x: Float, y: Float): Void;
 
- public function smoothScrollTo(x: Int, y: Int): Void;
+ public function smoothScrollTo(x: Float, y: Float): Void;
 
- public function setScrollAccel(x: Int, y: Int): Void;
+ public function setScrollAccel(x: Float, y: Float): Void;
 
  /**
   *
   * Overall width of the window.
-  * @return Int
+  * @return Float
   */
- public function overallWidth(): Int;
+ public function overallWidth(): Float;
 
  /**
   * Overall height of the window.
-  * @return Int
+  * @return Float
   */
- public function overallHeight(): Int;
+ public function overallHeight(): Float;
 
- public function maxScrollX(): Int;
+ public function maxScrollX(): Float;
 
- public function maxScrollY(): Int;
+ public function maxScrollY(): Float;
 
- public function scrollBlockWidth(): Int;
+ public function scrollBlockWidth(): Float;
 
- public function scrollBlockHeight(): Int;
+ public function scrollBlockHeight(): Float;
 
  /**
   * Smoothly scrolls down to the number by the
   * height of each item.
   * @param num
-  * @return Int
+  * @return Float
   */
- public function smoothScrollDown(num: Int): Int;
+ public function smoothScrollDown(num: Float): Float;
 
  /**
   * Smoothly scrolls up to the number by the height
   * of each item.
   * @param num
-  * @return Int
+  * @return Float
   */
- public function smoothScrollUp(num: Int): Int;
+ public function smoothScrollUp(num: Float): Float;
 
  /**
   * Process wheel scrolling with the TouchInput wheel.
-  * @return Int
+  * @return Float
   */
  public function processWheelScroll(): Void;
 

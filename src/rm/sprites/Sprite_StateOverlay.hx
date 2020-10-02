@@ -15,11 +15,11 @@ import rm.objects.Game_Battler;
 extern class Sprite_StateOverlay extends Sprite_Base {
  private var _battler: Game_Battler;
 
- private var _overlayIndex: Int;
+ private var _overlayIndex: Float;
 
- private var _animationCount: Int;
+ private var _animationCount: Float;
 
- private var _pattern: Int;
+ private var _pattern: Float;
 
  /**
   * Initialize the overlay sprite properties.
@@ -36,7 +36,7 @@ extern class Sprite_StateOverlay extends Sprite_Base {
  public function loadBitmap(): Void;
 
  public function setup(battler: Game_Battler): Void;
- public function animationWait(): Int;
+ public function animationWait(): Float;
 
  /**
   * Updates the overlay sprite pattern.

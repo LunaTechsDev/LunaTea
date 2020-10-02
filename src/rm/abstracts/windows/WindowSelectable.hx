@@ -7,7 +7,7 @@ import rm.windows.Window_Selectable;
 @:forwardStatics
 abstract WindowSelectable(Window_Selectable) from Window_Selectable
  to Window_Selectable {
- public inline function new(x: Int, y: Int, width: Int, height: Int) {
+ public inline function new(x: Float, y: Float, width: Float, height: Float) {
   #if compileMV
   this = new Window_Selectable(x, y, width, height);
   #else

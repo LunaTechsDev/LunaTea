@@ -19,7 +19,7 @@ extern class Scene_File extends Scene_MenuBase {
 
  public function needsAutosave(): Bool;
 
- public function firstSavefileId(): Int;
+ public function firstSavefileId(): Float;
  #else
 
  /**
@@ -28,7 +28,7 @@ extern class Scene_File extends Scene_MenuBase {
   * @returns {number}
   * @memberof Scene_File
   */
- public function firstSavefileIndex(): Int;
+ public function firstSavefileIndex(): Float;
  #end
 
  /**
@@ -36,7 +36,7 @@ extern class Scene_File extends Scene_MenuBase {
   *
   * @memberof Scene_File
   */
- public function savefileId(): Int;
+ public function savefileId(): Float;
 
  public function createHelpWindow(): Void;
  public function createListWindow(): Void;

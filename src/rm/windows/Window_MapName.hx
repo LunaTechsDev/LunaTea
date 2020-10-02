@@ -12,7 +12,7 @@ package rm.windows;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_MapName extends Window_Base {
- private var _showCount: Int;
+ private var _showCount: Float;
 
  public function new();
 
@@ -22,7 +22,7 @@ extern class Window_MapName extends Window_Base {
   * @returns {number}
   * @memberof Window_MapName
   */
- public function windowWidth(): Int;
+ public function windowWidth(): Float;
 
  /**
   * Returns the window height.
@@ -30,7 +30,7 @@ extern class Window_MapName extends Window_Base {
   * @returns {number}
   * @memberof Window_MapName
   */
- public function windowHeight(): Int;
+ public function windowHeight(): Float;
 
  public function updateFadeIn(): Void;
  public function updateFadeOut(): Void;
@@ -51,5 +51,6 @@ extern class Window_MapName extends Window_Base {
   * @param {number} height
   * @memberof Window_MapName
   */
- public function drawBackground(x: Int, y: Int, width: Int, height: Int): Void;
+ public function drawBackground(x: Float, y: Float, width: Float,
+  height: Float): Void;
 }

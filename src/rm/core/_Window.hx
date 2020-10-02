@@ -71,14 +71,14 @@ extern class _Window extends Container {
   * @property width
   * @type Number
   */
- // public var width: Int;
+ // public var width: Float;
  /**
   * The height of the window in pixels.
   *
   * @property height
   * @type Number
   */
- // public var height: Int;
+ // public var height: Float;
 
  /**
   * The size of the padding between the frame and contents.
@@ -242,7 +242,7 @@ extern class _Window extends Container {
   * @param {Number} g The green value in the range (-255, 255)
   * @param {Number} b The blue value in the range (-255, 255)
   */
- public function setTone(r: Int, g: Int, b: Int): Void;
+ public function setTone(r: Float, g: Float, b: Float): Void;
 
  /**
   * Adds a child between the background and contents.
@@ -270,7 +270,7 @@ extern class _Window extends Container {
   * @param {Number} index The index to place the child in
   * @return {PIXI.DisplayObject} The child that was added
   */
- public function addChildAt(child: DisplayObject, index: Int): DisplayObject;
+ public function addChildAt(child: DisplayObject, index: Float): DisplayObject;
 
  /**
   * Removes a child from the container.
@@ -288,7 +288,7 @@ extern class _Window extends Container {
   * @param {Number} index The index to get the child from
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public function removeChildAt(index: Int): DisplayObject;
+ public function removeChildAt(index: Float): DisplayObject;
 
  /**
   * Move the cursor position by the given amount
@@ -334,7 +334,7 @@ extern class _Window extends Container {
  private var _height: Float;
  private var _cursorRect: Rectangle;
  private var _openness: Float;
- private var _animationCount: Int;
+ private var _animationCount: Float;
  private var _padding: Float;
  private var _margin: Float;
  private var _colorTone: Array<Float>;

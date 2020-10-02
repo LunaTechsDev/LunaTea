@@ -9,8 +9,8 @@ package rm.managers;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class SoundManager {
  public static function preloadImportantSounds(): Void;
- public static function loadSystemSound(databaseNumber: Int): Void;
- public static function playSystemSound(databaseNumber: Int): Void;
+ public static function loadSystemSound(databaseNumber: Float): Void;
+ public static function playSystemSound(databaseNumber: Float): Void;
  public static function playCursor(): Void;
  public static function playOk(): Void;
  public static function playCancel(): Void;

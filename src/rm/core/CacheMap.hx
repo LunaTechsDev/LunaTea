@@ -28,5 +28,5 @@ extern class CacheMap {
 
  public function clear(): Void;
  public function setItem(key: String, item: Any): CacheEntry;
- public function update(ticks: Int, delta: Float): Void;
+ public function update(ticks: Float, delta: Float): Void;
 }

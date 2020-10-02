@@ -24,7 +24,7 @@ extern class Window_EventItem extends Window_ItemList {
   * @returns {number}
   * @memberof Window_EventItem
   */
- public function windowHeight(): Int;
+ public function windowHeight(): Float;
 
  /**
   * Returns the number of visible rows.
@@ -32,7 +32,7 @@ extern class Window_EventItem extends Window_ItemList {
   * @returns {number}
   * @memberof Window_EventItem
   */
- public function numVisibleRows(): Int;
+ public function numVisibleRows(): Float;
 
  /**
   * Starts the event item window.

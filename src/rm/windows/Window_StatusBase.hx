@@ -31,7 +31,7 @@ extern class Window_StatusBase extends Window_Selectable {
   * @param x
   * @param y
   */
- public function placeActorName(actor: Game_Actor, x: Int, y: Int): Void;
+ public function placeActorName(actor: Game_Actor, x: Float, y: Float): Void;
 
  /**
   * Places the actor name within the status window.
@@ -39,10 +39,10 @@ extern class Window_StatusBase extends Window_Selectable {
   * @param x
   * @param y
   */
- public function placeStateIcon(actor: Game_Actor, x: Int, y: Int): Void;
+ public function placeStateIcon(actor: Game_Actor, x: Float, y: Float): Void;
 
- public function placeGauage(actor: Game_Actor, gaugeType: GaugeType, x: Int,
-  y: Int): Void;
+ public function placeGauage(actor: Game_Actor, gaugeType: GaugeType,
+  x: Float, y: Float): Void;
 
  /**
   * Creates an inner sprite using a sprite class of your choosing..
@@ -58,7 +58,7 @@ extern class Window_StatusBase extends Window_Selectable {
   * @param x
   * @param y
   */
- public function placeTimeGauge(actor: Game_Actor, x: Int, y: Int): Void;
+ public function placeTimeGauge(actor: Game_Actor, x: Float, y: Float): Void;
 
  /**
   * Places the basic gauges on the window.
@@ -66,19 +66,20 @@ extern class Window_StatusBase extends Window_Selectable {
   * @param x
   * @param y
   */
- public function placeBasicGauges(actor: Game_Actor, x: Int, y: Int): Void;
+ public function placeBasicGauges(actor: Game_Actor, x: Float, y: Float): Void;
 
  /**
   * Line height of the guage.
   * By default set to 24.
-  * @return Int
+  * @return Float
   */
- public function guageLineHeight(): Int;
+ public function guageLineHeight(): Float;
 
- public function drawActorCharacter(actor: Game_Actor, x: Int, y: Int): Void;
+ public function drawActorCharacter(actor: Game_Actor, x: Float,
+  y: Float): Void;
 
- public function drawActorFace(actor: Game_Actor, x: Int, y: Int, width: Int,
-  height: Int): Void;
+ public function drawActorFace(actor: Game_Actor, x: Float, y: Float,
+  width: Float, height: Float): Void;
 
  /**
   * Draws the actor name if the width isn't passed in
@@ -88,8 +89,8 @@ extern class Window_StatusBase extends Window_Selectable {
   * @param y
   * @param width
   */
- public function drawActorName(actor: Game_Actor, x: Int, y: Int,
-  ?width: Int): Void;
+ public function drawActorName(actor: Game_Actor, x: Float, y: Float,
+  ?width: Float): Void;
 
  /**
   * Draws the actor class name.
@@ -99,8 +100,8 @@ extern class Window_StatusBase extends Window_Selectable {
   * @param y
   * @param width
   */
- public function drawActorClass(actor: Game_Actor, x: Int, y: Int,
-  ?width: Int): Void;
+ public function drawActorClass(actor: Game_Actor, x: Float, y: Float,
+  ?width: Float): Void;
 
  /**
   * Draws the actor nickname.
@@ -110,8 +111,8 @@ extern class Window_StatusBase extends Window_Selectable {
   * @param y
   * @param width
   */
- public function drawActorNickname(actor: Game_Actor, x: Int, y: Int,
-  width: Int): Void;
+ public function drawActorNickname(actor: Game_Actor, x: Float, y: Float,
+  width: Float): Void;
 
  /**
   * Draws the actor level.
@@ -119,7 +120,7 @@ extern class Window_StatusBase extends Window_Selectable {
   * @param x
   * @param y
   */
- public function drawActorLevel(actor: Game_Actor, x: Int, y: Int): Void;
+ public function drawActorLevel(actor: Game_Actor, x: Float, y: Float): Void;
 
  /**
   * Draws the actor icons.
@@ -129,8 +130,8 @@ extern class Window_StatusBase extends Window_Selectable {
   * @param y
   * @param width
   */
- public function drawActorIcons(actor: Game_Actor, x: Int, y: Int,
-  ?width: Int): Void;
+ public function drawActorIcons(actor: Game_Actor, x: Float, y: Float,
+  ?width: Float): Void;
 
  /**
   * Draws the actor simple status.
@@ -139,15 +140,15 @@ extern class Window_StatusBase extends Window_Selectable {
   * @param x
   * @param y
   */
- public function drawActorSimpleStatus(actor: Game_Actor, x: Int,
-  y: Int): Void;
+ public function drawActorSimpleStatus(actor: Game_Actor, x: Float,
+  y: Float): Void;
 
  /**
   * Returns the name of the actor equip slot.
   * @param actor
   * @param index
   */
- public function actorSlotName(actor: Game_Actor, index: Int): String;
+ public function actorSlotName(actor: Game_Actor, index: Float): String;
 }
 #else
 #end

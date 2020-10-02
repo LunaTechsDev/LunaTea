@@ -23,7 +23,7 @@ extern class Scene_Name extends Scene_MenuBase {
   * @param {number} maxLength
   * @memberof Scene_Name
   */
- public function prepare(actorId: Int, maxLength: Int): Void;
+ public function prepare(actorId: Float, maxLength: Float): Void;
 
  /**
   * Creates the edit window.

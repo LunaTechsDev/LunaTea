@@ -72,16 +72,16 @@ extern class Utils {
   *
   * @static
   * @method rgbToCssColor
-  * @param {Int} r The red value in the range (0, 255)
-  * @param {Int} g The green value in the range (0, 255)
-  * @param {Int} b The blue value in the range (0, 255)
+  * @param {Float} r The red value in the range (0, 255)
+  * @param {Float} g The green value in the range (0, 255)
+  * @param {Float} b The blue value in the range (0, 255)
   * @return {String} CSS color string
   */
- public static function rgbToCssColor(r: Int, g: Int, b: Int): String;
+ public static function rgbToCssColor(r: Float, g: Float, b: Float): String;
 
  public static function isSupportPassiveEvent(): Bool;
 
- public static function generateRuntimeId(): Int;
+ public static function generateRuntimeId(): Float;
 
  #if !compileMV
  /**

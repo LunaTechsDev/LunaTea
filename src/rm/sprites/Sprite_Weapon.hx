@@ -15,9 +15,9 @@ import rm.types.LunaTea.WeaponImageId;
 extern class Sprite_Weapon extends Sprite_Base {
  private var _weaponImageId: WeaponImageId;
 
- private var _animationCount: Int;
+ private var _animationCount: Float;
 
- private var _pattern: Int;
+ private var _pattern: Float;
 
  /**
   * Initializes the members of the weapon sprite object.
@@ -27,7 +27,7 @@ extern class Sprite_Weapon extends Sprite_Base {
  public function initMembers(): Void;
 
  public function setup(weaponImageId: WeaponImageId): Void;
- public function animationWait(): Int;
+ public function animationWait(): Float;
 
  /**
   * Updates the pattern of the weapon sprite.

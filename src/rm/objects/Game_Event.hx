@@ -17,9 +17,9 @@ import rm.types.RPG.EventCommand;
 @:expose("Game_Event")
 @:native("Game_Event")
 extern class Game_Event extends Game_Character {
- private var _mapId: Int;
+ private var _mapId: Float;
 
- private var _eventId: Int;
+ private var _eventId: Float;
 
  private var _moveType: MoveType; // Cast this  to an abstract enum
 
@@ -29,7 +29,7 @@ extern class Game_Event extends Game_Character {
 
  private var _erased: Bool;
 
- private var _pageIndex: Int;
+ private var _pageIndex: Float;
 
  private var _originalPattern: CharacterPattern;
 
@@ -39,18 +39,18 @@ extern class Game_Event extends Game_Character {
 
  private var _locked: Bool;
 
- public function new(mapId: Int, eventId: Int);
- public function initialize(mapId: Int, eventId: Int): Void;
+ public function new(mapId: Float, eventId: Float);
+ public function initialize(mapId: Float, eventId: Float): Void;
 
  public function initMembers(): Void;
 
  /**
   * Returns the event id of the game event.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Event
   */
- public function eventId(): Int;
+ public function eventId(): Float;
 
  /**
   * Returns the event database information.
@@ -76,18 +76,18 @@ extern class Game_Event extends Game_Character {
   */
  public function list(): Array<EventCommand>;
 
- public function isCollidedWithCharacters(x: Int, y: Int): Bool;
- public function isCollidedWithEvents(x: Int, y: Int): Bool;
+ public function isCollidedWithCharacters(x: Float, y: Float): Bool;
+ public function isCollidedWithEvents(x: Float, y: Float): Bool;
 
  /**
   * Returns true if the event has collided with the player character
   * at the specified x and y coordinates.
-  * @param {Int} x
-  * @param {Int} y
+  * @param {Float} x
+  * @param {Float} y
   * @returns {Bool}
   * @memberof Game_Event
   */
- public function isCollidedWithPlayerCharacters(x: Int, y: Int): Bool;
+ public function isCollidedWithPlayerCharacters(x: Float, y: Float): Bool;
 
  /**
   * Locks the game event.
@@ -112,7 +112,7 @@ extern class Game_Event extends Game_Character {
   */
  public function updateSelfMovement(): Void;
 
- public function stopCountThreshold(): Int;
+ public function stopCountThreshold(): Float;
  public function moveTypeRandom(): Void;
  public function moveTypeTowardPlayer(): Void;
 
@@ -141,7 +141,7 @@ extern class Game_Event extends Game_Character {
   */
  public function clearStartingFlag(): Void;
 
- public function isTriggerIn(triggers: Array<Int>): Bool;
+ public function isTriggerIn(triggers: Array<Float>): Bool;
 
  /**
   * Starts the game event.
@@ -167,10 +167,10 @@ extern class Game_Event extends Game_Character {
  /**
   * Finds the proper page index of the game event for
   * event command processing.
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Event
   */
- public function findProperPageIndex(): Int;
+ public function findProperPageIndex(): Float;
 
  public function meetsConditions(page: EventPage): Bool;
 
@@ -207,7 +207,7 @@ extern class Game_Event extends Game_Character {
  public function checkEventTriggerAuto(): Void;
  public function update(): Void;
  public function updateParallel(): Void;
- public function locate(x: Int, y: Int): Void;
+ public function locate(x: Float, y: Float): Void;
 
  /**
   * Forces the game event to move along the specified route.

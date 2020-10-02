@@ -19,13 +19,13 @@ extern class Sprite_Enemy extends Sprite_Battler {
 
  private var _battlerName: String;
 
- private var _battlerHue: Int;
+ private var _battlerHue: Float;
 
  private var _effectType: String;
 
- private var _effectDuration: Int;
+ private var _effectDuration: Float;
 
- private var _shake: Int;
+ private var _shake: Float;
 
  private var _stateIconSprite: Sprite_StateIcon;
 
@@ -43,7 +43,7 @@ extern class Sprite_Enemy extends Sprite_Battler {
   */
  public function setBattler(battler: Game_Enemy): Void;
 
- public function loadBitmap(name: String, hue: Int): Void;
+ public function loadBitmap(name: String, hue: Float): Void;
 
  /**
   * Updates the state sprite on the sprite enemy.
@@ -168,6 +168,6 @@ extern class Sprite_Enemy extends Sprite_Battler {
   */
  public function updateInstantCollapse(): Void;
 
- public function damageOffsetX(): Int;
- public function damageOffsetY(): Int;
+ public function damageOffsetX(): Float;
+ public function damageOffsetY(): Float;
 }

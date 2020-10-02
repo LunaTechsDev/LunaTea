@@ -11,7 +11,7 @@ import rm.types.RPG.BaseItem;
 
 typedef Matrix = {
  type: String,
- value: Array<Int>
+ value: Array<Float>
 }
 
 typedef TouchInputEvents = {
@@ -19,28 +19,28 @@ typedef TouchInputEvents = {
  cancelled: Bool,
  moved: Bool,
  released: Bool,
- wheelX: Int,
- wheelY: Int,
+ wheelX: Float,
+ wheelY: Float,
 }
 
 typedef AudioParameters = {
  name: String,
- volume: Int,
- pitch: Int,
- pan: Int,
- pos: Int
+ volume: Float,
+ pitch: Float,
+ pan: Float,
+ pos: Float
 }
 
 typedef BattleRewards = {
- gold: Int,
- exp: Int,
+ gold: Float,
+ exp: Float,
  items: Array<BaseItem>
 }
 
 typedef BattlerAnimation = {
- animationId: Int,
+ animationId: Float,
  mirror: Bool,
- delay: Int,
+ delay: Float,
 }
 
 typedef CommandItem = {
@@ -53,43 +53,43 @@ typedef CommandItem = {
 typedef TextStateLT = {
  var text: String;
  var index: Int;
- var x: Int;
- var y: Int;
- var startX: Int;
- var startY: Int;
- var width: Int;
- var left: Int;
- var height: Int;
+ var x: Float;
+ var y: Float;
+ var startX: Float;
+ var startY: Float;
+ var width: Float;
+ var left: Float;
+ var height: Float;
  var rtl: Bool;
  var buffer: String;
- var outputWidth: Int;
- var outputHeight: Int;
+ var outputWidth: Float;
+ var outputHeight: Float;
  var drawing: Bool;
 }
 
 #if compileMV
 typedef TextState = {
  index: Int,
- x: Int,
- y: Int,
- startX: Int,
- left: Int,
+ x: Float,
+ y: Float,
+ startX: Float,
+ left: Float,
  text: String
 }
 #else
 typedef TextState = {
  var text: String;
  var index: Int;
- var x: Int;
- var y: Int;
- var startX: Int;
- var startY: Int;
- var width: Int;
- var height: Int;
+ var x: Float;
+ var y: Float;
+ var startX: Float;
+ var startY: Float;
+ var width: Float;
+ var height: Float;
  var rtl: Bool;
  var buffer: String;
- var outputWidth: Int;
- var outputHeight: Int;
+ var outputWidth: Float;
+ var outputHeight: Float;
  var drawing: Bool;
 }
 #end
@@ -102,10 +102,10 @@ typedef BattleLogMethod = {
 typedef ConfigData = {
  alwaysDash: Bool,
  commandRemember: Bool,
- bgmVolume: Int,
- bgsVolume: Int,
- meVolume: Int,
- seVolume: Int
+ bgmVolume: Float,
+ bgsVolume: Float,
+ meVolume: Float,
+ seVolume: Float
 }
 
 typedef DatabaseFile = {
@@ -164,6 +164,6 @@ typedef PluginSettings = {
 }
 
 typedef Motion = {
- var index: Int;
+ var index: Float;
  var loop: Bool;
 }

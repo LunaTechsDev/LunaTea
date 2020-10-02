@@ -16,11 +16,11 @@ import rm.types.RPG.EquipItem;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_EquipItem {
  private var _actor: Game_Actor;
- private var _slotId: Int;
+ private var _slotId: Float;
  private var _statusWindow: Window_EquipStatus;
- public function new(x: Int, y: Int, width: Int, height: Int): Void;
+ public function new(x: Float, y: Float, width: Float, height: Float): Void;
  public function setActor(actor: Game_Actor): Void;
- public function setSlotId(slotId: Int): Void;
+ public function setSlotId(slotId: Float): Void;
  public function includes(item: EquipItem): Bool;
  public function isEnabled(item: EquipItem): Bool;
  public function setStatusWindow(statusWindow: Window_EquipStatus): Void;

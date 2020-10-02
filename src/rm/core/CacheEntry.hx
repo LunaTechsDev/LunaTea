@@ -33,7 +33,7 @@ extern class CacheEntry {
   * @param {number} time TTL in seconds, 0 if not set
   * @returns {CacheEntry}
   */
- public function setTimeToLive(?ticks: Int, ?seconds: Int): CacheEntry;
+ public function setTimeToLive(?ticks: Float, ?seconds: Float): CacheEntry;
 
  public function isStillAlive(): Bool;
 

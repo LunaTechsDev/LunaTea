@@ -18,8 +18,8 @@ extern class Window_BattleEnemy extends Window_Selectable {
  private var _enemies: Array<Game_Enemy>;
 
  #if compileMV
- public function new(x: Int, y: Int);
- public function initialize(x: Int, y: Int): Void;
+ public function new(x: Float, y: Float);
+ public function initialize(x: Float, y: Float): Void;
  #else
  public function new(rect: Rectangle);
  public function initialize(rect: Rectangle): Void;
@@ -31,7 +31,7 @@ extern class Window_BattleEnemy extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleEnemy
   */
- public function windowWidth(): Int;
+ public function windowWidth(): Float;
 
  /**
   * Returns the window height.
@@ -39,7 +39,7 @@ extern class Window_BattleEnemy extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleEnemy
   */
- public function windowHeight(): Int;
+ public function windowHeight(): Float;
 
  /**
   * Returns the number of visible rows.
@@ -47,7 +47,7 @@ extern class Window_BattleEnemy extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleEnemy
   */
- public function numVisibleRows(): Int;
+ public function numVisibleRows(): Float;
 
  /**
   * Returns the current enemy.
@@ -63,7 +63,7 @@ extern class Window_BattleEnemy extends Window_Selectable {
   * @returns {number}
   * @memberof Window_BattleEnemy
   */
- public function enemyIndex(): Int;
+ public function enemyIndex(): Float;
 
  /**
   * Selects a specified enemy using the index.
@@ -71,5 +71,5 @@ extern class Window_BattleEnemy extends Window_Selectable {
   * @param {number} index
   * @memberof Window_BattleEnemy
   */
- public function select(index: Int): Void;
+ public function select(index: Float): Void;
 }

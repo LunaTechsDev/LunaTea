@@ -13,9 +13,9 @@ package rm.objects;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Follower extends Game_Character {
- private var _memberIndex: Int;
+ private var _memberIndex: Float;
 
- public function new(memberIndex: Int);
+ public function new(memberIndex: Float);
 
  public function refresh(): Void;
 

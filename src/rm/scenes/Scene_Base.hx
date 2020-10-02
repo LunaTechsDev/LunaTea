@@ -14,9 +14,9 @@ extern class Scene_Base extends Stage {
  private var _started: Bool;
  #end
  private var _active: Bool;
- private var _fadeSign: Int;
- private var _fadeDuration: Int;
- private var _imageReservationId: EitherType<Dynamic, Int>;
+ private var _fadeSign: Float;
+ private var _fadeDuration: Float;
+ private var _imageReservationId: EitherType<Dynamic, Float>;
  private var _windowLayer: WindowLayer;
  @:native("_windowLayer")
  public var windowLayer: WindowLayer;
@@ -78,12 +78,12 @@ extern class Scene_Base extends Stage {
  public function isBottomHelpMode(): Bool;
  public function isBottomButtonMode(): Bool;
  public function isRightInputMode(): Bool;
- public function mainCommandWidth(): Int;
- public function buttonAreaTop(): Int;
- public function buttonAreaBottom(): Int;
- public function buttonAreaHeight(): Int;
- public function buttonY(): Int;
- public function calcWindowHeight(numLines: Int, selectable: Bool): Int;
+ public function mainCommandWidth(): Float;
+ public function buttonAreaTop(): Float;
+ public function buttonAreaBottom(): Float;
+ public function buttonAreaHeight(): Float;
+ public function buttonY(): Float;
+ public function calcWindowHeight(numLines: Float, selectable: Bool): Float;
  public function requestAutosave(): Void;
  public function isAutosaveEnabled(): Bool;
  public function executeAutosave(): Void;
@@ -113,14 +113,14 @@ extern class Scene_Base extends Stage {
   * @param duration  [duration=30] The time the process will take to fadeIn the screen.
   * @param white  [white=false] If true the fadeIn will process with a white color else it will be black.
   */
- public function startFadeIn(duration: Int, white: Bool): Void;
+ public function startFadeIn(duration: Float, white: Bool): Void;
 
  /**
   * Request a fadeOut screen process
   * @param duration  [duration=30] The time the process will take to fadeOut the screen.
   * @param white  [white=false] If true the fadeOut will process with a white color else it will be black.
   */
- public function startFadeOut(duration: Int, white: Bool): Void;
+ public function startFadeOut(duration: Float, white: Bool): Void;
 
  public function createFadeSprite(white: Bool): Void;
 
@@ -145,13 +145,13 @@ extern class Scene_Base extends Stage {
 
  /**
   * Returns the fade speed.
-  * @return Int
+  * @return Float
   */
- public function fadeSpeed(): Int;
+ public function fadeSpeed(): Float;
 
  /**
   * Returns the slow fade speed.
-  * @return Int
+  * @return Float
   */
- public function slowFadeSpeed(): Int;
+ public function slowFadeSpeed(): Float;
 }

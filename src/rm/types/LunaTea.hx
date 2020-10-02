@@ -5,13 +5,13 @@ import haxe.io.Mime;
 
 @:forward
 @:forwardStatics
-enum abstract StateIdA(Int) from Int to Int {
+enum abstract StateIdA(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract BuffIdA(Int) from Int to Int {
+enum abstract BuffIdA(Float) from Float to Float {
  public inline var base = -1;
 }
 
@@ -163,13 +163,13 @@ enum abstract ParameterIdA(ParameterId) from ParameterId to ParameterId {
 
 @:forward
 @:forwardStatics
-enum abstract EquipTypeId(Int) from Int to Int {
+enum abstract EquipTypeId(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract SkillIdA(Int) from Int to Int {
+enum abstract SkillIdA(Float) from Float to Float {
  public inline var base = -1;
 }
 
@@ -181,7 +181,7 @@ enum abstract ActionState(String) from String to String {
 
 @:forward
 @:forwardStatics
-enum abstract BalloonId(Int) from Int to Int {
+enum abstract BalloonId(Float) from Float to Float {
  public inline var EXCLAMATION = 0;
  public inline var QUESTION = 1;
  public inline var MUSIC_NOTE = 2;
@@ -225,19 +225,19 @@ enum abstract BalloonId(Int) from Int to Int {
 
 @:forward
 @:forwardStatics
-enum abstract AnimationSpeed(Int) from Int to Int {
+enum abstract AnimationSpeed(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract WeaponImageId(Int) from Int to Int {
+enum abstract WeaponImageId(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract AnimationId(Int) from Int to Int {
+enum abstract AnimationId(Float) from Float to Float {
  public inline var base = -1;
 }
 
@@ -247,7 +247,7 @@ enum abstract AnimationId(Int) from Int to Int {
  */
 @:forward
 @:forwardStatics
-enum abstract CharacterPattern(Int) from Int to Int {
+enum abstract CharacterPattern(Float) from Float to Float {
 }
 
 /**
@@ -279,7 +279,7 @@ enum abstract MotionType(String) from String to String {
  */
 @:forward
 @:forwardStatics
-enum abstract MoveType(Int) from Int to Int {
+enum abstract MoveType(Float) from Float to Float {
  public inline var FIXED = 0;
  public inline var RANDOM = 1;
  public inline var APPROACH = 2;
@@ -307,7 +307,7 @@ enum abstract MoveType(Int) from Int to Int {
  */
 @:forward
 @:forwardStatics
-enum abstract MoveSpeed(Int) from Int to Int {
+enum abstract MoveSpeed(Float) from Float to Float {
  public inline var X8SLOWER = 1;
  public inline var X4SLOWER = 2;
  public inline var X2SLOWER = 3;
@@ -342,7 +342,7 @@ enum abstract MoveSpeed(Int) from Int to Int {
  */
 @:forward
 @:forwardStatics
-enum abstract MoveFrequency(Int) from Int to Int {
+enum abstract MoveFrequency(Float) from Float to Float {
  public inline var LOWEST = 1;
  public inline var LOWER = 2;
  public inline var NORMAL = 3;
@@ -375,7 +375,7 @@ enum abstract MoveFrequency(Int) from Int to Int {
  */
 @:forward
 @:forwardStatics
-enum abstract CharacterPriority(Int) from Int to Int {
+enum abstract CharacterPriority(Float) from Float to Float {
  public inline var BELOW_CHARACTERS = 0;
  public inline var SAME_AS_CHARACTERS = 1;
  public inline var ABOVE_CHARACTERS = 2;
@@ -402,7 +402,7 @@ enum abstract Color(String) from String to String {
 
 @:forward
 @:forwardStatics
-enum abstract DamageColorType(Int) from Int to Int {
+enum abstract DamageColorType(Float) from Float to Float {
  public inline var HP_DAMAGE = 0;
  public inline var HP_RECOVER = 1;
  public inline var MP_DAMAGE = 2;
@@ -416,19 +416,19 @@ enum abstract DamageColorType(Int) from Int to Int {
 
 @:forward
 @:forwardStatics
-enum abstract WaitModeA(Int) from Int to Int {
+enum abstract WaitModeA(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract Frames(Int) from Int to Int {
+enum abstract Frames(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract Money(Int) from Int to Int {
+enum abstract Money(Float) from Float to Float {
  public inline var base = -1;
 }
 
@@ -443,61 +443,61 @@ enum abstract GaugeType(String) from String to String {
 
 @:forward
 @:forwardStatics
-enum abstract SkillTypeIdA(Int) from Int to Int {
+enum abstract SkillTypeIdA(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract BattleResult(Int) from Int to Int {
+enum abstract BattleResult(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract Direction(Int) from Int to Int {
+enum abstract Direction(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract EventTrigger(Int) from Int to Int {
+enum abstract EventTrigger(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract MessageBackgroundType(Int) from Int to Int {
+enum abstract MessageBackgroundType(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract MessagePositionType(Int) from Int to Int {
+enum abstract MessagePositionType(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract ChoiceDefaultType(Int) from Int to Int {
+enum abstract ChoiceDefaultType(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract ChoiceCancelType(Int) from Int to Int {
+enum abstract ChoiceCancelType(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract ChocieBackgroundType(Int) from Int to Int {
+enum abstract ChocieBackgroundType(Float) from Float to Float {
  public inline var base = -1;
 }
 
 @:forward
 @:forwardStatics
-enum abstract ChoicePositionType(Int) from Int to Int {
+enum abstract ChoicePositionType(Float) from Float to Float {
  public inline var base = -1;
 }
 
@@ -516,17 +516,17 @@ enum abstract InterpreterWaitModeA(InterpreterWaitMode)
 
 @:forward
 @:forwardStatics
-enum abstract BlendModeA(Int) from Int to Int {
+enum abstract BlendModeA(Float) from Float to Float {
  public inline var base = -1;
 }
 
-typedef Icon = Int;
-typedef SlotType = Int;
-typedef FlagId = Int;
-typedef CollapseType = Int;
-typedef AbilityId = Int;
-typedef ParameterId = Int;
-typedef FadeType = Int;
+typedef Icon = Float;
+typedef SlotType = Float;
+typedef FlagId = Float;
+typedef CollapseType = Float;
+typedef AbilityId = Float;
+typedef ParameterId = Float;
+typedef FadeType = Float;
 typedef InterpreterWaitMode = String;
 
 @:forward

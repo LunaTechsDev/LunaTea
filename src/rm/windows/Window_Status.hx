@@ -14,11 +14,13 @@ extern class Window_Status extends Window_Selectable {
 extern class Window_Status extends Window_StatusBase {
 #end
 private var _actor: Game_Actor;
-private var _stypeId: Int;
+private var _stypeId: Float;
 private var _data: Array<Skill>;
 #if compileMV
-public function new(x: Int, y: Int, width: Int, height: Int);
-public function initialize(x: Int, y: Int, width: Int, height: Int): Void;
+public function new(x: Float, y: Float, width: Float, height: Float);
+
+public function initialize(x: Float, y: Float, width: Float,
+ height: Float): Void;
 
 /**
  * Sets the skill type id of the skill list window.
@@ -26,7 +28,7 @@ public function initialize(x: Int, y: Int, width: Int, height: Int): Void;
  * @param {number} stypeId
  * @memberof Window_SkillList
  */
-public function setStypeId(stypeId: Int): Void;
+public function setStypeId(stypeId: Float): Void;
 
 /**
  * Returns the current skill from the databse.
@@ -62,8 +64,10 @@ public function isEnabled(item: Skill): Bool;
 public function makeItemList(): Void;
 
 public function selectLast(): Void;
-public function costWidth(): Int;
-public function drawSkillCost(skill: Skill, x: Int, y: Int, width: Int): Void;
+public function costWidth(): Float;
+
+public function drawSkillCost(skill: Skill, x: Float, y: Float,
+ width: Float): Void;
 #else
 public function new(rect: Rectangle);
 public function initialize(rect: Rectangle): Void;
@@ -71,9 +75,9 @@ public function initialize(rect: Rectangle): Void;
 /**
  * Returns the Y value for block1.
  * Defaults to 0.
- * @return Int
+ * @return Float
  */
-public function block1Y(): Int;
+public function block1Y(): Float;
 
 /**
  * Draws the basic info and exp info as a block.
@@ -95,9 +99,9 @@ public function drawBlock2(): Void;
  * const max = this.innerHeight - lineHeight * 4;
  * return Math.floor((lineHeight * 1.4).clamp(min, max));
  * ```
- * @return Int
+ * @return Float
  */
-public function block2Y(): Int;
+public function block2Y(): Float;
 
 /**
  * Draws the basic info such as
@@ -106,7 +110,7 @@ public function block2Y(): Int;
  * @param x
  * @param y
  */
-public function drawBasicInfo(x: Int, y: Int): Void;
+public function drawBasicInfo(x: Float, y: Float): Void;
 
 /**
  * Draws the experience info
@@ -114,7 +118,7 @@ public function drawBasicInfo(x: Int, y: Int): Void;
  * @param x
  * @param y
  */
-public function drawExpInfo(x: Int, y: Int): Void;
+public function drawExpInfo(x: Float, y: Float): Void;
 
 /**
  * Returns the exp total value as a string otherwise

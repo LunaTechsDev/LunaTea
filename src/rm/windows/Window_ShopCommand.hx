@@ -12,7 +12,7 @@ package rm.windows;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ShopCommand extends Window_HorzCommand {
- private var _windowWidth: Int;
+ private var _windowWidth: Float;
 
  /**
   * Determines if the shop is purchase only.
@@ -33,5 +33,5 @@ extern class Window_ShopCommand extends Window_HorzCommand {
   * @param {boolean} purchaseOnly
   * @memberof Window_ShopCommand
   */
- public function initialize(width: Int, purchaseOnly: Bool): Void;
+ public function initialize(width: Float, purchaseOnly: Bool): Void;
 }

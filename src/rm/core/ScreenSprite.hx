@@ -10,7 +10,7 @@ extern class ScreenSprite extends pixi.core.sprites.Sprite {
   * @property opacity
   * @type Number
   */
- public var opacity: Int;
+ public var opacity: Float;
 
  /**
   * The sprite which covers the entire game screen.
@@ -42,24 +42,24 @@ extern class ScreenSprite extends pixi.core.sprites.Sprite {
   * @param {Number} g The green value in the range (0, 255)
   * @param {Number} b The blue value in the range (0, 255)
   */
- public function setColor(?r: Int, ?g: Int, ?b: Int): Void;
+ public function setColor(?r: Float, ?g: Float, ?b: Float): Void;
 
  private var _graphics: pixi.core.graphics.Graphics;
 
  /**
   * The red value in range (0, 255)
   */
- private var _red: Int;
+ private var _red: Float;
 
  /**
   * The blue value in range (0, 255)
   */
- private var _green: Int;
+ private var _green: Float;
 
  /**
   * The blue value in range (0, 255)
   */
- private var _blue: Int;
+ private var _blue: Float;
 
  /**
   * The string for color text

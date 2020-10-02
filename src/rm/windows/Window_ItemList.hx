@@ -11,8 +11,9 @@ extern class Window_ItemList extends Window_Selectable {
  private var _category: String;
 
  #if compileMV
- public function new(x: Int, y: Int, width: Int, height: Int);
- public function initialize(x: Int, y: Int, width: Int, height: Int): Void;
+ public function new(x: Float, y: Float, width: Float, height: Float);
+ public function initialize(x: Float, y: Float, width: Float,
+  height: Float): Void;
  #else
  public function new(rect: Rectangle);
  public function initialize(rect: Rectangle): Void;
@@ -36,5 +37,5 @@ extern class Window_ItemList extends Window_Selectable {
 
  public function makeItemList(): Void;
 
- public function numberWidth(): Int;
+ public function numberWidth(): Float;
 }

@@ -21,22 +21,22 @@ typedef RPGMap = {
  /**
   * The map's tile set
   */
- var tilesetId: Int;
+ var tilesetId: Float;
 
  /**
   * The map's width
   */
- var width: Int;
+ var width: Float;
 
  /**
   * The maps height
   */
- var height: Int;
+ var height: Float;
 
  /**
   * The scroll type (0: No Loop, 1:Vertical Loop, 2:Horizontal Loop, 3:Both Loop)
   */
- var scrollType: Int;
+ var scrollType: Float;
 
  /**
   * The truth value indicating whether the battle background
@@ -85,9 +85,9 @@ typedef RPGMap = {
  var encounterList: Array<MapEncounter>;
 
  /**
-  * The average Int of steps between encounters.
+  * The average Float of steps between encounters.
   */
- var encounterStep: Int;
+ var encounterStep: Float;
 
  /**
   * The file name of the parallax background's graphic.
@@ -107,12 +107,12 @@ typedef RPGMap = {
  /**
   * The automatic x-axis scrolling speed for the parallax background.
   */
- var parallaxSx: Int;
+ var parallaxSx: Float;
 
  /**
   * The automatic y-axis scrolling speed for the parallax background.
   */
- var parallaxSy: Int;
+ var parallaxSy: Float;
 
  /**
   * The truth value of the [Show in the Editor] option for the parallax background.
@@ -122,7 +122,7 @@ typedef RPGMap = {
  /**
   * The map data. A 3-dimensional tile ID array (Table).
   */
- var data: Array<Int>;
+ var data: Array<Float>;
 
  /**
   * The array of RPG.Event data.
@@ -142,35 +142,35 @@ typedef AudioFile = {
  /**
   * The pan.
   */
- var pan: Int;
+ var pan: Float;
 
  /**
   * The sound's pitch (50..150). The default value is 100.
   */
- var pitch: Int;
+ var pitch: Float;
 
  /**
   * The sound's volume (0..100). The default values are 100 for BGM and ME and 80 for BGS and SE.
   */
- var volume: Int;
+ var volume: Float;
 }
 
 typedef MapEncounter = {
  /**
   * The enemy Troop ID.
   */
- var troopId: Int;
+ var troopId: Float;
 
  /**
   * Weight/chance  among enemies on the map that you'll
   * meet this enemy.
   */
- var weight: Int;
+ var weight: Float;
 
  /**
   * An array containing Region IDs.
   */
- var regionSet: Array<Int>;
+ var regionSet: Array<Float>;
 }
 
 /**
@@ -185,12 +185,12 @@ typedef MapInfo = {
  /**
   * The parent map ID.
   */
- var parentId: Int;
+ var parentId: Float;
 
  /**
   * The map tree display order, which is used internally.
   */
- var order: Int;
+ var order: Float;
 }
 
 /**
@@ -202,7 +202,7 @@ typedef Event = {
  /**
   * The event ID.
   */
- var id: Int;
+ var id: Float;
 
  /**
   * The event name.
@@ -212,12 +212,12 @@ typedef Event = {
  /**
   * The event's x-coordinate on the map.
   */
- var x: Int;
+ var x: Float;
 
  /**
   * The event's y-coordinate on the map.
   */
- var y: Int;
+ var y: Float;
 
  /**
   * The event pages. RPG.EventPage array.
@@ -242,17 +242,17 @@ typedef EventPage = {
  /**
   * The type of movement (0: fixed, 1: random, 2: approach, 3: custom).
   */
- var moveType: Int;
+ var moveType: Float;
 
  /**
   * The movement speed (1: x8 slower, 2: x4 slower, 3: x2 slower, 4: normal, 5: x2 faster, 6: x4 faster).
   */
- var moveSpeed: Int;
+ var moveSpeed: Float;
 
  /**
   * The movement frequency (1: lowest, 2: lower, 3: normal, 4: higher, 5: highest).
   */
- var moveFrequency: Int;
+ var moveFrequency: Float;
 
  /**
   * The movement route (RPG.MoveRoute). Referenced only when the movement type is set to custom.
@@ -282,12 +282,12 @@ typedef EventPage = {
  /**
   * The priority type (0: below characters, 1: same as characters, 2: above characters).
   */
- var priorityType: Int;
+ var priorityType: Float;
 
  /**
   * The event trigger (0: action button, 1: player touch, 2: event touch, 3: autorun, 4: parallel).
   */
- var trigger: Int;
+ var trigger: Float;
 
  /**
   * A list of event commands. An RPG.EventCommand array.
@@ -332,22 +332,22 @@ typedef EventPageConditions = {
  /**
   * The ID of that switch if the first [Switch] condition is valid.
   */
- var switch1Id: Int;
+ var switch1Id: Float;
 
  /**
   * The ID of that switch if the second [Switch] condition is valid.
   */
- var switch2Id: Int;
+ var switch2Id: Float;
 
  /**
   * The ID of that variable if the [Variable] condition is valid.
   */
- var variableId: Int;
+ var variableId: Float;
 
  /**
   * The standard value of that variable (x and greater) if the [Variable] condition is valid.
   */
- var variableValue: Int;
+ var variableValue: Float;
 
  /**
   * The letter of that self switch ("A".."D") if the [Self Switch] condition is valid.
@@ -372,7 +372,7 @@ typedef EventPageImage = {
  /**
   * The tile ID. If the specified graphic is not a tile, this value is 0.
   */
- var tileId: Int;
+ var tileId: Float;
 
  /**
   * The file name of the character's graphic.
@@ -382,17 +382,17 @@ typedef EventPageImage = {
  /**
   * The index of the character's graphic file (0..7).
   */
- var characterIndex: Int;
+ var characterIndex: Float;
 
  /**
   * The direction in which the character is facing (2: down, 4: left, 6: right, 8: up).
   */
- var direction: Int;
+ var direction: Float;
 
  /**
   * The character's pattern (0..2).
   */
- var pattern: Int;
+ var pattern: Float;
 }
 
 /**
@@ -402,12 +402,12 @@ typedef EventCommand = {
  /**
   * The event code.
   */
- var code: Int;
+ var code: Float;
 
  /**
   * The indent depth. Usually 0. The [Conditional Branch] command, among others, adds 1 with every step deeper.
   */
- var indent: Int;
+ var indent: Float;
 
  /**
   * An array containing the Event command's arguments. The contents vary for each command.
@@ -447,7 +447,7 @@ typedef MoveCommand = {
  /**
   * Move command code.
   */
- var code: Int;
+ var code: Float;
 
  /**
   * An array containing the Move command's arguments. The contents vary for each command.
@@ -470,12 +470,12 @@ typedef Damage = {
   * 5: HP drain
   * 6: MP drain
   */
- var type: Int;
+ var type: Float;
 
  /**
   * The element ID.
   */
- var elementId: Int;
+ var elementId: Float;
 
  /**
   * The formula.
@@ -485,7 +485,7 @@ typedef Damage = {
  /**
   * The degree of variability.
   */
- var variance: Int;
+ var variance: Float;
 
  /**
   * Critical hit (true/false).
@@ -497,17 +497,17 @@ typedef Trait = {
  /**
   * The trait code.
   */
- var code: Int;
+ var code: Float;
 
  /**
   * The ID of the data (such as elements or states) according to the type of the trait.
   */
- var dataId: Int;
+ var dataId: Float;
 
  /**
   * The value set according to the type of the trait.
   */
- var value: Int;
+ var value: Float;
 
  /**
   * The map tree expansion flag, which is used internally.
@@ -517,12 +517,12 @@ typedef Trait = {
  /**
   * The x-axis scroll position, which is used internally.
   */
- var scrollX: Int;
+ var scrollX: Float;
 
  /**
   * The y-axis scroll position, which is used internally.
   */
- var scrollY: Int;
+ var scrollY: Float;
 }
 
 /**
@@ -532,22 +532,22 @@ typedef Effect = {
  /**
   * The use effect code.
   */
- var code: Int;
+ var code: Float;
 
  /**
   * The ID of data (state, parameter, and so on) according to the type of use effect.
   */
- var dataId: Int;
+ var dataId: Float;
 
  /**
   * Value 1 set according to the type of use effect.
   */
- var value1: Int;
+ var value1: Float;
 
  /**
   * Value 2 set according to the type of use effect.
   */
- var value2: Int;
+ var value2: Float;
 }
 
 /**
@@ -561,7 +561,7 @@ typedef BaseItem = {
  /**
   * The item ID.
   */
- var id: Int;
+ var id: Float;
 
  /**
   * The item name.
@@ -571,7 +571,7 @@ typedef BaseItem = {
  /**
   * The icon number.
   */
- var iconIndex: Int;
+ var iconIndex: Float;
 
  /**
   * The description text.
@@ -598,7 +598,7 @@ typedef UsableItem = {
   * 10: All Allies (Dead)
   * 11: The User
   */
- var scope: Int;
+ var scope: Float;
 
  /**
   * When the item/skill may be used.
@@ -608,12 +608,12 @@ typedef UsableItem = {
   * 2: Only from the menu
   * 3: Never
   */
- var occasion: Int;
+ var occasion: Float;
 
  /**
   * The speed correction.
   */
- var speed: Int;
+ var speed: Float;
 
  /**
   * The success rate.
@@ -623,12 +623,12 @@ typedef UsableItem = {
  /**
   * The number of repeats.
   */
- var repeats: Int;
+ var repeats: Float;
 
  /**
   * The number of TP gained.
   */
- var tpGain: Int;
+ var tpGain: Float;
 
  /**
   * The type of hit.
@@ -637,12 +637,12 @@ typedef UsableItem = {
   * 1: Physical attack
   * 2: Magical attack
   */
- var hitType: Int;
+ var hitType: Float;
 
  /**
   * The animation ID.
   */
- var animationId: Int;
+ var animationId: Float;
 
  /**
   * Damage (RPG.Damage).
@@ -664,17 +664,17 @@ typedef Skill = {
  /**
   * Skill type ID.
   */
- var stypeId: Int;
+ var stypeId: Float;
 
  /**
   * Number of MP consumed.
   */
- var mpCost: Int;
+ var mpCost: Float;
 
  /**
   * Number of TP consumed
   */
- var tpCost: Int;
+ var tpCost: Float;
 
  /**
   * The use message.
@@ -689,12 +689,12 @@ typedef Skill = {
  /**
   * Weapon type required.
   */
- var requiredWtypeId1: Int;
+ var requiredWtypeId1: Float;
 
  /**
   * Weapon type required.
   */
- var requiredWtypeId2: Int;
+ var requiredWtypeId2: Float;
 }
 
 /**
@@ -709,12 +709,12 @@ typedef Item = {
   * 1: Regular item
   * 2: Key item
   */
- var itypeId: Int;
+ var itypeId: Float;
 
  /**
   * The item's price.
   */
- var price: Int;
+ var price: Float;
 
  /**
   * The truth value indicating whether the item disappears when used.
@@ -731,7 +731,7 @@ typedef EquipItem = {
  /**
   * The price of the weapon or armor.
   */
- var price: Int;
+ var price: Float;
 
  /**
   * The type of weapon or armor.
@@ -742,7 +742,7 @@ typedef EquipItem = {
   * 3: Body
   * 4: Accessory
   */
- var etypeId: Int;
+ var etypeId: Float;
 
  /**
   * The amount of parameter change. An array of integers using the following IDs as subscripts:
@@ -756,7 +756,7 @@ typedef EquipItem = {
   * 6: Agility
   * 7: Luck
   */
- var params: Array<Int>;
+ var params: Array<Float>;
 
  /**
   * The array of Trait data.
@@ -773,12 +773,12 @@ typedef Weapon = {
  /**
   * The weapon type ID.
   */
- var wtypeId: Int;
+ var wtypeId: Float;
 
  /**
   * The animation ID when using the weapon.
   */
- var animationId: Int;
+ var animationId: Float;
 }
 
 /**
@@ -790,14 +790,14 @@ typedef Armor = {
  /**
   * The armor type ID.
   */
- var atypeId: Int;
+ var atypeId: Float;
 }
 
 typedef Troop = {
  /**
   * The troop ID.
   */
- var id: Int;
+ var id: Float;
 
  /**
   * The troop name.
@@ -819,17 +819,17 @@ typedef TroopMember = {
  /**
   * The enemy ID.
   */
- var enemyId: Int;
+ var enemyId: Float;
 
  /**
   * The troop member's x-coordinate.
   */
- var x: Int;
+ var x: Float;
 
  /**
   * The troop member's y-coordinate.
   */
- var y: Int;
+ var y: Float;
 
  /**
   * The truth value of the [Appear Halfway] option.
@@ -849,7 +849,7 @@ typedef Page = {
  /**
   * Span (0: battle, 1: turn, 2: moment).
   */
- var span: Int;
+ var span: Float;
 
  /**
   * Program contents. An RPG.EventCommand array.
@@ -889,37 +889,37 @@ typedef PageCondition = {
  /**
   * The a and b values specified in the [Turn No.] condition. To be input in the form A + B * X.
   */
- var turnA: Int;
+ var turnA: Float;
 
  /**
   * The a and b values specified in the [Turn No.] condition. To be input in the form A + B * X.
   */
- var turnB: Int;
+ var turnB: Float;
 
  /**
   * The troop member index specified in the [Enemy] condition (0..7).
   */
- var enemyIndex: Int;
+ var enemyIndex: Float;
 
  /**
   * The HP percentage specified in the [Enemy] condition.
   */
- var enemyHp: Int;
+ var enemyHp: Float;
 
  /**
   * The actor ID specified in the [Actor] condition.
   */
- var actorId: Int;
+ var actorId: Float;
 
  /**
   * The HP percentage specified in the [Actor] condition.
   */
- var actorHp: Int;
+ var actorHp: Float;
 
  /**
   * The switch ID specified in the [Switch] condition.
   */
- var switchId: Int;
+ var switchId: Float;
 }
 
 /**
@@ -929,7 +929,7 @@ typedef Animation = {
  /**
   * The animation ID.
   */
- var id: Int;
+ var id: Float;
 
  /**
   * The animation name.
@@ -954,22 +954,22 @@ typedef Animation = {
  /**
   * The adjustment value for the hue of the second animation's graphic (0..360).
   */
- var animation2Hue: Int;
+ var animation2Hue: Float;
 
  /**
   * The base position (0: head, 1: center, 2: feet, 3: screen).
   */
- var position: Int;
+ var position: Float;
 
  /**
   * Number of frames.
   */
- var frameMax: Int;
+ var frameMax: Float;
 
  /**
   * The three-dimensional array containing the frame contents.
   */
- var frames: Array<Array<Array<Int>>>;
+ var frames: Array<Array<Array<Float>>>;
 
  /**
   * Timing for SE and flash effects. An RPG.Animation.Timing array.
@@ -986,7 +986,7 @@ typedef Tileset = {
  /**
   * The ID of the tile set.
   */
- var id: Int;
+ var id: Float;
 
  /**
   * The name of the tile set.
@@ -996,7 +996,7 @@ typedef Tileset = {
  /**
   * The mode of the tile set (0: Field type, 1: Area type, 2: VX compatible type).
   */
- var mode: Int;
+ var mode: Float;
 
  /**
   * The file name of the graphic used as the number index (0-8) tile set.
@@ -1036,7 +1036,7 @@ typedef Tileset = {
   * This manual does not discuss bit operations, but they are similar to those in C.
   * We recommend an Internet search using keywords such as "hexadecimal bit operations" when necessary.
   */
- var flags: Array<Int>;
+ var flags: Array<Float>;
 }
 
 /**
@@ -1046,7 +1046,7 @@ typedef AnimationTiming = {
  /**
   * The frame number. 1 less than the number displayed in RPG Maker.
   */
- var frame: Int;
+ var frame: Float;
 
  /**
   * The sound effect or SE (RPG.AudioFile).
@@ -1056,17 +1056,17 @@ typedef AnimationTiming = {
  /**
   * The flash area (0: none, 1: target, 2: screen; 3: hide target).
   */
- var flashScope: Int;
+ var flashScope: Float;
 
  /**
   * The color of the flash (Color).
   */
- var flashColor: Array<Int>;
+ var flashColor: Array<Float>;
 
  /**
   * The duration of the flash.
   */
- var flashDuration: Int;
+ var flashDuration: Float;
 }
 
 /**
@@ -1076,7 +1076,7 @@ typedef CommonEvent = {
  /**
   * The event ID.
   */
- var id: Int;
+ var id: Float;
 
  /**
   * The event name.
@@ -1086,12 +1086,12 @@ typedef CommonEvent = {
  /**
   * The event trigger (0: none, 1: autorun; 2: parallel).
   */
- var trigger: Int;
+ var trigger: Float;
 
  /**
   * The condition switch ID.
   */
- var switchId: Int;
+ var switchId: Float;
 
  /**
   * A list of event commands. An RPG.EventCommand array.
@@ -1101,14 +1101,14 @@ typedef CommonEvent = {
 
 #if !compileMV
 typedef SystemAdvanced = {
- var gameId: Int;
- var screenWidth: Int;
- var screenHeight: Int;
- var uiAreaWidth: Int;
- var uiAreaHeight: Int;
+ var gameId: Float;
+ var screenWidth: Float;
+ var screenHeight: Float;
+ var uiAreaWidth: Float;
+ var uiAreaHeight: Float;
  var numberFontFilename: String;
  var fallbackFonts: String;
- var fontSize: Int;
+ var fontSize: Float;
  var mainFontFilename: String;
 }
 #end
@@ -1126,7 +1126,7 @@ typedef System = {
  /**
   * A random number used for update checks. The number changes every time data is saved in RPG Maker.
   */
- var versionId: Int;
+ var versionId: Float;
 
  /**
   * The locale string such as "ja_JP" and "en_US".
@@ -1136,7 +1136,7 @@ typedef System = {
  /**
   * The initial party. An array of actor IDs.
   */
- var partyMembers: Array<Int>;
+ var partyMembers: Array<Float>;
 
  /**
   * The unit of currency.
@@ -1146,7 +1146,7 @@ typedef System = {
  /**
   * The window color.
   */
- var windowTone: Array<Int>;
+ var windowTone: Array<Float>;
 
  /**
   * The array of System.AttackMotion data.
@@ -1286,17 +1286,17 @@ typedef System = {
  /**
   * The map ID of the player's initial position.
   */
- var startMapId: Int;
+ var startMapId: Float;
 
  /**
   * The map's x-coordinate of the player's initial position.
   */
- var startX: Int;
+ var startX: Float;
 
  /**
   * The map's y-coordinate of the player's initial position.
   */
- var startY: Int;
+ var startY: Float;
 
  /**
   * Terms (RPG.System.Terms).
@@ -1311,7 +1311,7 @@ typedef System = {
  /**
   * The enemy troop ID for battle tests.
   */
- var testTroopId: Int;
+ var testTroopId: Float;
 
  /**
   * The file name of the battle background (floor) graphic for use in editing enemy troops and battle tests.
@@ -1331,12 +1331,12 @@ typedef System = {
  /**
   * The adjustment value for the battler graphic's hue (0..360) for use in editing animations.
   */
- var battlerHue: Int;
+ var battlerHue: Float;
 
  /**
   * The ID of the map currently being edited. For internal use.
   */
- var editMapId: Int;
+ var editMapId: Float;
 }
 
 /**
@@ -1351,7 +1351,7 @@ typedef SystemVehicle = {
  /**
   * The index of the vehicle's walking graphic (0..7).
   */
- var characterIndex: Int;
+ var characterIndex: Float;
 
  /**
   * The vehicle's BGM (RPG.AudioFile).
@@ -1361,17 +1361,17 @@ typedef SystemVehicle = {
  /**
   * The map ID of the vehicle's initial position.
   */
- var startMapId: Int;
+ var startMapId: Float;
 
  /**
   * The map's x-coordinate of the vehicle's initial position.
   */
- var startX: Int;
+ var startX: Float;
 
  /**
   * The map's y-coordinate of the vehicle's initial position.
   */
- var startY: Int;
+ var startY: Float;
 }
 
 typedef SystemTerms = {
@@ -1450,12 +1450,12 @@ typedef SystemTestBattler = {
  /**
   * The actor ID.
   */
- var actorId: Int;
+ var actorId: Float;
 
  /**
   * The actor's level.
   */
- var level: Int;
+ var level: Float;
 
  /**
   * The actor's equipment. An array of weapon IDs or armor IDs with the following subscripts:
@@ -1466,19 +1466,19 @@ typedef SystemTestBattler = {
   * 3: Body
   * 4: Accessory
   */
- var equips: Array<Int>;
+ var equips: Array<Float>;
 }
 
 typedef SystemAttackMotion = {
  /**
   * The type of the motion.
   */
- var type: Int;
+ var type: Float;
 
  /**
   * The ID of the weapon image.
   */
- var weaponImageId: Int;
+ var weaponImageId: Float;
 }
 
 typedef Enemy = {
@@ -1492,7 +1492,7 @@ typedef Enemy = {
  /**
   * The adjustment value for the battler graphic's hue (0..360).
   */
- var battlerHue: Int;
+ var battlerHue: Float;
 
  /**
   * The name of the enemy in the database.
@@ -1508,7 +1508,7 @@ typedef Enemy = {
   * @type {number}
   * @memberof Enemy
   */
- var id: Int;
+ var id: Float;
 
  /**
   * Parameters. An array of integers using the following IDs as subscripts:
@@ -1522,17 +1522,17 @@ typedef Enemy = {
   * 6: Agility
   * 7: Luck
   */
- var params: Array<Int>;
+ var params: Array<Float>;
 
  /**
   * The enemy's experience.
   */
- var exp: Int;
+ var exp: Float;
 
  /**
   * The enemy's gold.
   */
- var gold: Int;
+ var gold: Float;
 
  /**
   * The items the enemy drops. An RPG.Enemy.DropItem array.
@@ -1554,17 +1554,17 @@ typedef EnemyDropItem = {
   * 2: Weapon
   * 3: Armor
   */
- var kind: Int;
+ var kind: Float;
 
  /**
   * The ID of the data depending on the type of dropped item (item, weapon, or armor).
   */
- var dataId: Int;
+ var dataId: Float;
 
  /**
   * N of the probability that the item will be dropped, 1/N.
   */
- var denominator: Int;
+ var denominator: Float;
 }
 
 /**
@@ -1574,7 +1574,7 @@ typedef EnemyAction = {
  /**
   * The ID of skills to be employed as actions.
   */
- var skillId: Int;
+ var skillId: Float;
 
  /**
   * The type of condition.
@@ -1587,22 +1587,22 @@ typedef EnemyAction = {
   * 5: Party Level
   * 6: Switch
   */
- var conditionType: Int;
+ var conditionType: Float;
 
  /**
   * The first parameter of the condition.
   */
- var conditionParam1: Int;
+ var conditionParam1: Float;
 
  /**
   * The second parameter of the condition.
   */
- var conditionParam2: Int;
+ var conditionParam2: Float;
 
  /**
   * The action's priority rating (1..10).
   */
- var rating: Int;
+ var rating: Float;
 }
 
 /**
@@ -1614,7 +1614,7 @@ typedef State = {
  /**
   * The ID.
   */
- var id: Int;
+ var id: Float;
 
  /**
   * The name.
@@ -1630,12 +1630,12 @@ typedef State = {
   * 3: Attack ally
   * 4: Cannot act
   */
- var restriction: Int;
+ var restriction: Float;
 
  /**
   * The state priority (0..100).
   */
- var priority: Int;
+ var priority: Float;
 
  /**
   * Removes state at end of battle (true/false).
@@ -1654,17 +1654,17 @@ typedef State = {
   * 1: At end of action
   * 2: At end of turn
   */
- var autoRemovalTiming: Int;
+ var autoRemovalTiming: Float;
 
  /**
   * The minimum turns of the duration.
   */
- var minTurns: Int;
+ var minTurns: Float;
 
  /**
   * The maximum turns of the duration.
   */
- var maxTurns: Int;
+ var maxTurns: Float;
 
  /**
   * Removes state by damage (true/false).
@@ -1684,12 +1684,12 @@ typedef State = {
  /**
   * Number of steps until state is removed.
   */
- var stepToRemove: Int;
+ var stepToRemove: Float;
 
  /**
   * The icon number.
   */
- var iconIndex: Int;
+ var iconIndex: Float;
 
  /**
   * The message when an actor fell in the state.
@@ -1709,17 +1709,17 @@ typedef State = {
  /**
   * The message when the state is removed.
   */
- var message4: Int;
+ var message4: Float;
 
  /**
   * The side-view motion.
   */
- var motion: Int;
+ var motion: Float;
 
  /**
   * The side-view overlay.
   */
- var overlay: Int;
+ var overlay: Float;
 
  /**
   * The array of Trait data.
@@ -1754,17 +1754,17 @@ typedef Actor = {
  /**
   * The actor's class ID.
   */
- var classId: Int;
+ var classId: Float;
 
  /**
   * The actor's initial level.
   */
- var initialLevel: Int;
+ var initialLevel: Float;
 
  /**
   * The actor's max level
   */
- var maxLevel: Int;
+ var maxLevel: Float;
 
  /**
   * The file name of the actor's walking graphic.
@@ -1774,7 +1774,7 @@ typedef Actor = {
  /**
   * The index (0..7) of the actor's walking graphic.
   */
- var characterIndex: Int;
+ var characterIndex: Float;
 
  /**
   * The file name of the actor's face graphic.
@@ -1784,7 +1784,7 @@ typedef Actor = {
  /**
   * The index (0..7) of the actor's face graphic.
   */
- var faceIndex: Int;
+ var faceIndex: Float;
 
  /**
   * The file name of the actor's battler graphic.
@@ -1794,7 +1794,7 @@ typedef Actor = {
  /**
   * The actor's initial equipment. An array of weapon IDs or armor IDs with the following subscripts:
   */
- var equips: Array<Int>;
+ var equips: Array<Float>;
 
  /**
   * The profile.
@@ -1816,7 +1816,7 @@ typedef RPGClass = {
  /**
   * The ID.
   */
- var id: Int;
+ var id: Float;
 
  /**
   * The name.
@@ -1831,7 +1831,7 @@ typedef RPGClass = {
   * 2: Acceleration A
   * 3: Acceleration B
   */
- var expParams: Array<Int>;
+ var expParams: Array<Float>;
 
  /**
   * The parameter development curve. A 2-dimensional array containing ordinary parameters according to level (Table).
@@ -1847,7 +1847,7 @@ typedef RPGClass = {
   * 6: Agility
   * 7: Luck
   */
- var params: Array<Array<Int>>;
+ var params: Array<Array<Float>>;
 
  /**
   * The skills to learn. An array of RPG.Class.Learning.
@@ -1869,10 +1869,10 @@ typedef ClassLearning = {
  /**
   * The data class for a class's [Skills to Learn].
   */
- var level: Int;
+ var level: Float;
 
  /**
   * The ID of the skill to learn.
   */
- var skillId: Int;
+ var skillId: Float;
 }

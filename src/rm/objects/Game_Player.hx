@@ -26,11 +26,11 @@ extern class Game_Player extends Game_Character {
  private var _needsMapReload: Bool;
 
  private var _transferring: Bool;
- private var _newMapId: Int;
+ private var _newMapId: Float;
 
- private var _newX: Int;
+ private var _newX: Float;
 
- private var _newY: Int;
+ private var _newY: Float;
 
  private var _newDirection: Direction;
 
@@ -38,7 +38,7 @@ extern class Game_Player extends Game_Character {
 
  private var _followers: Game_Followers;
 
- private var _encounterCount: Int;
+ private var _encounterCount: Float;
 
  /**
   * Clears the transfer information for the player.
@@ -73,15 +73,15 @@ extern class Game_Player extends Game_Character {
  /**
   * Reserves a transfer of the player to the specified map, at the given
   * x and y coordinates, facing the given direction (d). Using a specific fade.
-  * @param {Int} mapId
-  * @param {Int} x
-  * @param {Int} y
-  * @param {Int} [d]
-  * @param {Int} [fadeType]
+  * @param {Float} mapId
+  * @param {Float} x
+  * @param {Float} y
+  * @param {Float} [d]
+  * @param {Float} [fadeType]
   * @memberof Game_Player
   */
- public function reserveTransfer(mapId: Int, x: Int, y: Int, ?d: Int,
-  ?fadeType: Int): Void;
+ public function reserveTransfer(mapId: Float, x: Float, y: Float, ?d: Float,
+  ?fadeType: Float): Void;
 
  public function requestMapReload(): Void;
 
@@ -90,12 +90,12 @@ extern class Game_Player extends Game_Character {
  /**
   * Returns the new map id.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Player
   */
- public function newMapId(): Int;
+ public function newMapId(): Float;
 
- public function fadeType(): Int;
+ public function fadeType(): Float;
 
  /**
   * Performs a transfer of the player to a different area or map.
@@ -104,7 +104,7 @@ extern class Game_Player extends Game_Character {
   */
  public function performTransfer(): Void;
 
- public function isMapPassable(x: Int, y: Int, d: Int): Bool;
+ public function isMapPassable(x: Float, y: Float, d: Float): Bool;
 
  /**
   * Returns the current vehicles the player is riding in.
@@ -164,27 +164,27 @@ extern class Game_Player extends Game_Character {
 
  public function isDebugThrough(): Bool;
 
- public function isCollided(x: Int, y: Int): Bool;
+ public function isCollided(x: Float, y: Float): Bool;
 
  /**
   * Returns the player's center x coordinate.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Player
   */
- public function centerX(): Int;
+ public function centerX(): Float;
 
  /**
   * Returns the player's center y coordinate.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Player
   */
- public function centerY(): Int;
+ public function centerY(): Float;
 
- public function center(x: Int, y: Int): Void;
+ public function center(x: Float, y: Float): Void;
 
- public function locate(x: Int, y: Int): Void;
+ public function locate(x: Float, y: Float): Void;
 
  public function increaseSteps(): Void;
 
@@ -198,10 +198,10 @@ extern class Game_Player extends Game_Character {
  /**
   * Creates the encounter troop id and returns it.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Player
   */
- public function makeEncounterTroopId(): Int;
+ public function makeEncounterTroopId(): Float;
 
  public function meetsEncounterConditions(encounter: MapEncounter): Bool;
 
@@ -216,13 +216,13 @@ extern class Game_Player extends Game_Character {
  /**
   * Has the player start a map event at the given x and y coordinates.
   * Also passing the triggers and whether the event start is normal.
-  * @param {Int} x
-  * @param {Int} y
-  * @param {Array<Int>} triggers
+  * @param {Float} x
+  * @param {Float} y
+  * @param {Array<Float>} triggers
   * @param {Bool} normal
   * @memberof Game_Player
   */
- public function startMapEvent(x: Int, y: Int, triggers: Array<Int>,
+ public function startMapEvent(x: Float, y: Float, triggers: Array<Float>,
   normal: Bool): Void;
 
  public function moveByInput(): Void;
@@ -236,14 +236,14 @@ extern class Game_Player extends Game_Character {
  public function canMove(): Bool;
 
  /**
-  * Gets the input direction of the player as a Int.
+  * Gets the input direction of the player as a Float.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Player
   */
- public function getInputDirection(): Int;
+ public function getInputDirection(): Float;
 
- public function executeMove(direction: Int): Void;
+ public function executeMove(direction: Float): Void;
 
  public function update(?sceneActive: Bool): Void;
 
@@ -262,7 +262,8 @@ extern class Game_Player extends Game_Character {
   */
  public function isDashButtonPressed(): Bool;
 
- public function updateScroll(lastScrolledX: Int, lastScrolledY: Int): Void;
+ public function updateScroll(lastScrolledX: Float,
+  lastScrolledY: Float): Void;
 
  /**
   * Updates the vehicle.
@@ -299,11 +300,11 @@ extern class Game_Player extends Game_Character {
   */
  public function triggerTouchAction(): Bool;
 
- public function triggerTouchActionD1(x1: Int, y1: Int): Bool;
+ public function triggerTouchActionD1(x1: Float, y1: Float): Bool;
 
- public function triggerTouchActionD2(x2: Int, y2: Int): Bool;
+ public function triggerTouchActionD2(x2: Float, y2: Float): Bool;
 
- public function triggerTouchActionD3(x2: Int, y2: Int): Bool;
+ public function triggerTouchActionD3(x2: Float, y2: Float): Bool;
 
  /**
   * Updates the player encounter count.
@@ -323,14 +324,14 @@ extern class Game_Player extends Game_Character {
  /**
   * Returns the encounter progress value of the player.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Player
   */
- public function encounterProgressValue(): Int;
+ public function encounterProgressValue(): Float;
 
- public function checkEventTriggerHere(triggers: Array<Int>): Void;
+ public function checkEventTriggerHere(triggers: Array<Float>): Void;
 
- public function checkEventTriggerThere(triggers: Array<Int>): Void;
+ public function checkEventTriggerThere(triggers: Array<Float>): Void;
 
  /**
   * Returns true if the player can start local events.
@@ -382,29 +383,29 @@ extern class Game_Player extends Game_Character {
  /**
   * Moves the player straight, given a direction.
   *
-  * @param {Int} d
+  * @param {Float} d
   * @memberof Game_Player
   */
- public function moveStraight(d: Int): Void;
+ public function moveStraight(d: Float): Void;
 
  /**
   * Moves the player diagonally, given a horizontal
   * and vertical direction. The numpad represents the directions.
-  * @param {Int} horz
-  * @param {Int} vert
+  * @param {Float} horz
+  * @param {Float} vert
   * @memberof Game_Player
   */
- public function moveDiagonally(horz: Int, vert: Int): Void;
+ public function moveDiagonally(horz: Float, vert: Float): Void;
 
  /**
   * Has the player jump in the given direction at the specified
   * x and y coordinate. This x and y will be added to the player's current
   * position.
-  * @param {Int} xPlus
-  * @param {Int} yPlus
+  * @param {Float} xPlus
+  * @param {Float} yPlus
   * @memberof Game_Player
   */
- public function jump(xPlus: Int, yPlus: Int): Void;
+ public function jump(xPlus: Float, yPlus: Float): Void;
 
  /**
   * Shows the player followers.

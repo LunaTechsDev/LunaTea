@@ -15,7 +15,8 @@ abstract WindowCommand(Window_Command) from Window_Command to Window_Command {
   * @param width
   * @param height
   */
- public inline function new(x: Int, y: Int, ?width: Int, ?height: Int) {
+ public inline function new(x: Float, y: Float, ?width: Float,
+   ?height: Float) {
   #if compileMV
   this = new Window_Command(x, y);
   #else

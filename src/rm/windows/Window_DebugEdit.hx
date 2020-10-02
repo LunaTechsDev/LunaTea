@@ -13,15 +13,15 @@ package rm.windows;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_DebugEdit extends Window_Selectable {
  private var _mode: String;
- private var _topId: Int;
+ private var _topId: Float;
 
- public function new(x: Int, y: Int, width: Int);
+ public function new(x: Float, y: Float, width: Float);
 
- public function itemName(dataId: Int): String;
+ public function itemName(dataId: Float): String;
  public function itemStatus(dataId: String): String;
  public function setMode(mode: String): Void;
- public function setTopId(id: Int): Void;
- public function currentId(): Int;
+ public function setTopId(id: Float): Void;
+ public function currentId(): Float;
  public function updateSwitch(): Void;
  public function updateVariable(): Void;
 }

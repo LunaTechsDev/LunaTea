@@ -27,7 +27,7 @@ extern class Graphics {
   * @property frameCount
   * @type Number
   */
- public static var frameCount: Int;
+ public static var frameCount: Float;
 
  /**
   * The alias of PIXI.blendModes.NORMAL.
@@ -37,7 +37,7 @@ extern class Graphics {
   * @type Number
   * @final
   */
- public static var BLEND_NORMAL: Int;
+ public static var BLEND_NORMAL: Float;
 
  /**
   * The alias of PIXI.blendModes.ADD.
@@ -47,7 +47,7 @@ extern class Graphics {
   * @type Number
   * @final
   */
- public static var BLEND_ADD: Int;
+ public static var BLEND_ADD: Float;
 
  /**
   * The alias of PIXI.blendModes.MULTIPLY.
@@ -57,7 +57,7 @@ extern class Graphics {
   * @type Number
   * @final
   */
- public static var BLEND_MULTIPLY: Int;
+ public static var BLEND_MULTIPLY: Float;
 
  /**
   * The alias of PIXI.blendModes.SCREEN.
@@ -67,7 +67,7 @@ extern class Graphics {
   * @type Number
   * @final
   */
- public static var BLEND_SCREEN: Int;
+ public static var BLEND_SCREEN: Float;
 
  /**
   * The width of the game screen.
@@ -76,7 +76,7 @@ extern class Graphics {
   * @property width
   * @type Number
   */
- public static var width: Int;
+ public static var width: Float;
 
  /**
   * The height of the game screen.
@@ -85,7 +85,7 @@ extern class Graphics {
   * @property height
   * @type Number
   */
- public static var height: Int;
+ public static var height: Float;
 
  /**
   * The width of the window display area.
@@ -94,7 +94,7 @@ extern class Graphics {
   * @property boxWidth
   * @type Number
   */
- public static var boxWidth: Int;
+ public static var boxWidth: Float;
 
  /**
   * The height of the window display area.
@@ -103,7 +103,7 @@ extern class Graphics {
   * @property boxHeight
   * @type Number
   */
- public static var boxHeight: Int;
+ public static var boxHeight: Float;
 
  /**
   * The zoom scale of the game screen.
@@ -124,7 +124,7 @@ extern class Graphics {
   * @param {String} type The type of the renderer.
   *                 'canvas', 'webgl', or 'auto'.
   */
- public static function initialize(?width: Int, ?height: Int,
+ public static function initialize(?width: Float, ?height: Float,
   ?type: String): Void;
 
  /**
@@ -304,7 +304,7 @@ extern class Graphics {
   * @param {Number} x The x coordinate on the page to be converted
   * @return {Number} The x coordinate on the canvas area
   */
- public static function pageToCanvasX(x: Int): Int;
+ public static function pageToCanvasX(x: Float): Float;
 
  /**
   * Converts a y coordinate on the page to the corresponding
@@ -315,7 +315,7 @@ extern class Graphics {
   * @param {Number} y The y coordinate on the page to be converted
   * @return {Number} The y coordinate on the canvas area
   */
- public static function pageToCanvasY(y: Int): Int;
+ public static function pageToCanvasY(y: Float): Float;
 
  /**
   * Checks whether the specified point is inside the game canvas area.
@@ -326,18 +326,18 @@ extern class Graphics {
   * @param {Number} y The y coordinate on the canvas area
   * @return {Boolean} True if the specified point is inside the game canvas area
   */
- public static function isInsideCanvas(x: Int, y: Int): Bool;
+ public static function isInsideCanvas(x: Float, y: Float): Bool;
 
  /**
   * Calls pixi.js garbage collector
   */
  public static function callGC(): Void;
 
- private static var _width: Int;
- private static var _height: Int;
+ private static var _width: Float;
+ private static var _height: Float;
  private static var _rendererType: String;
- private static var _boxWidth: Int;
- private static var _boxHeight: Int;
+ private static var _boxWidth: Float;
+ private static var _boxHeight: Float;
  private static var _scale: Float;
  private static var _realScale: Float;
  private static var _errorPrinter: Bool;
@@ -349,11 +349,11 @@ extern class Graphics {
  private static var _renderer: AbstractRenderer; // TODO: Might need to change
  private static var _fpsMeter: FPSMeter; // TODO: Add FPSMeter
  private static var _modeBox: DivElement;
- private static var _skipCount: Int;
- private static var _maxSkip: Int;
+ private static var _skipCount: Float;
+ private static var _maxSkip: Float;
  private static var _rendered: Bool;
  private static var _loadingImage: ImageElement;
- private static var _loadingCount: Int;
+ private static var _loadingCount: Float;
  private static var _fpsMeterToggled: Bool;
  private static var _stretchEnabled: Bool;
  private static var _canUseDifferenceBlend: Bool;

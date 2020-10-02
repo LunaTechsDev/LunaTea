@@ -18,7 +18,7 @@ extern class Game_Message {
 
  private var _faceName: String;
 
- private var _faceIndex: Int;
+ private var _faceIndex: Float;
 
  private var _background: MessageBackgroundType;
 
@@ -32,21 +32,21 @@ extern class Game_Message {
 
  private var _choicePostionType: ChoicePositionType;
 
- private var _numInputVariableId: Int;
+ private var _numInputVariableId: Float;
 
- private var _numInputMaxDigits: Int;
+ private var _numInputMaxDigits: Float;
 
- private var _itemChoiceVariableId: Int;
+ private var _itemChoiceVariableId: Float;
 
- private var _itemChoiceItypeId: Int;
+ private var _itemChoiceItypeId: Float;
 
  private var _scrollMode: Bool;
 
- private var _scrollSpeed: Int;
+ private var _scrollSpeed: Float;
 
  private var _scrollNoFast: Bool;
 
- private var _choiceCallback: (n: Int) -> Void;
+ private var _choiceCallback: (n: Float) -> Void;
 
  public function new(): Void;
  public function initialize(): Void;
@@ -67,7 +67,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public function faceIndex(): Int;
+ public function faceIndex(): Float;
 
  /**
   * Returns the background associated with the message;
@@ -75,7 +75,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public function background(): Int;
+ public function background(): Float;
 
  /**
   * Returns the current position type of the message window.
@@ -83,10 +83,10 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public function positionType(): Int;
+ public function positionType(): Float;
 
- public function choiceDefaultType(): Int;
- public function choiceCancelType(): Int;
+ public function choiceDefaultType(): Float;
+ public function choiceCancelType(): Float;
 
  /**
   * Returns the background type of the choice window.
@@ -94,7 +94,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public function choiceBackground(): Int;
+ public function choiceBackground(): Float;
 
  /**
   * Returns the position of the choice window.
@@ -102,7 +102,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public function choicePositionType(): Int;
+ public function choicePositionType(): Float;
 
  /**
   * Returns the number input variable id.
@@ -110,7 +110,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public function numInputVariableId(): Int;
+ public function numInputVariableId(): Float;
 
  /**
   * Returns the number input maximum digits.
@@ -118,7 +118,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public function numInputMaxDigits(): Int;
+ public function numInputMaxDigits(): Float;
 
  /**
   * Returns the item choice variable id.
@@ -126,7 +126,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public function itemChoiceVariableId(): Int;
+ public function itemChoiceVariableId(): Float;
 
  /**
   * Returns the item choice item type id.
@@ -134,7 +134,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public function itemChoiceItypeId(): Int;
+ public function itemChoiceItypeId(): Float;
 
  /**
   * Returns true if the scroll mode is set to true.
@@ -150,7 +150,7 @@ extern class Game_Message {
   * @returns {number}
   * @memberof Game_Message
   */
- public function scrollSpeed(): Int;
+ public function scrollSpeed(): Float;
 
  /**
   * Returns true if the scroll is set to not being fast.
@@ -168,7 +168,7 @@ extern class Game_Message {
   */
  public function add(text: String): Void;
 
- public function setFaceImage(faceName: String, faceIndex: Int): Void;
+ public function setFaceImage(faceName: String, faceIndex: Float): Void;
 
  /**
   * Sets the background of the message window;
@@ -177,7 +177,7 @@ extern class Game_Message {
   * @param {number} background
   * @memberof Game_Message
   */
- public function setBackground(background: Int): Void;
+ public function setBackground(background: Float): Void;
 
  /**
   * Sets the position of the message window;
@@ -185,7 +185,7 @@ extern class Game_Message {
   * @param {number} positionType
   * @memberof Game_Message
   */
- public function setPositionType(positionType: Int): Void;
+ public function setPositionType(positionType: Float): Void;
 
  /**
   * Sets the choices within the choice window;
@@ -195,10 +195,10 @@ extern class Game_Message {
   * @param {number} cancelType
   * @memberof Game_Message
   */
- public function setChoices(choices: Array<String>, defaultType: Int,
-  cancelType: Int): Void;
+ public function setChoices(choices: Array<String>, defaultType: Float,
+  cancelType: Float): Void;
 
- public function setChoiceBackground(background: Int): Void;
+ public function setChoiceBackground(background: Float): Void;
 
  /**
   * Sets the position of the choice window associated with the
@@ -206,7 +206,7 @@ extern class Game_Message {
   * @param {number} positionType
   * @memberof Game_Message
   */
- public function setChoicePositionType(positionType: Int): Void;
+ public function setChoicePositionType(positionType: Float): Void;
 
  /**
   * Sets the number input and associates it with a variable id;
@@ -215,7 +215,7 @@ extern class Game_Message {
   * @param {number} maxDigits
   * @memberof Game_Message
   */
- public function setNumberInput(variableId: Int, maxDigits: Int): Void;
+ public function setNumberInput(variableId: Float, maxDigits: Float): Void;
 
  /**
   * Sets the choice and associates it with a variable id;
@@ -224,7 +224,7 @@ extern class Game_Message {
   * @param {number} itemType
   * @memberof Game_Message
   */
- public function setItemChoice(variableId: Int, itemType: Int): Void;
+ public function setItemChoice(variableId: Float, itemType: Float): Void;
 
  /**
   * Sets the scroll speed of the message window;
@@ -233,7 +233,7 @@ extern class Game_Message {
   * @param {boolean} noFast
   * @memberof Game_Message
   */
- public function setScroll(speed: Int, noFast: Bool): Void;
+ public function setScroll(speed: Float, noFast: Bool): Void;
 
  /**
   * Sets a callback to be associated with a specific choice;
@@ -242,9 +242,9 @@ extern class Game_Message {
   * @param {((n: number) => Void)} callback
   * @memberof Game_Message
   */
- public function setChoiceCallback(callback: ((n: Int) -> Void)): Void;
+ public function setChoiceCallback(callback: ((n: Float) -> Void)): Void;
 
- public function onChoice(n: Int): Void;
+ public function onChoice(n: Float): Void;
 
  /**
   * Returns true if the game message object has text.

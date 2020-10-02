@@ -33,7 +33,7 @@ extern class BattleManager {
 
  private var _surprise: Bool;
 
- private var _actorIndex: Int;
+ private var _actorIndex: Float;
 
  private var _actionForcedBattler: Game_Battler;
 
@@ -61,7 +61,7 @@ extern class BattleManager {
 
  private var _rewards: BattleRewards;
 
- public static function setup(troopId: Int, canEscape: Bool,
+ public static function setup(troopId: Float, canEscape: Bool,
   canLose: Bool): Void;
 
  public static function initMembers(): Void;
@@ -123,7 +123,7 @@ extern class BattleManager {
 
  public static function clearActor(): Void;
 
- public static function changeActor(newActorIndex: Int,
+ public static function changeActor(newActorIndex: Float,
   lastActorActionState: String): Void;
 
  public static function startBattle(): Void;
