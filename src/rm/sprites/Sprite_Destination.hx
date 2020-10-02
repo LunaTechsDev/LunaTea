@@ -13,7 +13,7 @@ import rm.core.Sprite;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Destination extends Sprite {
- private var _frameCount: Int;
+ private var _frameCount: Float;
 
  /**
   * Creates the destination bitmap of the destination sprite.

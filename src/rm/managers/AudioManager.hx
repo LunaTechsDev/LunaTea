@@ -12,13 +12,13 @@ import rm.types.RM;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class AudioManager {
- private static var _bgmVolume: Int;
+ private static var _bgmVolume: Float;
 
- private static var _bgsVolume: Int;
+ private static var _bgsVolume: Float;
 
- private static var _meVolume: Int;
+ private static var _meVolume: Float;
 
- private static var _seVolume: Int;
+ private static var _seVolume: Float;
 
  private static var _currentBgm: AudioParameters;
 
@@ -34,14 +34,14 @@ extern class AudioManager {
 
  private static var _staticBuffers: Array<HTML5Audio>;
 
- private static var _replayFadeTime: Int;
+ private static var _replayFadeTime: Float;
  private static var _path: String;
  private static var _blobUrl: String;
 
- public static var bgmVolume: Int;
- public static var bgsVolume: Int;
- public static var meVolume: Int;
- public static var seVolume: Int;
+ public static var bgmVolume: Float;
+ public static var bgsVolume: Float;
+ public static var meVolume: Float;
+ public static var seVolume: Float;
 
  public static function playBgm(bgm: AudioParameters, ?pos: Float): Void;
  public static function replayBgm(bgm: AudioParameters): Void;
@@ -50,8 +50,8 @@ extern class AudioManager {
  public static function pdateCurrentBgm(bgm: AudioParameters,
   pos: Float): Void;
  public static function stopBgm(): Void;
- public static function fadeOutBgm(duration: Int): Void;
- public static function fadeInBgm(duration: Int): Void;
+ public static function fadeOutBgm(duration: Float): Void;
+ public static function fadeInBgm(duration: Float): Void;
 
  public static function playBgs(bgs: AudioParameters, ?pos: Float): Void;
  public static function replayBgs(bgs: AudioParameters): Void;
@@ -60,11 +60,11 @@ extern class AudioManager {
  public static function updateCurrentBgs(bgs: AudioParameters,
   pos: Float): Void;
  public static function stopBgs(): Void;
- public static function fadeOutBgs(duration: Int): Void;
- public static function fadeInBgs(duration: Int): Void;
+ public static function fadeOutBgs(duration: Float): Void;
+ public static function fadeInBgs(duration: Float): Void;
  public static function playMe(me: AudioParameters): Void;
  public static function updateMeParameters(me: AudioParameters): Void;
- public static function fadeOutMe(duration: Int): Void;
+ public static function fadeOutMe(duration: Float): Void;
  public static function stopMe(): Void;
 
  public static function playSe(se: AudioParameters): Void;
@@ -80,7 +80,7 @@ extern class AudioManager {
  public static function makeEmptyAudioObject(): AudioParameters;
  public static function createBuffer(): HTML5Audio;
  public static function updateBufferParameters(buffer: AudioParameters,
-  configVolume: Int, audio: AudioParameters): Void;
+  configVolume: Float, audio: AudioParameters): Void;
  public static function audioFileExt(): String;
  public static function shouldUseHtml5Audio(): String;
  public static function checkErrors(): Void;

@@ -15,13 +15,13 @@ import rm.types.LunaTea.MotionType;
 extern class Game_Battler extends Game_BattlerBase {
  private var _actions: Array<Game_Action>;
 
- private var _speed: Int;
+ private var _speed: Float;
 
  private var _result: Game_ActionResult;
 
  private var _actionState: String;
 
- private var _lastTargetIndex: Int;
+ private var _lastTargetIndex: Float;
 
  private var _animations: Array<BattlerAnimation>;
 
@@ -31,7 +31,7 @@ extern class Game_Battler extends Game_BattlerBase {
 
  private var _motionType: MotionType;
 
- private var _weaponImageId: Int;
+ private var _weaponImageId: Float;
 
  private var _motionRefresh: Bool;
 
@@ -59,7 +59,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {number}
   * @memberof Game_Battler
   */
- public function index(): Int;
+ public function index(): Float;
 
  /**
   * Returns the unit of the battler; this is either the
@@ -189,7 +189,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @memberof Game_Battler
   */
  public function startAnimation(animationId: AnimationId, mirror: Bool,
-  delay: Int): Void;
+  delay: Float): Void;
 
  /**
   * Starts a damage pop up on the battler.
@@ -206,7 +206,7 @@ extern class Game_Battler extends Game_BattlerBase {
   */
  public function startWeaponAnimation(weaponImageId: WeaponImageId): Void;
 
- public function action(index: Int): Game_Action;
+ public function action(index: Float): Game_Action;
 
  /**
   * Sets the action at the specified index for the battler.
@@ -215,7 +215,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {Game_Action} action
   * @memberof Game_Battler
   */
- public function setAction(index: Int, action: Game_Action): Void;
+ public function setAction(index: Float, action: Game_Action): Void;
 
  /**
   * Returns the number of battler actions.
@@ -223,7 +223,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {number}
   * @memberof Game_Battler
   */
- public function numActions(): Int;
+ public function numActions(): Float;
 
  /**
   * Clears the battler actions.
@@ -260,7 +260,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_Battler
   */
- public function addState(stateId: Int): Void;
+ public function addState(stateId: Float): Void;
 
  /**
   * Returns true if the specified state given the state id
@@ -269,7 +269,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isStateAddable(stateId: Int): Bool;
+ public function isStateAddable(stateId: Float): Bool;
 
  /**
   * Returns true if the specified state given the state id
@@ -279,7 +279,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {Bool}
   * @memberof Game_Battler
   */
- public function isStateRestrict(stateId: Int): Bool;
+ public function isStateRestrict(stateId: Float): Bool;
 
  /**
   * Handler for when theb attler is restricted.
@@ -294,7 +294,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} stateId
   * @memberof Game_Battler
   */
- public function removeState(stateId: Int): Void;
+ public function removeState(stateId: Float): Void;
 
  /**
   * Has the battler escape from battle; plays a sound on escaping.
@@ -310,7 +310,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} turns
   * @memberof Game_Battler
   */
- public function addBuff(paramId: ParameterId, turns: Int): Void;
+ public function addBuff(paramId: ParameterId, turns: Float): Void;
 
  /**
   * Adds a debuff to the battler for the specified number of turns
@@ -319,7 +319,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} turns
   * @memberof Game_Battler
   */
- public function addDebuff(paramId: ParameterId, turns: Int): Void;
+ public function addDebuff(paramId: ParameterId, turns: Float): Void;
 
  public function removeBuff(paramId: ParameterId): Void;
  public function removeBattleStates(): Void;
@@ -331,7 +331,7 @@ extern class Game_Battler extends Game_BattlerBase {
   */
  public function removeAllBuffs(): Void;
 
- public function removeStatesAuto(timing: Int): Void;
+ public function removeStatesAuto(timing: Float): Void;
  public function removeBuffsAuto(): Void;
  public function removeStatesByDamage(): Void;
 
@@ -341,7 +341,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {number}
   * @memberof Game_Battler
   */
- public function makeActionTimes(): Int;
+ public function makeActionTimes(): Float;
 
  /**
   * Creates the actions for the battler.
@@ -356,7 +356,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @returns {number}
   * @memberof Game_Battler
   */
- public function speed(): Int;
+ public function speed(): Float;
 
  /**
   * Calculates the speed of the battler.
@@ -386,7 +386,7 @@ extern class Game_Battler extends Game_BattlerBase {
   */
  public function setLastTarget(target: Game_Battler): Void;
 
- public function forceAction(skillId: Int, targetIndex: Int): Void;
+ public function forceAction(skillId: Float, targetIndex: Float): Void;
 
  /**
   * Has theb attler use the given item.
@@ -410,7 +410,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} value
   * @memberof Game_Battler
   */
- public function gainHp(value: Int): Void;
+ public function gainHp(value: Float): Void;
 
  /**
   * Adds the specified amount of mp to the battler.
@@ -418,7 +418,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} value
   * @memberof Game_Battler
   */
- public function gainMp(value: Int): Void;
+ public function gainMp(value: Float): Void;
 
  /**
   * Adds the specified amount of tp to the battler.
@@ -426,7 +426,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} value
   * @memberof Game_Battler
   */
- public function gainTp(value: Int): Void;
+ public function gainTp(value: Float): Void;
 
  /**
   * Adds a specified amount of tp to the battler silently.
@@ -434,7 +434,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {number} value
   * @memberof Game_Battler
   */
- public function gainSilentTp(value: Int): Void;
+ public function gainSilentTp(value: Float): Void;
 
  /**
   * Initializes the battler's tp; tp is random.
@@ -459,7 +459,7 @@ extern class Game_Battler extends Game_BattlerBase {
   */
  public function regenerateHp(): Void;
 
- public function maxSlipDamage(): Int;
+ public function maxSlipDamage(): Float;
 
  /**
   * Has the battler regenerate mp based on their mp regen.
@@ -508,7 +508,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * Handler for when damage is done
   * @param value
   */
- public function onDamage(value: Int): Void;
+ public function onDamage(value: Float): Void;
 
  /**
   * Sets the action state

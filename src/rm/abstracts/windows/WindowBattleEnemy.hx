@@ -7,7 +7,7 @@ import rm.windows.Window_BattleEnemy;
 @:forwardStatics
 abstract WindowBattleEnemy(Window_BattleEnemy) from Window_BattleEnemy
  to Window_BattleEnemy {
- public inline function new(x: Int, y: Int) {
+ public inline function new(x: Float, y: Float) {
   #if compileMV
   this = new Window_BattleEnemy(x, y);
   #else

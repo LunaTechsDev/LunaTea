@@ -16,21 +16,21 @@ import rm.types.RPG.Enemy;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Enemy extends Game_Battler {
- private var _enemyId: Int;
+ private var _enemyId: Float;
 
  private var _letter: String;
 
  private var _plural: Bool;
 
- private var _screenX: Int;
+ private var _screenX: Float;
 
- private var _screenY: Int;
+ private var _screenY: Float;
 
- public function new(enemyId: Int, x: Int, y: Int);
- public function initialize(enemyId: Int, x: Int, y: Int): Void;
+ public function new(enemyId: Float, x: Float, y: Float);
+ public function initialize(enemyId: Float, x: Float, y: Float): Void;
 
  public function initMembers(): Void;
- public function setup(enemyId: Int, x: Int, y: Int): Void;
+ public function setup(enemyId: Float, x: Float, y: Float): Void;
 
  /**
   * Returns the other troops in the enemy team.
@@ -56,7 +56,7 @@ extern class Game_Enemy extends Game_Battler {
   * @returns {number}
   * @memberof Game_Enemy
   */
- public function enemyId(): Int;
+ public function enemyId(): Float;
 
  /**
   * Returns the enemy information from the database.
@@ -97,7 +97,7 @@ extern class Game_Enemy extends Game_Battler {
  public function dropItemRate(): Float;
 
  // TODO: turn kind into an enum
- public function itemObject(kind: Int, dataId: Int): Void;
+ public function itemObject(kind: Float, dataId: Float): Void;
 
  /**
   * Returns true if the enemy sprite is visible.
@@ -113,7 +113,7 @@ extern class Game_Enemy extends Game_Battler {
   * @returns {number}
   * @memberof Game_Enemy
   */
- public function screenX(): Int;
+ public function screenX(): Float;
 
  /**
   * Returns enemy screen Y position.
@@ -121,7 +121,7 @@ extern class Game_Enemy extends Game_Battler {
   * @returns {number}
   * @memberof Game_Enemy
   */
- public function screenY(): Int;
+ public function screenY(): Float;
 
  /**
   * Returns the hue of the enemy.
@@ -149,21 +149,21 @@ extern class Game_Enemy extends Game_Battler {
   * @param {number} enemyId
   * @memberof Game_Enemy
   */
- public function transform(enemyId: Int): Void;
+ public function transform(enemyId: Float): Void;
 
  public function meetsCondition(action: EnemyAction): Bool;
 
- public function meetsTurnCondition(param1: Int, param2: Int): Bool;
+ public function meetsTurnCondition(param1: Float, param2: Float): Bool;
 
- public function meetsHpCondition(param1: Int, param2: Int): Bool;
+ public function meetsHpCondition(param1: Float, param2: Float): Bool;
 
- public function meetsMpCondition(param1: Int, param2: Int): Bool;
+ public function meetsMpCondition(param1: Float, param2: Float): Bool;
 
- public function meetsStateCondition(param: Int): Bool;
+ public function meetsStateCondition(param: Float): Bool;
 
- public function meetsPartyLevelCondition(param: Int): Bool;
+ public function meetsPartyLevelCondition(param: Float): Bool;
 
- public function meetsSwitchCondition(param: Int): Bool;
+ public function meetsSwitchCondition(param: Float): Bool;
 
  /**
   * Returns true if the enemy action is valid.

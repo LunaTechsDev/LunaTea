@@ -16,7 +16,7 @@ import rm.core.Rectangle;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ScrollText extends Window_Base {
  private var _text: String;
- private var _allTextHeight: Int;
+ private var _allTextHeight: Float;
 
  #if compileMV
  public function new();
@@ -34,7 +34,7 @@ extern class Window_ScrollText extends Window_Base {
 
  public function refresh(): Void;
  public function updateMessage(): Void;
- public function scrollSpeed(): Int;
+ public function scrollSpeed(): Float;
 
  /**
   * Returns true if the scene is in fast forward mode.

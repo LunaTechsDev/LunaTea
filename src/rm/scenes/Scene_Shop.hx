@@ -150,13 +150,13 @@ extern class Scene_Shop extends Scene_MenuBase {
   * Amount of item to buy.
   * @param number
   */
- public function doBuy(number: Int): Void;
+ public function doBuy(number: Float): Void;
 
  /**
   * Amount of item to sell.
   * @param number
   */
- public function doSell(number: Int): Void;
+ public function doSell(number: Float): Void;
 
  public function endNumberInput(): Void;
 
@@ -166,7 +166,7 @@ extern class Scene_Shop extends Scene_MenuBase {
   * @returns {number}
   * @memberof Scene_Shop
   */
- public function maxBuy(): Int;
+ public function maxBuy(): Float;
 
  /**
   * Returns the maximum number sold.
@@ -174,7 +174,7 @@ extern class Scene_Shop extends Scene_MenuBase {
   * @returns {number}
   * @memberof Scene_Shop
   */
- public function maxSell(): Int;
+ public function maxSell(): Float;
 
  /**
   * Returns the player gold within

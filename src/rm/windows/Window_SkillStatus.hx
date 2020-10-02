@@ -30,7 +30,7 @@ extern class Window_SkillStatus extends Window_Base {
   * @param height
   * @memberof Window_SkillStatus
   */
- public function new(x: Int, y: Int, width: Int, height: Int): Void;
+ public function new(x: Float, y: Float, width: Float, height: Float): Void;
 
  /**
   * Sets the current actor for the window.

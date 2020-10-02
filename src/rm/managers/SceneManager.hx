@@ -19,20 +19,20 @@ extern class SceneManager {
 
  private static var _stack: Array<Any>;
 
- private static var _screenWidth: Int;
+ private static var _screenWidth: Float;
 
- private static var _screenHeight: Int;
+ private static var _screenHeight: Float;
 
  private static var _backgroundBitmap: Bitmap;
 
- private static var _boxWidth: Int;
+ private static var _boxWidth: Float;
 
- private static var _boxHeight: Int;
+ private static var _boxHeight: Float;
 
  private static var _deltaTime: Float;
 
  private static var _currentTime: Float;
- private static var _accumulator: Int;
+ private static var _accumulator: Float;
 
  /**
   * Convenience variable for getting the current scene.

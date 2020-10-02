@@ -5,5 +5,5 @@ package rm.windows;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_HorzCommand extends Window_Command {
- public function new(x: Int, y: Int): Void;
+ public function new(x: Float, y: Float): Void;
 }

@@ -18,21 +18,21 @@ import rm.types.LunaTea.MoveFrequency;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_CharacterBase {
- private var _x: Int;
+ private var _x: Float;
 
- private var _y: Int;
+ private var _y: Float;
 
- private var _realX: Int;
+ private var _realX: Float;
 
- private var _realY: Int;
+ private var _realY: Float;
 
  private var _moveSpeed: MoveSpeed;
 
  private var _moveFrequency: MoveFrequency;
 
- private var _opacity: Int;
+ private var _opacity: Float;
 
- private var _blendMode: Int;
+ private var _blendMode: Float;
 
  private var _direction: Direction;
 
@@ -40,11 +40,11 @@ extern class Game_CharacterBase {
 
  private var _priorityType: CharacterPriority;
 
- private var _tileId: Int;
+ private var _tileId: Float;
 
  private var _characterName: String;
 
- private var _characterIndex: Int;
+ private var _characterIndex: Float;
 
  private var _isObjectCharacter: Bool;
 
@@ -58,7 +58,7 @@ extern class Game_CharacterBase {
 
  private var _transparent: Bool;
 
- private var _bushDepth: Int;
+ private var _bushDepth: Float;
 
  private var _animationId: AnimationId;
 
@@ -68,13 +68,13 @@ extern class Game_CharacterBase {
 
  private var _balloonPlaying: Bool;
 
- private var _animationCount: Int;
+ private var _animationCount: Float;
 
- private var _stopCount: Int;
+ private var _stopCount: Float;
 
- private var _jumpCount: Int;
+ private var _jumpCount: Float;
 
- private var _jumpPeak: Int;
+ private var _jumpPeak: Float;
 
  private var _movementSuccess: Bool;
 
@@ -82,52 +82,52 @@ extern class Game_CharacterBase {
  public function initialize(): Void;
 
  /** [read-only] */
- public var x: Int;
+ public var x: Float;
 
  /** [read-only] */
- public var y: Int;
+ public var y: Float;
 
  public function initMembers(): Void;
- public function pos(x: Int, y: Int): Bool;
- public function posNt(x: Int, y: Int): Bool;
+ public function pos(x: Float, y: Float): Bool;
+ public function posNt(x: Float, y: Float): Bool;
 
  /**
   * Returns the move speed of the game character.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function moveSpeed(): Int;
+ public function moveSpeed(): Float;
 
- public function setMoveSpeed(moveSpeed: Int): Void;
+ public function setMoveSpeed(moveSpeed: Float): Void;
 
  /**
   * Returns the move frequency of the character.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function moveFrequency(): Int;
+ public function moveFrequency(): Float;
 
- public function setMoveFrequency(moveFrequency: Int): Void;
- public function opacity(): Int;
- public function setOpacity(opacity: Int): Void;
+ public function setMoveFrequency(moveFrequency: Float): Void;
+ public function opacity(): Float;
+ public function setOpacity(opacity: Float): Void;
 
  /**
   * Returns the blend mode of the character;
   * these are represented by Ints.
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function blendMode(): Int;
+ public function blendMode(): Float;
 
  /**
   * Sets the blend mode of the character;
   * these are represented by Ints.
-  * @param {Int} blendMode
+  * @param {Float} blendMode
   * @memberof Game_CharacterBase
   */
- public function setBlendMode(blendMode: Int): Void;
+ public function setBlendMode(blendMode: Float): Void;
 
  /**
   * Returns true if the character is
@@ -137,7 +137,7 @@ extern class Game_CharacterBase {
   */
  public function isNormalPriority(): Bool;
 
- public function setPriorityType(priorityType: Int): Void;
+ public function setPriorityType(priorityType: Float): Void;
 
  /**
   * Returns true if the character is moving.
@@ -158,10 +158,10 @@ extern class Game_CharacterBase {
  /**
   * Returns the jump height of base character.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function jumpHeight(): Int;
+ public function jumpHeight(): Float;
 
  /**
   * Returns true if the character is stopping.
@@ -171,7 +171,7 @@ extern class Game_CharacterBase {
   */
  public function isStopping(): Bool;
 
- public function checkStop(threshold: Int): Bool;
+ public function checkStop(threshold: Float): Bool;
 
  /**
   * Resets the step count of the character.
@@ -180,8 +180,8 @@ extern class Game_CharacterBase {
   */
  public function resetStopCount(): Void;
 
- public function realMoveSpeed(): Int;
- public function distancePerFrame(): Int;
+ public function realMoveSpeed(): Float;
+ public function distancePerFrame(): Float;
 
  /**
   * Returns true if the character is dashing.
@@ -200,25 +200,26 @@ extern class Game_CharacterBase {
   */
  public function straighten(): Void;
 
- public function reverseDir(d: Int): Int;
- public function canPass(x: Int, y: Int, d: Int): Bool;
- public function canPassDiagonally(x: Int, y: Int, horz: Int, vert: Int): Bool;
- public function isMapPassable(x: Int, y: Int, d: Int): Bool;
- public function isCollidedWithCharacters(x: Int, y: Int): Bool;
- public function isCollidedWithEvents(x: Int, y: Int): Bool;
- public function isCollidedWithVehicles(x: Int, y: Int): Bool;
- public function setPosition(x: Int, y: Int): Void;
+ public function reverseDir(d: Float): Float;
+ public function canPass(x: Float, y: Float, d: Float): Bool;
+ public function canPassDiagonally(x: Float, y: Float, horz: Float,
+  vert: Float): Bool;
+ public function isMapPassable(x: Float, y: Float, d: Float): Bool;
+ public function isCollidedWithCharacters(x: Float, y: Float): Bool;
+ public function isCollidedWithEvents(x: Float, y: Float): Bool;
+ public function isCollidedWithVehicles(x: Float, y: Float): Bool;
+ public function setPosition(x: Float, y: Float): Void;
  public function copyPosition(character: Game_Player): Void;
- public function locate(x: Int, y: Int): Void;
- public function direction(): Int;
+ public function locate(x: Float, y: Float): Void;
+ public function direction(): Float;
 
  /**
   * Sets the direction of the character based on numpad
   * directions.
-  * @param {Int} d
+  * @param {Float} d
   * @memberof Game_CharacterBase
   */
- public function setDirection(d: Int): Void;
+ public function setDirection(d: Float): Void;
 
  /**
   * Returns true if the character is a tile; these
@@ -236,33 +237,33 @@ extern class Game_CharacterBase {
   */
  public function isObjectCharacter(): Bool;
 
- public function shiftY(): Int;
- public function scrolledX(): Int;
- public function scrolledY(): Int;
+ public function shiftY(): Float;
+ public function scrolledX(): Float;
+ public function scrolledY(): Float;
 
  /**
   * Returns the character's scrreen x position.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function screenX(): Int;
+ public function screenX(): Float;
 
  /**
   * Returns the character's screen y position.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function screenY(): Int;
+ public function screenY(): Float;
 
  /**
   * Returns the character's screen z position.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function screenZ(): Int;
+ public function screenZ(): Float;
 
  public function isNearTheScreen(): Bool;
  public function update(): Void;
@@ -270,7 +271,7 @@ extern class Game_CharacterBase {
  public function updateJump(): Void;
  public function updateMove(): Void;
  public function updateAnimation(): Void;
- public function animationWait(): Int;
+ public function animationWait(): Float;
 
  /**
   * Updates the character's animation count.
@@ -280,23 +281,23 @@ extern class Game_CharacterBase {
  public function updateAnimationCount(): Void;
 
  public function updatePattern(): Void;
- public function maxPattern(): Int;
+ public function maxPattern(): Float;
 
  /**
   * Returns the pattern of the character; these are the walking
   * patterns.
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function pattern(): Int;
+ public function pattern(): Float;
 
  /**
   * Sets the pattern of the character, given
-  * a pattern Int.
-  * @param {Int} pattern
+  * a pattern Float.
+  * @param {Float} pattern
   * @memberof Game_CharacterBase
   */
- public function setPattern(pattern: Int): Void;
+ public function setPattern(pattern: Float): Void;
 
  public function isOriginalPattern(): Bool;
 
@@ -314,18 +315,18 @@ extern class Game_CharacterBase {
  /**
   * Returns the terrain tag of the character.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function terrainTag(): Int;
+ public function terrainTag(): Float;
 
  /**
   * Returns the region id of the character.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function regionId(): Int;
+ public function regionId(): Float;
 
  /**
   * Increases the character steps.
@@ -337,22 +338,22 @@ extern class Game_CharacterBase {
  /**
   * Returns the tile id of character.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function tileId(): Int;
+ public function tileId(): Float;
 
  public function characterName(): String;
- public function characterIndex(): Int;
- public function setImage(characterName: String, characterIndex: Int): Void;
- public function setTileImage(tileId: Int): Void;
- public function checkEventTriggerTouchFront(d: Int): Void;
- public function checkEventTriggerTouch(x: Int, y: Int): Bool;
- public function isMovementSucceeded(x: Int, y: Int): Bool;
+ public function characterIndex(): Float;
+ public function setImage(characterName: String, characterIndex: Float): Void;
+ public function setTileImage(tileId: Float): Void;
+ public function checkEventTriggerTouchFront(d: Float): Void;
+ public function checkEventTriggerTouch(x: Float, y: Float): Bool;
+ public function isMovementSucceeded(x: Float, y: Float): Bool;
  public function setMovementSuccess(success: Bool): Void;
- public function moveStraight(d: Int): Void;
- public function moveDiagonally(horz: Int, vert: Int): Void;
- public function jump(xPlus: Int, yPlus: Int): Void;
+ public function moveStraight(d: Float): Void;
+ public function moveDiagonally(horz: Float, vert: Float): Void;
+ public function jump(xPlus: Float, yPlus: Float): Void;
  public function hasWalkAnime(): Bool;
  public function setWalkAnime(walkAnime: Bool): Void;
 
@@ -396,44 +397,44 @@ extern class Game_CharacterBase {
  /**
   * Returns the bush depth around the character.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function bushDepth(): Int;
+ public function bushDepth(): Float;
 
  public function setTransparent(transparent: Bool): Void;
 
  /**
   * Requests an animation given the animation id.
   *
-  * @param {Int} animationId
+  * @param {Float} animationId
   * @memberof Game_CharacterBase
   */
- public function requestAnimation(animationId: Int): Void;
+ public function requestAnimation(animationId: Float): Void;
 
  /**
   * Requests the balloon animation given the balloon id.
   *
-  * @param {Int} balloonId
+  * @param {Float} balloonId
   * @memberof Game_CharacterBase
   */
- public function requestBalloon(balloonId: Int): Void;
+ public function requestBalloon(balloonId: Float): Void;
 
  /**
   * Returns the animation id.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function animationId(): Int;
+ public function animationId(): Float;
 
  /**
   * Returns the id of the balloon animation.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_CharacterBase
   */
- public function balloonId(): Int;
+ public function balloonId(): Float;
 
  /**
   * Starts the requested animation.

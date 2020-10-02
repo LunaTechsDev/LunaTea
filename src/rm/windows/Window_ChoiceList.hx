@@ -13,7 +13,7 @@ package rm.windows;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ChoiceList extends Window_Command {
  private var _messageWindow: Window_Message;
- private var _background: Int;
+ private var _background: Float;
 
  #if compileMV
  public function new(messageWindow: Window_Message);
@@ -22,16 +22,16 @@ extern class Window_ChoiceList extends Window_Command {
  public function new();
  public function initialize(): Void;
  public function setMessageWindow(messageWindow: Window_Message): Void;
- public function windowY(): Int;
- public function windowX(): Int;
+ public function windowY(): Float;
+ public function windowX(): Float;
  public function needsCancelButton(): Bool;
- public function maxLines(): Int;
+ public function maxLines(): Float;
  #end
 
  public function start(): Void;
  public function selectDefault(): Void;
  public function updatePlacement(): Void;
  public function updateBackground(): Void;
- public function maxChoiceWidth(): Int;
- public function textWidthEx(text: String): Int;
+ public function maxChoiceWidth(): Float;
+ public function textWidthEx(text: String): Float;
 }

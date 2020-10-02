@@ -33,12 +33,12 @@ extern class ToneSprite extends Container {
   * @param {Number} b The blue strength in the range (-255, 255)
   * @param {Number} gray The grayscale level in the range (0, 255)
   */
- public function setTone(r: Int, g: Int, b: Int, gray: Int): Void;
+ public function setTone(r: Float, g: Float, b: Float, gray: Float): Void;
 
- private var _red: Int;
- private var _green: Int;
- private var _blue: Int;
- private var _gray: Int;
+ private var _red: Float;
+ private var _green: Float;
+ private var _blue: Float;
+ private var _gray: Float;
 
  /**
   * @method _renderCanvas

@@ -9,25 +9,25 @@ import rm.objects.Game_Battler;
 extern class Sprite_Battler extends Sprite_Base {
  private var _battler: Game_Battler;
 
- private var _homeX: Int;
+ private var _homeX: Float;
 
- private var _homeY: Int;
+ private var _homeY: Float;
 
- private var _offsetX: Int;
+ private var _offsetX: Float;
 
- private var _offsetY: Int;
+ private var _offsetY: Float;
 
- private var _targetOffsetX: Int;
+ private var _targetOffsetX: Float;
 
- private var _targetOffsetY: Int;
+ private var _targetOffsetY: Float;
 
- private var _movementDuration: Int;
+ private var _movementDuration: Float;
 
- private var _selectionEffectCount: Int;
+ private var _selectionEffectCount: Float;
 
  public function initMembers(): Void;
 
- public function setHome(x: Int, y: Int): Void;
+ public function setHome(x: Float, y: Float): Void;
 
  /**
   * Updates the main loop of the sprite battler.

@@ -7,7 +7,7 @@ import rm.windows.Window_BattleActor;
 @:forwardStatics
 abstract WindowBattleActor(Window_BattleActor) from Window_BattleActor
  to Window_BattleActor {
- public inline function new(x: Int, y: Int) {
+ public inline function new(x: Float, y: Float) {
   #if compileMV
   this = new Window_BattleActor(x, y);
   #else

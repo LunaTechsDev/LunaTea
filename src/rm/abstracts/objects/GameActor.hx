@@ -5,7 +5,7 @@ import rm.objects.Game_Actor;
 @:forward
 @:forwardStatics
 abstract GameActor(Game_Actor) from Game_Actor to Game_Actor {
- public inline function new(actorId: Int) {
+ public inline function new(actorId: Float) {
   this = new Game_Actor(actorId);
  }
 }

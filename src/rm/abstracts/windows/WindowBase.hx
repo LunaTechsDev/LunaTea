@@ -6,7 +6,7 @@ import rm.windows.Window_Base;
 @:forward
 @:forwardStatics
 abstract WindowBase(Window_Base) from Window_Base to Window_Base {
- public inline function new(x: Int, y: Int, width: Int, height: Int) {
+ public inline function new(x: Float, y: Float, width: Float, height: Float) {
   #if compileMV
   this = new Window_Base(x, y, width, height);
   #else

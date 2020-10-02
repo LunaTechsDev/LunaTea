@@ -15,7 +15,7 @@ import rm.types.LunaTea.BalloonId;
 extern class Sprite_Balloon extends Sprite_Base {
  private var _balloonId: BalloonId; // TODO: Create Balloon ID abstract
 
- private var _duration: Int;
+ private var _duration: Float;
 
  public function initMembers(): Void;
 
@@ -43,7 +43,7 @@ extern class Sprite_Balloon extends Sprite_Base {
   * @returns {number}
   * @memberof Sprite_Balloon
   */
- public function speed(): Int;
+ public function speed(): Float;
 
  /**
   * Returns the wait time.
@@ -51,7 +51,7 @@ extern class Sprite_Balloon extends Sprite_Base {
   * @returns {number}
   * @memberof Sprite_Balloon
   */
- public function waitTime(): Int;
+ public function waitTime(): Float;
 
  /**
   * Returns the frame index of the balloon animation.
@@ -59,7 +59,7 @@ extern class Sprite_Balloon extends Sprite_Base {
   * @returns {number}
   * @memberof Sprite_Balloon
   */
- public function frameIndex(): Int;
+ public function frameIndex(): Float;
 
  /**
   * Returns true if the balloon animation is playing.

@@ -14,40 +14,40 @@ import js.lib.Object;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Party extends Game_Unit {
- public static var ABILITY_ENCOUNTER_HALF: Int;
- public static var ABILITY_ENCOUNTER_NONE: Int;
- public static var ABILITY_CANCEL_SURPRISE: Int;
- public static var ABILITY_RAISE_PREEMPTIVE: Int;
- public static var ABILITY_GOLD_DOUBLE: Int;
- public static var ABILITY_DROP_ITEM_DOUBLE: Int;
+ public static var ABILITY_ENCOUNTER_HALF: Float;
+ public static var ABILITY_ENCOUNTER_NONE: Float;
+ public static var ABILITY_CANCEL_SURPRISE: Float;
+ public static var ABILITY_RAISE_PREEMPTIVE: Float;
+ public static var ABILITY_GOLD_DOUBLE: Float;
+ public static var ABILITY_DROP_ITEM_DOUBLE: Float;
 
- private var _gold: Int;
+ private var _gold: Float;
 
- private var _steps: Int;
+ private var _steps: Float;
 
  private var _lastItem: Game_Item;
 
- private var _menuActorId: Int;
+ private var _menuActorId: Float;
 
- private var _targetActorId: Int;
+ private var _targetActorId: Float;
 
  private var _actors: Array<Game_Actor>;
 
  /**
   * Data structure.
-  * [ItemId:Int] : Int
+  * [ItemId:Float] : Float
   */
  private var _items: DynamicAccess<Dynamic>;
 
  /**
   * Data structure.
-  * [weaponId:Int] : Int
+  * [weaponId:Float] : Float
   */
  private var _weapons: DynamicAccess<Dynamic>;
 
  /**
   * Data structure.
-  * [armorId:Int] : Int
+  * [armorId:Float] : Float
   */
  private var _armors: DynamicAccess<Dynamic>;
 
@@ -109,10 +109,10 @@ extern class Game_Party extends Game_Unit {
  /**
   * Returns the size of the party.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Party
   */
- public function size(): Int;
+ public function size(): Float;
 
  /**
   * Returns true if the game party is empty.
@@ -125,10 +125,10 @@ extern class Game_Party extends Game_Unit {
  /**
   * Returns the maximum battle members in the party.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Party
   */
- public function maxBattleMembers(): Int;
+ public function maxBattleMembers(): Float;
 
  /**
   * Returns the leader of the party.
@@ -179,7 +179,7 @@ extern class Game_Party extends Game_Unit {
   */
  public function allItems(): Array<BaseItem>;
 
- public function itemContainer(item: BaseItem): {ItemId: Int};
+ public function itemContainer(item: BaseItem): {ItemId: Float};
 
  /**
   * Sets up the starting party members.
@@ -214,91 +214,91 @@ extern class Game_Party extends Game_Unit {
  /**
   * Returns the highest level in the party.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Party
   */
- public function highestLevel(): Int;
+ public function highestLevel(): Float;
 
  /**
   * Adds an actor to the party given the actor id.
   *
-  * @param {Int} actorId
+  * @param {Float} actorId
   * @memberof Game_Party
   */
- public function addActor(actorId: Int): Void;
+ public function addActor(actorId: Float): Void;
 
  /**
   * Removes an actor from the party given the actor id.
   *
-  * @param {Int} actorId
+  * @param {Float} actorId
   * @memberof Game_Party
   */
- public function removeActor(actorId: Int): Void;
+ public function removeActor(actorId: Float): Void;
 
  /**
   * Returns party gold.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Party
   */
- public function gold(): Int;
+ public function gold(): Float;
 
  /**
   * Increases the party gold given a specified amount.
   *
-  * @param {Int} amount
+  * @param {Float} amount
   * @memberof Game_Party
   */
- public function gainGold(amount: Int): Void;
+ public function gainGold(amount: Float): Void;
 
  /**
   * Decreases the party gold given a specified amount.
   *
-  * @param {Int} amount
+  * @param {Float} amount
   * @memberof Game_Party
   */
- public function loseGold(amount: Int): Void;
+ public function loseGold(amount: Float): Void;
 
  /**
   * Returns maximum gold of the party.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Party
   */
- public function maxGold(): Int;
+ public function maxGold(): Float;
 
  /**
-  * Returns the Int of steps the party has taken.
+  * Returns the Float of steps the party has taken.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Party
   */
- public function steps(): Int;
+ public function steps(): Float;
 
  /**
-  * Increases the Int of steps the party has taken.
+  * Increases the Float of steps the party has taken.
   *
   * @memberof Game_Party
   */
  public function increaseSteps(): Void;
 
  /**
-  * Returns the Int of items in the possession of the party of the
+  * Returns the Float of items in the possession of the party of the
   * given item.
   * @param {RPG.BaseItem} item
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Party
   */
- public function numItems(item: BaseItem): Int;
+ public function numItems(item: BaseItem): Float;
 
  /**
-  * Returns the maximum Int of items of the given item.
+  * Returns the maximum Float of items of the given item.
   *
   * @param {RPG.BaseItem} item
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Party
   */
- public function maxItems(item: BaseItem): Int;
+ public function maxItems(item: BaseItem): Float;
 
  public function hasMaxItems(item: BaseItem): Bool;
 
@@ -321,10 +321,10 @@ extern class Game_Party extends Game_Unit {
   */
  public function isAnyMemberEquipped(item: EquipItem): Bool;
 
- public function gainItem(item: BaseItem, amount: Int,
+ public function gainItem(item: BaseItem, amount: Float,
   includeEquip: Bool): Void;
- public function discardMembersEquip(item: EquipItem, amount: Int): Void;
- public function loseItem(item: BaseItem, amount: Int,
+ public function discardMembersEquip(item: EquipItem, amount: Float): Void;
+ public function loseItem(item: BaseItem, amount: Float,
   includeEquip: Bool): Void;
 
  /**
@@ -376,7 +376,7 @@ extern class Game_Party extends Game_Unit {
  public function lastItem(): BaseItem;
 
  public function setLastItem(item: BaseItem): Void;
- public function swapOrder(index1: Int, index2: Int): Void;
+ public function swapOrder(index1: Float, index2: Float): Void;
 
  /**
   * Returns the characters that go on the save life.
@@ -394,7 +394,7 @@ extern class Game_Party extends Game_Unit {
   */
  public function facesForSavefile(): Array<Array<Any>>;
 
- public function partyAbility(abilityId: Int): Bool;
+ public function partyAbility(abilityId: Float): Bool;
 
  /**
   * Returns true if the encounter rate is set to half.
@@ -431,8 +431,8 @@ extern class Game_Party extends Game_Unit {
  public function hasGoldDouble(): Bool;
 
  public function hasDropItemDouble(): Bool;
- public function ratePreemptive(troopAgi: Int): Int;
- public function rateSurprise(troopAgi: Int): Int;
+ public function ratePreemptive(troopAgi: Float): Float;
+ public function rateSurprise(troopAgi: Float): Float;
 
  /**
   * Performs victory motion for the entire party.

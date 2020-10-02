@@ -13,9 +13,9 @@ import rm.types.RPG;
 extern class Game_Map {
  private var _interpreter: Game_Interpreter;
 
- private var _mapId: Int;
+ private var _mapId: Float;
 
- private var _tilesetId: Int;
+ private var _tilesetId: Float;
 
  private var _events: Array<Game_Event>;
 
@@ -23,13 +23,13 @@ extern class Game_Map {
 
  private var _vehicles: Array<Game_Vehicle>;
 
- private var _displayX: Int;
+ private var _displayX: Float;
 
- private var _displayY: Int;
+ private var _displayY: Float;
 
  private var _nameDisplay: Bool;
 
- private var _scrollDirection: Int;
+ private var _scrollDirection: Float;
 
  private var _scrollRest: Float;
 
@@ -43,13 +43,13 @@ extern class Game_Map {
 
  private var _parallaxLoopY: Bool;
 
- private var _parallaxSx: Int;
+ private var _parallaxSx: Float;
 
- private var _parallaxSy: Int;
+ private var _parallaxSy: Float;
 
- private var _parallaxX: Int;
+ private var _parallaxX: Float;
 
- private var _parallaxY: Int;
+ private var _parallaxY: Float;
 
  private var _battleback1Name: String;
 
@@ -60,7 +60,7 @@ extern class Game_Map {
  public function new(): Void;
  public function initialize(): Void;
 
- public function setup(mapId: Int): Void;
+ public function setup(mapId: Float): Void;
 
  /**
   * Returns true if an event is running.
@@ -73,50 +73,50 @@ extern class Game_Map {
  /**
   * Returns tile width.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function tileWidth(): Int;
+ public function tileWidth(): Float;
 
  /**
   * Returns tile height.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function tileHeight(): Int;
+ public function tileHeight(): Float;
 
  /**
   * Returns map id.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function mapId(): Int;
+ public function mapId(): Float;
 
  /**
   * Returns the tileset id.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function tilesetId(): Int;
+ public function tilesetId(): Float;
 
  /**
   * Returns the display x coordinate.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function displayX(): Int;
+ public function displayX(): Float;
 
  /**
   * Returns the display y coordinate.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function displayY(): Int;
+ public function displayY(): Float;
 
  public function parallaxName(): String;
 
@@ -136,7 +136,7 @@ extern class Game_Map {
   */
  public function battleback2Name(): String;
 
- public function requestRefresh(mapId: Int): Void;
+ public function requestRefresh(mapId: Float): Void;
 
  /**
   * Returns true if the name display is enabled.
@@ -222,19 +222,19 @@ extern class Game_Map {
  /**
   * Returns an event, given the event id.
   *
-  * @param {Int} eventId
+  * @param {Float} eventId
   * @returns {Game_Event}
   * @memberof Game_Map
   */
- public function event(eventId: Int): Game_Event;
+ public function event(eventId: Float): Game_Event;
 
  /**
   * Erases the event given the event id.
   *
-  * @param {Int} eventId
+  * @param {Float} eventId
   * @memberof Game_Map
   */
- public function eraseEvent(eventId: Int): Void;
+ public function eraseEvent(eventId: Float): Void;
 
  /**
   * Returns all the parallel running common events.
@@ -250,11 +250,11 @@ extern class Game_Map {
 
  public function setupBattleback(): Void;
 
- public function setDisplayPos(x: Int, y: Int): Void;
+ public function setDisplayPos(x: Float, y: Float): Void;
 
- public function parallaxOx(): Int;
+ public function parallaxOx(): Float;
 
- public function parallaxOy(): Int;
+ public function parallaxOy(): Float;
 
  /**
   * Returns the tilset of the game map.
@@ -267,10 +267,10 @@ extern class Game_Map {
  /**
   * Returns the tileset flags of the game map.
   *
-  * @returns {Array<Int>}
+  * @returns {Array<Float>}
   * @memberof Game_Map
   */
- public function tilesetFlags(): Array<Int>;
+ public function tilesetFlags(): Array<Float>;
 
  /**
   * Returns the display name of the game map.
@@ -283,26 +283,26 @@ extern class Game_Map {
  /**
   * Returns the map width.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function width(): Int;
+ public function width(): Float;
 
  /**
   * Returns the map height.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function height(): Int;
+ public function height(): Float;
 
  /**
   * Returns the map data.
   *
-  * @returns {Array<Int>}
+  * @returns {Array<Float>}
   * @memberof Game_Map
   */
- public function data(): Array<Int>;
+ public function data(): Array<Float>;
 
  /**
   * Returns true if the map loops horizontally.
@@ -337,12 +337,12 @@ extern class Game_Map {
  public function encounterList(): Array<MapEncounter>;
 
  /**
-  * Returns the Int of encounter steps on the map.
+  * Returns the Float of encounter steps on the map.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function encounterStep(): Int;
+ public function encounterStep(): Float;
 
  /**
   * Returns true if the map is an over world map.
@@ -355,58 +355,58 @@ extern class Game_Map {
  /**
   * Returns the screen tile x coordinate.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function screenTileX(): Int;
+ public function screenTileX(): Float;
 
  /**
   * Returns the screen tile y coordinate.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function screenTileY(): Int;
+ public function screenTileY(): Float;
 
- public function adjustX(x: Int): Int;
+ public function adjustX(x: Float): Float;
 
- public function adjustY(y: Int): Int;
+ public function adjustY(y: Float): Float;
 
- public function roundX(x: Int): Int;
+ public function roundX(x: Float): Float;
 
- public function roundY(y: Int): Int;
+ public function roundY(y: Float): Float;
 
- public function xWithDirection(x: Int, d: Int): Int;
+ public function xWithDirection(x: Float, d: Float): Float;
 
- public function yWithDirection(y: Int, d: Int): Int;
+ public function yWithDirection(y: Float, d: Float): Float;
 
- public function roundXWithDirection(x: Int, d: Int): Int;
+ public function roundXWithDirection(x: Float, d: Float): Float;
 
- public function roundYWithDirection(y: Int, d: Int): Int;
+ public function roundYWithDirection(y: Float, d: Float): Float;
 
- public function deltaX(x1: Int, x2: Int): Int;
+ public function deltaX(x1: Float, x2: Float): Float;
 
- public function deltaY(y1: Int, y2: Int): Int;
+ public function deltaY(y1: Float, y2: Float): Float;
 
- public function distance(x1: Int, y1: Int, x2: Int, y2: Int): Int;
+ public function distance(x1: Float, y1: Float, x2: Float, y2: Float): Float;
 
  /**
   * Converts the x coordinate from canvas to map coordinate x.
   *
-  * @param {Int} x
-  * @returns {Int}
+  * @param {Float} x
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function canvasToMapX(x: Int): Int;
+ public function canvasToMapX(x: Float): Float;
 
  /**
   * Converts the y coordinate from canvas to map y coordinate.
   *
-  * @param {Int} y
-  * @returns {Int}
+  * @param {Float} y
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function canvasToMapY(y: Int): Int;
+ public function canvasToMapY(y: Float): Float;
 
  /**
   * Auto plays the game map.
@@ -424,87 +424,88 @@ extern class Game_Map {
  /**
   * Returns the game events at the specified
   * x and y position.
-  * @param {Int} x
-  * @param {Int} y
+  * @param {Float} x
+  * @param {Float} y
   * @returns {Array<Game_Event>}
   * @memberof Game_Map
   */
- public function eventsXy(x: Int, y: Int): Array<Game_Event>;
+ public function eventsXy(x: Float, y: Float): Array<Game_Event>;
 
- public function eventsXyNt(x: Int, y: Int): Array<Game_Event>;
+ public function eventsXyNt(x: Float, y: Float): Array<Game_Event>;
 
- public function tileEventsXy(x: Int, y: Int): Array<Game_Event>;
+ public function tileEventsXy(x: Float, y: Float): Array<Game_Event>;
 
- public function eventIdXy(x: Int, y: Int): Int;
+ public function eventIdXy(x: Float, y: Float): Float;
 
- public function scrollDown(distance: Int): Void;
+ public function scrollDown(distance: Float): Void;
 
- public function scrollLeft(distance: Int): Void;
+ public function scrollLeft(distance: Float): Void;
 
- public function scrollRight(distance: Int): Void;
+ public function scrollRight(distance: Float): Void;
 
- public function scrollUp(distance: Int): Void;
+ public function scrollUp(distance: Float): Void;
 
  /**
   * Returns true if the x and y coordinates are valid.
   *
-  * @param {Int} x
-  * @param {Int} y
+  * @param {Float} x
+  * @param {Float} y
   * @returns {Bool}
   * @memberof Game_Map
   */
- public function isValid(x: Int, y: Int): Bool;
+ public function isValid(x: Float, y: Float): Bool;
 
- public function checkPassage(x: Int, y: Int, bit: Int): Bool;
+ public function checkPassage(x: Float, y: Float, bit: Float): Bool;
 
  /**
   * Returns the tile id at the specified x, y, and z coordinates.
   *
-  * @param {Int} x
-  * @param {Int} y
-  * @param {Int} z
-  * @returns {Int}
+  * @param {Float} x
+  * @param {Float} y
+  * @param {Float} z
+  * @returns {Float}
   * @memberof Game_Map
   */
- public function tileId(x: Int, y: Int, z: Int): Int;
+ public function tileId(x: Float, y: Float, z: Float): Float;
 
- public function layeredTiles(x: Int, y: Int): Array<Int>;
+ public function layeredTiles(x: Float, y: Float): Array<Float>;
 
- public function allTiles(x: Int, y: Int): Array<Int>;
+ public function allTiles(x: Float, y: Float): Array<Float>;
 
- public function autotileType(x: Int, y: Int, z: Int): Int;
+ public function autotileType(x: Float, y: Float, z: Float): Float;
 
- public function isPassable(x: Int, y: Int, d: Int): Bool;
+ public function isPassable(x: Float, y: Float, d: Float): Bool;
 
- public function isBoatPassable(x: Int, y: Int): Bool;
+ public function isBoatPassable(x: Float, y: Float): Bool;
 
- public function isShipPassable(x: Int, y: Int): Bool;
+ public function isShipPassable(x: Float, y: Float): Bool;
 
- public function isAirshipLandOk(x: Int, y: Int): Bool;
+ public function isAirshipLandOk(x: Float, y: Float): Bool;
 
- public function checkLayeredTilesFlags(x: Int, y: Int, bit: Int): Bool;
+ public function checkLayeredTilesFlags(x: Float, y: Float, bit: Float): Bool;
 
  /**
   * Returns true if the specified element at the given x and y coordinates
   * is a ladder.
-  * @param {Int} x
-  * @param {Int} y
+  * @param {Float} x
+  * @param {Float} y
   * @returns {Bool}
   * @memberof Game_Map
   */
- public function isLadder(x: Int, y: Int): Bool;
+ public function isLadder(x: Float, y: Float): Bool;
 
- public function isBush(x: Int, y: Int): Bool;
+ public function isBush(x: Float, y: Float): Bool;
 
- public function isCounter(x: Int, y: Int): Bool;
+ public function isCounter(x: Float, y: Float): Bool;
 
- public function isDamageFloor(x: Int, y: Int): Bool;
+ public function isDamageFloor(x: Float, y: Float): Bool;
 
- public function terrainTag(x: Int, y: Int): Int;
+ public function terrainTag(x: Float, y: Float): Float;
 
- public function regionId(x: Int, y: Int): Int;
+ public function regionId(x: Float, y: Float): Float;
 
- public function startScroll(direction: Int, distance: Int, speed: Int): Void;
+ public function startScroll(direction: Float, distance: Float,
+  speed: Float): Void;
 
  public function isScrolling(): Bool;
 
@@ -518,9 +519,9 @@ extern class Game_Map {
 
  public function updateScroll(): Void;
 
- public function scrollDistance(): Int;
+ public function scrollDistance(): Float;
 
- public function doScroll(direction: Int, distance: Int): Void;
+ public function doScroll(direction: Float, distance: Float): Void;
 
  /**
   * Updates all events on the map.
@@ -546,16 +547,16 @@ extern class Game_Map {
  /**
   * Changes them ap tileset, given the tileset id.
   *
-  * @param {Int} tilesetId
+  * @param {Float} tilesetId
   * @memberof Game_Map
   */
- public function changeTileset(tilesetId: Int): Void;
+ public function changeTileset(tilesetId: Float): Void;
 
  public function changeBattleback(battleback1Name: String,
   battleback2Name: String): Void;
 
  public function changeParallax(name: String, loopX: Bool, loopY: Bool,
-  sx: Int, sy: Int): Void;
+  sx: Float, sy: Float): Void;
 
  /**
   * Updates the map's game interpreter.
@@ -567,10 +568,10 @@ extern class Game_Map {
  /**
   * Unlocks an event on the map given the event id.
   *
-  * @param {Int} eventId
+  * @param {Float} eventId
   * @memberof Game_Map
   */
- public function unlockEvent(eventId: Int): Void;
+ public function unlockEvent(eventId: Float): Void;
 
  public function setupStartingEvent(): Bool;
 

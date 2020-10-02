@@ -22,9 +22,9 @@ import rm.objects.Game_Battler;
 extern class Window_BattleLog extends Window_Base {
  private var _lines: Array<String>;
  private var _methods: Array<BattleLogMethod>;
- private var _waitCount: Int;
+ private var _waitCount: Float;
  private var _waitMode: String;
- private var _baseLineStack: Array<Int>;
+ private var _baseLineStack: Array<Float>;
  private var _spriteset: Spriteset_Battle;
  #if compileMV
  public function new();
@@ -34,13 +34,13 @@ extern class Window_BattleLog extends Window_Base {
  public function initialize(rect: Rectangle): Void;
  #end
  public function setSpriteset(spriteset: Spriteset_Battle): Void;
- public function windowWidth(): Int;
- public function windowHeight(): Int;
- public function maxLines(): Int;
+ public function windowWidth(): Float;
+ public function windowHeight(): Float;
+ public function maxLines(): Float;
  public function createBackBitmap(): Void;
  public function createBackSprite(): Void;
- public function numLines(): Int;
- public function messageSpeed(): Int;
+ public function numLines(): Float;
+ public function messageSpeed(): Float;
  public function isBusy(): Bool;
  public function updateWait(): Bool;
  public function updateWaitCount(): Bool;
@@ -74,22 +74,22 @@ extern class Window_BattleLog extends Window_Base {
   target: Game_Battler): Void;
  public function performCollapse(target: Game_Battler): Void;
  public function showAnimation(subject: Game_Battler, targets: Game_Battler,
-  animationId: Int): Void;
+  animationId: Float): Void;
  public function showAttackAnimation(subject: Game_Battler,
   targets: Game_Battler): Void;
  public function showActorAttackAnimation(subject: Game_Battler,
   targets: Game_Battler): Void;
  public function showEnemyAttackAnimation(subject: Game_Battler,
   targets: Game_Battler): Void;
- public function showNormalAnimation(targets: Game_Battler, animationId: Int,
-  mirror: Bool): Void;
- public function animationBaseDelay(): Int;
- public function animationNextDelay(): Int;
+ public function showNormalAnimation(targets: Game_Battler,
+  animationId: Float, mirror: Bool): Void;
+ public function animationBaseDelay(): Float;
+ public function animationNextDelay(): Float;
  public function drawBackground(): Void;
  public function backRect(): Rectangle;
  public function backColor(): String;
- public function backPaintOpacity(): Int;
- public function drawLineText(index: Int): Void;
+ public function backPaintOpacity(): Float;
+ public function drawLineText(index: Float): Void;
  public function startTurn(): Void;
  public function startAction(subject: Game_Battler, action: Game_Action,
   targets: Array<Game_Battler>): Void;
@@ -124,7 +124,7 @@ extern class Window_BattleLog extends Window_Base {
   * @param buffs list of integers representing buff Ids
   * @param fmt
   */
- public function displayBuffs(target: Game_Battler, buffs: Array<Int>,
+ public function displayBuffs(target: Game_Battler, buffs: Array<Float>,
   fmt: String): Void;
 
  public function makeHpDamageText(target: Game_Battler): Void;

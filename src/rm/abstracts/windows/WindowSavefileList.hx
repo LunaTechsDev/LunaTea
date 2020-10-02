@@ -7,7 +7,7 @@ import rm.windows.Window_SavefileList;
 @:forwardStatics
 abstract WindowSavefileList(Window_SavefileList) from Window_SavefileList
  to Window_SavefileList {
- public inline function new(x: Int, y: Int, width: Int, height: Int) {
+ public inline function new(x: Float, y: Float, width: Float, height: Float) {
   #if compileMV
   this = new Window_SavefileList(x, y, width, height);
   #else

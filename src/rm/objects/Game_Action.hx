@@ -14,29 +14,29 @@ import rm.types.RPG.Effect;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_Action {
- public static var EFFECT_RECOVER_HP: Int;
- public static var EFFECT_RECOVER_MP: Int;
- public static var EFFECT_GAIN_TP: Int;
- public static var EFFECT_ADD_STATE: Int;
- public static var EFFECT_REMOVE_STATE: Int;
- public static var EFFECT_ADD_BUFF: Int;
- public static var EFFECT_ADD_DEBUFF: Int;
- public static var EFFECT_REMOVE_BUFF: Int;
- public static var EFFECT_REMOVE_DEBUFF: Int;
- public static var EFFECT_SPECIAL: Int;
- public static var EFFECT_GROW: Int;
- public static var EFFECT_LEARN_SKILL: Int;
- public static var EFFECT_COMMON_EVENT: Int;
- public static var SPECIAL_EFFECT_ESCAPE: Int;
- public static var HITTYPE_CERTAIN: Int;
- public static var HITTYPE_PHYSICAL: Int;
- public static var HITTYPE_MAGICAL: Int;
+ public static var EFFECT_RECOVER_HP: Float;
+ public static var EFFECT_RECOVER_MP: Float;
+ public static var EFFECT_GAIN_TP: Float;
+ public static var EFFECT_ADD_STATE: Float;
+ public static var EFFECT_REMOVE_STATE: Float;
+ public static var EFFECT_ADD_BUFF: Float;
+ public static var EFFECT_ADD_DEBUFF: Float;
+ public static var EFFECT_REMOVE_BUFF: Float;
+ public static var EFFECT_REMOVE_DEBUFF: Float;
+ public static var EFFECT_SPECIAL: Float;
+ public static var EFFECT_GROW: Float;
+ public static var EFFECT_LEARN_SKILL: Float;
+ public static var EFFECT_COMMON_EVENT: Float;
+ public static var SPECIAL_EFFECT_ESCAPE: Float;
+ public static var HITTYPE_CERTAIN: Float;
+ public static var HITTYPE_PHYSICAL: Float;
+ public static var HITTYPE_MAGICAL: Float;
 
- private var _subjectActorId: Int;
+ private var _subjectActorId: Float;
 
- private var _subjectEnemyIndex: Int;
+ private var _subjectEnemyIndex: Float;
 
- private var _targetIndex: Int;
+ private var _targetIndex: Float;
 
  private var _forcing: Bool;
 
@@ -55,13 +55,13 @@ extern class Game_Action {
 
  public function setGuard(): Void;
 
- public function setSkill(skillId: Int): Void;
+ public function setSkill(skillId: Float): Void;
 
- public function setItem(itemId: Int): Void;
+ public function setItem(itemId: Float): Void;
 
  public function setItemObject(object: UsableItem): Void;
 
- public function setTarget(targetIndex: Int): Void;
+ public function setTarget(targetIndex: Float): Void;
 
  public function item(): UsableItem;
 
@@ -69,9 +69,9 @@ extern class Game_Action {
 
  public function isItem(): Bool;
 
- public function numRepeats(): Int;
+ public function numRepeats(): Float;
 
- public function checkItemScope(list: Array<Int>): Bool;
+ public function checkItemScope(list: Array<Float>): Bool;
 
  public function isForOpponent(): Bool;
 
@@ -87,11 +87,11 @@ extern class Game_Action {
 
  public function isForAll(): Bool;
 
- public function needsSelection(): Int;
+ public function needsSelection(): Float;
 
- public function numTargets(): Int;
+ public function numTargets(): Float;
 
- public function checkDamageType(list: Array<Int>): Bool;
+ public function checkDamageType(list: Array<Float>): Bool;
 
  public function isHpEffect(): Bool;
 
@@ -169,23 +169,23 @@ extern class Game_Action {
  public function calcElementRate(target: Game_Battler): Float;
 
  public function elementsMaxRate(target: Game_Battler,
-  elements: Array<Int>): Float;
+  elements: Array<Float>): Float;
 
- public function applyCritical(damage: Int): Float;
+ public function applyCritical(damage: Float): Float;
 
- public function applyVariance(damage: Int, variance: Float): Float;
+ public function applyVariance(damage: Float, variance: Float): Float;
 
- public function applyGuard(damage: Int, target: Game_Battler): Float;
+ public function applyGuard(damage: Float, target: Game_Battler): Float;
 
- public function executeDamage(target: Game_Battler, value: Int): Void;
+ public function executeDamage(target: Game_Battler, value: Float): Void;
 
- public function executeHpDamage(target: Game_Battler, value: Int): Void;
+ public function executeHpDamage(target: Game_Battler, value: Float): Void;
 
- public function executeMpDamage(target: Game_Battler, value: Int): Void;
+ public function executeMpDamage(target: Game_Battler, value: Float): Void;
 
- public function gainDrainedHp(value: Int): Void;
+ public function gainDrainedHp(value: Float): Void;
 
- public function gainDrainedMp(value: Int): Void;
+ public function gainDrainedMp(value: Float): Void;
  public function applyItemEffect(target: Game_Battler, effect: Effect): Void;
 
  public function itemEffectRecoverHp(target: Game_Battler,

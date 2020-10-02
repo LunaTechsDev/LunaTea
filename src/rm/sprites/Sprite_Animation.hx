@@ -39,19 +39,19 @@ extern class Sprite_Animation extends Sprite {
 
  private var _mirror: Bool;
 
- private var _delay: Int;
+ private var _delay: Float;
 
  private var _rate_: Float; // TODO: Not sure if intentionaL?
 
- private var _duration: Int;
+ private var _duration: Float;
 
- private var _flashColor: Array<Int>;
+ private var _flashColor: Array<Float>;
 
- private var _flashDuration: Int;
+ private var _flashDuration: Float;
 
- private var _screenFlashDuration: Int;
+ private var _screenFlashDuration: Float;
 
- private var _hidingDuration: Int;
+ private var _hidingDuration: Float;
 
  private var _bitmap1: Bitmap;
 
@@ -67,7 +67,7 @@ extern class Sprite_Animation extends Sprite {
 
  public function initMembers(): Void;
  public function setup(target: Sprite_Base, animation: Animation,
-  mirror: Bool, delay: Int): Void;
+  mirror: Bool, delay: Float): Void;
 
  /**
   * Removes the sprite animation.
@@ -183,13 +183,13 @@ extern class Sprite_Animation extends Sprite {
   * @returns {number}
   * @memberof Sprite_Animation
   */
- public function currentFrameIndex(): Int;
+ public function currentFrameIndex(): Float;
 
- public function updateAllCellSprites(frame: Array<Array<Int>>): Void;
- public function updateCellSprite(sprite: Sprite, cell: Array<Int>): Void;
+ public function updateAllCellSprites(frame: Array<Array<Float>>): Void;
+ public function updateCellSprite(sprite: Sprite, cell: Array<Float>): Void;
  public function processTimingData(timing: AnimationTiming): Void;
- public function startFlash(color: Array<Int>, duration: Int): Void;
- public function startScreenFlash(color: Array<Int>, duration: Int): Void;
+ public function startFlash(color: Array<Float>, duration: Float): Void;
+ public function startScreenFlash(color: Array<Float>, duration: Float): Void;
 
  /**
   * Starts hiding the sprite animation.
@@ -197,5 +197,5 @@ extern class Sprite_Animation extends Sprite {
   * @param {number} duration The duration of the hide.
   * @memberof Sprite_Animation
   */
- public function startHiding(duration: Int): Void;
+ public function startHiding(duration: Float): Void;
 }

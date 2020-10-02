@@ -135,7 +135,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of the terrtain battleback 1 bitmap.
   * @memberof Spriteset_Battle
   */
- public function terrainBattleback1Name(type: Int): String; // TODO: Enum Terrain Type
+ public function terrainBattleback1Name(type: Float): String; // TODO: Enum Terrain Type
 
  /**
   * Given the specified terrain type, return
@@ -144,7 +144,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   * @returns {string} Name of the terrain battleback 2 bitmap.
   * @memberof Spriteset_Battle
   */
- public function terrainBattleback2Name(type: Int): String;
+ public function terrainBattleback2Name(type: Float): String;
 
  /**
   *
@@ -178,7 +178,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   */
  public function shipBattleback2Name(): String;
 
- public function autotileType(z: Int): Int; // TODO: Add Enum For Auto Tile Type
+ public function autotileType(z: Float): Float; // TODO: Add Enum For Auto Tile Type
 
  /**
   * Creates sprite enemies for the battle spriteset.
@@ -187,7 +187,7 @@ extern class Spriteset_Battle extends Spriteset_Base {
   */
  public function createEnemies(): Void;
 
- public function compareEnemySprite(a: Sprite_Enemy, b: Sprite_Enemy): Int;
+ public function compareEnemySprite(a: Sprite_Enemy, b: Sprite_Enemy): Float;
 
  /**
   * Creates sprite actors for the battle spriteset.

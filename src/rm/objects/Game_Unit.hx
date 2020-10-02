@@ -65,12 +65,12 @@ extern class Game_Unit {
  /**
   * Returns the agility of the unit.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Unit
   */
- public function agility(): Int;
+ public function agility(): Float;
 
- public function tgrSum(): Int;
+ public function tgrSum(): Float;
 
  /**
   * Returns a random target from the game unit.
@@ -88,8 +88,8 @@ extern class Game_Unit {
   */
  public function randomDeadTarget(): Game_Battler;
 
- public function smoothTarget(index: Int): Game_Battler;
- public function smoothDeadTarget(index: Int): Game_Battler;
+ public function smoothTarget(index: Float): Game_Battler;
+ public function smoothDeadTarget(index: Float): Game_Battler;
 
  /**
   * Clears the action results.

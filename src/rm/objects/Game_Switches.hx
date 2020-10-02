@@ -18,7 +18,7 @@ extern class Game_Switches {
  public function new(): Void;
  public function initialize(): Void;
  public function clear(): Void;
- public function value(switchId: Int): Bool;
- public function setValue(switchId: Int, value: Bool): Void;
+ public function value(switchId: Float): Bool;
+ public function setValue(switchId: Float, value: Bool): Void;
  public function onChange(): Void;
 }

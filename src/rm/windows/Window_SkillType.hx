@@ -38,7 +38,7 @@ extern class Window_SkillType extends Window_Command {
   * @param  y
   * @memberof Window_SkillType
   */
- public function new(x: Int, y: Int): Void;
+ public function new(x: Float, y: Float): Void;
 
  /**
   * Sets the current actor for the skill type window.

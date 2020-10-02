@@ -13,17 +13,17 @@ extern class HTML5Audio {
 
  private var _audioElement: AudioElement;
 
- private var _gainTweenInterval: Int;
+ private var _gainTweenInterval: Float;
 
- private var _tweenGain: Int;
+ private var _tweenGain: Float;
 
- private var _tweenTargetGain: Int;
+ private var _tweenTargetGain: Float;
 
- private var _tweenGainStep: Int;
+ private var _tweenGainStep: Float;
 
  private var _staticSePath: Bool;
 
- private var _volume: Int;
+ private var _volume: Float;
 
  private var _loadListeners: Array<() -> Void>;
 
@@ -49,7 +49,7 @@ extern class HTML5Audio {
   * @property volume
   * @type Number
   */
- public var volume: Int;
+ public var volume: Float;
 
  /**
   * Sets up the Html5 Audio.
@@ -137,7 +137,7 @@ extern class HTML5Audio {
   * @method fadeIn
   * @param {Number} duration Fade-in time in seconds
   */
- public function fadeIn(duration: Int): Void;
+ public function fadeIn(duration: Float): Void;
 
  /**
   * Performs the audio fade-out.
@@ -146,7 +146,7 @@ extern class HTML5Audio {
   * @method fadeOut
   * @param {Number} duration Fade-out time in seconds
   */
- public function fadeOut(duration: Int): Void;
+ public function fadeOut(duration: Float): Void;
 
  /**
   * Gets the seek position of the audio.
@@ -259,5 +259,5 @@ extern class HTML5Audio {
   * @param {Number} volume
   * @private
   */
- private function _applyTweenValue(volume: Int): Void;
+ private function _applyTweenValue(volume: Float): Void;
 }

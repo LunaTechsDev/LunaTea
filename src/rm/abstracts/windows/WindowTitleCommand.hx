@@ -7,8 +7,8 @@ import rm.windows.Window_TitleCommand;
 @:forwardStatics
 abstract WindowTitleCommand(Window_TitleCommand) from Window_TitleCommand
  to Window_TitleCommand {
- public inline function new(x: Int, y: Int, ?width: Int,
-   ?height: Int): Window_TitleCommand {
+ public inline function new(x: Float, y: Float, ?width: Float,
+   ?height: Float): Window_TitleCommand {
   #if compileMV
   this = new Window_TitleCommand(x, y);
   #else

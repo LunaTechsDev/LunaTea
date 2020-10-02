@@ -6,7 +6,7 @@ import rm.objects.Game_CommonEvent;
 @:forwardStatics
 abstract GameCommonEvent(Game_CommonEvent) from Game_CommonEvent
  to Game_CommonEvent {
- public inline function new(eventId: Int) {
+ public inline function new(eventId: Float) {
   this = new Game_CommonEvent(eventId);
  }
 }

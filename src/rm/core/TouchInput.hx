@@ -16,7 +16,7 @@ extern class TouchInput {
 
  private static var _screenPressed: Bool;
 
- private static var _pressedTime: Int;
+ private static var _pressedTime: Float;
 
  private static var _events: TouchInputEvents;
 
@@ -32,11 +32,11 @@ extern class TouchInput {
 
  private static var _wheelY: Float;
 
- private static var _x: Int;
+ private static var _x: Float;
 
- private static var _y: Int;
+ private static var _y: Float;
 
- private static var _date: Int;
+ private static var _date: Float;
 
  /**
   * The wait time of the pseudo key repeat in frames.
@@ -81,7 +81,7 @@ extern class TouchInput {
   * @property x
   * @type Number
   */
- public static var x: Int;
+ public static var x: Float;
 
  /**
   * [read-only] The y coordinate on the canvas area of the latest touch event.
@@ -90,7 +90,7 @@ extern class TouchInput {
   * @property y
   * @type Number
   */
- public static var y: Int;
+ public static var y: Float;
 
  /**
   * [read-only] The time of the last input in milliseconds.
@@ -99,7 +99,7 @@ extern class TouchInput {
   * @property date
   * @type Number
   */
- public static var date: Int;
+ public static var date: Float;
 
  /**
   * Initializes the touch system.
@@ -299,7 +299,7 @@ extern class TouchInput {
   * @param {Number} y
   * @private
   */
- private static function _onTrigger(x: Int, y: Int): Void;
+ private static function _onTrigger(x: Float, y: Float): Void;
 
  /**
   * @static
@@ -308,7 +308,7 @@ extern class TouchInput {
   * @param {Number} y
   * @private
   */
- private static function _onCancel(x: Int, y: Int): Void;
+ private static function _onCancel(x: Float, y: Float): Void;
 
  /**
   * @static
@@ -317,7 +317,7 @@ extern class TouchInput {
   * @param {Number} y
   * @private
   */
- private static function _onMove(x: Int, y: Int): Void;
+ private static function _onMove(x: Float, y: Float): Void;
 
  /**
   * @static
@@ -326,5 +326,5 @@ extern class TouchInput {
   * @param {Number} y
   * @private
   */
- private static function _onRelease(x: Int, y: Int): Void;
+ private static function _onRelease(x: Float, y: Float): Void;
 }

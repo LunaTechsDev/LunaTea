@@ -32,10 +32,10 @@ extern class Input {
  private var _gamepadStates: Array<Array<Bool>>;
  private var _latestButton: String;
  private var _pressedTime: Float;
- private var _dir4: Int;
- private var _dir8: Int;
+ private var _dir4: Float;
+ private var _dir8: Float;
  private var _preferredAxis: String;
- private var _date: Int;
+ private var _date: Float;
 
  /**
   * The wait time of the key repeat in frames.
@@ -44,7 +44,7 @@ extern class Input {
   * @property keyRepeatWait
   * @type Number
   */
- public static var keyRepeatWait: Int;
+ public static var keyRepeatWait: Float;
 
  /**
   * The interval of the key repeat in frames.
@@ -53,7 +53,7 @@ extern class Input {
   * @property keyRepeatInterval
   * @type Number
   */
- public static var keyRepeatInterval: Int;
+ public static var keyRepeatInterval: Float;
 
  /**
   * A hash table to convert from a virtual key code to a mapped key name.
@@ -90,7 +90,7 @@ extern class Input {
   * @property dir4
   * @type Number
   */
- public static var dir4: Int;
+ public static var dir4: Float;
 
  /**
   * [read-only] The eight direction value as a number of the numpad, or 0 for neutral.
@@ -99,7 +99,7 @@ extern class Input {
   * @property dir8
   * @type Number
   */
- public static var dir8: Int;
+ public static var dir8: Float;
 
  /**
   * [read-only] The time of the last input in milliseconds.
@@ -108,7 +108,7 @@ extern class Input {
   * @property date
   * @type Number
   */
- public static var date: Int;
+ public static var date: Float;
 
  /**
   * Initializes the input system.
@@ -203,7 +203,7 @@ extern class Input {
   * @return {Boolean}
   * @private
   */
- private static function _shouldPreventDefault(keyCode: Int): Bool;
+ private static function _shouldPreventDefault(keyCode: Float): Bool;
 
  /**
   * @static
@@ -248,7 +248,7 @@ extern class Input {
   * @return {Number}
   * @private
   */
- private function _signX(): Int;
+ private function _signX(): Float;
 
  /**
   * @static
@@ -256,7 +256,7 @@ extern class Input {
   * @return {Number}
   * @private
   */
- private function _signY(): Int;
+ private function _signY(): Float;
 
  /**
   * @static
@@ -266,7 +266,7 @@ extern class Input {
   * @return {Number}
   * @private
   */
- private function _makeNumpadDirection(x: Int, y: Int): Int;
+ private function _makeNumpadDirection(x: Float, y: Float): Float;
 
  /**
   * @static

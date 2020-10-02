@@ -16,7 +16,7 @@ import rm.core.Rectangle;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_NameEdit {
  private var _name: String;
- private var _index: Int;
+ private var _index: Float;
 
  /**
   * Creates an instance of Window_NameEdit.
@@ -24,7 +24,7 @@ extern class Window_NameEdit {
   * @param {number} maxLength
   * @memberof Window_NameEdit
   */
- public function new(actor: Game_Actor, maxLength: Int);
+ public function new(actor: Game_Actor, maxLength: Float);
 
  /**
   * Returns the window width.
@@ -32,7 +32,7 @@ extern class Window_NameEdit {
   * @returns {number}
   * @memberof Window_NameEdit
   */
- public function windowWidth(): Int;
+ public function windowWidth(): Float;
 
  /**
   * Returns the window height.
@@ -40,7 +40,7 @@ extern class Window_NameEdit {
   * @returns {number}
   * @memberof Window_NameEdit
   */
- public function windowHeight(): Int;
+ public function windowHeight(): Float;
 
  // "name" is defines already by superclass(PIXI.DisplayObject).
  // name(): String;
@@ -55,7 +55,7 @@ extern class Window_NameEdit {
   * @returns {number}
   * @memberof Window_NameEdit
   */
- public function faceWidth(): Int;
+ public function faceWidth(): Float;
 
  /**
   * Returns the width of a character.
@@ -63,10 +63,10 @@ extern class Window_NameEdit {
   * @returns {number}
   * @memberof Window_NameEdit
   */
- public function charWidth(): Int;
+ public function charWidth(): Float;
 
- public function left(): Int;
- public function underlineRect(index: Int): Rectangle;
+ public function left(): Float;
+ public function underlineRect(index: Float): Rectangle;
 
  /**
   * Returns the color of the underline as a css color String.
@@ -82,7 +82,7 @@ extern class Window_NameEdit {
   * @param {number} index
   * @memberof Window_NameEdit
   */
- public function drawUnderline(index: Int): Void;
+ public function drawUnderline(index: Float): Void;
 
  /**
   * Draws a character within the window at the specified index.
@@ -90,7 +90,7 @@ extern class Window_NameEdit {
   * @param {number} index
   * @memberof Window_NameEdit
   */
- public function drawChar(index: Int): Void;
+ public function drawChar(index: Float): Void;
 
  /**
   * Refreshes the window contents.

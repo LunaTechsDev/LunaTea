@@ -7,7 +7,7 @@ import rm.windows.Window_SkillList;
 @:forwardStatics
 abstract WindowSkillList(Window_SkillList) from Window_SkillList
  to Window_SkillList {
- public inline function new(x: Int, y: Int, width: Int, height: Int) {
+ public inline function new(x: Float, y: Float, width: Float, height: Float) {
   #if compileMV
   this = new Window_SkillList(x, y, width, height);
   #else

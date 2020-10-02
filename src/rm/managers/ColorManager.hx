@@ -24,7 +24,7 @@ extern class ColorManager {
   * @param windowSkinColorIndex
   * @returns Color
   */
- public static function textColor(windowSkinColorIndex: Int): Color;
+ public static function textColor(windowSkinColorIndex: Float): Color;
 
  /**
   * Uses the normal color, index 0
@@ -165,7 +165,7 @@ extern class ColorManager {
   * @param change
   * @return Color
   */
- public static function paramChangeTextColor(change: Int): Color;
+ public static function paramChangeTextColor(change: Float): Color;
 
  /**
   * Returns the color based on Color Type.
@@ -227,7 +227,7 @@ class ColorManager {
   * Loads the text color using the window skin color Index.
   * @param windowSkinColorIndex
   */
- public static function textColor(windowSkinColorIndex: Int): Color {
+ public static function textColor(windowSkinColorIndex: Float): Color {
   return baseWindow.textColor(windowSkinColorIndex);
  }
 
@@ -412,7 +412,7 @@ class ColorManager {
   * @param change
   * @return Color
   */
- public static function paramChangeTextColor(change: Int): Color {
+ public static function paramChangeTextColor(change: Float): Color {
   return baseWindow.paramchangeTextColor(change);
  };
 

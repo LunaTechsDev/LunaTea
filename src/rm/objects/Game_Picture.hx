@@ -21,42 +21,42 @@ extern class Game_Picture {
 
  private var _origin: Float;
 
- private var _x: Int;
+ private var _x: Float;
 
- private var _y: Int;
+ private var _y: Float;
 
  private var _scaleX: Float;
 
  private var _scaleY: Float;
 
- private var _opacity: Int;
+ private var _opacity: Float;
 
  /**
   * Blend mode, accepts an integer.
   */
- private var _blendMode: Int;
+ private var _blendMode: Float;
 
- private var _targetX: Int;
+ private var _targetX: Float;
 
- private var _targetY: Int;
+ private var _targetY: Float;
 
  private var _targetScaleX: Float;
 
  private var _targetScaleY: Float;
 
- private var _targetOpacity: Int;
+ private var _targetOpacity: Float;
 
- private var _duration: Int;
+ private var _duration: Float;
 
  /**
   * Tone of the picture, in RGB format.
   * 0 - 255, for all three tone elements.
   */
- private var _tone: Array<Int>;
+ private var _tone: Array<Float>;
 
- private var _toneTarget: Array<Int>;
+ private var _toneTarget: Array<Float>;
 
- private var _toneDuration: Int;
+ private var _toneDuration: Float;
 
  private var _angle: Float;
 
@@ -87,7 +87,7 @@ extern class Game_Picture {
   * @returns {number}
   * @memberof Game_Picture
   */
- public function x(): Int;
+ public function x(): Float;
 
  /**
   * Returns the picture y coordinate.
@@ -95,7 +95,7 @@ extern class Game_Picture {
   * @returns {number}
   * @memberof Game_Picture
   */
- public function y(): Int;
+ public function y(): Float;
 
  /**
   * Returns x scale of the game picture.
@@ -119,7 +119,7 @@ extern class Game_Picture {
   * @returns {number}
   * @memberof Game_Picture
   */
- public function opacity(): Int;
+ public function opacity(): Float;
 
  /**
   * Returns the blend mode of the game picture.
@@ -127,7 +127,7 @@ extern class Game_Picture {
   * @returns {number}
   * @memberof Game_Picture
   */
- public function blendMode(): Int; // TODO: turn this into an enum
+ public function blendMode(): Float; // TODO: turn this into an enum
 
  /**
   * Returns the tone of the game picture.
@@ -135,7 +135,7 @@ extern class Game_Picture {
   * @returns {Array<number>}
   * @memberof Game_Picture
   */
- public function tone(): Array<Int>;
+ public function tone(): Array<Float>;
 
  /**
   * Returns the angle of the game picture.
@@ -149,12 +149,12 @@ extern class Game_Picture {
  public function initTarget(): Void;
  public function initTone(): Void;
  public function initRotation(): Void;
- public function show(name: String, origin: Float, x: Int, y: Int,
-  scaleX: Float, scaleY: Float, opacity: Int, blendMode: Int): Void;
- public function move(origin: Float, x: Int, y: Int, scaleX: Float,
-  scaleY: Float, opacity: Int, blendMode: Int, duration: Int): Void;
+ public function show(name: String, origin: Float, x: Float, y: Float,
+  scaleX: Float, scaleY: Float, opacity: Float, blendMode: Float): Void;
+ public function move(origin: Float, x: Float, y: Float, scaleX: Float,
+  scaleY: Float, opacity: Float, blendMode: Float, duration: Float): Void;
  public function rotate(speed: Float): Void;
- public function tint(tone: Array<Int>, duration: Int): Void;
+ public function tint(tone: Array<Float>, duration: Float): Void;
 
  /**
   * Erases the game picture.

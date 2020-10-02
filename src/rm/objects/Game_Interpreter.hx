@@ -6,10 +6,10 @@ import haxe.extern.EitherType;
 import js.lib.Object;
 
 typedef Branch = {
- var Indent: EitherType<Int, Bool>;
+ var Indent: EitherType<Float, Bool>;
 }
 
-// {[indent: Int]: Int | Bool}
+// {[indent: Float]: Float | Bool}
 
 /**
  * -----------------------------------------------------------------------------
@@ -23,27 +23,27 @@ typedef Branch = {
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Interpreter {
- private var _depth: Int;
+ private var _depth: Float;
 
  private var _branch: Object; // Branch
 
  private var _params: Array<Any>;
 
- private var _indent: Int;
+ private var _indent: Float;
 
- private var _frameCount: Int;
+ private var _frameCount: Float;
 
- private var _freezeChecker: Int;
+ private var _freezeChecker: Float;
 
- private var _mapId: Int;
+ private var _mapId: Float;
 
- private var _eventId: Int;
+ private var _eventId: Float;
 
  private var _list: Array<EventCommand>;
 
- private var _index: Int;
+ private var _index: Float;
 
- private var _waitCount: Int;
+ private var _waitCount: Float;
 
  private var _waitMode: InterpreterWaitMode;
 
@@ -53,7 +53,7 @@ extern class Game_Interpreter {
 
  private var _childInterpreter: Game_Interpreter;
 
- public function new(depth: Int);
+ public function new(depth: Float);
  public function checkOverflow(): Void;
 
  /**
@@ -68,18 +68,18 @@ extern class Game_Interpreter {
   * event Id.
   *
   * @param {Array<RPG.EventCommand>} list
-  * @param {Int} eventId
+  * @param {Float} eventId
   * @memberof Game_Interpreter
   */
- public function setup(list: Array<EventCommand>, eventId: Int): Void;
+ public function setup(list: Array<EventCommand>, eventId: Float): Void;
 
  /**
   * Returns the currrent eventId.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Interpreter
   */
- public function eventId(): Int;
+ public function eventId(): Float;
 
  /**
   * Returns true if the event is on the current map.
@@ -137,12 +137,12 @@ extern class Game_Interpreter {
  /**
   * sets a specified wait duration for the interpreter.
   *
-  * @param {Int} duration
+  * @param {Float} duration
   * @memberof Game_Interpreter
   */
- public function wait(duration: Int): Void;
+ public function wait(duration: Float): Void;
 
- public function fadeSpeed(): Int;
+ public function fadeSpeed(): Float;
 
  /**
   * Executes the event command;
@@ -185,25 +185,25 @@ extern class Game_Interpreter {
  /**
   * Returns the next event code.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Interpreter
   */
- public function nextEventCode(): Int;
+ public function nextEventCode(): Float;
 
- public function iterateActorId(param: Int,
+ public function iterateActorId(param: Float,
   callback: (actor: Game_Actor) -> Void): Void;
- public function iterateActorEx(param1: Int, param2: Int,
+ public function iterateActorEx(param1: Float, param2: Float,
   callback: (actor: Game_Actor) -> Void): Void;
- public function iterateActorIndex(param: Int,
+ public function iterateActorIndex(param: Float,
   callback: (actor: Game_Actor) -> Void): Void;
- public function iterateEnemyIndex(param: Int,
+ public function iterateEnemyIndex(param: Float,
   callback: (enemt: Game_Enemy) -> Void): Void;
- public function iterateBattler(param1: Int, param2: Int,
+ public function iterateBattler(param1: Float, param2: Float,
   callback: (battler: Game_Battler) -> Void): Void;
- public function character(param: Int): Game_Character;
- public function operateValue(operation: Int, operandType: Int,
-  operand: Int): Int;
- public function changeHp(target: Int, value: Int, allowDeath: Bool): Void;
+ public function character(param: Float): Game_Character;
+ public function operateValue(operation: Float, operandType: Float,
+  operand: Float): Float;
+ public function changeHp(target: Float, value: Float, allowDeath: Bool): Void;
 
  /**
   * Show Text
@@ -236,14 +236,14 @@ extern class Game_Interpreter {
   *
   * @param params
   */
- public function setupNumInput(params: Array<Int>): Void;
+ public function setupNumInput(params: Array<Float>): Void;
 
  /**
   * Select Item
   */
  public function command104(): Bool;
 
- public function setupItemChoice(params: Array<Int>): Void;
+ public function setupItemChoice(params: Array<Float>): Void;
 
  /**
   * Show Scrolling Text
@@ -290,7 +290,7 @@ extern class Game_Interpreter {
   */
  public function command117(): Bool;
 
- public function setupChild(list: Array<EventCommand>, eventId: Int): Void;
+ public function setupChild(list: Array<EventCommand>, eventId: Float): Void;
 
  /**
   * Label
@@ -302,7 +302,7 @@ extern class Game_Interpreter {
   */
  public function command119(): Bool;
 
- public function jumpTo(index: Int): Void;
+ public function jumpTo(index: Float): Void;
 
  /**
   * Control Switches
@@ -314,9 +314,10 @@ extern class Game_Interpreter {
   */
  public function command122(): Bool;
 
- public function gameDataOperand(type: Int, param1: Int, param2: Int): Int;
- public function operateVariable(variableId: Int, operationType: Int,
-  value: Int): Void;
+ public function gameDataOperand(type: Float, param1: Float,
+  param2: Float): Float;
+ public function operateVariable(variableId: Float, operationType: Float,
+  value: Float): Void;
 
  /**
   * Control Self Switch

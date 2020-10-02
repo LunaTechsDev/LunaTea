@@ -15,14 +15,14 @@ extern class Window_Command extends Window_Selectable {
   * @param {number} y
   * @memberof Window_Command
   */
- public function new(x: Int, y: Int): Void;
+ public function new(x: Float, y: Float): Void;
 
- public function initialize(x: Int, y: Int): Void;
+ public function initialize(x: Float, y: Float): Void;
  #else
  public function new(rect: Rectangle);
  public function initialize(rect: Rectangle): Void;
  #end
- 
+
  private var _list: Array<CommandItem>;
 
  /**
@@ -31,7 +31,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {number}
   * @memberof Window_Command
   */
- public function windowWidth(): Int;
+ public function windowWidth(): Float;
 
  /**
   * Returns the height of the window;
@@ -39,7 +39,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {number}
   * @memberof Window_Command
   */
- public function windowHeight(): Int;
+ public function windowHeight(): Float;
 
  /**
   * Returns the number of visible rows within the window.
@@ -47,7 +47,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {number}
   * @memberof Window_Command
   */
- public function numVisibleRows(): Int;
+ public function numVisibleRows(): Float;
 
  /**
   * Returns the maximum number of items within the window.
@@ -55,7 +55,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {number}
   * @memberof Window_Command
   */
- public function maxItems(): Int;
+ public function maxItems(): Float;
 
  /**
   * Clears the list of commands from the window;
@@ -90,7 +90,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {String}
   * @memberof Window_Command
   */
- public function commandName(index: Int): String;
+ public function commandName(index: Float): String;
 
  /**
   * Returns the command symbol given an index.
@@ -99,7 +99,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {String}
   * @memberof Window_Command
   */
- public function commandSymbol(index: Int): String;
+ public function commandSymbol(index: Float): String;
 
  /**
   * Determines if the command is enabled;
@@ -108,7 +108,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {boolean}
   * @memberof Window_Command
   */
- public function isCommandEnabled(index: Int): Bool;
+ public function isCommandEnabled(index: Float): Bool;
 
  /**
   * Returns the command object at the current index.
@@ -158,7 +158,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {number}
   * @memberof Window_Command
   */
- public function findExt(ext: Any): Int;
+ public function findExt(ext: Any): Float;
 
  /**
   * Selects a command object based on the ext property.

@@ -14,9 +14,9 @@ import rm.types.LunaTea.Direction;
 extern class Game_Vehicle extends Game_Character {
  private var _type: String;
 
- private var _mapId: Int;
+ private var _mapId: Float;
 
- private var _altitude: Int;
+ private var _altitude: Float;
 
  private var _driving: Bool;
 
@@ -76,11 +76,11 @@ extern class Game_Vehicle extends Game_Character {
   */
  public function refresh(): Void;
 
- public function setLocation(mapId: Int, x: Int, y: Int): Void;
+ public function setLocation(mapId: Float, x: Float, y: Float): Void;
 
- public function pos(x: Int, y: Int): Bool;
+ public function pos(x: Float, y: Float): Bool;
 
- public function isMapPassable(x: Int, y: Int, d: Direction): Bool;
+ public function isMapPassable(x: Float, y: Float, d: Direction): Bool;
 
  /**
   * Gets on the vehicle.
@@ -124,7 +124,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {number}
   * @memberof Game_Vehicle
   */
- public function screenY(): Int;
+ public function screenY(): Float;
 
  /**
   * Returns the shadow x position of the vehicle's shadow.
@@ -132,7 +132,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {number}
   * @memberof Game_Vehicle
   */
- public function shadowX(): Int;
+ public function shadowX(): Float;
 
  /**
   * Returns the shadow y position of the vehicle's shadow.
@@ -140,7 +140,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {number}
   * @memberof Game_Vehicle
   */
- public function shadowY(): Int;
+ public function shadowY(): Float;
 
  /**
   * Returns the shadow opacity of the vehicle's shadow.
@@ -148,7 +148,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {number}
   * @memberof Game_Vehicle
   */
- public function shadowOpacity(): Int;
+ public function shadowOpacity(): Float;
 
  /**
   * Returns true if the vehicle can move.
@@ -185,7 +185,7 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {number}
   * @memberof Game_Vehicle
   */
- public function maxAltitude(): Int;
+ public function maxAltitude(): Float;
 
  /**
   * Returns true if the vehicle is at it's lowest altitude.
@@ -220,5 +220,5 @@ extern class Game_Vehicle extends Game_Character {
   * @returns {Bool}
   * @memberof Game_Vehicle
   */
- public function isLandOk(x: Int, y: Int, d: Direction): Bool;
+ public function isLandOk(x: Float, y: Float, d: Direction): Bool;
 }

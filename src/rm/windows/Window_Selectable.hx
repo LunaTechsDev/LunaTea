@@ -19,7 +19,7 @@ extern class Window_Selectable extends Window_Scrollable {
  * @type {number}
  * @memberof Window_Selectable
  */
-private var _index: Int;
+private var _index: Float;
 
 /**
  * The boolean property that determines if the cursor is
@@ -31,15 +31,17 @@ private var _index: Int;
 private var _cursorFixed: Bool;
 
 private var _cursorAll: Bool;
-private var _stayCount: Int;
+private var _stayCount: Float;
 private var _helpWindow: Window_Help;
 private var _handlers: Any;
 private var _touching: Bool;
 #if compileMV
 private var _scrollX: Float;
 private var _scrollY: Float;
-public function new(x: Int, y: Int, width: Int, height: Int): Void;
-public function initialize(x: Int, y: Int, height: Int, width: Int): Void;
+public function new(x: Float, y: Float, width: Float, height: Float): Void;
+
+public function initialize(x: Float, y: Float, height: Float,
+ width: Float): Void;
 #else
 public function new(rect: Rectangle);
 public function initialize(rect: Rectangle): Void;
@@ -49,22 +51,22 @@ public function initialize(rect: Rectangle): Void;
  * visibility is set to false.
  * @param index
  */
-public function forceSelect(index: Int): Void;
+public function forceSelect(index: Float): Void;
 
 /**
  * Smoothly scrolls to the index.
  * Cursor visibility is set to true.
  * @param index
  */
-public function smoothSelect(index: Int): Void;
+public function smoothSelect(index: Float): Void;
 
-public function itemRectWithPadding(index: Int): Rectangle;
+public function itemRectWithPadding(index: Float): Rectangle;
 
 /**
  * Return the rectangle for the line item with padding.
  * @param index
  */
-public function itemLineRect(index: Int): Rectangle;
+public function itemLineRect(index: Float): Rectangle;
 
 /**
  * Overwrite this or add to it to add your own draw functions.
@@ -108,10 +110,10 @@ public function onTouchCancel(): Void;
 /**
  * Returns the current position of the _index property.
  *
- * @returns {Int}
+ * @returns {Float}
  * @memberof Window_Selectable
  */
-public function index(): Int;
+public function index(): Float;
 
 /**
  * Returns true if the _cursorFixed property is true;
@@ -138,7 +140,7 @@ public function setCursorAll(cursorAll: Bool): Void;
  * @returns {number}
  * @memberof Window_Selectable
  */
-public function maxCols(): Int;
+public function maxCols(): Float;
 
 /**
  * Returns the maximum number of items within the window;
@@ -147,7 +149,7 @@ public function maxCols(): Int;
  * @returns {number}
  * @memberof Window_Selectable
  */
-public function maxItems(): Int;
+public function maxItems(): Float;
 
 public function spacing(): Float;
 
@@ -173,7 +175,7 @@ public function itemHeight(): Float;
  * @param {number} index
  * @memberof Window_Selectable
  */
-public function select(index: Int): Void;
+public function select(index: Float): Void;
 
 /**
  * Deselects the currently selected index.
@@ -189,9 +191,9 @@ public function deselect(): Void;
  */
 public function reselect(): Void;
 
-public function row(): Int;
-public function topRow(): Int;
-public function maxTopRow(): Int;
+public function row(): Float;
+public function topRow(): Float;
+public function maxTopRow(): Float;
 
 /**
  * Sets the current top row of the given a number.
@@ -200,11 +202,11 @@ public function maxTopRow(): Int;
  * @param {number} row
  * @memberof Window_Selectable
  */
-public function setTopRow(row: Int): Void;
+public function setTopRow(row: Float): Void;
 
 public function resetScroll(): Void;
-public function maxPageRows(): Int;
-public function maxPageItems(): Int;
+public function maxPageRows(): Float;
+public function maxPageItems(): Float;
 
 /**
  * Returns true if the window is horizontal;
@@ -214,8 +216,8 @@ public function maxPageItems(): Int;
  */
 public function isHorizontal(): Bool;
 
-public function bottomRow(): Int;
-public function setBottomRow(row: Int): Void;
+public function bottomRow(): Float;
+public function setBottomRow(row: Float): Void;
 
 /**
  * Creates a new rectangle based on itemWidth and itemHeight.
@@ -225,7 +227,7 @@ public function setBottomRow(row: Int): Void;
  * @returns {Rectangle}
  * @memberof Window_Selectable
  */
-public function itemRect(index: Int): Rectangle;
+public function itemRect(index: Float): Rectangle;
 
 /**
  * Creates a new rectangle based on itemWidth and itemHeight
@@ -235,7 +237,7 @@ public function itemRect(index: Int): Rectangle;
  * @returns {Rectangle}
  * @memberof Window_Selectable
  */
-public function itemRectForText(index: Int): Rectangle;
+public function itemRectForText(index: Float): Rectangle;
 
 public function setHelpWindow(helpWindow: Window_Help): Void;
 
@@ -377,9 +379,9 @@ public function isCurrentItemEnabled(): Bool;
  */
 public function drawAllItems(): Void;
 
-public function drawItem(index: Int): Void;
-public function clearItem(index: Int): Void;
-public function redrawItem(index: Int): Void;
+public function drawItem(index: Float): Void;
+public function clearItem(index: Float): Void;
+public function redrawItem(index: Float): Void;
 public function redrawCurrentItem(): Void;
 
 /**

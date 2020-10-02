@@ -6,7 +6,7 @@ import rm.windows.Window_Status;
 @:forward
 @:forwardStatics
 abstract WindowStatus(Window_Status) from Window_Status to Window_Status {
- public inline function new(x: Int, y: Int, width: Int, height: Int) {
+ public inline function new(x: Float, y: Float, width: Float, height: Float) {
   #if compileMV
   this = new Window_Status(x, y, width, height);
   #else

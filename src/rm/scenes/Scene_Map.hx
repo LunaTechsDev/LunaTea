@@ -14,10 +14,10 @@ import rm.windows.Window_ScrollText;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Scene_Map extends Scene_Base {
- private var _waitCount: Int;
- private var _encounterEffectDuration: Int;
+ private var _waitCount: Float;
+ private var _encounterEffectDuration: Float;
  private var _mapLoaded: Bool;
- private var _touchCount: Int;
+ private var _touchCount: Float;
  private var _transfer: Bool;
  private var _spriteset: Spriteset_Map;
  private var _mapNameWindow: Window_MapName;
@@ -272,7 +272,7 @@ extern class Scene_Map extends Scene_Base {
   * @param {number} duration
   * @memberof Scene_Map
   */
- public function startFlashForEncounter(duration: Int): Void;
+ public function startFlashForEncounter(duration: Float): Void;
 
  /**
   * Returns the speed of the encounter effect.
@@ -280,5 +280,5 @@ extern class Scene_Map extends Scene_Base {
   * @returns {number}
   * @memberof Scene_Map
   */
- public function encounterEffectSpeed(): Int;
+ public function encounterEffectSpeed(): Float;
 }

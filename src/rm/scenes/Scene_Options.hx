@@ -17,7 +17,7 @@ extern class Scene_Options extends Scene_MenuBase {
 
  #if !compileMV
  public function optionsWindowRect(): Rectangle;
- public function maxCommands(): Int;
- public function maxVisibleCommands(): Int;
+ public function maxCommands(): Float;
+ public function maxVisibleCommands(): Float;
  #end
 }

@@ -25,15 +25,15 @@ extern class Sprite_Character extends Sprite_Base {
   */
  private var _character: Game_Character;
 
- private var _balloonDuration: Int;
+ private var _balloonDuration: Float;
 
- private var _tilesetId: Int;
+ private var _tilesetId: Float;
 
  private var _upperBody: Sprite;
 
  private var _lowerBody: Sprite;
 
- private var _bushDepth: Int;
+ private var _bushDepth: Float;
 
  /**
   * The current balloon sprite
@@ -71,7 +71,7 @@ extern class Sprite_Character extends Sprite_Base {
   */
  public function isTile(): Bool;
 
- public function tilesetBitmap(tileId: Int): Bitmap;
+ public function tilesetBitmap(tileId: Float): Bitmap;
 
  /**
   * Updates the bitmap of the sprite character.
@@ -118,8 +118,8 @@ extern class Sprite_Character extends Sprite_Base {
   */
  public function updateCharacterFrame(): Void;
 
- public function characterBlockX(): Int;
- public function characterBlockY(): Int;
+ public function characterBlockX(): Float;
+ public function characterBlockY(): Float;
 
  /**
   * Returns the character x pattern.
@@ -143,7 +143,7 @@ extern class Sprite_Character extends Sprite_Base {
   * @returns {number}
   * @memberof Sprite_Character
   */
- public function patternWidth(): Int;
+ public function patternWidth(): Float;
 
  /**
   * Returns the pattern height.
@@ -151,7 +151,7 @@ extern class Sprite_Character extends Sprite_Base {
   * @returns {number}
   * @memberof Sprite_Character
   */
- public function patternHeight(): Int;
+ public function patternHeight(): Float;
 
  public function updateHalfBodySprites(): Void;
  public function createHalfBodySprites(): Void;

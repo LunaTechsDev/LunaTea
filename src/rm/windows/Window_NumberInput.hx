@@ -8,8 +8,8 @@ import rm.sprites.Sprite_Button;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_NumberInput extends Window_Selectable {
  private var _messageWindow: Window_Message;
- private var _number: Int;
- private var _maxDigits: Int;
+ private var _number: Float;
+ private var _maxDigits: Float;
  private var _buttons: Array<Sprite_Button>;
 
  public function new(messageWindow: Window_Message);
@@ -23,7 +23,7 @@ extern class Window_NumberInput extends Window_Selectable {
   * @returns {number}
   * @memberof Window_NumberInput
   */
- public function windowWidth(): Int;
+ public function windowWidth(): Float;
 
  /**
   * Returns the window height.
@@ -31,7 +31,7 @@ extern class Window_NumberInput extends Window_Selectable {
   * @returns {number}
   * @memberof Window_NumberInput
   */
- public function windowHeight(): Int;
+ public function windowHeight(): Float;
 
  /**
   * Returns the item width.
@@ -39,7 +39,7 @@ extern class Window_NumberInput extends Window_Selectable {
   * @returns {number}
   * @memberof Window_NumberInput
   */
- public function itemWidth(): Int;
+ public function itemWidth(): Float;
 
  /**
   * Creates the number input window buttons.
@@ -58,7 +58,7 @@ extern class Window_NumberInput extends Window_Selectable {
  public function updateButtonsVisiblity(): Void;
  public function showButtons(): Void;
  public function hideButtons(): Void;
- public function buttonY(): Int;
+ public function buttonY(): Float;
  public function processDigitChange(): Void;
  public function changeDigit(up: Bool): Void;
  public function onButtonUp(): Void;

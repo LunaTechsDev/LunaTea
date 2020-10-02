@@ -12,64 +12,64 @@ import rm.types.RPG.MoveRoute;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Character extends Game_CharacterBase {
- public static var ROUTE_END: Int;
- public static var ROUTE_MOVE_DOWN: Int;
- public static var ROUTE_MOVE_LEFT: Int;
- public static var ROUTE_MOVE_RIGHT: Int;
- public static var ROUTE_MOVE_UP: Int;
- public static var ROUTE_MOVE_LOWER_L: Int;
- public static var ROUTE_MOVE_LOWER_R: Int;
- public static var ROUTE_MOVE_UPPER_L: Int;
- public static var ROUTE_MOVE_UPPER_R: Int;
- public static var ROUTE_MOVE_RANDOM: Int;
- public static var ROUTE_MOVE_TOWARD: Int;
- public static var ROUTE_MOVE_AWAY: Int;
- public static var ROUTE_MOVE_FORWARD: Int;
- public static var ROUTE_MOVE_BACKWARD: Int;
- public static var ROUTE_JUMP: Int;
- public static var ROUTE_WAIT: Int;
- public static var ROUTE_TURN_DOWN: Int;
- public static var ROUTE_TURN_LEFT: Int;
- public static var ROUTE_TURN_RIGHT: Int;
- public static var ROUTE_TURN_UP: Int;
- public static var ROUTE_TURN_90D_R: Int;
- public static var ROUTE_TURN_90D_L: Int;
- public static var ROUTE_TURN_180D: Int;
- public static var ROUTE_TURN_90D_R_L: Int;
- public static var ROUTE_TURN_RANDOM: Int;
- public static var ROUTE_TURN_TOWARD: Int;
- public static var ROUTE_TURN_AWAY: Int;
- public static var ROUTE_SWITCH_ON: Int;
- public static var ROUTE_SWITCH_OFF: Int;
- public static var ROUTE_CHANGE_SPEED: Int;
- public static var ROUTE_CHANGE_FREQ: Int;
- public static var ROUTE_WALK_ANIME_ON: Int;
- public static var ROUTE_WALK_ANIME_OFF: Int;
- public static var ROUTE_STEP_ANIME_ON: Int;
- public static var ROUTE_STEP_ANIME_OFF: Int;
- public static var ROUTE_DIR_FIX_ON: Int;
- public static var ROUTE_DIR_FIX_OFF: Int;
- public static var ROUTE_THROUGH_ON: Int;
- public static var ROUTE_THROUGH_OFF: Int;
- public static var ROUTE_TRANSPARENT_ON: Int;
- public static var ROUTE_TRANSPARENT_OFF: Int;
- public static var ROUTE_CHANGE_IMAGE: Int;
- public static var ROUTE_CHANGE_OPACITY: Int;
- public static var ROUTE_CHANGE_BLEND_MODE: Int;
- public static var ROUTE_PLAY_SE: Int;
- public static var ROUTE_SCRIPT: Int;
+ public static var ROUTE_END: Float;
+ public static var ROUTE_MOVE_DOWN: Float;
+ public static var ROUTE_MOVE_LEFT: Float;
+ public static var ROUTE_MOVE_RIGHT: Float;
+ public static var ROUTE_MOVE_UP: Float;
+ public static var ROUTE_MOVE_LOWER_L: Float;
+ public static var ROUTE_MOVE_LOWER_R: Float;
+ public static var ROUTE_MOVE_UPPER_L: Float;
+ public static var ROUTE_MOVE_UPPER_R: Float;
+ public static var ROUTE_MOVE_RANDOM: Float;
+ public static var ROUTE_MOVE_TOWARD: Float;
+ public static var ROUTE_MOVE_AWAY: Float;
+ public static var ROUTE_MOVE_FORWARD: Float;
+ public static var ROUTE_MOVE_BACKWARD: Float;
+ public static var ROUTE_JUMP: Float;
+ public static var ROUTE_WAIT: Float;
+ public static var ROUTE_TURN_DOWN: Float;
+ public static var ROUTE_TURN_LEFT: Float;
+ public static var ROUTE_TURN_RIGHT: Float;
+ public static var ROUTE_TURN_UP: Float;
+ public static var ROUTE_TURN_90D_R: Float;
+ public static var ROUTE_TURN_90D_L: Float;
+ public static var ROUTE_TURN_180D: Float;
+ public static var ROUTE_TURN_90D_R_L: Float;
+ public static var ROUTE_TURN_RANDOM: Float;
+ public static var ROUTE_TURN_TOWARD: Float;
+ public static var ROUTE_TURN_AWAY: Float;
+ public static var ROUTE_SWITCH_ON: Float;
+ public static var ROUTE_SWITCH_OFF: Float;
+ public static var ROUTE_CHANGE_SPEED: Float;
+ public static var ROUTE_CHANGE_FREQ: Float;
+ public static var ROUTE_WALK_ANIME_ON: Float;
+ public static var ROUTE_WALK_ANIME_OFF: Float;
+ public static var ROUTE_STEP_ANIME_ON: Float;
+ public static var ROUTE_STEP_ANIME_OFF: Float;
+ public static var ROUTE_DIR_FIX_ON: Float;
+ public static var ROUTE_DIR_FIX_OFF: Float;
+ public static var ROUTE_THROUGH_ON: Float;
+ public static var ROUTE_THROUGH_OFF: Float;
+ public static var ROUTE_TRANSPARENT_ON: Float;
+ public static var ROUTE_TRANSPARENT_OFF: Float;
+ public static var ROUTE_CHANGE_IMAGE: Float;
+ public static var ROUTE_CHANGE_OPACITY: Float;
+ public static var ROUTE_CHANGE_BLEND_MODE: Float;
+ public static var ROUTE_PLAY_SE: Float;
+ public static var ROUTE_SCRIPT: Float;
 
  private var _moveRouteForcing: Bool;
 
  private var _moveRoute: MoveRoute;
 
- private var _moveRouteIndex: Int;
+ private var _moveRouteIndex: Float;
 
  private var _originalMoveRoute: MoveRoute;
 
- private var _originalMoveRouteIndex: Int;
+ private var _originalMoveRouteIndex: Float;
 
- private var _waitCount: Int;
+ private var _waitCount: Float;
 
  public function initMembers(): Void;
 
@@ -128,8 +128,8 @@ extern class Game_Character extends Game_CharacterBase {
   */
  public function processMoveCommand(command: MoveCommand): Void;
 
- public function deltaXFrom(x: Int): Int;
- public function deltaYFrom(y: Int): Int;
+ public function deltaXFrom(x: Float): Float;
+ public function deltaYFrom(y: Float): Float;
 
  /**
   * Move's the game character at random.
@@ -252,13 +252,13 @@ extern class Game_Character extends Game_CharacterBase {
  public function turnRandom(): Void;
 
  public function swap(character: Game_Character): Void;
- public function findDirectionTo(goalX: Int, goalY: Int): Int;
+ public function findDirectionTo(goalX: Float, goalY: Float): Float;
 
  /**
   * Returns the search limit for path finding.
   *
-  * @returns {Int}
+  * @returns {Float}
   * @memberof Game_Character
   */
- public function searchLimit(): Int;
+ public function searchLimit(): Float;
 }

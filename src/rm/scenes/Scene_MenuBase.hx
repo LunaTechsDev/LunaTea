@@ -92,7 +92,7 @@ extern class Scene_MenuBase extends Scene_Base {
   * @param {number} opacity
   * @memberof Scene_MenuBase
   */
- public function setBackgroundOpacity(opacity: Int): Void;
+ public function setBackgroundOpacity(opacity: Float): Void;
 
  /**
   * Creates the help window.

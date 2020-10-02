@@ -7,7 +7,7 @@ import rm.windows.Window_BattleSkill;
 @:forwardStatics
 abstract WindowBattleSkill(Window_BattleSkill) from Window_BattleSkill
  to Window_BattleSkill {
- public inline function new(x: Int, y: Int, width: Int, height: Int) {
+ public inline function new(x: Float, y: Float, width: Float, height: Float) {
   #if compileMV
   this = new Window_BattleSkill(x, y, width, height);
   #else

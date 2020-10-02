@@ -14,7 +14,7 @@ import rm.types.RPG.BaseItem;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ShopSell extends Window_ItemList {
- public function new(x: Int, y: Int, width: Int, height: Int);
+ public function new(x: Float, y: Float, width: Float, height: Float);
 
  /**
   * Determines if the item is sellable, otherwise, greyed out.

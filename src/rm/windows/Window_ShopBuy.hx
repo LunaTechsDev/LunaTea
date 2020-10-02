@@ -15,9 +15,9 @@ import rm.types.RPG.BaseItem;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_ShopBuy extends Window_Selectable {
  private var _shopGoods: Array<Array<Any>>;
- private var _money: Int;
+ private var _money: Float;
  private var _data: Array<BaseItem>;
- private var _price: Array<Int>;
+ private var _price: Array<Float>;
  private var _statusWindow: Window_ShopStatus;
 
  /**
@@ -28,7 +28,7 @@ extern class Window_ShopBuy extends Window_Selectable {
   * @param {Array<Array<any>>} shopGoods
   * @memberof Window_ShopBuy
   */
- public function new(x: Int, y: Int, height: Int,
+ public function new(x: Float, y: Float, height: Float,
   shopGoods: Array<Array<Any>>);
 
  /**
@@ -37,7 +37,7 @@ extern class Window_ShopBuy extends Window_Selectable {
   * @returns {number}
   * @memberof Window_ShopBuy
   */
- public function windowWidth(): Int;
+ public function windowWidth(): Float;
 
  /**
   * Returns the current item of the window.
@@ -47,14 +47,14 @@ extern class Window_ShopBuy extends Window_Selectable {
   */
  public function item(): BaseItem;
 
- public function setMoney(money: Int): Void;
+ public function setMoney(money: Float): Void;
 
  /**
   * Returns the p rice of an item
   * @param item
-  * @return Int
+  * @return Float
   */
- public function price(item: BaseItem): Int;
+ public function price(item: BaseItem): Float;
 
  /**
   * Checks if the current item is enabled (can be bought/sold).

@@ -32,7 +32,7 @@ extern class Window_ShopNumber extends Window_Selectable {
   * @type {number}
   * @memberof Window_ShopNumber
   */
- private var _max: Int;
+ private var _max: Float;
 
  /**
   * The current price of the items.
@@ -41,9 +41,9 @@ extern class Window_ShopNumber extends Window_Selectable {
   * @type {number}
   * @memberof Window_ShopNumber
   */
- private var _price: Int;
+ private var _price: Float;
 
- private var _number: Int;
+ private var _number: Float;
 
  /**
   * Returns the currency unit of the game.
@@ -70,7 +70,7 @@ extern class Window_ShopNumber extends Window_Selectable {
   * @param {number} height
   * @memberof Window_ShopNumber
   */
- public function new(x: Int, y: Int, height: Int);
+ public function new(x: Float, y: Float, height: Float);
 
  /**
   * Returns the width of the window.
@@ -78,11 +78,11 @@ extern class Window_ShopNumber extends Window_Selectable {
   * @returns {number}
   * @memberof Window_ShopNumber
   */
- public function windowWidth(): Int;
+ public function windowWidth(): Float;
 
- public function number(): Int;
+ public function number(): Float;
 
- public function setup(item: BaseItem, max: Int, price: Int): Void;
+ public function setup(item: BaseItem, max: Float, price: Float): Void;
 
  public function setCurrencyUnit(currencyUnit: String): Void;
 
@@ -122,21 +122,21 @@ extern class Window_ShopNumber extends Window_Selectable {
 
  /**
   * Item y position.
-  * @return Int
+  * @return Float
   */
- public function itemY(): Int;
+ public function itemY(): Float;
 
  /**
   * Y position of the price.
-  * @return Int
+  * @return Float
   */
- public function priceY(): Int;
+ public function priceY(): Float;
 
  /**
   * Y position of the button.
-  * @return Int
+  * @return Float
   */
- public function buttonY(): Int;
+ public function buttonY(): Float;
 
  /**
   * Returns the width of the cursor.
@@ -144,19 +144,19 @@ extern class Window_ShopNumber extends Window_Selectable {
   * @returns {number}
   * @memberof Window_ShopNumber
   */
- public function cursorWidth(): Int;
+ public function cursorWidth(): Float;
 
  /**
   * Cursor x position.
-  * @return Int
+  * @return Float
   */
- public function cursorX(): Int;
+ public function cursorX(): Float;
 
  /**
   * The max number of digits for the shop number display
   * window.
   */
- public function maxDigits(): Int;
+ public function maxDigits(): Float;
 
  /**
   * Processes the change in quantity.
@@ -171,7 +171,7 @@ extern class Window_ShopNumber extends Window_Selectable {
   * @param {number} amount
   * @memberof Window_ShopNumber
   */
- public function changeNumber(amount: Int): Void;
+ public function changeNumber(amount: Float): Void;
 
  /**
   * Handle for button up event.

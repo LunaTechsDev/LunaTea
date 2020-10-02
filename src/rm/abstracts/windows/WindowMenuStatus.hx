@@ -6,7 +6,7 @@ import rm.windows.Window_MenuStatus;
 @:forwardStatics
 abstract WindowMenuStatus(Window_MenuStatus) from Window_MenuStatus
  to Window_MenuStatus {
- public inline function new(x: Int, y: Int) {
+ public inline function new(x: Float, y: Float) {
   this = new Window_MenuStatus(x, y);
  }
 

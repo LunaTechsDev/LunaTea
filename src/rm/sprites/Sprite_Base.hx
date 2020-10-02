@@ -75,7 +75,7 @@ extern class Sprite_Base extends Sprite {
   * @memberof Sprite_Base
   */
  public function startAnimation(animation: Animation, mirror: Bool,
-  delay: Int): Void;
+  delay: Float): Void;
 
  /**
   * Returns true if an animation is currently playing.

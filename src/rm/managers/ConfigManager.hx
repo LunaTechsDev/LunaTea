@@ -15,5 +15,5 @@ extern class ConfigManager {
  public static function makeData(): ConfigData;
  public static function applyData(config: ConfigData): Void;
  public static function readFlag(config: ConfigData, name: String): Bool;
- public static function readVolume(config: ConfigData, name: String): Int;
+ public static function readVolume(config: ConfigData, name: String): Float;
 }

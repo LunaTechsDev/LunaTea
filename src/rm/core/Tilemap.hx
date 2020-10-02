@@ -9,74 +9,74 @@ import pixi.core.display.Container;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Tilemap extends Container {
  // Tile type checkers
- public static var TILE_ID_A1: Int;
+ public static var TILE_ID_A1: Float;
 
- public static var TILE_ID_A2: Int;
+ public static var TILE_ID_A2: Float;
 
- public static var TILE_ID_A3: Int;
+ public static var TILE_ID_A3: Float;
 
- public static var TILE_ID_A4: Int;
+ public static var TILE_ID_A4: Float;
 
- public static var TILE_ID_A5: Int;
+ public static var TILE_ID_A5: Float;
 
- public static var TILE_ID_B: Int;
+ public static var TILE_ID_B: Float;
 
- public static var TILE_ID_C: Int;
+ public static var TILE_ID_C: Float;
 
- public static var TILE_ID_D: Int;
+ public static var TILE_ID_D: Float;
 
- public static var TILE_ID_E: Int;
+ public static var TILE_ID_E: Float;
 
- public static var TILE_ID_MAX: Int;
+ public static var TILE_ID_MAX: Float;
 
- public static var FLOOR_AUTOTILE_TABLE: Array<Array<Array<Int>>>;
+ public static var FLOOR_AUTOTILE_TABLE: Array<Array<Array<Float>>>;
 
- public static var WALL_AUTOTILE_TABLE: Array<Array<Array<Int>>>;
+ public static var WALL_AUTOTILE_TABLE: Array<Array<Array<Float>>>;
 
- public static var WATERFALL_AUTOTILE_TABLE: Array<Array<Array<Int>>>;
+ public static var WATERFALL_AUTOTILE_TABLE: Array<Array<Array<Float>>>;
 
- public static function isVisibleTile(tileId: Int): Bool;
+ public static function isVisibleTile(tileId: Float): Bool;
 
- public static function isAutotile(tileId: Int): Bool;
+ public static function isAutotile(tileId: Float): Bool;
 
- public static function getAutotileKind(tileId: Int): Int;
+ public static function getAutotileKind(tileId: Float): Float;
 
- public static function getAutotileShape(tileId: Int): Int;
+ public static function getAutotileShape(tileId: Float): Float;
  // TODO: Turn Kind into an abstract Enum
- public static function makeAutotileId(kind: Int, shape: Int): Int;
+ public static function makeAutotileId(kind: Float, shape: Float): Float;
 
- public static function isSameKindTile(tileID1: Int, tileID2: Int): Bool;
+ public static function isSameKindTile(tileID1: Float, tileID2: Float): Bool;
 
- public static function isTileA1(tileId: Int): Bool;
+ public static function isTileA1(tileId: Float): Bool;
 
- public static function isTileA2(tileId: Int): Bool;
+ public static function isTileA2(tileId: Float): Bool;
 
- public static function isTileA3(tileId: Int): Bool;
+ public static function isTileA3(tileId: Float): Bool;
 
- public static function isTileA4(tileId: Int): Bool;
+ public static function isTileA4(tileId: Float): Bool;
 
- public static function isTileA5(tileId: Int): Bool;
+ public static function isTileA5(tileId: Float): Bool;
 
- public static function isWaterTile(tileId: Int): Bool;
+ public static function isWaterTile(tileId: Float): Bool;
 
- public static function isWaterfallTile(tileId: Int): Bool;
+ public static function isWaterfallTile(tileId: Float): Bool;
 
- public static function isGroundTile(tileId: Int): Bool;
+ public static function isGroundTile(tileId: Float): Bool;
 
- public static function isShadowingTile(tileId: Int): Bool;
+ public static function isShadowingTile(tileId: Float): Bool;
 
- public static function isRoofTile(tileId: Int): Bool;
+ public static function isRoofTile(tileId: Float): Bool;
 
- public static function isWallTopTile(tileId: Int): Bool;
+ public static function isWallTopTile(tileId: Float): Bool;
 
- public static function isWallSideTile(tileId: Int): Bool;
+ public static function isWallSideTile(tileId: Float): Bool;
 
- public static function isWallTile(tileId: Int): Bool;
+ public static function isWallTile(tileId: Float): Bool;
 
- public static function isFloorTypeAutotile(tileId: Int): Bool;
+ public static function isFloorTypeAutotile(tileId: Float): Bool;
 
- public static function isWallTypeAutotile(tileId: Int): Bool;
- public static function isWaterfallTypeAutotile(tileId: Int): Bool;
+ public static function isWallTypeAutotile(tileId: Float): Bool;
+ public static function isWaterfallTypeAutotile(tileId: Float): Bool;
 
  /**
   * The bitmaps used as a tileset.
@@ -100,7 +100,7 @@ extern class Tilemap extends Container {
   * @property flags
   * @type Array
   */
- public var flags: Array<Int>;
+ public var flags: Array<Float>;
 
  /**
   * The animation count for autotiles.
@@ -108,7 +108,7 @@ extern class Tilemap extends Container {
   * @property animationCount
   * @type Number
   */
- public var animationCount: Int; // TODO: Enum AnimationCount
+ public var animationCount: Float; // TODO: Enum AnimationCount
 
  /**
   * Whether the tilemap loops horizontal.
@@ -132,14 +132,14 @@ extern class Tilemap extends Container {
   * @property width
   * @type Number
   */
- //  public var width: Int;
+ //  public var width: Float;
  /**
   * The height of the screen in pixels.
   *
   * @property height
   * @type Number
   */
- //  public var height: Int;
+ //  public var height: Float;
 
  /**
   * The width of a tile in pixels.
@@ -147,7 +147,7 @@ extern class Tilemap extends Container {
   * @property tileWidth
   * @type Number
   */
- public var tileWidth: Int;
+ public var tileWidth: Float;
 
  /**
   * The height of a tile in pixels.
@@ -155,7 +155,7 @@ extern class Tilemap extends Container {
   * @property tileHeight
   * @type Number
   */
- public var tileHeight: Int;
+ public var tileHeight: Float;
 
  /**
   * [read-only] The array of children of the sprite.
@@ -188,7 +188,8 @@ extern class Tilemap extends Container {
   * @param {Number} height The height of the map in number of tiles
   * @param {Array} data The one dimensional array for the map data
   */
- public function setData(width: Int, height: Int, data: Array<Int>): Void;
+ public function setData(width: Float, height: Float,
+  data: Array<Float>): Void;
 
  /**
   * Checks whether the tileset is ready to render.
@@ -236,7 +237,7 @@ extern class Tilemap extends Container {
   * @param {Number} index The index to place the child in
   * @return {PIXI.DisplayObject} The child that was added
   */
- public function addChildAt(child: DisplayObject, index: Int): DisplayObject;
+ public function addChildAt(child: DisplayObject, index: Float): DisplayObject;
 
  /**
   * Removes a child from the container.
@@ -254,7 +255,7 @@ extern class Tilemap extends Container {
   * @param {Number} index The index to get the child from
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public function removeChildAt(index: Int): DisplayObject;
+ public function removeChildAt(index: Float): DisplayObject;
 
  /**
   * Forces to refresh the tileset
@@ -263,17 +264,17 @@ extern class Tilemap extends Container {
   */
  public function refreshTileset(): Void;
 
- private var _margin: Int;
- private var _width: Int;
- private var _height: Int;
- private var _tileWidth: Int;
- private var _tileHeight: Int;
- private var _mapWidth: Int;
- private var _mapHeight: Int;
- private var _mapData: Array<Int>;
- private var _layerWidth: Int;
- private var _layerHeight: Int;
- private var _lastTiles: Array<Array<Array<Array<Int>>>>;
+ private var _margin: Float;
+ private var _width: Float;
+ private var _height: Float;
+ private var _tileWidth: Float;
+ private var _tileHeight: Float;
+ private var _mapWidth: Float;
+ private var _mapHeight: Float;
+ private var _mapData: Array<Float>;
+ private var _layerWidth: Float;
+ private var _layerHeight: Float;
+ private var _lastTiles: Array<Array<Array<Array<Float>>>>;
  private var _lowerLayer: Sprite;
  private var _upperLayer: Sprite;
 
@@ -289,7 +290,7 @@ extern class Tilemap extends Container {
   * @param {Number} startY
   * @private
   */
- private function _updateLayerPositions(startX: Int, startY: Int): Void;
+ private function _updateLayerPositions(startX: Float, startY: Float): Void;
 
  /**
   * @method _paintAllTiles
@@ -297,7 +298,7 @@ extern class Tilemap extends Container {
   * @param {Number} startY
   * @private
   */
- private function _paintAllTiles(startX: Int, startY: Int): Void;
+ private function _paintAllTiles(startX: Float, startY: Float): Void;
 
  /**
   * @method _paintTiles
@@ -307,7 +308,8 @@ extern class Tilemap extends Container {
   * @param {Number} y
   * @private
   */
- private function _paintTiles(startX: Int, startY: Int, x: Int, y: Int): Void;
+ private function _paintTiles(startX: Float, startY: Float, x: Float,
+  y: Float): Void;
 
  /**
   * @method _readLastTiles
@@ -316,7 +318,7 @@ extern class Tilemap extends Container {
   * @param {Number} y
   * @private
   */
- private function _readLastTiles(i: Int, x: Int, y: Int): Array<Int>;
+ private function _readLastTiles(i: Float, x: Float, y: Float): Array<Float>;
 
  /**
   * @method _writeLastTiles
@@ -326,8 +328,8 @@ extern class Tilemap extends Container {
   * @param {Array} tiles
   * @private
   */
- private function _writeLastTiles(i: Int, x: Int, y: Int,
-  tiles: Array<Int>): Void;
+ private function _writeLastTiles(i: Float, x: Float, y: Float,
+  tiles: Array<Float>): Void;
 
  /**
   * @method _drawTile
@@ -337,8 +339,8 @@ extern class Tilemap extends Container {
   * @param {Number} dy
   * @private
   */
- private function _drawTile(bitmap: Bitmap, tileId: Int, dx: Int,
-  dy: Int): Void;
+ private function _drawTile(bitmap: Bitmap, tileId: Float, dx: Float,
+  dy: Float): Void;
 
  /**
   * @method _drawNormalTile
@@ -348,8 +350,8 @@ extern class Tilemap extends Container {
   * @param {Number} dy
   * @private
   */
- private function _drawNormalTile(bitmap: Bitmap, tileId: Int, dx: Int,
-  dy: Int): Void;
+ private function _drawNormalTile(bitmap: Bitmap, tileId: Float, dx: Float,
+  dy: Float): Void;
 
  /**
   * @method _drawAutotile
@@ -359,8 +361,8 @@ extern class Tilemap extends Container {
   * @param {Number} dy
   * @private
   */
- private function _drawAutotile(bitmap: Bitmap, tileId: Int, dx: Int,
-  dy: Int): Void;
+ private function _drawAutotile(bitmap: Bitmap, tileId: Float, dx: Float,
+  dy: Float): Void;
 
  /**
   * @method _drawTableEdge
@@ -370,8 +372,8 @@ extern class Tilemap extends Container {
   * @param {Number} dy
   * @private
   */
- private function _drawTableEdge(bitmap: Bitmap, tileId: Int, dx: Int,
-  dy: Int): Void;
+ private function _drawTableEdge(bitmap: Bitmap, tileId: Float, dx: Float,
+  dy: Float): Void;
 
  /**
   * @method _drawShadow
@@ -381,8 +383,8 @@ extern class Tilemap extends Container {
   * @param {Number} dy
   * @private
   */
- private function _drawShadow(bitmap: Bitmap, shadowBits: Int, dx: Int,
-  dy: Int): Void;
+ private function _drawShadow(bitmap: Bitmap, shadowBits: Float, dx: Float,
+  dy: Float): Void;
 
  /**
   * @method _readMapData
@@ -392,7 +394,7 @@ extern class Tilemap extends Container {
   * @return {Number}
   * @private
   */
- private function _readMapData(x: Int, y: Int, z: Int): Int;
+ private function _readMapData(x: Float, y: Float, z: Float): Float;
 
  /**
   * @method _isHigherTile
@@ -400,7 +402,7 @@ extern class Tilemap extends Container {
   * @return {Boolean}
   * @private
   */
- private function _isHigherTile(tileId: Int): Bool;
+ private function _isHigherTile(tileId: Float): Bool;
 
  /**
   * @method _isTableTile
@@ -408,7 +410,7 @@ extern class Tilemap extends Container {
   * @return {Boolean}
   * @private
   */
- private function _isTableTile(tileId: Int): Bool;
+ private function _isTableTile(tileId: Float): Bool;
 
  /**
   * @method _isOverpassPosition
@@ -417,7 +419,7 @@ extern class Tilemap extends Container {
   * @return {Boolean}
   * @private
   */
- private function _isOverpassPosition(mx: Int, my: Int): Bool;
+ private function _isOverpassPosition(mx: Float, my: Float): Bool;
 
  /**
   * @method _sortChildren
@@ -431,5 +433,5 @@ extern class Tilemap extends Container {
   * @param {Sprite} b
   * @private
   */
- private function _compareChildOrder(a: Sprite, b: Sprite): Int;
+ private function _compareChildOrder(a: Sprite, b: Sprite): Float;
 }

@@ -9,8 +9,8 @@ import rm.managers.ColorManager;
 
 @:native("LTWindowBase")
 class LTWindowBase extends Window_Base {
- public var innerWidthLT(get, null): Int;
- public var innerHeightLT(get, null): Int;
+ public var innerWidthLT(get, null): Float;
+ public var innerHeightLT(get, null): Float;
 
  public function new(x: Int, y: Int, width: Int, height: Int) {
   #if compileMV
@@ -34,7 +34,8 @@ class LTWindowBase extends Window_Base {
   #end
  }
 
- public function drawTextExLT(text: String, x: Int, y: Int, ?width: Int): Int {
+ public function drawTextExLT(text: String, x: Int, y: Int,
+   ?width: Int): Float {
   #if compileMV
   return super.drawTextEx(text, x, y);
   #else
@@ -160,7 +161,7 @@ class LTWindowBase extends Window_Base {
   #end
  }
 
- public function maxFontSizeInLineLT(line: String): Int {
+ public function maxFontSizeInLineLT(line: String): Float {
   #if compileMV
   /*
    let maxFontSize = this.contents.fontSize;
@@ -190,11 +191,11 @@ class LTWindowBase extends Window_Base {
   #end
  }
 
- private function get_innerWidthLT(): Int {
+ private function get_innerWidthLT(): Float {
   return cast Math.max(0, this._width - this._padding * 2);
  }
 
- private function get_innerHeightLT(): Int {
+ private function get_innerHeightLT(): Float {
   return cast Math.max(0, this._height - this._padding * 2);
  }
 }

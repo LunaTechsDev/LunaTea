@@ -13,7 +13,7 @@ import rm.core.Sprite;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Timer extends Sprite {
- private var _seconds: Int;
+ private var _seconds: Float;
 
  /**
   * Creates the bitmap of the sprite timer.

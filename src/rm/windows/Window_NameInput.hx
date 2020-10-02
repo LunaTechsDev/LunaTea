@@ -20,7 +20,7 @@ extern class Window_NameInput extends Window_Selectable {
  public static var JAPAN3: Array<String>;
 
  private var _editWindow: Window_NameEdit;
- private var _page: Int;
+ private var _page: Float;
 
  public function new(editWindow: Window_NameEdit);
 
@@ -30,7 +30,7 @@ extern class Window_NameInput extends Window_Selectable {
   * @returns {number}
   * @memberof Window_NameInput
   */
- public function windowHeight(): Int;
+ public function windowHeight(): Float;
 
  /**
   * Returns the table of characters to input.

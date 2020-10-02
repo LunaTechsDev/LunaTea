@@ -13,7 +13,7 @@ import rm.objects.Game_Picture;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Picture {
- public function new(pictureId: Int);
+ public function new(pictureId: Float);
  public function picture(): Game_Picture;
  public function updateBitmap(): Void;
  public function updateOrigin(): Void;

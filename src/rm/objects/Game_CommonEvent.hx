@@ -7,13 +7,13 @@ import rm.types.RPG;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 extern class Game_CommonEvent {
- private var _commonEventId: Int;
+ private var _commonEventId: Float;
 
  private var _interpreter: Game_Interpreter;
 
- public function new(commonEventId: Int);
+ public function new(commonEventId: Float);
 
- public function initialize(commonEventId: Int): Void;
+ public function initialize(commonEventId: Float): Void;
 
  /**
   * Returns the common event information from the database.

@@ -10,7 +10,7 @@ package rm.objects;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Game_Timer {
- private var _frames: Int;
+ private var _frames: Float;
 
  private var _working: Bool;
 
@@ -32,7 +32,7 @@ extern class Game_Timer {
   * @param {number} count
   * @memberof Game_Timer
   */
- public function start(count: Int): Void;
+ public function start(count: Float): Void;
 
  /**
   * Stops the timer.
@@ -55,7 +55,7 @@ extern class Game_Timer {
   * @returns {number}
   * @memberof Game_Timer
   */
- public function seconds(): Int;
+ public function seconds(): Float;
 
  /**
   * Handler for when the time expires on the timer.

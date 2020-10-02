@@ -16,8 +16,8 @@ import rm.objects.Game_Actor;
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Window_BattleActor extends Window_BattleStatus {
  #if compileMV
- public function new(x: Int, y: Int): Void;
- public function initialize(x: Int, y: Int): Void;
+ public function new(x: Float, y: Float): Void;
+ public function initialize(x: Float, y: Float): Void;
  #else
  public function new(rect: Rectangle);
  public function initialize(rect: Rectangle): Void;
@@ -29,7 +29,7 @@ extern class Window_BattleActor extends Window_BattleStatus {
   * @param {number} index
   * @memberof Window_BattleActor
   */
- public function select(index: Int): Void;
+ public function select(index: Float): Void;
 
  /**
   * Returns the current selected actor.

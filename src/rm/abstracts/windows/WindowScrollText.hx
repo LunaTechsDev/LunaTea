@@ -7,7 +7,8 @@ import rm.windows.Window_ScrollText;
 @:forwardStatics
 abstract WindowScrollText(Window_ScrollText) from Window_ScrollText
  to Window_ScrollText {
- public inline function new(?x: Int, ?y: Int, ?width: Int, ?height: Int) {
+ public inline function new(?x: Float, ?y: Float, ?width: Float,
+   ?height: Float) {
   #if compileMV
   this = new Window_ScrollText();
   #else

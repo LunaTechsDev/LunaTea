@@ -15,14 +15,14 @@ import rm.objects.Game_Actor;
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class Sprite_Damage extends Sprite {
- private var _duration: Int;
+ private var _duration: Float;
 
  /**
   * Array of 3 numbers of RGB
   */
- private var _flashColor: Array<Int>; // TODO: create Color Abstract With Array RGB Format
+ private var _flashColor: Array<Float>; // TODO: create Color Abstract With Array RGB Format
 
- private var _flashDuration: Int;
+ private var _flashDuration: Float;
 
  private var _damageBitmap: Bitmap;
 
@@ -36,7 +36,7 @@ extern class Sprite_Damage extends Sprite {
   * @returns {number}
   * @memberof Sprite_Damage
   */
- public function digitWidth(): Int;
+ public function digitWidth(): Float;
 
  /**
   * Returns the digit height of the sprite damage.
@@ -44,7 +44,7 @@ extern class Sprite_Damage extends Sprite {
   * @returns {number}
   * @memberof Sprite_Damage
   */
- public function digitHeight(): Int;
+ public function digitHeight(): Float;
 
  /**
   * Creates the miss display of the damage sprite.
@@ -53,7 +53,7 @@ extern class Sprite_Damage extends Sprite {
   */
  public function createMiss(): Void;
 
- public function createDigits(baseRow: Int, value: Int): Void;
+ public function createDigits(baseRow: Float, value: Float): Void;
 
  /**
   * Creates the child sprite of the damage sprite for displaying damage.
