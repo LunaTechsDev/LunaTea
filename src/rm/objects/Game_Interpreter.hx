@@ -302,7 +302,7 @@ extern class Game_Interpreter {
   */
  public function command119(): Bool;
 
- public function jumpTo(index: Float): Void;
+ public function jumpTo(index: Int): Void;
 
  /**
   * Control Switches

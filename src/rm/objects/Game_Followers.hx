@@ -51,7 +51,7 @@ extern class Game_Followers {
   * @returns {Game_Follower}
   * @memberof Game_Followers
   */
- public function follower(index: Float): Game_Follower;
+ public function follower(index: Int): Game_Follower;
 
  public function forEach(callback: () -> Void, thisObject: Any): Void;
  public function reverseEach(callback: () -> Void, thisObject: Any): Void;

@@ -66,7 +66,7 @@ extern class Window_NameEdit {
  public function charWidth(): Float;
 
  public function left(): Float;
- public function underlineRect(index: Float): Rectangle;
+ public function underlineRect(index: Int): Rectangle;
 
  /**
   * Returns the color of the underline as a css color String.
@@ -82,7 +82,7 @@ extern class Window_NameEdit {
   * @param {number} index
   * @memberof Window_NameEdit
   */
- public function drawUnderline(index: Float): Void;
+ public function drawUnderline(index: Int): Void;
 
  /**
   * Draws a character within the window at the specified index.
@@ -90,7 +90,7 @@ extern class Window_NameEdit {
   * @param {number} index
   * @memberof Window_NameEdit
   */
- public function drawChar(index: Float): Void;
+ public function drawChar(index: Int): Void;
 
  /**
   * Refreshes the window contents.

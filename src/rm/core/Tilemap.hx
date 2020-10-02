@@ -237,7 +237,7 @@ extern class Tilemap extends Container {
   * @param {Number} index The index to place the child in
   * @return {PIXI.DisplayObject} The child that was added
   */
- public function addChildAt(child: DisplayObject, index: Float): DisplayObject;
+ public function addChildAt(child: DisplayObject, index: Int): DisplayObject;
 
  /**
   * Removes a child from the container.
@@ -255,7 +255,7 @@ extern class Tilemap extends Container {
   * @param {Number} index The index to get the child from
   * @return {PIXI.DisplayObject} The child that was removed
   */
- public function removeChildAt(index: Float): DisplayObject;
+ public function removeChildAt(index: Int): DisplayObject;
 
  /**
   * Forces to refresh the tileset

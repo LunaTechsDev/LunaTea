@@ -65,11 +65,11 @@ extern class Window_MenuStatus extends Window_Selectable {
   * @param {number} index
   * @memberof Window_MenuStatus
   */
- public function drawItemBackground(index: Float): Void;
+ public function drawItemBackground(index: Int): Void;
 
- public function drawItemImage(index: Float): Void;
+ public function drawItemImage(index: Int): Void;
 
- public function drawItemStatus(index: Float): Void;
+ public function drawItemStatus(index: Int): Void;
 
  public function selectLast(): Void;
 
@@ -92,5 +92,5 @@ extern class Window_MenuStatus extends Window_Selectable {
 
  public function pendingIndex(): Float;
 
- public function setPendingIndex(index: Float): Void;
+ public function setPendingIndex(index: Int): Void;
 }

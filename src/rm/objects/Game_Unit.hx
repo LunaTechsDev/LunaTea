@@ -88,8 +88,8 @@ extern class Game_Unit {
   */
  public function randomDeadTarget(): Game_Battler;
 
- public function smoothTarget(index: Float): Game_Battler;
- public function smoothDeadTarget(index: Float): Game_Battler;
+ public function smoothTarget(index: Int): Game_Battler;
+ public function smoothDeadTarget(index: Int): Game_Battler;
 
  /**
   * Clears the action results.

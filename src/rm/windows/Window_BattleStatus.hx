@@ -42,7 +42,7 @@ extern class Window_BattleStatus extends Window_Selectable {
   */
  public function numVisibleRows(): Float;
 
- public function basicAreaRect(index: Float): Rectangle;
+ public function basicAreaRect(index: Int): Rectangle;
 
  /**
   * returns a rectangle for the gauges in the gauge area.
@@ -51,7 +51,7 @@ extern class Window_BattleStatus extends Window_Selectable {
   * @returns {Rectangle}
   * @memberof Window_BattleStatus
   */
- public function gaugeAreaRect(index: Float): Rectangle;
+ public function gaugeAreaRect(index: Int): Rectangle;
 
  /**
   * Returns the width of the guage area.

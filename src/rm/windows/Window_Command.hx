@@ -90,7 +90,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {String}
   * @memberof Window_Command
   */
- public function commandName(index: Float): String;
+ public function commandName(index: Int): String;
 
  /**
   * Returns the command symbol given an index.
@@ -99,7 +99,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {String}
   * @memberof Window_Command
   */
- public function commandSymbol(index: Float): String;
+ public function commandSymbol(index: Int): String;
 
  /**
   * Determines if the command is enabled;
@@ -108,7 +108,7 @@ extern class Window_Command extends Window_Selectable {
   * @returns {boolean}
   * @memberof Window_Command
   */
- public function isCommandEnabled(index: Float): Bool;
+ public function isCommandEnabled(index: Int): Bool;
 
  /**
   * Returns the command object at the current index.

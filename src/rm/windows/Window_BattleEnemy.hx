@@ -71,5 +71,5 @@ extern class Window_BattleEnemy extends Window_Selectable {
   * @param {number} index
   * @memberof Window_BattleEnemy
   */
- public function select(index: Float): Void;
+ public function select(index: Int): Void;
 }

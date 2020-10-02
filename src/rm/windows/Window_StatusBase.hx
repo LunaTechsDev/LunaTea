@@ -148,7 +148,7 @@ extern class Window_StatusBase extends Window_Selectable {
   * @param actor
   * @param index
   */
- public function actorSlotName(actor: Game_Actor, index: Float): String;
+ public function actorSlotName(actor: Game_Actor, index: Int): String;
 }
 #else
 #end
