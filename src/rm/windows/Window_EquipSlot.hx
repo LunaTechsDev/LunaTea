@@ -46,7 +46,7 @@ extern class Window_EquipSlot extends Window_Selectable {
   * @returns {string}
   * @memberof Window_EquipSlot
   */
- public function slotName(index: Float): String;
+ public function slotName(index: Int): String;
 
  /**
   * Returns true if the current slot is enabled.
@@ -55,7 +55,7 @@ extern class Window_EquipSlot extends Window_Selectable {
   * @returns {boolean}
   * @memberof Window_EquipSlot
   */
- public function isEnabled(index: Float): Bool;
+ public function isEnabled(index: Int): Bool;
 
  /**
   * Sets the status window within the equip slot window.

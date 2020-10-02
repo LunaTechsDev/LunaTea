@@ -41,7 +41,7 @@ extern class Window_SkillList extends Window_Selectable {
   * @param index
   * @return Null<Skill>
   */
- public function itemAt(index: Float): Null<Skill>;
+ public function itemAt(index: Int): Null<Skill>;
  #end
 
  /**

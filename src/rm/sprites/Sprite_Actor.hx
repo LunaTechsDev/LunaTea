@@ -108,7 +108,7 @@ extern class Sprite_Actor extends Sprite_Battler {
   */
  public function moveToStartPosition(): Void;
 
- public function setActorHome(index: Float): Void;
+ public function setActorHome(index: Int): Void;
 
  public function updateShadow(): Void;
 

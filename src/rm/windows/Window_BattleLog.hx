@@ -89,7 +89,7 @@ extern class Window_BattleLog extends Window_Base {
  public function backRect(): Rectangle;
  public function backColor(): String;
  public function backPaintOpacity(): Float;
- public function drawLineText(index: Float): Void;
+ public function drawLineText(index: Int): Void;
  public function startTurn(): Void;
  public function startAction(subject: Game_Battler, action: Game_Action,
   targets: Array<Game_Battler>): Void;

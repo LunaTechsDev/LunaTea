@@ -13,7 +13,7 @@ extern class Window_Options extends Window_Command {
  public function addGeneralOptions(): Void;
  public function addVolumeOptions(): Void;
  public function statusWidth(): Float;
- public function statusText(index: Float): String;
+ public function statusText(index: Int): String;
  public function isVolumeSymbol(symbol: String): Bool;
  public function booleanStatusText(value: Bool): String;
  public function volumeStatusText(value: Float): String;

@@ -206,7 +206,7 @@ extern class Game_Battler extends Game_BattlerBase {
   */
  public function startWeaponAnimation(weaponImageId: WeaponImageId): Void;
 
- public function action(index: Float): Game_Action;
+ public function action(index: Int): Game_Action;
 
  /**
   * Sets the action at the specified index for the battler.
@@ -215,7 +215,7 @@ extern class Game_Battler extends Game_BattlerBase {
   * @param {Game_Action} action
   * @memberof Game_Battler
   */
- public function setAction(index: Float, action: Game_Action): Void;
+ public function setAction(index: Int, action: Game_Action): Void;
 
  /**
   * Returns the number of battler actions.

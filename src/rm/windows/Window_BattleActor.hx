@@ -29,7 +29,7 @@ extern class Window_BattleActor extends Window_BattleStatus {
   * @param {number} index
   * @memberof Window_BattleActor
   */
- public function select(index: Float): Void;
+ public function select(index: Int): Void;
 
  /**
   * Returns the current selected actor.

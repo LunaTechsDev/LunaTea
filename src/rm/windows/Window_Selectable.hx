@@ -51,22 +51,22 @@ public function initialize(rect: Rectangle): Void;
  * visibility is set to false.
  * @param index
  */
-public function forceSelect(index: Float): Void;
+public function forceSelect(index: Int): Void;
 
 /**
  * Smoothly scrolls to the index.
  * Cursor visibility is set to true.
  * @param index
  */
-public function smoothSelect(index: Float): Void;
+public function smoothSelect(index: Int): Void;
 
-public function itemRectWithPadding(index: Float): Rectangle;
+public function itemRectWithPadding(index: Int): Rectangle;
 
 /**
  * Return the rectangle for the line item with padding.
  * @param index
  */
-public function itemLineRect(index: Float): Rectangle;
+public function itemLineRect(index: Int): Rectangle;
 
 /**
  * Overwrite this or add to it to add your own draw functions.
@@ -175,7 +175,7 @@ public function itemHeight(): Float;
  * @param {number} index
  * @memberof Window_Selectable
  */
-public function select(index: Float): Void;
+public function select(index: Int): Void;
 
 /**
  * Deselects the currently selected index.
@@ -227,7 +227,7 @@ public function setBottomRow(row: Float): Void;
  * @returns {Rectangle}
  * @memberof Window_Selectable
  */
-public function itemRect(index: Float): Rectangle;
+public function itemRect(index: Int): Rectangle;
 
 /**
  * Creates a new rectangle based on itemWidth and itemHeight
@@ -237,7 +237,7 @@ public function itemRect(index: Float): Rectangle;
  * @returns {Rectangle}
  * @memberof Window_Selectable
  */
-public function itemRectForText(index: Float): Rectangle;
+public function itemRectForText(index: Int): Rectangle;
 
 public function setHelpWindow(helpWindow: Window_Help): Void;
 
@@ -379,9 +379,9 @@ public function isCurrentItemEnabled(): Bool;
  */
 public function drawAllItems(): Void;
 
-public function drawItem(index: Float): Void;
-public function clearItem(index: Float): Void;
-public function redrawItem(index: Float): Void;
+public function drawItem(index: Int): Void;
+public function clearItem(index: Int): Void;
+public function redrawItem(index: Int): Void;
 public function redrawCurrentItem(): Void;
 
 /**
