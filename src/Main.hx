@@ -55,6 +55,13 @@ class Main {
    trace(event);
   };
 
+  var actors = Globals.GameParty.members();
+
+  for (actor in actors) {
+   actor.setHp(actor.mhp);
+   actor.setMp(actor.mmp);
+  }
+
   // Fn.proto(Window_Base).updateD = () -> {
   //  var self: Window_Base = Fn.self;
   //  self.update();

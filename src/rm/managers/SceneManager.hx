@@ -1,5 +1,6 @@
 package rm.managers;
 
+import haxe.extern.Rest;
 import js.html.Event;
 import js.html.KeyboardEvent;
 import rm.core.Bitmap;
@@ -99,7 +100,7 @@ extern class SceneManager {
   */
  public static function stop(): Void;
 
- public static function prepareNextScene(): Void;
+ public static function prepareNextScene(arguments: Rest<Dynamic>): Void;
  public static function snap(): Bitmap;
  public static function snapForBackground(): Void;
  public static function backgroundBitmap(): Bitmap;
