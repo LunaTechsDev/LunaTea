@@ -140,7 +140,7 @@ public function setCursorAll(cursorAll: Bool): Void;
  * @returns {number}
  * @memberof Window_Selectable
  */
-public function maxCols(): Float;
+public function maxCols(): Int;
 
 /**
  * Returns the maximum number of items within the window;
@@ -149,7 +149,7 @@ public function maxCols(): Float;
  * @returns {number}
  * @memberof Window_Selectable
  */
-public function maxItems(): Float;
+public function maxItems(): Int;
 
 public function spacing(): Float;
 
@@ -205,8 +205,8 @@ public function maxTopRow(): Float;
 public function setTopRow(row: Float): Void;
 
 public function resetScroll(): Void;
-public function maxPageRows(): Float;
-public function maxPageItems(): Float;
+public function maxPageRows(): Int;
+public function maxPageItems(): Int;
 
 /**
  * Returns true if the window is horizontal;
