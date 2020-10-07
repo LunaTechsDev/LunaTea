@@ -42,6 +42,16 @@ public function new(x: Float, y: Float, width: Float, height: Float): Void;
 
 public function initialize(x: Float, y: Float, height: Float,
  width: Float): Void;
+
+/**
+ * Creates a new rectangle based on itemWidth and itemHeight
+ * The rectangle is used for positioning text within
+ * the selectable window.
+ * @param {number} index
+ * @returns {Rectangle}
+ * @memberof Window_Selectable
+ */
+public function itemRectForText(index: Int): Rectangle;
 #else
 public function new(rect: Rectangle);
 public function initialize(rect: Rectangle): Void;
@@ -228,16 +238,6 @@ public function setBottomRow(row: Float): Void;
  * @memberof Window_Selectable
  */
 public function itemRect(index: Int): Rectangle;
-
-/**
- * Creates a new rectangle based on itemWidth and itemHeight
- * The rectangle is used for positioning text within
- * the selectable window.
- * @param {number} index
- * @returns {Rectangle}
- * @memberof Window_Selectable
- */
-public function itemRectForText(index: Int): Rectangle;
 
 public function setHelpWindow(helpWindow: Window_Help): Void;
 
