@@ -2,7 +2,7 @@
 // test.js
 //=============================================================================
 //=============================================================================
-// Build Date: 2020-09-26 18:01:25
+// Build Date: 2020-10-05 11:19:29
 //=============================================================================
 //=============================================================================
 // Made with Kiniita -- Haxe
@@ -38,7 +38,7 @@ class LunaDataManager extends DataManager {
 	}
 }
 LunaDataManager.__name__ = true;
-class LTWinMsg extends Window_Message {
+class LT_$Win_$Msg extends Window_Message {
 	constructor(x,y,width,height) {
 		super(x,y,width,height);
 	}
@@ -55,7 +55,7 @@ class LTWinMsg extends Window_Message {
 		this.tabIndex = 3;
 	}
 }
-LTWinMsg.__name__ = true;
+LT_$Win_$Msg.__name__ = true;
 class Lambda {
 	static fold(it,f,first) {
 		let x = $getIterator(it);
@@ -66,7 +66,7 @@ class Lambda {
 Lambda.__name__ = true;
 class Main {
 	static main() {
-		// Build Date: 2020-09-26 18:01:21 
+		// Build Date: 2020-10-05 11:19:26 
 		
 //=============================================================================
 // Kiniitta
@@ -109,22 +109,30 @@ class Main {
 		TouchInput._onMouseMove = function(event) {
 			haxe_Log.trace(event,{ fileName : "src/Main.hx", lineNumber : 55, className : "Main", methodName : "main"});
 		};
-		haxe_Log.trace("Test comment",{ fileName : "src/Main.hx", lineNumber : 74, className : "Main", methodName : "main"});
+		let actors = _$LTGlobals_$.$gameParty.members();
+		let _g2 = 0;
+		while(_g2 < actors.length) {
+			let actor = actors[_g2];
+			++_g2;
+			actor.setHp(actor.get_mhp());
+			actor.setMp(actor.get_mmp());
+		}
+		haxe_Log.trace("Test comment",{ fileName : "src/Main.hx", lineNumber : 81, className : "Main", methodName : "main"});
 		let tmp_1_x = 3;
 		let tmp_1_b = "Hello";
 		let tmp_1_y = 22;
 		let tmp_1_c = 33;
 		let tmp_2_z = 3;
-		haxe_Log.trace({ z : tmp_2_z, y : tmp_1_y, x : tmp_1_x, c : tmp_1_c, b : tmp_1_b},{ fileName : "src/Main.hx", lineNumber : 82, className : "Main", methodName : "main"});
+		haxe_Log.trace({ z : tmp_2_z, y : tmp_1_y, x : tmp_1_x, c : tmp_1_c, b : tmp_1_b},{ fileName : "src/Main.hx", lineNumber : 89, className : "Main", methodName : "main"});
 		let xY = function(other) {
 			return { y : other.y, x : other.x};
 		};
 		let x1 = _$LTGlobals_$.$gamePlayer;
 		let result1 = xY(x1);
-		haxe_Log.trace(result1.x,{ fileName : "src/Main.hx", lineNumber : 86, className : "Main", methodName : "main"});
+		haxe_Log.trace(result1.x,{ fileName : "src/Main.hx", lineNumber : 93, className : "Main", methodName : "main"});
 		let result2_c = tmp_1_c;
 		let result2_b = tmp_1_b;
-		haxe_Log.trace(result2_b,{ fileName : "src/Main.hx", lineNumber : 88, className : "Main", methodName : "main"});
+		haxe_Log.trace(result2_b,{ fileName : "src/Main.hx", lineNumber : 95, className : "Main", methodName : "main"});
 		Main.test(...[1,2]);
 		let _Window_Message__testingNewCharacter = Window_Message.prototype._testingNewCharacter;
 		Window_Message.prototype._testingNewCharacter = null;

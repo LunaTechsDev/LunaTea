@@ -2,7 +2,7 @@ import rm.windows.Window_Message;
 import utils.Fn;
 
 @:keep
-@:native("LTWinMsg")
+@:native("LT_Win_Msg")
 class LTWinMsgUpdate extends Window_Message {
  public var _testingNewCharacter: String;
 
