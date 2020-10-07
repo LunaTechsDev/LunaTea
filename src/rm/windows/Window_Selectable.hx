@@ -113,7 +113,7 @@ public function onTouchCancel(): Void;
  * @returns {Float}
  * @memberof Window_Selectable
  */
-public function index(): Float;
+public function index(): Int;
 
 /**
  * Returns true if the _cursorFixed property is true;
