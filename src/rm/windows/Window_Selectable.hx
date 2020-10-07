@@ -52,6 +52,25 @@ public function initialize(x: Float, y: Float, height: Float,
  * @memberof Window_Selectable
  */
 public function itemRectForText(index: Int): Rectangle;
+
+/**
+ * Plays a sound effect when okay is processed.
+ *
+
+ */
+public function playOkSound(): Void;
+
+/**
+ * Plays the buzzer sound effect when input is
+ * incorrect.
+
+ */
+public function playBuzzerSound(): Void;
+
+/**
+ * Plays the cursor sound from SoundManager;
+ */
+public function playCursorSound(): Void;
 #else
 public function new(rect: Rectangle);
 public function initialize(rect: Rectangle): Void;
