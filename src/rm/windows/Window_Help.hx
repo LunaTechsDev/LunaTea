@@ -21,7 +21,7 @@ extern class Window_Help extends Window_Base {
   * @param {number} numLines
   * @memberof Window_Help
   */
- public function new(numLines: Float): Void;
+ public function new(numLines: Int): Void;
  #else
  public function new(rect: Rectangle): Void;
  #end
