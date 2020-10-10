@@ -14,7 +14,7 @@ abstract WindowHelp(Window_Help) from Window_Help to Window_Help {
   * @param width
   * @param height
   */
- public inline function new(numLines: Float, ?x: Float, ?y: Float,
+ public inline function new(numLines: Int, ?x: Float, ?y: Float,
    ?width: Float, ?height: Float) {
   #if compileMV
   this = new Window_Help(numLines);
