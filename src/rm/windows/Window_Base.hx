@@ -677,7 +677,7 @@ extern class Window_Base extends _Window {
   * @param {number} y
   * @memberof Window_Base
   */
- public function drawIcon(iconIndex: Float, x: Float, y: Float): Void;
+ public function drawIcon(iconIndex: Int, x: Float, y: Float): Void;
 
  public function drawFace(faceName: String, faceIndex: Float, x: Float,
   y: Float, width: Float, height: Float): Void;
