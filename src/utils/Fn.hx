@@ -119,6 +119,10 @@ class Fn {
   return Syntax.field(obj, fieldName);
  }
 
+ public static inline function hasProperty(obj: Any, fieldName: String): Bool {
+  return Syntax.code('{0}.hasOwnProperty({1})', obj, fieldName);
+ }
+
  /**
   * Gets an element using an array syntax.
   * @param obj
