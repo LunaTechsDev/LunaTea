@@ -30,7 +30,11 @@ class WindowExtensions {
   #end
  }
 
- public static function isOpenOrVisible(win: Window_Base) {
+ public static inline function isOpenOrVisible(win: Window_Base) {
+  return win.isOpen() || win.visible;
+ }
+
+ public static inline function isOpenAndVisible(win: Window_Base) {
   return win.isOpen() || win.visible;
  }
 }
