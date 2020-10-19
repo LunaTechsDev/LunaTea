@@ -66,6 +66,15 @@ extern class _Window extends Container {
  public var contents: Bitmap;
 
  /**
+  * The back contents for the window.
+  * @property contentsBack
+  * @type Bitmap
+  */
+ #if !compileMV
+ public var contentsBack: Bitmap;
+ #end
+
+ /**
   * The width of the window in pixels.
   *
   * @property width
