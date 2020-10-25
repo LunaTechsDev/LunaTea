@@ -83,7 +83,7 @@ class Amaryllis {
   * @returns String
   */
  public static inline function encodeURI(string: String) {
-  return Syntax.code('encodeURIComponent({0}).replace(/%2F/g, "/");', string);
+  return Syntax.code('encodeURIComponent({0}).replace(/%2F/g, "/")', string);
  }
 
  /**
