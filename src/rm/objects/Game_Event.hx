@@ -39,8 +39,8 @@ extern class Game_Event extends Game_Character {
 
  private var _locked: Bool;
 
- public function new(mapId: Float, eventId: Float);
- public function initialize(mapId: Float, eventId: Float): Void;
+ public function new(mapId: Int, eventId: Int);
+ public function initialize(mapId: Int, eventId: Int): Void;
 
  public function initMembers(): Void;
 
@@ -50,7 +50,7 @@ extern class Game_Event extends Game_Character {
   * @returns {Float}
   * @memberof Game_Event
   */
- public function eventId(): Float;
+ public function eventId(): Int;
 
  /**
   * Returns the event database information.
