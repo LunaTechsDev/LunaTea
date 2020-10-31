@@ -412,7 +412,7 @@ typedef EventCommand = {
  /**
   * An array containing the Event command's arguments. The contents vary for each command.
   */
- var parameters: Array<Any>;
+ var parameters: Array<Dynamic>;
 }
 
 /**

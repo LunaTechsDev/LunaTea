@@ -17,9 +17,9 @@ import rm.types.RPG.EventCommand;
 @:expose("Game_Event")
 @:native("Game_Event")
 extern class Game_Event extends Game_Character {
- private var _mapId: Float;
+ private var _mapId: Int;
 
- private var _eventId: Float;
+ private var _eventId: Int;
 
  private var _moveType: MoveType; // Cast this  to an abstract enum
 
@@ -39,8 +39,8 @@ extern class Game_Event extends Game_Character {
 
  private var _locked: Bool;
 
- public function new(mapId: Float, eventId: Float);
- public function initialize(mapId: Float, eventId: Float): Void;
+ public function new(mapId: Int, eventId: Int);
+ public function initialize(mapId: Int, eventId: Int): Void;
 
  public function initMembers(): Void;
 
@@ -50,7 +50,7 @@ extern class Game_Event extends Game_Character {
   * @returns {Float}
   * @memberof Game_Event
   */
- public function eventId(): Float;
+ public function eventId(): Int;
 
  /**
   * Returns the event database information.

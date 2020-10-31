@@ -15,191 +15,191 @@ import rm.core.Sprite;
 @:native("Sprite_Character")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
+#if compileMV
 extern class Sprite_Character extends Sprite_Base {
- /**
-  * The Game_Character object assigned
-  * to the sprite.
-  * @private var
-  * @type {Game_Character}
-  * @memberof Sprite_Character
-  */
- private var _character: Game_Character;
+#else
+extern class Sprite_Character extends Sprite {
+#end
 
- private var _balloonDuration: Float;
+/**
+ * The Game_Character object assigned
+ * to the sprite.
+ * @private var
+ * @type {Game_Character}
+ * @memberof Sprite_Character
+ */
+private var _character: Game_Character;
 
- private var _tilesetId: Float;
+private var _balloonDuration: Float;
+private var _tilesetId: Float;
+private var _upperBody: Sprite;
+private var _lowerBody: Sprite;
+private var _bushDepth: Float;
 
- private var _upperBody: Sprite;
+/**
+ * The current balloon sprite
+ * assigned to the sprite.
+ * @private var
+ * @type {Sprite_Balloon}
+ * @memberof Sprite_Character
+ */
+private var _balloonSprite: Sprite_Balloon;
 
- private var _lowerBody: Sprite;
+/**
+ * Creates an instance of Sprite_Character.
+ * @param {Game_Character} character
+ * @memberof Sprite_Character
+ */
+public function new(character: Game_Character): Void;
 
- private var _bushDepth: Float;
+public function initialize(character: Game_Character): Void;
+public function initMembers(): Void;
 
- /**
-  * The current balloon sprite
-  * assigned to the sprite.
-  * @private var
-  * @type {Sprite_Balloon}
-  * @memberof Sprite_Character
-  */
- private var _balloonSprite: Sprite_Balloon;
+/**
+ * Sets the current Game_Character object
+ * attached to the sprite.
+ * @param {Game_Character} character
+ * @memberof Sprite_Character
+ */
+public function setCharacter(character: Game_Character): Void;
 
- /**
-  * Creates an instance of Sprite_Character.
-  * @param {Game_Character} character
-  * @memberof Sprite_Character
-  */
- public function new(character: Game_Character): Void;
+/**
+ * Returns true if the Game_Character object
+ * tileId is greater than 0.
+ * @returns {Bool}
+ * @memberof Sprite_Character
+ */
+public function isTile(): Bool;
 
- public function initialize(character: Game_Character): Void;
+public function tilesetBitmap(tileId: Float): Bitmap;
 
- public function initMembers(): Void;
+/**
+ * Updates the bitmap of the sprite character.
+ *
+ * @memberof Sprite_Character
+ */
+public function updateBitmap(): Void;
 
- /**
-  * Sets the current Game_Character object
-  * attached to the sprite.
-  * @param {Game_Character} character
-  * @memberof Sprite_Character
-  */
- public function setCharacter(character: Game_Character): Void;
+/**
+ * Returns true if the sprite character image has changed.
+ *
+ * @returns {Bool}
+ * @memberof Sprite_Character
+ */
+public function isImageChanged(): Bool;
 
- /**
-  * Returns true if the Game_Character object
-  * tileId is greater than 0.
-  * @returns {Bool}
-  * @memberof Sprite_Character
-  */
- public function isTile(): Bool;
+public function setTileBitmap(): Void;
 
- public function tilesetBitmap(tileId: Float): Bitmap;
+/**
+ * Sets the sprite character bitmap.
+ *
+ * @memberof Sprite_Character
+ */
+public function setCharacterBitmap(): Void;
 
- /**
-  * Updates the bitmap of the sprite character.
-  *
-  * @memberof Sprite_Character
-  */
- public function updateBitmap(): Void;
+/**
+ * Updates the sprite character frame.
+ *
+ * @memberof Sprite_Character
+ */
+public function updateFrame(): Void;
 
- /**
-  * Returns true if the sprite character image has changed.
-  *
-  * @returns {Bool}
-  * @memberof Sprite_Character
-  */
- public function isImageChanged(): Bool;
+/**
+ * Updates the sprite character tile frame.
+ *
+ * @memberof Sprite_Character
+ */
+public function updateTileFrame(): Void;
 
- public function setTileBitmap(): Void;
+/**
+ * Updates the sprite character -- character frame.
+ *
+ * @memberof Sprite_Character
+ */
+public function updateCharacterFrame(): Void;
 
- /**
-  * Sets the sprite character bitmap.
-  *
-  * @memberof Sprite_Character
-  */
- public function setCharacterBitmap(): Void;
+public function characterBlockX(): Float;
+public function characterBlockY(): Float;
 
- /**
-  * Updates the sprite character frame.
-  *
-  * @memberof Sprite_Character
-  */
- public function updateFrame(): Void;
+/**
+ * Returns the character x pattern.
+ *
+ * @returns {number}
+ * @memberof Sprite_Character
+ */
+public function characterPatternX(): CharacterPattern;
 
- /**
-  * Updates the sprite character tile frame.
-  *
-  * @memberof Sprite_Character
-  */
- public function updateTileFrame(): Void;
+/**
+ * Returns the character y pattern.
+ *
+ * @returns {number}
+ * @memberof Sprite_Character
+ */
+public function characterPatternY(): CharacterPattern;
 
- /**
-  * Updates the sprite character -- character frame.
-  *
-  * @memberof Sprite_Character
-  */
- public function updateCharacterFrame(): Void;
+/**
+ * Returns the pattern width.
+ *
+ * @returns {number}
+ * @memberof Sprite_Character
+ */
+public function patternWidth(): Float;
 
- public function characterBlockX(): Float;
- public function characterBlockY(): Float;
+/**
+ * Returns the pattern height.
+ *
+ * @returns {number}
+ * @memberof Sprite_Character
+ */
+public function patternHeight(): Float;
 
- /**
-  * Returns the character x pattern.
-  *
-  * @returns {number}
-  * @memberof Sprite_Character
-  */
- public function characterPatternX(): CharacterPattern;
+public function updateHalfBodySprites(): Void;
+public function createHalfBodySprites(): Void;
 
- /**
-  * Returns the character y pattern.
-  *
-  * @returns {number}
-  * @memberof Sprite_Character
-  */
- public function characterPatternY(): CharacterPattern;
+/**
+ * Updates the position of the sprite character.
+ *
+ * @memberof Sprite_Character
+ */
+public function updatePosition(): Void;
 
- /**
-  * Returns the pattern width.
-  *
-  * @returns {number}
-  * @memberof Sprite_Character
-  */
- public function patternWidth(): Float;
+public function updateAnimation(): Void;
+public function updateOther(): Void;
+public function setupAnimation(): Void;
 
- /**
-  * Returns the pattern height.
-  *
-  * @returns {number}
-  * @memberof Sprite_Character
-  */
- public function patternHeight(): Float;
+/**
+ * Sets up the Game_Character object
+ * balloon sprite, and calls the startBalloon method.
+ * @memberof Sprite_Character
+ */
+public function setupBalloon(): Void;
 
- public function updateHalfBodySprites(): Void;
- public function createHalfBodySprites(): Void;
+/**
+ * Starts the balloon sprite on the
+ * Game_Character object.
+ * @memberof Sprite_Character
+ */
+public function startBalloon(): Void;
 
- /**
-  * Updates the position of the sprite character.
-  *
-  * @memberof Sprite_Character
-  */
- public function updatePosition(): Void;
+/**
+ * Processes the balloon sprite, calls
+ * the endBaloon method if the balloon sprite is done playing.
+ * @memberof Sprite_Character
+ */
+public function updateBalloon(): Void;
 
- public function updateAnimation(): Void;
- public function updateOther(): Void;
- public function setupAnimation(): Void;
+/**
+     * Ends the balloon sprite, removing it from
+     * the Game_Character object sprite.
+ * @memberof Sprite_Character
+ */
+public function endBalloon(): Void;
 
- /**
-  * Sets up the Game_Character object
-  * balloon sprite, and calls the startBalloon method.
-  * @memberof Sprite_Character
-  */
- public function setupBalloon(): Void;
-
- /**
-  * Starts the balloon sprite on the
-  * Game_Character object.
-  * @memberof Sprite_Character
-  */
- public function startBalloon(): Void;
-
- /**
-  * Processes the balloon sprite, calls
-  * the endBaloon method if the balloon sprite is done playing.
-  * @memberof Sprite_Character
-  */
- public function updateBalloon(): Void;
-
- /**
-      * Ends the balloon sprite, removing it from
-      * the Game_Character object sprite.
-  * @memberof Sprite_Character
-  */
- public function endBalloon(): Void;
-
- /**
-    * Returns true if a balloon animation
-    * is playing on the character.
-  * @returns {Bool}
-  * @memberof Sprite_Character
-  */
- public function isBalloonPlaying(): Bool;
+/**
+   * Returns true if a balloon animation
+   * is playing on the character.
+ * @returns {Bool}
+ * @memberof Sprite_Character
+ */
+public function isBalloonPlaying(): Bool;
 }
