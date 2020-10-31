@@ -1,6 +1,7 @@
 package rm.sprites;
 
 import rm.objects.Game_Battler;
+import rm.core.Sprite;
 
 /**
  * -----------------------------------------------------------------------------
@@ -12,43 +13,44 @@ import rm.objects.Game_Battler;
 @:native("Sprite_StateOverlay")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
+#if compileMV
 extern class Sprite_StateOverlay extends Sprite_Base {
- private var _battler: Game_Battler;
+#else
+extern class Sprite_StateOverlay extends Sprite {
+#end
+private var _battler: Game_Battler;
+private var _overlayIndex: Float;
+private var _animationCount: Float;
+private var _pattern: Float;
 
- private var _overlayIndex: Float;
+/**
+ * Initialize the overlay sprite properties.
+ *
+ * @memberof Sprite_StateOverlay
+ */
+public function initMembers(): Void;
 
- private var _animationCount: Float;
+/**
+ * Loads the bitmap of the overlay sprite.
+ *
+ * @memberof Sprite_StateOverlay
+ */
+public function loadBitmap(): Void;
 
- private var _pattern: Float;
+public function setup(battler: Game_Battler): Void;
+public function animationWait(): Float;
 
- /**
-  * Initialize the overlay sprite properties.
-  *
-  * @memberof Sprite_StateOverlay
-  */
- public function initMembers(): Void;
+/**
+ * Updates the overlay sprite pattern.
+ *
+ * @memberof Sprite_StateOverlay
+ */
+public function updatePattern(): Void;
 
- /**
-  * Loads the bitmap of the overlay sprite.
-  *
-  * @memberof Sprite_StateOverlay
-  */
- public function loadBitmap(): Void;
-
- public function setup(battler: Game_Battler): Void;
- public function animationWait(): Float;
-
- /**
-  * Updates the overlay sprite pattern.
-  *
-  * @memberof Sprite_StateOverlay
-  */
- public function updatePattern(): Void;
-
- /**
-  * Updates the overlay sprite frame.
-  *
-  * @memberof Sprite_StateOverlay
-  */
- public function updateFrame(): Void;
+/**
+ * Updates the overlay sprite frame.
+ *
+ * @memberof Sprite_StateOverlay
+ */
+public function updateFrame(): Void;
 }

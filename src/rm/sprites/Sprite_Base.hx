@@ -3,6 +3,7 @@ package rm.sprites;
 import rm.core.Sprite;
 import rm.types.RPG;
 
+#if compileMV
 @:expose("Sprite_Base")
 @:native("Sprite_Base")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
@@ -84,3 +85,5 @@ extern class Sprite_Base extends Sprite {
   */
  public function isAnimationPlaying(): Bool;
 }
+#else
+#end

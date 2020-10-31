@@ -360,4 +360,32 @@ extern class Sprite extends pixi.core.sprites.Sprite {
   * @private
   */
  private function _speedUpCustomBlendModes(renderer: Renderer): Void;
+
+ #if compileMV
+
+ #else
+ private var _hidden: Bool;
+ /**
+  * Hides the sprite.
+  */
+ public function hide(): Void;
+
+ /**
+  * Shows the sprite.
+  */
+ public function show(): Void;
+
+ /**
+  * Updadtes the visibility of the sprite based
+  * on the _hiding property.
+  * @memberof Sprite_Base
+  */
+ public function updateVisibility(): Void;
+
+ /**
+  * Sets the hue rotation value.
+  * @param hue (-360, 360)
+  */
+ public function setHue(hue: Float): Void;
+ #end
 }

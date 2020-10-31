@@ -45,7 +45,11 @@ extern class Sprite_Actor extends Sprite_Battler {
 
  private var _pattern: CharacterPattern;
 
+ #if compileMV
  private var _mainSprite: Sprite_Base;
+ #else
+ private var _mainSprite: Sprite;
+ #end
 
  private var _shadowSprite: Sprite;
 

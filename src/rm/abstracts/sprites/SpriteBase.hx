@@ -2,6 +2,7 @@ package rm.abstracts.sprites;
 
 import rm.sprites.Sprite_Base;
 
+#if compileMV
 @:forward
 @:forwardStatics
 abstract SpriteBase(Sprite_Base) from Sprite_Base to Sprite_Base {
@@ -13,3 +14,5 @@ abstract SpriteBase(Sprite_Base) from Sprite_Base to Sprite_Base {
   return this;
  }
 }
+#else
+#end

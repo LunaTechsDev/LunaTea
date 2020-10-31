@@ -33,7 +33,11 @@ extern class Sprite_Animation extends Sprite {
   */
  private static var _checker2: DynamicAccess<Dynamic>;
 
+ #if compileMV
  private var _target: Sprite_Base;
+ #else
+ private var _targets: Array<Sprite>;
+ #end
 
  private var _animation: Animation;
 
@@ -66,8 +70,13 @@ extern class Sprite_Animation extends Sprite {
  private var _reduceArtifacts: Bool;
 
  public function initMembers(): Void;
+ #if compileMV
  public function setup(target: Sprite_Base, animation: Animation,
   mirror: Bool, delay: Float): Void;
+ #else
+ public function setup(targets: Array<Sprite>, animation: Animation,
+  mirror: Bool, delay: Float): Void;
+ #end
 
  /**
   * Removes the sprite animation.

@@ -1,6 +1,7 @@
 package rm.sprites;
 
 import rm.types.LunaTea.BalloonId;
+import rm.core.Sprite;
 
 /**
  * -----------------------------------------------------------------------------
@@ -12,60 +13,60 @@ import rm.types.LunaTea.BalloonId;
 @:native("Sprite_Balloon")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
+#if compileMV
 extern class Sprite_Balloon extends Sprite_Base {
- private var _balloonId: BalloonId; // TODO: Create Balloon ID abstract
+#else
+extern class Sprite_Balloon extends Sprite {
+#end
+private var _balloonId: BalloonId; // TODO: Create Balloon ID abstract
+private var _duration: Float;
+public function initMembers(): Void;
+public function loadBitmap(): Void;
+public function setup(balloonId: BalloonId): Void;
 
- private var _duration: Float;
+/**
+ * Updates the balloon sprite.
+ *
+ * @memberof Sprite_Balloon
+ */
+public function update(): Void;
 
- public function initMembers(): Void;
+/**
+ * Updates the balloon sprite frame.
+ *
+ * @memberof Sprite_Balloon
+ */
+public function updateFrame(): Void;
 
- public function loadBitmap(): Void;
+/**
+ * Returns the speed of the balloon animation.
+ *
+ * @returns {number}
+ * @memberof Sprite_Balloon
+ */
+public function speed(): Float;
 
- public function setup(balloonId: BalloonId): Void;
+/**
+ * Returns the wait time.
+ *
+ * @returns {number}
+ * @memberof Sprite_Balloon
+ */
+public function waitTime(): Float;
 
- /**
-  * Updates the balloon sprite.
-  *
-  * @memberof Sprite_Balloon
-  */
- public function update(): Void;
+/**
+ * Returns the frame index of the balloon animation.
+ *
+ * @returns {number}
+ * @memberof Sprite_Balloon
+ */
+public function frameIndex(): Float;
 
- /**
-  * Updates the balloon sprite frame.
-  *
-  * @memberof Sprite_Balloon
-  */
- public function updateFrame(): Void;
-
- /**
-  * Returns the speed of the balloon animation.
-  *
-  * @returns {number}
-  * @memberof Sprite_Balloon
-  */
- public function speed(): Float;
-
- /**
-  * Returns the wait time.
-  *
-  * @returns {number}
-  * @memberof Sprite_Balloon
-  */
- public function waitTime(): Float;
-
- /**
-  * Returns the frame index of the balloon animation.
-  *
-  * @returns {number}
-  * @memberof Sprite_Balloon
-  */
- public function frameIndex(): Float;
-
- /**
-  * Returns true if the balloon animation is playing.
-  *
-  * @returns {boolean}
-  * @memberof Sprite_Balloon
-  */
- public function isPlaying(): Bool;
+/**
+ * Returns true if the balloon animation is playing.
+ *
+ * @returns {boolean}
+ * @memberof Sprite_Balloon
+ */
+public function isPlaying(): Bool;
 }

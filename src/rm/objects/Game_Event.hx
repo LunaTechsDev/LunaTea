@@ -17,9 +17,9 @@ import rm.types.RPG.EventCommand;
 @:expose("Game_Event")
 @:native("Game_Event")
 extern class Game_Event extends Game_Character {
- private var _mapId: Float;
+ private var _mapId: Int;
 
- private var _eventId: Float;
+ private var _eventId: Int;
 
  private var _moveType: MoveType; // Cast this  to an abstract enum
 
