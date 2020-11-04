@@ -13,272 +13,273 @@ import rm.windows.Window_ScrollText;
 @:native("Scene_Map")
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
+#if compileMV
 extern class Scene_Map extends Scene_Base {
- private var _waitCount: Float;
- private var _encounterEffectDuration: Float;
- private var _mapLoaded: Bool;
- private var _touchCount: Float;
- private var _transfer: Bool;
- private var _spriteset: Spriteset_Map;
- private var _mapNameWindow: Window_MapName;
- private var _scrollTextWindow: Window_ScrollText;
- private var _messageWindow: Window_Message;
+#else
+extern class Scene_Map extends Scene_Message {
+#end
+private var _waitCount: Float;
+private var _encounterEffectDuration: Float;
+private var _mapLoaded: Bool;
+private var _touchCount: Float;
+private var _transfer: Bool;
+private var _spriteset: Spriteset_Map;
+private var _mapNameWindow: Window_MapName;
+private var _scrollTextWindow: Window_ScrollText;
+private var _messageWindow: Window_Message;
+#if !compileMV
+private var _lastMapWasNull: Bool;
+public function shouldAutosave(): Bool;
+public function onTransferEnd(): Void;
+public function isPlayerActive(): Bool;
+public function updateMenuButton(): Void;
+public function hideMenuButton(): Void;
+public function updateMapNameWindow(): Void;
+public function isAnyButtonPressed(): Bool;
+public function onMapTouch(): Void;
+public function mapNameWindowRect(): Rectangle;
+public function createButtons(): Void;
+public function createMenuButton(): Void;
+#end
+public var menuCalling: Bool;
 
- #if !compileMV
- private var _lastMapWasNull: Bool;
+/**
+ * Handler for when the map scene is loaded.
+ *
+ * @memberof Scene_Map
+ */
+public function onMapLoaded(): Void;
 
- public function shouldAutosave(): Bool;
- public function onTransferEnd(): Void;
- public function isPlayerActive(): Bool;
- public function updateMenuButton(): Void;
- public function hideMenuButton(): Void;
- public function updateMapNameWindow(): Void;
- public function isAnyButtonPressed(): Bool;
- public function onMapTouch(): Void;
- public function mapNameWindowRect(): Rectangle;
- public function createButtons(): Void;
- public function createMenuButton(): Void;
- #end
+/**
+ * Speeds up the updateMain if
+ * the map scene is in fast forward mode.
+ * @memberof Scene_Map
+ */
+public function updateMainMultiply(): Void;
 
- public var menuCalling: Bool;
+/**
+ * Updates the main $game globals
+ * if the map scene is active.
+ * @memberof Scene_Map
+ */
+public function updateMain(): Void;
 
- /**
-  * Handler for when the map scene is loaded.
-  *
-  * @memberof Scene_Map
-  */
- public function onMapLoaded(): Void;
+/**
+ * Returns true if the player
+ * is holding down the confirm button to
+ * fast forward through text.
+ * @returns {boolean}
+ * @memberof Scene_Map
+ */
+public function isFastForward(): Bool;
 
- /**
-  * Speeds up the updateMain if
-  * the map scene is in fast forward mode.
-  * @memberof Scene_Map
-  */
- public function updateMainMultiply(): Void;
+/**
+ * Stops the map scene and prepares
+ * for a new scene.
+ * @memberof Scene_Map
+ */
+public function stop(): Void;
 
- /**
-  * Updates the main $game globals
-  * if the map scene is active.
-  * @memberof Scene_Map
-  */
- public function updateMain(): Void;
+/**
+ * Returns true if the map scene needs a slow fade in.
+ *
+ * @returns {boolean}
+ * @memberof Scene_Map
+ */
+public function needsFadeIn(): Bool;
 
- /**
-  * Returns true if the player
-  * is holding down the confirm button to
-  * fast forward through text.
-  * @returns {boolean}
-  * @memberof Scene_Map
-  */
- public function isFastForward(): Bool;
+/**
+ * Returns true if the map scene needs a slow fade out.
+ *
+ * @returns {boolean}
+ * @memberof Scene_Map
+ */
+public function needsSlowFadeOut(): Bool;
 
- /**
-  * Stops the map scene and prepares
-  * for a new scene.
-  * @memberof Scene_Map
-  */
- public function stop(): Void;
+public function updateWaitCount(): Bool;
 
- /**
-  * Returns true if the map scene needs a slow fade in.
-  *
-  * @returns {boolean}
-  * @memberof Scene_Map
-  */
- public function needsFadeIn(): Bool;
+/**
+ * Constantly checks if the player
+ * is touching the map, then processes
+ * a map touch for mouse based player character movement.
+ * @memberof Scene_Map
+ */
+public function updateDestination(): Void;
 
- /**
-  * Returns true if the map scene needs a slow fade out.
-  *
-  * @returns {boolean}
-  * @memberof Scene_Map
-  */
- public function needsSlowFadeOut(): Bool;
+/**
+ * Returns true if the map scene is
+ * active and the player can move. Used for
+ * mouse movement on the map scene.
+ * @returns {boolean}
+ * @memberof Scene_Map
+ */
+public function isMapTouchOk(): Bool;
 
- public function updateWaitCount(): Bool;
+/**
+ * Processes the map touch and turns it
+ * into coordinates for the player character to move to.
+ * @memberof Scene_Map
+ */
+public function processMapTouch(): Void;
 
- /**
-  * Constantly checks if the player
-  * is touching the map, then processes
-  * a map touch for mouse based player character movement.
-  * @memberof Scene_Map
-  */
- public function updateDestination(): Void;
+public function isSceneChangeOk(): Bool;
 
- /**
-  * Returns true if the map scene is
-  * active and the player can move. Used for
-  * mouse movement on the map scene.
-  * @returns {boolean}
-  * @memberof Scene_Map
-  */
- public function isMapTouchOk(): Bool;
+/**
+ * Updates the scene.
+ *
+ * @memberof Scene_Map
+ */
+public function updateScene(): Void;
 
- /**
-  * Processes the map touch and turns it
-  * into coordinates for the player character to move to.
-  * @memberof Scene_Map
-  */
- public function processMapTouch(): Void;
+/**
+ * Creates all the display objects on the map scene;
+ * this includes the sprites, window layer, windows, and more.
+ * @memberof Scene_Map
+ */
+public function createDisplayObjects(): Void;
 
- public function isSceneChangeOk(): Bool;
+/**
+ * Creates the spriteset on the map scene;
+ * this shows all the characters and events on the map.
+ * @memberof Scene_Map
+ */
+public function createSpriteset(): Void;
 
- /**
-  * Updates the scene.
-  *
-  * @memberof Scene_Map
-  */
- public function updateScene(): Void;
+/**
+ * Creates all the windows on the map scene
+ * contains other window creation methods.
+ * @memberof Scene_Map
+ */
+public function createAllWindows(): Void;
 
- /**
-  * Creates all the display objects on the map scene;
-  * this includes the sprites, window layer, windows, and more.
-  * @memberof Scene_Map
-  */
- public function createDisplayObjects(): Void;
+/**
+ * Creates the map name window within
+ * the map scene; display map name.
+ * @memberof Scene_Map
+ */
+public function createMapNameWindow(): Void;
 
- /**
-  * Creates the spriteset on the map scene;
-  * this shows all the characters and events on the map.
-  * @memberof Scene_Map
-  */
- public function createSpriteset(): Void;
+/**
+ * Creates the message window for displaying
+ * text on the map scene. Commonly used with the
+ * showText command.
+ * @memberof Scene_Map
+ */
+public function createMessageWindow(): Void;
 
- /**
-  * Creates all the windows on the map scene
-  * contains other window creation methods.
-  * @memberof Scene_Map
-  */
- public function createAllWindows(): Void;
+/**
+ * Creates a scrolling text window on the map scene.
+ *
+ * @memberof Scene_Map
+ */
+public function createScrollTextWindow(): Void;
 
- /**
-  * Creates the map name window within
-  * the map scene; display map name.
-  * @memberof Scene_Map
-  */
- public function createMapNameWindow(): Void;
+/**
+ * Checks if the player is transferring;
+ * if the player is transferring, move to a new map scene.
+ * @memberof Scene_Map
+ */
+public function updateTransferPlayer(): Void;
 
- /**
-  * Creates the message window for displaying
-  * text on the map scene. Commonly used with the
-  * showText command.
-  * @memberof Scene_Map
-  */
- public function createMessageWindow(): Void;
+/**
+ * Processes starting an encounter on the map scene.
+ *
+ * @memberof Scene_Map
+ */
+public function updateEncounter(): Void;
 
- /**
-  * Creates a scrolling text window on the map scene.
-  *
-  * @memberof Scene_Map
-  */
- public function createScrollTextWindow(): Void;
+/**
+ * Processes calling the menu on the map scene.
+ *
+ * @memberof Scene_Map
+ */
+public function updateCallMenu(): Void;
 
- /**
-  * Checks if the player is transferring;
-  * if the player is transferring, move to a new map scene.
-  * @memberof Scene_Map
-  */
- public function updateTransferPlayer(): Void;
+/**
+ * Returns true if the menu is enabled
+ * in the database.
+ * @returns {boolean}
+ * @memberof Scene_Map
+ */
+public function isMenuEnabled(): Bool;
 
- /**
-  * Processes starting an encounter on the map scene.
-  *
-  * @memberof Scene_Map
-  */
- public function updateEncounter(): Void;
+/**
+ * Returns true if the menu is called
+ * via an input trigger.
+ * @returns {boolean}
+ * @memberof Scene_Map
+ */
+public function isMenuCalled(): Bool;
 
- /**
-  * Processes calling the menu on the map scene.
-  *
-  * @memberof Scene_Map
-  */
- public function updateCallMenu(): Void;
+/**
+ * Calls the standard RPGMakerMV menu scene.
+ *
+ * @memberof Scene_Map
+ */
+public function callMenu(): Void;
 
- /**
-  * Returns true if the menu is enabled
-  * in the database.
-  * @returns {boolean}
-  * @memberof Scene_Map
-  */
- public function isMenuEnabled(): Bool;
+/**
+ * Checks if debug is called via input trigger
+ * and starts the debug scene.
+ *
+ * @memberof Scene_Map
+ */
+public function updateCallDebug(): Void;
 
- /**
-  * Returns true if the menu is called
-  * via an input trigger.
-  * @returns {boolean}
-  * @memberof Scene_Map
-  */
- public function isMenuCalled(): Bool;
+/**
+ * Returns true if the debug
+ * scene is called via button press and in play test mode.
+ * @returns {boolean}
+ * @memberof Scene_Map
+ */
+public function isDebugCalled(): Void;
 
- /**
-  * Calls the standard RPGMakerMV menu scene.
-  *
-  * @memberof Scene_Map
-  */
- public function callMenu(): Void;
+public function fadeInForTransfer(): Void;
+public function fadeOutForTransfer(): Void;
 
- /**
-  * Checks if debug is called via input trigger
-  * and starts the debug scene.
-  *
-  * @memberof Scene_Map
-  */
- public function updateCallDebug(): Void;
+/**
+ * Launches into the battle scene.
+ *
+ * @memberof Scene_Map
+ */
+public function launchBattle(): Void;
 
- /**
-  * Returns true if the debug
-  * scene is called via button press and in play test mode.
-  * @returns {boolean}
-  * @memberof Scene_Map
-  */
- public function isDebugCalled(): Void;
+/**
+ * Stops all audio on battle start.
+ *
+ * @memberof Scene_Map
+ */
+public function stopAudioOnBattleStart(): Void;
 
- public function fadeInForTransfer(): Void;
- public function fadeOutForTransfer(): Void;
+/**
+ * Starts the encounter effect on the map scene.
+ *
+ * @memberof Scene_Map
+ */
+public function startEncounterEffect(): Void;
 
- /**
-  * Launches into the battle scene.
-  *
-  * @memberof Scene_Map
-  */
- public function launchBattle(): Void;
+public function updateEncounterEffect(): Void;
 
- /**
-  * Stops all audio on battle start.
-  *
-  * @memberof Scene_Map
-  */
- public function stopAudioOnBattleStart(): Void;
+/**
+ * Takes a snapshot of the map scene for displaying
+ * on the battle scene if no battleback is present.
+ * @memberof Scene_Map
+ */
+public function snapForBattleBackground(): Void;
 
- /**
-  * Starts the encounter effect on the map scene.
-  *
-  * @memberof Scene_Map
-  */
- public function startEncounterEffect(): Void;
+/**
+ * Starts a flash encounter effect on the map scene
+ * given a duration of the flash.
+ * @param {number} duration
+ * @memberof Scene_Map
+ */
+public function startFlashForEncounter(duration: Float): Void;
 
- public function updateEncounterEffect(): Void;
-
- /**
-  * Takes a snapshot of the map scene for displaying
-  * on the battle scene if no battleback is present.
-  * @memberof Scene_Map
-  */
- public function snapForBattleBackground(): Void;
-
- /**
-  * Starts a flash encounter effect on the map scene
-  * given a duration of the flash.
-  * @param {number} duration
-  * @memberof Scene_Map
-  */
- public function startFlashForEncounter(duration: Float): Void;
-
- /**
-  * Returns the speed of the encounter effect.
-  *
-  * @returns {number}
-  * @memberof Scene_Map
-  */
- public function encounterEffectSpeed(): Float;
+/**
+ * Returns the speed of the encounter effect.
+ *
+ * @returns {number}
+ * @memberof Scene_Map
+ */
+public function encounterEffectSpeed(): Float;
 }
