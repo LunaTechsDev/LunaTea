@@ -8,6 +8,7 @@ import rm.core.WindowLayer;
 import rm.core.Stage;
 import rm.windows.Window_Base;
 import haxe.extern.EitherType;
+import rm.core.Rectangle;
 
 #if !compileMV
 @:expose("Scene_Message")
@@ -27,16 +28,16 @@ extern class Scene_Message extends Scene_Base {
 
  public function createAllWindows(): Void;
  public function createMessageWindow(): Void;
- public function messageWindowRect(): Void;
+ public function messageWindowRect(): Rectangle;
  public function createScrollTextWindow(): Void;
- public function scrollTextWindowRect(): Void;
+ public function scrollTextWindowRect(): Rectangle;
  public function createGoldWindow(): Void;
- public function goldWindowRect(): Void;
+ public function goldWindowRect(): Rectangle;
  public function createNameBoxWindow(): Void;
  public function createChoiceListWindow(): Void;
  public function createNumberInputWindow(): Void;
  public function createEventItemWindow(): Void;
- public function eventItemWindowRect(): Void;
+ public function eventItemWindowRect(): Rectangle;
  public function associateWindows(): Void;
 }
 #else
