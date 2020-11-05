@@ -360,6 +360,7 @@ extern class Bitmap {
   */
  public function touch(): Void;
 
+ #if compileMV
  /**
   * Performs a block transfer, using assumption that original image was not modified (no hue)
   *
@@ -376,6 +377,7 @@ extern class Bitmap {
   */
  public function bltImage(source: Bitmap, sx: Float, sy: Float, sw: Float,
   sh: Float, dx: Float, dy: Float, ?dw: Float, ?dh: Float): Void;
+ #end
 
  private var _canvas: CanvasElement;
  private var _context: CanvasRenderingContext2D;
