@@ -481,8 +481,8 @@ extern class Window_Base extends _Window {
   * @param {String} align
   * @memberof Window_Base
   */
- public function drawText(text: EitherType<String, Float>, x: Float, y: Float,
-  maxWidth: Float, align: String): Void;
+ public function drawText(text: String, x: Float, y: Float, maxWidth: Float,
+  align: String): Void;
 
  /**
   * Calculates the width of a text String and
