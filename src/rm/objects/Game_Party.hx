@@ -321,10 +321,10 @@ extern class Game_Party extends Game_Unit {
   */
  public function isAnyMemberEquipped(item: EquipItem): Bool;
 
- public function gainItem(item: BaseItem, amount: Float,
+ public function gainItem(item: BaseItem, amount: Int,
   includeEquip: Bool): Void;
- public function discardMembersEquip(item: EquipItem, amount: Float): Void;
- public function loseItem(item: BaseItem, amount: Float,
+ public function discardMembersEquip(item: EquipItem, amount: Int): Void;
+ public function loseItem(item: BaseItem, amount: Int,
   includeEquip: Bool): Void;
 
  /**
@@ -376,7 +376,7 @@ extern class Game_Party extends Game_Unit {
  public function lastItem(): BaseItem;
 
  public function setLastItem(item: BaseItem): Void;
- public function swapOrder(index1: Float, index2: Float): Void;
+ public function swapOrder(index1: Int, index2: Int): Void;
 
  /**
   * Returns the characters that go on the save life.
