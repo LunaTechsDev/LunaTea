@@ -172,6 +172,14 @@ public function setCursorAll(cursorAll: Bool): Void;
 public function maxCols(): Int;
 
 /**
+ * Returns the maximum number of rows
+ * for the window.
+ * @returns {Int}
+ * @memberof Window_Selectable
+ */
+public function maxRows(): Int;
+
+/**
  * Returns the maximum number of items within the window;
  * useful to overwrite when creating a new window.
  * This method is used to calculate the number of rows and more.
