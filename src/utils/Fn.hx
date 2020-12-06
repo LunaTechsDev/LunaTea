@@ -77,18 +77,15 @@ class Fn {
   return Syntax.code("eval({0})", evaluation);
  }
 
- @:keep
  public static inline function proto<T>(obj: Class<T>): T {
   return Syntax.field(obj, "prototype");
  }
 
- @:keep
  public static inline function updateProto<T>(obj: Class<T>,
    fn: T->Void): Dynamic {
   return Syntax.code("({1})({0}.prototype)", obj, fn);
  }
 
- @:keep
  public static inline function updateEntity<T>(obj: Class<T>,
    fn: T->Void): Dynamic {
   return Syntax.code("({1})({0})", obj, fn);
