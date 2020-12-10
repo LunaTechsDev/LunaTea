@@ -57,4 +57,14 @@ enum abstract Keys(String) from String to String {
  public var DOWN = 'down';
 
  public var DEBUG = 'debug';
+
+ /**
+  * Gamepad Compatible Key
+  */
+ public var CANCEL = 'cancel';
+
+ /**
+  * Gamepad Compatible Key for menu
+  */
+ public var MENU = 'menu';
 }
