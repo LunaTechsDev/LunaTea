@@ -23,11 +23,20 @@ abstract Math(SMath) {
   return rand[randomInt() * rand.length];
  }
 
- public static inline function clampf(num: Float, min: Float, max: Float): Float {
+ public static inline function clampf(num: Float, min: Float,
+   max: Float): Float {
   return Math.min(Math.max(num, min), max);
  }
 
  public static inline function clamp(num: Int, min: Int, max: Int): Int {
   return Math.round(Math.min(Math.max(num, min), max));
+ }
+
+ /**
+  * Degrees to radians
+  * @return
+  */
+ public static inline function degToRad(degrees: Float): Float {
+  return degrees * Math.PI / 180;
  }
 }
