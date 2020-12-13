@@ -29,4 +29,12 @@ class NumberExtensions {
  public static inline function negatef(num: Float) {
   return -num;
  }
+
+ /**
+  * Degrees to radians
+  * @return
+  */
+ public static inline function degToRad(degrees: Float): Float {
+  return degrees * Math.PI / 180;
+ }
 }
