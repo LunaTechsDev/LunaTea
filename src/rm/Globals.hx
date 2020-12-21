@@ -91,6 +91,9 @@ class Globals {
  @:native("$gamePlayer")
  public static var GamePlayer: Game_Player;
 
+ @:native("$gameScreen")
+ public static var GameScreen: Game_Screen;
+
  //  @:expose("$testEvent")
  @:native("$testEvent")
  public static var TestEvent: Array<EventCommand>;
