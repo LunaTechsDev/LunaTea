@@ -4,6 +4,7 @@ import rm.core.WindowLayer;
 import rm.core.Stage;
 import rm.windows.Window_Base;
 import haxe.extern.EitherType;
+import rm.core.Sprite
 
 @:expose("Scene_Base")
 @:native("Scene_Base")
@@ -73,8 +74,8 @@ extern class Scene_Base extends Stage {
  public function isFading(): Bool;
  public function createColorFilter(): Void;
  public function updateColorFilter(): Void;
- public function scaleSprite(): Void;
- public function centerSprite(): Void;
+ public function scaleSprite(sprite: Sprite): Void;
+ public function centerSprite(sprite: Sprite): Void;
  public function isBottomHelpMode(): Bool;
  public function isBottomButtonMode(): Bool;
  public function isRightInputMode(): Bool;
