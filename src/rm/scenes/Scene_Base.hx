@@ -4,7 +4,7 @@ import rm.core.WindowLayer;
 import rm.core.Stage;
 import rm.windows.Window_Base;
 import haxe.extern.EitherType;
-import rm.core.Sprite
+import rm.core.Sprite;
 
 @:expose("Scene_Base")
 @:native("Scene_Base")
