@@ -16,6 +16,6 @@ extern class Window_TitleCommand extends Window_Command {
 
  public function updatePlacement(): Void;
  public function isContinueEnabled(): Bool;
- public function initCommandPosition(): Void;
+ public static function initCommandPosition(): Void;
  public function selectLast(): Void;
 }
