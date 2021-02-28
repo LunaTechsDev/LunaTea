@@ -152,7 +152,7 @@ extern class Window_Base extends _Window {
   *
   * @memberof Window_Base
   */
- public function loadWindowSkin(): Void;
+ public function loadWindowskin(): Void;
 
  /**
   * Updates the window padding based on the
