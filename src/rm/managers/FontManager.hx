@@ -2,7 +2,7 @@ package rm.managers;
 
 import js.Browser;
 import js.html.FontFace;
-import core.Amaryllis;
+import core.Amaryllis.encodeURI;
 import haxe.DynamicAccess;
 
 /**
@@ -94,7 +94,7 @@ class FontManager {
  }
 
  public static function makeUrl(fileName: String): String {
-  return "fonts/" + Amaryllis.encodeURI(fileName);
+  return "fonts/" + encodeURI(fileName);
  }
 }
 #end

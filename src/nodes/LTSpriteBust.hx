@@ -4,7 +4,7 @@ import macros.MacroTools;
 import rm.core.Bitmap;
 import rm.sprites.Sprite_Base;
 import rm.core.Sprite;
-import core.Amaryllis;
+import core.Amaryllis.lerp;
 
 enum MoveType {
  Linear;
@@ -103,11 +103,11 @@ public function updateMovement() {
  switch (this._defaultMoveType) {
   case Linear:
    if (this._shadowX != this.x) {
-    xResult = Amaryllis.lerp(this.x, this._shadowX, 0.025);
+    xResult = lerp(this.x, this._shadowX, 0.025);
    }
 
    if (this._shadowY != this.y) {
-    yResult = Amaryllis.lerp(this.y, this._shadowY, 0.025);
+    yResult = lerp(this.y, this._shadowY, 0.025);
    }
   case _:
    // Do nothing
