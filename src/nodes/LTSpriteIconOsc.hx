@@ -3,7 +3,6 @@ package nodes;
 import rm.core.Bitmap;
 import rm.core.Sprite;
 import rm.sprites.Sprite_Base;
-import core.Amaryllis;
 
 /**
  * Utility Sprite Class for creating sprites of oscillating size.
