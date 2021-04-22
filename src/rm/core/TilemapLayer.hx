@@ -1,19 +1,27 @@
 package rm.core;
 
+import js.html.Image;
 import haxe.extern.Rest;
 import pixi.core.renderers.webgl.State;
 import js.lib.Float32Array;
 import pixi.core.display.Container;
 
+#if !compileMV
 @:native('Tilemap.Layer')
 @:expose('Tilemap.Layer')
-// #if !compileMV
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
 @:build(macros.BuildMacroTools.buildPublicPrivateFields())
 extern class TilemapLayer extends Container {
- public var _indexArray: Float32Array;
- public var _vertexArray: Float32Array;
- public var _state: State;
+ private var _indexArray: Float32Array;
+ private var _indexBuffer: Any; // TODO: Add proper type
+ private var _vertexArray: Float32Array;
+ private var _vertexBuffer: Any; // TODO: Add proper type
+ private var _state: State;
+ private var _images: Array<Image>;
+ private var _elements: Array<Any>;
+ private var _vao: Any;
+ private var _needsTexturesUpdate: Bool;
+ private var _needsVertexUpdate: Bool;
 
  /**
   * Defaults to 3
@@ -52,4 +60,4 @@ extern class TilemapLayer extends Container {
 
  private function _updateVertexBuffer(): Void;
 }
-// #end
+#end
