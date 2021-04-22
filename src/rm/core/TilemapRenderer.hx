@@ -8,6 +8,7 @@ import haxe.extern.Rest;
 import pixi.core.renderers.webgl.Renderer;
 import pixi.core.renderers.webgl.utils.ObjectRenderer;
 
+#if !compileMV
 @:native('Tilemap.Renderer')
 @:expose('Tilemap.Renderer')
 @:build(macros.BuildMacroTools.buildDynamicFunctions())
@@ -45,3 +46,4 @@ extern class TilemapRenderer extends ObjectRenderer {
 
  public function bindTextures(renderer: Renderer): Void;
 }
+#end
