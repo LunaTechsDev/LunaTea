@@ -277,8 +277,13 @@ extern class Tilemap extends Container {
  private var _layerWidth: Float;
  private var _layerHeight: Float;
  private var _lastTiles: Array<Array<Array<Array<Float>>>>;
+ #if compileMV
  private var _lowerLayer: Sprite;
  private var _upperLayer: Sprite;
+ #else
+ private var _lowerLayer: TilemapLayer;
+ private var _upperLayer: TilemapLayer;
+ #end
 
  /**
   * @method _createLayers
