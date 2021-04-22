@@ -180,6 +180,8 @@ extern class Tilemap extends Container {
   */
  public function new();
 
+ public function initialize(): Void;
+
  /**
   * Sets the tilemap data.
   *
