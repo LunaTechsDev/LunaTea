@@ -1,6 +1,6 @@
 {
   "name": "LunaTea",
-  "url" : "https://github.com/jasononeil/useless/",
+  "url" : "https://github.com/LunaTechsDev/LunaTea",
   "license": "MIT",
   "tags": ["RPGMakerMV", "RPGMakerMZ", "RPGMaker", "GameDev", "rmmv"],
   "description": "A library for creating plugins and tools for RPGMaker software.",
