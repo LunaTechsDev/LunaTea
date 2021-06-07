@@ -1,6 +1,9 @@
 # LunaTea  ![LunaTea](public/LunaTea.png)
 > Open Source - Haxe Core Library for RPGMaker MZ/MV plugin and tool development.
 
+## Contributors
+> Kino, Waynee, inC0der
+
 
 ## How To Use
 Clone the **prepared** **[LunarBase](https://github.com/LunaTechsDev/LunarBase)** project with example plugins included.
